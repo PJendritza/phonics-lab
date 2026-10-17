@@ -11,8 +11,10 @@ unless explicitly requested. Preserve user work. Do not expose credentials or di
 TLS/checksum verification. Keep large upstream checkouts, assets, downloads, and build
 outputs outside this repository. Pin and record upstream revisions and tool versions.
 
-Current scope: ONLY investigate the official Kalulu application/language repositories
-and test an unchanged browser export. No German lessons, audio generation, redesign,
+Current scope: investigate and test browser support. The first unchanged export
+feasibility step is complete; the user authorized enabling web extension support,
+rebuilding, testing startup/interface, and investigating remaining gameplay blockers.
+Use controlled source copies and small reproducible patches. No German lessons, audio generation, redesign,
 deployment, or scheduling yet. If web support needs substantial changes, document the
 evidence and proposed approach instead of starting a large port.
 

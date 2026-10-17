@@ -1,0 +1,154 @@
+{
+  "state": {
+    "title": "Kalulu",
+    "isolated": true,
+    "text": "",
+    "canvas": true,
+    "canvasSize": [
+      1280,
+      900
+    ]
+  },
+  "events": [
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, multi-threaded, GDExtension support."
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] --- Logging started at 2026-10-17T20:24:26 ---"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] --- Logging set at level 2 ---"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: 20:24:26 [WARNING] ServerManager: Could not load environment config at /userfs/godot/app_userdata/Kalulu/environment.cfg. Error: File not found. Falling back to PROD environment."
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] ServerManager: Environment URL set to https://api.kalulu.org/prod/"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] UserDataManager initialization"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] UserDataManager: Load device settings"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: 20:24:26 [WARNING] UserDataManager: Device settings file not found at /userfs/godot/app_userdata/Kalulu/device_settings.tres. Creating defaults."
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: 20:24:26 [WARNING] Database: Database file not found at user://language_resources/fr_FR/language.db"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "WARNING: 20:24:26 [WARNING] DeviceSettings: OS locale unsupported, fallback to fr_FR"
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] Utils: DeleteDirectoryRecursive: Folder deleted: user://shader_cache"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:26 [INFO] SplashScreen: Starting timer"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:24:28 [INFO] SplashScreen: Changing scene to res://sources/menus/welcome/welcome.tscn"
+    },
+    {
+      "kind": "console",
+      "type": "log",
+      "text": "20:25:07 [INFO] Welcome: Loaded"
+    }
+  ]
+}
