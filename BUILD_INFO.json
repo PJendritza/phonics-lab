@@ -1,0 +1,9 @@
+{
+  "project": "PJendritza/tmp French phone demo",
+  "source_branch": "kalulu-french-phone-demo",
+  "source_commit": "3e096b196cfd4f2be72fc7bbe3b98f9058a99fe1",
+  "upstream_commit": "51043b23f8e32e72ca79ca914ba3efd6b76b272e",
+  "godot": "4.7.stable",
+  "threads": false,
+  "language": "fr_FR"
+}

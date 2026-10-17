@@ -1,0 +1,18 @@
+[
+  ".nojekyll",
+  "BUILD_INFO.json",
+  "THIRD_PARTY.txt",
+  "demo-source.zip",
+  "index.html",
+  "libgdsqlite.web.template_release.wasm32.nothreads.wasm",
+  "play.apple-touch-icon.png",
+  "play.audio.position.worklet.js",
+  "play.audio.worklet.js",
+  "play.html",
+  "play.icon.png",
+  "play.js",
+  "play.pck",
+  "play.png",
+  "play.side.wasm",
+  "play.wasm"
+]
