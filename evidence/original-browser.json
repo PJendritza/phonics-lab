@@ -1,0 +1,33 @@
+{
+  "state": {
+    "title": "Kalulu",
+    "isolated": true,
+    "text": "GDExtension libraries are not supported by this engine version. Enable \"Extensions Support\" for your export preset and/or build your custom template with \"dlink_enabled=yes\".\n",
+    "canvas": true,
+    "canvasSize": [
+      300,
+      150
+    ]
+  },
+  "events": [
+    {
+      "kind": "requestfailed",
+      "url": "http://127.0.0.1:8060/index.wasm",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "kind": "requestfailed",
+      "url": "http://127.0.0.1:8060/index.pck",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "kind": "console",
+      "type": "error",
+      "text": "Error: GDExtension libraries are not supported by this engine version. Enable \"Extensions Support\" for your export preset and/or build your custom template with \"dlink_enabled=yes\".\n    at http://127.0.0.1:8060/index.js:790:29"
+    }
+  ]
+}
