@@ -62,7 +62,15 @@ The first browser test exited 0: original lesson-1 jellyfish activity won at **8
 message. Chromium's 844x390 touch emulation launched the activity and visibly advanced
 the original gold progress gauge. No external requests or GDScript/JavaScript errors.
 Evidence: `french-demo-lesson-one.json`, completion and phone-touch screenshots.
-Second-activity validation and final deployment details are recorded in the next update.
+Final follow-up: the corrected lesson-2 curriculum slot was rebuilt from source
+commit `3e096b196cfd4f2be72fc7bbe3b98f9058a99fe1` and retested successfully. It
+completed 8/8 in 54 seconds, 8 mouse inputs, 5/5 lives; nonzero game audio was measured.
+Phone touch visibly advanced the original progress gauge. Six recorded checks passed,
+no runtime errors or external requests; evidence is `french-demo-final.json`.
+The static deployment branch was pushed and fetched back at
+`f871b6f85a64bbf0e527e9cfa2051f6951e156be`; all published SHA256 checks passed.
+GitHub metadata still reported has_pages=false and no Actions runs. Thus this was
+an artifact upload, not a live website. main stayed at c1e1a63.
 
 The test uses real clicks/taps based on screenshot pixels (nonempty letter plaques),
 never privileged game calls or answer exposure. For lesson 2 this can hit distractors;
@@ -113,6 +121,52 @@ check whether GitHub enabled Pages automatically. If it remains disabled, the ex
 external blocker is owner access to Pages settings. After enablement, verify the
 real HTTPS page/assets and repeat the smoke test using KALULU_DEMO_URL. No German
 content or scheduling should begin until the phone demo is usable.
+
+### ChatGPT Sites investigation (latest user direction)
+
+User identified an existing Codex-generated site at
+`https://visual-neuron-rig-updated.pjendritza.chatgpt.site/` and requested investigating,
+then using the same hosting rather than GitHub Pages. After the user broadened network
+permissions, that address changed from proxy denial to an actual HTTP 401 page saying
+“Sign in required / Continue with ChatGPT.” This proves reachability, not publishing
+access; do not conflate the two. No login credentials/cookies were extracted.
+
+Official documentation was read successfully after the network change:
+
+- https://developers.openai.com/codex/sites
+- https://developers.openai.com/codex/sites/creating-a-site
+- https://developers.openai.com/codex/sites/publishing-and-sharing
+- https://developers.openai.com/codex/sites/managing-a-site
+
+The feature is named **Sites**. Its overview explicitly supports hosting web apps,
+games and compatible existing projects without separate deployment setup. Docs say
+to include “website” or mention **@Sites** to start the workflow, or use
+https://chatgpt.com/sites. Existing-project example: “Deploy this project with sites.
+Check whether it is compatible, make any required changes, and give me the deployment
+URL.” Saving a version and deploying it are separate actions. All deployment URLs are
+production deployments; initial visitor access is owner/workspace admins. Use a private
+adult testing audience for the current phone test, not automatic public sharing.
+
+Important suitability boundary from the Sites overview: “Don’t use sites to ... target
+children under 13 or the applicable age of digital consent.” Kalulu's eventual child
+audience means Sites cannot simply be assumed suitable for the final product. Check
+whether an owner-only adult technical demonstration is supported before publishing;
+do not rebrand the intended child audience to evade the restriction.
+
+This chat still exposes only cloud environment status/configuration app tools, no
+Sites create/save-version/deploy tools. The full tool catalog was inspected, cloud
+skills list only runtime/setup, executor skills list is empty, local CLI MCP list is
+empty, and CLI help has no site publishing command. Docs explicitly say to use ChatGPT
+web/desktop for Sites management; CLI/IDE can edit/test local projects. Thus activating
+the Sites workflow/integration is the missing capability here, not a model limitation,
+the private Git repository, or inability to open the user's example. The chat began as
+environment onboarding, which may explain its tool selection; this is an inference,
+not a verified product cause. Never claim the feature does not exist.
+
+No site was created, no deployment performed, and no sharing settings changed during
+this investigation. Once Sites tools are attached, inspect compatibility of the existing
+84 MiB Godot/WASM build and the adult-test suitability above; do not rebuild the game
+from scratch or invent project IDs, hosting tokens or deployment URLs.
 
 ## Extension-support follow-up (previous step)
 
