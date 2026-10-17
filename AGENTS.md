@@ -11,12 +11,14 @@ unless explicitly requested. Preserve user work. Do not expose credentials or di
 TLS/checksum verification. Keep large upstream checkouts, assets, downloads, and build
 outputs outside this repository. Pin and record upstream revisions and tool versions.
 
-Current scope: investigate and test browser support. The first unchanged export
-feasibility step is complete; the user authorized enabling web extension support,
-rebuilding, testing startup/interface, and investigating remaining gameplay blockers.
-Use controlled source copies and small reproducible patches. No German lessons, audio generation, redesign,
-deployment, or scheduling yet. If web support needs substantial changes, document the
-evidence and proposed approach instead of starting a large port.
+Current scope: the user authorized building and hosting a French phone-test demo,
+using original game scenes with a local offline entry point and original French audio.
+Prepare and validate a real playable lesson, then publish a phone-accessible URL when
+hosting access permits. Keep source development on feature branches; a dedicated
+gh-pages branch may hold deployment artifacts. Leave main unchanged. Do not change
+repository visibility or create production accounts. No German lessons, generated
+audio, redesign, or scheduling yet. Use controlled copies and small reproducible
+patches. Report concrete hosting blockers promptly and finish independent work.
 
 Long-term direction (requires later task authorization): approximately six German
 lessons, appropriate German speech, original games/UI preserved, playable browser

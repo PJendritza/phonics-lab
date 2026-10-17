@@ -1,18 +1,120 @@
 # Kalulu browser feasibility
 
-Updated: 2026-10-17. Scope: browser feasibility and authorized extension-support follow-up. No German content, generated speech,
-redesign, deployment, accounts, or recurring schedule created. Branch starts from
+Updated: 2026-10-17. Scope now includes an offline French phone demo and public
+hosting, explicitly authorized by the user. No German lessons, generated speech,
+production accounts, repository visibility change or recurring schedule. Initial feasibility branch started from
 `main` at `c1e1a634ed3319534cc97cca3060d1a233fc5943`, excluding the earlier terminal-test
 branch. Future runs: read AGENTS.md, this file, and `git log` before continuing.
 
 ## Result
 
-**The game starts and its welcome UI responds in Chromium after enabling the single
-web export setting `variant/extensions_support=true`.** No application code changes
-were needed. The original supplied preset still fails; its baseline evidence is kept.
-No complete lesson or gameplay inside the original application has been verified.
+**A French offline demo now completes the original jellyfish activity in Chromium.**
+The first activity completed all eight rounds and returned to the demo menu; landscape
+phone emulation also progressed through a real touch tap. Publishing is being
+prepared on `gh-pages`; GitHub Pages is disabled and the integration cannot enable it.
+Do not present the expected public URL as live until it has been verified.
 
-## Extension-support follow-up (current)
+## French phone demo (current)
+
+Branch: `kalulu-french-phone-demo`, based on `b5d731a`. Main remains untouched.
+The user requested one phone-accessible French test link and authorized building
+and hosting it. French pedagogy/recordings are unchanged; the German landing page
+only explains how to start the French demo.
+
+Implemented in `demo/` and `scripts/build_phone_demo.*`:
+
+- Separate offline application/user-data namespace, `Kalulu French Phone Demo`.
+- Two menu choices launch the ORIGINAL jellyfish minigame for French lessons 1 and
+  2, with original animations, eight rounds, narration, feedback and local scoring.
+  This is two activities, not the full course/all games in lesson 2. Original
+  curriculum slot is selected from the DB (0 for lesson 1, 1 for lesson 2).
+- Demo bootstrap installs the real French SQLite database and the 11 original MP3
+  files needed by these activities. All LFS downloads checked against committed
+  SHA256 IDs and sizes. No generated speech or modified teaching content.
+- Local fictional learner `123` is initialized directly in the demo; no official
+  account, token, login, registration or server state is involved. Synchronization
+  is stopped. The shipped page's same-origin CSP blocks backend connections.
+- A small guarded patch returns completion/back navigation to the demo menu.
+  No changes to stimulus selection, scoring, target handling, animation or feedback.
+- Single-threaded Godot 4.7 dynamic-linking template + matching non-threaded SQLite
+  WASM. Does not need COOP/COEP headers or a service worker, suitable for ordinary
+  static hosting. Verified on a plain local HTTP server, crossOriginIsolated=false.
+- Lossless texture imports retain original dimensions/atlas coordinates and avoid
+  GPU-specific S3TC requirements. Game pack reduced from 535 MiB to about 36 MiB.
+  Complete generated site is approximately 84 MiB (88 million bytes); initial
+  mobile download is still substantial. All individual files are below 100 MB.
+- Attribution, CC BY-SA 4.0 adaptation notice, SQLite/Godot licenses and Godot's
+  bundled third-party notices are included. Godot notices were fetched over verified
+  HTTPS from the pinned 4.7-stable tag. A source ZIP contains demo changes/build tools.
+
+### Build and executed checks
+
+```bash
+# /workspace/tmp
+bash scripts/build_phone_demo.sh
+python3 -m http.server 8060 --bind 127.0.0.1 --directory /workspace/kalulu-phone-demo/web
+timeout 360s node scripts/test_phone_demo.cjs
+KALULU_DEMO_LESSON=2 timeout 360s node scripts/test_phone_demo.cjs
+```
+
+The first browser test exited 0: original lesson-1 jellyfish activity won at **8/8**,
+8 mouse inputs, 61 seconds, 5/5 lives; it returned to the menu with the completion
+message. Chromium's 844x390 touch emulation launched the activity and visibly advanced
+the original gold progress gauge. No external requests or GDScript/JavaScript errors.
+Evidence: `french-demo-lesson-one.json`, completion and phone-touch screenshots.
+Second-activity validation and final deployment details are recorded in the next update.
+
+The test uses real clicks/taps based on screenshot pixels (nonempty letter plaques),
+never privileged game calls or answer exposure. For lesson 2 this can hit distractors;
+completion is functional evidence, not an evaluation of reading instruction. It now
+also measures nonzero WebAudio output. A separate test asserts that a touch actually
+turns the progress gauge gold. System Chromium, Playwright and Pillow were reused;
+no new runtime dependency installation needed beyond local Git LFS configuration.
+Real iOS Safari/Android hardware remains untested; Playwright WebKit is not installed.
+
+Failures resolved while preparing this demo:
+
+- The upstream editor export-manager forcibly reset the configured app name and
+  main scene during export. Disabled that editor plugin in the disposable build copy.
+- A scene-only resource filter omitted global classes, project theme, translations
+  and SQLite; the first browser attempt failed with parse/missing-resource errors.
+  Switched to all-resources export (excluding tests/tools/GUT) with lossless textures;
+  subsequent demo startup and gameplay passed.
+- Initial new menu controls were anchored incorrectly and appeared offscreen. Fixed
+  top-left anchoring, then visually checked desktop and landscape phone layouts.
+- Generic OCR could not reliably recognize animated accented letter plaques. The
+  tester now detects the visible cream plaques and their printed pixels instead.
+
+### Hosting access
+
+Actual GitHub metadata: **private repository, has_pages=false**. Existing terminal
+authentication can push, and the available API identity can read repository metadata
+and Actions runs. Pages GET/POST/PUT operations all return HTTP 403 **Resource not
+accessible by integration**. The official actions/configure-pages v5 metadata also
+states that auto-enabling Pages requires a token other than GITHUB_TOKEN with Pages
+write (and GitHub App administration write) permissions. No credential values exposed
+or new token requested; no visibility changes made.
+
+`scripts/publish_phone_demo.sh` publishes only tested static artifacts to a separate
+**gh-pages** branch, with build info, SHA256 sums and the source ZIP. It requires a
+successful gameplay/touch test newer than the export and never pushes main. Once the
+branch is ready, a repository owner may need to select **Settings → Pages → Deploy
+from a branch → gh-pages → / (root)**. Confirm hosting plan availability in that UI
+if GitHub does not offer private-repository Pages; do not silently make the repo public.
+
+The expected site is `https://pjendritza.github.io/tmp/`, currently unverified.
+Outbound checks to that hostname failed CONNECT HTTP 403. Added that hostname to the
+existing environment network draft while preserving api.github.com and
+kalulu.excellolab.org. Draft saving does not apply or publish these settings. This
+affects this agent's public-site verification, not the user's phone connection.
+
+Next: finish the final activity test, commit source and push the deploy branch;
+check whether GitHub enabled Pages automatically. If it remains disabled, the exact
+external blocker is owner access to Pages settings. After enablement, verify the
+real HTTPS page/assets and repeat the smoke test using KALULU_DEMO_URL. No German
+content or scheduling should begin until the phone demo is usable.
+
+## Extension-support follow-up (previous step)
 
 The user explicitly authorized this next experiment after the initial feasibility
 report. Branch `kalulu-web-extension-test` starts at the previous report commit
