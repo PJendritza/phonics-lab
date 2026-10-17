@@ -1,0 +1,834 @@
+{
+  "checks": {
+    "noIsolationHeadersNeeded": true,
+    "germanPhonemePreviewHasAudio": true,
+    "allSixLessonMenusReachable": true,
+    "nonzeroGameAudio": true,
+    "originalGermanJellyfishCompleted": {
+      "lesson": 1,
+      "clicks": 8,
+      "log": "21:33:01 [INFO] BaseMinigame: jellyfish won in 67 seconds with progression 8/8 and 5/5 lives"
+    },
+    "lessonAndCompletionPersistAfterReload": true,
+    "emulatedPhoneTouch": {
+      "viewport": "844x390",
+      "taps": 1,
+      "progressGaugeAdvanced": true
+    },
+    "noExternalRequests": true,
+    "noRuntimeErrors": true
+  },
+  "events": [
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, GDExtension support."
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] --- Logging started at 2026-10-17T21:31:25 ---"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] --- Logging set at level 2 ---"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:31:25 [WARNING] ServerManager: Could not load environment config at /userfs/godot/app_userdata/Kalulu German Prototype/environment.cfg. Error: File not found. Falling back to PROD environment."
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] ServerManager: Environment URL set to https://api.kalulu.org/prod/"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager initialization"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Load device settings"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:31:25 [WARNING] UserDataManager: Device settings file not found at /userfs/godot/app_userdata/Kalulu German Prototype/device_settings.tres. Creating defaults."
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:31:25 [WARNING] Database: Database file not found at user://language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:31:25 [WARNING] DeviceSettings: OS locale unsupported, fallback to de_DE"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:31:25 [WARNING] UserDataManager: Application name is not Kalulu, so user folder purge has been blocked."
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] Gardens: Computing lessons distribution for 6 lessons"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Created new student progression at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/progression.tres"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Created new student remediation at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/remediation.tres"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Created new student confusion matrix at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/confusion_matrix.tres"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Created new student boss data at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/boss.tres"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Created new student difficulty at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/difficulty.tres"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:25 [INFO] UserDataManager: Created new student speeches at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/speeches.tres"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_READY: six German lessons, offline, synthetic draft speech"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=1 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_PREVIEW a_long"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=2 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=3 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=4 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=5 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=6 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=1 completed=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:46 [INFO] BaseMinigame: Initialize jellyfish (lesson 1, minigame #0, difficulty 0)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:31:53 [INFO] BaseMinigame: Start minigame=jellyfish lesson=1 difficulty=0"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:01 [INFO] BaseMinigame: jellyfish won in 67 seconds with progression 8/8 and 5/5 lives"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:12 [INFO] BaseMinigame: Saving logs for jellyfish with 8 answer(s)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_COMPLETE lesson=1 game=jellyfish"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=1 completed=1"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, GDExtension support."
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] --- Logging started at 2026-10-17T21:33:17 ---"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] --- Logging set at level 2 ---"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] ServerManager: Environment URL set to https://api.kalulu.org/prod/"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] ServerManager: Loaded environment config (setting=1, custom_url=)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] UserDataManager initialization"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] UserDataManager: Load device settings"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:33:17 [WARNING] UserDataManager: Application name is not Kalulu, so user folder purge has been blocked."
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "21:33:17 [INFO] Gardens: Computing lessons distribution for 6 lessons"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "WARNING: 21:33:18 [WARNING] StudentProgression: Garden 1: minigame 1 re-locked (look-and-learn not completed)"
+    },
+    {
+      "probe": "desktop",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_READY: six German lessons, offline, synthetic draft speech"
+    },
+    {
+      "probe": "desktop",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=1 completed=1"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, GDExtension support."
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] --- Logging started at 2026-10-17T21:33:21 ---"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] --- Logging set at level 2 ---"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: 21:33:21 [WARNING] ServerManager: Could not load environment config at /userfs/godot/app_userdata/Kalulu German Prototype/environment.cfg. Error: File not found. Falling back to PROD environment."
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] ServerManager: Environment URL set to https://api.kalulu.org/prod/"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager initialization"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Load device settings"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: 21:33:21 [WARNING] UserDataManager: Device settings file not found at /userfs/godot/app_userdata/Kalulu German Prototype/device_settings.tres. Creating defaults."
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: 21:33:21 [WARNING] Database: Database file not found at user://language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: 21:33:21 [WARNING] DeviceSettings: OS locale unsupported, fallback to de_DE"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "WARNING: 21:33:21 [WARNING] UserDataManager: Application name is not Kalulu, so user folder purge has been blocked."
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Closed database (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] Gardens: Computing lessons distribution for 6 lessons"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Created new student progression at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/progression.tres"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Created new student remediation at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/remediation.tres"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Created new student confusion matrix at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/confusion_matrix.tres"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Created new student boss data at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/boss.tres"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Created new student difficulty at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/difficulty.tres"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:21 [INFO] UserDataManager: Created new student speeches at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/speeches.tres"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "GERMAN_READY: six German lessons, offline, synthetic draft speech"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "GERMAN_MENU lesson=1 completed=0"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:24 [INFO] BaseMinigame: Initialize jellyfish (lesson 1, minigame #0, difficulty 0)"
+    },
+    {
+      "probe": "phone-landscape",
+      "type": "log",
+      "text": "21:33:31 [INFO] BaseMinigame: Start minigame=jellyfish lesson=1 difficulty=0"
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:8061/",
+    "http://127.0.0.1:8061/play.html",
+    "http://127.0.0.1:8061/play.png",
+    "http://127.0.0.1:8061/play.js",
+    "http://127.0.0.1:8061/play.wasm",
+    "http://127.0.0.1:8061/play.pck",
+    "http://127.0.0.1:8061/play.side.wasm",
+    "http://127.0.0.1:8061/play.icon.png",
+    "http://127.0.0.1:8061/libgdsqlite.web.template_release.wasm32.nothreads.wasm",
+    "blob:http://127.0.0.1:8061/cce8c02e-38b4-4cab-b679-7eabd96c7d2b",
+    "blob:http://127.0.0.1:8061/cce8c02e-38b4-4cab-b679-7eabd96c7d2b",
+    "http://127.0.0.1:8061/play.html",
+    "http://127.0.0.1:8061/play.png",
+    "http://127.0.0.1:8061/play.js",
+    "http://127.0.0.1:8061/play.wasm",
+    "http://127.0.0.1:8061/play.pck",
+    "http://127.0.0.1:8061/play.icon.png",
+    "http://127.0.0.1:8061/play.side.wasm",
+    "http://127.0.0.1:8061/libgdsqlite.web.template_release.wasm32.nothreads.wasm",
+    "http://127.0.0.1:8061/play.html",
+    "http://127.0.0.1:8061/play.png",
+    "http://127.0.0.1:8061/play.js",
+    "http://127.0.0.1:8061/play.wasm",
+    "http://127.0.0.1:8061/play.pck",
+    "http://127.0.0.1:8061/play.icon.png",
+    "http://127.0.0.1:8061/play.side.wasm",
+    "http://127.0.0.1:8061/libgdsqlite.web.template_release.wasm32.nothreads.wasm",
+    "blob:http://127.0.0.1:8061/2d39197f-4e7a-422b-a285-bb6a301f38fb",
+    "blob:http://127.0.0.1:8061/2d39197f-4e7a-422b-a285-bb6a301f38fb"
+  ]
+}

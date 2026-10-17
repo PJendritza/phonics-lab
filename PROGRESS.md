@@ -9,10 +9,11 @@ branch. Future runs: read AGENTS.md, this file, and `git log` before continuing.
 
 ## Result
 
-**German prototype integration is in progress on `kalulu-german-prototype`.**
-The existing French demo remains a verified fallback. A six-lesson German pack now
-loads through the real upstream database/audio APIs. Browser gameplay for the
-German version is the next verification step; export alone is not playability.
+**The first German prototype now plays in Chromium using the original games.**
+Lesson1 jellyfish completed8/8, frog completed5/5; lesson6 frog also completed5/5
+through touch input. All six menus, audio output, reload persistence and landscape
+phone touch were exercised. The French demo remains a verified fallback. This is
+technical playability evidence, not native-phone or pedagogical approval.
 
 ## German development run (current)
 
@@ -45,24 +46,51 @@ confirmation is needed for routine development within this scope. Hosting is def
 Executed so far:
 
 ```bash
-python3 -m unittest discover -s tests -p test_german_pack.py -v
-# PASS: 10 tests, including real ffmpeg/schema build and malformed-content rejection.
+python3 -m unittest discover -s tests -p 'test_german_*.py' -v
+# PASS: 19 tests, including actual schema/ffmpeg build, malformed-content rejection,
+# all 63 provenance hashes, changed PCM/labels/IDs/unsafe paths and duplicates.
 python3 scripts/build_german_demo.py
 # PASS: 13 GPs,25 syllables,18 words,6 lessons,57 MP3 files.
 bash scripts/build_german_demo.sh
-# Initial export produced files (~92MB), but menu script had a type-inference
-# parse error. Fixed explicit type and added build-log error checks; rebuilding.
+# Fixed menu type inference and exported successfully (~92MB total static package).
+OMP_THREAD_LIMIT=1 node scripts/test_german_demo.cjs
+# PASS: lesson1 8/8,8 clicks,67s,5/5 lives; GP preview + gameplay audio nonzero;
+# six menus reachable; completion/selection survives reload;844x390 touch advances
+# original progress gauge in one tap; no game runtime errors/external requests.
+OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
+# PASS: lesson1 5/5,115s,10 scored answers,5/5 lives,23 physical clicks including
+# ignored transitions; nonzero audio, original completion/menu, no runtime errors.
+KALULU_GERMAN_LESSON=6 KALULU_GERMAN_TOUCH=1 OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
+# PASS: lesson6 5/5,162s,17 scored answers,38 physical touches,1280x900 tablet-sized
+# touch context; five wrong guesses by pixel-based tester, no runtime errors or
+# external requests. This is input/functional coverage, not reading performance.
 ```
 
-Godot integration audit already executed against German data: PASS all six
-lesson pools and 57 MP3 decodes. It also exposed cleanup warnings at headless exit;
-cleanup and actual minigame stimulus tests are being improved. Browser gameplay,
-mobile emulation, persistence and final clean build remain to execute. No German
-site is hosted yet; no physical phone/Safari tests or pedagogical review claimed.
+Godot integration audit PASS: all twelve actual scene stimulus builders (six
+lessons × jellyfish8/frog5), unambiguous printed targets/distractors,57 MP3 decodes,
+all10 exercise IDs/names, schema integrity and cumulative pools. Clean exit after
+the harness frees an existing dormant orphan synchronizer allocated by upstream;
+the game itself is not patched for this. A compile-time autoload reference in the
+first extended harness attempt was fixed, and missing pool results now fail.
+The build rejects SCRIPT ERROR/ERROR in import/audit/export logs, because Godot
+can return status0 even after a script error. Upstream pack validator --strict
+also passed0errors/0warnings. Its optional --frontend check expects a newer path
+not present at this pinned revision; our tests/audit compare the actual runtime
+Minigame.TYPE_NAMES instead.
 
-Next actionable step: finish clean build, run original German jellyfish/frog games
-in Chromium with real input, test landscape touch/persistence, then push tested
-source and an isolated ready-to-serve artifact branch.
+The build and audio-review packager now verify every source WAV against recorded
+generation hashes and text/phoneme labels before use. Independent re-encoding
+matched all57 current MP3 hashes; all63 review clips and controls were checked.
+Earlier test-harness failures (OCR omitted button labels, unavailable release TRACE
+word logs) were fixed without changing gameplay. Tests use physical screenshot
+input; no hidden answers or direct progression calls. INFO logs cannot prove the
+identity of every heard word, so no per-word listening claim is made.
+
+Current next action: commit these tests/tools, rerun the final strict build, repeat
+the two core browser suites against it, and store/fetch-verify the separate
+`kalulu-german-build` artifact branch. `german/RUNNING.md` has launch/rebuild steps.
+No German site is hosted yet; no physical phone/Safari tests or pedagogical review
+claimed. Content/audio review and real phone testing are the next human-facing step.
 
 ## French phone demo (previous verified milestone)
 

@@ -6,7 +6,7 @@ mkdir -p "$root" "$root/downloads" "$root/tools" "$root/xdg-data/godot/export_te
 checkout() {
   local name=$1 repo=$2 revision=$3
   if [ ! -d "$root/$name/.git" ]; then
-    git clone --depth 1 "https://github.com/Excello-Recherche-Education/$repo.git" "$root/$name"
+    GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 "https://github.com/Excello-Recherche-Education/$repo.git" "$root/$name"
     if [ "$(git -C "$root/$name" rev-parse HEAD)" != "$revision" ]; then
       git -C "$root/$name" fetch --depth 1 origin "$revision"
       git -C "$root/$name" checkout --detach "$revision"

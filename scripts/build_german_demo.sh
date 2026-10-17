@@ -12,6 +12,7 @@ engine="$source_root/tools/Godot_v4.7-stable_linux.x86_64"
 "$engine" --headless --path "$root/frontend" --editor --import > "$root/logs/import.log" 2>&1
 if rg -n 'SCRIPT ERROR|^ERROR:' "$root/logs/import.log"; then exit 1; fi
 "$engine" --headless --path "$root/frontend" --script res://demo/audit.gd > "$root/logs/pack-audit.log" 2>&1
+if rg -n 'SCRIPT ERROR|^ERROR:' "$root/logs/pack-audit.log"; then exit 1; fi
 grep -q GERMAN_AUDIT_PASS "$root/logs/pack-audit.log"
 "$engine" --headless --path "$root/frontend" --export-release 'German Prototype' "$root/web/play.html" > "$root/logs/export.log" 2>&1
 if rg -n 'SCRIPT ERROR|^ERROR:' "$root/logs/export.log"; then exit 1; fi

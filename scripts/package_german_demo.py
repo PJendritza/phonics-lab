@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import zipfile
+from build_german_pack import verified_audio_clips
 
 repo = Path(__file__).resolve().parent.parent
 source = Path(os.environ.get('KALULU_WORKSPACE', '/workspace/kalulu-feasibility'))
@@ -15,6 +16,7 @@ web = root/'web'
 shutil.copyfile(repo/'german/index.html', web/'index.html')
 shutil.copyfile(repo/'german/README.md', web/'CONTENT-NOTES.md')
 shutil.copyfile(repo/'german/AUDIO.md', web/'AUDIO-NOTES.md')
+shutil.copyfile(repo/'german/RUNNING.md', web/'README.md')
 (web/'.nojekyll').touch()
 play = web/'play.html'
 text = play.read_text()
@@ -54,7 +56,7 @@ for path in (repo/'demo/licenses').glob('*.txt'):
     notices += '\n'+path.name+'\n'+path.read_text()+'\n'
 notices += '\nGerman draft audio provenance\n'+(repo/'german/AUDIO.md').read_text()
 (web/'THIRD_PARTY.txt').write_text(notices)
-clips = json.loads((repo/'german/audio/manifest.json').read_text())['clips']
+clips = verified_audio_clips()
 review = web/'review-audio'
 review.mkdir(exist_ok=True)
 rows = []
@@ -65,7 +67,7 @@ for clip in clips:
     pronunciation = html.escape(clip.get('phonemes', 'gesprochene Anleitung'))
     rows.append(f'<tr><td>{text}<small>{html.escape(clip["id"])}</small></td><td>/{pronunciation}/</td><td><audio controls preload="none" src="review-audio/{name}"></audio></td></tr>')
 (web/'audio-review.html').write_text('''<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kalulu – Aussprache prüfen</title><style>body{font:1rem/1.5 system-ui;margin:2rem;background:#f3f5ff;color:#1a2350}table{border-collapse:collapse;width:100%;max-width:70rem}td{border-bottom:1px solid #b5bbd9;padding:.6rem}small{display:block;color:#48527b}audio{max-width:100%;width:16rem}@media(max-width:600px){td{display:block}td:first-child{border:0;font-weight:bold}td:nth-child(2){border:0}}</style>
+<title>Kalulu – Aussprache prüfen</title><link rel="icon" type="image/png" href="play.icon.png"><style>body{font:1rem/1.5 system-ui;margin:2rem;background:#f3f5ff;color:#1a2350}table{border-collapse:collapse;width:100%;max-width:70rem}td{border-bottom:1px solid #b5bbd9;padding:.6rem}small{display:block;color:#48527b}audio{max-width:100%;width:16rem}@media(max-width:600px){td{display:block}td:first-child{border:0;font-weight:bold}td:nth-child(2){border:0}}</style>
 <h1>Aussprache prüfen</h1><p>Alle Clips sind synthetische Entwürfe. Bitte insbesondere lange/kurze Vokale, Wortakzent und Konsonanten ohne angehängtes „e“ prüfen. Die technische Prüfung ersetzt kein Zuhören.</p>
 <p>Namen haben eine vereinbarte Aussprache. Übungssilben sind teilweise keine Wörter. <a href="CONTENT-NOTES.md">Details</a> · <a href="index.html">Zur Demo</a></p><table>'''+''.join(rows)+'</table></html>')
 info = {
@@ -84,7 +86,7 @@ with zipfile.ZipFile(web/'demo-source.zip', 'w', zipfile.ZIP_DEFLATED) as output
         for path in (repo/directory).rglob('*'):
             if path.is_file() and '__pycache__' not in path.parts:
                 output.write(path, path.relative_to(repo))
-    for name in ['AGENTS.md', 'PROGRESS.md']:
+    for name in ['AGENTS.md', 'PROGRESS.md', 'LICENSE']:
         output.write(repo/name, name)
     output.writestr('SOURCE-NOTES.txt', notices)
 for path in web.rglob('*'):

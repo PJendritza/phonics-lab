@@ -6,17 +6,40 @@ build from the small reviewed-in-Git draft clips. Outputs belong outside Git.
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import sqlite3
 import subprocess
 import unicodedata
 
 REPO = Path(__file__).resolve().parent.parent
+if not __debug__:
+    raise RuntimeError('Run this content validator with ordinary Python, without -O.')
 
 
 def encoded(text):
     symbols = {'#': 'sharp', '@': 'at', '*': 'star', '$': 'usd', '%': 'pcent', '§': 'para'}
     return symbols.get(text, text if text == text.lower() else 'cap.' + text.lower())
+
+
+def verified_audio_clips(audio_dir=None):
+    audio_dir = Path(audio_dir) if audio_dir else REPO/'german/audio'
+    clips = json.loads((audio_dir/'manifest.json').read_text())['clips']
+    metadata = json.loads((audio_dir/'metadata.json').read_text())
+    by_id = {c['id']: c for c in metadata['clips']}
+    if len(by_id) != len(metadata['clips']) or len(by_id) != len(clips) or set(by_id) != {c['id'] for c in clips}:
+        raise ValueError('Audio manifest and provenance clip IDs differ')
+    for clip in clips:
+        clip_id = clip['id']
+        record = by_id[clip_id]
+        if not re.fullmatch('[a-z0-9_]+', clip_id) or record['file'] != clip_id+'.wav':
+            raise ValueError(f'Unsafe audio filename: {clip_id}')
+        if any(clip.get(key) != record.get(key) for key in ['kind', 'text', 'phonemes']):
+            raise ValueError(f'Audio provenance labels differ: {clip_id}')
+        actual = hashlib.sha256((audio_dir/record['file']).read_bytes()).hexdigest()
+        if actual != record['sha256']:
+            raise ValueError(f'Audio SHA256 differs from generation provenance: {clip_id}')
+    return clips
 
 
 def validate(content):
@@ -85,7 +108,7 @@ def build(output, schema):
     counts = {t: db.execute(f'SELECT count(*) FROM {t}').fetchone()[0] for t in ['GPs', 'Syllables', 'Words', 'Lessons']}
     db.close()
 
-    clips = json.loads((REPO/'german/audio/manifest.json').read_text())['clips']
+    clips = verified_audio_clips()
     by_id = {c['id']: c for c in clips}
     # Different authored entries may share one canonical sound (e.g. am word/syllable).
     # A same-name/different-pronunciation collision must fail, never overwrite.
