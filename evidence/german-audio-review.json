@@ -1,0 +1,1184 @@
+{
+  "url": "http://127.0.0.1:8061/audio-review.html",
+  "checks": {
+    "all63UniqueControlsAndLabelsMatchManifest": true,
+    "all63MetadataCanPlayAndCompleteBrowserDecode": true,
+    "nativeControlClickAdvancesPhonemeAndWordPlayback": true,
+    "requestsSuccessfulSameOriginAndNoPageErrors": true
+  },
+  "audio": [
+    {
+      "id": "gp_a_long",
+      "elementDuration": 0.742721,
+      "readyState": 4,
+      "decodedDuration": 0.7427210884353741,
+      "decodedFrames": 32754,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7053812742233276
+    },
+    {
+      "id": "gp_a_short",
+      "elementDuration": 0.434014,
+      "readyState": 4,
+      "decodedDuration": 0.4340136054421769,
+      "decodedFrames": 19140,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7022697925567627
+    },
+    {
+      "id": "gp_m",
+      "elementDuration": 0.335102,
+      "readyState": 4,
+      "decodedDuration": 0.33510204081632655,
+      "decodedFrames": 14778,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.709267258644104
+    },
+    {
+      "id": "gp_i_long",
+      "elementDuration": 0.58839,
+      "readyState": 4,
+      "decodedDuration": 0.5883900226757369,
+      "decodedFrames": 25948,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7082034945487976
+    },
+    {
+      "id": "gp_i_short",
+      "elementDuration": 0.403855,
+      "readyState": 4,
+      "decodedDuration": 0.4038548752834467,
+      "decodedFrames": 17810,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7103973627090454
+    },
+    {
+      "id": "gp_i_unstressed",
+      "elementDuration": 0.366621,
+      "readyState": 4,
+      "decodedDuration": 0.36662131519274377,
+      "decodedFrames": 16168,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7078818082809448
+    },
+    {
+      "id": "gp_o_long",
+      "elementDuration": 0.673197,
+      "readyState": 4,
+      "decodedDuration": 0.6731972789115647,
+      "decodedFrames": 29688,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7080692648887634
+    },
+    {
+      "id": "gp_l",
+      "elementDuration": 0.265714,
+      "readyState": 4,
+      "decodedDuration": 0.26571428571428574,
+      "decodedFrames": 11718,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7075057625770569
+    },
+    {
+      "id": "gp_o_unstressed",
+      "elementDuration": 0.367302,
+      "readyState": 4,
+      "decodedDuration": 0.3673015873015873,
+      "decodedFrames": 16198,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7086814641952515
+    },
+    {
+      "id": "gp_n",
+      "elementDuration": 0.393424,
+      "readyState": 4,
+      "decodedDuration": 0.3934240362811791,
+      "decodedFrames": 17350,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.708294689655304
+    },
+    {
+      "id": "gp_u_long",
+      "elementDuration": 0.438594,
+      "readyState": 4,
+      "decodedDuration": 0.43859410430839,
+      "decodedFrames": 19342,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7080151438713074
+    },
+    {
+      "id": "gp_u_short",
+      "elementDuration": 0.345941,
+      "readyState": 4,
+      "decodedDuration": 0.3459410430839002,
+      "decodedFrames": 15256,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7081642150878906
+    },
+    {
+      "id": "gp_u_unstressed",
+      "elementDuration": 0.26576,
+      "readyState": 4,
+      "decodedDuration": 0.2657596371882086,
+      "decodedFrames": 11720,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7097340822219849
+    },
+    {
+      "id": "syllable_a",
+      "elementDuration": 0.339365,
+      "readyState": 4,
+      "decodedDuration": 0.33936507936507937,
+      "decodedFrames": 14966,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7168368101119995
+    },
+    {
+      "id": "syllable_ma",
+      "elementDuration": 0.418549,
+      "readyState": 4,
+      "decodedDuration": 0.41854875283446713,
+      "decodedFrames": 18458,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7060123682022095
+    },
+    {
+      "id": "syllable_am",
+      "elementDuration": 0.392834,
+      "readyState": 4,
+      "decodedDuration": 0.3928344671201814,
+      "decodedFrames": 17324,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7128322124481201
+    },
+    {
+      "id": "word_am",
+      "elementDuration": 0.392834,
+      "readyState": 4,
+      "decodedDuration": 0.3928344671201814,
+      "decodedFrames": 17324,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7128322124481201
+    },
+    {
+      "id": "syllable_i",
+      "elementDuration": 0.30059,
+      "readyState": 4,
+      "decodedDuration": 0.3005895691609977,
+      "decodedFrames": 13256,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7085229158401489
+    },
+    {
+      "id": "syllable_mi",
+      "elementDuration": 0.426349,
+      "readyState": 4,
+      "decodedDuration": 0.42634920634920637,
+      "decodedFrames": 18802,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7090667486190796
+    },
+    {
+      "id": "syllable_im",
+      "elementDuration": 0.450113,
+      "readyState": 4,
+      "decodedDuration": 0.4501133786848073,
+      "decodedFrames": 19850,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7094265222549438
+    },
+    {
+      "id": "word_im",
+      "elementDuration": 0.450113,
+      "readyState": 4,
+      "decodedDuration": 0.4501133786848073,
+      "decodedFrames": 19850,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7094265222549438
+    },
+    {
+      "id": "word_mimi",
+      "elementDuration": 0.518912,
+      "readyState": 4,
+      "decodedDuration": 0.5189115646258503,
+      "decodedFrames": 22884,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079744338989258
+    },
+    {
+      "id": "syllable_o",
+      "elementDuration": 0.364853,
+      "readyState": 4,
+      "decodedDuration": 0.3648526077097506,
+      "decodedFrames": 16090,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.70794677734375
+    },
+    {
+      "id": "syllable_mo",
+      "elementDuration": 0.422449,
+      "readyState": 4,
+      "decodedDuration": 0.42244897959183675,
+      "decodedFrames": 18630,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079519033432007
+    },
+    {
+      "id": "word_oma",
+      "elementDuration": 0.502404,
+      "readyState": 4,
+      "decodedDuration": 0.5024036281179138,
+      "decodedFrames": 22156,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.707882285118103
+    },
+    {
+      "id": "word_omi",
+      "elementDuration": 0.478458,
+      "readyState": 4,
+      "decodedDuration": 0.47845804988662133,
+      "decodedFrames": 21100,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7068905830383301
+    },
+    {
+      "id": "syllable_la",
+      "elementDuration": 0.459184,
+      "readyState": 4,
+      "decodedDuration": 0.45918367346938777,
+      "decodedFrames": 20250,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7108500003814697
+    },
+    {
+      "id": "syllable_li",
+      "elementDuration": 0.381361,
+      "readyState": 4,
+      "decodedDuration": 0.38136054421768706,
+      "decodedFrames": 16818,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7081564664840698
+    },
+    {
+      "id": "syllable_lo",
+      "elementDuration": 0.486349,
+      "readyState": 4,
+      "decodedDuration": 0.48634920634920636,
+      "decodedFrames": 21448,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7078803777694702
+    },
+    {
+      "id": "syllable_al",
+      "elementDuration": 0.412426,
+      "readyState": 4,
+      "decodedDuration": 0.4124263038548753,
+      "decodedFrames": 18188,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7063941955566406
+    },
+    {
+      "id": "syllable_il",
+      "elementDuration": 0.379093,
+      "readyState": 4,
+      "decodedDuration": 0.37909297052154195,
+      "decodedFrames": 16718,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7081146836280823
+    },
+    {
+      "id": "word_lama",
+      "elementDuration": 0.66907,
+      "readyState": 4,
+      "decodedDuration": 0.6690702947845805,
+      "decodedFrames": 29506,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7080317735671997
+    },
+    {
+      "id": "word_lila",
+      "elementDuration": 0.582494,
+      "readyState": 4,
+      "decodedDuration": 0.5824943310657597,
+      "decodedFrames": 25688,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7086642980575562
+    },
+    {
+      "id": "word_limo",
+      "elementDuration": 0.562313,
+      "readyState": 4,
+      "decodedDuration": 0.562312925170068,
+      "decodedFrames": 24798,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7083271741867065
+    },
+    {
+      "id": "word_mal",
+      "elementDuration": 0.537642,
+      "readyState": 4,
+      "decodedDuration": 0.537641723356009,
+      "decodedFrames": 23710,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7080443501472473
+    },
+    {
+      "id": "syllable_na",
+      "elementDuration": 0.452381,
+      "readyState": 4,
+      "decodedDuration": 0.4523809523809524,
+      "decodedFrames": 19950,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079970836639404
+    },
+    {
+      "id": "syllable_ni",
+      "elementDuration": 0.370522,
+      "readyState": 4,
+      "decodedDuration": 0.3705215419501134,
+      "decodedFrames": 16340,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7089239358901978
+    },
+    {
+      "id": "syllable_no",
+      "elementDuration": 0.362993,
+      "readyState": 4,
+      "decodedDuration": 0.36299319727891155,
+      "decodedFrames": 16008,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7080221176147461
+    },
+    {
+      "id": "syllable_an",
+      "elementDuration": 0.382268,
+      "readyState": 4,
+      "decodedDuration": 0.3822675736961451,
+      "decodedFrames": 16858,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7073930501937866
+    },
+    {
+      "id": "syllable_in",
+      "elementDuration": 0.411202,
+      "readyState": 4,
+      "decodedDuration": 0.4112018140589569,
+      "decodedFrames": 18134,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7084393501281738
+    },
+    {
+      "id": "syllable_man",
+      "elementDuration": 0.379683,
+      "readyState": 4,
+      "decodedDuration": 0.3796825396825397,
+      "decodedFrames": 16744,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7084862589836121
+    },
+    {
+      "id": "word_an",
+      "elementDuration": 0.382268,
+      "readyState": 4,
+      "decodedDuration": 0.3822675736961451,
+      "decodedFrames": 16858,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7073930501937866
+    },
+    {
+      "id": "word_in",
+      "elementDuration": 0.411202,
+      "readyState": 4,
+      "decodedDuration": 0.4112018140589569,
+      "decodedFrames": 18134,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7084393501281738
+    },
+    {
+      "id": "word_man",
+      "elementDuration": 0.379683,
+      "readyState": 4,
+      "decodedDuration": 0.3796825396825397,
+      "decodedFrames": 16744,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7084862589836121
+    },
+    {
+      "id": "word_lina",
+      "elementDuration": 0.561814,
+      "readyState": 4,
+      "decodedDuration": 0.561814058956916,
+      "decodedFrames": 24776,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7092193961143494
+    },
+    {
+      "id": "word_nina",
+      "elementDuration": 0.576599,
+      "readyState": 4,
+      "decodedDuration": 0.5765986394557823,
+      "decodedFrames": 25428,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7095513343811035
+    },
+    {
+      "id": "syllable_u",
+      "elementDuration": 0.313469,
+      "readyState": 4,
+      "decodedDuration": 0.313469387755102,
+      "decodedFrames": 13824,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079256772994995
+    },
+    {
+      "id": "syllable_mu",
+      "elementDuration": 0.319819,
+      "readyState": 4,
+      "decodedDuration": 0.3198185941043084,
+      "decodedFrames": 14104,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7084683179855347
+    },
+    {
+      "id": "syllable_lu",
+      "elementDuration": 0.470567,
+      "readyState": 4,
+      "decodedDuration": 0.4705668934240363,
+      "decodedFrames": 20752,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7091672420501709
+    },
+    {
+      "id": "syllable_nu",
+      "elementDuration": 0.351247,
+      "readyState": 4,
+      "decodedDuration": 0.3512471655328798,
+      "decodedFrames": 15490,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7095747590065002
+    },
+    {
+      "id": "syllable_um",
+      "elementDuration": 0.418549,
+      "readyState": 4,
+      "decodedDuration": 0.41854875283446713,
+      "decodedFrames": 18458,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7076106071472168
+    },
+    {
+      "id": "syllable_un",
+      "elementDuration": 0.509478,
+      "readyState": 4,
+      "decodedDuration": 0.5094784580498867,
+      "decodedFrames": 22468,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7095482349395752
+    },
+    {
+      "id": "word_um",
+      "elementDuration": 0.418549,
+      "readyState": 4,
+      "decodedDuration": 0.41854875283446713,
+      "decodedFrames": 18458,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7076106071472168
+    },
+    {
+      "id": "word_nun",
+      "elementDuration": 0.484943,
+      "readyState": 4,
+      "decodedDuration": 0.4849433106575964,
+      "decodedFrames": 21386,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079437971115112
+    },
+    {
+      "id": "word_uni",
+      "elementDuration": 0.456599,
+      "readyState": 4,
+      "decodedDuration": 0.45659863945578233,
+      "decodedFrames": 20136,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7077744007110596
+    },
+    {
+      "id": "word_alu",
+      "elementDuration": 0.467619,
+      "readyState": 4,
+      "decodedDuration": 0.4676190476190476,
+      "decodedFrames": 20622,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7077780365943909
+    },
+    {
+      "id": "jellyfish_intro",
+      "elementDuration": 4.566576,
+      "readyState": 4,
+      "decodedDuration": 4.566575963718821,
+      "decodedFrames": 201386,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7097954750061035
+    },
+    {
+      "id": "jellyfish_help",
+      "elementDuration": 3.38771,
+      "readyState": 4,
+      "decodedDuration": 3.3877097505668936,
+      "decodedFrames": 149398,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079851031303406
+    },
+    {
+      "id": "jellyfish_end",
+      "elementDuration": 3.463628,
+      "readyState": 4,
+      "decodedDuration": 3.4636281179138324,
+      "decodedFrames": 152746,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079383134841919
+    },
+    {
+      "id": "frog_intro",
+      "elementDuration": 5.209388,
+      "readyState": 4,
+      "decodedDuration": 5.209387755102041,
+      "decodedFrames": 229734,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7080063819885254
+    },
+    {
+      "id": "frog_help",
+      "elementDuration": 4.9361,
+      "readyState": 4,
+      "decodedDuration": 4.93609977324263,
+      "decodedFrames": 217682,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7079985737800598
+    },
+    {
+      "id": "frog_end",
+      "elementDuration": 3.251202,
+      "readyState": 4,
+      "decodedDuration": 3.2512018140589567,
+      "decodedFrames": 143378,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7069175243377686
+    },
+    {
+      "id": "minigame_lose",
+      "elementDuration": 2.50195,
+      "readyState": 4,
+      "decodedDuration": 2.501950113378685,
+      "decodedFrames": 110336,
+      "channels": 1,
+      "decodedSampleRate": 44100,
+      "peak": 0.7072021961212158
+    }
+  ],
+  "playback": [
+    {
+      "id": "gp_a_long",
+      "currentTime": 0.082387,
+      "ended": false,
+      "error": null
+    },
+    {
+      "id": "word_lila",
+      "currentTime": 0.13039,
+      "ended": false,
+      "error": null
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8061/audio-review.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/play.icon.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_a_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_a_short.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_m.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_i_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_a_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_m.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_i_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_i_short.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_a_short.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_i_unstressed.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_o_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_l.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_i_short.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_i_unstressed.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_o_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_l.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_o_unstressed.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_n.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_u_short.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_u_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_o_unstressed.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_n.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_u_short.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_u_unstressed.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_a.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_ma.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_u_long.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_u_unstressed.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_a.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_am.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_ma.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_am.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_i.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_am.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_mi.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_im.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_i.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_am.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_mi.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_im.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_im.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_mimi.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_o.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_mo.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_im.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_mimi.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_oma.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_o.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_mo.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_omi.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_oma.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_la.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_li.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_lo.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_li.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_la.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_omi.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_al.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_il.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_lo.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_lama.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_al.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_il.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_lila.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_lama.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_limo.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_lila.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_na.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_mal.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_ni.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_limo.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_na.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_mal.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_an.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_ni.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_no.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_in.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_man.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_an.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_no.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_in.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_man.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_an.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_in.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_man.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_lina.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_an.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_man.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_in.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_lina.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_nina.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_u.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_mu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_lu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_u.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_nina.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_mu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_nu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_un.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_um.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_lu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_nu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_um.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_um.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/syllable_un.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_nun.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_um.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_uni.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_alu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_nun.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/jellyfish_intro.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_uni.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/jellyfish_help.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/word_alu.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/jellyfish_end.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/jellyfish_intro.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/jellyfish_help.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/frog_intro.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/frog_help.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/frog_end.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/jellyfish_end.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/frog_intro.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/frog_help.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/frog_end.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/minigame_lose.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/minigame_lose.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/play.icon.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8061/review-audio/gp_a_long.wav",
+      "status": 206
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "limitations": [
+    "Headless Chromium with local HTTP hosting; no physical phone or Safari tested.",
+    "Audio decoding and playback time do not establish pronunciation, comprehension, or human-perceived sound quality."
+  ],
+  "passed": true
+}

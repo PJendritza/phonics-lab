@@ -2,11 +2,13 @@
 from pathlib import Path
 import hashlib
 import html
+from html.parser import HTMLParser
 import json
 import os
 import shutil
 import subprocess
 import zipfile
+from urllib.parse import urlsplit, unquote
 from build_german_pack import verified_audio_clips
 
 repo = Path(__file__).resolve().parent.parent
@@ -16,7 +18,9 @@ web = root/'web'
 shutil.copyfile(repo/'german/index.html', web/'index.html')
 shutil.copyfile(repo/'german/README.md', web/'CONTENT-NOTES.md')
 shutil.copyfile(repo/'german/AUDIO.md', web/'AUDIO-NOTES.md')
+shutil.copyfile(repo/'german/AUDIO.md', web/'AUDIO.md')
 shutil.copyfile(repo/'german/RUNNING.md', web/'README.md')
+shutil.copyfile(repo/'LICENSE', web/'LICENSE')
 (web/'.nojekyll').touch()
 play = web/'play.html'
 text = play.read_text()
@@ -92,4 +96,16 @@ with zipfile.ZipFile(web/'demo-source.zip', 'w', zipfile.ZIP_DEFLATED) as output
 for path in web.rglob('*'):
     if path.is_file():
         assert path.stat().st_size < 100_000_000, f'GitHub per-file limit: {path}'
+class LocalLinks(HTMLParser):
+    def handle_starttag(self, tag, attributes):
+        for key, value in attributes:
+            if key not in ('href', 'src') or not value:
+                continue
+            url = urlsplit(value)
+            if url.scheme or url.netloc or not url.path:
+                continue
+            target = (web/unquote(url.path)).resolve()
+            assert target.is_relative_to(web.resolve()) and target.is_file(), f'Missing packaged link: {value}'
+for page in web.glob('*.html'):
+    LocalLinks().feed(page.read_text())
 print('German prototype bytes:', sum(p.stat().st_size for p in web.rglob('*') if p.is_file()))

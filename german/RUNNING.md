@@ -56,7 +56,8 @@ python3 -m http.server 8061 --bind 127.0.0.1 --directory /workspace/kalulu-germa
 # In another terminal with the existing Playwright/Pillow/Tesseract tools:
 OMP_THREAD_LIMIT=1 node scripts/test_german_demo.cjs
 OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
-KALULU_GERMAN_LESSON=6 OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
+KALULU_GERMAN_LESSON=6 KALULU_GERMAN_TOUCH=1 OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
+node scripts/test_german_audio_review.cjs
 ```
 
 Outputs: `/workspace/kalulu-german-demo/web`; full logs/screenshots:

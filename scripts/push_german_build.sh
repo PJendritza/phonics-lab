@@ -21,6 +21,9 @@ assert checks[0]['originalGermanJellyfishCompleted']['lesson']==1
 assert checks[0]['emulatedPhoneTouch']['progressGaugeAdvanced']
 assert checks[0]['lessonAndCompletionPersistAfterReload']
 assert checks[1]['completedOriginalFrog']['progression']=='5/5'
+review=root/'logs/german-audio-review.json'
+assert json.loads(review.read_text())['passed'],'Standalone audio review browser test must pass'
+assert review.stat().st_mtime>=newest,'Build changed since audio browser testing'
 PY
 python3 "$repo/scripts/package_german_demo.py"
 deploy="$root/publish-german"
@@ -51,7 +54,7 @@ if previous.exists():
 elif any(p.name!='.git' for p in deploy.iterdir()):
     raise SystemExit('Artifact checkout contains files not managed by this script')
 results={}
-for name in ['german-jellyfish-lesson-1.json','german-frog-lesson-1.json','german-frog-lesson-6-touch.json']:
+for name in ['german-jellyfish-lesson-1.json','german-frog-lesson-1.json','german-frog-lesson-6-touch.json','german-audio-review.json']:
     path=root/'logs'/name
     if path.exists(): results[name]=json.loads(path.read_text())['checks']
 (web/'TEST_RESULTS.json').write_text(json.dumps(results,indent=2)+'\n')

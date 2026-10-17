@@ -86,11 +86,37 @@ word logs) were fixed without changing gameplay. Tests use physical screenshot
 input; no hidden answers or direct progression calls. INFO logs cannot prove the
 identity of every heard word, so no per-word listening claim is made.
 
-Current next action: commit these tests/tools, rerun the final strict build, repeat
-the two core browser suites against it, and store/fetch-verify the separate
-`kalulu-german-build` artifact branch. `german/RUNNING.md` has launch/rebuild steps.
-No German site is hosted yet; no physical phone/Safari tests or pedagogical review
-claimed. Content/audio review and real phone testing are the next human-facing step.
+Final strict build executed from clean source `9abd97b0fafd2d65d6df1a0d10f8d6b672491f31`:
+`bash scripts/build_german_demo.sh` exited0, import/audit/export logs contain no
+SCRIPT ERROR/ERROR, and the extended audit exits without leaked resources. The
+only audit warning is the intentional demo user-folder purge guard. PCK, all engine/
+SQLite WASM and JS bytes were identical to the earlier tested build, so lesson6
+touch evidence applies to the final runtime as well.
+
+Repeated both core suites after the final export: jellyfish1 PASS8/8,8clicks,83s,
+5/5lives; reload persistence and844x390 touch PASS(two taps to advance gauge).
+Frog1 PASS5/5,109s,10correct scored answers,22physical clicks including ignored
+transitions,5/5lives. Both measured nonzero audio, returned to the menu and recorded
+no runtime errors or external requests. The frog JSON records exact runtime SHA256.
+
+`node scripts/test_german_audio_review.cjs` PASS: all63 visible controls/text/IPA/IDs
+match the manifest, all63 WAVs decode completely in Chromium with positive finite
+signal/duration, real native control clicks play one GP and one word. All requests
+successful/same-origin; no page or console errors. These are playback tests, not
+human listening. Evidence is committed under `evidence/german-*.json/png`.
+The package also checks every local HTML link/asset exists, including notices/source.
+
+Next action in this run: push/fetch-verify `kalulu-german-build` using the gated
+artifact uploader. `german/RUNNING.md` has launch/rebuild steps. No German site is
+hosted yet; no physical phone/Safari tests or pedagogical review claimed. All twelve
+lesson/game pools are audited; actual browser completion covers jellyfish1 and
+frog1/6, not every possible random round in every lesson.
+
+Smallest next development step: native German review of the13isolated GP clips and
+word stress using audio-review.html, plus a real phone test. Fix identified clips/
+input problems before extending the draft course. Hosting remains separate/deferred;
+do not repeat the earlier Sites detour or configure scheduling. No input is needed
+to preserve, rebuild or run the current prototype.
 
 ## French phone demo (previous verified milestone)
 
