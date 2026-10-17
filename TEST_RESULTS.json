@@ -1,0 +1,71 @@
+{
+  "german-jellyfish-lesson-1.json": {
+    "noIsolationHeadersNeeded": true,
+    "germanPhonemePreviewHasAudio": true,
+    "allSixLessonMenusReachable": true,
+    "nonzeroGameAudio": true,
+    "originalGermanJellyfishCompleted": {
+      "lesson": 1,
+      "clicks": 8,
+      "log": "21:40:20 [INFO] BaseMinigame: jellyfish won in 83 seconds with progression 8/8 and 5/5 lives"
+    },
+    "lessonAndCompletionPersistAfterReload": true,
+    "emulatedPhoneTouch": {
+      "viewport": "844x390",
+      "taps": 2,
+      "progressGaugeAdvanced": true
+    },
+    "noExternalRequests": true,
+    "noRuntimeErrors": true
+  },
+  "german-frog-lesson-1.json": {
+    "originalFrogStarted": true,
+    "completedOriginalFrog": {
+      "lesson": 1,
+      "clicks": 22,
+      "progression": "5/5",
+      "touch": false,
+      "log": "21:40:29 [INFO] BaseMinigame: frog won in 109 seconds with progression 5/5 and 5/5 lives"
+    },
+    "nonzeroAudio": {
+      "peak": 0.11450065672397614,
+      "samples": 1639
+    },
+    "wordPlaybackTrace": {
+      "words": [],
+      "available": false
+    },
+    "germanDatabaseOpened": true,
+    "noRuntimeErrors": true,
+    "noExternalRequests": true,
+    "returnedToMenu": true
+  },
+  "german-frog-lesson-6-touch.json": {
+    "originalFrogStarted": true,
+    "completedOriginalFrog": {
+      "lesson": 6,
+      "clicks": 38,
+      "progression": "5/5",
+      "touch": true,
+      "log": "21:36:55 [INFO] BaseMinigame: frog won in 162 seconds with progression 5/5 and 0/5 lives"
+    },
+    "nonzeroAudio": {
+      "peak": 0.0999603345990181,
+      "samples": 3869
+    },
+    "wordPlaybackTrace": {
+      "words": [],
+      "available": false
+    },
+    "germanDatabaseOpened": true,
+    "noRuntimeErrors": true,
+    "noExternalRequests": true,
+    "returnedToMenu": true
+  },
+  "german-audio-review.json": {
+    "all63UniqueControlsAndLabelsMatchManifest": true,
+    "all63MetadataCanPlayAndCompleteBrowserDecode": true,
+    "nativeControlClickAdvancesPhonemeAndWordPlayback": true,
+    "requestsSuccessfulSameOriginAndNoPageErrors": true
+  }
+}
