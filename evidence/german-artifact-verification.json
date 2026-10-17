@@ -1,0 +1,18 @@
+{
+  "verification": "fresh remote clone; every packaged SHA256 matched; source zip matches authored inputs",
+  "artifact_branch": "kalulu-german-build",
+  "artifact_commit": "92d7f560fd2959bcec9d632dd9a8deafd5c4799b",
+  "packaged_source_commit": "cb8cddab173dc0709faf193d5fbb2200ba6dc604",
+  "source_dirty": false,
+  "verified_files": 86,
+  "bytes": 92099551,
+  "main_unchanged": "c1e1a634ed3319534cc97cca3060d1a233fc5943",
+  "runtime_sha256": {
+    "play.pck": "4cb83b93eb091f89fd1979e7e03c584070f648f79c0d78b88c1f46a375cbe765",
+    "play.wasm": "d37e06f7126849a81fa099f1cf89f0d8ccbb87502b8c857492490dff66fad95a",
+    "play.side.wasm": "85473bead1cf62c408d034189fae423594c45fef403fc0707a72bb8e2b87a6d2"
+  },
+  "hosted": false,
+  "physical_phone_tested": false,
+  "native_pronunciation_reviewed": false
+}

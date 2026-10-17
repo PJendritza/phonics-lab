@@ -106,9 +106,23 @@ successful/same-origin; no page or console errors. These are playback tests, not
 human listening. Evidence is committed under `evidence/german-*.json/png`.
 The package also checks every local HTML link/asset exists, including notices/source.
 
-Next action in this run: push/fetch-verify `kalulu-german-build` using the gated
-artifact uploader. `german/RUNNING.md` has launch/rebuild steps. No German site is
-hosted yet; no physical phone/Safari tests or pedagogical review claimed. All twelve
+Delivery complete: the gated uploader pushed `kalulu-german-build` at
+[`92d7f560fd2959bcec9d632dd9a8deafd5c4799b`](https://github.com/PJendritza/tmp/commit/92d7f560fd2959bcec9d632dd9a8deafd5c4799b),
+packaged from clean source
+[`cb8cddab173dc0709faf193d5fbb2200ba6dc604`](https://github.com/PJendritza/tmp/commit/cb8cddab173dc0709faf193d5fbb2200ba6dc604).
+Executed `bash scripts/push_german_build.sh`, then cloned that branch afresh into
+`/workspace/kalulu-german-demo/verify-remote`. **All86 packaged SHA256 checks passed**
+(92,099,551bytes including compact test results); the source archive's authored
+content/menu/bootstrap/audio metadata/test script matched this checkout. Main
+was verified remotely unchanged at `c1e1a634ed3319534cc97cca3060d1a233fc5943`.
+Compact evidence: `evidence/german-artifact-verification.json`.
+
+[`german/RUNNING.md`](https://github.com/PJendritza/tmp/blob/kalulu-german-prototype/german/RUNNING.md)
+has ready-build launch and source rebuild steps; the artifact branch README is
+self-contained and needs no Godot installation. The artifact includes attribution,
+source ZIP, provenance, local-link checks, BUILD_INFO, TEST_RESULTS and SHA256SUMS.
+**This is a stored runnable build, not a live website.** Hosting is deferred.
+No physical phone/Safari tests or pedagogical review claimed. All twelve
 lesson/game pools are audited; actual browser completion covers jellyfish1 and
 frog1/6, not every possible random round in every lesson.
 

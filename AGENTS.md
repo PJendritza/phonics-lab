@@ -31,6 +31,11 @@ Keep TTS models/engines outside Git and outside browser bundles. Small generated
 speech clips and separate runnable artifact branches are permitted. Preserve
 license notices and corresponding source. No scheduling now.
 
+Current handoff: german/RUNNING.md. Source is on kalulu-german-prototype; verified
+ready-to-serve files are on kalulu-german-build (not hosted). Read the latest
+PROGRESS.md test evidence before repeating work. Real-phone testing and native
+German pronunciation/educator review remain; technical tests do not satisfy them.
+
 Maintain PROGRESS.md with findings, exact commands/results, blockers, and the next
 action. Distinguish export completion from browser startup, interactive UI, and actual
 lesson play. Never call an unexecuted or zero-test check successful. Respect upstream
