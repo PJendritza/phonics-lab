@@ -1,20 +1,70 @@
-# Kalulu browser feasibility
+# Kalulu German prototype and browser feasibility
 
-Updated: 2026-10-17. Scope now includes an offline French phone demo and public
-hosting, explicitly authorized by the user. No German lessons, generated speech,
-production accounts, repository visibility change or recurring schedule. Initial feasibility branch started from
+Updated: 2026-10-17. The latest user instruction authorizes autonomous German
+prototype development: content, speech generation, integration, builds, testing,
+debugging and Git commits/pushes. Hosting can wait until tomorrow. No production
+accounts, repository visibility change or recurring schedule. Initial feasibility branch started from
 `main` at `c1e1a634ed3319534cc97cca3060d1a233fc5943`, excluding the earlier terminal-test
 branch. Future runs: read AGENTS.md, this file, and `git log` before continuing.
 
 ## Result
 
-**A French offline demo now completes the original jellyfish activity in Chromium.**
-The first activity completed all eight rounds and returned to the demo menu; landscape
-phone emulation also progressed through a real touch tap. Publishing is being
-prepared on `gh-pages`; GitHub Pages is disabled and the integration cannot enable it.
-Do not present the expected public URL as live until it has been verified.
+**German prototype integration is in progress on `kalulu-german-prototype`.**
+The existing French demo remains a verified fallback. A six-lesson German pack now
+loads through the real upstream database/audio APIs. Browser gameplay for the
+German version is the next verification step; export alone is not playability.
 
-## French phone demo (current)
+## German development run (current)
+
+Source branch: `kalulu-german-prototype`, from `93e2977`; main stays `c1e1a63`.
+User is away and requested as much autonomous progress as practical. No human
+confirmation is needed for routine development within this scope. Hosting is deferred.
+
+- `german/content.json`: six cumulative lessons, seven letters a/m/i/o/l/n/u,
+  13 context-specific GP readings, 25 syllables, 18 words/names. Explicit long,
+  short and unstressed vowels; selected pronunciations and names are documented.
+  `german/README.md` records dictionary checks, limits and review requirements.
+- `german/audio`: 63 small draft WAVs, 51.746 seconds total, generated locally
+  with pinned Piper1.4.2/de_DE-thorsten-medium. Models/engine remain outside Git.
+  SHA256, format, nonzero RMS/peak, cache and deterministic generation checked.
+  `german/AUDIO.md` records exact reproduction/provenance. This is synthetic draft
+  speech, **not native-speaker or educator approved**.
+- `build_german_pack.py` builds official schema-v1 SQLite plus 57 canonical MP3s
+  (some word/syllable assets share a file). Tests caught and fixed a zero-based
+  GP position requirement before integration. Case-sensitive noun audio names
+  follow upstream `cap.` encoding; all six cumulative word pools are checked.
+- `german/demo` adds a local six-lesson menu, per-GP audio preview, two original
+  minigames (jellyfish/frog), completion marks, and local-only fictional learner.
+  Existing original game mechanics/animation/scoring are retained. The guarded
+  return patch points back to the demo. New app namespace isolates French data.
+- Single-threaded Godot4.7 extension-enabled export uses the already verified
+  templates/SQLite WASM, lossless textures and a same-origin policy. A landing
+  page, individual audio-review page, attribution and corresponding source ZIP
+  are packaged. Generated output is outside the source branch.
+
+Executed so far:
+
+```bash
+python3 -m unittest discover -s tests -p test_german_pack.py -v
+# PASS: 10 tests, including real ffmpeg/schema build and malformed-content rejection.
+python3 scripts/build_german_demo.py
+# PASS: 13 GPs,25 syllables,18 words,6 lessons,57 MP3 files.
+bash scripts/build_german_demo.sh
+# Initial export produced files (~92MB), but menu script had a type-inference
+# parse error. Fixed explicit type and added build-log error checks; rebuilding.
+```
+
+Godot integration audit already executed against German data: PASS all six
+lesson pools and 57 MP3 decodes. It also exposed cleanup warnings at headless exit;
+cleanup and actual minigame stimulus tests are being improved. Browser gameplay,
+mobile emulation, persistence and final clean build remain to execute. No German
+site is hosted yet; no physical phone/Safari tests or pedagogical review claimed.
+
+Next actionable step: finish clean build, run original German jellyfish/frog games
+in Chromium with real input, test landscape touch/persistence, then push tested
+source and an isolated ready-to-serve artifact branch.
+
+## French phone demo (previous verified milestone)
 
 Branch: `kalulu-french-phone-demo`, based on `b5d731a`. Main remains untouched.
 The user requested one phone-accessible French test link and authorized building

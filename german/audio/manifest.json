@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "clips": [
+    {
+      "id": "gp_a_long",
+      "kind": "gp",
+      "text": "a",
+      "phonemes": "aː"
+    },
+    {
+      "id": "gp_a_short",
+      "kind": "gp",
+      "text": "a",
+      "phonemes": "a"
+    },
+    {
+      "id": "gp_m",
+      "kind": "gp",
+      "text": "m",
+      "phonemes": "m"
+    },
+    {
+      "id": "gp_i_long",
+      "kind": "gp",
+      "text": "i",
+      "phonemes": "iː"
+    },
+    {
+      "id": "gp_i_short",
+      "kind": "gp",
+      "text": "i",
+      "phonemes": "ɪ"
+    },
+    {
+      "id": "gp_i_unstressed",
+      "kind": "gp",
+      "text": "i",
+      "phonemes": "i"
+    },
+    {
+      "id": "gp_o_long",
+      "kind": "gp",
+      "text": "o",
+      "phonemes": "oː"
+    },
+    {
+      "id": "gp_l",
+      "kind": "gp",
+      "text": "l",
+      "phonemes": "l"
+    },
+    {
+      "id": "gp_o_unstressed",
+      "kind": "gp",
+      "text": "o",
+      "phonemes": "o"
+    },
+    {
+      "id": "gp_n",
+      "kind": "gp",
+      "text": "n",
+      "phonemes": "n"
+    },
+    {
+      "id": "gp_u_long",
+      "kind": "gp",
+      "text": "u",
+      "phonemes": "uː"
+    },
+    {
+      "id": "gp_u_short",
+      "kind": "gp",
+      "text": "u",
+      "phonemes": "ʊ"
+    },
+    {
+      "id": "gp_u_unstressed",
+      "kind": "gp",
+      "text": "u",
+      "phonemes": "u"
+    },
+    {
+      "id": "syllable_a",
+      "kind": "syllable",
+      "text": "a",
+      "phonemes": "aː"
+    },
+    {
+      "id": "syllable_ma",
+      "kind": "syllable",
+      "text": "ma",
+      "phonemes": "maː"
+    },
+    {
+      "id": "syllable_am",
+      "kind": "syllable",
+      "text": "am",
+      "phonemes": "am"
+    },
+    {
+      "id": "word_am",
+      "kind": "word",
+      "text": "am",
+      "phonemes": "am"
+    },
+    {
+      "id": "syllable_i",
+      "kind": "syllable",
+      "text": "i",
+      "phonemes": "iː"
+    },
+    {
+      "id": "syllable_mi",
+      "kind": "syllable",
+      "text": "mi",
+      "phonemes": "miː"
+    },
+    {
+      "id": "syllable_im",
+      "kind": "syllable",
+      "text": "im",
+      "phonemes": "ɪm"
+    },
+    {
+      "id": "word_im",
+      "kind": "word",
+      "text": "im",
+      "phonemes": "ɪm"
+    },
+    {
+      "id": "word_mimi",
+      "kind": "word",
+      "text": "Mimi",
+      "phonemes": "ˈmiːmi"
+    },
+    {
+      "id": "syllable_o",
+      "kind": "syllable",
+      "text": "o",
+      "phonemes": "oː"
+    },
+    {
+      "id": "syllable_mo",
+      "kind": "syllable",
+      "text": "mo",
+      "phonemes": "moː"
+    },
+    {
+      "id": "word_oma",
+      "kind": "word",
+      "text": "Oma",
+      "phonemes": "ˈoːma"
+    },
+    {
+      "id": "word_omi",
+      "kind": "word",
+      "text": "Omi",
+      "phonemes": "ˈoːmi"
+    },
+    {
+      "id": "syllable_la",
+      "kind": "syllable",
+      "text": "la",
+      "phonemes": "laː"
+    },
+    {
+      "id": "syllable_li",
+      "kind": "syllable",
+      "text": "li",
+      "phonemes": "liː"
+    },
+    {
+      "id": "syllable_lo",
+      "kind": "syllable",
+      "text": "lo",
+      "phonemes": "loː"
+    },
+    {
+      "id": "syllable_al",
+      "kind": "syllable",
+      "text": "al",
+      "phonemes": "al"
+    },
+    {
+      "id": "syllable_il",
+      "kind": "syllable",
+      "text": "il",
+      "phonemes": "ɪl"
+    },
+    {
+      "id": "word_lama",
+      "kind": "word",
+      "text": "Lama",
+      "phonemes": "ˈlaːma"
+    },
+    {
+      "id": "word_lila",
+      "kind": "word",
+      "text": "lila",
+      "phonemes": "ˈliːla"
+    },
+    {
+      "id": "word_limo",
+      "kind": "word",
+      "text": "Limo",
+      "phonemes": "ˈliːmo"
+    },
+    {
+      "id": "word_mal",
+      "kind": "word",
+      "text": "Mal",
+      "phonemes": "maːl"
+    },
+    {
+      "id": "syllable_na",
+      "kind": "syllable",
+      "text": "na",
+      "phonemes": "naː"
+    },
+    {
+      "id": "syllable_ni",
+      "kind": "syllable",
+      "text": "ni",
+      "phonemes": "niː"
+    },
+    {
+      "id": "syllable_no",
+      "kind": "syllable",
+      "text": "no",
+      "phonemes": "noː"
+    },
+    {
+      "id": "syllable_an",
+      "kind": "syllable",
+      "text": "an",
+      "phonemes": "an"
+    },
+    {
+      "id": "syllable_in",
+      "kind": "syllable",
+      "text": "in",
+      "phonemes": "ɪn"
+    },
+    {
+      "id": "syllable_man",
+      "kind": "syllable",
+      "text": "man",
+      "phonemes": "man"
+    },
+    {
+      "id": "word_an",
+      "kind": "word",
+      "text": "an",
+      "phonemes": "an"
+    },
+    {
+      "id": "word_in",
+      "kind": "word",
+      "text": "in",
+      "phonemes": "ɪn"
+    },
+    {
+      "id": "word_man",
+      "kind": "word",
+      "text": "man",
+      "phonemes": "man"
+    },
+    {
+      "id": "word_lina",
+      "kind": "word",
+      "text": "Lina",
+      "phonemes": "ˈliːna"
+    },
+    {
+      "id": "word_nina",
+      "kind": "word",
+      "text": "Nina",
+      "phonemes": "ˈniːna"
+    },
+    {
+      "id": "syllable_u",
+      "kind": "syllable",
+      "text": "u",
+      "phonemes": "uː"
+    },
+    {
+      "id": "syllable_mu",
+      "kind": "syllable",
+      "text": "mu",
+      "phonemes": "muː"
+    },
+    {
+      "id": "syllable_lu",
+      "kind": "syllable",
+      "text": "lu",
+      "phonemes": "luː"
+    },
+    {
+      "id": "syllable_nu",
+      "kind": "syllable",
+      "text": "nu",
+      "phonemes": "nuː"
+    },
+    {
+      "id": "syllable_um",
+      "kind": "syllable",
+      "text": "um",
+      "phonemes": "ʊm"
+    },
+    {
+      "id": "syllable_un",
+      "kind": "syllable",
+      "text": "un",
+      "phonemes": "ʊn"
+    },
+    {
+      "id": "word_um",
+      "kind": "word",
+      "text": "um",
+      "phonemes": "ʊm"
+    },
+    {
+      "id": "word_nun",
+      "kind": "word",
+      "text": "nun",
+      "phonemes": "nuːn"
+    },
+    {
+      "id": "word_uni",
+      "kind": "word",
+      "text": "Uni",
+      "phonemes": "ˈʊni"
+    },
+    {
+      "id": "word_alu",
+      "kind": "word",
+      "text": "Alu",
+      "phonemes": "ˈaːlu"
+    },
+    {
+      "id": "jellyfish_intro",
+      "text": "Hör genau hin. Tippe auf die Qualle mit dem passenden Buchstaben oder der passenden Silbe.",
+      "kind": "instruction"
+    },
+    {
+      "id": "jellyfish_help",
+      "text": "Hör noch einmal hin. Welche Qualle passt zu dem Laut oder der Silbe?",
+      "kind": "instruction"
+    },
+    {
+      "id": "jellyfish_end",
+      "text": "Gut gemacht! Du hast die passenden Buchstaben und Silben gefunden.",
+      "kind": "instruction"
+    },
+    {
+      "id": "frog_intro",
+      "text": "Hör dir das Wort an. Tippe nacheinander auf die passenden Buchstaben. So hilfst du dem Frosch über den Fluss.",
+      "kind": "instruction"
+    },
+    {
+      "id": "frog_help",
+      "text": "Hör noch einmal genau hin. Welcher Buchstabe kommt als Nächstes? Tippe auf das passende Blatt.",
+      "kind": "instruction"
+    },
+    {
+      "id": "frog_end",
+      "text": "Gut gemacht! Du hast die Wörter gelesen und dem Frosch geholfen.",
+      "kind": "instruction"
+    },
+    {
+      "id": "minigame_lose",
+      "text": "Versuche es noch einmal. Du schaffst das.",
+      "kind": "instruction"
+    }
+  ]
+}

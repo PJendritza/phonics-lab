@@ -11,18 +11,25 @@ unless explicitly requested. Preserve user work. Do not expose credentials or di
 TLS/checksum verification. Keep large upstream checkouts, assets, downloads, and build
 outputs outside this repository. Pin and record upstream revisions and tool versions.
 
-Current scope: the user authorized building and hosting a French phone-test demo,
-using original game scenes with a local offline entry point and original French audio.
-Prepare and validate a real playable lesson, then publish a phone-accessible URL when
-hosting access permits. Keep source development on feature branches; a dedicated
-gh-pages branch may hold deployment artifacts. Leave main unchanged. Do not change
-repository visibility or create production accounts. No German lessons, generated
-audio, redesign, or scheduling yet. Use controlled copies and small reproducible
-patches. Report concrete hosting blockers promptly and finish independent work.
+Current scope (expanded by the user's latest instruction, 2026-10-17): develop a
+first working German prototype autonomously, with approximately six cumulative
+lessons, German speech, and the original games/animations wherever practical.
+Install tools, implement, build, debug, and test without routine confirmations.
+Use branch kalulu-german-prototype; keep main unchanged. Push meaningful progress
+and a reproducible runnable result to PJendritza/tmp. Hosting can wait until the
+user returns; do not spend this development run on Sites publishing. No scheduling,
+repository visibility changes, production accounts, or large engine port.
 
-Long-term direction (requires later task authorization): approximately six German
-lessons, appropriate German speech, original games/UI preserved, playable browser
-version, eventually GitHub Pages and daily autonomous continuation. No scheduling now.
+Keep the pinned upstream checkout clean. Build in disposable copies. Preserve the
+French demo as a fallback. German content is an adult-testing prototype, not a
+validated reading course. Explicitly model German vowel length/quality/context;
+never offer different sounds with the same visible spelling as competing answers.
+Generated audio must have provenance, deterministic generation instructions, and
+format/signal checks. Native German listening and educator review remain necessary;
+do not claim those reviews or original Kalulu's efficacy for the adaptation.
+Keep TTS models/engines outside Git and outside browser bundles. Small generated
+speech clips and separate runnable artifact branches are permitted. Preserve
+license notices and corresponding source. No scheduling now.
 
 Maintain PROGRESS.md with findings, exact commands/results, blockers, and the next
 action. Distinguish export completion from browser startup, interactive UI, and actual
