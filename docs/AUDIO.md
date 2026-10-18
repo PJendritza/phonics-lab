@@ -1,125 +1,76 @@
-# German prototype audio
+# Audio: human recordings first
 
-The prototype uses **synthetic German speech**, generated offline with Piper's
-`de_DE-thorsten-medium` voice. The clips are temporary development material.
-File validation and successful game playback do **not** establish that a sound is
-phonetically or pedagogically correct. No native-speaker listening approval has
-been recorded. Replace or approve the clips before use for children's instruction.
+The previous Piper-generated isolated phonemes/syllables were rejected by the user:
+cut-off, unnatural short sounds. The replacement does **not** regenerate those with
+the same model or crop vowels out of words. It uses small licensed human German
+Wikimedia recordings and Piper only for full sentence instructions.
 
-## Reproduce
+app/audio/manifest.json is the per-clip authority: source URL, original file SHA256,
+processed file SHA256, speaker, license version, IPA target, processing and pending
+review. docs/audio-sources.json preserves the original Commons metadata. The in-app
+About page and Töne prüfen display attribution. There is no automatic hearing approval.
 
-Run from the project repository with Python 3.12 and system `ffprobe` (FFmpeg).
-The current environment was tested using Python 3.12.14 and FFmpeg 7.1.5.
-Keep the virtual environment and 60 MiB voice model outside Git:
+| Clip | Source file | Speaker | License | Teaching role |
+| --- | --- | --- | --- | --- |
+| a | De-a.ogg | Jeuwre | CC BY-SA 4.0 | long /aː/ |
+| i | De-i.ogg | Jeuwre | CC BY-SA 4.0 | long /iː/ |
+| o | De-O.ogg | T.Voekler | CC BY-SA 3.0 | long /oː/ |
+| m | De-hm.ogg | Jeuwre | CC BY-SA 4.0 | natural sustained nasal hum; specifically check for extra h/e |
+| am | De-am.ogg | T.Voekler | CC BY-SA 3.0 | short /a/ in the complete word /am/ |
+| im | De-im.ogg | joni | CC BY-SA 3.0 | short /ɪ/ in the complete word /ɪm/ |
+| mi | De-mi.ogg | Jeuwre | CC BY-SA 4.0 | whole /miː/ recording, used as a practice syllable |
+| Oma | De-Oma.ogg | Dinock90 | CC BY-SA 4.0 | whole /ˈoːma/ word |
 
-```bash
-python3 -m venv /workspace/kalulu-tools/tts
-/workspace/kalulu-tools/tts/bin/python -m pip install -r app/content/de_DE/audio/requirements-generation.txt
-/workspace/kalulu-tools/tts/bin/python scripts/generate_german_audio.py \
-  --manifest app/content/de_DE/audio/manifest.json \
-  --output-dir app/content/de_DE/audio \
-  --cache-dir /workspace/kalulu-tools/tts-models
+Source pages: https://commons.wikimedia.org/wiki/File: followed by the filename.
+The source *mi* records a German abbreviation, with the desired /miː/ pronunciation;
+the exercise calls it an Übungssilbe, not a normal German vocabulary word.
+Recordings have different speakers/recording conditions; uniform voice quality is
+not guaranteed. Dedicated recordings by one qualified native speaker are the likely
+next quality improvement. Do not confuse a letter name with a consonant phoneme.
+
+## Processing
+
+ffmpeg shortens only quiet leading/trailing margins, retaining 120/160 ms, applies
+-20 LUFS loudness normalization with -3 dB true-peak target, an 8 ms leading fade and
+120 ms trailing pad; output mono 44.1 kHz, 80 kbps MP3 for iOS/Android browser support.
+No phoneme extraction, pitch shift, time stretch or concatenation. The entire voiced
+utterance is retained, including the whole hum. File metadata/energy analysis is
+useful for detecting accidental cuts or clipping, not proof of correct articulation.
+
+Only full instructions use Piper 1.4.2 with de_DE-thorsten-medium. Voice revision:
+c10ece1aade47bb51c153c893d14e5bf8e5b7117, model SHA256:
+7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819.
+Model metadata: MIT; Thorsten dataset: CC0; model card mentions fine-tuning from
+Lessac. Piper's GPL engine is an external production tool, absent from the website.
+The authored instruction clip collection is offered under project CC BY-SA 4.0.
+Full voice/model source links are recorded in each instruction entry in the manifest.
+
+## Regeneration (optional; ordinary builds use committed MP3s)
+
+Needs Python with piper-tts==1.4.2, ffmpeg, the pinned model plus its .onnx.json config.
+Install these outside this source repository. In this environment:
+
+```sh
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py
 ```
 
-This downloads the model only if absent, uses verified HTTPS through the inherited
-proxy, and verifies both downloaded files against pinned SHA256 values before
-loading them. Existing mismatching assets are rejected. No account, paid API,
-network voice service, or credentials are used. Once the model is cached,
-generation works offline. Only the small generated WAV files and their provenance
-are committed; the engine and model are not shipped in the browser build.
+Elsewhere pass --cache /path/to/cache --model /path/to/de_DE-thorsten-medium.onnx.
+The script downloads missing original human recordings from the pinned manifest URLs,
+checks original hashes, validates the voice model hash and regenerates current clips.
+It reuses the committed previous-*.mp3 comparison assets when the external historical
+WAV cache is absent; --legacy-audio supplies that cache if required. Network TLS
+verification stays enabled. Metadata and output hashes are updated; review diffs and
+repeat tests before committing a regenerated collection. Synthesis/ffmpeg versions
+can change output bytes; this is not a bit-identical cross-platform TTS guarantee.
 
-The manifest format is:
+## Listening workflow
 
-```json
-{
-  "version": 1,
-  "clips": [
-    {"id": "gp_m", "text": "m", "kind": "phoneme", "phonemes": "m"},
-    {"id": "word_oma", "text": "Oma", "kind": "word", "phonemes": "ˈoːma"},
-    {"id": "minigame_lose", "text": "Versuche es noch einmal.", "kind": "instruction"}
-  ]
-}
-```
+Töne prüfen plays every current clip, shows its human/synthetic label and IPA/source,
+and keeps previous synthetic a/i/m under a collapsed comparison. Mark good / review /
+replace, add a note and export JSON. Ratings live only in the browser. A good rating
+in one local browser does not automatically alter the repository's pending status.
 
-IDs must contain only lowercase ASCII letters, digits and underscores. `phonemes`
-is a Unicode sequence in the model's phoneme inventory (IPA-like eSpeak/Piper
-symbols), without brackets, slashes or dots denoting syllable boundaries.
-Unsupported symbols fail validation. If supplied, it bypasses the text phonemizer.
-`kind` values `phoneme`, `grapheme` and `gp` require this explicit sequence. They
-must not synthesize a grapheme's written letter name, e.g. `em` for /m/.
-
-Instruction and ordinary word text can use the German text phonemizer; the actual
-phoneme sequence used is stored in `metadata.json`. Curriculum phoneme choices
-remain distinct from what the synthetic waveform actually realizes.
-
-Generation uses CPU ONNX inference with zero model noise for repeatability,
-length scale 3.6 for isolated long vowels, 1.8 for other isolated phonemes and 1.15
-for contextual words/syllables/instructions, trimming at -44 dB
-relative to each clip's peak with 80 ms retained padding. Peaks are normalized to
--3 dBFS, encoded as 22,050 Hz, mono, signed 16-bit WAV. This is simple peak
-normalization, not a claim of equal perceived loudness. Zero noise trades some
-voice naturalness for reproducibility; phoneme length is not a pronunciation
-guarantee. At a uniform rate, this model produced isolated /uː/ shorter than /ʊ/;
-the explicit long-vowel rate adjustment makes the intended duration distinction
-clearer. Review vowels and sustained consonants in particular.
-
-Cache keys cover the utterance, phoneme sequence, model/config checksums, Piper
-version and generator source checksum. A cache hit also verifies the WAV checksum.
-Regeneration after recipe edits is intentional. `--force` bypasses the cache.
-
-## Validation and review
-
-```bash
-/workspace/kalulu-tools/tts/bin/python scripts/generate_german_audio.py \
-  --manifest app/content/de_DE/audio/manifest.json --output-dir app/content/de_DE/audio --validate-only
-```
-
-Every clip is checked with `ffprobe` for PCM encoding, 22,050 Hz, mono and duration;
-sample RMS must be nonzero and the peak must stay below clipping. Metadata stores
-duration, peak/RMS level, SHA256, input text and actual synthesized phonemes. These
-checks detect broken assets, not wrong pronunciations. A four-clip smoke run also
-verified that forced regeneration produced byte-identical outputs on this host;
-other platforms/runtime versions are not claimed bit-identical.
-
-A native German speaker familiar with initial reading instruction must listen
-before classroom/child use. In particular:
-
-- Confirm /m/, /l/, /n/ are sustained sounds without letter names or a trailing
-  schwa; listen for model artifacts and unnatural onsets.
-- Confirm long and short /a/, /i/, /o/, /u/ contrasts and their word contexts.
-- Confirm word stress, syllable blending, instructions and child comprehension.
-- Approve or replace clips individually; retain the speaker's recording consent
-  and license if replacing synthetic audio.
-
-Every generated clip currently has `listening_review: pending_native_speaker` and
-`phonetic_correctness_verified: false`. No automated acoustic check overrides that.
-
-## Sources, licenses and provenance
-
-- Engine: [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), installed
-  package **piper-tts 1.4.2**, whose package metadata says **GPL-3.0-or-later**.
-  The engine and its dependencies remain outside the repository/browser package.
-- Voice repository: [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices),
-  pinned revision `c10ece1aade47bb51c153c893d14e5bf8e5b7117`. Its repository metadata
-  declares **MIT**. Individual voice cards describe their own dataset provenance;
-  do not generalize a dataset license to every model component.
-- [Thorsten medium model card](https://huggingface.co/rhasspy/piper-voices/blob/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/medium/MODEL_CARD)
-  identifies German/Germany, 22,050 Hz, one speaker, the
-  [Thorsten-Voice dataset](https://github.com/thorstenMueller/Thorsten-Voice) under
-  **CC0**, and fine-tuning from the U.S. English lessac medium voice. Attribution:
-  Thorsten Müller, Thorsten-Voice; Piper contributors / Open Home Foundation.
-- Model `.onnx` SHA256:
-  `7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819`,
-  corroborated by Hugging Face Git LFS metadata over verified HTTPS.
-- Model `.onnx.json` SHA256:
-  `974adee790533adb273a1ac88f49027d2a1b8f0f2cf4905954a4791e79264e85`,
-  measured from the pinned-revision configuration over verified HTTPS.
-- Newly authored German text, synthetic clip collection and integration are
-  distributed for this project under **CC BY-SA 4.0**, consistent with the Kalulu
-  adaptation. This does not replace upstream dataset, model or engine licenses.
-  Attribution: German Kalulu prototype contributors; generated with Thorsten-Voice
-  and Piper. Kalulu original: Excello Recherche & Education, CC BY-SA 4.0.
-
-Dependency pins in `audio/requirements-generation.txt` record the installed Linux
-Python environment. PyPI distribution integrity checks and standard TLS verification
-remain enabled. No model checksum or TLS check was bypassed during generation.
+Before child use: listen with normal phone speakers and headphones, especially
+endings and vowel lengths. An adult German speaker and reading specialist should
+review the phoneme mapping, prompts and complete lesson progression. No such human
+or real-phone approval has yet been recorded.

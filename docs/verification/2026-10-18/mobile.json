@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "widths": [
+    320,
+    768
+  ],
+  "checks": [
+    "introductory screens fit without horizontal overflow",
+    "preview buttons request matching MP3s"
+  ],
+  "limitation": "Chromium viewport emulation, not native phone hardware"
+}

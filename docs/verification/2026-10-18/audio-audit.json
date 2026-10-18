@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "meaning": "Decoded PCM has nonzero audio, headroom and quiet endings. This does not certify pronunciation.",
+  "clips": [
+    {
+      "id": "a",
+      "seconds": 0.9,
+      "peak": 0.3905,
+      "last50msPeak": 0.0,
+      "sha256": "c239dec29a7d1e634bf96d7eefe69d1143ed9dc56cc8231ff762ae7313b78dcf"
+    },
+    {
+      "id": "i",
+      "seconds": 0.943,
+      "peak": 0.418,
+      "last50msPeak": 0.0,
+      "sha256": "a1e171db56d513c2d1b764ab7c90189e961c6c1b33b25c0ea00fd5b1dc11a666"
+    },
+    {
+      "id": "o",
+      "seconds": 0.512,
+      "peak": 0.9398,
+      "last50msPeak": 0.0,
+      "sha256": "d1efd5d95388b0931a853d72e199db3441b6b943a7d41c38c853b9960ec83a57"
+    },
+    {
+      "id": "m",
+      "seconds": 1.108,
+      "peak": 0.4216,
+      "last50msPeak": 0.0,
+      "sha256": "797e325640013c394d3e288293dc3f8fc3e82b56939b35551215e91bddb4ab67"
+    },
+    {
+      "id": "am",
+      "seconds": 0.93,
+      "peak": 0.8653,
+      "last50msPeak": 0.0,
+      "sha256": "b702c1dd637fab2e21585f6b1d720dd59613ecb5bf15ff15830d2736f38767a8"
+    },
+    {
+      "id": "im",
+      "seconds": 0.587,
+      "peak": 0.6208,
+      "last50msPeak": 0.0,
+      "sha256": "7bdf99ba397086718f3d1c43e333645ebc86ee28d87e04719f6709d803b2ecb9"
+    },
+    {
+      "id": "mi",
+      "seconds": 0.99,
+      "peak": 0.4143,
+      "last50msPeak": 0.0,
+      "sha256": "a64bd2fb0cb516d7f1164fcca38b883f074f8a1ccd73e7ce3253301a2ab027b3"
+    },
+    {
+      "id": "oma",
+      "seconds": 1.053,
+      "peak": 0.5099,
+      "last50msPeak": 0.0,
+      "sha256": "20e4014df1688060938c2518664b891682c5d6250866152da5a2c2f3017cfcb1"
+    },
+    {
+      "id": "listen",
+      "seconds": 2.679,
+      "peak": 0.5816,
+      "last50msPeak": 0.0,
+      "sha256": "15f4247e0c0604b9720baaa479e6e83de07cf533525d534ae1365446116cd604"
+    },
+    {
+      "id": "syllable",
+      "seconds": 2.215,
+      "peak": 0.5828,
+      "last50msPeak": 0.0,
+      "sha256": "96ab35e848249cc43300e965d1796dde899802eeefb5e9d957847bd6bf766fbc"
+    },
+    {
+      "id": "word",
+      "seconds": 3.26,
+      "peak": 0.6474,
+      "last50msPeak": 0.0,
+      "sha256": "c4d4f6fcea96d945c0d95d801b3380cdb9fd635ea0f8a84563aa4a3fb3743268"
+    },
+    {
+      "id": "done",
+      "seconds": 2.888,
+      "peak": 0.598,
+      "last50msPeak": 0.0,
+      "sha256": "2efc08d53a8753b28942c6f22d38693fac162877ad1bb86adc3dede3a0bea9ac"
+    }
+  ]
+}

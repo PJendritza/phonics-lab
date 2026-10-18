@@ -1,0 +1,80 @@
+{
+  "url": "http://127.0.0.1:8070/preview/Kalulu-DE/",
+  "viewport": "390x844",
+  "checks": [
+    "mobile home fits viewport; three exercises",
+    "real audio playback unlocks answers; stable choices after error; repeat clicks; complete letters and persist across reload",
+    "complete all six syllable rounds with decoded human audio",
+    "build am / im / Oma one letter at a time; no automatic advancement",
+    "progress backup download; reject corrupt import; restore valid backup",
+    "15 MP3s decode with finite durations; current 12 plus three comparison clips; ratings persist and export",
+    "blocked audio produces retry message and disabled answers; replay recovers; navigation cancels playback",
+    "desktop layout and keyboard activation",
+    "no page errors, remote app requests, engine payloads or external runtime dependencies"
+  ],
+  "audio": [
+    {
+      "src": "audio/a.mp3",
+      "duration": 0.899909
+    },
+    {
+      "src": "audio/previous-a.mp3",
+      "duration": 0.742721
+    },
+    {
+      "src": "audio/i.mp3",
+      "duration": 0.94288
+    },
+    {
+      "src": "audio/previous-i.mp3",
+      "duration": 0.58839
+    },
+    {
+      "src": "audio/o.mp3",
+      "duration": 0.511859
+    },
+    {
+      "src": "audio/m.mp3",
+      "duration": 1.10839
+    },
+    {
+      "src": "audio/previous-m.mp3",
+      "duration": 0.335102
+    },
+    {
+      "src": "audio/am.mp3",
+      "duration": 0.929637
+    },
+    {
+      "src": "audio/im.mp3",
+      "duration": 0.587324
+    },
+    {
+      "src": "audio/mi.mp3",
+      "duration": 0.989524
+    },
+    {
+      "src": "audio/oma.mp3",
+      "duration": 1.05288
+    },
+    {
+      "src": "audio/listen.mp3",
+      "duration": 2.679365
+    },
+    {
+      "src": "audio/syllable.mp3",
+      "duration": 2.214966
+    },
+    {
+      "src": "audio/word.mp3",
+      "duration": 3.259864
+    },
+    {
+      "src": "audio/done.mp3",
+      "duration": 2.888345
+    }
+  ],
+  "pageErrors": [],
+  "appSha256": "043853c49c7a1f29275c7a4a1665f235c9b9e86b83615987898a016be2b13f23",
+  "status": "passed"
+}

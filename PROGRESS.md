@@ -1,106 +1,102 @@
 # Kalulu-DE status
 
-Updated: 2026-10-18. Permanent repository: https://github.com/PJendritza/Kalulu-DE.
-Read this file, AGENTS.md and recent Git history before continuing.
+Updated 2026-10-18 (Europe/Berlin). Read AGENTS.md and recent Git history first.
+Canonical repository: https://github.com/PJendritza/Kalulu-DE.
 
-## Current result
+## New direction and implemented result
 
-The migration is complete. `main` contains organized app source, German content,
-build/deployment inputs, tests and documentation. `gh-pages` contains the generated
-browser deployment. The working checkout is `/workspace/Kalulu-DE`.
+The user rejected the original moving-target Godot games and the sound quality of
+synthetic isolated vowels/syllables. The active project is now a **small plain-browser
+phonics demo**: three stationary exercises, explicit next step, replay, gentle feedback,
+no timers/lives, modern phone-friendly layout. No framework or engine is required.
 
-**Open the prototype: https://patrickjendritza.com/Kalulu-DE/**
+- Letter recognition: a, m, i; first one choice, then two/three fixed choices.
+- Whole-recording syllable recognition: am, im, mi. Intro notes explain short/long
+  vowels and preview buttons let an adult/child hear each combination first.
+- Later preview: word building am, im, Oma in fixed letter slots. Whole natural
+  words play; long isolated vowels are never stitched into short-vowel words.
+- Saved local learner state, completed-lesson counts, repeat-practice preference
+  for less secure/underexposed sounds, JSON backup/import and two-step reset.
+- Sound-review page: all 12 current clips; three old synthetic comparisons only in
+  adult review; local ratings/notes and JSON export. Individual source/license links.
+- Eight human German recordings replace the short TTS targets. Four full sentence
+  instructions use Piper. No claim that a native speaker approved the new sounds.
+- app/ holds the website; main holds source; gh-pages holds generated output.
+  The build measured 252,332 bytes including all audio and review clips, 28 files.
+  A 1 MB maximum is enforced; no engine, PCK, WASM, model or bulk upstream assets.
 
-GitHub automatically enabled Pages on the first gh-pages push, using the account's
-existing custom domain. No Pages settings API writes were made. The HTTPS landing
-page and eight other core game/audio files return successfully and hash-match the
-tested build. A local /Kalulu-DE/ subpath simulation loads the menu and GP preview.
-Real iPhone/Android hardware and human pronunciation review remain untested.
+## Preservation and cleanup
 
-## Verified application
+Before removing active old app/deployment/scripts/tests, pushed source tag
+archive/godot-prototype-2026-10-18 (9e8c4afe65a1430484eed883d283c5e70bc1dfcd)
+and generated-site tag archive/godot-deployment-2026-10-18
+(92c6fbf6cb72f99fdd9570b8aa27c53fabc2190a). docs/history/GODOT-PROTOTYPE.md links
+both and records why the approach changed. Earlier archive/tmp/* tags/history remain.
+An external Git bundle and original-audio backup are also in
+/workspace/kalulu-browser-backup. The tmp repository is not recreated or modified.
+No force push, visibility change, hosting configuration change or history rewrite.
 
-- Six cumulative lessons, seven letters, 13 GP readings, 25 syllables, 18 words/names,
-  63 synthetic German clips; original jellyfish/frog mechanics and animations reused.
-- All 19 content/audio tests passed after path migration and again after tmp removal.
-- Fresh Godot 4.7 import, Web export and actual 12-game-pool audit passed. All 57
-  required MP3 files decode; no SCRIPT ERROR/ERROR in import/audit/export logs.
-- Chromium jellyfish lesson 1 completed 8/8 in 72 seconds with 8 mouse clicks;
-  frog lesson 1 completed 5/5 in 104 seconds with 10 correct scored answers.
-- Nonzero audio, completion/menu return, reload persistence, all six menu choices
-  and 844x390 phone touch (one tap advances the gauge) passed. No game runtime
-  errors or external requests. All 63 review WAVs fully decode in Chromium;
-  actual native audio controls play a phoneme and word.
-- The audio-generator path/default documentation changed. All 63 clips were
-  regenerated with the same pinned deterministic recipe: every WAV hash is
-  identical to the original collection, while metadata now records the real script.
+## Executed verification
 
-Evidence: `docs/verification/2026-10-18/`. Earlier evidence and the original progress
-record are preserved under `docs/verification/2026-10-17/` and `docs/history/`.
-
-```bash
-python3 -m unittest discover -s tests -p 'test_german_*.py' -v
-bash scripts/build_german_demo.sh
-python3 -m http.server 8062 --bind 127.0.0.1 --directory /workspace/kalulu-de-build/web
-# Separate terminal; these suites were all executed successfully:
-KALULU_GERMAN_URL=http://127.0.0.1:8062/ OMP_THREAD_LIMIT=1 node tests/browser/test_german_demo.cjs
-KALULU_GERMAN_URL=http://127.0.0.1:8062/ OMP_THREAD_LIMIT=1 node tests/browser/test_german_frog.cjs
-KALULU_GERMAN_URL=http://127.0.0.1:8062/ node tests/browser/test_german_audio_review.cjs
-# From a clean committed tree, update deployment:
-bash scripts/publish_web_build.sh
+```sh
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py
+node --test tests/learning.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+python3 -m http.server 8070 --bind 0.0.0.0 --directory /workspace/kalulu-browser-build
+mkdir -p /workspace/kalulu-browser-build/preview
+ln -sfn ../site /workspace/kalulu-browser-build/preview/Kalulu-DE
+node tests/browser.cjs
+node tests/mobile-smoke.cjs
 ```
 
-Default output is `/workspace/kalulu-de-build/web`. Pinned source/tools stay in the
-external `/workspace/kalulu-feasibility` cache; TTS is in `/workspace/kalulu-tools`.
-These are dependencies/build caches, not additional development repositories.
+- Four learning-state tests pass: immutable answers/history, first/repeat progression,
+  validation/rejection of invalid imports, and corrupt/unavailable storage fallback.
+- Browser checks pass in real headless Chromium with 390x844 touch/mobile emulation,
+  then desktop: complete 7 letter rounds, 6 syllable rounds and 3 words; actual audio
+  playback/decode; wrong answer keeps target positions and does not advance; replay
+  twice; completion; reload persistence; backup download; invalid/valid restore.
+- Audio-review inventory: all 15 MP3s decode (12 current + 3 comparison); ratings
+  persist and export. Audio failure disables choices and reports retry; replay
+  recovers; leaving the exercise cancels playback. No page errors, external runtime
+  requests, engine downloads or autoplay failure masked by a test stub.
+- Additional 320px phone / 768px tablet introductory screens fit without horizontal
+  overflow; each preview requests the corresponding audio. Keyboard activation works.
+- All 12 current clips decode to nonzero PCM with unclipped headroom and quiet
+  last 50 ms. This checks accidental clipping/end padding, not German pronunciation.
+- Source audio and voice model checksums were verified. The ONNX engine prints an
+  inability to persist its telemetry device ID; synthesis succeeds using an in-memory
+  ID. This warning is not a browser/runtime dependency or a failed audio generation.
 
-## Migration and remote verification
+Evidence: docs/verification/2026-10-18/browser.json and audio-audit.json.
+Additional viewport evidence: docs/verification/2026-10-18/mobile.json.
+Screenshots stay outside Git in /workspace/kalulu-browser-build/.
+Tools executed: Python 3.12.14, Playwright 1.62.1, Chromium 154.0.8037.57.
 
-All 136 original tracked files are mapped in `docs/migration-manifest.json`.
-Its hashes describe the first organized source snapshot, commit 670e87b; 119 files
-were unchanged there, including every WAV, curriculum JSON and Godot integration
-script/scene. Later documentation edits do not rewrite this historical inventory.
-The full German development history is an ancestor of main. Nine `archive/tmp/*`
-tags retain all original remote branch tips, including French/German artifacts.
-Historical experiments are inactive under `archive/feasibility/`.
+## Publication
 
-Independent fresh source and deployment clones were byte/hash checked before
-cleanup. The final pre-cleanup check verified all 154 source files, all 86 deployment
-checksums, and the corresponding source archive. All nine archive tags/objects were
-also independently fetched and checked. Records: migration-verification.json and
-pre-cleanup-verification.json in the dated evidence directory.
+Prepared on browser-first-demo. Existing Pages URL:
+https://patrickjendritza.com/Kalulu-DE/?v=2
+Sound-review URL: https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=2
 
-The tested deployment is frozen from source
-bbc98e1b2a3079add57417dbd58323f2991c851e, deployment
-92c6fbf6cb72f99fdd9570b8aa27c53fabc2190a. Later commits update retirement records and
-uploader documentation; application behavior is unchanged. BUILD_INFO.json and
-SHA256SUMS identify the deployed snapshot, not necessarily the latest docs commit.
+At this source checkpoint, the new publication is pending; do not assume the URL
+already serves version 2. Next operations: commit/push tested source, fast-forward
+main, build from clean source, scripts/publish.py, verify live HTTPS file hashes,
+and record exact source/deployment commits in a follow-up documentation commit.
 
-## Old tmp cleanup
+## Limits and smallest next step
 
-Only after the independent remote checks succeeded, the former active tmp branch
-was retired with a redirect commit:
-2d65acebd109c79cb7bd14a61c43e0c17f79f977. Its original main was left unchanged;
-the tmp GitHub repository/history was not deleted or rewritten.
+No account sync, multiple learner profiles, resume of unfinished rounds, validated
+curriculum or teacher dashboard. Data is local to one browser; export/import moves it.
+O and short vowels still require explicit instructional introduction before a complete
+course can be claimed. The word-building activity is a later-stage demonstration.
 
-The local `/workspace/tmp` and temporary access-test checkout were removed. Full
-working-copy archives including Git metadata and ignored files were verified first:
+Real iPhone/Safari and Android hardware are untested. Chromium mobile emulation is
+not real-phone verification. Neither German pronunciation nor educational suitability
+has received human approval. m uses an entire natural hum from hm; specifically
+check no extra h/e. Different original speakers have different sound/recording quality.
 
-- `/workspace/kalulu-migration/tmp-before-retirement.tar.gz`
-- `/workspace/kalulu-migration/kalulu-de-access-check-before-retirement.tar.gz`
-- `/workspace/kalulu-migration/complete-history.bundle` (complete history verified)
-
-All 136 original tracked file hashes were checked inside the archive. Old local
-French/German servers were stopped. Post-removal, the 19 tests, full Godot audit and
-new-directory asset requests passed. See cleanup-verification.json. Retained
-checkouts elsewhere in /workspace are explicitly classified dependency, generated
-build or independent verification caches. Do not resume development there.
-
-## Next step
-
-Use the live HTTPS link on a real phone, in landscape with sound enabled. Review
-German isolated sounds/vowel contrasts and word stress using the audio-review page
-before expanding the curriculum. Native German and educator review are still
-required; technical checks are not pedagogical validation. No scheduling configured.
-Future cloud work should select Kalulu-DE and read its instructions, not tmp.
-Configuration draft saving is separate from publishing a new environment snapshot;
-no fresh-task restoration claim is made.
+Smallest next step: the user listens on their phone in Töne prüfen, exports ratings,
+and identifies clips needing replacement. Then purpose-record any questionable
+phonemes with one native speaker and have the short-vowel/o progression reviewed.
+Do not automatically expand into dozens of unreviewed lessons.

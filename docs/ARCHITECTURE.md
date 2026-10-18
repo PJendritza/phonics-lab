@@ -1,46 +1,47 @@
-# Project layout and build boundary
+# Browser-first structure
 
-## Editable application
+The website is app/: static HTML, CSS and native ES modules with relative URLs.
+No compilation, framework, service worker, API, cross-origin isolation, WASM or
+runtime dependency is needed. It works under the /Kalulu-DE/ Pages prefix.
 
-`app/content/de_DE/content.json` is the source of teaching data. Its audio IDs map
-to WAVs and provenance in `app/content/de_DE/audio/`. `app/godot/` contains the
-offline bootstrap, six-lesson menu and read-only integration audit. It is an
-overlay for the original game, not a second game implementation.
+- data.mjs: declarative lessons and content. Introductory choices are fixed; choices
+  are shuffled once per round, never while the child is answering.
+- learning.mjs: pure state transitions and practice selection. JSON schema version
+  2 rejects invalid imported data. Each skill stores attempts, correct and firstTry;
+  completions are distinct from auditory/teaching approval.
+- main.mjs: UI and one shared Audio instance. Cancellation tokens prevent late media
+  callbacks changing screens after navigation or a new replay. Answers unlock only
+  after successful first playback. Failure offers manual replay, never a different
+  unvetted speech-synthesis voice. Correct answers expose an explicit next button.
+- review.mjs: audio inventory, source credits, human/TTS labels, local ratings/notes,
+  JSON export and previous-version comparisons. No review is sent anywhere.
+- style.css: stationary responsive layouts, native controls, visible focus, large
+  targets, text feedback and no position animations. Reduced-motion settings are
+  respected. System fonts avoid downloads.
 
-The build clones/pins the official repositories through `scripts/prepare_original.sh`:
+## Persistence
 
-- Kalulu-Frontend: `51043b23f8e32e72ca79ca914ba3efd6b76b272e`.
-- Kalulu-Languages: `bb0f71766c5e27fdb775e544ffe62ca98e6a615c` (schema only for German).
-- Godot: official 4.7 stable engine/templates; SQLite extension v4.7.
+Storage key kalulu-de:calm:v2 is separate from historical game state. One learner per
+browser. Save after answer/completion; a completed lesson is saved across reloads.
+The current round is not resumed after leaving: the child can start the lesson again.
+Export/import is manual device transfer. Schema validation protects current state
+from invalid imports; private mode/quota failure must permit in-memory practice.
+No PII, analytics or server persistence is implemented. Hosting has ordinary request
+logs. Audio-review ratings use a separate key kalulu-de:audio-review:v2.
 
-Original checkouts stay clean. `scripts/build_german_demo.py` prepares a disposable
-frontend, installs the German pack and applies the small menu-return/configuration
-patches. Game mechanics, scoring and animation remain upstream.
+Future profiles/cloud sync should use a storage adapter around the pure progress
+object, retain migration/version validation and explicitly address identity/consent.
+Do not put server credentials in the static bundle.
 
-## Deployment
+## Build and deployment
 
-`deployment/site/` and `deployment/godot-web-export.cfg` hold web-specific inputs.
-`scripts/build_german_demo.sh` imports, audits and exports; `package_german_demo.py`
-adds the landing/audio-review pages, notices, source archive and build metadata.
-The default generated directory is `/workspace/kalulu-de-build/web`, outside Git.
+scripts/build.py verifies the committed audio hashes, copies app unchanged, writes
+BUILD_INFO.json (source commit and dirty flag), .nojekyll, LICENSE and SHA256SUMS,
+and enforces a 1 MB total budget. No generated files are committed to main.
+scripts/publish.py accepts only clean builds corresponding to pushed main. It
+clones existing gh-pages, replaces deployment files and normal-pushes. It neither
+creates hosting nor changes Pages configuration. Use a fresh checkout per release.
 
-`scripts/publish_web_build.sh` requires successful current gameplay/audio browser
-checks and a clean source tree. It uploads only generated files to `gh-pages`.
-It does not alter source or call the Pages settings API. GitHub automatically
-publishes the branch under the current configuration. Never put WASM/PCK builds on `main`.
-
-The export is single-threaded with GDExtension support. It works on an ordinary
-static HTTP server without special COOP/COEP headers. Progress stays in browser
-storage. There is no production login, backend account or database service.
-
-## Tests and records
-
-Python tests exercise the real schema/encoder and content/audio integrity.
-`tests/browser/` uses real input, screenshots and audio output against the built
-site. The Godot audit also invokes all twelve lesson/game stimulus builders.
-Evidence is dated under `docs/verification/`; historical evidence is kept intact.
-
-`archive/feasibility/` contains the old exploratory material. Its paths and scripts
-are historical, not the supported build interface. Old commits and snapshots
-remain recoverable from `archive/tmp/*` tags. Do not deploy the French historical
-`gh-pages` archive by mistake; the current `gh-pages` branch is the German build.
+The previous engine, SQLite, pack templates and 90+ MB export are absent from the
+active website and source layout; archive tags retain them. Browser tests use actual
+MP3 decoding and playback, not mocked successful audio, and run under a path prefix.
