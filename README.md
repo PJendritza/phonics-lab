@@ -3,18 +3,33 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=6.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=6.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=7.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=7.0.0)**
 
 Choose an animal profile and press play. Answers stay still. A correct answer gives
 a brief nonverbal chime/check and a small sparkle, fills the level meter and automatically advances.
 Every finished level adds a flower. Mistakes give time and replay without taking
 progress away. There are no timers, speed scores or spoken success messages.
 
-**14 stages**, from a/m/i and vowels through syllables, beginning/ending sounds,
-word recognition and grapheme-block building. **41 human German recordings** supply the targets; **11 licensed Kalulu consonant clips** supply isolated feedback; nine complete sentence instructions use Piper Thorsten High at length_scale 1.5 with an added 0.3-second sentence pause. Whole German words remain the cues for beginning/ending tasks. Wrong letter choices now play only that isolated sound, without an unrelated example word.
-sch and ll remain single blocks in relevant word-building tasks.
-Independent accuracy adjusts two/three/four choices and stage unlocking; only Level 1 uses one-choice introductions; later levels start with multiple choices. After two mistakes, a brief one-choice teaching step shows the correct answer, then restores the original choices. Teaching taps do not advance the goal or count as independent mastery. New level goals are 12–18 questions, about 50% longer; saved unfinished levels keep their original total.
-Practice flowers and mastery are separate. [Teaching design](docs/GOALS.md).
+**32 levels**, from sounds and syllables to independent word reading and short
+sentence comprehension. The new levels add **35 complete human word recordings**,
+syllable/pattern help, and picture choices drawn for this app. Words include
+Salami, Tomate, Banane, Kanne, Seil, Maus, Biene and Boot. Listening lessons introduce
+vocabulary and spelling patterns before children read those words themselves.
+
+Reading levels **do not speak the answer first**. Children read a word or sentence
+and choose its picture. The optional speaker reads it aloud; syllable help can
+highlight chunks. Both count as assistance, rather than independent mastery.
+Sentence choices contrast both object and location: “Ein Ball ist im Bus.” versus
+“Ein Ball ist im Haus.” versus “Ein Hut ist im Bus.”
+[Lesson sequence and limits](docs/READING-CURRICULUM.md).
+
+**76 human recordings**, **11 licensed Kalulu consonant clips**, 21 full-sentence
+instructions and 14 optional sentence readings. Piper Thorsten High uses the
+approved length_scale 1.5 and added 0.3-second sentence pause; human words are not
+synthesised. After two errors, brief one-choice teaching restores the original
+choices without extra rewards. Independent accuracy adjusts two/three/four choices.
+Each new level has 18 questions, while saved unfinished levels keep their old goal.
+Practice flowers and independent mastery remain separate.
 
 Up to eight local profiles resume exact questions or partial words. Existing demo
 profiles migrate/persist, including across the repository path rename on the same
@@ -29,7 +44,7 @@ Python 3 and Node 18+; no runtime dependencies or bundler. Development:
 
 ```sh
 python3 -m http.server 8070 --directory app
-node --test tests/learning.test.mjs tests/content.test.mjs
+node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs
 python3 scripts/build.py
 ```
 
@@ -47,6 +62,7 @@ node tests/profiles.cjs
 node tests/word-hints.cjs
 node tests/level-navigation.cjs
 node tests/choice-help.cjs
+node tests/reading.cjs
 python3 scripts/audit_audio.py
 ```
 
@@ -59,7 +75,8 @@ Screenshots/builds stay outside Git. [Executed results](PROGRESS.md).
 | Location | Purpose |
 | --- | --- |
 | app/ | Complete static website and small licensed MP3 collection |
-| app/data.mjs | Fourteen stages, human-audio targets, word contexts and grapheme blocks |
+| app/data.mjs | Stable foundation stages, human-audio targets, word contexts and grapheme blocks |
+| app/reading-data.mjs · app/pictures.mjs | New vocabulary, sentence progression and original vector pictures |
 | app/learning.mjs | Pure adaptive learning, level goals, profiles and migration |
 | app/audio/manifest.json | Individual sources, credits, licenses and hashes |
 | scripts/ | Packaging, audio preparation, publication and live verification |
@@ -70,7 +87,7 @@ Screenshots/builds stay outside Git. [Executed results](PROGRESS.md).
 
 The name is independent of garden/space or other future activity themes. The old
 Godot prototype remains in tagged Git history. No engines/models/generated bundles
-belong on the source branch. The complete package stays below 1 MB.
+belong on the source branch. The expanded complete package stays below 3 MB; audio loads on demand.
 
 ## Publish the existing site
 
@@ -82,8 +99,8 @@ python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-NE
 python3 scripts/verify_live.py
 ```
 
-Use a fresh external publication checkout. Publication requires passing browser
-evidence bound to the exact app hash and checked build files. It makes a normal
+Use a fresh external publication checkout. Publication requires passing full-browser and reading-comprehension
+evidence bound to the exact app content and checked build files. It makes a normal
 push to the existing gh-pages branch without changing hosting settings. Live HTTPS
 hash verification after propagation is separate from a successful push. Versioned
 nested modules/media prevent stale phone caches mixing releases. BUILD_INFO.json

@@ -12,6 +12,7 @@ def main():
  if not a.instructions_only:
   for c in humans:
    source=a.cache/Path(urllib.parse.unquote(urllib.parse.urlparse(c['sourceAudio']).path)).name
+   if not source.exists() and (a.cache/'reading'/source.name).exists():source=a.cache/'reading'/source.name
    if not source.exists():
     request=urllib.request.Request(c['sourceAudio'],headers={'User-Agent':'Phonics Lab educational audio preparation'})
     with urllib.request.urlopen(request,timeout=60) as response:source.write_bytes(response.read())
@@ -25,8 +26,9 @@ def main():
  if sha(a.model)!=settings['modelSha256']:raise SystemExit('Voice checksum mismatch.')
  if sha(a.model.with_suffix('.onnx.json'))!=settings['configSha256']:raise SystemExit('Voice config checksum mismatch.')
  from piper import PiperVoice,SynthesisConfig
- voice=PiperVoice.load(str(a.model));config=SynthesisConfig(length_scale=settings['lengthScale'],noise_scale=settings['noiseScale'],noise_w_scale=settings['noiseWScale']);clips=list(humans)+[c for c in manifest['clips'] if c['kind'] in ('effect','phoneme')]
- for key,sentence in json.loads((ROOT/'scripts/instructions.json').read_text()).items():
+ instructions=json.loads((ROOT/'scripts/instructions.json').read_text())
+ voice=PiperVoice.load(str(a.model));config=SynthesisConfig(length_scale=settings['lengthScale'],noise_scale=settings['noiseScale'],noise_w_scale=settings['noiseWScale']);clips=list(humans)+[c for c in manifest['clips'] if c['kind'] in ('effect','phoneme') or (c['kind']=='tts' and c['id'] not in instructions)]
+ for key,sentence in instructions.items():
   pieces=[];rate=None
   for part in re.findall(r'[^.!?]+[.!?]?',sentence):
    with tempfile.NamedTemporaryFile(suffix='.wav') as temp:

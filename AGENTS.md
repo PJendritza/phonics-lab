@@ -39,7 +39,7 @@ Fonts: locally bundled OFL subsets of Andika 7.000, internally renamed Phonics L
 
 Learning: only Level 1 introduces unseen targets with one choice. All later levels begin with choices, including word building without a copying model. After two mistakes per question/current block, play the wrong selected sound first, then show the original cue with one correct choice. A guided tap gives no extra score/progress and returns to the original choices. Preserve help pending/show/ack and misses through navigation/reload; never treat assisted completion as first-try mastery.
 
-Audio: 41 complete human target recordings, 11 isolated Kalulu phonics clips, nine full-sentence Piper instructions,
+Audio: 76 complete human target recordings, 11 isolated Kalulu phonics clips, 21 full-sentence Piper instructions and 14 optional sentence readings,
 one nonverbal effect. Three legacy synthetic comparisons are adult-review only.
 Never synthesize isolated phonemes, substitute letter names, crop consonants/vowels
 from words, or stitch long vowels into short-vowel words. German whole words remain the beginning/ending cues. Isolated wrong-letter feedback is taken from dedicated Kalulu phonics recordings, not words: ten complete first sound utterances before a long pause; h uses the unvoiced breath of a phoneme-only /h/ sample. Source French/Portuguese phones are not certified native-German recordings. Preserve per-clip source segment, license and processing notes; especially review stops and h by listening. b/d/g are initial; final s differs from voiced initial s.
@@ -59,16 +59,28 @@ assume ChatGPT Plus/Google subscription access includes external API/GPU credits
 Current instruction voice: Thorsten High, length_scale=1.5, added 0.3-second
 sentence pause. See docs/NEXT-VERSION.md before implementing the next release.
 
-After functional changes run node --test tests/learning.test.mjs tests/content.test.mjs,
+Reading: 32 levels; keep the first 14 IDs stable. See docs/READING-CURRICULUM.md.
+New word/picture and sentence/picture levels must never automatically read the
+answer aloud. Generic entry instructions are allowed. Explicit read-aloud or
+syllable help sets round.assisted and cannot count as independent first-try mastery;
+preserve it across navigation, reload and backup. Whole-word human speech stays
+separate from pre-generated full-sentence help. Do not add new words to isolated
+phone feedback/build banks without real phoneme recordings. Sentence distractors
+must contrast both subject and location. CurriculumVersion 7 advances old completed
+14-level saves to Level 15 without altering existing rewards or unfinished work.
+New vocabulary and original vector illustrations require educator/listening review.
+The total expanded static-site budget is 3 MB; audio remains on demand.
+
+After functional changes run node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs,
 python3 scripts/audit_audio.py, python3 scripts/build.py and relevant Playwright
 checks. tests/browser.cjs checks actual playback/automatic flow and binds evidence
 to the app tree hash. Also run tests/mobile-smoke.cjs, tests/profiles.cjs and
-tests/word-hints.cjs and tests/level-navigation.cjs plus tests/choice-help.cjs when those behaviors change. Exercise the /phonics-lab/ prefix.
+tests/word-hints.cjs and tests/level-navigation.cjs plus tests/choice-help.cjs when those behaviors change. Run tests/reading.cjs for reading/help/comprehension changes. Exercise the /phonics-lab/ prefix.
 Chromium emulation is not a physical-phone test. Keep exact commands/results/limits
 in PROGRESS.md and concise JSON in docs/verification; screenshots outside Git.
 
 Publish clean tested main with scripts/publish.py and a fresh external checkout.
-It requires pushed source, current app-hash-bound browser evidence and checksums.
+It requires pushed source, current app-hash-bound browser and reading evidence, and checksums.
 Do not change Pages settings. Verify all HTTPS bytes with scripts/verify_live.py.
 Later documentation-only commits are distinct from the deployed app source commit.
 License: project CC BY-SA 4.0; individual recordings CC BY-SA 3.0/4.0. Preserve credits.

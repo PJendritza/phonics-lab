@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "version": "7.0.0",
+  "assetVersion": "c4a39a6756b6",
+  "checks": [
+    "Independent word reading plays only its generic instruction, displays the written word and label-free picture choices, then advances silently with the existing chime.",
+    "Optional syllable help preserves the word spelling and answer order; assistance survives reload and exact resume. Explicit read-aloud plays the human word and cannot count as independent mastery.",
+    "Optional grapheme highlighting keeps ei together without synthesizing an isolated phoneme.",
+    "Wrong pictures play their exact selected word without auto-replaying the target or moving tiles. Two errors trigger one-choice teaching, then the original choices; guided taps award nothing extra.",
+    "Every one of the 18 appended levels starts with choices and executes a real answer/automatic transition, using real MP3s for all listening levels.",
+    "Sentences show text without reading it aloud; choices contain same-object/different-location and same-location/different-object contrasts. Optional full-sentence support plays; the full 18-answer goal earns one flower.",
+    "320x568 more_words_read: four stationary picture choices visible without horizontal overflow",
+    "320x568 sentence_meaning: four stationary picture choices visible without horizontal overflow",
+    "390x844 more_words_read: four stationary picture choices visible without horizontal overflow",
+    "390x844 sentence_meaning: four stationary picture choices visible without horizontal overflow",
+    "768x1024 more_words_read: four stationary picture choices visible without horizontal overflow",
+    "768x1024 sentence_meaning: four stationary picture choices visible without horizontal overflow",
+    "Adult sound review filters all 14 full-sentence clips; no page errors or third-party runtime requests. No microphone or speech recognition added."
+  ],
+  "pageErrors": [],
+  "limitation": "Chromium mobile viewport emulation and real media playback; not a physical-phone, native-pronunciation or educational-efficacy certification."
+}

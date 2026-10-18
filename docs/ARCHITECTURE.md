@@ -2,9 +2,9 @@
 
 Static HTML/CSS/ES modules. No engine/framework, API, service worker, WASM,
 cross-origin isolation or runtime package. Relative paths work under /phonics-lab/.
-The complete packaged site remains below 1 MB.
+The complete packaged site remains below 3 MB.
 
-- data.mjs: fourteen stage definitions, target audio, beginning/ending word contexts,
+- data.mjs: fourteen stable foundation stages plus eighteen reading-data.mjs stages, target audio, beginning/ending word contexts,
   grapheme-block overrides, avatars and app version. Content is separate from theme.
 - learning.mjs: pure questions, accuracy/mastery, validation/migration, profiles,
   fixed level goals, a forward continuation cursor, per-level paused sessions and fractional per-block progress. Introductions are excluded
@@ -53,7 +53,7 @@ Future synchronization needs a separate identity/storage design.
 
 scripts/build.py checks audio and font hashes, copies app/, versions HTML/CSS/nested modules
 and media with a content-derived query, then writes BUILD_INFO.json, LICENSE,
-.nojekyll and checksums. Refuses source-tree output and builds over 1 MB.
+.nojekyll and checksums. Refuses source-tree output and builds over 3 MB.
 main is source; gh-pages generated files. publish.py requires clean pushed main,
 passing exact-app-hash browser evidence and checked build bytes. Normal push only,
 fresh external checkout, no Pages configuration changes. verify_live.py uses
@@ -66,4 +66,26 @@ stationary errors, parent previews, backups/migration, sch/ll, keyboard and mobi
 320/390/768px layouts. Browser checks bind evidence to the app hash. Public byte
 verification and mobile emulation do not certify real-phone playback or phonetics.
 
-Packaging minifies JSON in the generated copy only, retaining all source/license fields and readable source manifests. Eleven new consonant clips remain below the existing 1 MB total budget. See docs/PHONEMES.md for source segments and limits.
+Packaging minifies JSON in the generated copy only, retaining all source/license fields and readable source manifests. The v6 consonant extension fitted its then-current 1 MB budget; v7 uses the 3 MB expanded-word-bank cap. See docs/PHONEMES.md for source segments and limits.
+
+## v7 reading extension
+
+reading-data.mjs appends eighteen stages and adds curated whole words/syllables,
+spelling-pattern metadata and fourteen controlled sentences. pictures.mjs contains
+original local SVG drawings shared consistently across words and sentence scenes.
+Mode picture uses the existing exact-response state machine with target IDs, but
+main.mjs suppresses target cue playback until the user requests help or makes two
+errors. Generic entry instructions do not reveal the answer. Optional syllable or
+read-aloud help persists round.assisted; a helped answer gives normal practice
+progress but no independent first success. Existing sound/word/meaning/sentence
+skill groups remain separate.
+
+Schema stays version 3 with a curriculumVersion marker. Validation upgrades a v6
+complete cursor to picture_known, preserves pending/paused sessions and rewards,
+and accepts missing assisted as false. Current-release explicit completion/review
+remains complete. Allowed skill count derives from the actual curriculum.
+
+Human words are prepared from pinned Commons metadata; complete sentence support
+is pre-generated locally by Piper. No microphone, model download, speech service
+or tracking in the browser. The total-site cap rises to 3 MB for the expanded
+audio bank; no runtime dependencies or engine.

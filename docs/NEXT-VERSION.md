@@ -1,3 +1,21 @@
+# v7 update: from phonics to reading comprehension
+
+- [x] Keep the first fourteen levels and add Levels 15–32 with a larger word bank.
+- [x] Separate listening/spelling recognition from independent word-to-picture reading.
+- [x] Introduce longer words and spelling patterns with full human recordings.
+- [x] Offer optional syllable/pattern support, preserving spelling and assisted status.
+- [x] Add short sentence-to-picture reading, including object/location contrasts.
+- [x] Keep correct feedback, flower goals, auto-advance and two-error teaching.
+- [x] Preserve existing profiles, paused questions and backups; old course finishers continue at Level 15.
+- [x] Keep microphone/speech recognition out of scope.
+
+Exact verification/publication state: PROGRESS.md. Teaching sequence and known
+limits: docs/READING-CURRICULUM.md. New sounds and pictures need human review;
+a successful technical test is not educational validation.
+
+---
+Historical release checklists follow.
+
 # v6 update: choice-first practice and isolated feedback
 
 Implemented from the user's latest phone feedback; release status in PROGRESS.md.

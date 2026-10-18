@@ -1,13 +1,13 @@
 # Audio: human German targets and complete-sentence instructions
 
-41 complete human German target recordings, 11 isolated Kalulu phonics feedback clips, nine full-sentence Piper instructions and one
+76 complete human German target recordings, 11 isolated Kalulu phonics feedback clips, 21 full-sentence Piper instructions, 14 optional full-sentence readings and one
 quiet nonverbal success chime. Three old synthetic a/i/m clips are adult-comparison
 only. No new synthetic isolated phoneme or letter-name substitute; no consonant
 or vowel was cropped from a word. The user liked the human targets on their phone and approved the Thorsten High sample direction, then requested 1.5 with a 0.3-second sentence pause. This is not blanket phonetic approval of every regenerated instruction.
 
 app/audio/manifest.json records individual speakers, source/license versions,
 original/output SHA256, processing and pending review. docs/audio-sources.json
-preserves Commons metadata. In-app About and Töne prüfen expose individual credits.
+preserves original Commons metadata; docs/reading-audio-sources.json pins the 35 new word sources and their authors/licenses/checksums. In-app About and Töne prüfen expose individual credits.
 
 | ID | Speaker | License | Original source |
 | --- | --- | --- | --- |
@@ -66,9 +66,9 @@ not German initial voiced /z/. sch and ll are single blocks in relevant tasks.
 No guessed recording-specific IPA is certified. Mixed speakers remain audible;
 purpose-recording with one native speaker is a future quality improvement.
 
-21 new complete-word recordings were obtained with individual Commons metadata and
-pinned source hashes. Five optional candidates (das/bis/mit/gut/fit) hit HTTP 429
-after bounded retries and were omitted; no exercise references them. Do not keep
+In v4, 21 new complete-word recordings were obtained with individual Commons metadata and
+pinned source hashes. Five then-optional candidates (das/bis/mit/gut/fit) hit HTTP 429
+after bounded retries and were omitted in that release. Release 7 adds a pinned full recording for das; bis/mit/gut/fit remain absent. Do not keep
 retrying absent sources or manufacture isolated phonemes to fill gaps.
 
 ## Reproduction
@@ -124,3 +124,30 @@ python3 scripts/prepare_phonemes.py
 ```
 
 This optional regeneration uses ffmpeg and pinned upstream URLs/hashes, with originals cached outside source. prepare_audio.py preserves these phoneme entries when regenerating sentence guidance. The original 41 German targets and nine approved instruction MP3s remain byte-identical in this update.
+
+## Expanded reading vocabulary (v7)
+
+Thirty-five additional whole-word human recordings bring the word bank to 58
+word/numeral/function-word entries. Their exact sources, authors, license versions
+and hashes are in reading-audio-sources.json and the active manifest. No new
+phoneme synthesis, cropped consonants or stitched word speech. New word models
+precede independent reading lessons.
+
+Twelve new full-sentence instructions and fourteen optional sentence readings use
+the unchanged Thorsten High model/settings. Independent word/sentence-to-picture
+questions never autoplay their answer. Explicit read-aloud and syllable help count
+as assistance, preserved in saved progress. Sentence support remains separately
+auditionable in Töne prüfen → Sätze. All old 62 active MP3 files stay byte-identical.
+
+```sh
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py
+```
+
+The script verifies pinned source and model/config hashes, reuses external caches
+and does not replace the existing word/phoneme/guide assets. Base prepare_audio.py
+now retains the reading-specific TTS entries when regenerating foundation guides.
+Wikimedia temporarily rate-limited discovery; downloads were paused according to
+the server retry interval, then resumed at a reduced pace. Full technical and live
+verification outcomes belong in PROGRESS.md. No native/educator listening approval
+is claimed. Review especially weak syllables, voiced s, vowel length, ie/ei and
+final b in Laub/Sieb; a dedicated final-devoicing lesson remains future work.

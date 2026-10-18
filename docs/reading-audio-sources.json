@@ -1,0 +1,550 @@
+[
+  {
+    "id": "sofa",
+    "label": "Sofa",
+    "syllables": [
+      "So",
+      "fa"
+    ],
+    "filename": "De-Sofa.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Sofa.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/1/1a/De-Sofa.ogg",
+    "sourceSha256": "a3b928a8482a4a498e1690622092cb7e233e2c47b314ffb4f596f2ddf0bf0e24",
+    "description": "audio sample for the German word \"Sofa\""
+  },
+  {
+    "id": "lama",
+    "label": "Lama",
+    "syllables": [
+      "La",
+      "ma"
+    ],
+    "filename": "De-Lama.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Lama.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/f/fe/De-Lama.ogg",
+    "sourceSha256": "8ffdccab0ce88e15a579bd77cd0fd8b10ddb66e6ecdb3a17a5f935ac52aadad8",
+    "description": "Pronunciation recording of German noun \"Lama\", IPA: /ˈlaːmaː/. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "salami",
+    "label": "Salami",
+    "syllables": [
+      "Sa",
+      "la",
+      "mi"
+    ],
+    "filename": "De-Salami.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Salami.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/0/02/De-Salami.ogg",
+    "sourceSha256": "716ccec1ab1ab3b7d0a9df975ac93c8806d1de41025eeab0299b7e9c3543ec58",
+    "description": "Pronunciation recording of German noun \"Salami\", IPA: /zaˈlaːmi/. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "tomate",
+    "label": "Tomate",
+    "syllables": [
+      "To",
+      "ma",
+      "te"
+    ],
+    "filename": "De-Tomate.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Tomate.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/4/48/De-Tomate.ogg",
+    "sourceSha256": "54cad497448e6deaab0e292bc806c276823e0ea95f9b07926454bfc89d5ead57",
+    "description": "Pronunciation recording of German noun \"Tomate\", IPA: /toˈmaːtə/. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "banane",
+    "label": "Banane",
+    "syllables": [
+      "Ba",
+      "na",
+      "ne"
+    ],
+    "filename": "De-Banane.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Banane.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/a/a4/De-Banane.ogg",
+    "sourceSha256": "ede80c50d2beec5c75696d02b3d024dbd1ceb47cea87d81bcb8e1dc91365aa68",
+    "description": "audio sample for the German word \"Banane\""
+  },
+  {
+    "id": "melone",
+    "label": "Melone",
+    "syllables": [
+      "Me",
+      "lo",
+      "ne"
+    ],
+    "filename": "De-Melone.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Melone.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/1/12/De-Melone.ogg",
+    "sourceSha256": "f85935f6192005042d80a272efa162d3d77d9a5c8484f2a8712b83a2f64f7ae9",
+    "description": "audio sample for the German word \"Melone\""
+  },
+  {
+    "id": "igel",
+    "label": "Igel",
+    "syllables": [
+      "I",
+      "gel"
+    ],
+    "filename": "De-Igel.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Igel.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/8/86/De-Igel.ogg",
+    "sourceSha256": "d2c925bab54b43b1f90611f23f16d47728c57e74c900ea2686c2c10a66a6a5c0",
+    "description": "Pronunciation recording of German noun \"Igel\", IPA: /ˈiːɡl̩/. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "esel",
+    "label": "Esel",
+    "syllables": [
+      "E",
+      "sel"
+    ],
+    "filename": "De-Esel.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Esel.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/f/f9/De-Esel.ogg",
+    "sourceSha256": "b581ad8966d119ada9e97375c3f2fad7f01283de57f1b868e75292b9138aac98",
+    "description": "Pronunciation recording of German noun \"Esel\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "nudel",
+    "label": "Nudel",
+    "syllables": [
+      "Nu",
+      "del"
+    ],
+    "filename": "De-Nudel.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Nudel.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/a/a4/De-Nudel.ogg",
+    "sourceSha256": "574a045b61bae91a8ce5ed344edbd51fdf1c16579abe39dedfae041dec583a2d",
+    "description": "audio sample for the German word \"Nudel\""
+  },
+  {
+    "id": "hase",
+    "label": "Hase",
+    "syllables": [
+      "Ha",
+      "se"
+    ],
+    "filename": "De-Hase.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Hase.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/7/74/De-Hase.ogg",
+    "sourceSha256": "3e26bbc5f8fe371f3abf83aba934499cd918cb81e4f767aebf57dfeb2e63f34a",
+    "description": "Pronunciation recording of German term \"Hase\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "hose",
+    "label": "Hose",
+    "syllables": [
+      "Ho",
+      "se"
+    ],
+    "filename": "De-Hose.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Hose.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/6/60/De-Hose.ogg",
+    "sourceSha256": "f4c8fc1e5bb4ebf19090bc189eaac372492752bb5a0d66e8a3e21c6fb3be6916",
+    "description": "audio sample for the German word \"Hose\""
+  },
+  {
+    "id": "salat",
+    "label": "Salat",
+    "syllables": [
+      "Sa",
+      "lat"
+    ],
+    "filename": "De-Salat.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Salat.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/4/42/De-Salat.ogg",
+    "sourceSha256": "35a020fcd9e89714a6434c22ff3370bcbf04927f27a4ee9e131fbda4e99bd8e7",
+    "description": "audio sample for the German word \"Salat\""
+  },
+  {
+    "id": "bett",
+    "label": "Bett",
+    "syllables": [
+      "Bett"
+    ],
+    "filename": "De-Bett.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Bett.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/5/5e/De-Bett.ogg",
+    "sourceSha256": "fcf06d951573e06707bfb4b3c923259a2d57dc2aa93156088bda9a6d1f252547",
+    "description": "audio sample for the German word \"Bett\""
+  },
+  {
+    "id": "kamm",
+    "label": "Kamm",
+    "syllables": [
+      "Kamm"
+    ],
+    "filename": "De-Kamm.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Kamm.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/b/b8/De-Kamm.ogg",
+    "sourceSha256": "0e754d6e2bb0dccc3d35c456c9cda823af8d778007ac33168e171e84a3d26816",
+    "description": "Pronunciation recording of German term \"Kamm\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "tasse",
+    "label": "Tasse",
+    "syllables": [
+      "Tas",
+      "se"
+    ],
+    "filename": "De-Tasse.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Tasse.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/7/74/De-Tasse.ogg",
+    "sourceSha256": "b7e912b1b41272782ce9a516aaa43efe02f139c3c4512204f8e0a288bdf1218c",
+    "description": "audio sample for the German word \"Tasse\""
+  },
+  {
+    "id": "kanne",
+    "label": "Kanne",
+    "syllables": [
+      "Kan",
+      "ne"
+    ],
+    "filename": "De-Kanne.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Kanne.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/5/59/De-Kanne.ogg",
+    "sourceSha256": "8a2cc81669672c4c19816eb6e1db864a5dae9a31a1c4f35711dd9a0007c62a42",
+    "description": "Pronunciation recording of German term \"Kanne\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "sonne",
+    "label": "Sonne",
+    "syllables": [
+      "Son",
+      "ne"
+    ],
+    "filename": "De-Sonne2.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Sonne2.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/5/5d/De-Sonne2.ogg",
+    "sourceSha256": "f61494c2ec7a572943a577408a35c258d1c4710fa4bc1f1a9788d71700448af3",
+    "description": "pronunciation recording"
+  },
+  {
+    "id": "affe",
+    "label": "Affe",
+    "syllables": [
+      "Af",
+      "fe"
+    ],
+    "filename": "De-Affe.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Affe.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/d/d5/De-Affe.ogg",
+    "sourceSha256": "ae5ff0bdb020340abc6e015b499ea8fed4796aa67b8dd631d42d99fee89c5ad8",
+    "description": "audio sample for the German word \"Affe\""
+  },
+  {
+    "id": "seil",
+    "label": "Seil",
+    "syllables": [
+      "Seil"
+    ],
+    "filename": "De-Seil.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Seil.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/f/f1/De-Seil.ogg",
+    "sourceSha256": "224a2652f49f0f1ac68da8bc46ee5aa6cd9d09adbda20d5e3921ff18f0b1cb1d",
+    "description": "Seil - aus Fäden hergestellte Leine, Schnur, Strick"
+  },
+  {
+    "id": "bein",
+    "label": "Bein",
+    "syllables": [
+      "Bein"
+    ],
+    "filename": "De-Bein.ogg",
+    "artist": "joni",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Bein.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/5/51/De-Bein.ogg",
+    "sourceSha256": "45d2e0675031cdb0a6c984b595429ba8999b16091a8a82b5f33f9c10618f18ca",
+    "description": ""
+  },
+  {
+    "id": "leim",
+    "label": "Leim",
+    "syllables": [
+      "Leim"
+    ],
+    "filename": "De-Leim2.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Leim2.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/6/6f/De-Leim2.ogg",
+    "sourceSha256": "13069441da22fb021295258e13841874ef6fba51a8a31f9cc973123f2e42b7a6",
+    "description": "pronunciation recording"
+  },
+  {
+    "id": "ein",
+    "label": "ein",
+    "syllables": [
+      "ein"
+    ],
+    "filename": "De-ein.ogg",
+    "artist": "joni",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:De-ein.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/d/d8/De-ein.ogg",
+    "sourceSha256": "20c1464795a6d382635e64e71a1d326ee9788ce57f83e2fd1be2399c6f742287",
+    "description": ""
+  },
+  {
+    "id": "eine",
+    "label": "eine",
+    "syllables": [
+      "ei",
+      "ne"
+    ],
+    "filename": "De-eine.ogg",
+    "artist": "joni",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:De-eine.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/0/07/De-eine.ogg",
+    "sourceSha256": "1350c84488192cbf191bc8fdf6644c652d21b0c18ab09f1de420cf5f0504da2d",
+    "description": ""
+  },
+  {
+    "id": "maus",
+    "label": "Maus",
+    "syllables": [
+      "Maus"
+    ],
+    "filename": "De-Maus.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Maus.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/e/eb/De-Maus.ogg",
+    "sourceSha256": "1e917741771a6828c6ce2cea1d1bc302d22581f3f24bfdcd7ac785e645099457",
+    "description": "audio sample for the German word \"Maus\""
+  },
+  {
+    "id": "haus",
+    "label": "Haus",
+    "syllables": [
+      "Haus"
+    ],
+    "filename": "De-Haus.ogg",
+    "artist": "Kampy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Haus.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/7/7e/De-Haus.ogg",
+    "sourceSha256": "e953ea270c8b6139dc32ce11fefca0b59de0d365c656fcf7390fca9167bd142d",
+    "description": "audio sample for the German word \"Haus\""
+  },
+  {
+    "id": "laub",
+    "label": "Laub",
+    "syllables": [
+      "Laub"
+    ],
+    "filename": "De-Laub.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Laub.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/9/96/De-Laub.ogg",
+    "sourceSha256": "7ad0eccc4bd93e35f97969f78ed95ad02ad0e04df2b0d2ed475b4081cd3e165d",
+    "description": "Pronunciation recording of German term \"Laub\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "biene",
+    "label": "Biene",
+    "syllables": [
+      "Bie",
+      "ne"
+    ],
+    "filename": "De-Biene.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Biene.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/5/5f/De-Biene.ogg",
+    "sourceSha256": "4587a49e7ead3a9f4bc5b60926bfd84b687f70ef9e800ea1a1b91511306e5a72",
+    "description": "Pronunciation recording of German term \"Biene\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "sieb",
+    "label": "Sieb",
+    "syllables": [
+      "Sieb"
+    ],
+    "filename": "De-Sieb.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Sieb.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/f/fe/De-Sieb.ogg",
+    "sourceSha256": "80bce97368d8758c59f043bb9773d2ba51eecee317d8244d810312f881c2f6e1",
+    "description": "Pronunciation recording of German noun \"Sieb\", IPA: [ziːp]. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "sieben",
+    "label": "sieben",
+    "syllables": [
+      "sie",
+      "ben"
+    ],
+    "filename": "De-sieben.ogg",
+    "artist": "joni",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:De-sieben.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/a/a6/De-sieben.ogg",
+    "sourceSha256": "9aaeb71b318802a6d45836cce00f32562450d92f0245d562c4caaeb496436410",
+    "description": ""
+  },
+  {
+    "id": "boot",
+    "label": "Boot",
+    "syllables": [
+      "Boot"
+    ],
+    "filename": "De-Boot.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Boot.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/9/93/De-Boot.ogg",
+    "sourceSha256": "f5193657e927eab01a097421da08597a17a16c72f594721cdb60f25a07b5ef06",
+    "description": "Aussprachebeispiel des deutschen Wortes \"Boot\". Männliche Stimme, aufgenommen von deutschem Muttersprachler aus Berlin, Deutschland."
+  },
+  {
+    "id": "beet",
+    "label": "Beet",
+    "syllables": [
+      "Beet"
+    ],
+    "filename": "De-Beet.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Beet.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/2/2d/De-Beet.ogg",
+    "sourceSha256": "4f63e60f3fefe873b6f9baedeffd204224057aa05c0d015c4928ab17414e5853",
+    "description": "Pronunciation recording of German term \"Beet\". Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "see",
+    "label": "See",
+    "syllables": [
+      "See"
+    ],
+    "filename": "De-See2.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-See2.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/4/48/De-See2.ogg",
+    "sourceSha256": "5f269731ed0673b266bd60b9b0f01898328158caaf9868e5e61c9193da420a6d",
+    "description": "Pronunciation recording of German noun inflection \"See\", IPA: /zeː/. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "tee",
+    "label": "Tee",
+    "syllables": [
+      "Tee"
+    ],
+    "filename": "De-Tee2.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-Tee2.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/3/3a/De-Tee2.ogg",
+    "sourceSha256": "4681af77812dc55ddb03d804718c9a253dfff2cb0e02c8940ea65bf1c46196ab",
+    "description": "Pronunciation recording of German noun \"Tee\", IPA: /teː/. Male voice, recorded by native German speaker from Berlin, Germany."
+  },
+  {
+    "id": "das",
+    "label": "das",
+    "syllables": [
+      "das"
+    ],
+    "filename": "De-das2.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-das2.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/b/bc/De-das2.ogg",
+    "sourceSha256": "adab7e751ade7b4361a766f22c4a70610953d771d9d186f904e81ff4a61297d6",
+    "description": "pronunciation recording"
+  },
+  {
+    "id": "ist",
+    "label": "ist",
+    "syllables": [
+      "ist"
+    ],
+    "filename": "De-ist2.ogg",
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:De-ist2.ogg",
+    "sourceAudio": "https://upload.wikimedia.org/wikipedia/commons/5/52/De-ist2.ogg",
+    "sourceSha256": "f6976aef775d9efbde92e79985372101f4c787406ecd195f978657c3c7dff937",
+    "description": "pronunciation recording"
+  }
+]

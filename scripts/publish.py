@@ -16,6 +16,8 @@ def main():
   if source.is_file():
    digest.update(str(source.relative_to(ROOT)).encode());digest.update(b'\0');digest.update(source.read_bytes())
  if evidence.get('status')!='passed' or evidence.get('appSha256')!=digest.hexdigest():raise SystemExit('Run current browser checks before publishing.')
+ reading=json.loads((ROOT/'docs/verification/2026-10-18/reading.json').read_text())
+ if reading.get('status')!='passed' or reading.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current reading/comprehension checks before publishing.')
  info=json.loads((site/'BUILD_INFO.json').read_text());commit=run('git','rev-parse','HEAD')
  if info['sourceDirty'] or info['sourceCommit']!=commit:raise SystemExit('Rebuild from the clean current source commit.')
  for line in (site/'SHA256SUMS').read_text().splitlines():

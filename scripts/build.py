@@ -42,6 +42,8 @@ def main():
  files={str(p.relative_to(out)):sha(p) for p in sorted(out.rglob('*')) if p.is_file()}
  (out/'SHA256SUMS').write_text(''.join(f'{h}  {name}\n' for name,h in files.items()))
  size=sum(p.stat().st_size for p in out.rglob('*') if p.is_file())
- if size>1_000_000:raise SystemExit(f'Build exceeds 1 MB budget: {size}')
+ # More human vocabulary and optional sentence support are fetched on demand.
+ # Keep a firm total budget without compressing/cropping speech into poor cues.
+ if size>3_000_000:raise SystemExit(f'Build exceeds 3 MB expanded-curriculum budget: {size}')
  print(f'{len(files)+1} files, {size:,} bytes, source {commit}, dirty={dirty}; {out}')
 if __name__=='__main__':main()

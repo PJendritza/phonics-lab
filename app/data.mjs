@@ -1,4 +1,6 @@
-export const VERSION='6.0.0';
+import {READING_ITEMS,READING_STAGES,SENTENCES} from './reading-data.mjs';
+export const VERSION='7.0.0';
+export const CURRICULUM_VERSION=7;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
@@ -29,6 +31,8 @@ export const ITEMS={
  da:{text:'da',audio:'da',kind:'unit'},
  du:{text:'du',audio:'du',kind:'unit'},
 };
+for(const [id,details]of Object.entries(READING_ITEMS))ITEMS[id]={...ITEMS[id],...details};
+Object.assign(ITEMS,SENTENCES);
 export const ENDINGS={m:['am','im','um'],n:['an','in','man','nun'],l:['mal'],f:['schaf','auf'],s:['bus','eis'],sch:['fisch','tisch'],t:['hut','rot'],k:['park']};
 export const ONSETS={f:['fisch','feder'],n:['nase','nun'],l:['loewe'],sch:['schaf','schuh'],b:['ball','baum'],d:['dose','dach'],g:['gabel','gans'],h:['hut']};
 export const CONTEXTS={ending:ENDINGS,onset:ONSETS};
@@ -47,6 +51,7 @@ export const STAGES=[
  {id:'more_syllables',title:'Silben und kurze Wörter',short:'da · du · Bus · Hut · Fisch · Schaf',mode:'find',group:'unit',targets:['da','du','bus','hut','fisch','schaf'],instruction:'syllable',goal:10,icon:'bridge',color:'peach'},
  {id:'more_read',title:'Mehr Wörter lesen',short:'Fisch · Schaf · Hut · Ball',mode:'find',group:'read',targets:['fisch','schaf','hut','ball'],instruction:'read',goal:12,icon:'blocks',color:'mint'},
  {id:'more_build',title:'Wörter mit Bausteinen',short:'sch und ll als Bausteine',mode:'build',group:'build',targets:['fisch','schaf','hut','ball'],instruction:'word_blocks',goal:8,icon:'blocks',color:'lavender'},
+ ...READING_STAGES,
 ];
 export const stageById=id=>STAGES.find(s=>s.id===id);
 export const stageNumber=id=>STAGES.findIndex(s=>s.id===id)+1;
@@ -60,7 +65,7 @@ export const PHONEMES=Object.fromEntries(['a','m','i','o','u','e'].map(c=>[c,c])
 export function choiceFeedback(stage,choice){
  const audio=CONTEXTS[stage.mode]||stage.mode==='build'?PHONEMES[choice]:ITEMS[choice]?.audio;
  if(!audio)throw Error('Kein Klang für diese Auswahl.');
- return {audio:[audio],text:`Deine Auswahl: ${stage.mode==='build'||CONTEXTS[stage.mode]?choice:ITEMS[choice].text}`};
+ return {audio:[audio],text:stage.group==='sentence'?'Deine Bildauswahl.':`Deine Auswahl: ${stage.mode==='build'||CONTEXTS[stage.mode]?choice:ITEMS[choice].text}`};
 }
 export const speaker = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 export const icons = {

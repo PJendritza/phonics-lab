@@ -1,3 +1,107 @@
+# Phonics Lab v7 status
+
+Updated 2026-10-18 (Europe/Berlin). Canonical repository:
+https://github.com/PJendritza/phonics-lab . Feature branch: reading-comprehension.
+Read AGENTS.md and recent Git history. Source checkout: /workspace/Kalulu-DE.
+
+## Implemented from the reading-comprehension request
+
+The user set speech detection aside and authorised expanded vocabulary, independent
+word reading, optional syllable support and the first sentence comprehension tasks.
+Levels 1–14 retain their IDs and content. Levels 15–32 append human-word listening,
+word-to-picture reading, longer words/spelling patterns and short sentence-to-picture
+comprehension. See docs/READING-CURRICULUM.md for the exact sequence and limits.
+
+- 35 additional complete human word recordings; 58 word/numeral/function-word entries
+  in total. 41 picture-word targets, with original local SVG drawings. New patterns
+  include voiced s, weak endings, doubled consonants, ei, au, ie, ee and oo.
+- Independent reading never automatically plays the answer. Generic entry guidance
+  explains the task. Optional read-aloud or syllable/pattern help persists assisted
+  state and disqualifies first-try mastery. Reading/meaning skills are separate
+  from the previous sound-to-print skills.
+- Fourteen controlled sentences. The final level varies both subject and location,
+  including same-subject/different-place and same-place/different-subject choices.
+  All written sentence tokens have appeared earlier. This is narrow sentence
+  comprehension, not stories or a validated reading-comprehension assessment.
+- Later levels start with choices. Two mistakes still trigger teaching and restore
+  the original choices without extra rewards. New goals remain 18 complete questions;
+  existing chime, flower, sparkles and automatic advance are retained. No microphone.
+- Original version-3 storage key/schema retained, with curriculumVersion 7. Existing
+  14-level finishers continue at Level 15; paused questions, goals, choices, errors,
+  help states and rewards survive. No accounts, uploads, paid APIs or scheduling.
+- 76 human clips, 11 isolated Kalulu phones, 21 full-sentence instructions, 14 optional
+  sentence readings and one nonverbal effect. All 62 old active MP3s stay byte-identical.
+  New sentence speech uses unchanged local Thorsten High 1.5 / added 0.3 s pause.
+- The complete on-demand-audio package cap is now 3 MB. The current test build is
+  about 2.25 MB. Source recordings, voice model, dependencies, generated builds and
+  screenshots stay outside Git. New provenance and per-clip hashes are retained.
+
+## Executed verification
+
+```sh
+# Discovery metadata and originals were cached externally. Reproduction:
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py
+node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+# Existing server: /workspace/kalulu-browser-build on port 8070,
+# preview/phonics-lab -> ../site
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+```
+
+34 pure/content tests pass, including complete 32-level state progression,
+separate reading mastery, assistance/no false first success, exact resumed help,
+sentence distractor contrasts, old-course migration and sentence vocabulary checks.
+All 123 active MP3s decode with headroom/quiet endings. Existing 62 output hashes
+are unchanged against the v6 baseline. New 35 human originals have pinned source
+hashes and explicit Commons author/license attribution.
+
+The new reading browser suite passes with actual playback: all 18 appended levels
+execute a response and automatic transition; words are silent until help; syllable
+help preserves spelling/choices through reload; wrong-picture audio corresponds to
+that choice; two-error teaching gives no extra progress; full 18-question sentence
+practice earns one flower. Four picture choices fit at 320×568, 390×844 and
+768×1024. Adult sound review exposes all 14 sentence clips. Zero app errors or
+third-party runtime requests in those checks. Profile, word-hint, mobile,
+level-navigation and choice-help regressions also pass. Final full-browser suite
+passes too, including all 126 active/comparison MP3 decodes, actual navigation,
+profiles/imports, keyboard, blocked-media recovery and automatic flow. Exact app
+SHA256: c4a39a6756b6f0f167e3fe248e44184eca285de44e452a1b30a929e67dac9771.
+
+Diagnosis: a preliminary reading run stopped on not-yet-downloaded Biene audio;
+it was rerun successfully after all words arrived. Initial compact reading layouts
+put the last picture below a 320×568 viewport; corrected, then real-browser checks
+passed at all three sizes. Wikimedia temporarily returned HTTP 429. Retained caches,
+respected the initial 600-second pause, reduced request pace and used properly
+attributed alternative recordings. Final sources are all present, including
+Jeuwre's Sonne2/Leim2/See2/Tee2/das2/ist2 variants. No synthetic-word substitution.
+No TLS or hash checks were disabled. All new audio/illustrations still require
+native-speaker/educator review; technical checks do not establish learning efficacy.
+
+## Publication and next action
+
+All required local checks passed; publication pending at this checkpoint.
+Commit/push tested feature and main, rebuild clean, publish via scripts/publish.py
+and verify every live HTTPS file with scripts/verify_live.py. The publisher now
+requires both full-browser and reading-specific evidence for the current app hash.
+No hosting/cloud environment configuration change is required.
+
+After publication, test Levels 15, 17, 19, 23, 31 and 32 through Level → parent
+preview checkbox. Review picture recognisability as well as new word/sentence audio.
+Physical-phone playback and native pronunciation are not newly certified by cloud
+Chromium. Next teaching work: explicit final-devoicing transfer (Laub/Sieb currently
+have whole-word models), ch/sp/st, consonant clusters, actions/role reversals, then
+connected short texts after actual child/educator feedback.
+
+---
+Historical release context follows; the latest verified public version below is v6.
+
 # Phonics Lab v6 status
 
 Updated 2026-10-18 (Europe/Berlin). Repository:

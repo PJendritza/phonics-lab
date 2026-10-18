@@ -1,10 +1,10 @@
 {
-  "version": 6,
+  "version": 7,
   "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
     "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. Full 14/14 goal earns a flower.",
     "Independent profiles preserve exact pending activities; export downloads and confirmed restore work; invalid restore preserves existing data.",
-    "Parent preview accesses all 14 stages. New first/last consonants and word tasks run to their explicit 12/15/18-question goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
+    "Parent preview accesses all current stages. New first/last consonants and word tasks run to their explicit 12/15/18-question goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
     "Actual nonverbal confirmation audio plays; no spoken success, retry or navigation praise is requested.",
     "All current human/guide/effect files plus old comparisons decode; effect filtering and per-clip listening review persistence work.",
     "Required cue failure disables choices and permits replay recovery; optional chime failure never blocks automatic advancement.",
@@ -272,9 +272,253 @@
     {
       "src": "audio/phoneme_h.mp3?v=f49e28f9222a",
       "duration": 0.330023
+    },
+    {
+      "src": "audio/sofa.mp3?v=390410619684",
+      "duration": 1.037211
+    },
+    {
+      "src": "audio/lama.mp3?v=7ce40c2e2445",
+      "duration": 1.056848
+    },
+    {
+      "src": "audio/salami.mp3?v=82ea5c1c50d5",
+      "duration": 1.444444
+    },
+    {
+      "src": "audio/tomate.mp3?v=82417d97b614",
+      "duration": 1.185011
+    },
+    {
+      "src": "audio/banane.mp3?v=84bdb1b529c3",
+      "duration": 1.016712
+    },
+    {
+      "src": "audio/melone.mp3?v=974f99970f5f",
+      "duration": 0.944331
+    },
+    {
+      "src": "audio/igel.mp3?v=fe7659526105",
+      "duration": 0.901769
+    },
+    {
+      "src": "audio/esel.mp3?v=0e5c86e661ee",
+      "duration": 1.116236
+    },
+    {
+      "src": "audio/nudel.mp3?v=1beb0795bfcf",
+      "duration": 0.839841
+    },
+    {
+      "src": "audio/hase.mp3?v=bacf208f2e80",
+      "duration": 0.982404
+    },
+    {
+      "src": "audio/hose.mp3?v=e19642ee3d89",
+      "duration": 0.932721
+    },
+    {
+      "src": "audio/salat.mp3?v=91e944f1711d",
+      "duration": 0.909501
+    },
+    {
+      "src": "audio/bett.mp3?v=1c674c4fde41",
+      "duration": 0.596032
+    },
+    {
+      "src": "audio/kamm.mp3?v=dd0da5555fd8",
+      "duration": 0.823991
+    },
+    {
+      "src": "audio/tasse.mp3?v=976b953de356",
+      "duration": 0.758617
+    },
+    {
+      "src": "audio/kanne.mp3?v=30ccb66249ec",
+      "duration": 0.895397
+    },
+    {
+      "src": "audio/sonne.mp3?v=c97a26b96262",
+      "duration": 0.889977
+    },
+    {
+      "src": "audio/affe.mp3?v=8d4c6f998a42",
+      "duration": 0.700522
+    },
+    {
+      "src": "audio/seil.mp3?v=1c04da579a95",
+      "duration": 1.158776
+    },
+    {
+      "src": "audio/bein.mp3?v=4cade24c38ca",
+      "duration": 0.607642
+    },
+    {
+      "src": "audio/ein.mp3?v=8aa54b80da05",
+      "duration": 0.654127
+    },
+    {
+      "src": "audio/word_intro.mp3?v=f79f17d5beaa",
+      "duration": 4.035873
+    },
+    {
+      "src": "audio/picture_read.mp3?v=684c786d0827",
+      "duration": 7.273197
+    },
+    {
+      "src": "audio/long_words.mp3?v=39a096a04c6c",
+      "duration": 6.613288
+    },
+    {
+      "src": "audio/soft_words.mp3?v=fdd0857f43a3",
+      "duration": 5.45229
+    },
+    {
+      "src": "audio/double_letters.mp3?v=a05b848cc938",
+      "duration": 6.578458
+    },
+    {
+      "src": "audio/pattern_ei.mp3?v=9a043cb8cff1",
+      "duration": 7.159683
+    },
+    {
+      "src": "audio/pattern_au.mp3?v=38a8df3be21e",
+      "duration": 6.590068
+    },
+    {
+      "src": "audio/pattern_ie.mp3?v=72750919feec",
+      "duration": 7.414376
+    },
+    {
+      "src": "audio/long_vowels.mp3?v=6c50d4e3b735",
+      "duration": 6.706168
+    },
+    {
+      "src": "audio/sentence_words.mp3?v=defe9e02797f",
+      "duration": 6.056009
+    },
+    {
+      "src": "audio/sentence_read.mp3?v=48742908d239",
+      "duration": 6.646259
+    },
+    {
+      "src": "audio/sentence_where.mp3?v=fd14c7f884f4",
+      "duration": 7.470567
+    },
+    {
+      "src": "audio/s_hut.mp3?v=3e54653294f6",
+      "duration": 1.297778
+    },
+    {
+      "src": "audio/s_ball.mp3?v=a5d5af3d82bd",
+      "duration": 1.543356
+    },
+    {
+      "src": "audio/s_bus.mp3?v=29ec3ed73b43",
+      "duration": 1.599637
+    },
+    {
+      "src": "audio/s_fisch.mp3?v=41dd0596158c",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/s_schaf.mp3?v=a5259ce6807e",
+      "duration": 1.506757
+    },
+    {
+      "src": "audio/s_gans.mp3?v=c82775eff989",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/ball_im_bus.mp3?v=c2afe800eb83",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/ball_im_haus.mp3?v=965d50dd7bcc",
+      "duration": 1.856825
+    },
+    {
+      "src": "audio/hut_im_bus.mp3?v=2e2921d6ff8e",
+      "duration": 1.715737
+    },
+    {
+      "src": "audio/hut_im_haus.mp3?v=9218f394eec4",
+      "duration": 1.704127
+    },
+    {
+      "src": "audio/schaf_im_bus.mp3?v=bd6c353f30bf",
+      "duration": 1.889887
+    },
+    {
+      "src": "audio/schaf_im_haus.mp3?v=9af1937b15ee",
+      "duration": 1.831837
+    },
+    {
+      "src": "audio/maus_im_bus.mp3?v=5d1c96b029b8",
+      "duration": 1.831837
+    },
+    {
+      "src": "audio/maus_im_haus.mp3?v=c5d899c8c869",
+      "duration": 1.820227
+    },
+    {
+      "src": "audio/leim.mp3?v=28e636d2327b",
+      "duration": 1.043311
+    },
+    {
+      "src": "audio/eine.mp3?v=f6d8191c95d8",
+      "duration": 0.683107
+    },
+    {
+      "src": "audio/maus.mp3?v=d9fd9e24c418",
+      "duration": 0.735351
+    },
+    {
+      "src": "audio/haus.mp3?v=ff0ebca15006",
+      "duration": 0.967596
+    },
+    {
+      "src": "audio/laub.mp3?v=aef3984309b7",
+      "duration": 1.348571
+    },
+    {
+      "src": "audio/biene.mp3?v=d77c278f56fe",
+      "duration": 0.858095
+    },
+    {
+      "src": "audio/sieb.mp3?v=2163f6ea9ff6",
+      "duration": 1.101338
+    },
+    {
+      "src": "audio/sieben.mp3?v=1a674b466508",
+      "duration": 0.633764
+    },
+    {
+      "src": "audio/boot.mp3?v=324afffff35f",
+      "duration": 1.06458
+    },
+    {
+      "src": "audio/beet.mp3?v=449f0d39ff48",
+      "duration": 0.869615
+    },
+    {
+      "src": "audio/see.mp3?v=faa6292fd6f8",
+      "duration": 0.816939
+    },
+    {
+      "src": "audio/tee.mp3?v=2d3aa8d1ca8d",
+      "duration": 0.74381
+    },
+    {
+      "src": "audio/das.mp3?v=fcaf4c95bfcf",
+      "duration": 0.761179
+    },
+    {
+      "src": "audio/ist.mp3?v=890bc70d6920",
+      "duration": 0.771111
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "1d1af35b9128081edc001e641ce3f8fa77bf627ecf644e71957eb9d26964c7fb"
+  "appSha256": "c4a39a6756b6f0f167e3fe248e44184eca285de44e452a1b30a929e67dac9771"
 }

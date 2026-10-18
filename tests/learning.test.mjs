@@ -27,8 +27,8 @@ test('successful higher-level preview continues forward despite incomplete earli
  assert.equal(recommended(p).id,'more_build');assert.equal(validateProgress(p).continuation,'more_build');
  p=startSession(p,recommended(p).id,rng);
  while(p.pending){p=solve(p);p=advance(p,rng).progress;}
- assert.equal(recommended(p),null);assert.equal(p.continuation,'complete');
- assert.equal(availableThrough(p),STAGES.length-1);
+ assert.equal(recommended(p).id,'picture_known');assert.equal(p.continuation,'picture_known');
+ assert.equal(availableThrough(p),14);
 });
 test('jumping between levels preserves partial, wrong and solved questions independently',()=>{
  let p=startSession(freshProgress(),'more_build',rng);p=answer(p,'f').progress;
