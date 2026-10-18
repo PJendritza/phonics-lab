@@ -68,8 +68,8 @@ The full browser regression also passed, including real MP3 playback/decode, com
 14/12/15/18-question goals, error recovery, success-effect failure, migration,
 profile import/export and keyboard interaction. Exact app SHA256:
 fe987b493899f447d07e29386db37d50aad6459df1ea459a786ff0dde3bb5bbf.
-Clean publication is pending; do not call this version live until the HTTPS audit
-passes. The tested dirty build is 72 files, 910,104 bytes (below the 1 MB budget).
+The final clean build and publication are complete. All 72 live HTTPS files match
+the tested package exactly: 910,105 bytes, below the 1 MB budget. See live.json.
 
 Development dependencies: external Piper 1.4.2, pinned Thorsten High ONNX;
 fontTools with Brotli 1.1.0. Normal app/build require no synthesis/font tools.
@@ -83,9 +83,19 @@ explicitly choose a numbered review level as now intended. These checks were rer
 
 ## Release and next step
 
-Pending: final clean source commit/push, clean build,
-normal gh-pages publication and certificate-verified HTTPS hash audit. Source/main
-and deployment branches remain separate; no hosting/domain/settings changes.
+Publication verified:
+- App source 7fc8c23c786219f0cf75d14a95154744cb0658fc, pushed to numbered-levels-update
+  and main. Clean python3 scripts/build.py: 72 files, 910,105 bytes, sourceDirty false.
+- python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v5
+  pushed normal deployment f3b8e1a9ea420c579bb5f55c4d86d002df62c3a2 to gh-pages.
+- Initial BUILD_INFO check returned v4 during Pages propagation. After it reported
+  v5.0.0 and source 7fc8c23, python3 scripts/verify_live.py passed all 72 files over
+  certificate-verified HTTPS. Evidence: docs/verification/2026-10-18/live.json.
+- Play: https://patrickjendritza.com/phonics-lab/?v=5.0.0
+- Sound review: https://patrickjendritza.com/phonics-lab/audio-review.html?v=5.0.0
+- Subsequent documentation-only commit records the audit; deployed app source is
+  7fc8c23, distinct from that documentation commit. Source/main and generated
+  deployment branches remain separate; no hosting/domain/settings changes.
 Next user check after release: open the v5 link, resume an existing profile, jump
 between levels without losing a partial word, hear selected wrong options and try
 higher-level success. Listen to the regenerated instructions on phone speakers.

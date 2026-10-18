@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "timeUTC": "2026-10-18T11:40:40.678479+00:00",
+  "timeUTC": "2026-10-18T14:27:29.319690+00:00",
   "base": "https://patrickjendritza.com/phonics-lab/",
-  "sourceCommit": "f1d732832c1c7870539e8aa7ed1c0af4a3ad1777",
+  "sourceCommit": "7fc8c23c786219f0cf75d14a95154744cb0658fc",
   "files": [
     {
       "file": ".nojekyll",
@@ -13,7 +13,7 @@
     {
       "file": "BUILD_INFO.json",
       "status": 200,
-      "sha256": "84eb62cf234fdae062c91a0ad72076d2d590c9d4e4bb92c78cc8ca7877483453",
+      "sha256": "bc98c4162eb50393a8e2edee6ed35d914780feec9e36f0bb98d5d7572b9f5075",
       "bytes": 321
     },
     {
@@ -25,14 +25,14 @@
     {
       "file": "SHA256SUMS",
       "status": 200,
-      "sha256": "8eea3743489fa376b7ddf9c5d50ee1c6f7c7ed5c665681fc3fb04d1a84130472",
-      "bytes": 5388
+      "sha256": "92a58e52a7dad3454c730a598b1091fa293d490cbe1379ba1cbbb2bfe43019da",
+      "bytes": 5765
     },
     {
       "file": "about.html",
       "status": 200,
-      "sha256": "9dd30bcc4bf6f0d069f0210d10bbd1ebec6b026772217220082386fe64a9548d",
-      "bytes": 6630
+      "sha256": "3ac4fbfc3b3c7e94398e93f550cc66d208a3e3b44c2376c71f83c2080636c908",
+      "bytes": 8183
     },
     {
       "file": "audio/a.mp3",
@@ -115,8 +115,8 @@
     {
       "file": "audio/ending.mp3",
       "status": 200,
-      "sha256": "842c72fc061af1589d480f96b2afd6fdde497baaa90d4619f9e56c0a3baa3bbf",
-      "bytes": 31913
+      "sha256": "d90e6615f923a9d0ee171b53c8211314fdaa3159e878f110dacd8fecf65b417c",
+      "bytes": 35778
     },
     {
       "file": "audio/feder.mp3",
@@ -169,8 +169,8 @@
     {
       "file": "audio/listen.mp3",
       "status": 200,
-      "sha256": "15f4247e0c0604b9720baaa479e6e83de07cf533525d534ae1365446116cd604",
-      "bytes": 27473
+      "sha256": "75d2348b924b9523c6b3c2d04150b1fb71c22571976efd54af2a3eb8e7d71a87",
+      "bytes": 30972
     },
     {
       "file": "audio/loewe.mp3",
@@ -217,8 +217,8 @@
     {
       "file": "audio/manifest.json",
       "status": 200,
-      "sha256": "354658ad48a7aceba28c601b5cab1256bfb3fc7e83f04dc2e43d373d90f8455c",
-      "bytes": 51215
+      "sha256": "4c96e30597c1b279269471261384def8b436b83d39059a09972d35bd04012632",
+      "bytes": 56597
     },
     {
       "file": "audio/mi.mp3",
@@ -229,8 +229,8 @@
     {
       "file": "audio/model.mp3",
       "status": 200,
-      "sha256": "ddb7c291e429fcb94ef5b43fc8a2fb0583b3d3aeb20f433602c7909d8d160f73",
-      "bytes": 34003
+      "sha256": "8fa2bd634b41bec6249777e76b913189141bb3c52abdb8d340ad657fe4d99073",
+      "bytes": 36614
     },
     {
       "file": "audio/nase.mp3",
@@ -265,8 +265,8 @@
     {
       "file": "audio/onset.mp3",
       "status": 200,
-      "sha256": "e8b75a8218cc79de730c5289d2083c4199ba4ebb97436f99899009889985728d",
-      "bytes": 30869
+      "sha256": "f10d4cbb185e305be08b8756d2de01b2f1fb4e19dc9731e885d3f50e69e7ebe6",
+      "bytes": 35569
     },
     {
       "file": "audio/park.mp3",
@@ -295,8 +295,8 @@
     {
       "file": "audio/read.mp3",
       "status": 200,
-      "sha256": "e37f81fbe8c3ae12948dd7b0734ac5e1e9bb5a19a68856442f143ee359d06d79",
-      "bytes": 26166
+      "sha256": "2e7711ae2d91354bbaf0b539a302c7d52533690da09d79f4ddde0913ca9d82a6",
+      "bytes": 28255
     },
     {
       "file": "audio/rot.mp3",
@@ -319,8 +319,8 @@
     {
       "file": "audio/short.mp3",
       "status": 200,
-      "sha256": "91eca34dc7e535290aeeca42ac0bf93418219282d1b0a69ea9bc6a514f297002",
-      "bytes": 44975
+      "sha256": "f1d3bbade2ee12e3337cd5815f14918282249ee976d35619c3415d43c674b423",
+      "bytes": 47063
     },
     {
       "file": "audio/success.mp3",
@@ -331,8 +331,8 @@
     {
       "file": "audio/syllable.mp3",
       "status": 200,
-      "sha256": "96ab35e848249cc43300e965d1796dde899802eeefb5e9d957847bd6bf766fbc",
-      "bytes": 22771
+      "sha256": "aaa0112b7b581d14a5af569baba5b5e9912820f052140adf125ee8279873cea4",
+      "bytes": 25329
     },
     {
       "file": "audio/tisch.mp3",
@@ -355,19 +355,19 @@
     {
       "file": "audio/word.mp3",
       "status": 200,
-      "sha256": "c4d4f6fcea96d945c0d95d801b3380cdb9fd635ea0f8a84563aa4a3fb3743268",
-      "bytes": 33220
+      "sha256": "7b422f7e6cd9e2c69e42cbba677074f6b8e1b4c20377e28c2b8f259ca4f59301",
+      "bytes": 36823
     },
     {
       "file": "audio/word_blocks.mp3",
       "status": 200,
-      "sha256": "9692000cd1f82921b861cde0a9a9a3c9e0ae41999789610603b83519f8566821",
-      "bytes": 37138
+      "sha256": "3e57694da9e7125f68bb84c4b9edf3cb7a189f1f4e748a0bdce239675d85daf7",
+      "bytes": 43510
     },
     {
       "file": "audio-review.html",
       "status": 200,
-      "sha256": "6c1934764f1a3a662853dfa1a9fa99f1c8bc01a2755b16a40aa5e078f47c8f3a",
+      "sha256": "b71c6c5d376a84f56a860d51aeb1014db0767c44b38e023114808326d80a332e",
       "bytes": 1760
     },
     {
@@ -379,26 +379,50 @@
     {
       "file": "data.mjs",
       "status": 200,
-      "sha256": "f7726820b50d90dbbc6cfde852382e62c655468ba78c2c8a9f852b8b9fc01a50",
-      "bytes": 6741
+      "sha256": "3bdaf61fa934fe6ec33945a7d7c0d6f45e43b015f8c5c9cdb4691ccef2fa7500",
+      "bytes": 7858
+    },
+    {
+      "file": "fonts/OFL.txt",
+      "status": 200,
+      "sha256": "fd0f044f061aa463fa1675a71fa0c229a067e2062c321c89e5f20965883f23b2",
+      "bytes": 4501
+    },
+    {
+      "file": "fonts/manifest.json",
+      "status": 200,
+      "sha256": "3137ab9d90be1ef6ee9b96a8cbe49e1e1eb1feccdabb5a06a37e5390f3f52e96",
+      "bytes": 996
+    },
+    {
+      "file": "fonts/phonics-bold-a79edacb209f.woff2",
+      "status": 200,
+      "sha256": "a79edacb209f49f77661a21f78dabc281f5ac7ae9b3f877b9c197d2b3caf8103",
+      "bytes": 23016
+    },
+    {
+      "file": "fonts/phonics-regular-fcbbfa9d767b.woff2",
+      "status": 200,
+      "sha256": "fcbbfa9d767b7ad25949f4a5e45134fc489b1b2aadd38e49147ac0dba6298fa9",
+      "bytes": 22712
     },
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "21dd34934f742725966606a54a66c434cd0534307e605531de8cc212318cd5a3",
-      "bytes": 1022
+      "sha256": "a23ae3b7d4756e9d2b76ec9f7c16b276065435eb835c7eecdc520ba55652e8d4",
+      "bytes": 1127
     },
     {
       "file": "learning.mjs",
       "status": 200,
-      "sha256": "f62a4b867ca3975b9ca88730ba3885b1419f2af2537b11c3c448caf3ef6a9f9a",
-      "bytes": 11744
+      "sha256": "99ca016f05bd6f143751b8a967921fd813a61cd06e46882b06499ae356e8aa9e",
+      "bytes": 13230
     },
     {
       "file": "main.mjs",
       "status": 200,
-      "sha256": "0d5114f6d54ba9654b1955a53bdbc2327b89a2a142a478dbf19486d2eec75a61",
-      "bytes": 17078
+      "sha256": "df3165fc64a33958fc73cdaa4caa493b21a144d16d1ddbaf5ab40054b36f9dde",
+      "bytes": 19057
     },
     {
       "file": "review.mjs",
@@ -409,10 +433,10 @@
     {
       "file": "style.css",
       "status": 200,
-      "sha256": "42a3f69b1d0044bcec037ba53f33c003c7a3afcd6607a47ec6d9f74d581d5a13",
-      "bytes": 14210
+      "sha256": "c4b5d6fe9a990b367454e503f5242c81b3e0a55979128b1f6376b7321bb36391",
+      "bytes": 17262
     }
   ],
-  "totalBytes": 812444,
+  "totalBytes": 910105,
   "meaning": "All deployed bytes match the locally browser-tested build over certificate-verified HTTPS. Not a real-phone playability test."
 }
