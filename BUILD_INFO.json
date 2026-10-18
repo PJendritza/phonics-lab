@@ -1,8 +1,8 @@
 {
-  "version": "6.0.0",
-  "sourceCommit": "6509d5dae7e561fe80d6bb8b96b10b5a935fb187",
+  "version": "7.0.0",
+  "sourceCommit": "8f8c124142811593b7c509c3d4796535d6f6b6e1",
   "sourceDirty": false,
-  "assetVersion": "1d1af35b9128",
+  "assetVersion": "c4a39a6756b6",
   "stack": "HTML / CSS / ES modules",
-  "audioPolicy": "Human recordings for isolated sounds and syllables; TTS only for sentence instructions. No auditory approval claimed."
+  "audioPolicy": "Human complete sounds, syllables and words. Piper only for full instructions/sentence help. Independent reading never autoplays its answer. No pronunciation approval claimed."
 }

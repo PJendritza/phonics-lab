@@ -1,9 +1,9 @@
-import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=1d1af35b9128';
+import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=c4a39a6756b6';
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const integer=(v,max=1e7)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
 const id=()=>globalThis.crypto?.randomUUID?.()??`child-${Date.now()}-${Math.floor(Math.random()*1e6)}`;
-export function freshProgress(){return {version:3,skills:{},stages:{},sessions:0,seeds:0,pending:null,paused:{},continuation:STAGES[0].id};}
+export function freshProgress(){return {version:3,curriculumVersion:CURRICULUM_VERSION,skills:{},stages:{},sessions:0,seeds:0,pending:null,paused:{},continuation:STAGES[0].id};}
 export function createProfile(name='Mein Profil',avatar=AVATARS[0]){return {id:id(),name:name.trim().slice(0,24)||'Mein Profil',avatar,progress:freshProgress()};}
 export function freshStore(){const p=createProfile();return {version:3,activeId:p.id,profiles:[p]};}
 export const activeProfile=store=>store.profiles.find(p=>p.id===store.activeId);
@@ -30,9 +30,18 @@ function makeRound(progress,stage,index=0,previous=null,rng=Math.random){
  let choices;
  if(stage.mode==='build'){
   const actual=[...new Set(lettersFor(target).map(c=>c.toLowerCase()))],others=(stage.id==='more_build'?BUILD_UNITS:['a','m','i','o','u','n','l']).filter(c=>!actual.includes(c));choices=shuffled([...actual,...shuffled(others,rng).slice(0,difficulty(progress)>=3?1:0)],rng);
- }else{const pool=[...new Set([...stage.targets,...(stage.distractors??[])])];choices=demonstration?[target]:shuffled([target,...shuffled(pool.filter(t=>t!==target),rng).slice(0,difficulty(progress)-1)],rng);}
+ }else{
+  const pool=[...new Set([...stage.targets,...(stage.distractors??[])])];
+  let others=shuffled(pool.filter(t=>t!==target),rng);
+  if(stage.contrast){
+   const item=ITEMS[target],sameSubject=others.find(t=>ITEMS[t].subject===item.subject),sameLocation=others.find(t=>ITEMS[t].location===item.location);
+   const priority=index%2?[sameLocation,sameSubject]:[sameSubject,sameLocation];
+   others=[...priority.filter(Boolean),...others.filter(t=>!priority.includes(t))];
+  }
+  choices=demonstration?[target]:shuffled([target,...others.slice(0,difficulty(progress)-1)],rng);
+ }
  const cue=CONTEXTS[stage.mode]?CONTEXTS[stage.mode][target][index%CONTEXTS[stage.mode][target].length]:ITEMS[target].audio;
- return {target,choices,cue,demonstration,tries:0,position:0,solved:false,help:null,misses:0};
+ return {target,choices,cue,demonstration,tries:0,position:0,solved:false,help:null,misses:0,assisted:false};
 }
 export function startSession(progress,stageId,rng=Math.random){
  const next=structuredClone(progress),stage=stageById(stageId);if(!stage)throw Error('Unbekanntes Level.');
@@ -55,11 +64,16 @@ export function answer(progress,choice){
  r.misses=0;
  if(stage.mode==='build'&&++r.position<lettersFor(r.target).length)return {progress:next,correct:true,finished:false};
  r.solved=true;next.seeds++;const key=skillKey(stage,r.target),skill=next.skills[key]??{introduced:false,seen:0,first:0,recent:[],timeline:[]};skill.introduced=true;
- if(!r.demonstration){const first=r.tries===(stage.mode==='build'?lettersFor(r.target).length:1);skill.seen++;skill.first+=Number(first);skill.recent=[...skill.recent,Number(first)].slice(-8);const tick=Object.values(progress.skills).reduce((n,s)=>n+s.seen,0)+1;skill.timeline=[...(skill.timeline??[]),[tick,Number(first)]].slice(-5);session.independent++;session.first+=Number(first);}
+ if(!r.demonstration){const first=!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1);skill.seen++;skill.first+=Number(first);skill.recent=[...skill.recent,Number(first)].slice(-8);const tick=Object.values(progress.skills).reduce((n,s)=>n+s.seen,0)+1;skill.timeline=[...(skill.timeline??[]),[tick,Number(first)]].slice(-5);session.independent++;session.first+=Number(first);}
  next.skills[key]=skill;return {progress:next,correct:true,finished:true};
 }
 export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
 export function resumePractice(progress){if(progress.pending?.round.help!=='ack')return progress;const next=structuredClone(progress);next.pending.round.help=null;next.pending.round.misses=0;return next;}
+export function useReadingHelp(progress){
+ const session=progress.pending;
+ if(!session||stageById(session.stageId).mode!=='picture'||session.round.solved||session.round.assisted)return progress;
+ const next=structuredClone(progress);next.pending.round.assisted=true;return next;
+}
 export function advance(progress,rng=Math.random){
  const next=structuredClone(progress),session=next.pending;if(!session?.round.solved)return {progress,completed:false};const stage=stageById(session.stageId);
  if(session.index+1>=session.total){
@@ -87,10 +101,11 @@ function validatePending(value){
  if(r.help===undefined&&s.id!=='letters'&&demonstration&&r.tries===0&&!r.solved){
   demonstration=false;if(s.mode!=='build'&&choices.length===1)choices.push([...s.targets,...s.distractors??[]].find(c=>c!==r.target));
  }
- return {stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses}};
+ if(r.assisted!==undefined&&(typeof r.assisted!=='boolean'||(r.assisted&&s.mode!=='picture')))throw Error('Ungültige Lesehilfe.');
+ return {stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false}};
 }
 export function validateProgress(p){
- if(!plain(p)||p.version!==3||!plain(p.skills)||!plain(p.stages)||!integer(p.sessions)||!integer(p.seeds)||Object.keys(p.skills).length>160)throw Error('Ungültiger Lernstand.');const result=freshProgress();result.sessions=p.sessions;result.seeds=p.seeds;
+ if(!plain(p)||p.version!==3||!plain(p.skills)||!plain(p.stages)||!integer(p.sessions)||!integer(p.seeds)||Object.keys(p.skills).length>allowedSkills.size)throw Error('Ungültiger Lernstand.');const result=freshProgress();result.sessions=p.sessions;result.seeds=p.seeds;
  for(const [key,s]of Object.entries(p.skills)){
   if(!allowedSkills.has(key)||!plain(s)||typeof s.introduced!=='boolean'||!integer(s.seen)||!integer(s.first)||s.first>s.seen||!Array.isArray(s.recent)||s.recent.length>8||s.recent.some(v=>v!==0&&v!==1)||s.recent.length>s.seen||!Array.isArray(s.timeline)||s.timeline.length>5||s.timeline.some(t=>!Array.isArray(t)||t.length!==2||!integer(t[0])||(t[1]!==0&&t[1]!==1)))throw Error('Ungültige Lautdaten.');
   result.skills[key]={introduced:s.introduced,seen:s.seen,first:s.first,recent:[...s.recent],timeline:s.timeline.map(t=>[...t])};
@@ -99,6 +114,10 @@ export function validateProgress(p){
  result.pending=validatePending(p.pending);
  if(p.continuation!==undefined&&p.continuation!=='complete'&&!stageById(p.continuation))throw Error('Ungültiges Fortsetzungslevel.');
  result.continuation=continuationFor(p);
+ if(p.curriculumVersion!==undefined&&(!integer(p.curriculumVersion,CURRICULUM_VERSION)||p.curriculumVersion<1))throw Error('Unbekannte Lehrplanversion.');
+ // Old "all 14 complete" profiles continue into new material; keep all earned
+ // flowers, exact pending tasks, and explicit review choices from this release.
+ if((p.curriculumVersion??6)<7&&result.continuation==='complete'&&!result.pending)result.continuation='picture_known';
  if(p.paused!==undefined){
   if(!plain(p.paused)||Object.keys(p.paused).length>STAGES.length)throw Error('Ungültige pausierte Level.');
   for(const [key,value]of Object.entries(p.paused)){
