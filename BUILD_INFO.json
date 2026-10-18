@@ -1,7 +1,7 @@
 {
   "project": "PJendritza/Kalulu-DE German prototype",
   "source_branch": "main",
-  "source_commit": "1ba1251dc20680c865b049fc53ec0eaf47e98897",
+  "source_commit": "bbc98e1b2a3079add57417dbd58323f2991c851e",
   "source_dirty": false,
   "upstream_commit": "51043b23f8e32e72ca79ca914ba3efd6b76b272e",
   "godot": "4.7.stable",

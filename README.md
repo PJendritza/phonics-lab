@@ -5,11 +5,19 @@ per lesson. All lessons are unlocked for review. German audio is synthetic draft
 material: listen and check the phonemes, vowel length, word stress and instructions
 before using it with a child. It is not a validated German reading course.
 
-## Use the prebuilt version (no Godot needed)
+## Open on your phone (no download/install steps)
+
+Open **https://patrickjendritza.com/Kalulu-DE/** in Safari or Chrome. Use landscape
+orientation and enable sound. The browser downloads the game automatically.
+The live HTTPS game files match the locally tested build; actual iPhone/Android
+hardware remains untested. GitHub enabled Pages automatically on the first
+gh-pages push, using the account's existing custom domain.
+
+## Use the prebuilt version locally (no Godot needed)
 
 The separate [`gh-pages`](https://github.com/PJendritza/Kalulu-DE/tree/gh-pages)
 branch contains the ready-to-serve browser files. This is a Git artifact branch,
-not a hosted website until GitHub Pages is enabled. This repository is public.
+a snapshot separate from app source. This repository is public.
 Download that branch as a ZIP in GitHub, or clone it into a new directory:
 
 ```bash
