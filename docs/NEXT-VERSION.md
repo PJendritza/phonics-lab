@@ -1,4 +1,31 @@
-# Agreed interaction update: implemented in v4
+# Next version: feedback from the v4 phone test
+
+Recorded October 18. Planning notes only; not implemented or deployed.
+
+- [ ] Number the exercise stages consistently as **Level 1–14**, retaining their
+      descriptive names. Show the current level during an exercise and provide
+      easy access to a numbered level selector from the top or bottom navigation.
+      Make jumping directly to Level 3/4 (or any other level in parent/debug preview)
+      straightforward for testing. Keep the child entrance simple and distinguish
+      the exercise level from its question/progress count. Navigation must not
+      fabricate mastery, award progress or accidentally discard a saved question.
+- [ ] On a **wrong answer**, play audio corresponding to the option actually
+      selected, so the learner hears what they clicked. Keep the same question and
+      stationary choices, with no progress award. The original cue remains available
+      via replay. Do not immediately cover the selected-option audio with the old
+      automatic target replay. For context exercises, choose an appropriate verified
+      human recording/context for that option; isolated consonant samples are not
+      currently available. Do not substitute letter names or crop sounds from words.
+- [x] Clarification: **correct answers keep the current brief success tune/check,
+      progress increment and automatic advance**. Do not add spoken correctness
+      feedback or an additional selected-letter playback on successful answers.
+
+The user reports that the current version works pretty well while testing it on
+their phone and likes the existing feedback. This does not independently certify
+every recording's pronunciation. Next implementation should focus on these two
+changes, preserving the current successful feedback and local learner data.
+
+## Previous interaction update: implemented in v4
 
 User feedback, clarified October 18: small immediate feedback plus a persistent,
 clearly growing level goal on every correct click. Not just a transient check.

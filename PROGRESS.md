@@ -4,6 +4,21 @@ Updated 2026-10-18 (Europe/Berlin). Repository:
 https://github.com/PJendritza/phonics-lab . Read AGENTS.md and recent Git history.
 Feature branch: fluent-progress. Local checkout stays /workspace/Kalulu-DE.
 
+## Latest feedback recorded for the next version
+
+The user is testing v4 on their phone, reports it is pretty good and likes the
+current success feedback. Requested planning notes (no implementation this turn):
+number the exercise stages as levels and add an easily accessible numbered selector
+for jumping between them, especially during testing; wrong answers should play the
+selected option's audio rather than only replay the requested target. Correct
+answers retain the current short tune/check, visible progress and automatic advance.
+Details and consonant-audio constraints are in docs/NEXT-VERSION.md.
+
+Documentation-only update on next-version-feedback-notes. No app, audio, storage,
+build or deployment changes; v4.0.0 remains the verified live release below.
+Validation: git diff --check. Next development task: implement the two recorded
+changes and verify navigation/resume, selected-option playback and unchanged scoring.
+
 ## Current work: automatic practice, cumulative goals and consonants
 
 Implemented user-requested v4.0.0: minimal profile/play entrance, automatic advance
