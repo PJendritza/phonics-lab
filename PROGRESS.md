@@ -84,15 +84,30 @@ Jeuwre's Sonne2/Leim2/See2/Tee2/das2/ist2 variants. No synthetic-word substituti
 No TLS or hash checks were disabled. All new audio/illustrations still require
 native-speaker/educator review; technical checks do not establish learning efficacy.
 
-## Publication and next action
+## Verified publication
 
-All required local checks passed; publication pending at this checkpoint.
-Commit/push tested feature and main, rebuild clean, publish via scripts/publish.py
-and verify every live HTTPS file with scripts/verify_live.py. The publisher now
-requires both full-browser and reading-specific evidence for the current app hash.
-No hosting/cloud environment configuration change is required.
+- Tested app source: 8f8c124142811593b7c509c3d4796535d6f6b6e1, pushed to
+  reading-comprehension and main with normal pushes.
+- Clean `python3 scripts/build.py`: 146 files, 2,254,626 bytes, sourceDirty false;
+  asset version c4a39a6756b6. No generated build/model/source-cache files in Git.
+- Executed `python3 scripts/publish.py --checkout
+  /workspace/kalulu-browser-build/publish-v7-8f8c124` successfully.
+- Deployment commit: e59c2952a6b4aee6d831a908a6f998495e754aae on gh-pages.
+  Existing hosting/settings remain unchanged; no new hosting or account.
+- Waited for public BUILD_INFO to report 7.0.0 and source 8f8c124, then executed
+  `python3 scripts/verify_live.py`: all 146 public HTTPS files exactly hash-match
+  the tested package, 2,254,626 bytes. Evidence: docs/verification/2026-10-18/live.json.
+- Play: https://patrickjendritza.com/phonics-lab/?v=7.0.0
+- Sound review: https://patrickjendritza.com/phonics-lab/audio-review.html?v=7.0.0
+- Source branch: https://github.com/PJendritza/phonics-lab/tree/reading-comprehension
+- Later documentation-only commit records publication; the deployed app source
+  remains 8f8c124. Browser evidence is tied to the unchanged app hash, not docs.
 
-After publication, test Levels 15, 17, 19, 23, 31 and 32 through Level → parent
+No unresolved build, Git or hosting blocker remains. The environment already had
+all required Python/Node/ffmpeg/Piper/Playwright/Chromium tools; no new secret,
+cloud configuration, paid service or scheduler was needed.
+
+Next: test Levels 15, 17, 19, 23, 31 and 32 through Level → parent
 preview checkbox. Review picture recognisability as well as new word/sentence audio.
 Physical-phone playback and native pronunciation are not newly certified by cloud
 Chromium. Next teaching work: explicit final-devoicing transfer (Laub/Sieb currently
@@ -100,7 +115,7 @@ have whole-word models), ch/sp/st, consonant clusters, actions/role reversals, t
 connected short texts after actual child/educator feedback.
 
 ---
-Historical release context follows; the latest verified public version below is v6.
+Historical v6 and earlier release context follows; v7 above supersedes its active status.
 
 # Phonics Lab v6 status
 
