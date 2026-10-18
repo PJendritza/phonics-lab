@@ -98,9 +98,15 @@ Publication completed and verified:
 - git ls-remote confirms the pushed main and gh-pages commits. Later source commits
   record these release results only; BUILD_INFO identifies the actual deployed app.
 
-The cloud startup draft also needs to reflect the new browser stack and current
-source reference; saving/reviewing/publishing an environment is separate from the
-already published website. No accounts, scheduling or new hosting were configured.
+The cloud startup draft was saved successfully with the new browser workflow and
+source checkpoint 537713ae154f8f58951f3e9326ce99b28bcacb7e, replacing the obsolete
+Godot startup instructions. Full workspace discovery identified the canonical
+project plus only known dependency/export/verification caches; the empty protected
+/workspace/.git directory is not a checkout. The draft contains only Kalulu-DE as
+a project. No secrets/network/install settings changed. The tool reports
+requires_publish=true: review/save settings and publish the environment to activate
+the future-task snapshot. That is separate from the already live website. Fresh-task
+restoration is not verified. No accounts, scheduling or new hosting were configured.
 
 ## Limits and smallest next step
 
