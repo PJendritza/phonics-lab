@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Store a tested static build in Git. This does not enable any website hosting.
+# Upload a tested deployment branch. GitHub Pages may publish it automatically.
 set -euo pipefail
 root=${KALULU_GERMAN_WORKSPACE:-/workspace/kalulu-de-build}
 repo=$(cd "$(dirname "$0")/.." && pwd)
@@ -77,4 +77,4 @@ if ! git -C "$deploy" diff --cached --quiet; then
   git -C "$deploy" commit -m 'Store tested six-lesson German Kalulu browser prototype'
 fi
 git -C "$deploy" push -u origin HEAD:refs/heads/gh-pages
-echo 'Tested build stored on gh-pages. This is not a live website.'
+echo 'Tested build uploaded to gh-pages; GitHub Pages may automatically publish it.'

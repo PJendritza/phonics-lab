@@ -1,0 +1,30 @@
+{
+  "removed_checkouts": [
+    "/workspace/tmp",
+    "/workspace/kalulu-de-access-check"
+  ],
+  "recoverable_archives": [
+    {
+      "checkout": "/workspace/tmp",
+      "archive": "/workspace/kalulu-migration/tmp-before-retirement.tar.gz",
+      "bytes": 52680951,
+      "sha256": "4fceb83cfebc5d55624edec7d6b495cb7b57b3e11fb8a09c0094497a6b432e6e",
+      "archive_members": 567,
+      "git_head_preserved": true
+    },
+    {
+      "checkout": "/workspace/kalulu-de-access-check",
+      "archive": "/workspace/kalulu-migration/kalulu-de-access-check-before-retirement.tar.gz",
+      "bytes": 11506,
+      "sha256": "9e9ab2f73d7f62819d95f76572d8b70df6c3d78ef7a130456d25550ea05dcd58",
+      "archive_members": 40,
+      "git_head_preserved": true
+    }
+  ],
+  "tmp_redirect_commit": "2d65acebd109c79cb7bd14a61c43e0c17f79f977",
+  "old_local_servers_stopped": [
+    7873
+  ],
+  "permanent_checkout": "/workspace/Kalulu-DE",
+  "removed_only_after_independent_remote_verification": true
+}

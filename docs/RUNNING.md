@@ -80,7 +80,8 @@ overrides the disposable German build root. The prepared project uses pinned God
 environment variables and an HTTP URL in `KALULU_GERMAN_URL`.
 
 After tests pass, `bash scripts/publish_web_build.sh` uploads the tested files to
-the dedicated artifact branch without enabling hosting or changing main. It
+the dedicated deployment branch without changing main or Pages settings. GitHub
+Pages automatically publishes it under the current configuration. The uploader
 refuses dirty source trees, stale/missing test results and unexpected artifact
 checkout contents. `SHA256SUMS`, `BUILD_INFO.json`, `TEST_RESULTS.json` and the
 corresponding source archive identify the stored build.

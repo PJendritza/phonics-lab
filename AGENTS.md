@@ -30,7 +30,8 @@ Maintain PROGRESS.md with exact commands, outcomes, blockers and next actionable
 step. Keep dated evidence under docs/verification. After source changes run relevant
 Python tests, build/audit and meaningful browser checks. Export alone is not gameplay.
 Publish only tested artifacts using scripts/publish_web_build.sh; that script does
-not enable Pages. Keep source/version/license notices consistent in packaged ZIPs.
+not change Pages API settings; GitHub may publish on push. Keep source/version/
+license notices consistent in packaged ZIPs.
 
 Preserve upstream CC BY-SA4.0 attribution/share-alike and third-party notices. See
 README.md, docs/RUNNING.md, docs/ARCHITECTURE.md and docs/AUDIO.md for details.

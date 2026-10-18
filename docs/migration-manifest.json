@@ -954,5 +954,7 @@
       "sha256_after": "dd2b680ec07c66bb6c9609413d93e4690832c930e852a171e215d226963255e6",
       "unchanged": true
     }
-  ]
+  ],
+  "organized_source_snapshot_commit": "670e87b423eeb70ab3e3d87bc5c61650f8f2acbb",
+  "note": "sha256_after records the first organized-source snapshot; later documentation changes are normal and do not rewrite this historical inventory."
 }

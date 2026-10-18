@@ -26,7 +26,8 @@ The default generated directory is `/workspace/kalulu-de-build/web`, outside Git
 
 `scripts/publish_web_build.sh` requires successful current gameplay/audio browser
 checks and a clean source tree. It uploads only generated files to `gh-pages`.
-It does not alter source or enable Pages. Never put WASM/PCK builds on `main`.
+It does not alter source or call the Pages settings API. GitHub automatically
+publishes the branch under the current configuration. Never put WASM/PCK builds on `main`.
 
 The export is single-threaded with GDExtension support. It works on an ordinary
 static HTTP server without special COOP/COEP headers. Progress stays in browser

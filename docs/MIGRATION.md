@@ -35,6 +35,9 @@ with the original collection; no pronunciation changes are intended by migration
    on tmp's former active development branch. Do not delete the tmp GitHub repository
    or rewrite its historical commits/main.
 
+The migration manifest records the first organized-source snapshot commit; its
+after-hashes describe that snapshot, not future edited documents.
+
 Exact results and commits are recorded in `../PROGRESS.md` and dated evidence.
 The environment configuration draft should point future work to `/workspace/Kalulu-DE`;
 saving a draft is separate from publishing a new environment snapshot.
