@@ -58,6 +58,7 @@ Existing GitHub Pages hosting publishes `gh-pages`. No Pages configuration chang
 ```sh
 python3 scripts/build.py
 python3 scripts/publish.py
+python3 scripts/verify_live.py
 ```
 
 The publisher refuses dirty source, mismatched hashes or an existing publication checkout. Choose `--checkout /workspace/kalulu-browser-build/publish-N` for a later publication. It uses a normal push and preserves deployment history. Verify live HTTP responses and hashes after Pages finishes; a successful push is not a verified release. The account’s existing domain is `patrickjendritza.com`; use HTTPS explicitly.

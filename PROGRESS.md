@@ -22,7 +22,7 @@ no timers/lives, modern phone-friendly layout. No framework or engine is require
 - Eight human German recordings replace the short TTS targets. Four full sentence
   instructions use Piper. No claim that a native speaker approved the new sounds.
 - app/ holds the website; main holds source; gh-pages holds generated output.
-  The build measured 252,332 bytes including all audio and review clips, 28 files.
+  The build measured 252,333 bytes including all audio and review clips, 28 files.
   A 1 MB maximum is enforced; no engine, PCK, WASM, model or bulk upstream assets.
 
 ## Preservation and cleanup
@@ -75,14 +75,32 @@ Tools executed: Python 3.12.14, Playwright 1.62.1, Chromium 154.0.8037.57.
 
 ## Publication
 
-Prepared on browser-first-demo. Existing Pages URL:
+Implemented on browser-first-demo, fast-forwarded to main and pushed. Live Pages URL:
 https://patrickjendritza.com/Kalulu-DE/?v=2
 Sound-review URL: https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=2
 
-At this source checkpoint, the new publication is pending; do not assume the URL
-already serves version 2. Next operations: commit/push tested source, fast-forward
-main, build from clean source, scripts/publish.py, verify live HTTPS file hashes,
-and record exact source/deployment commits in a follow-up documentation commit.
+Publication completed and verified:
+
+- App source: 79621ff92ecf90a44878e7c2e5c4f06849acd57c (main and browser-first-demo).
+- Deployment: 06922a634ebf6634c6cc2bc8b8b0c5c6ab8317f2 (gh-pages).
+- Executed python3 scripts/build.py from clean source, then python3 scripts/publish.py.
+  The publisher checks passing browser evidence against the current app-tree hash,
+  source cleanliness, remote main and build checksums before a normal push.
+- First python3 scripts/verify_live.py saw the previous BUILD_INFO during Pages
+  propagation. After the live metadata changed to version 2.0.0, reran it successfully:
+  **all 28 files, 252,333 bytes match the tested build over verified HTTPS**.
+  Evidence: docs/verification/2026-10-18/live.json.
+- A direct live Chromium landing-page smoke was attempted and blocked by this
+  environment's proxy CA trust: net::ERR_CERT_AUTHORITY_INVALID. TLS verification
+  was not disabled. Python's certificate-verified HTTPS file audit succeeds; this
+  is distinct from the complete locally served Chromium gameplay checks that pass.
+  Evidence: docs/verification/2026-10-18/live-browser.json.
+- git ls-remote confirms the pushed main and gh-pages commits. Later source commits
+  record these release results only; BUILD_INFO identifies the actual deployed app.
+
+The cloud startup draft also needs to reflect the new browser stack and current
+source reference; saving/reviewing/publishing an environment is separate from the
+already published website. No accounts, scheduling or new hosting were configured.
 
 ## Limits and smallest next step
 

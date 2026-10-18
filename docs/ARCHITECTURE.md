@@ -38,7 +38,8 @@ Do not put server credentials in the static bundle.
 scripts/build.py verifies the committed audio hashes, copies app unchanged, writes
 BUILD_INFO.json (source commit and dirty flag), .nojekyll, LICENSE and SHA256SUMS,
 and enforces a 1 MB total budget. No generated files are committed to main.
-scripts/publish.py accepts only clean builds corresponding to pushed main. It
+scripts/publish.py accepts only clean builds corresponding to pushed main and passing
+browser evidence bound to the exact current app-tree SHA256. It
 clones existing gh-pages, replaces deployment files and normal-pushes. It neither
 creates hosting nor changes Pages configuration. Use a fresh checkout per release.
 

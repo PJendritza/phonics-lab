@@ -1,0 +1,5 @@
+{
+  "status": "blocked",
+  "error": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://patrickjendritza.com/Kalulu-DE/?v=2\nCall log:\n\u001b[2m  - navigating to \"https://patrickjendritza.com/Kalulu-DE/?v=2\", waiting until \"load\"\u001b[22m\n",
+  "note": "TLS verification was not disabled. Verified-HTTPS file audit and local full browser tests are separate checks."
+}
