@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "checks": [
+    "Two correct letters alone never trigger assistance.",
+    "One mistake does not reveal the target; two mistakes highlight the correct next lowercase letter.",
+    "Canonical capital M displays after lowercase m; assisted completion earns one seed but no first-try mastery."
+  ]
+}

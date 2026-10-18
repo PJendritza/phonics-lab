@@ -3,7 +3,7 @@
 A small, calm German phonics app inspired by Kalulu’s staged sound-to-print learning.
 Runs entirely in the browser: no installation, account, engine or moving targets.
 
-**[Start learning](https://patrickjendritza.com/Kalulu-DE/?v=3)** · **[Check the sounds](https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3)**
+**[Start learning](https://patrickjendritza.com/Kalulu-DE/?v=3.0.0)** · **[Check the sounds](https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3.0.0)**
 
 A large play button starts/resumes the right activity. Spoken instructions and a
 large next arrow let a child practise without reading a menu. Animal profiles keep
@@ -45,6 +45,7 @@ python3 -m http.server 8070 --directory /workspace/kalulu-browser-build
 node tests/browser.cjs
 node tests/mobile-smoke.cjs
 node tests/profiles.cjs
+node tests/word-hints.cjs
 python3 scripts/audit_audio.py
 ```
 

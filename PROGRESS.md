@@ -58,6 +58,7 @@ python3 -m http.server 8070 --bind 0.0.0.0 --directory /workspace/kalulu-browser
 node tests/browser.cjs
 node tests/profiles.cjs
 node tests/mobile-smoke.cjs
+node tests/word-hints.cjs
 ```
 
 - 10 Node tests pass: no mastery/repeated rewards from demos/taps; accuracy makes
@@ -79,6 +80,10 @@ node tests/mobile-smoke.cjs
   automatic review after the last stage; isolated partial-word resume; names display
   as text; explicit reset/delete confirmation preserves the other learner; cap of
   eight disables additional creation; confirmed import of a v2 backup.
+- Final word-hint browser regression passes: two correctly placed letters do not
+  reveal the next letter; two actual mistakes do. Assisted completion earns its
+  seed once but cannot become first-try mastery. Full browser checks were repeated
+  successfully after this correction.
 - Viewports 320x568, 390x844 and 768x1024 pass: play above fold, next arrow visible,
   home/map/parents without horizontal overflow and reduced-motion animation off.
 - All 35 current MP3s decode to nonzero PCM, have peak headroom and quiet last 50 ms.
@@ -86,13 +91,13 @@ node tests/mobile-smoke.cjs
   ID warning uses an in-memory fallback; synthesis completed successfully.
 
 Evidence: docs/verification/2026-10-18/browser.json, profiles.json, mobile.json,
-audio-audit.json. Screenshots remain outside Git under /workspace/kalulu-browser-build/.
+audio-audit.json, word-hints.json. Screenshots remain outside Git under /workspace/kalulu-browser-build/.
 Tools: Python 3.12.14, Playwright 1.62.1, Chromium 154.0.8037.57.
 
 ## Release checkpoint
 
-Candidate URL: https://patrickjendritza.com/Kalulu-DE/?v=3
-Tones: https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3
+Candidate URL: https://patrickjendritza.com/Kalulu-DE/?v=3.0.0
+Tones: https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3.0.0
 
 At this source checkpoint, v3 publication is pending. Next: commit/push the tested
 feature, fast-forward main, clean-build, publish to a new external gh-pages checkout,
