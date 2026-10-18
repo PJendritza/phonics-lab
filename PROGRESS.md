@@ -1,7 +1,7 @@
 # Kalulu-DE status
 
 Updated 2026-10-18 (Europe/Berlin). Read AGENTS.md and recent Git history first.
-Project: https://github.com/PJendritza/Kalulu-DE. Current feature branch: guided-learning.
+Project: https://github.com/PJendritza/Kalulu-DE. Implemented on guided-learning; main now contains the released app and verification.
 
 ## User feedback and new goal
 
@@ -42,7 +42,7 @@ no moving targets, engine, countdown, speed scoring or lost lives.
 - The source remains plain HTML/CSS/modules. Build versions entrypoints, nested
   modules, audio and manifest requests using an app-content hash, so returning
   phone browsers cannot mix old v2 exports with new v3 scripts. Budget <1 MB.
-  Current packaged measurement is approximately 769 KB (52 files), including all
+  The verified clean package is 768,713 bytes (52 files), including all
   audio, adult review, notices, source metadata pointer and checksums.
 
 ## Executed and passed
@@ -96,14 +96,29 @@ Tools: Python 3.12.14, Playwright 1.62.1, Chromium 154.0.8037.57.
 
 ## Release checkpoint
 
-Candidate URL: https://patrickjendritza.com/Kalulu-DE/?v=3.0.0
+Open the released app: https://patrickjendritza.com/Kalulu-DE/?v=3.0.0
 Tones: https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3.0.0
 
-At this source checkpoint, v3 publication is pending. Next: commit/push the tested
-feature, fast-forward main, clean-build, publish to a new external gh-pages checkout,
-verify all HTTPS bytes with scripts/verify_live.py and record exact release commits.
-Do not claim a push alone is a live release. Returning browsers use content-derived
-asset queries; no service worker or new hosting configuration is involved.
+**Publication complete; live version 3.0.0 is verified.**
+
+- Final app source: 953495d67bb96aec34653cf8958c4148267176dd, pushed to
+  guided-learning and main. Main subsequently receives verification-only documentation.
+- Final deployment: 72acbb727dda416255af3dc86868ddc501497808 on gh-pages.
+- Executed clean python3 scripts/build.py, then
+  python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v3-final.
+- Executed python3 scripts/verify_live.py after live BUILD_INFO reported the final
+  source. All **52 HTTPS files / 768,713 bytes** hash-match the browser-tested build,
+  including the new hint fix, content, audio, profiles and versioned module references.
+  Full evidence: docs/verification/2026-10-18/live.json.
+- The earlier expanded v3 source fb117e4 / deployment ca15e4a was also published and
+  HTTPS-verified before the final word-hint correction. The final source supersedes it.
+- Content asset version: 3b581d7042f2. Use the fresh ?v=3.0.0 link above to obtain a
+  new entry page on returning phones; nested scripts/styles/media have their own
+  content-derived queries. No service worker, Pages settings write or new hosting.
+
+The publisher required clean pushed source, passing app-hash-bound browser evidence
+and checksums, then made normal non-force pushes. Live-byte verification is distinct
+from a new physical-phone or cloud-public-browser test; those are not claimed.
 
 The v2 release remains in Git history: source 79621ff92ecf90a44878e7c2e5c4f06849acd57c,
 deployment 06922a634ebf6634c6cc2bc8b8b0c5c6ab8317f2; old results are in the corresponding

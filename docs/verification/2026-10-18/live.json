@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "timeUTC": "2026-10-18T10:25:26.858459+00:00",
+  "timeUTC": "2026-10-18T10:31:30.479429+00:00",
   "base": "https://patrickjendritza.com/Kalulu-DE/",
-  "sourceCommit": "fb117e4425481e2ad4807dd6ec1b713a752089b5",
+  "sourceCommit": "953495d67bb96aec34653cf8958c4148267176dd",
   "files": [
     {
       "file": ".nojekyll",
@@ -13,7 +13,7 @@
     {
       "file": "BUILD_INFO.json",
       "status": 200,
-      "sha256": "20a99c869351ac73a3261f0aa1fc33d53bfd6168af6179eb7203b46165bb15a9",
+      "sha256": "5a5947a6761aee94a63ff0c9ef8b3b968b31968bc2557506d7d3f982563fb039",
       "bytes": 321
     },
     {
@@ -25,13 +25,13 @@
     {
       "file": "SHA256SUMS",
       "status": 200,
-      "sha256": "6ec96521c05a31d664af8b60d4359f234afaf478bb55a994750cb62d7e7de50b",
+      "sha256": "774502bc5fb6e448a2929558d44c25daf392577d7e41ff54c3e56c9d0a6d0047",
       "bytes": 4095
     },
     {
       "file": "about.html",
       "status": 200,
-      "sha256": "5c931f02cdc1e4627dbfb6070695635a231fbb43205444d28e27322962de1e0f",
+      "sha256": "58f740e5028bfc9a099a75a6b9992ddddec5d6120d5ab5af3ac43aad5febe11d",
       "bytes": 5620
     },
     {
@@ -271,7 +271,7 @@
     {
       "file": "audio-review.html",
       "status": 200,
-      "sha256": "0c94a142d3439dfad1db362637d7fd4f5f65fccccdbfe4cc56f87f92258965a5",
+      "sha256": "4c7976b37b34cc34416bb7498d4512505c471fd969464bdbeb09bdb2932e8b86",
       "bytes": 1534
     },
     {
@@ -289,20 +289,20 @@
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "f52103525f65341e02387007712032b8eb2fb1843b53373d326269b27626f629",
+      "sha256": "32f2b3535e1d7abc8650328e67f6d31e3c8615cf31557804e8efecae1d115c2e",
       "bytes": 869
     },
     {
       "file": "learning.mjs",
       "status": 200,
-      "sha256": "dbd39328d287a8bc4e3941c787aeea3fb80dd165d3a06fa891a2ed2d74341409",
+      "sha256": "784a6e4ff260c305ff18e77760ed648b4a482d3088de299912c193894039f611",
       "bytes": 11139
     },
     {
       "file": "main.mjs",
       "status": 200,
-      "sha256": "8c3317dc14904ea2c4f23a98fdc309876bd4102c5bd768ace4ff98ae0cb70bdc",
-      "bytes": 17167
+      "sha256": "855e701011bda8ababa9040b43f2e3b33dd86a17e4fae9a3124aaef70c69eddc",
+      "bytes": 17212
     },
     {
       "file": "review.mjs",
@@ -317,6 +317,6 @@
       "bytes": 10307
     }
   ],
-  "totalBytes": 768668,
+  "totalBytes": 768713,
   "meaning": "All deployed bytes match the locally browser-tested build over certificate-verified HTTPS. Not a real-phone playability test."
 }
