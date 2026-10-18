@@ -1,0 +1,49 @@
+{
+  "german-jellyfish-lesson-1.json": {
+    "noIsolationHeadersNeeded": true,
+    "germanPhonemePreviewHasAudio": true,
+    "allSixLessonMenusReachable": true,
+    "nonzeroGameAudio": true,
+    "originalGermanJellyfishCompleted": {
+      "lesson": 1,
+      "clicks": 8,
+      "log": "06:45:33 [INFO] BaseMinigame: jellyfish won in 72 seconds with progression 8/8 and 5/5 lives"
+    },
+    "lessonAndCompletionPersistAfterReload": true,
+    "emulatedPhoneTouch": {
+      "viewport": "844x390",
+      "taps": 1,
+      "progressGaugeAdvanced": true
+    },
+    "noExternalRequests": true,
+    "noRuntimeErrors": true
+  },
+  "german-frog-lesson-1.json": {
+    "originalFrogStarted": true,
+    "completedOriginalFrog": {
+      "lesson": 1,
+      "clicks": 23,
+      "progression": "5/5",
+      "touch": false,
+      "log": "06:45:58 [INFO] BaseMinigame: frog won in 104 seconds with progression 5/5 and 5/5 lives"
+    },
+    "nonzeroAudio": {
+      "peak": 0.09716279059648514,
+      "samples": 1509
+    },
+    "wordPlaybackTrace": {
+      "words": [],
+      "available": false
+    },
+    "germanDatabaseOpened": true,
+    "noRuntimeErrors": true,
+    "noExternalRequests": true,
+    "returnedToMenu": true
+  },
+  "german-audio-review.json": {
+    "all63UniqueControlsAndLabelsMatchManifest": true,
+    "all63MetadataCanPlayAndCompleteBrowserDecode": true,
+    "nativeControlClickAdvancesPhonemeAndWordPlayback": true,
+    "requestsSuccessfulSameOriginAndNoPageErrors": true
+  }
+}

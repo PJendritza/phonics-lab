@@ -1,0 +1,22 @@
+{
+  "project": "PJendritza/Kalulu-DE German prototype",
+  "source_branch": "main",
+  "source_commit": "1ba1251dc20680c865b049fc53ec0eaf47e98897",
+  "source_dirty": false,
+  "upstream_commit": "51043b23f8e32e72ca79ca914ba3efd6b76b272e",
+  "godot": "4.7.stable",
+  "threads": false,
+  "language": "de_DE",
+  "content_sha256": "3efd4fd1b4271b37126b5f1495b47d6329f1ad3d6305cfc6b9e99914f91ccae1",
+  "pack": {
+    "counts": {
+      "GPs": 13,
+      "Syllables": 25,
+      "Words": 18,
+      "Lessons": 6
+    },
+    "sound_files": 57,
+    "content_sha256": "3efd4fd1b4271b37126b5f1495b47d6329f1ad3d6305cfc6b9e99914f91ccae1",
+    "schema_sha256": "4d47fa501175fc5ed417898c62b78dc9e38239281cb182300b403f956e6c7032"
+  }
+}
