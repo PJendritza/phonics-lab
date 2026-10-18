@@ -14,10 +14,17 @@ selected option's audio rather than only replay the requested target. Correct
 answers retain the current short tune/check, visible progress and automatic advance.
 Details and consonant-audio constraints are in docs/NEXT-VERSION.md.
 
-Documentation-only update on next-version-feedback-notes. No app, audio, storage,
+Additional agreed plan: bundle Andika with its single-storey a and curved-tail l
+(`cv39=1`); increase level question counts by roughly 50% (8→12, 9→14, 10→15,
+12→18). Extra questions should give independent choices after the introductions,
+not lengthen the one-choice introduction phase. Preserve existing pending-level
+goals on resume and extend validation/tests for the new totals when implemented.
+
+Documentation-only updates on next-version-feedback-notes and font-and-length-plan. No app, audio, storage,
 build or deployment changes; v4.0.0 remains the verified live release below.
-Validation: git diff --check. Next development task: implement the two recorded
-changes and verify navigation/resume, selected-option playback and unchanged scoring.
+Validation: git diff --check. Next development task: implement the recorded plan
+and verify font shapes, longer goals, navigation/resume, selected-option playback
+and unchanged mastery rules.
 
 ## Current work: automatic practice, cumulative goals and consonants
 

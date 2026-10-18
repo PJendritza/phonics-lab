@@ -2,6 +2,20 @@
 
 Recorded October 18. Planning notes only; not implemented or deployed.
 
+- [ ] Bundle **Andika**, keeping its default single-storey a and enabling the
+      curved-tail lowercase l with OpenType `cv39=1` (`font-feature-settings:
+      "cv39" 1`). Use the same bundled font across devices for exercise letters,
+      words and blocks. Check l/I/1, a/g and German ä/ö/ü/ß on a phone; retain the
+      font license. Feature reference: https://software.sil.org/andika/features/ .
+- [ ] Make practice levels **approximately 50% longer**: proposed totals 8→12,
+      9→14, 10→15 and 12→18 questions. The user finds that initial one-choice
+      introductions leave too few independent choice questions before completion.
+      Keep introductions brief; allocate the extra questions to independent
+      discrimination/practice rather than repeating more one-choice demonstrations.
+      Preserve accuracy-based adaptation, automatic advance and a clearly filling
+      goal meter. Update total validation/tests, including completed-level counts,
+      while preserving existing profiles and the original goal of already saved
+      unfinished levels. These are question counts, not time limits or speed targets.
 - [ ] Number the exercise stages consistently as **Level 1–14**, retaining their
       descriptive names. Show the current level during an exercise and provide
       easy access to a numbered level selector from the top or bottom navigation.
@@ -22,7 +36,7 @@ Recorded October 18. Planning notes only; not implemented or deployed.
 
 The user reports that the current version works pretty well while testing it on
 their phone and likes the existing feedback. This does not independently certify
-every recording's pronunciation. Next implementation should focus on these two
+every recording's pronunciation. Next implementation should cover these planned
 changes, preserving the current successful feedback and local learner data.
 
 ## Previous interaction update: implemented in v4
