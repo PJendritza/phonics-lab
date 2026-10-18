@@ -1,4 +1,4 @@
-import {STAGES,ITEMS,ENDINGS,AVATARS,stageById,skillKey,lettersFor} from './data.mjs?v=2ffda84dd308';
+import {STAGES,ITEMS,ENDINGS,AVATARS,stageById,skillKey,lettersFor} from './data.mjs?v=3b581d7042f2';
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const integer=(v,max=1e7)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
