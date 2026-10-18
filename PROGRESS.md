@@ -63,8 +63,8 @@ verify the exact Fisch end-sound/wrong-f case, one-choice fallback and pause/rel
 The final full-browser regression passed, including all 65 MP3 decodes, full
 levels, profiles/imports, keyboard, retry and automatic progression. Exact app hash:
 1d1af35b9128081edc001e641ce3f8fa77bf627ecf644e71957eb9d26964c7fb.
-Publication remains pending until all public bytes match the final tested build.
-The tested dirty package is 83 files, 993,426 bytes, still below 1 MB.
+Publication is verified: all 83 public files match the tested package exactly.
+The final clean package is 993,427 bytes, below 1 MB.
 
 Research/diagnosis: several Commons IPA demos explicitly include surrounding
 vowels ([afa]/[asa]/[aha]) and were rejected as direct feedback. Kalulu Look & Learn
@@ -81,11 +81,24 @@ Final reliability corrections cover replay recovery when second-error phoneme
 playback fails and removing assisted highlights when returning to choices/next
 blocks. Dedicated browser regressions exercise both cases.
 
-## Pending release and next useful step
+## Verified release and next useful step
 
-Commit/push clean tested source, build and publish a fresh
-external gh-pages checkout, then run certificate-verified HTTPS hash audit. No
-settings/domain changes. Then user tests the v6 link and the new isolated sounds.
+- App source: 6509d5dae7e561fe80d6bb8b96b10b5a935fb187, pushed to
+  choice-first-sound-feedback and main.
+- Clean python3 scripts/build.py: 83 files, 993,427 bytes, sourceDirty false.
+- python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v6
+  pushed deployment 7eb3d003dbd50a0c5b6abc4e2a7d8d3b8fa569e2 normally to gh-pages.
+- Public BUILD_INFO reports 6.0.0 and source 6509d5d. Executed
+  python3 scripts/verify_live.py: all 83 certificate-verified HTTPS files exactly
+  match the tested package. Evidence: docs/verification/2026-10-18/live.json.
+- Play: https://patrickjendritza.com/phonics-lab/?v=6.0.0
+- Review: https://patrickjendritza.com/phonics-lab/audio-review.html?v=6.0.0
+  Select Einzellaute for the 11 new clips.
+- Subsequent documentation-only commit records publication. Deployed app source
+  remains 6509d5d; no hosting/domain/settings changes or new service.
+
+Next: user tests the v6 link, later-level choice-first flow, two-error support and
+isolated wrong-letter feedback. Listen especially to the new stops/h clips.
 Technical audio checks are not a native-speaker/educator listening approval. No
 physical-phone v6 playback test is claimed. Preserve the approved instruction voice
 (Thorsten High 1.5, added 0.3-second sentence pause) and existing local learners.
