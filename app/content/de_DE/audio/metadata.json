@@ -6,7 +6,7 @@
   "config_sha256": "974adee790533adb273a1ac88f49027d2a1b8f0f2cf4905954a4791e79264e85",
   "engine": "piper-tts==1.4.2",
   "recipe_version": 1,
-  "script_sha256": "f757c25d49f45b6cabd18788584f767fca1dcddf38ba1068fad9fa89d9779496",
+  "script_sha256": "64093ae2a27762770bd0d29dd879ee323dee6366a6874a0c0e54358c4fbf446b",
   "synthetic": true,
   "phonetic_correctness_verified": false,
   "clips": [
@@ -16,7 +16,7 @@
       "text": "a",
       "phonemes": "aː",
       "file": "gp_a_long.wav",
-      "cache_key": "c8dfb857623bf1d09466c8c570ad80b7348f4f38597988cd6c09abafb042fd79",
+      "cache_key": "1a70df05aebd91368846cde6ad01fc16723ee87e08bd76147b23d61cc10c3f77",
       "synthesized_phonemes": [
         "aː"
       ],
@@ -34,7 +34,7 @@
       "text": "a",
       "phonemes": "a",
       "file": "gp_a_short.wav",
-      "cache_key": "96a67936262168b899141d97478eb1702a796446853e402b7194c70bef8e2a5b",
+      "cache_key": "ddb0e602feea1713f58328892a924a7a05793b02a0e20adecd2e535ae5c06bcd",
       "synthesized_phonemes": [
         "a"
       ],
@@ -52,7 +52,7 @@
       "text": "m",
       "phonemes": "m",
       "file": "gp_m.wav",
-      "cache_key": "0c01b593cd9b6cc78112fb9b804f5cce12b7080b9d990882f9459acaecab196f",
+      "cache_key": "b3ee73dd665292c9d88f0de590728650d8d8a1cef8eaa2c2088c31a0c4a71d2a",
       "synthesized_phonemes": [
         "m"
       ],
@@ -70,7 +70,7 @@
       "text": "i",
       "phonemes": "iː",
       "file": "gp_i_long.wav",
-      "cache_key": "564882a24b4ba7bb7a667a0ec3a7deba7444f945d7f5b73fb124b5060c605ace",
+      "cache_key": "ac9acf6b886ce6741f5437bbcfbdf4809b3cf7626fac0a62fd7a1581980373fb",
       "synthesized_phonemes": [
         "iː"
       ],
@@ -88,7 +88,7 @@
       "text": "i",
       "phonemes": "ɪ",
       "file": "gp_i_short.wav",
-      "cache_key": "7c4507910961c347053bbb5098dfc79e93c38132c056aeb0b4484ea9652de7fe",
+      "cache_key": "53023da502ae50d5435ab345571068ef50e7222d4546947bc5d214f639e9764d",
       "synthesized_phonemes": [
         "ɪ"
       ],
@@ -106,7 +106,7 @@
       "text": "i",
       "phonemes": "i",
       "file": "gp_i_unstressed.wav",
-      "cache_key": "5bb3c5fac6c8e6c3cc4fb975957e9a626dece6ab0013f39df5025865299b7a9e",
+      "cache_key": "22539bb1af0e758bb2118d6b4545a20700ac0b8f78cc8230d3b59a4dd3ea193c",
       "synthesized_phonemes": [
         "i"
       ],
@@ -124,7 +124,7 @@
       "text": "o",
       "phonemes": "oː",
       "file": "gp_o_long.wav",
-      "cache_key": "53db92c1fec3ac6de27600b49e539b513510bb943853e454ad8329b396cf4a9b",
+      "cache_key": "557e0ae87e612b4c76ec0a098585343417bf0e8f0065812af32d941460414912",
       "synthesized_phonemes": [
         "oː"
       ],
@@ -142,7 +142,7 @@
       "text": "l",
       "phonemes": "l",
       "file": "gp_l.wav",
-      "cache_key": "d9f3639758337e187875f12a448f8b6681562fb47652de30defe3803fe5097d2",
+      "cache_key": "490ea102f8e09c67a10373f708a96f7052c3fea8c19a0eecf5f82afdbb23f11f",
       "synthesized_phonemes": [
         "l"
       ],
@@ -160,7 +160,7 @@
       "text": "o",
       "phonemes": "o",
       "file": "gp_o_unstressed.wav",
-      "cache_key": "1624190eb8c89093e3cb021f5623c3b21ea670bc5f0eed147d204a78c1e63b5e",
+      "cache_key": "811b4fc60e40b4629ee5373548859886c1162cd460e791d779bd6611b84cf65b",
       "synthesized_phonemes": [
         "o"
       ],
@@ -178,7 +178,7 @@
       "text": "n",
       "phonemes": "n",
       "file": "gp_n.wav",
-      "cache_key": "ad259d1d37c0211c878fd61cc1ac693182a28c1e94409ddc2942bd3573192b95",
+      "cache_key": "1cbfa6674fcdcd92f63778032575ba0612335cac1b7c87ac3781cc7896b37439",
       "synthesized_phonemes": [
         "n"
       ],
@@ -196,7 +196,7 @@
       "text": "u",
       "phonemes": "uː",
       "file": "gp_u_long.wav",
-      "cache_key": "b2385fe8cb0cd28e8cc4e408890584536ee9b8efbcdebee65337d474b25c3676",
+      "cache_key": "7e7b16a734ea50ad0983b9bc1778f4c7b17060c0a2d7d4bdda2968a797c67efc",
       "synthesized_phonemes": [
         "uː"
       ],
@@ -214,7 +214,7 @@
       "text": "u",
       "phonemes": "ʊ",
       "file": "gp_u_short.wav",
-      "cache_key": "4b1688954e83d3e2e46668e1fb7d7a6ac185e3615891c0c279ad7e56e79e3351",
+      "cache_key": "792ea1ada6c493a96ebaba16b9de9495a2b9dd9eaf8bdc97e28776d08452e828",
       "synthesized_phonemes": [
         "ʊ"
       ],
@@ -232,7 +232,7 @@
       "text": "u",
       "phonemes": "u",
       "file": "gp_u_unstressed.wav",
-      "cache_key": "7aa8d7195a3b027a6cf3bf6672401e6f0e73b14cab9960c5fb1ec4c0a8d3d7ac",
+      "cache_key": "315a11015ae39af7be1724a9489d76601bce3800313d59a341537366a27e7250",
       "synthesized_phonemes": [
         "u"
       ],
@@ -250,7 +250,7 @@
       "text": "a",
       "phonemes": "aː",
       "file": "syllable_a.wav",
-      "cache_key": "45df7cd36bc1d2fe1b8db63c1d5174860ac1d59bcc8ca051639beda6045b526b",
+      "cache_key": "b80f4d43684422d912efa967ed063af5a5a3e4b296dc9fd16a6365fcfb151423",
       "synthesized_phonemes": [
         "aː"
       ],
@@ -268,7 +268,7 @@
       "text": "ma",
       "phonemes": "maː",
       "file": "syllable_ma.wav",
-      "cache_key": "05bb72f1198e0d835d82efd4740ae3c0d6bbce89dda558be260d7b4e469438fe",
+      "cache_key": "15f357d0fa8d2b1d7aeea642b271132a5e50894daf4f75ecea03252f68aa1ff8",
       "synthesized_phonemes": [
         "maː"
       ],
@@ -286,7 +286,7 @@
       "text": "am",
       "phonemes": "am",
       "file": "syllable_am.wav",
-      "cache_key": "41183e20dd87114f5382379fc0ec96853b6b7539f487fad1f8d62bfafbcfac06",
+      "cache_key": "b3cda749b356bc387f1fc866befd4bc598bb5f6015bd72232021c6e979634270",
       "synthesized_phonemes": [
         "am"
       ],
@@ -304,7 +304,7 @@
       "text": "am",
       "phonemes": "am",
       "file": "word_am.wav",
-      "cache_key": "77b8870decedd32b8f302a2def94ff44b2a4d4d80275cda2b1814f6d869c82f1",
+      "cache_key": "35c174e19799966a839951f883d0a11afe3f26483cfd347a34cc6932ca5a2d99",
       "synthesized_phonemes": [
         "am"
       ],
@@ -322,7 +322,7 @@
       "text": "i",
       "phonemes": "iː",
       "file": "syllable_i.wav",
-      "cache_key": "55c33c35ad0216ea77d8c4071455ca8301de2eeda8540ff6260ee24fbd904001",
+      "cache_key": "c6c744078f9a7d69a8ae97e3e1cb2e2e4208ccad53ff45d982859c790623d796",
       "synthesized_phonemes": [
         "iː"
       ],
@@ -340,7 +340,7 @@
       "text": "mi",
       "phonemes": "miː",
       "file": "syllable_mi.wav",
-      "cache_key": "be52ed377ea6280f6dbebf0b96bd2d0baefa1d1311f840e53857f345071d900a",
+      "cache_key": "3649d29b998125a45405a4e65c5080500d82d250003260f4be9b04a11b33ec89",
       "synthesized_phonemes": [
         "miː"
       ],
@@ -358,7 +358,7 @@
       "text": "im",
       "phonemes": "ɪm",
       "file": "syllable_im.wav",
-      "cache_key": "ce1dea23782fe516c9cbd96f6a60cff415baa67b9c7dd50f1cbe55b77a7852c6",
+      "cache_key": "c06fed5d16ac43e93b6f9bd5bdc47427cc0652d5610316c73dacf01c8e6251d0",
       "synthesized_phonemes": [
         "ɪm"
       ],
@@ -376,7 +376,7 @@
       "text": "im",
       "phonemes": "ɪm",
       "file": "word_im.wav",
-      "cache_key": "37dce2a7663dc1d2fbd1841d313b2e1bbf5cf6c0973e34ffc11d05cc07b9c5bc",
+      "cache_key": "9ae7126f1140d41971a3aede63d92394bdb5fa6b1ca67011077e65798fefc4da",
       "synthesized_phonemes": [
         "ɪm"
       ],
@@ -394,7 +394,7 @@
       "text": "Mimi",
       "phonemes": "ˈmiːmi",
       "file": "word_mimi.wav",
-      "cache_key": "a3a5a5864c5b4855da0984bb58f98bd3b60dada36d2163ff0eb4c3ba0609c734",
+      "cache_key": "ffa23c70fb5148ea435742092b188cbf1c2bc357b1d473c5dfaf838befe409b0",
       "synthesized_phonemes": [
         "ˈmiːmi"
       ],
@@ -412,7 +412,7 @@
       "text": "o",
       "phonemes": "oː",
       "file": "syllable_o.wav",
-      "cache_key": "c4ca1f6e645093379946b46ebe06ede26eb454bba1a70cf950c11e07b1d3d248",
+      "cache_key": "870e17176a1147269bf99c8b025e2ccb0a33fd7a452c4932753b17f60da75fe6",
       "synthesized_phonemes": [
         "oː"
       ],
@@ -430,7 +430,7 @@
       "text": "mo",
       "phonemes": "moː",
       "file": "syllable_mo.wav",
-      "cache_key": "af2d5dc53eb6181d190e922df3e251c4c33da5955433964a53693fcfa3f79d85",
+      "cache_key": "67b6b62de6676f600f0a2d101dc5b00303fa7a8d3792460e93b6728b12e9d5ba",
       "synthesized_phonemes": [
         "moː"
       ],
@@ -448,7 +448,7 @@
       "text": "Oma",
       "phonemes": "ˈoːma",
       "file": "word_oma.wav",
-      "cache_key": "7d3c57545f6f60af3412f7ea43715e50b920d40670f39e212d3b1b6cbdb9141b",
+      "cache_key": "19a4a5445d72d32a84c673fc9cde72d8740540e0b5a1da56e9c0238f340d7e05",
       "synthesized_phonemes": [
         "ˈoːma"
       ],
@@ -466,7 +466,7 @@
       "text": "Omi",
       "phonemes": "ˈoːmi",
       "file": "word_omi.wav",
-      "cache_key": "31ea393febbf0d83d7f0b6b5caa5f357fb0a21f344ca90d60897b04f87148ed9",
+      "cache_key": "6eb9df07055715926956129e99bd06df212b741df3c1d88a39347ab78e372c61",
       "synthesized_phonemes": [
         "ˈoːmi"
       ],
@@ -484,7 +484,7 @@
       "text": "la",
       "phonemes": "laː",
       "file": "syllable_la.wav",
-      "cache_key": "4f4b12a07b3d730e3e90ff23a940fb90df2cfcae887e3e43263c8021bd38cd15",
+      "cache_key": "2e65c8cebb58187601030c706fe272876683b24770f095697ee2b90e045572a2",
       "synthesized_phonemes": [
         "laː"
       ],
@@ -502,7 +502,7 @@
       "text": "li",
       "phonemes": "liː",
       "file": "syllable_li.wav",
-      "cache_key": "e483ae3ee17662521e53e558ca6933cec228fd639e3afe3fb03dbc3a6bb02d3b",
+      "cache_key": "ff4970644f0d04ae850a3c9141d41e8046ecdd8b4ea1df2438063924bde975ed",
       "synthesized_phonemes": [
         "liː"
       ],
@@ -520,7 +520,7 @@
       "text": "lo",
       "phonemes": "loː",
       "file": "syllable_lo.wav",
-      "cache_key": "2199d242ef9dd9fbc99358e73512f92c5086c0deaa585e684c5a171a3b67e254",
+      "cache_key": "43969288897d7c903241ef1a4ac92db34638b87b7cf30f12c7ca8ed34d6b0105",
       "synthesized_phonemes": [
         "loː"
       ],
@@ -538,7 +538,7 @@
       "text": "al",
       "phonemes": "al",
       "file": "syllable_al.wav",
-      "cache_key": "bd125d45cf1a6c270a0bc2810fee2ab15884fc2c181776dd2f8d2cc1ef64ba76",
+      "cache_key": "625b961d42e02ad3bc7b3fbdce65721e92a2737a39024a33fef03c09642597a1",
       "synthesized_phonemes": [
         "al"
       ],
@@ -556,7 +556,7 @@
       "text": "il",
       "phonemes": "ɪl",
       "file": "syllable_il.wav",
-      "cache_key": "5bcdad155b81d5c949b6cad7fa720589fffc1b4929242422c61858536d95ffd4",
+      "cache_key": "d713e21b07e549b4e0299471302048797a6f7afc30314428f20ec5d1a3a8dfc4",
       "synthesized_phonemes": [
         "ɪl"
       ],
@@ -574,7 +574,7 @@
       "text": "Lama",
       "phonemes": "ˈlaːma",
       "file": "word_lama.wav",
-      "cache_key": "620853523f03a7c2706dc3e735b63188d2898bb7dd1e59b2c55fcd5ea2ca32ce",
+      "cache_key": "5e07a78e193cba863bdf9ddfcbfeee2d9f17186fa6db6f80ca27d7adf2a453a6",
       "synthesized_phonemes": [
         "ˈlaːma"
       ],
@@ -592,7 +592,7 @@
       "text": "lila",
       "phonemes": "ˈliːla",
       "file": "word_lila.wav",
-      "cache_key": "0b5ba06c881286b3b31ca483e4e2065fda54d7b6b982d7ac369fa1be2481398a",
+      "cache_key": "36a2f8268de98e59da7ef56e0764b91307b6fa8952a11882666d9f599a9b33ff",
       "synthesized_phonemes": [
         "ˈliːla"
       ],
@@ -610,7 +610,7 @@
       "text": "Limo",
       "phonemes": "ˈliːmo",
       "file": "word_limo.wav",
-      "cache_key": "506cccbf8e44358da0e0818a30e13bb30437b54ceb407188e2ec5ebc52f9b364",
+      "cache_key": "2e627df2e434a27f968196e0d618f3f073cd690b6aa03e4829c5006a869f9ef6",
       "synthesized_phonemes": [
         "ˈliːmo"
       ],
@@ -628,7 +628,7 @@
       "text": "Mal",
       "phonemes": "maːl",
       "file": "word_mal.wav",
-      "cache_key": "f2f015da408a574d7b7b84f87f5906dd826c1f9c55ab78ac2e07f3aad101c4f0",
+      "cache_key": "bccce0e5ce206a15b0f3bef99e198e3940b486262001fbb4c08ca5ac64247afd",
       "synthesized_phonemes": [
         "maːl"
       ],
@@ -646,7 +646,7 @@
       "text": "na",
       "phonemes": "naː",
       "file": "syllable_na.wav",
-      "cache_key": "d31436760bc0ac8724248606628016dbbc2ce543968fdcf8419303217657ec10",
+      "cache_key": "65268dccffe6681c8f16d41b2285391574d73d625e5f19510bb5e977d95a73ec",
       "synthesized_phonemes": [
         "naː"
       ],
@@ -664,7 +664,7 @@
       "text": "ni",
       "phonemes": "niː",
       "file": "syllable_ni.wav",
-      "cache_key": "3a75afc9a0032fdb4b188de770e72e3029424bbbdf178adb1e703bbd37a55675",
+      "cache_key": "5e1869324188331d88f2423de8a998d8d236cc6e9ff42ce2010b1c04fca9b149",
       "synthesized_phonemes": [
         "niː"
       ],
@@ -682,7 +682,7 @@
       "text": "no",
       "phonemes": "noː",
       "file": "syllable_no.wav",
-      "cache_key": "798a1a1f0ad2c135c808dd38aef5c1b718dbbb05754d7456a32615a57f484772",
+      "cache_key": "099c97473999ab50c7f4170732a27ce38f0b798a69beed84ac96a986c893b3c3",
       "synthesized_phonemes": [
         "noː"
       ],
@@ -700,7 +700,7 @@
       "text": "an",
       "phonemes": "an",
       "file": "syllable_an.wav",
-      "cache_key": "bb288477e11a90c6aeacf91fa4fb625690d16ea24590fdf506b2bb072db0f8a9",
+      "cache_key": "6ed2b66b07e72fd218ea75148d9590bb1257e0d7850291d497190a1352c623c3",
       "synthesized_phonemes": [
         "an"
       ],
@@ -718,7 +718,7 @@
       "text": "in",
       "phonemes": "ɪn",
       "file": "syllable_in.wav",
-      "cache_key": "b403b326e33beabf8633f2f0ea287e430fe6915fac46e69ebc24cd0c0b9172cc",
+      "cache_key": "56d31673c73086ca88e781f34e0ad08adaadc29225c40bf0fdbe731f1463b015",
       "synthesized_phonemes": [
         "ɪn"
       ],
@@ -736,7 +736,7 @@
       "text": "man",
       "phonemes": "man",
       "file": "syllable_man.wav",
-      "cache_key": "8acc47575ae9d31b47fbdef04cd4961f8d7bab2511b1ff37177bc24dde9ffe6a",
+      "cache_key": "b783f1b412960c1acd825523a4bb05fc96483c8b3a5954d5a588370046a369bf",
       "synthesized_phonemes": [
         "man"
       ],
@@ -754,7 +754,7 @@
       "text": "an",
       "phonemes": "an",
       "file": "word_an.wav",
-      "cache_key": "b86d9bdb932b9218d7ce80c317261fac4c666f7bad64b3846fb9ab4e7897afa3",
+      "cache_key": "58d2c585a18fe57daa04ae62df55d53c09c4b341a269eee680e26c54ee43aea1",
       "synthesized_phonemes": [
         "an"
       ],
@@ -772,7 +772,7 @@
       "text": "in",
       "phonemes": "ɪn",
       "file": "word_in.wav",
-      "cache_key": "9bd36e7aab98b13f024fabe46cd2a1e91cff3c530cab7c6d7f537cf85ecf86b6",
+      "cache_key": "e4dd842a8e20d2b2cbfbbc1fdf7b2df1a889a2a7c36e87380872a2ea707a4eb5",
       "synthesized_phonemes": [
         "ɪn"
       ],
@@ -790,7 +790,7 @@
       "text": "man",
       "phonemes": "man",
       "file": "word_man.wav",
-      "cache_key": "82d3ab70cb165e50da657f17ce1757ab7f450a15856fa716255c3947dd09ef11",
+      "cache_key": "6278456482734854bf160ad7a67684b35d8902e733b1387f5a0942d95d361cce",
       "synthesized_phonemes": [
         "man"
       ],
@@ -808,7 +808,7 @@
       "text": "Lina",
       "phonemes": "ˈliːna",
       "file": "word_lina.wav",
-      "cache_key": "1d0225f8d682fec68f0a5ce11256f92bf1ff4b4d86e364a8a608f4f7c9a9f1d6",
+      "cache_key": "51340e13b93596b4895af7258dd8540527d6c06701a55751a2f9756a8f663a1c",
       "synthesized_phonemes": [
         "ˈliːna"
       ],
@@ -826,7 +826,7 @@
       "text": "Nina",
       "phonemes": "ˈniːna",
       "file": "word_nina.wav",
-      "cache_key": "8f416c2815dfc8385e1b894d70ae8681e37345a7e6ccde03df4f01f9367d288d",
+      "cache_key": "d4251cae21cd19b5ef6e25a89465219fe22015c8c766d815823c5edd284e9adc",
       "synthesized_phonemes": [
         "ˈniːna"
       ],
@@ -844,7 +844,7 @@
       "text": "u",
       "phonemes": "uː",
       "file": "syllable_u.wav",
-      "cache_key": "c7e8aebb6603d8274a41e7d863ec78e1395ae1a7c93e0bc6327c1dd10efc4b62",
+      "cache_key": "193916d11bb1ed7906377c20b4e2c38948338e7e16e823686c9264c5f55c50db",
       "synthesized_phonemes": [
         "uː"
       ],
@@ -862,7 +862,7 @@
       "text": "mu",
       "phonemes": "muː",
       "file": "syllable_mu.wav",
-      "cache_key": "1e4e638704dbfec2ca45c471134e93b814009c7dfb22e723a62fd73ccfa26e3f",
+      "cache_key": "124539c0f71d61534b20c5a2792ddd9fd801a42a8d9d8fafa288bffc61b2d8e1",
       "synthesized_phonemes": [
         "muː"
       ],
@@ -880,7 +880,7 @@
       "text": "lu",
       "phonemes": "luː",
       "file": "syllable_lu.wav",
-      "cache_key": "111f3b07b0f99aaad800bf99c7bb6ff99ae50ea9e150c6999983c28c13a7e9a7",
+      "cache_key": "1ee11cefb67b8aacceaba0316d6676e7098005c5560b42d396c178967a141628",
       "synthesized_phonemes": [
         "luː"
       ],
@@ -898,7 +898,7 @@
       "text": "nu",
       "phonemes": "nuː",
       "file": "syllable_nu.wav",
-      "cache_key": "8cc891fa7ed6c60b9228269f1aff05bf6894f80f0a91845b37e989f16a51400f",
+      "cache_key": "bc1773858b8e4e0b4af41c20dcf5521c87429d29095aa763a3dacc35a7e77a75",
       "synthesized_phonemes": [
         "nuː"
       ],
@@ -916,7 +916,7 @@
       "text": "um",
       "phonemes": "ʊm",
       "file": "syllable_um.wav",
-      "cache_key": "cf6e79ebfccb7128a53094f1af7e740856616d52710e6dd455448a7e3f09c511",
+      "cache_key": "cd79d8a55fa3950f97488597261f1af134592b631112e2e3018c5f6385c2952b",
       "synthesized_phonemes": [
         "ʊm"
       ],
@@ -934,7 +934,7 @@
       "text": "un",
       "phonemes": "ʊn",
       "file": "syllable_un.wav",
-      "cache_key": "868af45c29bada377f154bfecce7f55e8362e4cb2bcf5f9c160e27d5fd719676",
+      "cache_key": "ce7808fd451ea6247f006ce041e6e001f5016008f252b0688c8aee9d9a52de60",
       "synthesized_phonemes": [
         "ʊn"
       ],
@@ -952,7 +952,7 @@
       "text": "um",
       "phonemes": "ʊm",
       "file": "word_um.wav",
-      "cache_key": "eb7c4a9b529474e32b387a927aef5f0b0b9779f932d62fcbf859f587bf6df807",
+      "cache_key": "bb1dcc4b436c60ab46e28145350a892ca29892a67d4dc3083267a3aefa757998",
       "synthesized_phonemes": [
         "ʊm"
       ],
@@ -970,7 +970,7 @@
       "text": "nun",
       "phonemes": "nuːn",
       "file": "word_nun.wav",
-      "cache_key": "78bbee6f73d11c9d32b40026fbf5a05b5cb447a3c393517b89aa3a449d6e5e1d",
+      "cache_key": "c1516e0c5d9fbe6d00ece03cf6b98804a2f38124d94faf95895a66dc89482890",
       "synthesized_phonemes": [
         "nuːn"
       ],
@@ -988,7 +988,7 @@
       "text": "Uni",
       "phonemes": "ˈʊni",
       "file": "word_uni.wav",
-      "cache_key": "be3d88140782a8aea8ffa2e6df47235582647b634006079db58459300fbc944f",
+      "cache_key": "4f2bbb9d7330a808bc3631fdd790560dea381377211873e62450a03b132081da",
       "synthesized_phonemes": [
         "ˈʊni"
       ],
@@ -1006,7 +1006,7 @@
       "text": "Alu",
       "phonemes": "ˈaːlu",
       "file": "word_alu.wav",
-      "cache_key": "a8c62fe05cfff377825fa17c2d6d7230df47298ef187727cfd1eeebb66809fcd",
+      "cache_key": "a2fa45332616ee71d358fb5c87cff83fb54076d3cf1b0f4bcd9038db23a63060",
       "synthesized_phonemes": [
         "ˈaːlu"
       ],
@@ -1023,7 +1023,7 @@
       "text": "Hör genau hin. Tippe auf die Qualle mit dem passenden Buchstaben oder der passenden Silbe.",
       "kind": "instruction",
       "file": "jellyfish_intro.wav",
-      "cache_key": "d04cae1402961fa9e2afb0a52f7d71ebe721eea2372621eb868ccb2f441076c0",
+      "cache_key": "b8b79586199ae89c06ac3685997e063beb6b127b657183e5ac481928f3d984ff",
       "synthesized_phonemes": [
         "hˈøːɾ ɡənˈaʊ hˈɪn.",
         "tˈɪpə aʊf diː kvˈalə mɪt deːm pˈasəndən bˈuːxʃtɑːbən ˌoːdɜ dɛɾ pˈasəndən zˈɪlbə."
@@ -1041,7 +1041,7 @@
       "text": "Hör noch einmal hin. Welche Qualle passt zu dem Laut oder der Silbe?",
       "kind": "instruction",
       "file": "jellyfish_help.wav",
-      "cache_key": "1bb813512e58c6bb652cda3b77df5f3e060fd690782556f9c52200ca4cc4e9d2",
+      "cache_key": "b772ccb328fdfe30dbad407374b5f36834a08fec40b2856c0e8b7db811358561",
       "synthesized_phonemes": [
         "hˈøːɾ nɔx ˈaɪnmˌɑːl hˈɪn.",
         "vˈɛlçə kvˈalə pˈast tsuː deːm lˈaʊt ˌoːdɜ dɛɾ zˈɪlbə?"
@@ -1059,7 +1059,7 @@
       "text": "Gut gemacht! Du hast die passenden Buchstaben und Silben gefunden.",
       "kind": "instruction",
       "file": "jellyfish_end.wav",
-      "cache_key": "aeeaa3726f6a3bd67f284972cf2452793dc3e0a072232d18e5334d5e4dfb21fc",
+      "cache_key": "59dfa3a6808f8ba883986a3cdba1689535ea9980e7d096feb39283982231dacf",
       "synthesized_phonemes": [
         "ɡˈuːt ɡəmˈaxt!",
         "duː hast diː pˈasəndən bˈuːxʃtɑːbən ʊnt zˈɪlbən ɡəfˈʊndən."
@@ -1077,7 +1077,7 @@
       "text": "Hör dir das Wort an. Tippe nacheinander auf die passenden Buchstaben. So hilfst du dem Frosch über den Fluss.",
       "kind": "instruction",
       "file": "frog_intro.wav",
-      "cache_key": "8f8ac3b3af3de28057ca9b55ce9d4a749e93ef34c1466ae027b7bd9a011c56d4",
+      "cache_key": "03a1ab2fe00d0c9d8d250d6d3f80a7afbb7376b7fb3a198bde526ba3a4dbf03b",
       "synthesized_phonemes": [
         "hˈøːɾ diːɾ das vˈɔɾt ˈan.",
         "tˈɪpə nˈaxaɪnˌandɜ aʊf diː pˈasəndən bˈuːxʃtɑːbən.",
@@ -1096,7 +1096,7 @@
       "text": "Hör noch einmal genau hin. Welcher Buchstabe kommt als Nächstes? Tippe auf das passende Blatt.",
       "kind": "instruction",
       "file": "frog_help.wav",
-      "cache_key": "eab08268c688cbcb9382a88252f9865ee7824fdbff837075ac6bb9660495002f",
+      "cache_key": "3d430764408573ffd1b78e1edf893741265df6926bdfee40778302d3e9406239",
       "synthesized_phonemes": [
         "hˈøːɾ nɔx ˈaɪnmˌɑːl ɡənˈaʊ hˈɪn.",
         "vˈɛlçɜ bˈuːxʃtɑːbə kˈɔmt als nˈɛçstəs?",
@@ -1115,7 +1115,7 @@
       "text": "Gut gemacht! Du hast die Wörter gelesen und dem Frosch geholfen.",
       "kind": "instruction",
       "file": "frog_end.wav",
-      "cache_key": "aa924d232a93cf8ce8855b11d54fee841366bb852645dc481536a28e065d56e1",
+      "cache_key": "76bfdd5b4bd530c3b8ae2451a37538e967ee38a6374d5dfee9627cd9301c88ac",
       "synthesized_phonemes": [
         "ɡˈuːt ɡəmˈaxt!",
         "duː hast diː vˈœɾtɜ ɡəlˈeːzən ʊnt deːm frˈɔʃ ɡəhˈɔlfən."
@@ -1133,7 +1133,7 @@
       "text": "Versuche es noch einmal. Du schaffst das.",
       "kind": "instruction",
       "file": "minigame_lose.wav",
-      "cache_key": "ac283bb709280d2fe4c182fd44c004831c3e7d47e63736bac4b961f39f120bab",
+      "cache_key": "b76a29ed2117365453348cb22f156708d5636728269a5842dabf07afd3bf49d9",
       "synthesized_phonemes": [
         "fɛɾzˈuːxə ɛs nɔx ˈaɪnmˌɑːl.",
         "duː ʃˈafst das."

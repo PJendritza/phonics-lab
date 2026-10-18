@@ -23,7 +23,7 @@ def encoded(text):
 
 
 def verified_audio_clips(audio_dir=None):
-    audio_dir = Path(audio_dir) if audio_dir else REPO/'german/audio'
+    audio_dir = Path(audio_dir) if audio_dir else REPO/'app/content/de_DE/audio'
     clips = json.loads((audio_dir/'manifest.json').read_text())['clips']
     metadata = json.loads((audio_dir/'metadata.json').read_text())
     by_id = {c['id']: c for c in metadata['clips']}
@@ -75,7 +75,7 @@ def validate(content):
 
 
 def build(output, schema):
-    content = json.loads((REPO/'german/content.json').read_text())
+    content = json.loads((REPO/'app/content/de_DE/content.json').read_text())
     gps = validate(content)
     output.mkdir(parents=True, exist_ok=True)
     path = output/'language.db'
@@ -129,13 +129,13 @@ def build(output, schema):
         if clip['kind'] == 'instruction':
             add('kalulu/'+clip['id'], clip)
     for name, clip in assets.items():
-        wav = REPO/'german/audio'/f"{clip['id']}.wav"
+        wav = REPO/'app/content/de_DE/audio'/f"{clip['id']}.wav"
         assert wav.is_file(), f'Missing generated draft clip {wav}'
         target = output/name
         target.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', str(wav), '-codec:a', 'libmp3lame', '-b:a', '64k', '-ar', '22050', '-ac', '1', str(target)], check=True)
         assert target.stat().st_size > 1000, name
-    summary = {'counts': counts, 'sound_files': len(assets), 'content_sha256': hashlib.sha256((REPO/'german/content.json').read_bytes()).hexdigest(),
+    summary = {'counts': counts, 'sound_files': len(assets), 'content_sha256': hashlib.sha256((REPO/'app/content/de_DE/content.json').read_bytes()).hexdigest(),
                'schema_sha256': hashlib.sha256(schema.read_bytes()).hexdigest()}
     (output/'PACK_INFO.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps(summary, ensure_ascii=False))

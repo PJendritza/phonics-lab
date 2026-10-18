@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 source_root=${KALULU_WORKSPACE:-/workspace/kalulu-feasibility}
-root=${KALULU_GERMAN_WORKSPACE:-/workspace/kalulu-german-demo}
+root=${KALULU_GERMAN_WORKSPACE:-/workspace/kalulu-de-build}
 repo=$(cd "$(dirname "$0")/.." && pwd)
 mkdir -p "$root/logs" "$root/web"
 python3 "$repo/scripts/build_german_demo.py"

@@ -14,10 +14,10 @@ Keep the virtual environment and 60 MiB voice model outside Git:
 
 ```bash
 python3 -m venv /workspace/kalulu-tools/tts
-/workspace/kalulu-tools/tts/bin/python -m pip install -r german/audio/requirements-generation.txt
+/workspace/kalulu-tools/tts/bin/python -m pip install -r app/content/de_DE/audio/requirements-generation.txt
 /workspace/kalulu-tools/tts/bin/python scripts/generate_german_audio.py \
-  --manifest german/audio/manifest.json \
-  --output-dir german/audio \
+  --manifest app/content/de_DE/audio/manifest.json \
+  --output-dir app/content/de_DE/audio \
   --cache-dir /workspace/kalulu-tools/tts-models
 ```
 
@@ -71,7 +71,7 @@ Regeneration after recipe edits is intentional. `--force` bypasses the cache.
 
 ```bash
 /workspace/kalulu-tools/tts/bin/python scripts/generate_german_audio.py \
-  --manifest german/audio/manifest.json --output-dir german/audio --validate-only
+  --manifest app/content/de_DE/audio/manifest.json --output-dir app/content/de_DE/audio --validate-only
 ```
 
 Every clip is checked with `ffprobe` for PCM encoding, 22,050 Hz, mono and duration;

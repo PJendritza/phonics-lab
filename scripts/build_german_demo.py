@@ -9,7 +9,7 @@ from build_german_pack import build
 
 repo = Path(__file__).resolve().parent.parent
 source = Path(os.environ.get('KALULU_WORKSPACE', '/workspace/kalulu-feasibility'))
-root = Path(os.environ.get('KALULU_GERMAN_WORKSPACE', '/workspace/kalulu-german-demo'))
+root = Path(os.environ.get('KALULU_GERMAN_WORKSPACE', '/workspace/kalulu-de-build'))
 app = root/'frontend'
 if not app.exists():
     assert not subprocess.check_output(['git', '-C', str(source/'frontend'), 'status', '--porcelain']).strip()
@@ -37,8 +37,8 @@ base = base.replace('func _go_back_to_the_garden() -> void:', '''func _go_back_t
 utils = original('sources/utils/autoloads/utils.gd')
 utils = utils.replace('const SUPPORTED_LOCALES: Dictionary[String, String] = {', 'const SUPPORTED_LOCALES: Dictionary[String, String] = {\n\t"de_DE": "Deutsch (Prototyp)",')
 (app/'sources/utils/autoloads/utils.gd').write_text(utils)
-shutil.copytree(repo/'german/demo', app/'demo', dirs_exist_ok=True)
-shutil.copyfile(repo/'german/content.json', app/'demo/content.json')
+shutil.copytree(repo/'app/godot', app/'demo', dirs_exist_ok=True)
+shutil.copyfile(repo/'app/content/de_DE/content.json', app/'demo/content.json')
 build(root/'language/de_DE', source/'languages/schema/v1.sql')
 pack = app/'demo/pack'
 if pack.exists():
@@ -56,20 +56,5 @@ for imported in (app/'assets').rglob('*.import'):
     text = imported.read_text()
     if 'compress/mode=2' in text:
         imported.write_text(text.replace('compress/mode=2', 'compress/mode=0'))
-(app/'export_presets.cfg').write_text('''[preset.0]
-name="German Prototype"
-platform="Web"
-export_filter="all_resources"
-include_filter="demo/pack/*.bin,demo/pack/*.json,demo/content.json"
-exclude_filter="tests/*,tools/*,addons/gut/*,demo/audit.gd"
-export_path=""
-
-[preset.0.options]
-variant/extensions_support=true
-variant/thread_support=false
-vram_texture_compression/for_desktop=true
-vram_texture_compression/for_mobile=true
-html/canvas_resize_policy=2
-progressive_web_app/enabled=false
-''')
+shutil.copyfile(repo/'deployment/godot-web-export.cfg', app/'export_presets.cfg')
 print('Prepared German prototype:', app)

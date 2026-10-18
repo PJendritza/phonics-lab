@@ -25,7 +25,7 @@ class CurrentAudioCollectionTests(unittest.TestCase):
         clips = BUILDER.verified_audio_clips()
         self.assertEqual(len(clips), 63)
         self.assertEqual(len({clip['id'] for clip in clips}), 63)
-        expected = json.loads((REPO / 'german/audio/manifest.json').read_text(encoding='utf-8'))['clips']
+        expected = json.loads((REPO / 'app/content/de_DE/audio/manifest.json').read_text(encoding='utf-8'))['clips']
         self.assertEqual(clips, expected)
         for kind, count in [('gp', 13), ('syllable', 25), ('word', 18), ('instruction', 7)]:
             self.assertEqual(sum(clip['kind'] == kind for clip in clips), count)

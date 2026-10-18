@@ -13,13 +13,13 @@ from build_german_pack import verified_audio_clips
 
 repo = Path(__file__).resolve().parent.parent
 source = Path(os.environ.get('KALULU_WORKSPACE', '/workspace/kalulu-feasibility'))
-root = Path(os.environ.get('KALULU_GERMAN_WORKSPACE', '/workspace/kalulu-german-demo'))
+root = Path(os.environ.get('KALULU_GERMAN_WORKSPACE', '/workspace/kalulu-de-build'))
 web = root/'web'
-shutil.copyfile(repo/'german/index.html', web/'index.html')
-shutil.copyfile(repo/'german/README.md', web/'CONTENT-NOTES.md')
-shutil.copyfile(repo/'german/AUDIO.md', web/'AUDIO-NOTES.md')
-shutil.copyfile(repo/'german/AUDIO.md', web/'AUDIO.md')
-shutil.copyfile(repo/'german/RUNNING.md', web/'README.md')
+shutil.copyfile(repo/'deployment/site/index.html', web/'index.html')
+shutil.copyfile(repo/'docs/CURRICULUM.md', web/'CONTENT-NOTES.md')
+shutil.copyfile(repo/'docs/AUDIO.md', web/'AUDIO-NOTES.md')
+shutil.copyfile(repo/'docs/AUDIO.md', web/'AUDIO.md')
+shutil.copyfile(repo/'docs/RUNNING.md', web/'README.md')
 shutil.copyfile(repo/'LICENSE', web/'LICENSE')
 (web/'.nojekyll').touch()
 play = web/'play.html'
@@ -37,7 +37,7 @@ Language-pack schema:
 https://github.com/Excello-Recherche-Education/Kalulu-Languages
 Commit: bb0f71766c5e27fdb775e544ffe62ca98e6a615c
 
-Changes by the PJendritza/tmp adaptation project, 2026:
+Changes by the PJendritza/Kalulu-DE adaptation project, 2026:
 six draft German lessons, synthetic German speech, local offline entry/menu,
 return to demo menu, web export settings, lossless texture import configuration,
 landing/audio-review pages, source packaging and test/build helpers.
@@ -56,9 +56,9 @@ for label, path in [('Application license', source/'frontend/LICENSE'), ('SQLite
 for path in (source/'frontend/addons').rglob('*'):
     if path.is_file() and ('license' in path.name.lower() or 'copying' in path.name.lower()) and path != source/'frontend/addons/godot-sqlite/LICENSE.md':
         notices += '\n'+str(path.relative_to(source/'frontend'))+'\n'+path.read_text(errors='replace')+'\n'
-for path in (repo/'demo/licenses').glob('*.txt'):
+for path in (repo/'deployment/licenses').glob('*.txt'):
     notices += '\n'+path.name+'\n'+path.read_text()+'\n'
-notices += '\nGerman draft audio provenance\n'+(repo/'german/AUDIO.md').read_text()
+notices += '\nGerman draft audio provenance\n'+(repo/'docs/AUDIO.md').read_text()
 (web/'THIRD_PARTY.txt').write_text(notices)
 clips = verified_audio_clips()
 review = web/'review-audio'
@@ -66,7 +66,7 @@ review.mkdir(exist_ok=True)
 rows = []
 for clip in clips:
     name = clip['id']+'.wav'
-    shutil.copyfile(repo/'german/audio'/name, review/name)
+    shutil.copyfile(repo/'app/content/de_DE/audio'/name, review/name)
     text = html.escape(clip['text'])
     pronunciation = html.escape(clip.get('phonemes', 'gesprochene Anleitung'))
     rows.append(f'<tr><td>{text}<small>{html.escape(clip["id"])}</small></td><td>/{pronunciation}/</td><td><audio controls preload="none" src="review-audio/{name}"></audio></td></tr>')
@@ -75,22 +75,22 @@ for clip in clips:
 <h1>Aussprache prüfen</h1><p>Alle Clips sind synthetische Entwürfe. Bitte insbesondere lange/kurze Vokale, Wortakzent und Konsonanten ohne angehängtes „e“ prüfen. Die technische Prüfung ersetzt kein Zuhören.</p>
 <p>Namen haben eine vereinbarte Aussprache. Übungssilben sind teilweise keine Wörter. <a href="CONTENT-NOTES.md">Details</a> · <a href="index.html">Zur Demo</a></p><table>'''+''.join(rows)+'</table></html>')
 info = {
-    'project': 'PJendritza/tmp German prototype',
+    'project': 'PJendritza/Kalulu-DE German prototype',
     'source_branch': subprocess.check_output(['git','-C',str(repo),'branch','--show-current']).decode().strip(),
     'source_commit': subprocess.check_output(['git','-C',str(repo),'rev-parse','HEAD']).decode().strip(),
     'source_dirty': bool(subprocess.check_output(['git','-C',str(repo),'status','--porcelain']).strip()),
     'upstream_commit': '51043b23f8e32e72ca79ca914ba3efd6b76b272e',
     'godot': '4.7.stable', 'threads': False, 'language': 'de_DE',
-    'content_sha256': hashlib.sha256((repo/'german/content.json').read_bytes()).hexdigest(),
+    'content_sha256': hashlib.sha256((repo/'app/content/de_DE/content.json').read_bytes()).hexdigest(),
     'pack': json.loads((root/'language/de_DE/PACK_INFO.json').read_text()),
 }
 (web/'BUILD_INFO.json').write_text(json.dumps(info, indent=2)+'\n')
 with zipfile.ZipFile(web/'demo-source.zip', 'w', zipfile.ZIP_DEFLATED) as output:
-    for directory in ['german', 'demo/licenses', 'scripts', 'tests']:
+    for directory in ['app', 'deployment', 'scripts', 'tests', 'docs', 'archive']:
         for path in (repo/directory).rglob('*'):
             if path.is_file() and '__pycache__' not in path.parts:
                 output.write(path, path.relative_to(repo))
-    for name in ['AGENTS.md', 'PROGRESS.md', 'LICENSE']:
+    for name in ['AGENTS.md', 'PROGRESS.md', 'README.md', 'LICENSE']:
         output.write(repo/name, name)
     output.writestr('SOURCE-NOTES.txt', notices)
 for path in web.rglob('*'):

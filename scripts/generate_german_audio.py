@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate reviewable German prototype WAVs with a pinned offline Piper voice.
 
-Run using the dedicated environment described in german/AUDIO.md. The manifest is
+Run using the dedicated environment described in docs/AUDIO.md. The manifest is
 {version: 1, clips: [{id, text, kind, phonemes?}]}; phonemes is an explicit IPA-like
 sequence understood by Piper, never a spelling interpreted as a letter name.
 """
@@ -149,7 +149,7 @@ def synthesize(voice, clip: dict, path: Path) -> list[str]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--output-dir", type=Path, default=Path("german/audio"))
+    parser.add_argument("--output-dir", type=Path, default=Path("app/content/de_DE/audio"))
     parser.add_argument("--cache-dir", type=Path, default=Path("/workspace/kalulu-tools/tts-models"))
     parser.add_argument("--validate-only", action="store_true", help="Validate clips and metadata without Piper/model/download")
     parser.add_argument("--force", action="store_true", help="Regenerate clips instead of reusing verified hash cache")
@@ -163,7 +163,7 @@ def main() -> None:
     voice = None
     if not args.validate_only:
         if importlib.metadata.version("piper-tts") != PIPER_VERSION:
-            raise ValueError(f"Install piper-tts=={PIPER_VERSION}; see german/AUDIO.md")
+            raise ValueError(f"Install piper-tts=={PIPER_VERSION}; see docs/AUDIO.md")
         from piper import PiperVoice
         model = args.cache_dir / f"{VOICE}.onnx"
         ensure_asset(model, MODEL_SHA256)

@@ -22,7 +22,7 @@ REPO = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location('build_german_pack', REPO / 'scripts/build_german_pack.py')
 BUILDER = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(BUILDER)
-CONTENT = json.loads((REPO / 'german/content.json').read_text(encoding='utf-8'))
+CONTENT = json.loads((REPO / 'app/content/de_DE/content.json').read_text(encoding='utf-8'))
 SCHEMA = Path(os.environ.get('KALULU_LANGUAGE_SCHEMA', '/workspace/kalulu-feasibility/languages/schema/v1.sql'))
 FRONTEND = Path(os.environ.get('KALULU_FRONTEND', '/workspace/kalulu-feasibility/frontend'))
 

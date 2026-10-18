@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const {execFileSync} = require('child_process');
 const assert = require('assert/strict');
-const root = process.env.KALULU_GERMAN_WORKSPACE || '/workspace/kalulu-german-demo';
+const root = process.env.KALULU_GERMAN_WORKSPACE || '/workspace/kalulu-de-build';
 const base = process.env.KALULU_GERMAN_URL || 'http://127.0.0.1:8061/';
 const lesson = Number(process.env.KALULU_GERMAN_LESSON || 1);
 assert.ok(Number.isInteger(lesson) && lesson >= 1 && lesson <= 6);

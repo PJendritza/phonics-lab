@@ -3,10 +3,10 @@ const {chromium} = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert/strict');
-const root = process.env.KALULU_GERMAN_WORKSPACE || '/workspace/kalulu-german-demo';
+const root = process.env.KALULU_GERMAN_WORKSPACE || '/workspace/kalulu-de-build';
 const base = process.env.KALULU_GERMAN_URL || 'http://127.0.0.1:8061/';
 const pageUrl = new URL('audio-review.html', base).href;
-const clips = JSON.parse(fs.readFileSync(path.join(__dirname, '../german/audio/manifest.json'), 'utf8')).clips;
+const clips = JSON.parse(fs.readFileSync(path.join(__dirname, '../../app/content/de_DE/audio/manifest.json'), 'utf8')).clips;
 const result = {url: pageUrl, checks: {}, audio: [], playback: [], requests: [], pageErrors: [], consoleErrors: [],
   limitations: ['Headless Chromium with local HTTP hosting; no physical phone or Safari tested.',
     'Audio decoding and playback time do not establish pronunciation, comprehension, or human-perceived sound quality.']};

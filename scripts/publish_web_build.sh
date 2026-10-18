@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Store a tested static build in Git. This does not enable any website hosting.
 set -euo pipefail
-root=${KALULU_GERMAN_WORKSPACE:-/workspace/kalulu-german-demo}
+root=${KALULU_GERMAN_WORKSPACE:-/workspace/kalulu-de-build}
 repo=$(cd "$(dirname "$0")/.." && pwd)
 test -z "$(git -C "$repo" status --porcelain)" || { echo 'Commit source changes before packaging the reproducible artifact.' >&2; exit 1; }
 python3 - "$root" <<'PY'
@@ -28,17 +28,17 @@ PY
 python3 "$repo/scripts/package_german_demo.py"
 deploy="$root/publish-german"
 if [ ! -d "$deploy" ]; then
-  git init -b kalulu-german-build "$deploy"
-  git -C "$deploy" remote add origin https://github.com/PJendritza/tmp.git
-  if git -C "$deploy" ls-remote --exit-code origin refs/heads/kalulu-german-build >/dev/null; then
-    git -C "$deploy" fetch origin kalulu-german-build
-    git -C "$deploy" checkout -B kalulu-german-build FETCH_HEAD
+  git init -b gh-pages "$deploy"
+  git -C "$deploy" remote add origin https://github.com/PJendritza/Kalulu-DE.git
+  if git -C "$deploy" ls-remote --exit-code origin refs/heads/gh-pages >/dev/null; then
+    git -C "$deploy" fetch origin gh-pages
+    git -C "$deploy" checkout -B gh-pages FETCH_HEAD
   fi
 else
   test -d "$deploy/.git"
-  test "$(git -C "$deploy" branch --show-current)" = kalulu-german-build
+  test "$(git -C "$deploy" branch --show-current)" = gh-pages
   test -z "$(git -C "$deploy" status --porcelain)" || { echo 'Preserve artifact checkout changes before continuing.' >&2; exit 1; }
-  git -C "$deploy" pull --ff-only origin kalulu-german-build
+  git -C "$deploy" pull --ff-only origin gh-pages
 fi
 python3 - "$root" "$deploy" <<'PY'
 import hashlib,json,pathlib,shutil,sys
@@ -76,5 +76,5 @@ git -C "$deploy" add --all
 if ! git -C "$deploy" diff --cached --quiet; then
   git -C "$deploy" commit -m 'Store tested six-lesson German Kalulu browser prototype'
 fi
-git -C "$deploy" push -u origin HEAD:refs/heads/kalulu-german-build
-echo 'Tested build stored on kalulu-german-build. This is not a live website.'
+git -C "$deploy" push -u origin HEAD:refs/heads/gh-pages
+echo 'Tested build stored on gh-pages. This is not a live website.'

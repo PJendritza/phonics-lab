@@ -7,14 +7,14 @@ before using it with a child. It is not a validated German reading course.
 
 ## Use the prebuilt version (no Godot needed)
 
-The separate [`kalulu-german-build`](https://github.com/PJendritza/tmp/tree/kalulu-german-build)
+The separate [`gh-pages`](https://github.com/PJendritza/Kalulu-DE/tree/gh-pages)
 branch contains the ready-to-serve browser files. This is a Git artifact branch,
-not a hosted website. The private repository requires your existing GitHub access.
+not a hosted website until GitHub Pages is enabled. This repository is public.
 Download that branch as a ZIP in GitHub, or clone it into a new directory:
 
 ```bash
-git clone --single-branch --branch kalulu-german-build https://github.com/PJendritza/tmp.git kalulu-german-build
-cd kalulu-german-build
+git clone --single-branch --branch gh-pages https://github.com/PJendritza/Kalulu-DE.git Kalulu-DE-web
+cd Kalulu-DE-web
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
@@ -42,7 +42,7 @@ tap; real iOS/Android compatibility still needs hardware testing.
 
 ## Rebuild from source in the cloud workspace
 
-Source development stays on `kalulu-german-prototype`; main is unchanged.
+`main` holds source; develop changes on feature branches and commit tested work.
 Requirements: Linux x86_64, Python3, Git/Git LFS, curl, unzip, ffmpeg and ripgrep.
 Allow several GB for upstream assets/templates and imports. The setup script
 skips bulk language-pack LFS audio; the German build uses its committed small WAVs.
@@ -52,16 +52,16 @@ skips bulk language-pack LFS audio; the German build uses its committed small WA
 bash scripts/prepare_original.sh
 python3 -m unittest discover -s tests -p 'test_german*.py' -v
 bash scripts/build_german_demo.sh
-python3 -m http.server 8061 --bind 127.0.0.1 --directory /workspace/kalulu-german-demo/web
+python3 -m http.server 8061 --bind 127.0.0.1 --directory /workspace/kalulu-de-build/web
 # In another terminal with the existing Playwright/Pillow/Tesseract tools:
-OMP_THREAD_LIMIT=1 node scripts/test_german_demo.cjs
-OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
-KALULU_GERMAN_LESSON=6 KALULU_GERMAN_TOUCH=1 OMP_THREAD_LIMIT=1 node scripts/test_german_frog.cjs
-node scripts/test_german_audio_review.cjs
+OMP_THREAD_LIMIT=1 node tests/browser/test_german_demo.cjs
+OMP_THREAD_LIMIT=1 node tests/browser/test_german_frog.cjs
+KALULU_GERMAN_LESSON=6 KALULU_GERMAN_TOUCH=1 OMP_THREAD_LIMIT=1 node tests/browser/test_german_frog.cjs
+node tests/browser/test_german_audio_review.cjs
 ```
 
-Outputs: `/workspace/kalulu-german-demo/web`; full logs/screenshots:
-`/workspace/kalulu-german-demo/logs`. Build-time Godot audit exercises all twelve
+Outputs: `/workspace/kalulu-de-build/web`; full logs/screenshots:
+`/workspace/kalulu-de-build/logs`. Build-time Godot audit exercises all twelve
 lesson/game stimulus pools and decodes all required German MP3s. Export completion
 is distinct from the real browser gameplay checks above. Piper/model installation
 is only necessary to regenerate speech; see [AUDIO.md](AUDIO.md).
@@ -71,7 +71,7 @@ overrides the disposable German build root. The prepared project uses pinned God
 4.7, not the unrelated generic `godot` command. Custom roots require matching test
 environment variables and an HTTP URL in `KALULU_GERMAN_URL`.
 
-After tests pass, `bash scripts/push_german_build.sh` uploads the tested files to
+After tests pass, `bash scripts/publish_web_build.sh` uploads the tested files to
 the dedicated artifact branch without enabling hosting or changing main. It
 refuses dirty source trees, stale/missing test results and unexpected artifact
 checkout contents. `SHA256SUMS`, `BUILD_INFO.json`, `TEST_RESULTS.json` and the
