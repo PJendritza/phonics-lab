@@ -26,9 +26,19 @@ Verification: 10 learning tests passed; 320x568, 390x844 and 768x1024 layout/red
 motion checks passed; all three branded headers/titles/meta descriptions pass at
 320px. Full existing browser suite also passed, including profile migration, resume,
 renamed backup export, audio and later exercises. Evidence:
-branding.json and mobile.json under docs/verification/2026-10-18. At this source
-checkpoint the 3.0.1 branding publication is pending; the tested source/build and
-live file hashes will be recorded after publishing.
+branding.json, browser.json and mobile.json under docs/verification/2026-10-18.
+
+Branding publication completed and verified:
+- App source: 618a3e5800a478772774caf30418e5d1791138d4 (main / phonics-lab-brand).
+- Deployment: acfb05f4e73cc757e3b25a20085238fc75476690 (gh-pages).
+- Clean build and scripts/publish.py --checkout
+  /workspace/kalulu-browser-build/publish-phonics-lab completed successfully.
+- First live audit caught the previous metadata during Pages propagation. After
+  BUILD_INFO changed to 3.0.1, scripts/verify_live.py passed: all 52 HTTPS files,
+  769,197 bytes match the tested build. Evidence: live.json.
+- Open https://patrickjendritza.com/Kalulu-DE/?v=3.0.1 while the repository keeps
+  its old slug. The actual GitHub rename and new Pages URL verification are pending
+  the user's rename action. Later source commits record verification only.
 
 ## User feedback and new goal
 
