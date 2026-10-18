@@ -1,71 +1,61 @@
-# Phonics Lab browser architecture (v3)
+# Phonics Lab browser architecture (v4)
 
-Phonics Lab is independent of the current garden theme. Legacy storage keys retain
-their old names to preserve existing learners. Repository/Pages paths stay unchanged
-until the user performs the repository rename.
+Static HTML/CSS/ES modules. No engine/framework, API, service worker, WASM,
+cross-origin isolation or runtime package. Relative paths work under /phonics-lab/.
+The complete packaged site remains below 1 MB.
 
-app/ is a static HTML/CSS/ES-module website. No engine, framework, server API,
-service worker, WASM, cross-origin isolation or runtime package. Relative URLs work
-under /Kalulu-DE/. Build output remains below 1 MB including all audio.
+- data.mjs: fourteen stage definitions, target audio, beginning/ending word contexts,
+  grapheme-block overrides, avatars and app version. Content is separate from theme.
+- learning.mjs: pure questions, accuracy/mastery, validation/migration, profiles,
+  fixed level goals and fractional per-block progress. Introductions are excluded
+  from mastery. New stages append without changing original stage IDs.
+- main.mjs: minimal start, automatic answer flow, cumulative meter/flower field,
+  parent stage preview and profile tools. Save each response before scheduling
+  advancement. Cancel timers and playback on navigation; a solved resumed question
+  advances without scoring twice. Wrong choices keep the same question and order.
+- audio.mjs: shared target/instruction HTMLAudioElement with cancellation tokens;
+  required playback gates answers and offers retry on failure. Separate preloaded
+  quiet effect element never gates progression. No spoken success/retry praise.
+- review.mjs: sources, licenses, category filters, local listening notes/export,
+  optional old synthetic comparisons. Ratings never silently publish approval.
 
-- data.mjs: eight stage definitions, human-audio content, groups, final-sound contexts,
-  avatars and a version constant. Content progression is distinct from game UI.
-- learning.mjs: pure question creation, scoring, accuracy-based difficulty, mastery,
-  recommendation, validation, migration and storage functions. Demonstrations never
-  enter independent mastery. No timestamps for child response speed or deadlines.
-- main.mjs: one-tap guided flow, persistent per-profile question, parent profile tools,
-  map, backups and seed/flower garden. Answer order is generated once per question
-  and persisted. The next button requires an explicit gesture; no auto-advance.
-- audio.mjs: one shared HTMLAudioElement and cancellation tokens. Playback unlocks
-  answers; media failure reports manual replay, never a substituted system voice.
-  Navigation/replay cancels stale callbacks and overlapping instructions.
-- review.mjs: per-clip source/rights, local listening notes, export, category filters
-  and old synthetic comparison clips. No local opinion auto-approves repository audio.
+## State contract
 
-## State and resuming
+App version 4.0.0 intentionally retains data version 3 and key kalulu-de:learners:v3:
+{version:3,activeId,profiles:[{id,name,avatar,progress}]}. Progress holds skills,
+stages, sessions, legacy seeds and pending. Session count represents completed
+practice levels/flowers; independent mastery is separate. Original nine-question
+pending levels remain valid. New goals are at most twelve. levelProgress combines
+completed questions plus solved/partial current question into one cumulative value.
+A new question inherits that value; mistakes never decrease or add to it.
 
-Key kalulu-de:learners:v3 stores {version:3, activeId, profiles:[{id,name,avatar,progress}]}.
-Each progress object contains skills (introduced, independent seen/first counts,
-recent accuracy and order-only timeline), stages, sessions, seeds and pending session.
-A pending round holds its target/cue/choice order, demonstration flag, attempt count,
-word position and solved flag. Save after every response and advancement. A solved
-round has already credited its seed/skill once; reload cannot award it twice. Audio
-must be heard again for a resumed unanswered question; it is not restored mid-sound.
+Pending stores target/cue/choice order, introduction flag, attempts, word position
+and solved status. Replays do not score. Resume restores state, then requires the
+unanswered cue again; no mid-sound restoration. A 340 ms transition checks current
+solved state, preventing stale/partial callbacks. Navigation cancels it explicitly.
+The old v2 key is read only if no v3 store exists and is not deleted. Earlier counts
+do not fabricate reliable independent evidence. Validation whitelists IDs, cues,
+choice pools, block units and ranges. Imports/reset/deletion require confirmation.
+Storage errors allow in-memory practice and manual backup.
 
-The original kalulu-de:calm:v2 key is read only when no v3 store exists, and never
-deleted. Counts/completions migrate into the first profile. Earlier history has no
-reliable independent-answer evidence, so recent mastery starts empty and completed
-counts alone do not unlock stages. Original backups are also accepted in the import
-UI. JSON validation whitelists IDs, content/audio cues, choices, avatars and counts;
-malformed files cannot silently replace current profiles. Valid imports require
-explicit confirmation because they replace all profiles. Deleting/resetting also
-requires confirmation and leaves other learners unchanged.
+Profiles are local to a browser/device with no analytics/uploads/accounts/sync.
+The same patrickjendritza.com HTTPS origin retains localStorage after the project
+path rename. Export/import handles other browsers/devices or erased storage.
+Future synchronization needs a separate identity/storage design.
 
-There are at most eight local profiles; optional nicknames are stored only on the
-device and in exported files. No accounts, identifiers sent to a backend, telemetry,
-profile uploads or cloud sync. Hosting processes ordinary static request metadata.
-Storage failure keeps an in-memory session working and offers manual backup. Browser
-private-mode/data deletion can erase local profiles; backup/import is the transfer
-and recovery mechanism. A future storage adapter can add explicit sync without
-changing the pure learning object; identity/consent remain a separate design step.
+## Build and release
 
-## Assets, testing and deployment
+scripts/build.py checks audio hashes, copies app/, versions HTML/CSS/nested modules
+and media with a content-derived query, then writes BUILD_INFO.json, LICENSE,
+.nojekyll and checksums. Refuses source-tree output and builds over 1 MB.
+main is source; gh-pages generated files. publish.py requires clean pushed main,
+passing exact-app-hash browser evidence and checked build bytes. Normal push only,
+fresh external checkout, no Pages configuration changes. verify_live.py uses
+certificate-verified HTTPS to compare every deployed file against the tested build.
+The local checkout retains /workspace/Kalulu-DE; origin and website are phonics-lab.
 
-scripts/build.py verifies every audio checksum, copies the app, adds a content-derived
-version query to HTML and ES-module CSS/JS references, and records the same release
-query for media/manifest loading. This invalidates nested old modules on returning
-phones, not just the entry HTML. It writes version/source/assetVersion metadata,
-.nojekyll, LICENSE and checksums; refuses in-tree outputs and a package over 1 MB.
-
-The main branch holds source and small licensed audio. gh-pages holds only generated
-files. scripts/publish.py requires a clean source commit already pushed to main,
-passing browser evidence bound to the exact app-tree hash, and matching packaged
-checksums. It uses normal pushes and never changes hosting settings. Every release
-uses a fresh external publication checkout. scripts/verify_live.py certificate-checks
-HTTPS and compares all public file bytes with the tested package after Pages updates.
-
-Tests cover pure accuracy rules, the full eight-stage path, migrations/validation,
-profile isolation, saved partial words, actual audio playback/decode, failure/replay,
-exports/restores, small-screen layouts and reduced-motion behavior. Chromium viewport
-emulation and software audio checks do not replace new physical-phone/child/listening
-review. The old Godot implementation and first browser prototype remain in Git history.
+Tests cover all stages, fixed goals, fractional blocks, first-try mastery, saved
+profiles/partial/solved resume, actual MP3 playback, auto transitions, failed media,
+stationary errors, parent previews, backups/migration, sch/ll, keyboard and mobile
+320/390/768px layouts. Browser checks bind evidence to the app hash. Public byte
+verification and mobile emulation do not certify real-phone playback or phonetics.

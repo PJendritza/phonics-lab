@@ -2,16 +2,10 @@
   "listen": "Hör genau hin. Tippe auf den passenden Buchstaben.",
   "syllable": "Hör genau hin. Welche Silbe passt?",
   "word": "Hör dir das Wort an. Baue es Buchstabe für Buchstabe auf.",
-  "done": "Das hast du gut gemacht. Du kannst in deinem Tempo weiterüben.",
-  "vowels": "Jetzt kommen weitere Vokale dazu. Hör genau hin und finde den passenden Buchstaben.",
   "short": "In diesen Silben klingen die Vokale kurz. Hör gut hin und finde die passende Silbe.",
-  "ending": "Hör auf den letzten Laut im Wort. Tippe auf den passenden Buchstaben.",
+  "ending": "Hör auf den letzten Laut im Wort. Tippe auf den passenden Laut.",
   "read": "Hör dir das Wort an. Welches Wort passt?",
-  "correct": "Ja, das passt. Tippe auf den Pfeil, dann geht es weiter.",
-  "retry": "Versuch es noch einmal. Du hast Zeit.",
-  "placed": "Und jetzt der nächste Buchstabe.",
-  "garden": "Gut gemacht. Dein Garten wächst. Tippe auf den großen Pfeil, wenn du weitermachen möchtest.",
   "model": "Höre gut zu. Schau dir das Wort an und baue es nach.",
-  "hint": "Schau genau hin. Das leuchtende Feld hilft dir.",
-  "resume": "Hier machen wir weiter. Hör noch einmal hin."
+  "onset": "Hör auf den ersten Laut im Wort. Tippe auf den passenden Laut.",
+  "word_blocks": "Baue das Wort mit den Bausteinen. Ein Laut kann mehrere Buchstaben haben."
 }

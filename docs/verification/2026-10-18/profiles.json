@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "checks": [
-    "All eight earned stages remain selectable and the main play button offers independent review.",
+    "All earned stages remain selectable and the main play button offers independent review.",
     "Partial-word profile resumes separately; nicknames render as text.",
     "Reset and deletion require explicit confirmation and preserve the other learner.",
     "Eight-profile limit disables additional creation.",

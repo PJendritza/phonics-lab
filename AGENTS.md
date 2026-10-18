@@ -1,69 +1,68 @@
 # Phonics Lab development instructions
 
 Read this file, PROGRESS.md and recent Git history before continuing. Canonical
-repository: https://github.com/PJendritza/Kalulu-DE. Use /workspace/Kalulu-DE;
+repository: https://github.com/PJendritza/phonics-lab. Use /workspace/Kalulu-DE;
 do not recreate tmp or create worktrees without a specific need/request.
+The local directory intentionally retains its old name. Product: Phonics Lab.
+Repository rename is verified; website: https://patrickjendritza.com/phonics-lab/ .
+Keep Kalulu inspiration and historical/source/audio credits in About. Preserve
+legacy storage keys and existing backups; a name/path change must not erase learners.
 
-Product name: Phonics Lab. Repository slug is still Kalulu-DE until the user renames
-it to phonics-lab. See docs/RENAME.md before updating origins or public URLs. Keep
-legacy storage keys and existing backups compatible. Keep Kalulu inspiration and
-source/license credits in About; historical records retain their original names.
-The next interaction changes are specified in docs/NEXT-VERSION.md, not implemented
-as part of the branding update.
+Goal: a calm, lightweight German phonics app using plain HTML/CSS/ES modules.
+No game engine, moving answer targets, countdowns, speed scoring or lost lives.
+Minimal entrance: profile plus large start/continue. Keep the parent stage map and
+its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
-Current goal: a calm, lightweight German phonics app using plain HTML/CSS/ES
-modules. No game engine, moving answer targets, countdowns, speed scoring or lost
-lives. Keep child-facing screens simple. See docs/GOALS.md. Do not restore the old
-Godot project into the active tree; it is preserved by archive tags.
+Correct answers produce a brief nonverbal chime/check and automatically advance
+about 340 ms after a complete response. No spoken success praise or per-question
+next button. Every correct choice visibly advances the fixed level goal, including
+partial grapheme blocks. Goals are 8–12 questions; never finish early. Completing
+a level adds a flower; this rewards practice, while independent accuracy separately
+controls mastery/unlocking. Wrong answers stay, replay and keep choices stationary.
+Animations affect feedback/progress only; respect reduced motion. A level-boundary
+play button is intentional. Theme presentation must remain interchangeable.
 
-Layout: app is the complete static app; scripts builds/publishes/regenerates audio;
-tests holds learning and browser checks; docs records plan, provenance and evidence.
-main is source; gh-pages is generated deployment. Work in feature branches and
-commit/push meaningful progress. Preserve user changes. No force pushes, repository
-deletion, visibility changes, recurring scheduling, production accounts or new
-hosting activation without authorization. Updating the existing demo is authorized
-within an explicit demo-development request.
+Layout: app/ is the complete static website; scripts/ builds, publishes and prepares
+audio; tests/ holds learning/browser checks; docs/ records provenance and evidence.
+main is source; gh-pages generated deployment. Use feature branches, normal commits
+and pushes. Preserve user changes. No force pushes, repository deletion/visibility
+changes, recurring scheduling, production accounts or new hosting without explicit
+authorization. Updating the existing demo is authorized in demo-development requests.
+Old Godot assets remain in archive tags, outside the active app.
 
-Generated outputs and publication checkouts stay outside source, default
-/workspace/kalulu-browser-build. Audio/model caches are external. Never commit
-Piper/Godot engines, models, node_modules or bulk upstream assets. Keep TLS and
-checksums enabled and use existing Git authentication; do not extract tokens.
-Packaging versions all CSS/module imports and media by a content-derived release
-query; preserve this cache invalidation for returning phone browsers.
+Generated builds/checkouts belong outside source (/workspace/kalulu-browser-build).
+Keep model/audio caches external. Do not commit engines, models, dependencies or
+bulk upstream assets. Keep TLS/checksum verification; use existing Git auth without
+extracting tokens. Preserve content-derived asset queries for returning phone caches.
 
-Human recordings are used for isolated vowels, syllables and words. Piper is only
-for complete sentence instructions. Never clip vowels out of words, confuse letter
-names with phonemes, stitch long vowels into short-vowel words, or label technical
-playback tests as native-speaker/educator approval. The user confirmed v2 worked on their phone and sounded better; new recordings
-still require listening approval. Preserve individual credits, license versions and source hashes.
-Use docs/AUDIO.md and app/audio/manifest.json. The eight-stage path introduces
-short vowels in complete word contexts and n/l via final-sound detection. Never
-substitute letter names or pretend this is a complete validated curriculum.
+Audio: 41 complete human target recordings, nine full-sentence Piper instructions,
+one nonverbal effect. Three legacy synthetic comparisons are adult-review only.
+Never synthesize isolated phonemes, substitute letter names, crop consonants/vowels
+from words, or stitch long vowels into short-vowel words. New consonants are heard
+in natural word beginnings/endings. These are context exercises, not verified pure
+isolated phoneme samples. b/d/g are initial; final s differs from voiced initial s.
+sch and ll are grapheme blocks. Preserve source/license versions and original/output
+hashes. See docs/AUDIO.md and app/audio/manifest.json. Technical decode tests cannot
+prove pronunciation or educational efficacy; new material needs native/educator review.
 
-Progress: validated v3 browser-local store, up to eight separate animal profiles,
-exact pending-round/partial-word resume and all-profile backup/import. Preserve
-v2 migration and its original storage key. Imports/reset/deletion require explicit
-UI confirmation; independent first-try evidence controls mastery, not demonstrations.
-Use the prominent play button for the guided path, spoken instructions and large
-next arrow so a nonreader does not need menus. Keep reward animations away from
-answer targets and respect reduced motion. Do not silently add tracking, accounts,
-uploads or paid APIs. Never base adaptation
-on speed; favor errors and underexposure. Failed persistence must allow practice.
+Progress: schema version 3 and kalulu-de:learners:v3 remain deliberately unchanged.
+Up to eight animal profiles, exact pending/partial-word resume and confirmed backup
+import/reset/deletion. Preserve v2 migration and its original key. Demonstrations
+never become independent mastery. Accuracy/underexposure drive adaptation, never
+response time. Save before auto-advance, cancel navigation timers/audio, and never
+award twice after pause/reload. Failed storage still permits in-memory practice.
+No tracking, accounts, uploads, paid APIs or cloud sync without a separate decision.
 
-Run node --test tests/learning.test.mjs, python3 scripts/build.py, and relevant
-Playwright checks after functional changes. tests/browser.cjs exercises actual
-media playback, stationary targets, retries, complete lessons and saved progress.
-Also run tests/profiles.cjs and tests/mobile-smoke.cjs when profiles, progression or
-layout change. Test all-complete stage access and confirmed profile reset/deletion.
-Use a path prefix for Pages checks. Distinguish Chromium mobile emulation from a
-real phone test. Keep exact results and next action in PROGRESS.md. Store concise
-verification JSON under docs/verification, screenshots outside Git.
+After functional changes run node --test tests/learning.test.mjs tests/content.test.mjs,
+python3 scripts/audit_audio.py, python3 scripts/build.py and relevant Playwright
+checks. tests/browser.cjs checks actual playback/automatic flow and binds evidence
+to the app tree hash. Also run tests/mobile-smoke.cjs, tests/profiles.cjs and
+tests/word-hints.cjs when those behaviors change. Exercise the /phonics-lab/ prefix.
+Chromium emulation is not a physical-phone test. Keep exact commands/results/limits
+in PROGRESS.md and concise JSON in docs/verification; screenshots outside Git.
 
-Publish clean tested main using scripts/publish.py (normal push, existing Pages
-settings). Verify HTTPS responses and artifact hashes. Update docs after publishing
-if needed without claiming a later docs-only commit is the deployed app commit.
-The public URL is https://patrickjendritza.com/Kalulu-DE/ .
-
-License: project CC BY-SA 4.0; individual human recordings CC BY-SA 3.0/4.0. Preserve
-upstream historical attribution and third-party audio notices. No scientific or
-native-phonetic validation claims without evidence.
+Publish clean tested main with scripts/publish.py and a fresh external checkout.
+It requires pushed source, current app-hash-bound browser evidence and checksums.
+Do not change Pages settings. Verify all HTTPS bytes with scripts/verify_live.py.
+Later documentation-only commits are distinct from the deployed app source commit.
+License: project CC BY-SA 4.0; individual recordings CC BY-SA 3.0/4.0. Preserve credits.

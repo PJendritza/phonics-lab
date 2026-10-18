@@ -1,18 +1,17 @@
 {
-  "version": 3,
-  "url": "http://127.0.0.1:8070/preview/Kalulu-DE/",
+  "version": 4,
+  "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
-    "One-tap guided start, actual sound gating, solved-question resume without duplicate rewards, wrong-answer stationary positions and exact unfinished-round resume.",
-    "Independent successes earn the first flower and the large continue button automatically starts the next stage.",
-    "Two animal profiles keep separate paths, seeds and pending sessions; all-profile backup and confirmed restore work; invalid import leaves data untouched.",
-    "Eight-stage map locks future stages until available; parent preview accesses all later exercises. Short vowels, CV/VC syllables, final-sound detection, reading and word building all play; partial word resumes with identical letter bank.",
-    "20 human recordings + 15 spoken instructions + 3 old comparisons decode; audio category filters and local review persistence work.",
-    "Existing v2 learner history migrates automatically to one profile and the original v2 storage remains available.",
-    "Blocked sound offers retry with disabled answers; replay recovers; pause cancels stale media callbacks.",
-    "Storage quota failure permits in-memory learning and shows a backup warning.",
-    "Desktop keyboard activation; zero app page errors, external runtime requests or engine payloads."
+    "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. Full 9/9 goal earns a flower.",
+    "Independent profiles preserve exact pending activities; export downloads and confirmed restore work; invalid restore preserves existing data.",
+    "Parent preview accesses all 14 stages. New first/last consonants and word tasks run to their explicit 8/10/12-question goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
+    "Actual nonverbal confirmation audio plays; no spoken success, retry or navigation praise is requested.",
+    "All current human/guide/effect files plus old comparisons decode; effect filtering and per-clip listening review persistence work.",
+    "Required cue failure disables choices and permits replay recovery; optional chime failure never blocks automatic advancement.",
+    "Original v2 data migrates; v3 storage key and saved 9-question sessions remain compatible at the renamed site path.",
+    "Keyboard activation, zero app page errors, relative renamed paths, no external runtime dependencies and content-versioned module/style requests."
   ],
-  "audioTestRate": "First round at natural speed; remaining media may use 4x playback while still decoding actual MP3s. No mocked media success.",
+  "media": "Real MP3 playback/decode; first cue at natural speed, later test media accelerated to 4x. No fake play success.",
   "audio": [
     {
       "src": "audio/a.mp3?v=c239dec29a7d",
@@ -107,6 +106,90 @@
       "duration": 1.036009
     },
     {
+      "src": "audio/fisch.mp3?v=af8b5a08bd11",
+      "duration": 0.955941
+    },
+    {
+      "src": "audio/feder.mp3?v=ac14c01c0673",
+      "duration": 0.96102
+    },
+    {
+      "src": "audio/schaf.mp3?v=6f0939c528e4",
+      "duration": 1.153311
+    },
+    {
+      "src": "audio/schuh.mp3?v=b0fb2ea3d3bf",
+      "duration": 0.932721
+    },
+    {
+      "src": "audio/nase.mp3?v=6e6eb4367089",
+      "duration": 0.863107
+    },
+    {
+      "src": "audio/loewe.mp3?v=b452ae640710",
+      "duration": 0.967596
+    },
+    {
+      "src": "audio/ball.mp3?v=eb65ad3febc9",
+      "duration": 0.619252
+    },
+    {
+      "src": "audio/baum.mp3?v=7db82fe48007",
+      "duration": 0.601882
+    },
+    {
+      "src": "audio/dose.mp3?v=fa461a0f845b",
+      "duration": 0.977664
+    },
+    {
+      "src": "audio/dach.mp3?v=9194ce337e6e",
+      "duration": 0.805011
+    },
+    {
+      "src": "audio/gabel.mp3?v=1157f7df5007",
+      "duration": 0.839841
+    },
+    {
+      "src": "audio/gans.mp3?v=a1c3724ad64d",
+      "duration": 1.086553
+    },
+    {
+      "src": "audio/hut.mp3?v=b3aba5c5fe13",
+      "duration": 0.793401
+    },
+    {
+      "src": "audio/bus.mp3?v=be01eda0a67c",
+      "duration": 0.619252
+    },
+    {
+      "src": "audio/eis.mp3?v=416d95436bf9",
+      "duration": 0.908277
+    },
+    {
+      "src": "audio/tisch.mp3?v=4009c57be120",
+      "duration": 0.723741
+    },
+    {
+      "src": "audio/rot.mp3?v=eefde6a2266c",
+      "duration": 0.761474
+    },
+    {
+      "src": "audio/auf.mp3?v=79e8c0d9a49e",
+      "duration": 0.728095
+    },
+    {
+      "src": "audio/park.mp3?v=2994b45a7350",
+      "duration": 0.723741
+    },
+    {
+      "src": "audio/da.mp3?v=6dfd1387959e",
+      "duration": 0.955941
+    },
+    {
+      "src": "audio/du.mp3?v=56b741214ebb",
+      "duration": 0.445147
+    },
+    {
       "src": "audio/listen.mp3?v=15f4247e0c06",
       "duration": 2.679365
     },
@@ -119,55 +202,35 @@
       "duration": 3.259864
     },
     {
-      "src": "audio/done.mp3?v=2efc08d53a87",
-      "duration": 2.888345
-    },
-    {
-      "src": "audio/vowels.mp3?v=7e04eca85773",
-      "duration": 4.536961
-    },
-    {
       "src": "audio/short.mp3?v=91eca34dc7e5",
       "duration": 4.420862
     },
     {
-      "src": "audio/ending.mp3?v=7553c13f77eb",
-      "duration": 3.364354
+      "src": "audio/ending.mp3?v=842c72fc061a",
+      "duration": 3.109637
     },
     {
       "src": "audio/read.mp3?v=e37f81fbe8c3",
       "duration": 2.540045
     },
     {
-      "src": "audio/correct.mp3?v=aa7331da61f2",
-      "duration": 3.120544
-    },
-    {
-      "src": "audio/retry.mp3?v=9c9cf73c0d5c",
-      "duration": 2.435556
-    },
-    {
-      "src": "audio/placed.mp3?v=cb1b9c7701b9",
-      "duration": 1.622857
-    },
-    {
-      "src": "audio/garden.mp3?v=53b522541458",
-      "duration": 4.363515
-    },
-    {
       "src": "audio/model.mp3?v=ddb7c291e429",
       "duration": 3.341134
     },
     {
-      "src": "audio/hint.mp3?v=90d3463f8e9d",
-      "duration": 2.540045
+      "src": "audio/onset.mp3?v=e8b75a8218cc",
+      "duration": 3.027664
     },
     {
-      "src": "audio/resume.mp3?v=3edc7437f943",
-      "duration": 2.214966
+      "src": "audio/word_blocks.mp3?v=9692000cd1f8",
+      "duration": 3.654603
+    },
+    {
+      "src": "audio/success.mp3?v=652e3b7657c0",
+      "duration": 0.24
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "03b88b0575173418e360375f10a5ea98e2d81acaa4c9c6d368143c26f961b73b"
+  "appSha256": "93c3228db761c9aafda96cd27721154651ee985fd629df0040faad8135231bbd"
 }

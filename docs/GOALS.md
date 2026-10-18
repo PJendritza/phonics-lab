@@ -1,81 +1,71 @@
-# Goal: a calm, guided German phonics learning path
+# Goal: calm, guided German phonics
 
-On October 18 the user confirmed that v2 opened immediately on their phone, worked
-well and sounded much better. They requested more content, light gamification,
-automatic difficulty, a simple entrance for nonreaders, profiles and resumable progress.
-The browser-first direction is retained. No original moving-target games return.
+Phonics Lab is a browser-only prototype inspired by Kalulu’s staged grapheme/phoneme,
+syllable and word practice. It keeps stationary choices, human target audio and
+accuracy-based adaptation. No moving-target games, engine, countdown or speed scoring.
+The product name is independent of the current flower presentation.
 
-## The learning path
+## Fourteen stages
 
-1. **First sounds:** a, m, i, initially one target, then independent discrimination.
-2. **More vowels:** o, u, e; previously introduced sounds become distractors.
-3. **Short vowels in context:** am /am/, im /ɪm/, um /ʊm/. These are natural whole
-   recordings; do not synthesize isolated short vowels or splice them from words.
-4. **Combine and distinguish:** ma /maː/, mi /miː/, am, im, um. ma uses the complete
-   German word Ma, labelled a practice syllable. The different vowel qualities and
-   lengths are deliberate. Whole German words may also be one-syllable teaching units.
-5. **Last-sound detective:** identify m, n, l at the end of am/im/um, an/in/man/nun,
-   and mal. New n is introduced with both an and in. l is introduced with mal.
-   This is explicit final-phoneme awareness; no letter-name recordings of en/el
-   are passed off as /n/ or /l/. Natural word contexts retain coarticulation.
-6. **New syllables:** an, in, man, nun, mal, after n/l have appeared in final contexts.
-7. **Read contrasting words:** Oma, Omi, Mama, Mami. Whole recordings preserve
-   pronunciation and stress. Upper/lowercase and variable vowel realization remain
-   points for educator review, rather than universal one-letter/one-sound claims.
-8. **Build words:** am, im, um, Oma, Omi, Mama, Mami, man, mal, nun. Copy a model
-   once for introduction; then hear the word and fill fixed letter slots without it.
-   The letter bank supports repeated letters and accepts lowercase tiles for capitals;
-   the canonical word is capitalized in its slots, without a capitalization penalty. Harder practice adds a distractor.
+1. First sounds: a, m, i; one-choice introductions then discrimination.
+2. More vowels: o, u, e.
+3. Short vowels in complete words: am /am/, im /ɪm/, um /ʊm/.
+4. Combine/contrast: ma /maː/, mi /miː/, am, im, um.
+5. Last sounds: m/n/l in am/im/um, an/in/man/nun and mal.
+6. New syllables/short words: an, in, man, nun, mal.
+7. Read: Oma, Omi, Mama, Mami.
+8. Build: am, im, um, Oma, Omi, Mama, Mami, man, mal, nun.
+9. Beginning sounds f/n/l/sch in Fisch/Feder, Nase/nun, Löwe, Schaf/Schuh.
+10. Beginning sounds b/d/g/h in Ball/Baum, Dose/Dach, Gabel/Gans, Hut.
+11. End sounds f/s/sch/t/k in Schaf/auf, Bus/Eis, Fisch/Tisch, Hut/rot, Park.
+12. More syllables and short words: da, du, Bus, Hut, Fisch, Schaf.
+13. Read contrasting words: Fisch, Schaf, Hut, Ball.
+14. Build those four words with sch and ll as single grapheme blocks.
 
-The original French Kalulu language pack uses staged grapheme/phoneme introduction,
-CV/VC syllables, cumulative decodable words and separate reading/writing flags.
-Inspected fr_FR/gp_list.csv, syllables_list.csv, words_list.csv, summary.txt and schema
-v1.sql at Kalulu-Languages bb0f71766c5e27fdb775e544ffe62ca98e6a615c.
-Those structures inspired the sequence; French vowel/letter mappings were not copied
-into German. The existing open-source game is not bundled, and this app does not
-inherit evidence of educational efficacy from Kalulu research.
+Capitalized nouns retain canonical spelling. Lowercase block taps are accepted for
+capitals without a case penalty. sch is one grapheme, not three independent sounds;
+ll is one doubled-consonant spelling block. These tasks introduce block matching,
+not a claim that all German sound/spelling relationships are one-to-one.
+ma/mi use whole recorded Ma and mi as teaching units. Natural words preserve short
+vowels, coarticulation and stress; vowels/consonants are never cropped from them.
+Consonant context identification is distinct from isolated-phoneme training. Initial
+b/d/g avoid German final devoicing; final s here is /s/, not voiced initial /z/.
+Some targets have only one context word; expand after native/educator review.
 
-## Automatic progression
+Inspiration inspected: Kalulu-Languages bb0f71766c5e27fdb775e544ffe62ca98e6a615c,
+fr_FR/gp_list.csv, syllables_list.csv, words_list.csv, summary.txt and schema v1.sql.
+French mappings were not copied into German. Kalulu research does not validate this app.
 
-A big play button starts/resumes the appropriate activity with spoken guidance.
-There is no child-facing requirement to read a menu. Animal avatars identify learners.
-An explicit, large arrow follows each successful answer; the target never moves.
+## Flow, progress and adaptation
 
-A new target is introduced with one choice (or a visible model for word building).
-That teaches the association but grants no mastery evidence. Independent completed
-questions update first-try accuracy. Two recent first-try successes and at least 75%
-across the last up to four responses make a target secure enough for this prototype.
-A stage is passed when every target is secure. Session length is at most nine
-questions; secure stages may finish early after four. The next play action chooses
-the first unfinished stage; after all stages it chooses weaker material for review.
+Minimal entry: animal profile plus large play/continue. Spoken instruction and replay
+let nonreaders practise. Correct answers give a brief nonverbal chime/check and advance
+automatically after about 340 ms. No per-answer next button or spoken praise. Incorrect
+answers stay with stable choices and replay/time; two mistakes can reveal quiet help.
 
-Two recent correct responses allow three choices; five allow four. Two errors in
-three independent questions return to two choices. Choices change only for a new
-question. Underexposed/uncertain targets come first. After repeated errors a quiet
-highlight helps; assisted success cannot count as first-try evidence. No timer,
-response-speed scoring, lost lives, erased rewards, public score or daily streak.
+The level meter has a fixed total: nine questions for the original stages, 8–12 for
+new ones. Never finish early. Every correct selection moves the cumulative meter;
+a correct block is a fraction of its word question. Completing the goal produces a
+flower and a level-boundary play button. A flower rewards practice even if assisted;
+it is separate from mastery. Completed levels accumulate in the flower field.
 
-## Gentle rewards and usable persistence
+Introductions/model copying earn practice progress but no independent mastery.
+Mastery requires two recent first-try independent successes and >=75% across the
+last up to four. All stage targets must qualify to unlock the next guided stage.
+If not, the next level repeats the stage, favoring weak/underexposed material.
+Two recent successes permit three choices; five permit four; two recent errors ease
+the next question. Choice positions only change between questions. No time metric.
+After all stages qualify, guided practice reviews weaker material. Parent preview
+can open later stages without falsely setting mastery.
 
-Each finished question earns a seed once, including guided introductions. Passing
-a stage adds one permanent flower. The small garden grows without making answer
-targets move. Feedback has a brief sprout animation; reduced-motion preference removes
-it. Incorrect answers never take seeds or flowers away.
+## Persistence and limits
 
-Up to eight local learner profiles, optional nicknames and animal pictures. Current
-question, answer order, errors, partial word, already-awarded answer and stage progress
-survive leaving/reloading. Profiles never share learning state. One browser/device;
-JSON export/import transfers all profiles. No login, analytics, server or automatic
-cross-device synchronization. Existing v2 progress migrates, without treating earlier
-one-choice or unverified answers as new mastery.
+Up to eight browser-local profiles; exact question order, attempts, partial blocks
+and already-awarded response survive pause/reload. Confirmed JSON export/import
+transfers profiles; no accounts/server sync. Existing v2/v3 data remains compatible.
+Reduced-motion disables decorative animation; the static meter still shows progress.
 
-## Remaining work
-
-This is a usable expanded prototype, not a complete or clinically validated course.
-The user’s positive phone/audio report applies to v2, not automatic approval of new
-clips. Review the 12 new human recordings, especially Ma, Mama/Mami and vowel lengths,
-and observe an actual child’s final-sound/word-building use. Review the teaching of
-short-vowel contexts and capital letters with an educator. Consider more final-sound
-examples for l, spaced review, lowercase/capital matching, additional graphemes and
-explicit blending models only after that feedback. Continue purpose-recording with
-one consistent native speaker if mixed recording voices prove distracting.
+This remains a partial experimental curriculum. Next: native listening review of
+new words/contexts, actual child use, vowel length/capitalization/blending review
+with an educator, and a consistent speaker if mixed voices distract. No scientific
+or pronunciation-quality certification is implied by decode/playback tests.

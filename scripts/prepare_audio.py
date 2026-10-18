@@ -23,11 +23,11 @@ def main():
   if sha(ROOT/'app'/c['src'])!=c['sha256']:raise SystemExit('Processed checksum mismatch: '+c['id'])
  if sha(a.model)!='7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819':raise SystemExit('Voice checksum mismatch.')
  from piper import PiperVoice,SynthesisConfig
- voice=PiperVoice.load(str(a.model));config=SynthesisConfig(length_scale=1.05,noise_scale=0.0,noise_w_scale=0.0);clips=list(humans)
+ voice=PiperVoice.load(str(a.model));config=SynthesisConfig(length_scale=1.05,noise_scale=0.0,noise_w_scale=0.0);clips=list(humans)+[c for c in manifest['clips'] if c['kind']=='effect']
  for key,sentence in json.loads((ROOT/'scripts/instructions.json').read_text()).items():
   with tempfile.NamedTemporaryFile(suffix='.wav') as temp:
    with wave.open(temp.name,'wb') as wav:voice.synthesize_wav(sentence,wav,syn_config=config)
    out=output/(key+'.mp3');subprocess.run(['ffmpeg','-v','error','-y','-i',temp.name,'-af','loudnorm=I=-20:TP=-3:LRA=7,apad=pad_dur=0.16','-ar','44100','-ac','1','-c:a','libmp3lame','-b:a','80k',str(out)],check=True)
   clips.append({'id':key,'label':sentence,'ipa':None,'group':'instruction','src':'audio/'+out.name,'kind':'tts','artist':'Piper / Thorsten-Voice','license':'CC BY-SA 4.0 (authored clip collection)','licenseUrl':'https://creativecommons.org/licenses/by-sa/4.0/','source':'https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/medium','sha256':sha(out),'review':'pending','note':'Künstliche Stimme nur für vollständige Anleitungen; keine isolierten Sprachlaute.'})
- manifest.update(version=3,clips=clips,generatorSha256=sha(Path(__file__)));(output/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');print(f'{len(humans)} human recordings + {len(clips)-len(humans)} sentence instructions; old comparisons preserved.')
+ manifest.update(version=3,clips=clips,generatorSha256=sha(Path(__file__)));(output/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');print(f'{len(humans)} human recordings + {sum(c['kind']=='tts' for c in clips)} sentence instructions; old comparisons preserved.')
 if __name__=='__main__':main()

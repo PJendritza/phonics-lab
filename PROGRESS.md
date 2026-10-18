@@ -1,3 +1,95 @@
+# Phonics Lab v4 status
+
+Updated 2026-10-18 (Europe/Berlin). Repository:
+https://github.com/PJendritza/phonics-lab . Read AGENTS.md and recent Git history.
+Feature branch: fluent-progress. Local checkout stays /workspace/Kalulu-DE.
+
+## Current work: automatic practice, cumulative goals and consonants
+
+Implemented user-requested v4.0.0: minimal profile/play entrance, automatic advance
+about 340 ms after each complete answer, quiet nonverbal chime/check and no spoken
+success messages. Wrong answers stay with stationary choices and replay/time.
+Every correct choice advances a visible fixed level meter/flower, including partial
+grapheme blocks. Goals are 8–12 questions, never early completion. Each finished
+level adds a flower to the field; practice rewards are separate from accuracy mastery.
+One play button remains at the level boundary. Parent later-stage checkbox retained.
+
+Expanded eight to fourteen stages and 20 to 41 complete human target recordings.
+New initial f/n/l/sch and b/d/g/h; final f/s/sch/t/k; more monosyllabic words; reading
+and block-building Fisch/Schaf/Hut/Ball with sch/ll. These are natural whole-word
+context exercises, not unverified isolated consonant samples or letter names.
+Nine full-sentence Piper instructions and one own nonverbal effect; 51 active clips
+plus three historical adult comparisons. Individual sources/licenses/hashes retained.
+Five optional words hit Commons HTTP 429 after bounded retries and were omitted;
+all current references resolve. Full pronunciation/listening approval remains pending.
+
+Existing v3 storage schema/keys, v2 migration, exact solved/partial resume and eight
+profiles remain. Saved learners stay accessible on the same HTTPS origin after
+renaming the path. Navigation cancels timers/audio; paused solved answers cannot
+score twice. Optional feedback failure does not block progression.
+
+Repository rename verified: new Git origin/read access works; new Pages base
+https://patrickjendritza.com/phonics-lab/ responds HTTP 200; old /Kalulu-DE/ is 404.
+Updated source links/test prefix/verifier default; no Pages settings or new hosting.
+
+## Executed checks on this version
+
+```sh
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py --instructions-only
+python3 scripts/make_feedback.py
+node --test tests/learning.test.mjs tests/content.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+# Existing server, with preview/phonics-lab -> ../site:
+python3 -m http.server 8070 --directory /workspace/kalulu-browser-build
+node tests/browser.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+```
+
+All passed. 16 Node learning/content tests cover all 14 stages, exact level goals,
+fractional blocks, demonstration/mastery separation, accuracy adaptation, validation,
+profile migration/resume and pinned human cue provenance. All 51 current MP3s pass
+nonzero/headroom/quiet-ending audit. Full browser suite uses real MP3 playback
+(initial natural speed, later accelerated media), not mocked success. It verifies
+automatic advancement, cumulative progress, wrong-answer stability, pause/resume
+without duplicate reward, every new exercise type/goal, sch blocks, profiles and
+backup/import, retries, optional effect failure, 54 MP3 decodes, review filters,
+legacy migration, keyboard and cache queries. No page errors/external runtime requests.
+
+Mobile emulation at 320x568, 390x844 and 768x1024 passes: start above fold, visible
+progress, sch bank accessibility, no horizontal overflow and reduced-motion handling.
+Additional 320x568 four-word-choice check: all choices visible, final row ends at
+462.55 px. Profile suite verifies all 14 earned stages remain selectable, independent
+review, name escaping, confirmed reset/deletion, eight-profile cap and v2 backup.
+Word-hint regression confirms correct partial blocks do not count as mistakes.
+
+Evidence in docs/verification/2026-10-18: browser.json, mobile.json, profiles.json,
+audio-audit.json, word-hints.json. Browser evidence binds exact app SHA256
+93c3228db761c9aafda96cd27721154651ee985fd629df0040faad8135231bbd.
+Screenshots/builds outside Git. Tools: Python 3.12.14, Playwright 1.62.1, Chromium154.
+
+Publication: pending final clean source commit/push, clean rebuild, normal gh-pages
+push and certificate-verified live hash audit. Do not call this version live until
+that audit passes. Existing site currently holds the prior branded app.
+
+## Next action and limits
+
+Finish the publication above and record exact app/deployment SHAs and final bytes.
+Then user tests new link, existing profile resume, automatic answers and stage-preview
+consonants on their phone, and reviews new words via Töne prüfen. Refine recordings/
+context instructions from native/educator feedback before expanding the curriculum.
+No new physical-phone test or native pronunciation certification is claimed.
+Public Chromium previously failed on cloud proxy CA; keep TLS verified. Local real
+browser checks plus all-live-byte HTTPS audit are separate from hardware playability.
+No accounts/sync/scheduling, paid dependencies, new hosting or bulk engine assets.
+
+---
+
+The following is historical v3 release context; its old paths/feature descriptions
+are superseded above. Earlier verification JSON revisions remain in Git history.
+
 # Phonics Lab status
 
 Updated 2026-10-18 (Europe/Berlin). Read AGENTS.md and recent Git history first.

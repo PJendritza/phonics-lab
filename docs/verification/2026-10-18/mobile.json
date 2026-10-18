@@ -1,9 +1,9 @@
 {
   "status": "passed",
   "checks": [
-    "320x568: play above fold; correct-answer arrow visible; no horizontal overflow in home/path/parents; reduced motion disables reward animation.",
-    "390x844: play above fold; correct-answer arrow visible; no horizontal overflow in home/path/parents; reduced motion disables reward animation.",
-    "768x1024: play above fold; correct-answer arrow visible; no horizontal overflow in home/path/parents; reduced motion disables reward animation."
+    "320x568: start above fold, cumulative progress, reduced motion, sch block bank visible, parents without horizontal overflow.",
+    "390x844: start above fold, cumulative progress, reduced motion, sch block bank visible, parents without horizontal overflow.",
+    "768x1024: start above fold, cumulative progress, reduced motion, sch block bank visible, parents without horizontal overflow."
   ],
-  "limitation": "Chromium mobile/tablet viewports, not new physical-device verification."
+  "limitation": "Chromium viewport emulation, not physical-device verification."
 }

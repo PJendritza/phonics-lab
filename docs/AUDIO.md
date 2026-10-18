@@ -1,14 +1,13 @@
-# Audio: natural German target recordings, spoken sentence guidance
+# Audio: human German targets and complete-sentence instructions
 
-20 complete human German recordings supply all sound/letter, syllable, final-sound
-and word tasks. 15 ordinary full-sentence instructions use Piper. No synthetic
-isolated vowel/consonant was added. Three old synthetic a/i/m clips remain only in
-collapsed adult A/B comparisons. The user confirmed the v2 audio was substantially
-better on their phone; the 12 added recordings still need specific listening review.
+41 complete human German recordings, nine full-sentence Piper instructions and one
+quiet nonverbal success chime. Three old synthetic a/i/m clips are adult-comparison
+only. No new synthetic isolated phoneme, cropped consonant/vowel or letter-name
+substitute. The user liked v2 on their phone; that does not approve new recordings.
 
-app/audio/manifest.json records every original source, speaker, original/output SHA256,
-license version, processing and pending review. docs/audio-sources.json preserves
-Commons metadata. The About page and Tonstudio display individual attribution.
+app/audio/manifest.json records individual speakers, source/license versions,
+original/output SHA256, processing and pending review. docs/audio-sources.json
+preserves Commons metadata. In-app About and Töne prüfen expose individual credits.
 
 | ID | Speaker | License | Original source |
 | --- | --- | --- | --- |
@@ -32,62 +31,87 @@ Commons metadata. The About page and Tonstudio display individual attribution.
 | mama | Bleibein | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Mama.ogg) |
 | mami | Dinock90 | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Mami.ogg) |
 | omi | Jeuwre | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Omi.ogg) |
+| fisch | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Fisch.ogg) |
+| feder | Jeuwre | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Feder.ogg) |
+| schaf | User:Tosca | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Schaf.ogg) |
+| schuh | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Schuh.ogg) |
+| nase | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Nase.ogg) |
+| loewe | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-L%C3%B6we.ogg) |
+| ball | Pill | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Ball.ogg) |
+| baum | joni | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Baum.ogg) |
+| dose | Jeuwre | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Dose.ogg) |
+| dach | Sicherlich | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Dach.ogg) |
+| gabel | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Gabel.ogg) |
+| gans | T.Voekler | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Gans.ogg) |
+| hut | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Hut.ogg) |
+| bus | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Bus.ogg) |
+| eis | Jeuwre | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Eis.ogg) |
+| tisch | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Tisch.ogg) |
+| rot | Bleibein | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-rot.ogg) |
+| auf | joni | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-auf.ogg) |
+| park | Kampy | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-Park.ogg) |
+| da | Dinock90 | CC BY-SA 4.0 | [Source](https://commons.wikimedia.org/wiki/File:De-da.ogg) |
+| du | joni | CC BY-SA 3.0 | [Source](https://commons.wikimedia.org/wiki/File:De-du.ogg) |
 
-Long vowels a/i/o/e/u retain their natural recordings. The m is the complete German
-hum from hm, not a clip cut out of a word. New n/l are introduced by listening for
-the **last sound in complete natural words**, never by playing German letter names
-“en” or “el” as phonemes. mal is /maːl/, nun /nuːn/; am /am/, im /ɪm/, um /ʊm/, an /an/
-and in /ɪn/ have short vowels. The short vowel is heard in its word context, not
-fabricated as a clipped isolated recording. ma uses the complete German word Ma
-as a practice syllable; mi uses the complete recorded German abbreviation /miː/.
-Both are labelled teaching syllables rather than ordinary child vocabulary.
+## Phonetic scope
 
-Oma/Omi/Mama/Mami play whole words; stress and unstressed vowel quality can vary
-between speakers. Where metadata did not establish the precise transcription,
-new word entries omit IPA rather than certify a guessed recording-specific form.
-Different voices/recording conditions remain audible; consistent purpose-recording
-with one native speaker is the next production-quality improvement if needed.
+Isolated a/i/o/e/u retain existing human recordings. m is the complete natural hum
+from hm. Short vowels are heard in whole am/im/um/an/in, never cut from words.
+ma/mi use whole recorded Ma and mi as teaching units. Whole nouns retain stress
+and vowel variation rather than synthesized one-letter/one-sound assumptions.
 
-## Processing and regeneration
+New consonants use whole human words for first/last-sound identification: f/n/l/sch,
+b/d/g/h initially, and f/s/sch/t/k finally. These are context exercises, not pure
+isolated phoneme recordings. Initial b/d/g avoid final devoicing; final s is /s/,
+not German initial voiced /z/. sch and ll are single blocks in relevant tasks.
+No guessed recording-specific IPA is certified. Mixed speakers remain audible;
+purpose-recording with one native speaker is a future quality improvement.
 
-Quiet margins shortened with 120/160 ms retained, -20 LUFS / -3 dB true-peak target,
-8 ms leading fade, 120 ms trailing pause; mono 44.1 kHz MP3, 80 kbps. No phoneme
-extraction, time stretching, pitch changes or stitched vowel-word synthesis. Original
-file checksums pin the downloaded licensed sources. Ordinary builds use committed
-MP3s and need neither a voice model nor an engine.
+21 new complete-word recordings were obtained with individual Commons metadata and
+pinned source hashes. Five optional candidates (das/bis/mit/gut/fit) hit HTTP 429
+after bounded retries and were omitted; no exercise references them. Do not keep
+retrying absent sources or manufacture isolated phonemes to fill gaps.
 
-Optional regeneration needs ffmpeg and an external Python environment with
-piper-tts==1.4.2 plus the pinned model and its .onnx.json config:
+## Reproduction
+
+Human processing: quiet margins shortened retaining 120/160 ms, -20 LUFS/-3 dB
+true-peak target, 8 ms leading fade, 120 ms trailing pad; mono 44.1 kHz 80 kbps MP3.
+No pitch/time manipulation, phoneme extraction or stitched speech. Ordinary builds
+use committed MP3s and need no synthesis engine/model.
+
+Optional regeneration requires ffmpeg and external piper-tts==1.4.2:
 
 ```sh
 /workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py
-# To preserve the processed human clips and regenerate only sentence guidance:
+# Sentence instructions only, preserving processed human clips/effect:
 /workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py --instructions-only
+python3 scripts/make_feedback.py
+python3 scripts/audit_audio.py
 ```
 
-Pass --cache and --model elsewhere. The manifest itself inventories all human
-recordings; adding clips does not require a second drifting hard-coded generator
-list. Missing originals are downloaded from their pinned URLs with TLS and SHA256
-checks. Sentence text lives in scripts/instructions.json. Comparison MP3s are already
-committed and are left untouched. Regeneration updates hashes; audit differences and
-repeat playback tests. Different ffmpeg/Piper versions may change output bytes.
+Pass --cache/--model for other external locations. Human sources are read from the
+manifest and downloaded via verified TLS with pinned hashes. The cache used for
+new original files is /workspace/phonics-audio-v4; earlier originals are under
+/workspace/kalulu-browser-audio. A full regeneration can download missing originals.
+Instructions live in scripts/instructions.json. prepare_audio.py preserves effects;
+make_feedback.py independently generates the own 240 ms two-note sine chime. No
+spoken success/retry/navigation clips remain in the active manifest. Different
+ffmpeg/Piper versions can change bytes; review hashes and rerun tests after changes.
 
-Piper voice: de_DE-thorsten-medium, revision c10ece1aade47bb51c153c893d14e5bf8e5b7117;
+Piper de_DE-thorsten-medium revision c10ece1aade47bb51c153c893d14e5bf8e5b7117,
 model SHA256 7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819.
-Model metadata MIT; Thorsten dataset CC0; model mentions Lessac fine-tuning. Piper’s
-GPL engine is a production tool outside the browser. Authored instruction collection:
-project CC BY-SA 4.0. Exact model source links are in each instruction’s manifest entry.
+Model metadata MIT; Thorsten dataset CC0; model mentions Lessac fine-tuning.
+GPL Piper is an external production tool, not shipped in the browser. Authored
+instructions/effect collection CC BY-SA 4.0; individual human licenses as above.
 
-## Reviewing and testing
+## Review and verification
 
-Tonstudio filters letters, syllables, words and instructions. Ratings/notes remain
-local and export as JSON with clip IDs/hashes; they never silently publish approval.
-Use normal phone speakers/headphones to check starts/ends, vowel length, stress and
-pure phoneme/context matches. An educator should review final-sound identification,
-capital letters, short-vowel teaching and overall progression.
+Töne prüfen filters letters, syllables, words, instructions and effects. Ratings/
+notes are local and export with clip hashes, never silently approving source audio.
+Use phone speakers/headphones to assess starts/ends, length, stress and context
+instructions. Native-speaker/educator review remains pending for added material.
 
-scripts/audit_audio.py decodes all current clips and checks nonzero PCM, peak headroom
-and quiet endings. Browser tests check actual audio playback, MP3 decode, retry and
-cancellation. None of those measurements proves that German pronunciation or a
-learning method is correct. Native listening, child observation and educator review
-remain separate evidence.
+Audit decodes all 51 current clips, checks nonzero PCM, peak headroom and quiet last
+50 ms. Browser tests decode all 54 MP3s including comparisons and exercise actual
+playback, retry/cancellation and optional feedback failure. Measurements do not
+prove pronunciation, instruction comprehensibility or educational efficacy.

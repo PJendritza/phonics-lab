@@ -3,7 +3,7 @@ import argparse,concurrent.futures,datetime,hashlib,json,urllib.parse,urllib.req
 from pathlib import Path
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--base',default='https://patrickjendritza.com/Kalulu-DE/');p.add_argument('--site',type=Path,default=Path('/workspace/kalulu-browser-build/site'));p.add_argument('--output',type=Path,default=Path('docs/verification/2026-10-18/live.json'));a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--base',default='https://patrickjendritza.com/phonics-lab/');p.add_argument('--site',type=Path,default=Path('/workspace/kalulu-browser-build/site'));p.add_argument('--output',type=Path,default=Path('docs/verification/2026-10-18/live.json'));a=p.parse_args()
  if not a.base.startswith('https://'):raise SystemExit('Public verification requires HTTPS.')
  info=json.loads((a.site/'BUILD_INFO.json').read_text())
  def verify(path):
