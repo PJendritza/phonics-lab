@@ -1,9 +1,10 @@
-# Kalulu-DE — Mein Lautgarten
+# Phonics Lab
 
-A small, calm German phonics app inspired by Kalulu’s staged sound-to-print learning.
+An experimental browser-based platform for phonics and early reading, starting with German.
+Inspired by Kalulu’s staged sound-to-print learning.
 Runs entirely in the browser: no installation, account, engine or moving targets.
 
-**[Start learning](https://patrickjendritza.com/Kalulu-DE/?v=3.0.0)** · **[Check the sounds](https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3.0.0)**
+**[Start learning](https://patrickjendritza.com/Kalulu-DE/?v=3.0.1)** · **[Check the sounds](https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3.0.1)**
 
 A large play button starts/resumes the right activity. Spoken instructions and a
 large next arrow let a child practise without reading a menu. Animal profiles keep
@@ -21,6 +22,11 @@ exact unfinished question or partial word. The previous demo’s progress migrat
 one profile. Parent tools export/restore all profiles and accept older backups.
 Data stays on that browser/device; use a backup to move it. No cloud synchronization
 or login. This is an expanded prototype, not a complete or validated reading course.
+
+The name **Phonics Lab** is independent of any activity theme. The current garden is
+one activity presentation. Repository rename to `phonics-lab` is pending; current
+links remain valid until then. See [rename steps](docs/RENAME.md) and the
+[agreed next-version list](docs/NEXT-VERSION.md).
 
 ## Run and test
 

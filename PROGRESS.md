@@ -1,7 +1,34 @@
-# Kalulu-DE status
+# Phonics Lab status
 
 Updated 2026-10-18 (Europe/Berlin). Read AGENTS.md and recent Git history first.
 Project: https://github.com/PJendritza/Kalulu-DE. Implemented on guided-learning; main now contains the released app and verification.
+
+## Latest task: Phonics Lab branding (3.0.1)
+
+The user chose **Phonics Lab**, independent of garden/space or other activity themes.
+Updated the app/header/home title, all three page titles and descriptions, About,
+README, project copyright label and backup download names. Kalulu remains credited
+as inspiration and historical source. Legacy storage keys and existing learner
+names/backups are preserved; changing branding must not reset saved progress.
+
+The GitHub repository is still **PJendritza/Kalulu-DE** until the user renames it.
+Recommended slug: **phonics-lab**. No repository rename or Pages setting was performed.
+Current external links deliberately retain the working old path. docs/RENAME.md
+contains precise UI steps, expected new project Pages path and the required checks.
+The publisher now uses origin instead of a hard-coded repository URL.
+
+The previous feedback's interaction changes are recorded in docs/NEXT-VERSION.md:
+minimal entrance, auto-advance, no spoken success praise, tiny nonverbal feedback,
+per-level visual progress and retained parent stage-preview access. They are not
+implemented by this branding change.
+
+Verification: 10 learning tests passed; 320x568, 390x844 and 768x1024 layout/reduced-
+motion checks passed; all three branded headers/titles/meta descriptions pass at
+320px. Full existing browser suite also passed, including profile migration, resume,
+renamed backup export, audio and later exercises. Evidence:
+branding.json and mobile.json under docs/verification/2026-10-18. At this source
+checkpoint the 3.0.1 branding publication is pending; the tested source/build and
+live file hashes will be recorded after publishing.
 
 ## User feedback and new goal
 
@@ -94,7 +121,7 @@ Evidence: docs/verification/2026-10-18/browser.json, profiles.json, mobile.json,
 audio-audit.json, word-hints.json. Screenshots remain outside Git under /workspace/kalulu-browser-build/.
 Tools: Python 3.12.14, Playwright 1.62.1, Chromium 154.0.8037.57.
 
-## Release checkpoint
+## Previous release checkpoint (3.0.0)
 
 Open the released app: https://patrickjendritza.com/Kalulu-DE/?v=3.0.0
 Tones: https://patrickjendritza.com/Kalulu-DE/audio-review.html?v=3.0.0

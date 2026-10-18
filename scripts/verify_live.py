@@ -8,7 +8,7 @@ def main():
  info=json.loads((a.site/'BUILD_INFO.json').read_text())
  def verify(path):
   name=str(path.relative_to(a.site));url=a.base.rstrip('/')+'/'+urllib.parse.quote(name)+'?release='+info['sourceCommit'][:12]
-  request=urllib.request.Request(url,headers={'User-Agent':'Kalulu-DE release verification','Cache-Control':'no-cache'})
+  request=urllib.request.Request(url,headers={'User-Agent':'Phonics Lab release verification','Cache-Control':'no-cache'})
   with urllib.request.urlopen(request,timeout=40) as response:data=response.read();status=response.status
   expected=hashlib.sha256(path.read_bytes()).hexdigest();actual=hashlib.sha256(data).hexdigest()
   if status!=200 or expected!=actual:raise RuntimeError('Live file differs: '+name)

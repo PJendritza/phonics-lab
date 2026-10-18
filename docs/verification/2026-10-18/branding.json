@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "pages": [
+    {
+      "page": "index.html",
+      "title": "Phonics Lab · Lesen lernen",
+      "brand": "Phonics Lab",
+      "description": "Phonics Lab: lautbasierte Leseübungen im Browser mit gesprochenen Anleitungen und persönlichen Lernprofilen."
+    },
+    {
+      "page": "audio-review.html",
+      "title": "Töne prüfen · Phonics Lab",
+      "brand": "Phonics Lab",
+      "description": "Die Sprachaufnahmen von Phonics Lab anhören, vergleichen und bewerten."
+    },
+    {
+      "page": "about.html",
+      "title": "Über Phonics Lab",
+      "brand": "Phonics Lab",
+      "description": "Das Lernprinzip, die Quellen und die Geschichte von Phonics Lab."
+    }
+  ],
+  "viewport": "320x568",
+  "note": "Legacy learner and review storage keys intentionally retained."
+}

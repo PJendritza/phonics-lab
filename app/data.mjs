@@ -1,4 +1,4 @@
-export const VERSION='3.0.0';
+export const VERSION='3.0.1';
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},

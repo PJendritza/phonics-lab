@@ -1,8 +1,15 @@
-# Kalulu-DE development instructions
+# Phonics Lab development instructions
 
 Read this file, PROGRESS.md and recent Git history before continuing. Canonical
 repository: https://github.com/PJendritza/Kalulu-DE. Use /workspace/Kalulu-DE;
 do not recreate tmp or create worktrees without a specific need/request.
+
+Product name: Phonics Lab. Repository slug is still Kalulu-DE until the user renames
+it to phonics-lab. See docs/RENAME.md before updating origins or public URLs. Keep
+legacy storage keys and existing backups compatible. Keep Kalulu inspiration and
+source/license credits in About; historical records retain their original names.
+The next interaction changes are specified in docs/NEXT-VERSION.md, not implemented
+as part of the branding update.
 
 Current goal: a calm, lightweight German phonics app using plain HTML/CSS/ES
 modules. No game engine, moving answer targets, countdowns, speed scoring or lost

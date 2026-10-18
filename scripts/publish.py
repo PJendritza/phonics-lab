@@ -6,7 +6,6 @@ branch, with a normal non-force push. Old exports remain in archive tags.
 import argparse,hashlib,json,shutil,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-REMOTE='https://github.com/PJendritza/Kalulu-DE.git'
 def run(*cmd,cwd=ROOT):return subprocess.check_output(cmd,cwd=cwd,text=True).strip()
 def main():
  p=argparse.ArgumentParser();p.add_argument('--site',type=Path,default=Path('/workspace/kalulu-browser-build/site'));p.add_argument('--checkout',type=Path,default=Path('/workspace/kalulu-browser-build/publish'));a=p.parse_args();site=a.site.resolve();checkout=a.checkout.resolve()
@@ -27,13 +26,14 @@ def main():
  if run('git','rev-parse','origin/main')!=commit:raise SystemExit('Push the tested source to main first.')
  if checkout.exists():raise SystemExit('Choose a new deployment checkout path; existing directories are preserved.')
  if checkout==ROOT or ROOT in checkout.parents or checkout==site or site in checkout.parents:raise SystemExit('Use an external deployment checkout.')
- run('git','clone','--depth','1','--single-branch','--branch','gh-pages',REMOTE,str(checkout))
+ remote=run('git','remote','get-url','origin')
+ run('git','clone','--depth','1','--single-branch','--branch','gh-pages',remote,str(checkout))
  run('git','rm','-r','--ignore-unmatch','.',cwd=checkout)
  for source in site.iterdir():
   target=checkout/source.name
   if source.is_dir():shutil.copytree(source,target)
   else:shutil.copy2(source,target)
  run('git','add','--all',cwd=checkout)
- run('git','commit','-m',f'Publish calm browser demo from {commit[:12]}',cwd=checkout)
+ run('git','commit','-m',f'Publish Phonics Lab from {commit[:12]}',cwd=checkout)
  print(run('git','push','origin','gh-pages',cwd=checkout));print('Deployment commit:',run('git','rev-parse','HEAD',cwd=checkout))
 if __name__=='__main__':main()

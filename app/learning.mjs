@@ -4,7 +4,7 @@ const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const integer=(v,max=1e7)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
 const id=()=>globalThis.crypto?.randomUUID?.()??`child-${Date.now()}-${Math.floor(Math.random()*1e6)}`;
 export function freshProgress(){return {version:3,skills:{},stages:{},sessions:0,seeds:0,pending:null};}
-export function createProfile(name='Mein Garten',avatar=AVATARS[0]){return {id:id(),name:name.trim().slice(0,24)||'Mein Garten',avatar,progress:freshProgress()};}
+export function createProfile(name='Mein Profil',avatar=AVATARS[0]){return {id:id(),name:name.trim().slice(0,24)||'Mein Profil',avatar,progress:freshProgress()};}
 export function freshStore(){const p=createProfile();return {version:3,activeId:p.id,profiles:[p]};}
 export const activeProfile=store=>store.profiles.find(p=>p.id===store.activeId);
 export function shuffled(items,rng=Math.random){const out=[...items];for(let i=out.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;}

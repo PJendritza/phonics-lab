@@ -1,4 +1,8 @@
-# Browser-first architecture (v3)
+# Phonics Lab browser architecture (v3)
+
+Phonics Lab is independent of the current garden theme. Legacy storage keys retain
+their old names to preserve existing learners. Repository/Pages paths stay unchanged
+until the user performs the repository rename.
 
 app/ is a static HTML/CSS/ES-module website. No engine, framework, server API,
 service worker, WASM, cross-origin isolation or runtime package. Relative URLs work
