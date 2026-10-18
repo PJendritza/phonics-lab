@@ -1,4 +1,4 @@
-# Phonics Lab browser architecture (v5)
+# Phonics Lab browser architecture (v6)
 
 Static HTML/CSS/ES modules. No engine/framework, API, service worker, WASM,
 cross-origin isolation or runtime package. Relative paths work under /phonics-lab/.
@@ -8,22 +8,24 @@ The complete packaged site remains below 1 MB.
   grapheme-block overrides, avatars and app version. Content is separate from theme.
 - learning.mjs: pure questions, accuracy/mastery, validation/migration, profiles,
   fixed level goals, a forward continuation cursor, per-level paused sessions and fractional per-block progress. Introductions are excluded
-  from mastery. New stages append without changing original stage IDs.
+  from mastery. New stages append without changing original stage IDs. Only Level 1 introduces unseen targets with one option; later tasks start with multiple choices.
 - main.mjs: minimal start, automatic answer flow, cumulative meter/flower field,
   parent stage preview and profile tools. Save each response before scheduling
   advancement. Cancel timers and playback on navigation; a solved resumed question
   advances without scoring twice. Wrong choices keep the same question and order.
 - audio.mjs: shared target/instruction HTMLAudioElement with cancellation tokens;
   required playback gates answers and offers retry on failure. Separate preloaded
-  quiet effect element never gates progression. No spoken success/retry praise. Wrong answers play the selected human recording/context; choices wait for its completion, and replay cancels it in favor of the original target.
+  quiet effect element never gates progression. No spoken success/retry praise. Wrong letters play the selected isolated phoneme clip; whole-word choices play that selected word; choices wait for its completion, and replay cancels it in favor of the original target.
 - review.mjs: sources, licenses, category filters, local listening notes/export,
   optional old synthetic comparisons. Ratings never silently publish approval.
 
 Bundled fonts are pinned Andika 7.000 Latin WOFF2 subsets with cv39 curved l. Their internal family is renamed Phonics Lesson under OFL reserved-name rules. Content-hashed filenames prevent stale font mixing. No external font runtime requests.
 
+A round now has optional backward-compatible help and misses fields. Two errors set help=pending. Wrong-option audio completes before showHelp changes it to show, at which point only the correct choice is interactive (invisible placeholders preserve the old positions). The original task cue plays. A guided tap sets ack without changing position, goal progress or score; after 340 ms resumePractice restores the original choices and replays the task. Existing mistake counts prevent first-try mastery. Navigation cancels transitions; reload resumes show or returns from ack without duplicate rewards. Correct normal blocks reset misses, so assistance is specific to the current block. Untouched older later-stage introductions migrate to choices; attempted/solved questions retain their original meaning.
+
 ## State contract
 
-App version 5.0.0 intentionally retains data version 3 and key kalulu-de:learners:v3:
+App version 6.0.0 intentionally retains data version 3 and key kalulu-de:learners:v3:
 {version:3,activeId,profiles:[{id,name,avatar,progress}]}. Progress holds skills,
 stages, sessions, legacy seeds and pending, paused and continuation. Session count represents completed
 practice levels/flowers; independent mastery is separate. Original nine-question
@@ -63,3 +65,5 @@ profiles/partial/solved resume, actual MP3 playback, auto transitions, failed me
 stationary errors, parent previews, backups/migration, sch/ll, keyboard and mobile
 320/390/768px layouts. Browser checks bind evidence to the app hash. Public byte
 verification and mobile emulation do not certify real-phone playback or phonetics.
+
+Packaging minifies JSON in the generated copy only, retaining all source/license fields and readable source manifests. Eleven new consonant clips remain below the existing 1 MB total budget. See docs/PHONEMES.md for source segments and limits.

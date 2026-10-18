@@ -1,3 +1,29 @@
+# v6 update: choice-first practice and isolated feedback
+
+Implemented from the user's latest phone feedback; release status in PROGRESS.md.
+
+- [x] Only Level 1 introduces unseen targets with one choice. Later levels begin
+      directly with multiple choices; later word building has no copying model.
+- [x] Two mistakes per question/current block trigger a one-choice teaching step:
+      first the selected wrong sound, then the original task cue with only the
+      correct answer. The guided tap earns nothing extra; original choices return
+      for another attempt, preserving order and error history. No false mastery.
+- [x] Preserve help phases and partial words through pause, level switches, reload,
+      backup and import. Untouched older later-stage introductions become choices.
+- [x] Enlarge the flower and improve its contrast. Keep seven sparkles, with larger,
+      darker particles moving in from outside; retain reduced-motion support.
+- [x] Wrong letters play only that selected sound, including the Fisch → wrong f
+      case; never unrelated words or letter names. Original German words remain
+      task cues; a wrong whole-word choice plays that selected word.
+- [x] Eleven licensed Kalulu phonics extracts with original hashes, selected
+      intervals and processing/rights notes; dedicated Einzellaute review filter.
+      German listening review remains pending, especially stops and h.
+
+These supersede v5's whole-word fallback for unavailable consonants. No paid API,
+new model, engine, hosting configuration or learning-target expansion in this update.
+
+---
+
 # v5 update: feedback from the v4 phone test
 
 Implemented October 18. Exact tests and publication status are in PROGRESS.md.

@@ -28,7 +28,7 @@ ll is one doubled-consonant spelling block. These tasks introduce block matching
 not a claim that all German sound/spelling relationships are one-to-one.
 ma/mi use whole recorded Ma and mi as teaching units. Natural words preserve short
 vowels, coarticulation and stress; vowels/consonants are never cropped from them.
-Consonant context identification is distinct from isolated-phoneme training. Initial
+Consonant context identification still uses complete German task words. Feedback for a selected letter uses that isolated phone; no unrelated context word is played. See docs/PHONEMES.md for the shared Kalulu phonics sources and pending listening review. Initial
 b/d/g avoid German final devoicing; final s here is /s/, not voiced initial /z/.
 Some targets have only one context word; expand after native/educator review.
 
@@ -41,7 +41,7 @@ French mappings were not copied into German. Kalulu research does not validate t
 Minimal entry: animal profile plus large play/continue. Spoken instruction and replay
 let nonreaders practise. Correct answers give a brief nonverbal chime/check and small local sparkle and advance
 automatically after about 340 ms. No per-answer next button or spoken praise. Incorrect
-answers play the selected option’s human recording or whole-word context, stay with stable choices and allow replay/time; two mistakes can reveal quiet help.
+letters play only the selected isolated sound; wrong whole-word choices play that word. After two mistakes, show only the correct answer with the original task cue, then restore the same choices. Guided taps earn no extra points or progress. Correct normal answers alone finish the question. Choice positions remain stable; no speed pressure.
 
 The level meter has a fixed total: fourteen questions for the original stages, 12–18 for
 new ones (about 50% longer). Existing saved goals retain their original totals. Never finish early. Every correct selection moves the cumulative meter;
@@ -49,7 +49,7 @@ a correct block is a fraction of its word question. Completing the goal produces
 flower and a level-boundary play button. A flower rewards practice even if assisted;
 it is separate from mastery. Completed levels accumulate in the flower field.
 
-Introductions/model copying earn practice progress but no independent mastery.
+Only Level 1 uses one-choice introductions, which earn practice progress but no independent mastery. Later levels start immediately with multiple choices, without copying models. Guided help appears after two mistakes per question/block. It never grants independent success or doubles the question award.
 Mastery requires two recent first-try independent successes and >=75% across the
 last up to four. All stage targets must qualify to unlock the next guided stage.
 If not, the next practice stays in the current level, favoring weak/underexposed material.

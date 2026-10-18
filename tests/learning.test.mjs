@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {freshProgress,freshStore,createProfile,activeProfile,validateProgress,validateStore,migrateLegacy,readStored,saveStored,startSession,answer,advance,mastered,stageMastered,recommended,difficulty,levelProgress,availableThrough} from '../app/learning.mjs';import {STAGES,skillKey,lettersFor,CONTEXTS,levelGoal,choiceFeedback} from '../app/data.mjs';
+import {freshProgress,freshStore,createProfile,activeProfile,validateProgress,validateStore,migrateLegacy,readStored,saveStored,startSession,answer,advance,mastered,stageMastered,recommended,difficulty,levelProgress,availableThrough,showHelp,resumePractice} from '../app/learning.mjs';import {STAGES,skillKey,lettersFor,CONTEXTS,levelGoal,choiceFeedback} from '../app/data.mjs';
 const rng=()=>0.4;
 function solve(p,wrong=false){const s=STAGES.find(s=>s.id===p.pending.stageId),r=p.pending.round;if(wrong){const incorrect=r.choices.find(c=>c!==(s.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target));if(incorrect)p=answer(p,incorrect).progress;}if(s.mode==='build'){while(!p.pending.round.solved){const r=p.pending.round;p=answer(p,lettersFor(r.target)[r.position].toLowerCase()).progress;}}else p=answer(p,r.target).progress;return p;}
 test('guided start, introductory answers and repeated taps do not create mastery',()=>{const original=freshProgress();let p=startSession(original,'letters',rng);const target=p.pending.round.target;assert.equal(p.pending.round.choices.length,1);p=solve(p);assert.equal(p.skills['sound:'+target].introduced,true);assert.equal(p.skills['sound:'+target].seen,0);assert.equal(p.seeds,1);const second=answer(p,target);assert.strictEqual(second.progress,p);assert.equal(second.progress.seeds,1);assert.equal(mastered(p.skills['sound:'+target]),false);assert.deepEqual(original,freshProgress());});
@@ -54,10 +54,41 @@ test('malformed paused levels and out-of-range goals are rejected without touchi
  }
  assert.equal(p.pending.total,14);assert.deepEqual(p.paused,{});
 });
-test('wrong-option feedback uses the clicked sound or an explicit human consonant context',()=>{
+test('wrong-option feedback plays only the selected phoneme, never another word or instruction',()=>{
  assert.deepEqual(choiceFeedback(STAGES[0],'i').audio,['i']);
- assert.deepEqual(choiceFeedback(STAGES[8],'sch').audio,['schaf']);
- assert.deepEqual(choiceFeedback(STAGES[10],'s').audio,['bus']);
- assert.deepEqual(choiceFeedback(STAGES[13],'n').audio,['onset','nase']);
- assert.deepEqual(choiceFeedback(STAGES[13],'ll').audio,['ending','ball']);
+ assert.deepEqual(choiceFeedback(STAGES[8],'sch').audio,['phoneme_sch']);
+ assert.deepEqual(choiceFeedback(STAGES[10],'s').audio,['phoneme_s']);
+ assert.deepEqual(choiceFeedback(STAGES[13],'n').audio,['phoneme_n']);
+ assert.deepEqual(choiceFeedback(STAGES[13],'ll').audio,['phoneme_l']);
+});
+
+
+test('later levels immediately offer independent choices, with no copied word model',()=>{
+ for(const s of STAGES.slice(1)){const p=startSession(freshProgress(),s.id,rng);assert.equal(p.pending.round.demonstration,false,s.id);assert.ok(p.pending.round.choices.length>=2,s.id);}
+ const first=startSession(freshProgress(),'letters',rng);assert.equal(first.pending.round.demonstration,true);assert.equal(first.pending.round.choices.length,1);
+});
+test('two mistakes trigger teaching; the obvious guided tap earns no progress or first-try mastery',()=>{
+ let p=startSession(freshProgress(),'onsets',rng);const r=p.pending.round,wrong=r.choices.find(c=>c!==r.target),choices=[...r.choices];
+ p=answer(p,wrong).progress;assert.equal(p.pending.round.help,null);
+ p=answer(p,wrong).progress;assert.equal(p.pending.round.help,'pending');assert.equal(levelProgress(p).value,0);
+ assert.strictEqual(answer(p,r.target).progress,p);p=showHelp(p);assert.equal(p.pending.round.help,'show');
+ assert.strictEqual(answer(p,wrong).progress,p);const tap=answer(p,r.target);p=tap.progress;
+ assert.equal(tap.teaching,true);assert.equal(p.seeds,0);assert.equal(p.skills['start:'+r.target],undefined);assert.equal(p.pending.round.help,'ack');
+ assert.deepEqual(validateProgress(p),p);assert.strictEqual(answer(p,r.target).progress,p);
+ p=resumePractice(p);assert.deepEqual(p.pending.round.choices,choices);assert.equal(p.pending.round.help,null);assert.equal(p.pending.round.tries,2);
+ p=answer(p,r.target).progress;assert.equal(p.seeds,1);assert.equal(p.skills['start:'+r.target].first,0);assert.equal(p.skills['start:'+r.target].recent.at(-1),0);
+});
+test('partial-word help is local to the current block and its state survives pause/restore',()=>{
+ let p=startSession(freshProgress(),'more_build',rng);p=answer(p,'f').progress;assert.equal(p.pending.round.position,1);
+ p=answer(p,'sch').progress;p=answer(p,'sch').progress;assert.equal(p.pending.round.help,'pending');
+ p=validateProgress(JSON.parse(JSON.stringify(p)));p=showHelp(p);p=answer(p,'i').progress;assert.equal(p.pending.round.position,1);assert.equal(levelProgress(p).value,1/3);
+ p=validateProgress(p);p=resumePractice(p);p=answer(p,'i').progress;assert.equal(p.pending.round.position,2);assert.equal(p.pending.round.misses,0);
+ p=answer(p,'f').progress;assert.equal(p.pending.round.help,null);p=answer(p,'f').progress;assert.equal(p.pending.round.help,'pending');
+});
+test('untouched old later introductions become choice questions while attempted work is preserved',()=>{
+ let p=startSession(freshProgress(),'endings',rng);p.pending.round.demonstration=true;p.pending.round.choices=[p.pending.round.target];delete p.pending.round.help;delete p.pending.round.misses;
+ const migrated=validateProgress(p);assert.equal(migrated.pending.round.demonstration,false);assert.equal(migrated.pending.round.choices.length,2);assert.equal(migrated.pending.round.target,p.pending.round.target);
+ const oldErrors=structuredClone(p);oldErrors.pending.round.demonstration=false;oldErrors.pending.round.choices=[oldErrors.pending.round.target,'n'];oldErrors.pending.round.tries=2;assert.equal(validateProgress(oldErrors).pending.round.help,'pending');
+ p.pending.round.tries=1;p.pending.round.solved=true;const oldSolved=validateProgress(p);assert.equal(oldSolved.pending.round.demonstration,true);assert.equal(oldSolved.pending.round.choices.length,1);
+ for(const mutate of [v=>v.pending.round.help='bogus',v=>{v.pending.round.help='show';v.pending.round.misses=0;},v=>v.pending.round.misses=-1]){const invalid=startSession(freshProgress(),'onsets',rng);mutate(invalid);assert.throws(()=>validateProgress(invalid));}
 });

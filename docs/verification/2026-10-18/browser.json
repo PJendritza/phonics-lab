@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
     "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. Full 14/14 goal earns a flower.",
@@ -228,9 +228,53 @@
     {
       "src": "audio/word_blocks.mp3?v=3e57694da9e7",
       "duration": 5.3478
+    },
+    {
+      "src": "audio/phoneme_f.mp3?v=0856928ae316",
+      "duration": 0.734376
+    },
+    {
+      "src": "audio/phoneme_n.mp3?v=b1e8071c6aa9",
+      "duration": 0.907438
+    },
+    {
+      "src": "audio/phoneme_l.mp3?v=69da89f7771a",
+      "duration": 0.809388
+    },
+    {
+      "src": "audio/phoneme_s.mp3?v=0be902ae6256",
+      "duration": 0.844535
+    },
+    {
+      "src": "audio/phoneme_sch.mp3?v=fbcb439aa715",
+      "duration": 0.860726
+    },
+    {
+      "src": "audio/phoneme_b.mp3?v=834e3e54a5fd",
+      "duration": 0.58322
+    },
+    {
+      "src": "audio/phoneme_d.mp3?v=4032baf075b1",
+      "duration": 0.569705
+    },
+    {
+      "src": "audio/phoneme_g.mp3?v=e5d478b59e11",
+      "duration": 0.595737
+    },
+    {
+      "src": "audio/phoneme_t.mp3?v=6bb1218a8023",
+      "duration": 1.110068
+    },
+    {
+      "src": "audio/phoneme_k.mp3?v=388c0d8dc831",
+      "duration": 0.443129
+    },
+    {
+      "src": "audio/phoneme_h.mp3?v=f49e28f9222a",
+      "duration": 0.330023
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "fe987b493899f447d07e29386db37d50aad6459df1ea459a786ff0dde3bb5bbf"
+  "appSha256": "1d1af35b9128081edc001e641ce3f8fa77bf627ecf644e71957eb9d26964c7fb"
 }

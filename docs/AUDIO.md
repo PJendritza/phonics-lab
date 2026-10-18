@@ -1,9 +1,9 @@
 # Audio: human German targets and complete-sentence instructions
 
-41 complete human German recordings, nine full-sentence Piper instructions and one
+41 complete human German target recordings, 11 isolated Kalulu phonics feedback clips, nine full-sentence Piper instructions and one
 quiet nonverbal success chime. Three old synthetic a/i/m clips are adult-comparison
-only. No new synthetic isolated phoneme, cropped consonant/vowel or letter-name
-substitute. The user liked the human targets on their phone and approved the Thorsten High sample direction, then requested 1.5 with a 0.3-second sentence pause. This is not blanket phonetic approval of every regenerated instruction.
+only. No new synthetic isolated phoneme or letter-name substitute; no consonant
+or vowel was cropped from a word. The user liked the human targets on their phone and approved the Thorsten High sample direction, then requested 1.5 with a 0.3-second sentence pause. This is not blanket phonetic approval of every regenerated instruction.
 
 app/audio/manifest.json records individual speakers, source/license versions,
 original/output SHA256, processing and pending review. docs/audio-sources.json
@@ -60,9 +60,8 @@ from hm. Short vowels are heard in whole am/im/um/an/in, never cut from words.
 ma/mi use whole recorded Ma and mi as teaching units. Whole nouns retain stress
 and vowel variation rather than synthesized one-letter/one-sound assumptions.
 
-New consonants use whole human words for first/last-sound identification: f/n/l/sch,
-b/d/g/h initially, and f/s/sch/t/k finally. These are context exercises, not pure
-isolated phoneme recordings. Initial b/d/g avoid final devoicing; final s is /s/,
+Task cues use whole human words for first/last-sound identification: f/n/l/sch,
+b/d/g/h initially, and f/s/sch/t/k finally. These task cues are context exercises. Wrong-letter feedback now uses the isolated clips detailed in docs/PHONEMES.md rather than context words. Initial b/d/g avoid final devoicing; final s is /s/,
 not German initial voiced /z/. sch and ll are single blocks in relevant tasks.
 No guessed recording-specific IPA is certified. Mixed speakers remain audible;
 purpose-recording with one native speaker is a future quality improvement.
@@ -111,7 +110,17 @@ notes are local and export with clip hashes, never silently approving source aud
 Use phone speakers/headphones to assess starts/ends, length, stress and context
 instructions. Native-speaker/educator review remains pending for added material.
 
-Audit decodes all 51 current clips, checks nonzero PCM, peak headroom and quiet last
-50 ms. Browser tests decode all 54 MP3s including comparisons and exercise actual
+Audit decodes all 62 current clips, checks nonzero PCM, peak headroom and quiet last
+50 ms. Browser tests decode all 65 MP3s including comparisons and exercise actual
 playback, retry/cancellation and optional feedback failure. Measurements do not
 prove pronunciation, instruction comprehensibility or educational efficacy.
+
+## Isolated wrong-letter feedback (v6)
+
+Eleven licensed Kalulu phonics extracts provide f/n/l/s/sch/b/d/g/t/k/h; existing human vowel/m clips and l for ll complete the feedback map. See [source/processing details](PHONEMES.md). No original German word was cropped, replaced or synthesized. These recordings are phonetic transfers from French/Portuguese teaching assets, not certified native-German speech. Their source segments and pending review are visible in the manifest/review page. In a letter task, only the selected phone plays; in a word-reading task, the selected word still plays.
+
+```sh
+python3 scripts/prepare_phonemes.py
+```
+
+This optional regeneration uses ffmpeg and pinned upstream URLs/hashes, with originals cached outside source. prepare_audio.py preserves these phoneme entries when regenerating sentence guidance. The original 41 German targets and nine approved instruction MP3s remain byte-identical in this update.

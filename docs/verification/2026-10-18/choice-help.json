@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": [
+    "Fresh later levels start with multiple choices and later word building has no copied model.",
+    "One mistake plays only the chosen phoneme; two play the wrong phoneme then the original task cue with one correct choice at its original position.",
+    "Teaching taps do not advance the goal, award points or confer first-try mastery; original choices resume even after pause/reload.",
+    "Fisch end-sound task with wrong f plays exactly phoneme_f.mp3; failed second-error audio recovers through replay into teaching without scoring.",
+    "Block-specific assistance survives level switching/reload; guided blocks do not move word position or double-score.",
+    "The flower is larger, seven sparkles have larger visible particles, and the review page offers all 11 isolated sounds."
+  ],
+  "pageErrors": []
+}

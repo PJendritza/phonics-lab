@@ -1,9 +1,9 @@
 {
   "status": "passed",
   "checks": [
-    "320x568: start above fold, cumulative progress, reduced motion, sch bank visible, wrong-context feedback stays fixed, parents without horizontal overflow.",
-    "390x844: start above fold, cumulative progress, reduced motion, sch bank visible, wrong-context feedback stays fixed, parents without horizontal overflow.",
-    "768x1024: start above fold, cumulative progress, reduced motion, sch bank visible, wrong-context feedback stays fixed, parents without horizontal overflow."
+    "320x568: start above fold, cumulative progress, reduced motion, larger flower, sch bank and four word choices visible, isolated-sound feedback stays fixed, parents without horizontal overflow.",
+    "390x844: start above fold, cumulative progress, reduced motion, larger flower, sch bank and four word choices visible, isolated-sound feedback stays fixed, parents without horizontal overflow.",
+    "768x1024: start above fold, cumulative progress, reduced motion, larger flower, sch bank and four word choices visible, isolated-sound feedback stays fixed, parents without horizontal overflow."
   ],
   "limitation": "Chromium viewport emulation, not physical-device verification."
 }

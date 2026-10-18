@@ -1,3 +1,98 @@
+# Phonics Lab v6 status
+
+Updated 2026-10-18 (Europe/Berlin). Repository:
+https://github.com/PJendritza/phonics-lab . Branch: choice-first-sound-feedback.
+Read AGENTS.md and recent Git history. Checkout stays /workspace/Kalulu-DE.
+
+## Implemented from the latest phone feedback
+
+- Later levels (2–14) start immediately with multiple choices, including word
+  building without a copied model. Level 1 retains first-sound introductions.
+- After two mistakes per question/current block, the selected wrong sound finishes,
+  then the original task cue plays with only the correct answer interactive.
+  Invisible placeholders preserve that answer's old location. A teaching tap gives
+  the normal small confirmation but no extra progress/point or independent mastery;
+  the original choices return for another try. Error history makes first-try false.
+- help=pending/show/ack and misses are saved per round. Pause, level switches and
+  reload preserve teaching/partial states without duplicate rewards. Old untouched
+  later introductions upgrade to choices; attempted/solved work keeps its meaning.
+  Old non-building questions with two recorded mistakes resume with help.
+- Wrong letters now route through PHONEMES to one isolated sound, with no unrelated
+  word or prefixed whole beginning/ending instruction. ll shares l. A selected
+  whole word in a word-reading task still plays that exact word. Original whole
+  German task cues, all 41 human targets and all nine Thorsten High instructions
+  remain unchanged byte for byte.
+- Eleven CC BY-SA 4.0 extracts from pinned original Kalulu language assets. Ten
+  complete first standalone French phones before a long pause; h is the breath
+  portion of a dedicated Portuguese /h/ sound asset, excluding its voiced release.
+  No word was cropped. Source hashes, intervals, attribution and processing are
+  explicit; sources are not certified native-German recordings. See PHONEMES.md.
+  New clips are easy to audition via Töne prüfen → Einzellaute; stops/h especially
+  need listening review. No new synthesis engine or paid generation.
+- Flower width increased to 62–76px, stronger petals/center contrast. The same seven
+  particles are larger (9×12px), darker and move inward from a wider radius. No
+  answer-target movement, longer success delay or added particle count. Reduced
+  motion retains the static check/meter. Four word choices still fit at 320×568.
+- Generated JSON is minified without removing provenance/license fields. Readable
+  source manifests remain; build stays below the existing 1 MB budget.
+
+## Executed checks
+
+```sh
+python3 scripts/prepare_phonemes.py
+node --test tests/learning.test.mjs tests/content.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+# Existing local server: /workspace/kalulu-browser-build, port 8070,
+# preview/phonics-lab -> ../site
+node tests/browser.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+```
+
+27 pure/content tests passed, covering choice-first stages, assisted states, old
+save migration, no guided scoring/mastery, source hashes and sound-only routing.
+Audio audit checks all 62 active files; original three adult comparisons are also
+browser-decoded. Mobile checks at 320×568/390×844/768×1024 cover the larger flower,
+fixed feedback layout, visible four-word choices and reduced motion. Profiles,
+word-hint and level-navigation regressions passed. Dedicated actual-playback tests
+verify the exact Fisch end-sound/wrong-f case, one-choice fallback and pause/reload.
+The final full-browser regression passed, including all 65 MP3 decodes, full
+levels, profiles/imports, keyboard, retry and automatic progression. Exact app hash:
+1d1af35b9128081edc001e641ce3f8fa77bf627ecf644e71957eb9d26964c7fb.
+Publication remains pending until all public bytes match the final tested build.
+The tested dirty package is 83 files, 993,426 bytes, still below 1 MB.
+
+Research/diagnosis: several Commons IPA demos explicitly include surrounding
+vowels ([afa]/[asa]/[aha]) and were rejected as direct feedback. Kalulu Look & Learn
+has a separate first isolated sound before a pause; spectrograms/source segmentation
+were inspected, and all original MP3s match the pinned LFS hashes. h is a short
+breath extract from a sound asset, not from a word. Added gentle trailing fades to
+avoid a hard noise boundary; final audit/browser checks are repeated on that audio.
+One new browser fixture initially omitted re-enabling parent preview after reload;
+corrected the test to use the UI checkbox rather than weakening level availability.
+Full runs were repeated after final media/page/migration changes. The browser
+runner now verifies that the served asset hash matches source at the start and that
+source remains unchanged through the run, preventing stale-package evidence.
+Final reliability corrections cover replay recovery when second-error phoneme
+playback fails and removing assisted highlights when returning to choices/next
+blocks. Dedicated browser regressions exercise both cases.
+
+## Pending release and next useful step
+
+Commit/push clean tested source, build and publish a fresh
+external gh-pages checkout, then run certificate-verified HTTPS hash audit. No
+settings/domain changes. Then user tests the v6 link and the new isolated sounds.
+Technical audio checks are not a native-speaker/educator listening approval. No
+physical-phone v6 playback test is claimed. Preserve the approved instruction voice
+(Thorsten High 1.5, added 0.3-second sentence pause) and existing local learners.
+
+---
+Historical v5 status below; current v6 notes supersede its context-word feedback.
+
 # Phonics Lab v5 status
 
 Updated 2026-10-18 (Europe/Berlin). Repository:

@@ -358,6 +358,83 @@
       "peak": 0.661,
       "last50msPeak": 0.0,
       "sha256": "3e57694da9e7125f68bb84c4b9edf3cb7a189f1f4e748a0bdce239675d85daf7"
+    },
+    {
+      "id": "phoneme_f",
+      "seconds": 0.734,
+      "peak": 0.3276,
+      "last50msPeak": 0.0,
+      "sha256": "0856928ae31621107a057edd54e649b76c308ccb4296cb1f7aef8d49dead50d7"
+    },
+    {
+      "id": "phoneme_n",
+      "seconds": 0.907,
+      "peak": 0.295,
+      "last50msPeak": 0.0,
+      "sha256": "b1e8071c6aa9b91702b91c9382c4a8168baec7de7ac49e5a3690d096ee753034"
+    },
+    {
+      "id": "phoneme_l",
+      "seconds": 0.809,
+      "peak": 0.2387,
+      "last50msPeak": 0.0,
+      "sha256": "69da89f7771a7e06cbfe91d424da0043a2595cca4e46b6b861f6e1b63114c4b0"
+    },
+    {
+      "id": "phoneme_s",
+      "seconds": 0.845,
+      "peak": 0.2684,
+      "last50msPeak": 0.0,
+      "sha256": "0be902ae62565b033f3b84f6d1ca0a0321d6a152c60301c3b64e41ddbda96512"
+    },
+    {
+      "id": "phoneme_sch",
+      "seconds": 0.861,
+      "peak": 0.335,
+      "last50msPeak": 0.0,
+      "sha256": "fbcb439aa715b25860c323e221ac66bda3c84cdbe55dd8caa8189ff2d909ea93"
+    },
+    {
+      "id": "phoneme_b",
+      "seconds": 0.583,
+      "peak": 0.6197,
+      "last50msPeak": 0.0,
+      "sha256": "834e3e54a5fdd0ab88f74169b8768cc06fc91166792aeffed2867b1a1f913016"
+    },
+    {
+      "id": "phoneme_d",
+      "seconds": 0.57,
+      "peak": 0.6217,
+      "last50msPeak": 0.0,
+      "sha256": "4032baf075b19369a11e9d08b3633891c4e5a546728069a5fa75dc2f3d77fd59"
+    },
+    {
+      "id": "phoneme_g",
+      "seconds": 0.596,
+      "peak": 0.57,
+      "last50msPeak": 0.0,
+      "sha256": "e5d478b59e11abd12929c064788f7ad47590e5438884b7d6de111f665c574e5d"
+    },
+    {
+      "id": "phoneme_t",
+      "seconds": 1.11,
+      "peak": 0.6646,
+      "last50msPeak": 0.0,
+      "sha256": "6bb1218a80238fc0a57bc1f7b5915fc7180ecc262f3772885d3b942b1bb41391"
+    },
+    {
+      "id": "phoneme_k",
+      "seconds": 0.443,
+      "peak": 0.6688,
+      "last50msPeak": 0.0,
+      "sha256": "388c0d8dc831cfb355c1e8f77ba4d0e7429dd2968ebfa0c9e76d62004bb17b78"
+    },
+    {
+      "id": "phoneme_h",
+      "seconds": 0.33,
+      "peak": 0.8015,
+      "last50msPeak": 0.0,
+      "sha256": "f49e28f9222a48291441997851fc1a823baf627d332ce51780bb09ba3f24ca09"
     }
   ]
 }

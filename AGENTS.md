@@ -18,7 +18,7 @@ about 340 ms after a complete response, with a small local sparkle and growing f
 next button. Every correct choice visibly advances the fixed level goal, including
 partial grapheme blocks. New goals are 12–18 questions; saved pending goals stay unchanged; never finish early. Completing
 a level adds a flower; this rewards practice, while independent accuracy separately
-controls mastery/unlocking. Wrong answers play the selected option’s human sound/context, keep choices stationary and award no progress. Never cover selected-option feedback with automatic original-target replay.
+controls mastery/unlocking. Wrong letters play only the selected isolated sound through PHONEMES, never another word or prefixed beginning/ending instruction. Wrong whole-word choices play that word. Keep choices stationary and award no progress. Never cover selected-option feedback with automatic original-target replay.
 Animations affect feedback/progress only; respect reduced motion. Successful current levels advance to the next numbered level, even with unfinished earlier levels; never automatically select an earlier weak stage. Earlier review and post-final-level review are explicit choices. A level-boundary
 play button is intentional. Theme presentation must remain interchangeable.
 
@@ -37,12 +37,12 @@ extracting tokens. Preserve content-derived asset queries for returning phone ca
 
 Fonts: locally bundled OFL subsets of Andika 7.000, internally renamed Phonics Lesson to respect reserved names. Keep cv39=1 curved l and default single-storey a; preserve license and content-hashed filenames. See docs/FONTS.md.
 
-Audio: 41 complete human target recordings, nine full-sentence Piper instructions,
+Learning: only Level 1 introduces unseen targets with one choice. All later levels begin with choices, including word building without a copying model. After two mistakes per question/current block, play the wrong selected sound first, then show the original cue with one correct choice. A guided tap gives no extra score/progress and returns to the original choices. Preserve help pending/show/ack and misses through navigation/reload; never treat assisted completion as first-try mastery.
+
+Audio: 41 complete human target recordings, 11 isolated Kalulu phonics clips, nine full-sentence Piper instructions,
 one nonverbal effect. Three legacy synthetic comparisons are adult-review only.
 Never synthesize isolated phonemes, substitute letter names, crop consonants/vowels
-from words, or stitch long vowels into short-vowel words. New consonants are heard
-in natural word beginnings/endings. These are context exercises, not verified pure
-isolated phoneme samples. b/d/g are initial; final s differs from voiced initial s.
+from words, or stitch long vowels into short-vowel words. German whole words remain the beginning/ending cues. Isolated wrong-letter feedback is taken from dedicated Kalulu phonics recordings, not words: ten complete first sound utterances before a long pause; h uses the unvoiced breath of a phoneme-only /h/ sample. Source French/Portuguese phones are not certified native-German recordings. Preserve per-clip source segment, license and processing notes; especially review stops and h by listening. b/d/g are initial; final s differs from voiced initial s.
 sch and ll are grapheme blocks. Preserve source/license versions and original/output
 hashes. See docs/AUDIO.md and app/audio/manifest.json. Technical decode tests cannot
 prove pronunciation or educational efficacy; new material needs native/educator review.
@@ -63,7 +63,7 @@ After functional changes run node --test tests/learning.test.mjs tests/content.t
 python3 scripts/audit_audio.py, python3 scripts/build.py and relevant Playwright
 checks. tests/browser.cjs checks actual playback/automatic flow and binds evidence
 to the app tree hash. Also run tests/mobile-smoke.cjs, tests/profiles.cjs and
-tests/word-hints.cjs and tests/level-navigation.cjs when those behaviors change. Exercise the /phonics-lab/ prefix.
+tests/word-hints.cjs and tests/level-navigation.cjs plus tests/choice-help.cjs when those behaviors change. Exercise the /phonics-lab/ prefix.
 Chromium emulation is not a physical-phone test. Keep exact commands/results/limits
 in PROGRESS.md and concise JSON in docs/verification; screenshots outside Git.
 

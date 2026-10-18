@@ -25,7 +25,7 @@ def main():
  if sha(a.model)!=settings['modelSha256']:raise SystemExit('Voice checksum mismatch.')
  if sha(a.model.with_suffix('.onnx.json'))!=settings['configSha256']:raise SystemExit('Voice config checksum mismatch.')
  from piper import PiperVoice,SynthesisConfig
- voice=PiperVoice.load(str(a.model));config=SynthesisConfig(length_scale=settings['lengthScale'],noise_scale=settings['noiseScale'],noise_w_scale=settings['noiseWScale']);clips=list(humans)+[c for c in manifest['clips'] if c['kind']=='effect']
+ voice=PiperVoice.load(str(a.model));config=SynthesisConfig(length_scale=settings['lengthScale'],noise_scale=settings['noiseScale'],noise_w_scale=settings['noiseWScale']);clips=list(humans)+[c for c in manifest['clips'] if c['kind'] in ('effect','phoneme')]
  for key,sentence in json.loads((ROOT/'scripts/instructions.json').read_text()).items():
   pieces=[];rate=None
   for part in re.findall(r'[^.!?]+[.!?]?',sentence):

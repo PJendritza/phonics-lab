@@ -2,8 +2,8 @@
   "status": "passed",
   "checks": [
     "Andika subset actually loads with cv39 curved l; old v3 higher-level save keeps its 12-question goal.",
-    "Wrong onset l plays only Loewe rather than the requested f word; controls wait for selected audio and no progress is awarded.",
-    "Correct word blocks trigger local seven-particle sparkle and fractional progress; wrong sch announces onset and plays Schaf.",
+    "Wrong onset l plays only the isolated l rather than any example word; controls wait for selected audio and no progress is awarded.",
+    "Correct word blocks trigger local seven-particle sparkle and fractional progress; wrong sch plays the isolated sch sound.",
     "Numbered top/map navigation preserves attempts, partial blocks, solved questions and choice order across levels/reload; no duplicate reward.",
     "Success at level 13 continues to 14 despite incomplete earlier stages; resume retains the higher level.",
     "Success at final level offers explicit review selection and never automatically starts a lower level."

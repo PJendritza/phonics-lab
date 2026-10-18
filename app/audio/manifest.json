@@ -1041,7 +1041,338 @@
         "bitrate": "64k"
       },
       "note": "Thorsten High, Längenskala 1,5, zusätzliche Satzpause 0,3 s. Nur vollständige Anleitungen; keine isolierten Sprachlaute."
+    },
+    {
+      "id": "phoneme_f",
+      "label": "Einzellaut f",
+      "ipa": "f",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_f.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/f-f.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/f-f.mp3",
+      "sourceSha256": "8a5c47f5e629c958b074063a9f4bfc8ebc67cf769df5a0ac1d22840c66f1ded8",
+      "sha256": "0856928ae31621107a057edd54e649b76c308ccb4296cb1f7aef8d49dead50d7",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_n",
+      "label": "Einzellaut n",
+      "ipa": "n",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_n.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/n-n.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/n-n.mp3",
+      "sourceSha256": "4c7ccd93eb2f70a0fe9edd28d92e6a33c9ae0ec503c0577d833fdd2c5eee01da",
+      "sha256": "b1e8071c6aa9b91702b91c9382c4a8168baec7de7ac49e5a3690d096ee753034",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_l",
+      "label": "Einzellaut l",
+      "ipa": "l",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_l.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/l-l.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/l-l.mp3",
+      "sourceSha256": "86973507e2035518cf584a5c42a5b13e74ef9697450498b01bbc1036833a86e7",
+      "sha256": "69da89f7771a7e06cbfe91d424da0043a2595cca4e46b6b861f6e1b63114c4b0",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_s",
+      "label": "Einzellaut s",
+      "ipa": "s",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_s.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/s-s.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/s-s.mp3",
+      "sourceSha256": "67dc566bff81028a541c0afe6916c534b8c81da72de142903c88838cd93ab021",
+      "sha256": "0be902ae62565b033f3b84f6d1ca0a0321d6a152c60301c3b64e41ddbda96512",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_sch",
+      "label": "Einzellaut sch",
+      "ipa": "ʃ",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_sch.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/ch-cap.s.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/ch-cap.s.mp3",
+      "sourceSha256": "bd897daf0e2dd802262f4a81ab0dd4816fbcdaa66492ad9daf46ef2e1f538bad",
+      "sha256": "fbcb439aa715b25860c323e221ac66bda3c84cdbe55dd8caa8189ff2d909ea93",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_b",
+      "label": "Einzellaut b",
+      "ipa": "b",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_b.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/b-b.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/b-b.mp3",
+      "sourceSha256": "384b228c2948fa3eafd00743cea75af89f0aa914a3c69f9ef15ee01ef3650787",
+      "sha256": "834e3e54a5fdd0ab88f74169b8768cc06fc91166792aeffed2867b1a1f913016",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_d",
+      "label": "Einzellaut d",
+      "ipa": "d",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_d.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/d-d.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/d-d.mp3",
+      "sourceSha256": "7c5d413f975ae0780c6f9356ffec9309b0f3901303ed0497ed27664e68820c36",
+      "sha256": "4032baf075b19369a11e9d08b3633891c4e5a546728069a5fa75dc2f3d77fd59",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_g",
+      "label": "Einzellaut g",
+      "ipa": "g",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_g.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/g-g.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/g-g.mp3",
+      "sourceSha256": "25287cc1ad6920aa94785ed28c4b060a6a9d2f7fabb48eaa1dee2380578a8d9f",
+      "sha256": "e5d478b59e11abd12929c064788f7ad47590e5438884b7d6de111f665c574e5d",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_t",
+      "label": "Einzellaut t",
+      "ipa": "t",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_t.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/t-t.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/t-t.mp3",
+      "sourceSha256": "b6c2d8325e413c3f6f3ccea00a1f0313a9854b632813b1ca3c543f2586758bd6",
+      "sha256": "6bb1218a80238fc0a57bc1f7b5915fc7180ecc262f3772885d3b942b1bb41391",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_k",
+      "label": "Einzellaut k",
+      "ipa": "k",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_k.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/k-k.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/fr_FR/look_and_learn/sounds/k-k.mp3",
+      "sourceSha256": "c8a2d5eb3a4bda2aab9071d69794d21f9e4e80c25bf9245552c5c9f4fe06f0dc",
+      "sha256": "388c0d8dc831cfb355c1e8f77ba4d0e7429dd2968ebfa0c9e76d62004bb17b78",
+      "segmentSeconds": [
+        0,
+        0.95
+      ],
+      "sourceLocale": "fr_FR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Vollständiger einzelner Anfangslaut aus der Lautdemonstration, vor Pause und separatem Kontextbeispiel. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
+    },
+    {
+      "id": "phoneme_h",
+      "label": "Einzellaut h",
+      "ipa": "h",
+      "group": "phoneme",
+      "kind": "phoneme",
+      "src": "audio/phoneme_h.mp3",
+      "artist": "Excello / Kalulu contributors (speaker not individually identified)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://github.com/Excello-Recherche-Education/Kalulu-Languages/blob/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/pt_BR/look_and_learn/sounds/r-h.mp3",
+      "sourceAudio": "https://media.githubusercontent.com/media/Excello-Recherche-Education/Kalulu-Languages/bb0f71766c5e27fdb775e544ffe62ca98e6a615c/pt_BR/look_and_learn/sounds/r-h.mp3",
+      "sourceSha256": "d678d9d90aacf624d2fdda7f7f05ebd2c6d1edbe7bff47d630b64d9c255efe44",
+      "sha256": "f49e28f9222a48291441997851fc1a823baf627d332ce51780bb09ba3f24ca09",
+      "segmentSeconds": [
+        0.14,
+        0.31
+      ],
+      "sourceLocale": "pt_BR",
+      "processing": {
+        "sampleRate": 22050,
+        "bitrate": "64k",
+        "loudnessLUFS": -20,
+        "leadingFadeSeconds": 0.004,
+        "trailingFadeSeconds": 0.008,
+        "trailingPadSeconds": 0.16
+      },
+      "review": "pending",
+      "note": "Atemanteil der eigenständigen /h/-Lautaufnahme; neutraler stimmhafter Ausklang entfernt. Kein Wort ausgeschnitten. Lautübertragung aus Kalulu; deutsche Hörprüfung noch offen. Plosive können einen kurzen natürlichen Löseklang haben."
     }
   ],
-  "generatorSha256": "a8dfc1ff3040c0a74aae4f86c25949ff4aa06cda488ee001d20047bf99a4018c"
+  "generatorSha256": "a8dfc1ff3040c0a74aae4f86c25949ff4aa06cda488ee001d20047bf99a4018c",
+  "phonemeGeneratorSha256": "416e9e6c34478ecbdf650481c72e4ad270edbf498923518c01f36ada89db5ef2"
 }

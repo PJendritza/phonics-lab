@@ -2,7 +2,7 @@
   "status": "passed",
   "checks": [
     "Two correct letters alone never trigger assistance.",
-    "One mistake does not reveal the target; two mistakes highlight the correct next lowercase letter.",
-    "Canonical capital M displays after lowercase m; assisted completion earns one seed but no first-try mastery."
+    "One mistake does not reveal the target; two mistakes present only the correct next lowercase letter, then return to the original choices.",
+    "Canonical capital M displays after lowercase m; guided tap earns nothing, later blocks do not inherit a highlighted answer, and assisted completion earns one seed but no first-try mastery."
   ]
 }

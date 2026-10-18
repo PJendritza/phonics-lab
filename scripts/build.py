@@ -28,6 +28,8 @@ def main():
   if source.is_file():digest.update(str(source.relative_to(ROOT)).encode());digest.update(b'\0');digest.update(source.read_bytes())
  asset_version=digest.hexdigest()[:12]
  for target in out.rglob('*'):
+  if target.suffix=='.json':
+   target.write_text(json.dumps(json.loads(target.read_text()),ensure_ascii=False,separators=(',',':'))+'\n')
   if target.suffix in ('.html','.mjs'):
    content=target.read_text()
    content=re.sub(r"(?P<quote>['\"])(?P<path>(?:\./)?[A-Za-z0-9_-]+\.(?:css|mjs))(?P=quote)",lambda m:m['quote']+m['path']+'?v='+asset_version+m['quote'],content)
