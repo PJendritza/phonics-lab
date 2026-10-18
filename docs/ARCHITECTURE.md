@@ -1,48 +1,67 @@
-# Browser-first structure
+# Browser-first architecture (v3)
 
-The website is app/: static HTML, CSS and native ES modules with relative URLs.
-No compilation, framework, service worker, API, cross-origin isolation, WASM or
-runtime dependency is needed. It works under the /Kalulu-DE/ Pages prefix.
+app/ is a static HTML/CSS/ES-module website. No engine, framework, server API,
+service worker, WASM, cross-origin isolation or runtime package. Relative URLs work
+under /Kalulu-DE/. Build output remains below 1 MB including all audio.
 
-- data.mjs: declarative lessons and content. Introductory choices are fixed; choices
-  are shuffled once per round, never while the child is answering.
-- learning.mjs: pure state transitions and practice selection. JSON schema version
-  2 rejects invalid imported data. Each skill stores attempts, correct and firstTry;
-  completions are distinct from auditory/teaching approval.
-- main.mjs: UI and one shared Audio instance. Cancellation tokens prevent late media
-  callbacks changing screens after navigation or a new replay. Answers unlock only
-  after successful first playback. Failure offers manual replay, never a different
-  unvetted speech-synthesis voice. Correct answers expose an explicit next button.
-- review.mjs: audio inventory, source credits, human/TTS labels, local ratings/notes,
-  JSON export and previous-version comparisons. No review is sent anywhere.
-- style.css: stationary responsive layouts, native controls, visible focus, large
-  targets, text feedback and no position animations. Reduced-motion settings are
-  respected. System fonts avoid downloads.
+- data.mjs: eight stage definitions, human-audio content, groups, final-sound contexts,
+  avatars and a version constant. Content progression is distinct from game UI.
+- learning.mjs: pure question creation, scoring, accuracy-based difficulty, mastery,
+  recommendation, validation, migration and storage functions. Demonstrations never
+  enter independent mastery. No timestamps for child response speed or deadlines.
+- main.mjs: one-tap guided flow, persistent per-profile question, parent profile tools,
+  map, backups and seed/flower garden. Answer order is generated once per question
+  and persisted. The next button requires an explicit gesture; no auto-advance.
+- audio.mjs: one shared HTMLAudioElement and cancellation tokens. Playback unlocks
+  answers; media failure reports manual replay, never a substituted system voice.
+  Navigation/replay cancels stale callbacks and overlapping instructions.
+- review.mjs: per-clip source/rights, local listening notes, export, category filters
+  and old synthetic comparison clips. No local opinion auto-approves repository audio.
 
-## Persistence
+## State and resuming
 
-Storage key kalulu-de:calm:v2 is separate from historical game state. One learner per
-browser. Save after answer/completion; a completed lesson is saved across reloads.
-The current round is not resumed after leaving: the child can start the lesson again.
-Export/import is manual device transfer. Schema validation protects current state
-from invalid imports; private mode/quota failure must permit in-memory practice.
-No PII, analytics or server persistence is implemented. Hosting has ordinary request
-logs. Audio-review ratings use a separate key kalulu-de:audio-review:v2.
+Key kalulu-de:learners:v3 stores {version:3, activeId, profiles:[{id,name,avatar,progress}]}.
+Each progress object contains skills (introduced, independent seen/first counts,
+recent accuracy and order-only timeline), stages, sessions, seeds and pending session.
+A pending round holds its target/cue/choice order, demonstration flag, attempt count,
+word position and solved flag. Save after every response and advancement. A solved
+round has already credited its seed/skill once; reload cannot award it twice. Audio
+must be heard again for a resumed unanswered question; it is not restored mid-sound.
 
-Future profiles/cloud sync should use a storage adapter around the pure progress
-object, retain migration/version validation and explicitly address identity/consent.
-Do not put server credentials in the static bundle.
+The original kalulu-de:calm:v2 key is read only when no v3 store exists, and never
+deleted. Counts/completions migrate into the first profile. Earlier history has no
+reliable independent-answer evidence, so recent mastery starts empty and completed
+counts alone do not unlock stages. Original backups are also accepted in the import
+UI. JSON validation whitelists IDs, content/audio cues, choices, avatars and counts;
+malformed files cannot silently replace current profiles. Valid imports require
+explicit confirmation because they replace all profiles. Deleting/resetting also
+requires confirmation and leaves other learners unchanged.
 
-## Build and deployment
+There are at most eight local profiles; optional nicknames are stored only on the
+device and in exported files. No accounts, identifiers sent to a backend, telemetry,
+profile uploads or cloud sync. Hosting processes ordinary static request metadata.
+Storage failure keeps an in-memory session working and offers manual backup. Browser
+private-mode/data deletion can erase local profiles; backup/import is the transfer
+and recovery mechanism. A future storage adapter can add explicit sync without
+changing the pure learning object; identity/consent remain a separate design step.
 
-scripts/build.py verifies the committed audio hashes, copies app unchanged, writes
-BUILD_INFO.json (source commit and dirty flag), .nojekyll, LICENSE and SHA256SUMS,
-and enforces a 1 MB total budget. No generated files are committed to main.
-scripts/publish.py accepts only clean builds corresponding to pushed main and passing
-browser evidence bound to the exact current app-tree SHA256. It
-clones existing gh-pages, replaces deployment files and normal-pushes. It neither
-creates hosting nor changes Pages configuration. Use a fresh checkout per release.
+## Assets, testing and deployment
 
-The previous engine, SQLite, pack templates and 90+ MB export are absent from the
-active website and source layout; archive tags retain them. Browser tests use actual
-MP3 decoding and playback, not mocked successful audio, and run under a path prefix.
+scripts/build.py verifies every audio checksum, copies the app, adds a content-derived
+version query to HTML and ES-module CSS/JS references, and records the same release
+query for media/manifest loading. This invalidates nested old modules on returning
+phones, not just the entry HTML. It writes version/source/assetVersion metadata,
+.nojekyll, LICENSE and checksums; refuses in-tree outputs and a package over 1 MB.
+
+The main branch holds source and small licensed audio. gh-pages holds only generated
+files. scripts/publish.py requires a clean source commit already pushed to main,
+passing browser evidence bound to the exact app-tree hash, and matching packaged
+checksums. It uses normal pushes and never changes hosting settings. Every release
+uses a fresh external publication checkout. scripts/verify_live.py certificate-checks
+HTTPS and compares all public file bytes with the tested package after Pages updates.
+
+Tests cover pure accuracy rules, the full eight-stage path, migrations/validation,
+profile isolation, saved partial words, actual audio playback/decode, failure/replay,
+exports/restores, small-screen layouts and reduced-motion behavior. Chromium viewport
+emulation and software audio checks do not replace new physical-phone/child/listening
+review. The old Godot implementation and first browser prototype remain in Git history.

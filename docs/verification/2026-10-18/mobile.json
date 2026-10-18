@@ -1,12 +1,9 @@
 {
   "status": "passed",
-  "widths": [
-    320,
-    768
-  ],
   "checks": [
-    "introductory screens fit without horizontal overflow",
-    "preview buttons request matching MP3s"
+    "320x568: play above fold; correct-answer arrow visible; no horizontal overflow in home/path/parents; reduced motion disables reward animation.",
+    "390x844: play above fold; correct-answer arrow visible; no horizontal overflow in home/path/parents; reduced motion disables reward animation.",
+    "768x1024: play above fold; correct-answer arrow visible; no horizontal overflow in home/path/parents; reduced motion disables reward animation."
   ],
-  "limitation": "Chromium viewport emulation, not native phone hardware"
+  "limitation": "Chromium mobile/tablet viewports, not new physical-device verification."
 }

@@ -27,7 +27,7 @@ def main():
  if run('git','rev-parse','origin/main')!=commit:raise SystemExit('Push the tested source to main first.')
  if checkout.exists():raise SystemExit('Choose a new deployment checkout path; existing directories are preserved.')
  if checkout==ROOT or ROOT in checkout.parents or checkout==site or site in checkout.parents:raise SystemExit('Use an external deployment checkout.')
- run('git','clone','--single-branch','--branch','gh-pages',REMOTE,str(checkout))
+ run('git','clone','--depth','1','--single-branch','--branch','gh-pages',REMOTE,str(checkout))
  run('git','rm','-r','--ignore-unmatch','.',cwd=checkout)
  for source in site.iterdir():
   target=checkout/source.name

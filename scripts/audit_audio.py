@@ -14,4 +14,4 @@ for c in manifest['clips']:
  report.append({'id':c['id'],'seconds':round(len(samples)/44100,3),'peak':round(peak,4),'last50msPeak':round(tail,6),'sha256':c['sha256']})
 output={'status':'passed','meaning':'Decoded PCM has nonzero audio, headroom and quiet endings. This does not certify pronunciation.','clips':report}
 (ROOT/'docs/verification/2026-10-18/audio-audit.json').write_text(json.dumps(output,indent=2)+'\n')
-print('All 12 current MP3s decode, have headroom and end with quiet padding; pronunciation review remains pending.')
+print(f'All {len(report)} current MP3s decode, have headroom and end with quiet padding; pronunciation review remains pending.')
