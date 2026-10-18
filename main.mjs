@@ -1,6 +1,6 @@
-import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=fe987b493899';
-import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress} from './learning.mjs?v=fe987b493899';
-import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=fe987b493899';
+import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=1d1af35b9128';
+import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice} from './learning.mjs?v=1d1af35b9128';
+import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=1d1af35b9128';
 const root=document.querySelector('#app');let storage;try{storage=window.localStorage;}catch{}
 let {store,warning}=readStored(storage),heard=false,previewAll=false,pendingImport=null;
 let transition=null,viewToken=0,keyboardMode=false;
@@ -14,7 +14,7 @@ function play(ids,done=()=>{}){playAudio(ids,done,()=>announcement('Der Ton konn
 function leave(){viewToken++;clearTimeout(transition);transition=null;stopAudio();stopFeedback();heard=false;}
 function flower(fraction=1,size=120,petals=9){
  const count=Math.min(12,Math.max(6,petals)),headY=100-45*fraction;
- return `<svg class="progress-flower" viewBox="0 0 120 140" width="${size}" aria-hidden="true"><path d="M60 129V${headY+12}" stroke="#548067" stroke-width="5" stroke-linecap="round"/><g opacity="${Math.min(1,fraction*2)}"><path d="M60 113Q26 88 40 117Q50 124 60 113M60 101Q94 80 82 108Q70 117 60 101" fill="#a0b78c"/></g><g class="flower-head" transform="translate(0 ${headY-55})">${Array.from({length:count},(_,i)=>`<ellipse cx="60" cy="28" rx="10" ry="21" transform="rotate(${i*360/count} 60 55)" fill="#dfa478" opacity="${0.06+Math.min(1,Math.max(0,fraction*count-i))*.94}"/>`).join('')}<circle cx="60" cy="55" r="${8+fraction*6}" fill="#f2d790"/></g></svg>`;
+ return `<svg class="progress-flower" viewBox="0 0 120 140" width="${size}" aria-hidden="true"><path d="M60 129V${headY+12}" stroke="#548067" stroke-width="5" stroke-linecap="round"/><g opacity="${Math.min(1,fraction*2)}"><path d="M60 113Q26 88 40 117Q50 124 60 113M60 101Q94 80 82 108Q70 117 60 101" fill="#a0b78c"/></g><g class="flower-head" transform="translate(0 ${headY-55})">${Array.from({length:count},(_,i)=>`<ellipse cx="60" cy="28" rx="10" ry="21" transform="rotate(${i*360/count} 60 55)" fill="#dfa478" opacity="${0.18+Math.min(1,Math.max(0,fraction*count-i))*.82}"/>`).join('')}<circle cx="60" cy="55" r="${10+fraction*4}" fill="#f2d790"/></g></svg>`;
 }
 function field(p=progress()){const count=Math.min(18,p.sessions);return `<div class="flower-field" role="img" aria-label="${p.sessions} gesammelte Blumen">${Array.from({length:count},(_,i)=>`<span style="--flower-hue:${i%4*25}deg">${flower(1,56,6+i%4)}</span>`).join('')}</div>`;}
 function playButton(id,text='Los geht’s'){return `<button class="play-main" id="${id}" aria-label="${text}"><svg class="play-symbol" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4 28 16 8 28Z" fill="currentColor"/></svg><span>${text}</span></button>`;}
@@ -28,9 +28,11 @@ function begin(stageId=null){
  leave();window.scrollTo({top:0,behavior:'instant'});
  if(stageId)setProgress(startSession(progress(),stageId));
  else if(!progress().pending){const next=recommended(progress());if(!next){path();return;}setProgress(startSession(progress(),next.id));}
- if(progress().pending.round.solved)advanceNow();else renderRound(true);
+ const r=progress().pending.round;if(r.help==='pending')setProgress(showHelp(progress()));else if(r.help==='ack')setProgress(resumePractice(progress()));if(progress().pending.round.solved)advanceNow();else renderRound(true);
 }
 function advanceNow(){clearTimeout(transition);transition=null;const result=advance(progress());setProgress(result.progress);heard=false;if(result.completed)complete(result);else renderRound(true);}
+function scheduleHelpReturn(){const mine=viewToken;clearTimeout(transition);transition=setTimeout(()=>{if(mine===viewToken&&progress().pending?.round.help==='ack'){setProgress(resumePractice(progress()));renderRound(true);}},340);}
+function afterWrongAudio(){if(progress().pending?.round.help==='pending'){setProgress(showHelp(progress()));renderRound(true);}else enableAnswers();}
 function scheduleAdvance(){const mine=viewToken;clearTimeout(transition);transition=setTimeout(()=>{if(mine===viewToken&&progress().pending?.round.solved)advanceNow();},340);}
 function path(){
  leave();window.scrollTo({top:0,behavior:'instant'});const p=progress(),through=availableThrough(p),current=p.pending?.stageId??recommended(p)?.id;
@@ -39,28 +41,29 @@ function path(){
  document.querySelector('#back').onclick=home;if(p.pending)document.querySelector('#resume-path').onclick=()=>begin();
  document.querySelector('#preview').onchange=e=>{previewAll=e.target.checked;path();};root.querySelectorAll('[data-stage],[data-level]').forEach(b=>b.onclick=()=>begin(b.dataset.stage??b.dataset.level));
 }
-function sparkles(){return `<span class="answer-sparkle" aria-hidden="true">${Array.from({length:7},(_,i)=>`<i style="--dx:${Math.cos(i*2*Math.PI/7)*28}px;--dy:${Math.sin(i*2*Math.PI/7)*25}px;--turn:${i*47}deg;--spark-color:${['#df9b65','#809d75','#dec56e'][i%3]}"></i>`).join('')}</span>`;}
-function meter(reward=false){const p=levelProgress(progress());return `<div class="level-progress ${reward?'rewarded':''}" role="progressbar" aria-label="Fortschritt zum Levelziel" aria-valuemin="0" aria-valuemax="${p.total}" aria-valuenow="${p.value}" aria-valuetext="${Math.floor(p.value)} von ${p.total} Aufgaben"><div class="meter-flower">${flower(p.ratio,52,p.total)}${reward?sparkles():''}</div><div class="meter-track"><span class="meter-fill" style="width:${p.ratio*100}%"></span></div><span class="meter-count">${Math.floor(p.value)}/${p.total}</span></div>`;}
-function enableAnswers(){heard=true;announcement('');root.querySelectorAll('[data-choice]').forEach(b=>b.disabled=!!progress().pending?.round.solved);if(keyboardMode&&!progress().pending?.round.solved)root.querySelector('[data-choice]')?.focus({preventScroll:true});}
+function sparkles(){return `<span class="answer-sparkle" aria-hidden="true">${Array.from({length:7},(_,i)=>`<i style="--dx:${Math.cos(i*2*Math.PI/7)*46}px;--dy:${Math.sin(i*2*Math.PI/7)*42}px;--turn:${i*47}deg;--spark-color:${['#bd7139','#5e8454','#c7a537'][i%3]}"></i>`).join('')}</span>`;}
+function meter(reward=false){const p=levelProgress(progress());return `<div class="level-progress ${reward?'rewarded':''}" role="progressbar" aria-label="Fortschritt zum Levelziel" aria-valuemin="0" aria-valuemax="${p.total}" aria-valuenow="${p.value}" aria-valuetext="${Math.floor(p.value)} von ${p.total} Aufgaben"><div class="meter-flower">${flower(p.ratio,78,p.total)}${reward?sparkles():''}</div><div class="meter-track"><span class="meter-fill" style="width:${p.ratio*100}%"></span></div><span class="meter-count">${Math.floor(p.value)}/${p.total}</span></div>`;}
+function enableAnswers(){heard=true;announcement('');root.querySelectorAll('[data-choice]').forEach(b=>b.disabled=!!progress().pending?.round.solved||progress().pending?.round.help==='ack');if(keyboardMode&&!progress().pending?.round.solved)root.querySelector('[data-choice]')?.focus({preventScroll:true});}
 function disableAnswers(){heard=false;root.querySelectorAll('[data-choice]').forEach(b=>b.disabled=true);}
 function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const p=progress(),session=p.pending;if(!session){home();return;}const s=stageById(session.stageId),r=session.round,word=s.mode==='build',letters=word?lettersFor(r.target):[],finished=r.solved;
  const feedback=feedbackCorrect===false&&selected?choiceFeedback(s,selected):null;
- root.innerHTML=`<section class="session auto-session"><div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. Level auswählen">Level ${stageNumber(s.id)} ▾</button></div>${meter(feedbackCorrect===true)}<h1>${word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?'}</h1><button class="replay" id="replay" aria-label="Ton noch einmal anhören" ${finished?'disabled':''}>${speaker}<span>Anhören</span></button><div id="audio-status" class="audio-status subtle" role="status">${feedback?esc(feedback.text):heard?'':'Hör erst einmal zu.'}</div>${word?`${r.demonstration?`<div class="word-model" aria-label="Vorbild ${esc(ITEMS[r.target].text)}">${esc(ITEMS[r.target].text)}</div>`:''}<div class="slots" aria-label="Wort mit ${letters.length} Bausteinen">${letters.map((letter,i)=>`<span class="slot ${i===r.position?'active':''}">${i<r.position?letter:''}</span>`).join('')}</div>`:''}<div class="tiles ${word?'bank':''} ${s.group==='read'||(!word&&!CONTEXTS[s.mode]&&r.choices.some(c=>label(s,c).length>3))?'word-tiles':''} ${CONTEXTS[s.mode]?'phoneme-tiles':''}" ${word||CONTEXTS[s.mode]?`style="--bank-columns:${r.choices.length}"`:''}>${r.choices.map(c=>`<button class="tile ${finished&&(word||c===r.target)?'good':''} ${feedbackCorrect===false&&c===selected?'wrong':''} ${!finished&&r.tries-r.position>=2&&(word?c===letters[r.position]?.toLowerCase():c===r.target)?'hint':''}" data-choice="${c}" ${!heard||finished?'disabled':''}>${esc(word?c:label(s,c))}</button>`).join('')}</div><div class="feedback-area"><span id="feedback" class="feedback ${feedbackCorrect===true?'correct-flash':''}" role="status">${feedbackCorrect===true?'<span aria-hidden="true">✓</span><span class="sr-only">Richtig.</span>':''}</span></div></section>`;
+ const teaching=r.help==='show'||r.help==='ack',expected=word?letters[r.position]?.toLowerCase():r.target;
+ root.innerHTML=`<section class="session auto-session"><div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. Level auswählen">Level ${stageNumber(s.id)} ▾</button></div>${meter(feedbackCorrect===true)}<h1>${teaching?'Schau und höre.':word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?'}</h1><button class="replay" id="replay" aria-label="Ton noch einmal anhören" ${finished?'disabled':''}>${speaker}<span>Anhören</span></button><div id="audio-status" class="audio-status subtle" role="status">${feedback?esc(feedback.text):heard?'':'Hör erst einmal zu.'}</div>${word?`${r.demonstration?`<div class="word-model" aria-label="Vorbild ${esc(ITEMS[r.target].text)}">${esc(ITEMS[r.target].text)}</div>`:''}<div class="slots" aria-label="Wort mit ${letters.length} Bausteinen">${letters.map((letter,i)=>`<span class="slot ${i===r.position?'active':''}">${i<r.position?letter:''}</span>`).join('')}</div>`:''}<div class="tiles ${word?'bank':''} ${s.group==='read'||(!word&&!CONTEXTS[s.mode]&&r.choices.some(c=>label(s,c).length>3))?'word-tiles':''} ${CONTEXTS[s.mode]?'phoneme-tiles':''}" ${word||CONTEXTS[s.mode]?`style="--bank-columns:${r.choices.length}"`:''}>${r.choices.map(c=>teaching&&c!==expected?`<span class="tile help-placeholder" aria-hidden="true">${esc(word?c:label(s,c))}</span>`:`<button class="tile ${finished&&(word||c===r.target)?'good':''} ${feedbackCorrect===false&&c===selected?'wrong':''} ${!finished&&teaching&&(word?c===letters[r.position]?.toLowerCase():c===r.target)?'hint':''}" data-choice="${c}" ${!heard||finished||r.help==='ack'?'disabled':''}>${esc(word?c:label(s,c))}</button>`).join('')}</div><div class="feedback-area"><span id="feedback" class="feedback ${feedbackCorrect===true?'correct-flash':''}" role="status">${feedbackCorrect===true?'<span aria-hidden="true">✓</span><span class="sr-only">Richtig.</span>':''}</span></div></section>`;
  document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;
  const cue=()=>s.mode==='ending'&&r.demonstration&&r.target==='n'?['an','in']:[r.cue];
  const listen=(instruction=false)=>{disableAnswers();announcement('Hör erst einmal zu.');const prefix=instruction?[word&&r.demonstration&&s.id==='build'?'model':s.instruction]:[];play([...prefix,...cue()],enableAnswers);};
- document.querySelector('#replay').onclick=()=>listen(false);
+ document.querySelector('#replay').onclick=()=>{if(progress().pending?.round.help==='pending'){setProgress(showHelp(progress()));renderRound(true);}else listen(false);};
  root.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{
   if(!heard||progress().pending?.round.solved)return;
   const selected=b.dataset.choice,result=answer(progress(),selected);setProgress(result.progress);
   if(!result.correct)heard=false;
   renderRound(false,result.correct,selected);
-  if(result.correct){stopAudio();playSuccess();if(result.finished)scheduleAdvance();}
-  else play(choiceFeedback(s,selected).audio,enableAnswers);
+  if(result.correct){stopAudio();playSuccess();if(result.teaching)scheduleHelpReturn();else if(result.finished)scheduleAdvance();}
+  else play(choiceFeedback(s,selected).audio,afterWrongAudio);
   if(!result.finished&&keyboardMode&&heard)root.querySelector(`[data-choice="${selected}"]`)?.focus({preventScroll:true});
  });
- if(playCue){heard=false;if(finished)scheduleAdvance();else listen(session.index===0);}
+ if(playCue){heard=false;if(finished)scheduleAdvance();else listen(session.index===0&&!teaching&&r.tries===0);}
 }
 function complete(result){
  leave();const p=progress(),next=recommended(p),level=stageNumber(result.stageId);

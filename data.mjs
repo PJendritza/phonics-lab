@@ -1,4 +1,4 @@
-export const VERSION='5.0.0';
+export const VERSION='6.0.0';
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
@@ -55,18 +55,12 @@ export const skillKey=(stage,target)=>`${stage.group}:${target}`;
 export const label=(stage,target)=>CONTEXTS[stage.mode]?target:ITEMS[target].text;
 export const lettersFor=target=>ITEMS[target].graphemes??[...ITEMS[target].text];
 export const BUILD_UNITS=['a','m','i','o','u','n','l','f','s','sch','t','k','b','d','g','h','ll'];
-// Human audio for the selected option, never fabricated isolated consonants.
-// Context exercises already establish first/last sound; word-building fallbacks
-// explicitly announce which part of the example word to listen for.
+export const PHONEMES=Object.fromEntries(['a','m','i','o','u','e'].map(c=>[c,c]).concat(['f','n','l','s','sch','b','d','g','t','k','h'].map(c=>[c,'phoneme_'+c]),[['ll','phoneme_l']]));
+// Whole words remain task cues. A clicked letter always plays only that sound.
 export function choiceFeedback(stage,choice){
- const context=CONTEXTS[stage.mode];
- if(context){const cue=context[choice][0];return {audio:[cue],text:`Deine Auswahl: ${choice} · ${ITEMS[cue].text} (${stage.mode==='onset'?'Anfang':'Ende'})`};}
- if(ITEMS[choice])return {audio:[ITEMS[choice].audio],text:`Deine Auswahl: ${ITEMS[choice].text}`};
- if(choice==='ll')return {audio:['ending','ball'],text:'Deine Auswahl: ll · am Ende von Ball'};
- const unit=choice==='ll'?'l':choice;
- const mode=ONSETS[unit]?'onset':'ending',cue=CONTEXTS[mode]?.[unit]?.[0];
- if(!cue)throw Error('Kein menschliches Klangbeispiel für diese Auswahl.');
- return {audio:[mode,cue],text:`Deine Auswahl: ${choice} · ${mode==='onset'?'am Anfang von':'am Ende von'} ${ITEMS[cue].text}`};
+ const audio=CONTEXTS[stage.mode]||stage.mode==='build'?PHONEMES[choice]:ITEMS[choice]?.audio;
+ if(!audio)throw Error('Kein Klang für diese Auswahl.');
+ return {audio:[audio],text:`Deine Auswahl: ${stage.mode==='build'||CONTEXTS[stage.mode]?choice:ITEMS[choice].text}`};
 }
 export const speaker = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 export const icons = {

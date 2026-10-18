@@ -1,4 +1,4 @@
-import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=fe987b493899';
+import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=1d1af35b9128';
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const integer=(v,max=1e7)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
@@ -26,13 +26,13 @@ function priority(skill){if(!skill?.introduced)return -10;if(!skill.recent.lengt
 export function difficulty(progress){const recent=Object.values(progress.skills).flatMap(s=>s.timeline??[]).sort((a,b)=>a[0]-b[0]).slice(-5).map(x=>x[1]);if(recent.length>=3&&recent.slice(-3).filter(x=>!x).length>=2)return 2;return recent.length>=5&&recent.every(Boolean)?4:recent.length>=2&&recent.slice(-2).every(Boolean)?3:2;}
 function chooseTarget(progress,stage,previous){return [...stage.targets].sort((a,b)=>(priority(progress.skills[skillKey(stage,a)])+(a===previous?0.08:0))-(priority(progress.skills[skillKey(stage,b)])+(b===previous?0.08:0)))[0];}
 function makeRound(progress,stage,index=0,previous=null,rng=Math.random){
- const target=chooseTarget(progress,stage,previous),key=skillKey(stage,target),demonstration=!progress.skills[key]?.introduced;
+ const target=chooseTarget(progress,stage,previous),key=skillKey(stage,target),demonstration=stage.id==='letters'&&!progress.skills[key]?.introduced;
  let choices;
  if(stage.mode==='build'){
   const actual=[...new Set(lettersFor(target).map(c=>c.toLowerCase()))],others=(stage.id==='more_build'?BUILD_UNITS:['a','m','i','o','u','n','l']).filter(c=>!actual.includes(c));choices=shuffled([...actual,...shuffled(others,rng).slice(0,difficulty(progress)>=3?1:0)],rng);
  }else{const pool=[...new Set([...stage.targets,...(stage.distractors??[])])];choices=demonstration?[target]:shuffled([target,...shuffled(pool.filter(t=>t!==target),rng).slice(0,difficulty(progress)-1)],rng);}
  const cue=CONTEXTS[stage.mode]?CONTEXTS[stage.mode][target][index%CONTEXTS[stage.mode][target].length]:ITEMS[target].audio;
- return {target,choices,cue,demonstration,tries:0,position:0,solved:false};
+ return {target,choices,cue,demonstration,tries:0,position:0,solved:false,help:null,misses:0};
 }
 export function startSession(progress,stageId,rng=Math.random){
  const next=structuredClone(progress),stage=stageById(stageId);if(!stage)throw Error('Unbekanntes Level.');
@@ -45,13 +45,21 @@ export function startSession(progress,stageId,rng=Math.random){
 export function answer(progress,choice){
  if(!progress.pending)return {progress,correct:false,finished:false};const next=structuredClone(progress),session=next.pending,stage=stageById(session.stageId),r=session.round;
  if(r.solved||!r.choices.includes(choice))return {progress,correct:false,finished:false};
- const expected=stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,correct=choice===expected;r.tries++;
- if(!correct)return {progress:next,correct:false,finished:false};
+ const expected=stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,correct=choice===expected;
+ if(r.help){
+  if(r.help!=='show'||!correct)return {progress,correct:false,finished:false};
+  r.help='ack';return {progress:next,correct:true,finished:false,teaching:true};
+ }
+ r.tries++;
+ if(!correct){r.misses=(r.misses??0)+1;if(r.misses>=2)r.help='pending';return {progress:next,correct:false,finished:false};}
+ r.misses=0;
  if(stage.mode==='build'&&++r.position<lettersFor(r.target).length)return {progress:next,correct:true,finished:false};
  r.solved=true;next.seeds++;const key=skillKey(stage,r.target),skill=next.skills[key]??{introduced:false,seen:0,first:0,recent:[],timeline:[]};skill.introduced=true;
  if(!r.demonstration){const first=r.tries===(stage.mode==='build'?lettersFor(r.target).length:1);skill.seen++;skill.first+=Number(first);skill.recent=[...skill.recent,Number(first)].slice(-8);const tick=Object.values(progress.skills).reduce((n,s)=>n+s.seen,0)+1;skill.timeline=[...(skill.timeline??[]),[tick,Number(first)]].slice(-5);session.independent++;session.first+=Number(first);}
  next.skills[key]=skill;return {progress:next,correct:true,finished:true};
 }
+export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
+export function resumePractice(progress){if(progress.pending?.round.help!=='ack')return progress;const next=structuredClone(progress);next.pending.round.help=null;next.pending.round.misses=0;return next;}
 export function advance(progress,rng=Math.random){
  const next=structuredClone(progress),session=next.pending;if(!session?.round.solved)return {progress,completed:false};const stage=stageById(session.stageId);
  if(session.index+1>=session.total){
@@ -70,7 +78,16 @@ function validatePending(value){
   const letters=lettersFor(r.target);if(letters.some(c=>!r.choices.includes(c.toLowerCase()))||r.position>letters.length||r.solved!==(r.position===letters.length)||r.tries<r.position)throw Error('Ungültiges Wort.');
  }else if(!r.choices.includes(r.target)||r.position!==0||(!r.demonstration&&r.choices.length<2)||(r.solved&&r.tries===0))throw Error('Ungültige Antwort.');
  if(CONTEXTS[s.mode]?!CONTEXTS[s.mode][r.target].includes(r.cue):r.cue!==ITEMS[r.target].audio)throw Error('Ungültiger Ton.');
- return {stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,round:{target:r.target,choices:[...r.choices],cue:r.cue,demonstration:r.demonstration,tries:r.tries,position:r.position,solved:r.solved}};
+ let help=r.help??null;const misses=r.misses??Math.max(0,r.tries-r.position);
+ if(r.help===undefined&&!r.solved&&s.mode!=='build'&&misses>=2)help='pending';
+ if(![null,'pending','show','ack'].includes(help)||!integer(misses,10000)||misses>r.tries-r.position||(help&&(r.solved||misses<2)))throw Error('Ungültige Lernhilfe.');
+ let choices=[...r.choices],demonstration=r.demonstration;
+ // Untouched introductions saved by v5 become independent choice questions in
+ // later levels. Already attempted/solved questions keep their original meaning.
+ if(r.help===undefined&&s.id!=='letters'&&demonstration&&r.tries===0&&!r.solved){
+  demonstration=false;if(s.mode!=='build'&&choices.length===1)choices.push([...s.targets,...s.distractors??[]].find(c=>c!==r.target));
+ }
+ return {stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses}};
 }
 export function validateProgress(p){
  if(!plain(p)||p.version!==3||!plain(p.skills)||!plain(p.stages)||!integer(p.sessions)||!integer(p.seeds)||Object.keys(p.skills).length>160)throw Error('Ungültiger Lernstand.');const result=freshProgress();result.sessions=p.sessions;result.seeds=p.seeds;

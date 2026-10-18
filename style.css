@@ -27,3 +27,9 @@ svg.play-symbol{width:40px;height:40px;flex-shrink:0}
 
 /* Reserve the same space for short cues and two-line selected-option feedback. */
 .auto-session .audio-status{height:44px;min-height:44px}
+
+/* A larger growing flower and the same seven, now more visible, inward sparkles. */
+.session.auto-session>.level-progress{gap:14px}.meter-flower{width:76px;flex-shrink:0}.meter-flower svg{width:76px;height:88px}.answer-sparkle{top:43%}.answer-sparkle i{width:9px;height:12px;border-radius:2px;box-shadow:0 0 4px #f3d89288}.help-placeholder{visibility:hidden;pointer-events:none;display:inline-block;box-sizing:border-box}.help-placeholder:empty{display:block}
+@media(max-width:400px){.auto-session .meter-flower{width:66px}.auto-session .meter-flower svg{width:66px;height:76px}.auto-session .level-progress{gap:10px}}
+@media(max-height:740px) and (max-width:700px){.auto-session .level-progress .meter-flower svg{width:62px;height:70px}.auto-session .meter-flower{width:62px}.auto-session h1{margin:6px auto}.auto-session .audio-status{height:38px;min-height:38px}}
+@media(prefers-reduced-motion:no-preference){.answer-sparkle i{animation:visible-spark .34s ease-out both}@keyframes visible-spark{0%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--turn)) scale(.55)}25%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(calc(var(--dx)*.4),calc(var(--dy)*.4)) rotate(var(--turn)) scale(1.1)}}}
