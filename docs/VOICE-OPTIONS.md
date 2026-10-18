@@ -6,18 +6,19 @@ as external API or GPU credits. Earlier paid-provider suggestions are superseded
 
 ## Approved next-release setting
 
-Regular Piper Thorsten High, length_scale=1.35, with 0.2 seconds added between
-sentences. The user liked this sample: “Hör auf den ersten Laut im Wort. Tippe auf
-den passenden Laut.” MP3 duration 3.866 seconds. High model SHA256:
+Regular Piper Thorsten High, length_scale=1.5, with 0.3 seconds added between
+sentences. The user liked the 1.35/0.2-second-pause sample (3.866 seconds), then the 1.45/0.3-second-pause sample (4.232 seconds), and selected 1.5/0.3 seconds for implementation. Comparison sentence: “Hör auf den ersten Laut im Wort. Tippe auf
+den passenden Laut.”  High model SHA256:
 9df1c43c61149ef9b39e618e2b861fbe41e1fcea9390b2dac62e8761573ea4f1.
 The 1.8 sample with 0.4-second pause was too slow. A 1.25 sample without additional
 pause lasted 3.448 seconds. length_scale is a duration setting, not a playback-speed
 multiplier; a larger value means slower. Pauses here are inserted PCM silence.
 
 Model and samples are external under /workspace/kalulu-tools/tts-models and
-/workspace/kalulu-browser-build/audio-samples. The live app still uses Medium;
-regenerating its nine instructions is a planned task, not yet done. Human target
+/workspace/kalulu-browser-build/audio-samples. All nine instructions have now been regenerated for v5; exact publication status is in PROGRESS.md. Human target
 vowels/words remain unchanged.
+
+The user auditioned Qwen online and did not like it. Keep the approved Piper voice; no further model experiments are part of this update.
 
 ## Assessment of the user's model list
 

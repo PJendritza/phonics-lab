@@ -3,7 +3,7 @@
 41 complete human German recordings, nine full-sentence Piper instructions and one
 quiet nonverbal success chime. Three old synthetic a/i/m clips are adult-comparison
 only. No new synthetic isolated phoneme, cropped consonant/vowel or letter-name
-substitute. The user liked v2 on their phone; that does not approve new recordings.
+substitute. The user liked the human targets on their phone and approved the Thorsten High sample direction, then requested 1.5 with a 0.3-second sentence pause. This is not blanket phonetic approval of every regenerated instruction.
 
 app/audio/manifest.json records individual speakers, source/license versions,
 original/output SHA256, processing and pending review. docs/audio-sources.json
@@ -98,10 +98,10 @@ make_feedback.py independently generates the own 240 ms two-note sine chime. No
 spoken success/retry/navigation clips remain in the active manifest. Different
 ffmpeg/Piper versions can change bytes; review hashes and rerun tests after changes.
 
-Piper de_DE-thorsten-medium revision c10ece1aade47bb51c153c893d14e5bf8e5b7117,
-model SHA256 7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819.
+Piper de_DE-thorsten-high revision c10ece1aade47bb51c153c893d14e5bf8e5b7117,
+model SHA256 9df1c43c61149ef9b39e618e2b861fbe41e1fcea9390b2dac62e8761573ea4f1.
 Model metadata MIT; Thorsten dataset CC0; model mentions Lessac fine-tuning.
-GPL Piper is an external production tool, not shipped in the browser. Authored
+GPL Piper is an external production tool, not shipped in the browser. The approved setting is length_scale=1.5, noise_scale/noise_w_scale=0 and 0.3 seconds of added silence between separately generated complete sentences. The manifest records these values and model/config checksums per clip; scripts/tts-settings.json is the generator configuration. Instruction MP3s are mono 22.05 kHz, 64 kbps, -20 LUFS/-3 dB target with quiet trailing padding, matching the comparison-sample format. Human recordings retain their prior processing and bytes. Authored
 instructions/effect collection CC BY-SA 4.0; individual human licenses as above.
 
 ## Review and verification

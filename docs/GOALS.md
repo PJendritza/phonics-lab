@@ -39,12 +39,12 @@ French mappings were not copied into German. Kalulu research does not validate t
 ## Flow, progress and adaptation
 
 Minimal entry: animal profile plus large play/continue. Spoken instruction and replay
-let nonreaders practise. Correct answers give a brief nonverbal chime/check and advance
+let nonreaders practise. Correct answers give a brief nonverbal chime/check and small local sparkle and advance
 automatically after about 340 ms. No per-answer next button or spoken praise. Incorrect
-answers stay with stable choices and replay/time; two mistakes can reveal quiet help.
+answers play the selected option’s human recording or whole-word context, stay with stable choices and allow replay/time; two mistakes can reveal quiet help.
 
-The level meter has a fixed total: nine questions for the original stages, 8–12 for
-new ones. Never finish early. Every correct selection moves the cumulative meter;
+The level meter has a fixed total: fourteen questions for the original stages, 12–18 for
+new ones (about 50% longer). Existing saved goals retain their original totals. Never finish early. Every correct selection moves the cumulative meter;
 a correct block is a fraction of its word question. Completing the goal produces a
 flower and a level-boundary play button. A flower rewards practice even if assisted;
 it is separate from mastery. Completed levels accumulate in the flower field.
@@ -52,15 +52,15 @@ it is separate from mastery. Completed levels accumulate in the flower field.
 Introductions/model copying earn practice progress but no independent mastery.
 Mastery requires two recent first-try independent successes and >=75% across the
 last up to four. All stage targets must qualify to unlock the next guided stage.
-If not, the next level repeats the stage, favoring weak/underexposed material.
+If not, the next practice stays in the current level, favoring weak/underexposed material.
 Two recent successes permit three choices; five permit four; two recent errors ease
 the next question. Choice positions only change between questions. No time metric.
-After all stages qualify, guided practice reviews weaker material. Parent preview
+After a successful level, continuation points to the next numbered level even if earlier ones were skipped. Earlier review is explicit, not automatic. After the last success the learner chooses any review level. Parent preview
 can open later stages without falsely setting mastery.
 
 ## Persistence and limits
 
-Up to eight browser-local profiles; exact question order, attempts, partial blocks
+Up to eight browser-local profiles; exact question order, per-level paused sessions, continuation position, attempts, partial blocks
 and already-awarded response survive pause/reload. Confirmed JSON export/import
 transfers profiles; no accounts/server sync. Existing v2/v3 data remains compatible.
 Reduced-motion disables decorative animation; the static meter still shows progress.
@@ -69,3 +69,5 @@ This remains a partial experimental curriculum. Next: native listening review of
 new words/contexts, actual child use, vowel length/capitalization/blending review
 with an educator, and a consistent speaker if mixed voices distract. No scientific
 or pronunciation-quality certification is implied by decode/playback tests.
+
+Bundled Andika-based letterforms use curved l and single-storey a consistently on devices. Full-sentence instructions use the approved Thorsten High setting 1.5 with an added 0.3-second sentence pause; human target recordings are preserved.

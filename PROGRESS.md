@@ -1,3 +1,102 @@
+# Phonics Lab v5 status
+
+Updated 2026-10-18 (Europe/Berlin). Repository:
+https://github.com/PJendritza/phonics-lab . Feature branch: numbered-levels-update.
+Read AGENTS.md and recent Git history. Local checkout remains /workspace/Kalulu-DE.
+
+## Implemented from the agreed update
+
+- Thorsten High instructions: length_scale=1.5, 0.3 seconds added between separately
+  generated sentences. Nine instructions regenerated, all 41 human targets unchanged
+  byte for byte. Pinned model/config hashes and settings in scripts/tts-settings.json
+  and each instruction's manifest entry. No paid API or heavier model installation.
+- Local regular/bold Andika 7.000 subsets, default single-storey a and cv39 curved l.
+  Internal family renamed Phonics Lesson for OFL reserved names. Original font
+  source/license metadata retained. Reproduction generates stable hashes and
+  content-hashed filenames. German characters and l/I/1 displayed on About.
+- Levels approximately 50% longer: original 9→14; new 8→12, 10→15, 12→18. Added
+  questions provide choices after the existing introductions. No extra repeated
+  one-choice introduction phase; no timing-based scores. Existing pending totals
+  keep their exact original goals on resume.
+- Header Level link, exercise Level N dropdown-style button, numbered quick grid
+  and descriptive map. Parent preview checkbox still allows later-level testing.
+- Wrong taps play the selected option's human recording, not automatically the
+  requested target. Context exercises use complete example words; unavailable pure
+  consonants in word-building use an explicitly announced onset/ending example.
+  Controls wait for speech; replay returns to the requested target. No wrong-score
+  reward, target motion or spoken success praise.
+- Each correct tap/block gets a restrained seven-particle sparkle, small check,
+  existing success tune and animated growing stem/leaves/petals. Cumulative progress
+  remains visible; automatic next-question delay remains 340 ms. Reduced-motion
+  preference removes decorative animations. Fixed feedback height keeps choices
+  stationary even while a two-line word-context label is shown.
+- Successful current levels continue to the next numbered level even with earlier
+  unfinished stages. No automatic weak-stage fallback. Final success offers explicit
+  review selection. Profiles store a continuation cursor and per-level paused
+  questions, preserving partial/solved/wrong answers across navigation/reload.
+  Mastery still requires independent accuracy; jumps never mark skipped levels passed.
+  Data version/key remain v3; old v3 saves infer the cursor from pending/highest
+  completed stage. v2 migration/backups and up to eight local profiles are retained.
+
+## Executed validation
+
+```sh
+/workspace/phonics-fonts/venv/bin/pip install 'Brotli==1.1.0'
+/workspace/phonics-fonts/venv/bin/python scripts/prepare_fonts.py
+# Repeated generation produced identical font hashes.
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py --instructions-only
+node --test tests/learning.test.mjs tests/content.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+# Existing server serves /workspace/kalulu-browser-build at port 8070,
+# preview/phonics-lab -> ../site exercises the Pages prefix.
+node tests/browser.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+```
+
+Passed: 22 Node tests; all 51 current audio decode/headroom/quiet-ending
+checks; profile and word-hint browser regressions; actual-playback numbered-level
+navigation tests; reduced-motion mobile checks at 320x568, 390x844 and 768x1024.
+Navigation suite checks real selected-option source files, preserved partial/solved
+rounds and legacy goals, no double rewards, forward continuation despite skipped
+lower stages, final review choice and actual Andika loading with cv39. No page errors.
+Screenshots outside Git: v5-letterforms.png, v5-font-sample.png, v5-graphemes-*.png.
+The full browser regression also passed, including real MP3 playback/decode, complete
+14/12/15/18-question goals, error recovery, success-effect failure, migration,
+profile import/export and keyboard interaction. Exact app SHA256:
+fe987b493899f447d07e29386db37d50aad6459df1ea459a786ff0dde3bb5bbf.
+Clean publication is pending; do not call this version live until the HTTPS audit
+passes. The tested dirty build is 72 files, 910,104 bytes (below the 1 MB budget).
+
+Development dependencies: external Piper 1.4.2, pinned Thorsten High ONNX;
+fontTools with Brotli 1.1.0. Normal app/build require no synthesis/font tools.
+Font generator's first attempt lacked Brotli; installed it in an external venv and
+regenerated successfully. New navigation test initially assumed CSS serialization
+would retain an explicit feature value 1; Chromium serializes enabled cv39 without
+it. Corrected the assertion to accept both equivalent forms. Its test-only media
+hook also needed a null guard on About, which has no lesson element. The old browser
+suite's final keyboard check assumed post-final automatic review; updated it to
+explicitly choose a numbered review level as now intended. These checks were rerun.
+
+## Release and next step
+
+Pending: final clean source commit/push, clean build,
+normal gh-pages publication and certificate-verified HTTPS hash audit. Source/main
+and deployment branches remain separate; no hosting/domain/settings changes.
+Next user check after release: open the v5 link, resume an existing profile, jump
+between levels without losing a partial word, hear selected wrong options and try
+higher-level success. Listen to the regenerated instructions on phone speakers.
+No physical-device v5 test or native/educator approval of every clip is claimed.
+Cloud public Chromium previously had a proxy-CA issue; local real-playback checks
+and HTTPS byte verification are separate evidence and preserve TLS verification.
+
+---
+Historical v4 status below; current behavior and pending release supersede its
+old next-version plans. Earlier verification revisions remain in Git history.
+
 # Phonics Lab v4 status
 
 Updated 2026-10-18 (Europe/Berlin). Repository:

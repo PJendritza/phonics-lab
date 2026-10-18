@@ -3,27 +3,27 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=4.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=4.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=5.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=5.0.0)**
 
 Choose an animal profile and press play. Answers stay still. A correct answer gives
-a brief nonverbal chime/check, fills the level meter and automatically advances.
+a brief nonverbal chime/check and a small sparkle, fills the level meter and automatically advances.
 Every finished level adds a flower. Mistakes give time and replay without taking
 progress away. There are no timers, speed scores or spoken success messages.
 
 **14 stages**, from a/m/i and vowels through syllables, beginning/ending sounds,
 word recognition and grapheme-block building. **41 human German recordings** supply
-target sounds and words; nine complete sentence instructions use Piper. New
+target sounds and words; nine complete sentence instructions use Piper Thorsten High at length_scale 1.5 with an added 0.3-second sentence pause. New
 consonants use natural whole-word contexts rather than artificial isolated clips.
 sch and ll remain single blocks in relevant word-building tasks.
 Independent accuracy adjusts two/three/four choices and stage unlocking; one-choice
-introductions do not count as mastery. Fixed level goals are 8–12 questions.
+introductions do not count as mastery. New level goals are 12–18 questions, about 50% longer; saved unfinished levels keep their original total.
 Practice flowers and mastery are separate. [Teaching design](docs/GOALS.md).
 
 Up to eight local profiles resume exact questions or partial words. Existing demo
 profiles migrate/persist, including across the repository path rename on the same
-website origin. Parent tools offer a stage map, later-stage preview checkbox and
+website origin. Numbered level navigation is accessible during exercises; switching levels preserves each unfinished question. Successful levels continue forward instead of selecting an earlier weaker level. After the last success, earlier review is an explicit choice. Parent tools offer a later-stage preview checkbox and
 confirmed JSON backup/restore. Data stays in that browser/device; no login or sync.
-This is a prototype, not a complete or validated reading course. New recordings
+The bundled Andika-based literacy font has a curved lowercase l and single-storey a; no external font requests. Wrong answers play the clicked option’s human sound/word context, then allow retry. This is a prototype, not a complete or validated reading course. New recordings
 still need listening/educator review. [Audio and credits](docs/AUDIO.md).
 
 ## Run and test
@@ -48,6 +48,7 @@ node tests/browser.cjs
 node tests/mobile-smoke.cjs
 node tests/profiles.cjs
 node tests/word-hints.cjs
+node tests/level-navigation.cjs
 python3 scripts/audit_audio.py
 ```
 
@@ -96,7 +97,7 @@ identifies the actual app source commit; later docs-only commits do not redeploy
 syllable and word learning. This independent app does not inherit research evidence
 from the original intervention. [Historical attempt](docs/history/GODOT-PROTOTYPE.md).
 
-Project CC BY-SA 4.0; human Wikimedia recordings individually CC BY-SA 3.0/4.0.
+Project CC BY-SA 4.0; human Wikimedia recordings individually CC BY-SA 3.0/4.0; bundled Andika-derived fonts SIL OFL 1.1 ([font provenance](docs/FONTS.md)).
 See LICENSE, [audio provenance](docs/AUDIO.md), [source metadata](docs/audio-sources.json)
 and in-app About/Töne prüfen. The user’s positive physical-phone report applies to
 v2; current release browser emulation is not a new physical-device listening test.

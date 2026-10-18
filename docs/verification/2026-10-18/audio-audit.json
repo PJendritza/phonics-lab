@@ -290,74 +290,74 @@
       "sha256": "56b741214ebb976e959a4cc32862a323d2f3bc4e6f879cf6654fbf66edacf676"
     },
     {
-      "id": "listen",
-      "seconds": 2.679,
-      "peak": 0.5816,
-      "last50msPeak": 0.0,
-      "sha256": "15f4247e0c0604b9720baaa479e6e83de07cf533525d534ae1365446116cd604"
-    },
-    {
-      "id": "syllable",
-      "seconds": 2.215,
-      "peak": 0.5828,
-      "last50msPeak": 0.0,
-      "sha256": "96ab35e848249cc43300e965d1796dde899802eeefb5e9d957847bd6bf766fbc"
-    },
-    {
-      "id": "word",
-      "seconds": 3.26,
-      "peak": 0.6474,
-      "last50msPeak": 0.0,
-      "sha256": "c4d4f6fcea96d945c0d95d801b3380cdb9fd635ea0f8a84563aa4a3fb3743268"
-    },
-    {
-      "id": "short",
-      "seconds": 4.421,
-      "peak": 0.5783,
-      "last50msPeak": 0.0,
-      "sha256": "91eca34dc7e535290aeeca42ac0bf93418219282d1b0a69ea9bc6a514f297002"
-    },
-    {
-      "id": "ending",
-      "seconds": 3.11,
-      "peak": 0.646,
-      "last50msPeak": 0.0,
-      "sha256": "842c72fc061af1589d480f96b2afd6fdde497baaa90d4619f9e56c0a3baa3bbf"
-    },
-    {
-      "id": "read",
-      "seconds": 2.54,
-      "peak": 0.5953,
-      "last50msPeak": 0.0,
-      "sha256": "e37f81fbe8c3ae12948dd7b0734ac5e1e9bb5a19a68856442f143ee359d06d79"
-    },
-    {
-      "id": "model",
-      "seconds": 3.341,
-      "peak": 0.6545,
-      "last50msPeak": 0.0,
-      "sha256": "ddb7c291e429fcb94ef5b43fc8a2fb0583b3d3aeb20f433602c7909d8d160f73"
-    },
-    {
-      "id": "onset",
-      "seconds": 3.028,
-      "peak": 0.6589,
-      "last50msPeak": 0.0,
-      "sha256": "e8b75a8218cc79de730c5289d2083c4199ba4ebb97436f99899009889985728d"
-    },
-    {
-      "id": "word_blocks",
-      "seconds": 3.655,
-      "peak": 0.5706,
-      "last50msPeak": 0.0,
-      "sha256": "9692000cd1f82921b861cde0a9a9a3c9e0ae41999789610603b83519f8566821"
-    },
-    {
       "id": "success",
       "seconds": 0.24,
       "peak": 0.0968,
       "last50msPeak": 0.0,
       "sha256": "652e3b7657c0ceff731e7db9198320d25828349c89942cfdbcd535ac8e2a3bd0"
+    },
+    {
+      "id": "listen",
+      "seconds": 3.78,
+      "peak": 0.6723,
+      "last50msPeak": 0.0,
+      "sha256": "75d2348b924b9523c6b3c2d04150b1fb71c22571976efd54af2a3eb8e7d71a87"
+    },
+    {
+      "id": "syllable",
+      "seconds": 3.072,
+      "peak": 0.6486,
+      "last50msPeak": 0.0,
+      "sha256": "aaa0112b7b581d14a5af569baba5b5e9912820f052140adf125ee8279873cea4"
+    },
+    {
+      "id": "word",
+      "seconds": 4.512,
+      "peak": 0.6559,
+      "last50msPeak": 0.0,
+      "sha256": "7b422f7e6cd9e2c69e42cbba677074f6b8e1b4c20377e28c2b8f259ca4f59301"
+    },
+    {
+      "id": "short",
+      "seconds": 5.789,
+      "peak": 0.5666,
+      "last50msPeak": 0.0,
+      "sha256": "f1d3bbade2ee12e3337cd5815f14918282249ee976d35619c3415d43c674b423"
+    },
+    {
+      "id": "ending",
+      "seconds": 4.373,
+      "peak": 0.6763,
+      "last50msPeak": 0.0,
+      "sha256": "d90e6615f923a9d0ee171b53c8211314fdaa3159e878f110dacd8fecf65b417c"
+    },
+    {
+      "id": "read",
+      "seconds": 3.432,
+      "peak": 0.6748,
+      "last50msPeak": 0.0,
+      "sha256": "2e7711ae2d91354bbaf0b539a302c7d52533690da09d79f4ddde0913ca9d82a6"
+    },
+    {
+      "id": "model",
+      "seconds": 4.477,
+      "peak": 0.6739,
+      "last50msPeak": 0.0,
+      "sha256": "8fa2bd634b41bec6249777e76b913189141bb3c52abdb8d340ad657fe4d99073"
+    },
+    {
+      "id": "onset",
+      "seconds": 4.338,
+      "peak": 0.6488,
+      "last50msPeak": 0.0,
+      "sha256": "f10d4cbb185e305be08b8756d2de01b2f1fb4e19dc9731e885d3f50e69e7ebe6"
+    },
+    {
+      "id": "word_blocks",
+      "seconds": 5.348,
+      "peak": 0.661,
+      "last50msPeak": 0.0,
+      "sha256": "3e57694da9e7125f68bb84c4b9edf3cb7a189f1f4e748a0bdce239675d85daf7"
     }
   ]
 }

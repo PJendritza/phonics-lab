@@ -11,6 +11,9 @@ def main():
   source=ROOT/'app'/clip['src']
   if sha(source)!=clip['sha256']:raise SystemExit('Audio checksum mismatch: '+clip['id'])
   if clip.get('previous') and not (ROOT/'app'/clip['previous']).is_file():raise SystemExit('Missing comparison clip')
+ font_manifest=json.loads((ROOT/'app/fonts/manifest.json').read_text())
+ for font in font_manifest['files']:
+  if sha(ROOT/'app'/font['src'])!=font['sha256']:raise SystemExit('Font checksum mismatch: '+font['src'])
  out.mkdir(parents=True,exist_ok=True)
  # Only replace a known app output, never recursively delete an arbitrary directory.
  if any(out.iterdir()) and not (out/'BUILD_INFO.json').exists():raise SystemExit('Output directory is not an existing build; choose an empty directory.')

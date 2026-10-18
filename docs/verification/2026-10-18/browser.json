@@ -1,10 +1,10 @@
 {
-  "version": 4,
+  "version": 5,
   "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
-    "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. Full 9/9 goal earns a flower.",
+    "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. Full 14/14 goal earns a flower.",
     "Independent profiles preserve exact pending activities; export downloads and confirmed restore work; invalid restore preserves existing data.",
-    "Parent preview accesses all 14 stages. New first/last consonants and word tasks run to their explicit 8/10/12-question goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
+    "Parent preview accesses all 14 stages. New first/last consonants and word tasks run to their explicit 12/15/18-question goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
     "Actual nonverbal confirmation audio plays; no spoken success, retry or navigation praise is requested.",
     "All current human/guide/effect files plus old comparisons decode; effect filtering and per-clip listening review persistence work.",
     "Required cue failure disables choices and permits replay recovery; optional chime failure never blocks automatic advancement.",
@@ -190,47 +190,47 @@
       "duration": 0.445147
     },
     {
-      "src": "audio/listen.mp3?v=15f4247e0c06",
-      "duration": 2.679365
-    },
-    {
-      "src": "audio/syllable.mp3?v=96ab35e84824",
-      "duration": 2.214966
-    },
-    {
-      "src": "audio/word.mp3?v=c4d4f6fcea96",
-      "duration": 3.259864
-    },
-    {
-      "src": "audio/short.mp3?v=91eca34dc7e5",
-      "duration": 4.420862
-    },
-    {
-      "src": "audio/ending.mp3?v=842c72fc061a",
-      "duration": 3.109637
-    },
-    {
-      "src": "audio/read.mp3?v=e37f81fbe8c3",
-      "duration": 2.540045
-    },
-    {
-      "src": "audio/model.mp3?v=ddb7c291e429",
-      "duration": 3.341134
-    },
-    {
-      "src": "audio/onset.mp3?v=e8b75a8218cc",
-      "duration": 3.027664
-    },
-    {
-      "src": "audio/word_blocks.mp3?v=9692000cd1f8",
-      "duration": 3.654603
-    },
-    {
       "src": "audio/success.mp3?v=652e3b7657c0",
       "duration": 0.24
+    },
+    {
+      "src": "audio/listen.mp3?v=75d2348b924b",
+      "duration": 3.780454
+    },
+    {
+      "src": "audio/syllable.mp3?v=aaa0112b7b58",
+      "duration": 3.072245
+    },
+    {
+      "src": "audio/word.mp3?v=7b422f7e6cd9",
+      "duration": 4.511882
+    },
+    {
+      "src": "audio/short.mp3?v=f1d3bbade2ee",
+      "duration": 5.78898
+    },
+    {
+      "src": "audio/ending.mp3?v=d90e6615f923",
+      "duration": 4.372562
+    },
+    {
+      "src": "audio/read.mp3?v=2e7711ae2d91",
+      "duration": 3.432154
+    },
+    {
+      "src": "audio/model.mp3?v=8fa2bd634b41",
+      "duration": 4.477052
+    },
+    {
+      "src": "audio/onset.mp3?v=f10d4cbb185e",
+      "duration": 4.338458
+    },
+    {
+      "src": "audio/word_blocks.mp3?v=3e57694da9e7",
+      "duration": 5.3478
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "93c3228db761c9aafda96cd27721154651ee985fd629df0040faad8135231bbd"
+  "appSha256": "fe987b493899f447d07e29386db37d50aad6459df1ea459a786ff0dde3bb5bbf"
 }

@@ -1,0 +1,12 @@
+{
+  "model": "de_DE-thorsten-high",
+  "modelSha256": "9df1c43c61149ef9b39e618e2b861fbe41e1fcea9390b2dac62e8761573ea4f1",
+  "configSha256": "6de734444e4c3f9e33b7ebe2746dbc19b71e85f613e79c65acf623200b99a76a",
+  "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
+  "lengthScale": 1.5,
+  "sentencePauseSeconds": 0.3,
+  "noiseScale": 0.0,
+  "noiseWScale": 0.0,
+  "sampleRate": 22050,
+  "bitrate": "64k"
+}
