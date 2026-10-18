@@ -8,11 +8,14 @@ using the original jellyfish and frog games.
 This is an adult-testing prototype. Pronunciation and lesson sequencing need
 native German and educator review. It is not an officially validated German course.
 
+**[Open the browser prototype](https://patrickjendritza.com/Kalulu-DE/)** · Phone hardware testing is still pending.
+
 ## App source versus deployment
 
 `main` is the development source. [`gh-pages`](https://github.com/PJendritza/Kalulu-DE/tree/gh-pages)
-contains only the generated, ready-to-serve website. Storing that branch does not
-enable GitHub Pages; no live website is claimed until its URL is checked.
+contains only the generated, ready-to-serve website. GitHub automatically enabled
+Pages when this branch was first pushed; the HTTPS landing page and game asset
+hashes have been checked. See PROGRESS.md for the exact verification limits.
 
 ```text
 app/

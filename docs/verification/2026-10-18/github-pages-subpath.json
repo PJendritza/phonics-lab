@@ -1,0 +1,257 @@
+{
+  "url": "http://127.0.0.1:8063/Kalulu-DE/",
+  "events": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] --- Logging started at 2026-10-18T06:50:35 ---"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] --- Logging set at level 2 ---"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: 06:50:35 [WARNING] ServerManager: Could not load environment config at /userfs/godot/app_userdata/Kalulu German Prototype/environment.cfg. Error: File not found. Falling back to PROD environment."
+    },
+    {
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] ServerManager: Environment URL set to https://api.kalulu.org/prod/"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: HTTP proxy feature is not available"
+    },
+    {
+      "type": "error",
+      "text": "   at: set_http_proxy (core/io/http_client.cpp:55)"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: HTTPS proxy feature is not available"
+    },
+    {
+      "type": "error",
+      "text": "   at: set_https_proxy (core/io/http_client.cpp:59)"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager initialization"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Load device settings"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: 06:50:35 [WARNING] UserDataManager: Device settings file not found at /userfs/godot/app_userdata/Kalulu German Prototype/device_settings.tres. Creating defaults."
+    },
+    {
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: 06:50:35 [WARNING] Database: Database file not found at user://language_resources/de_DE/language.db"
+    },
+    {
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: 06:50:35 [WARNING] DeviceSettings: OS locale unsupported, fallback to de_DE"
+    },
+    {
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "type": "error",
+      "text": "WARNING: 06:50:35 [WARNING] UserDataManager: Application name is not Kalulu, so user folder purge has been blocked."
+    },
+    {
+      "type": "error",
+      "text": "   at: push_warning (core/variant/variant_utility.cpp:1033)"
+    },
+    {
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "Closed database (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Closing database connection at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "Closed database (user://language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "Opened database successfully (/userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db)"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Database: Database opened at /userfs/godot/app_userdata/Kalulu German Prototype/language_resources/de_DE/language.db"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] Gardens: Computing lessons distribution for 6 lessons"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Created new student progression at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/progression.tres"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Created new student remediation at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/remediation.tres"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Created new student confusion matrix at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/confusion_matrix.tres"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Created new student boss data at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/boss.tres"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Created new student difficulty at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/difficulty.tres"
+    },
+    {
+      "type": "log",
+      "text": "06:50:35 [INFO] UserDataManager: Created new student speeches at /userfs/godot/app_userdata/Kalulu German Prototype/offline-german-prototype/1/de_DE/987/speeches.tres"
+    },
+    {
+      "type": "log",
+      "text": "GERMAN_READY: six German lessons, offline, synthetic draft speech"
+    },
+    {
+      "type": "log",
+      "text": "GERMAN_MENU lesson=1 completed=0"
+    },
+    {
+      "type": "log",
+      "text": "GERMAN_PREVIEW a_long"
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.icon.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.wasm",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.pck",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.side.wasm",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/play.icon.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8063/Kalulu-DE/libgdsqlite.web.template_release.wasm32.nothreads.wasm",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:8063/00080975-c9db-4607-a0d2-e17412bd7358",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:8063/00080975-c9db-4607-a0d2-e17412bd7358",
+      "status": 200
+    }
+  ],
+  "passed": true,
+  "note": "Accept same-origin blob URLs used by Godot workers; initial harness incorrectly rejected those."
+}

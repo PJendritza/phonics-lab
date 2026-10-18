@@ -1,6 +1,6 @@
 # Kalulu-DE status
 
-Updated2026-10-18. Permanent project: PJendritza/Kalulu-DE. Source migration and local checks are complete; remote deployment verification pending;
+Updated2026-10-18. Permanent project: PJendritza/Kalulu-DE. Source/build migration and independent remote checks are complete; tmp retirement pending;
 read this file, AGENTS.md and recent Git history before continuing.
 
 ## Existing working prototype
@@ -35,8 +35,12 @@ old tmp working copy. Details: docs/MIGRATION.md. Keep originals until verificat
 ## Remaining product checks
 
 Native German listening/educator review and actual iPhone/Android testing remain.
-GitHub Pages is not live merely because a gh-pages branch exists. After migration,
-hosting activation is a separate step. Do not repeat the Sites detour.
+GitHub automatically enabled Pages on the first gh-pages push and reports built,
+using the existing custom domain. HTTPS https://patrickjendritza.com/Kalulu-DE/
+returns200. Nine live game/landing/audio files hash-match the tested deployment.
+A local /Kalulu-DE/ subpath simulation loads the menu and GP preview without runtime
+errors. Actual phone/Safari remains untested; no live-browser playability claim
+beyond those file checks. No Pages API settings were changed; do not repeat Sites.
 
 ## Executed migration checks
 
@@ -57,3 +61,19 @@ mapped;119were unchanged on initial migration (including every WAV, curriculum J
 and Godot integration script/scene). Full original history is preserved. The local
 recoverable history bundle is /workspace/kalulu-migration/complete-history.bundle.
 Deployment upload, independent remote byte checks and tmp retirement follow.
+
+## Independent remote migration verification
+
+Fresh source and gh-pages clones were fetched into /workspace/kalulu-migration/.
+All151source files matched byte-for-byte, every one of136original tracked files
+was accounted for, all9archive tags/commit objects were present, all86deployment
+SHA256 checks passed, and the source ZIP matched the new paths/source commit.
+See docs/verification/2026-10-18/migration-verification.json. Packaged source was
+1ba1251dc20680c865b049fc53ec0eaf47e98897; deployment ca2189227ea16516f1a8945d772eb19d8d5596a3.
+Subsequent documentation-only updates may advance main beyond the frozen build.
+
+Full original working copy and Git metadata (including ignored files) have been
+archived/verified at /workspace/kalulu-migration/tmp-before-retirement.tar.gz;
+all136tracked source hashes were checked inside the archive. The terminal-access
+helper has its own archive. Git history also has a complete verified bundle.
+No tmp removal occurs until source and deployment verification succeeds.
