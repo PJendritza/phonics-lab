@@ -1,33 +1,28 @@
-export const VERSION = '2.0.0';
-export const SOUNDS = {
-  a: {text:'a', spoken:'a', ipa:'aː', audio:'a', kind:'letter', note:'langes a'},
-  m: {text:'m', spoken:'m', ipa:'m', audio:'m', kind:'letter', note:'Summ-Laut, nicht „em“'},
-  i: {text:'i', spoken:'i', ipa:'iː', audio:'i', kind:'letter', note:'langes i'},
-  o: {text:'o', spoken:'o', ipa:'oː', audio:'o', kind:'letter', note:'langes o'},
-  am: {text:'am', ipa:'am', audio:'am', kind:'syllable', note:'a ist hier kurz'},
-  im: {text:'im', ipa:'ɪm', audio:'im', kind:'syllable', note:'i ist hier kurz'},
-  mi: {text:'mi', ipa:'miː', audio:'mi', kind:'syllable', note:'Übungssilbe, i ist hier lang'},
+export const VERSION='3.0.0';
+export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
+export const ITEMS={
+ a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
+ o:{text:'o',audio:'o',kind:'sound'},u:{text:'u',audio:'u',kind:'sound'},e:{text:'e',audio:'e',kind:'sound'},
+ ma:{text:'ma',audio:'ma',kind:'unit'},mi:{text:'mi',audio:'mi',kind:'unit'},
+ am:{text:'am',audio:'am',kind:'unit'},im:{text:'im',audio:'im',kind:'unit'},um:{text:'um',audio:'um',kind:'unit'},
+ an:{text:'an',audio:'an',kind:'unit'},in:{text:'in',audio:'in',kind:'unit'},man:{text:'man',audio:'man',kind:'unit'},nun:{text:'nun',audio:'nun',kind:'unit'},mal:{text:'mal',audio:'mal',kind:'unit'},
+ oma:{text:'Oma',audio:'oma',kind:'word'},omi:{text:'Omi',audio:'omi',kind:'word'},mama:{text:'Mama',audio:'mama',kind:'word'},mami:{text:'Mami',audio:'mami',kind:'word'},
 };
-export const WORDS = {
-  am: {text:'am', letters:['a','m'], audio:'am'},
-  im: {text:'im', letters:['i','m'], audio:'im'},
-  oma: {text:'Oma', letters:['O','m','a'], audio:'oma'},
-};
-export const LESSONS = [
-  {id:'letters', number:'01', title:'Laute entdecken', short:'a · m · i',
-   description:'Ein Laut. Ein Buchstabe. Erst ein Feld, dann eine kleine Auswahl.',
-   icon:'spark', color:'peach', instruction:'listen', kind:'find', pool:['a','m','i'],
-   rounds:[['a',['a']],['m',['m']],['a',['a','m']],['m',['a','m']],['i',['i']],['i',['a','m','i']],['a',['a','m','i']]]},
-  {id:'syllables', number:'02', title:'Silben finden', short:'am · im · mi',
-   description:'Laute verbinden und genau hinhören. Die Silben bleiben an ihrem Platz.',
-   icon:'bridge', color:'mint', instruction:'syllable', kind:'find', preview:true, pool:['am','im','mi'],
-   note:'Genau hinhören: In am und im ist der Vokal kurz. In mi ist das i lang. Tippe auf eine Silbe, um den Unterschied zu hören.',
-   rounds:[['am',['am']],['im',['im']],['am',['am','im']],['im',['am','im']],['mi',['mi','im']],['mi',['am','im','mi']]]},
-  {id:'words', number:'03', title:'Wörter bauen', short:'am · im · Oma',
-   description:'Ein Wort hören und Buchstabe für Buchstabe aufbauen. Ohne Springen und Eile.',
-   icon:'blocks', color:'lavender', instruction:'word', kind:'build', preview:true,
-   words:['am','im','oma'], note:'Ausblick: Bei Oma kommt o neu dazu. Das a am Wortende ist kurz, nicht das lange a aus der ersten Übung.'},
+export const ENDINGS={m:['am','im','um'],n:['an','in','man','nun'],l:['mal']};
+export const STAGES=[
+ {id:'letters',title:'Die ersten Laute',short:'a · m · i',mode:'find',group:'sound',targets:['a','m','i'],instruction:'listen',icon:'spark',color:'peach'},
+ {id:'vowels',title:'Mehr Vokale',short:'o · u · e',mode:'find',group:'sound',targets:['o','u','e'],distractors:['a','i','m'],instruction:'vowels',icon:'spark',color:'mint'},
+ {id:'short',title:'Kurz und klar',short:'am · im · um',mode:'find',group:'unit',targets:['am','im','um'],instruction:'short',icon:'bridge',color:'lavender'},
+ {id:'blend',title:'Laute verbinden',short:'ma · mi · am · im · um',mode:'find',group:'unit',targets:['ma','mi','am','im','um'],instruction:'syllable',icon:'bridge',color:'peach'},
+ {id:'endings',title:'Lautdetektive',short:'m · n · l am Wortende',mode:'ending',group:'end',targets:['m','n','l'],instruction:'ending',icon:'spark',color:'mint'},
+ {id:'syllables',title:'Neue Silben',short:'an · in · man · nun · mal',mode:'find',group:'unit',targets:['an','in','man','nun','mal'],instruction:'syllable',icon:'bridge',color:'lavender'},
+ {id:'read',title:'Wörter entdecken',short:'Oma · Omi · Mama · Mami',mode:'find',group:'read',targets:['oma','omi','mama','mami'],instruction:'read',icon:'blocks',color:'peach'},
+ {id:'build',title:'Wörter bauen',short:'Hören, zerlegen, aufbauen',mode:'build',group:'build',targets:['am','im','um','oma','omi','mama','mami','man','mal','nun'],instruction:'word',icon:'blocks',color:'mint'},
 ];
+export const stageById=id=>STAGES.find(s=>s.id===id);
+export const skillKey=(stage,target)=>`${stage.group}:${target}`;
+export const label=(stage,target)=>stage.mode==='ending'?target:ITEMS[target].text;
+export const lettersFor=target=>[...ITEMS[target].text];
 export const speaker = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 export const icons = {
  spark:'<svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="m32 9 5.7 16.3L54 31l-16.3 5.7L32 53l-5.7-16.3L10 31l16.3-5.7L32 9Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M49 8v10m-5-5h10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',

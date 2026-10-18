@@ -1,7 +1,8 @@
 {
-  "version": "2.0.0",
-  "sourceCommit": "79621ff92ecf90a44878e7c2e5c4f06849acd57c",
+  "version": "3.0.0",
+  "sourceCommit": "fb117e4425481e2ad4807dd6ec1b713a752089b5",
   "sourceDirty": false,
+  "assetVersion": "2ffda84dd308",
   "stack": "HTML / CSS / ES modules",
   "audioPolicy": "Human recordings for isolated sounds and syllables; TTS only for sentence instructions. No auditory approval claimed."
 }
