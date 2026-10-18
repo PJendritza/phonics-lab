@@ -70,14 +70,23 @@ audio-audit.json, word-hints.json. Browser evidence binds exact app SHA256
 93c3228db761c9aafda96cd27721154651ee985fd629df0040faad8135231bbd.
 Screenshots/builds outside Git. Tools: Python 3.12.14, Playwright 1.62.1, Chromium154.
 
-Publication: pending final clean source commit/push, clean rebuild, normal gh-pages
-push and certificate-verified live hash audit. Do not call this version live until
-that audit passes. Existing site currently holds the prior branded app.
+Publication complete and independently byte-verified:
+- Source: f1d732832c1c7870539e8aa7ed1c0af4a3ad1777, pushed to fluent-progress and main.
+- Deployment: 6cbb59e24da75dc08f09c500103e751ae7485e5d, normal push to gh-pages.
+- Clean python3 scripts/build.py: 68 files, 812,444 bytes, sourceDirty false.
+- python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v4 passed.
+- Initial metadata check still returned 3.0.1 during Pages propagation. After
+  BUILD_INFO reported 4.0.0/source f1d7328, python3 scripts/verify_live.py passed:
+  every one of 68 public HTTPS files exactly matches the tested package.
+  Evidence: docs/verification/2026-10-18/live.json.
+- Play: https://patrickjendritza.com/phonics-lab/?v=4.0.0
+- Review: https://patrickjendritza.com/phonics-lab/audio-review.html?v=4.0.0
+- A later documentation-only commit records publication; the deployed source is
+  f1d7328, not that later commit. No Pages settings/domain changes.
 
 ## Next action and limits
 
-Finish the publication above and record exact app/deployment SHAs and final bytes.
-Then user tests new link, existing profile resume, automatic answers and stage-preview
+Next: user tests new link, existing profile resume, automatic answers and stage-preview
 consonants on their phone, and reviews new words via Töne prüfen. Refine recordings/
 context instructions from native/educator feedback before expanding the curriculum.
 No new physical-phone test or native pronunciation certification is claimed.
