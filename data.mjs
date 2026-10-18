@@ -1,4 +1,4 @@
-export const VERSION='4.0.0';
+export const VERSION='5.0.0';
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
@@ -49,10 +49,25 @@ export const STAGES=[
  {id:'more_build',title:'Wörter mit Bausteinen',short:'sch und ll als Bausteine',mode:'build',group:'build',targets:['fisch','schaf','hut','ball'],instruction:'word_blocks',goal:8,icon:'blocks',color:'lavender'},
 ];
 export const stageById=id=>STAGES.find(s=>s.id===id);
+export const stageNumber=id=>STAGES.findIndex(s=>s.id===id)+1;
+export const levelGoal=stage=>Math.round((stage.goal??9)*1.5);
 export const skillKey=(stage,target)=>`${stage.group}:${target}`;
 export const label=(stage,target)=>CONTEXTS[stage.mode]?target:ITEMS[target].text;
 export const lettersFor=target=>ITEMS[target].graphemes??[...ITEMS[target].text];
 export const BUILD_UNITS=['a','m','i','o','u','n','l','f','s','sch','t','k','b','d','g','h','ll'];
+// Human audio for the selected option, never fabricated isolated consonants.
+// Context exercises already establish first/last sound; word-building fallbacks
+// explicitly announce which part of the example word to listen for.
+export function choiceFeedback(stage,choice){
+ const context=CONTEXTS[stage.mode];
+ if(context){const cue=context[choice][0];return {audio:[cue],text:`Deine Auswahl: ${choice} · ${ITEMS[cue].text} (${stage.mode==='onset'?'Anfang':'Ende'})`};}
+ if(ITEMS[choice])return {audio:[ITEMS[choice].audio],text:`Deine Auswahl: ${ITEMS[choice].text}`};
+ if(choice==='ll')return {audio:['ending','ball'],text:'Deine Auswahl: ll · am Ende von Ball'};
+ const unit=choice==='ll'?'l':choice;
+ const mode=ONSETS[unit]?'onset':'ending',cue=CONTEXTS[mode]?.[unit]?.[0];
+ if(!cue)throw Error('Kein menschliches Klangbeispiel für diese Auswahl.');
+ return {audio:[mode,cue],text:`Deine Auswahl: ${choice} · ${mode==='onset'?'am Anfang von':'am Ende von'} ${ITEMS[cue].text}`};
+}
 export const speaker = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 export const icons = {
  spark:'<svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="m32 9 5.7 16.3L54 31l-16.3 5.7L32 53l-5.7-16.3L10 31l16.3-5.7L32 9Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M49 8v10m-5-5h10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',

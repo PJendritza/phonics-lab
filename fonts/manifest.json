@@ -1,0 +1,23 @@
+{
+  "source": "https://github.com/silnrsi/font-andika/releases/download/v7.000/Andika-7.000.zip",
+  "sourceSha256": "88ba6ea41ef4a8e5214b090df8fa2983be1babe4843efaa99cdb6078b0e2c070",
+  "originalFamily": "Andika",
+  "version": "7.000",
+  "family": "Phonics Lesson",
+  "license": "SIL Open Font License 1.1",
+  "changes": "Latin subset; internal family renamed as required by reserved font names. Original glyph shapes and cv39 curved-tail l retained.",
+  "files": [
+    {
+      "src": "fonts/phonics-regular-fcbbfa9d767b.woff2",
+      "weight": 400,
+      "sha256": "fcbbfa9d767b7ad25949f4a5e45134fc489b1b2aadd38e49147ac0dba6298fa9",
+      "sourceSha256": "27484fdc98d0d63f90407f8266e28295f6fb16d2b13c5024df0214f17152919a"
+    },
+    {
+      "src": "fonts/phonics-bold-a79edacb209f.woff2",
+      "weight": 700,
+      "sha256": "a79edacb209f49f77661a21f78dabc281f5ac7ae9b3f877b9c197d2b3caf8103",
+      "sourceSha256": "3ad43a77a29ea060528be69a9e0e81c9dbbe8dff894a26ae1818d3c472393319"
+    }
+  ]
+}
