@@ -2,6 +2,16 @@
 
 Recorded October 18. Planning notes only; not implemented or deployed.
 
+- [ ] Improve visible flower growth and add a small, noticeable sparkle/confetti
+      burst on every correct press, including correct word blocks. Keep it brief,
+      sparse and local to the feedback/progress area; never move answer targets or
+      delay automatic advancement. Preserve cumulative progress, the existing quiet
+      success tune and reduced-motion support (static acknowledgement instead).
+- [ ] Audition slower, warmer full-sentence instruction audio. The user likes the
+      existing human target vowels/words; preserve them. Compare slower existing
+      Piper with a higher-quality German-capable provider before choosing a voice.
+      Research and a proposed listening comparison are in docs/VOICE-OPTIONS.md.
+      No paid generation or instruction replacement has been performed for this note.
 - [ ] Bundle **Andika**, keeping its default single-storey a and enabling the
       curved-tail lowercase l with OpenType `cv39=1` (`font-feature-settings:
       "cv39" 1`). Use the same bundled font across devices for exercise letters,

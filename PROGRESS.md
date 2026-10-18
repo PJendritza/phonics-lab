@@ -6,6 +6,15 @@ Feature branch: fluent-progress. Local checkout stays /workspace/Kalulu-DE.
 
 ## Latest feedback recorded for the next version
 
+Further phone feedback: make flower growth clearer and add a restrained local
+sparkle/confetti on each correct press, preserving stationary choices, the tune,
+automatic flow and reduced-motion accessibility. Synthetic instructions sound too
+fast and insufficiently natural; human vowel/word recordings are liked and should
+stay. Added docs/VOICE-OPTIONS.md with current Piper settings, slower local option,
+OpenAI/ElevenLabs/Azure alternatives and official documentation links. This is
+documentation research, not a synthesis/listening benchmark or API-access test.
+No new audio, application changes or publication in this task.
+
 The user is testing v4 on their phone, reports it is pretty good and likes the
 current success feedback. Requested planning notes (no implementation this turn):
 number the exercise stages as levels and add an easily accessible numbered selector
