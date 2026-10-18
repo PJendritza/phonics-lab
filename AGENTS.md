@@ -52,6 +52,10 @@ never become independent mastery. Accuracy/underexposure drive adaptation, never
 response time. Save before auto-advance, cancel navigation timers/audio, and never
 award twice after pause/reload. Failed storage still permits in-memory practice.
 No tracking, accounts, uploads, paid APIs or cloud sync without a separate decision.
+User budget preference: use free/local generation; do not propose paid services or
+assume ChatGPT Plus/Google subscription access includes external API/GPU credits.
+Approved next instruction voice: Thorsten High, length_scale=1.35, added 0.2-second
+sentence pause. See docs/NEXT-VERSION.md before implementing the next release.
 
 After functional changes run node --test tests/learning.test.mjs tests/content.test.mjs,
 python3 scripts/audit_audio.py, python3 scripts/build.py and relevant Playwright

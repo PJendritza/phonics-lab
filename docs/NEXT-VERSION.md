@@ -7,11 +7,22 @@ Recorded October 18. Planning notes only; not implemented or deployed.
       sparse and local to the feedback/progress area; never move answer targets or
       delay automatic advancement. Preserve cumulative progress, the existing quiet
       success tune and reduced-motion support (static acknowledgement instead).
-- [ ] Audition slower, warmer full-sentence instruction audio. The user likes the
-      existing human target vowels/words; preserve them. Compare slower existing
-      Piper with a higher-quality German-capable provider before choosing a voice.
-      Research and a proposed listening comparison are in docs/VOICE-OPTIONS.md.
-      No paid generation or instruction replacement has been performed for this note.
+- [ ] Regenerate instruction sentences with the approved **regular Thorsten High,
+      length_scale=1.35 and an added 0.2-second pause between sentences**. The user
+      preferred the generated 3.87-second sample. Preserve human vowel/word targets.
+      Samples exist outside source under /workspace/kalulu-browser-build/audio-samples;
+      the website still uses Thorsten Medium. Future free-model comparisons are
+      separate research in docs/VOICE-OPTIONS.md, not a reason to block this update.
+- [ ] **Move forward after a successful level:** continue to the next numbered
+      level, never silently jump to a lower one because an earlier skill is weaker
+      or a lower stage was skipped during testing. Track the learner's continuation
+      position separately from the weakest-skill recommendation. Extra needed
+      practice can stay within the current level; earlier review should be an
+      explicit choice. After the last level show completion/review options rather
+      than automatically restarting below. Preserve independent mastery evidence,
+      profile isolation and saved-round behavior; a preview jump must not fabricate
+      success for skipped levels. Add regression checks for higher-level success
+      with incomplete earlier levels and for reload/continue.
 - [ ] Bundle **Andika**, keeping its default single-storey a and enabling the
       curved-tail lowercase l with OpenType `cv39=1` (`font-feature-settings:
       "cv39" 1`). Use the same bundled font across devices for exercise letters,

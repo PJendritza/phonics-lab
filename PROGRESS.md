@@ -6,6 +6,29 @@ Feature branch: fluent-progress. Local checkout stays /workspace/Kalulu-DE.
 
 ## Latest feedback recorded for the next version
 
+Latest additions: successful higher levels must continue forward to the next
+numbered level, never silently send the learner back to a weaker/unfinished lower
+level. Earlier review should be explicit. Update continuation state independently
+of weakest-skill selection while preserving independent mastery and existing saves.
+
+Voice decision from listening samples: regular Thorsten High at length_scale=1.35
+with 0.2 seconds added between sentences is approved for the next update. Generated
+sample duration 3.866 seconds; earlier High samples at 1.8 + 0.4-second pause were
+too slow, and 1.25 without extra pause was faster. High model source SHA256:
+9df1c43c61149ef9b39e618e2b861fbe41e1fcea9390b2dac62e8761573ea4f1.
+All samples/models remain outside source; no app audio replaced yet.
+
+Assessed user's free-model list against official sources: Qwen3-TTS 0.6B/1.7B
+explicit German support, Apache 2.0; Chatterbox Multilingual V3 exists, 0.5B,
+German support, MIT, documented CPU option; XTTS-v2 CPML non-commercial;
+OpenAudio S1-mini redirects to fishaudio/s1-mini, gated and CC BY-NC-SA 4.0.
+No empirical quality ranking or successful local inference is claimed. Current
+environment: five reported CPUs, ~33 GiB RAM, no nvidia-smi or /dev/nvidia* device.
+Heavy free models need a bounded CPU trial before promising autonomous generation.
+Official demos exist but queues/quotas/access are not verified. See updated
+docs/VOICE-OPTIONS.md. No installation, heavy download or model execution for this
+assessment. Budget: no paid API/GPU recommendations or assumed subscription credits.
+
 Further phone feedback: make flower growth clearer and add a restrained local
 sparkle/confetti on each correct press, preserving stationary choices, the tune,
 automatic flow and reduced-motion accessibility. Synthetic instructions sound too
