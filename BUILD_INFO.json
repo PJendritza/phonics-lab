@@ -1,22 +1,7 @@
 {
-  "project": "PJendritza/Kalulu-DE German prototype",
-  "source_branch": "main",
-  "source_commit": "bbc98e1b2a3079add57417dbd58323f2991c851e",
-  "source_dirty": false,
-  "upstream_commit": "51043b23f8e32e72ca79ca914ba3efd6b76b272e",
-  "godot": "4.7.stable",
-  "threads": false,
-  "language": "de_DE",
-  "content_sha256": "3efd4fd1b4271b37126b5f1495b47d6329f1ad3d6305cfc6b9e99914f91ccae1",
-  "pack": {
-    "counts": {
-      "GPs": 13,
-      "Syllables": 25,
-      "Words": 18,
-      "Lessons": 6
-    },
-    "sound_files": 57,
-    "content_sha256": "3efd4fd1b4271b37126b5f1495b47d6329f1ad3d6305cfc6b9e99914f91ccae1",
-    "schema_sha256": "4d47fa501175fc5ed417898c62b78dc9e38239281cb182300b403f956e6c7032"
-  }
+  "version": "2.0.0",
+  "sourceCommit": "79621ff92ecf90a44878e7c2e5c4f06849acd57c",
+  "sourceDirty": false,
+  "stack": "HTML / CSS / ES modules",
+  "audioPolicy": "Human recordings for isolated sounds and syllables; TTS only for sentence instructions. No auditory approval claimed."
 }
