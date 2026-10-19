@@ -1,3 +1,53 @@
+# Next update: instruction clarity, picture feedback and illustrations
+
+User feedback recorded 2026-10-19 (Europe/Berlin). **Planning only: do not implement,
+generate images/audio, build or deploy until a later authorised run.** The public
+app remains the released v7.0.0.
+
+- [ ] **Review Level 18's explanation and audio.** The user reports confusion
+      between E and I in the instruction around Tomate/Banane. The current written
+      `soft_words` instruction is “Ein e am Wortende klingt oft ganz leicht.
+      Hör das Wort und finde es.” Listen to the actual instruction and complete
+      target recordings before diagnosing whether this is pronunciation, wording
+      or both. The written text has been checked; the audio has not been audited
+      for this report. Make the distinction between the letter e and its weak
+      word-final sound clear. Final e in Tomate/Banane is normally schwa /ə/,
+      not i /ɪ/ and not a forced long /eː/. If the spoken instruction names the
+      letter E, it must be unambiguous. Replace the vague explanation with simple,
+      concrete wording and appropriate whole-word examples; keep phonetic jargon
+      out of the child flow. Review the paired reading level (19) as well.
+- [ ] **Stop automatically speaking the selected wrong picture's label.** The user
+      encountered this in picture matching, probably Level 17 (exact level
+      uncertain). Apply the correction to word-to-picture and sentence-to-picture
+      tasks, rather than hard-coding one level number. Keep the current written
+      prompt and stationary choices, a brief neutral visual retry indication and
+      no progress award. Keep explicit speaker help available and preserve the
+      existing two-error teaching of the original task, without independent
+      mastery or duplicate rewards. This is an exception to the older wrong-choice
+      audio rule: retain selected isolated-sound feedback in letter tasks and
+      selected-word feedback for written word-answer tiles. Update the picture
+      playback tests instead of retaining the rejected behaviour as a regression.
+- [ ] **Replace the current drawings with AI-generated illustrations.** The user
+      finds the hand-authored SVGs unattractive and insufficiently recognisable.
+      Aim for simple, appealing, child-friendly illustrations with clear
+      silhouettes, consistent style, uncluttered backgrounds and no photorealism.
+      Avoid text labels on answer images. Establish the style with a small set
+      including ambiguous current objects (e.g. Nudel, Leim, Beet, Lama), then
+      expand consistently. Reuse recognisable objects in sentence scenes so
+      subject/location comparisons remain clear. AI output need not be native
+      SVG: optimise and bundle suitable local web assets, preserving stationary
+      choices, readable phone-sized images and a lightweight browser app.
+- [ ] In the later implementation, review pronunciation and picture recognisability
+      directly, then check picture mistakes/help, saved profiles, mobile layouts,
+      success feedback and sentence contrasts before republishing. Technical
+      decoding alone does not establish that an instruction or picture is clear.
+
+No implementation, synthesis, image generation, tests, build or deployment was
+performed for this feedback. Existing voice settings and unrelated working
+behaviour are not being changed by this planning entry.
+
+---
+
 # v7 update: from phonics to reading comprehension
 
 - [x] Keep the first fourteen levels and add Levels 15–32 with a larger word bank.

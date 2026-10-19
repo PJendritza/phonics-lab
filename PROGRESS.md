@@ -1,8 +1,30 @@
 # Phonics Lab v7 status
 
-Updated 2026-10-18 (Europe/Berlin). Canonical repository:
+Updated 2026-10-19 (Europe/Berlin). Canonical repository:
 https://github.com/PJendritza/phonics-lab . Feature branch: reading-comprehension.
 Read AGENTS.md and recent Git history. Source checkout: /workspace/Kalulu-DE.
+
+## Latest feedback: plan saved, implementation explicitly deferred
+
+On 2026-10-19 the user requested a written plan only, with no work on the app yet.
+Planning branch: plan-reading-polish. Full checklist: docs/NEXT-VERSION.md.
+
+1. Review the confusing E/I/weak-e explanation and actual speech in Level 18
+   (Tomate/Banane); distinguish the written letter e from its weak ending sound.
+   Checked the source instruction text only; no listening diagnosis or fix made.
+2. Remove automatic wrong-picture word/sentence playback from picture-matching
+   tasks (user thinks approximately Level 17). Keep visual retry, explicit help
+   and appropriate two-error teaching; retain the earlier isolated-letter
+   feedback rule for sound tasks.
+3. Replace the unattractive/unclear SVG drawings with a consistent set of simple,
+   appealing AI-generated illustrations, optimised for recognition on phones.
+   No photorealism or written answer labels. Maintain clear sentence contrasts.
+
+This checkpoint changes documentation only. No app code/assets, generation,
+tests, build, hosting or deployment changed. The verified public v7 release and
+its source/deployment commits below remain current. Next action is to wait for
+the user's implementation request, then follow the new checklist before adding
+further curriculum content.
 
 ## Implemented from the reading-comprehension request
 

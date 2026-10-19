@@ -13,6 +13,15 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+Pending user feedback (2026-10-19): docs/NEXT-VERSION.md records the next update.
+Review Level 18's confusing E/I/weak-e explanation and actual recordings; stop
+wrong-picture label/sentence playback while preserving isolated-letter feedback;
+replace the current drawings with clear, simple AI-generated illustrations.
+These are unimplemented plans. The user authorised recording them only; wait for
+a later implementation request before changing app behaviour or generating assets.
+The planned picture exception supersedes generic wrong-choice speech rules below
+when that work is authorised. Current public release remains v7.0.0.
+
 Correct answers produce a brief nonverbal chime/check and automatically advance
 about 340 ms after a complete response, with a small local sparkle and growing flower. No spoken success praise or per-question
 next button. Every correct choice visibly advances the fixed level goal, including
