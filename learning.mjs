@@ -1,9 +1,11 @@
-import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=c4a39a6756b6';
+import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=543ef560c6d8';
+import {freshSpacing,selectTarget,recordPractice,practiceGoal,dueReviews,validateSpacing} from './spacing.mjs?v=543ef560c6d8';
+export const duePractice=(progress,now=Date.now())=>dueReviews(progress,STAGES,now);
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const integer=(v,max=1e7)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
 const id=()=>globalThis.crypto?.randomUUID?.()??`child-${Date.now()}-${Math.floor(Math.random()*1e6)}`;
-export function freshProgress(){return {version:3,curriculumVersion:CURRICULUM_VERSION,skills:{},stages:{},sessions:0,seeds:0,pending:null,paused:{},continuation:STAGES[0].id};}
+export function freshProgress(){return {version:3,curriculumVersion:CURRICULUM_VERSION,skills:{},stages:{},sessions:0,seeds:0,pending:null,paused:{},continuation:STAGES[0].id,spacing:freshSpacing()};}
 export function createProfile(name='Mein Profil',avatar=AVATARS[0]){return {id:id(),name:name.trim().slice(0,24)||'Mein Profil',avatar,progress:freshProgress()};}
 export function freshStore(){const p=createProfile();return {version:3,activeId:p.id,profiles:[p]};}
 export const activeProfile=store=>store.profiles.find(p=>p.id===store.activeId);
@@ -22,11 +24,9 @@ export function availableThrough(progress){
  const continuation=continuationFor(progress);
  return continuation==='complete'?STAGES.length-1:Math.max(STAGES.findIndex(s=>s.id===continuation),STAGES.findIndex(s=>s.id===progress.pending?.stageId),...Object.keys(progress.paused??{}).map(id=>STAGES.findIndex(s=>s.id===id)),...STAGES.map((s,i)=>progress.stages[s.id]?.passed?Math.min(i+1,STAGES.length-1):0));
 }
-function priority(skill){if(!skill?.introduced)return -10;if(!skill.recent.length)return -5;return (skill.recent.filter(Boolean).length+0.5)/(skill.recent.length+1)+(mastered(skill)?2:0)+Math.min(skill.seen,100)*0.001;}
 export function difficulty(progress){const recent=Object.values(progress.skills).flatMap(s=>s.timeline??[]).sort((a,b)=>a[0]-b[0]).slice(-5).map(x=>x[1]);if(recent.length>=3&&recent.slice(-3).filter(x=>!x).length>=2)return 2;return recent.length>=5&&recent.every(Boolean)?4:recent.length>=2&&recent.slice(-2).every(Boolean)?3:2;}
-function chooseTarget(progress,stage,previous){return [...stage.targets].sort((a,b)=>(priority(progress.skills[skillKey(stage,a)])+(a===previous?0.08:0))-(priority(progress.skills[skillKey(stage,b)])+(b===previous?0.08:0)))[0];}
-function makeRound(progress,stage,index=0,previous=null,rng=Math.random){
- const target=chooseTarget(progress,stage,previous),key=skillKey(stage,target),demonstration=stage.id==='letters'&&!progress.skills[key]?.introduced;
+function makeRound(progress,stage,index=0,previous=null,rng=Math.random,now=Date.now(),forcedTarget=null){
+ const target=forcedTarget??selectTarget(progress,stage,now),key=skillKey(stage,target),demonstration=stage.id==='letters'&&!progress.skills[key]?.introduced;
  let choices;
  if(stage.mode==='build'){
   const actual=[...new Set(lettersFor(target).map(c=>c.toLowerCase()))],others=(stage.id==='more_build'?BUILD_UNITS:['a','m','i','o','u','n','l']).filter(c=>!actual.includes(c));choices=shuffled([...actual,...shuffled(others,rng).slice(0,difficulty(progress)>=3?1:0)],rng);
@@ -43,15 +43,27 @@ function makeRound(progress,stage,index=0,previous=null,rng=Math.random){
  const cue=CONTEXTS[stage.mode]?CONTEXTS[stage.mode][target][index%CONTEXTS[stage.mode][target].length]:ITEMS[target].audio;
  return {target,choices,cue,demonstration,tries:0,position:0,solved:false,help:null,misses:0,assisted:false};
 }
-export function startSession(progress,stageId,rng=Math.random){
- const next=structuredClone(progress),stage=stageById(stageId);if(!stage)throw Error('Unbekanntes Level.');
+export function startSession(progress,stageId,rng=Math.random,now=Date.now()){
+ const next=structuredClone(progress),stage=stageById(stageId),cursor=continuationFor(progress);if(!stage)throw Error('Unbekanntes Level.');
  next.paused??={};next.continuation=stageId;
- if(next.pending?.stageId===stageId)return next;
+ if(next.pending?.stageId===stageId){if(next.pending.returnTo!==undefined){next.pending.returnTo=cursor;next.continuation=cursor;}return next;}
  if(next.pending)next.paused[next.pending.stageId]=next.pending;
- next.pending=next.paused[stageId]??{stageId,index:0,total:levelGoal(stage),first:0,independent:0,round:makeRound(next,stage,0,null,rng)};
+ next.pending=next.paused[stageId]??{stageId,index:0,total:practiceGoal(next,stage,levelGoal(stage),now),first:0,independent:0,round:makeRound(next,stage,0,null,rng,now)};
+ if(next.pending.returnTo!==undefined){next.pending.returnTo=cursor;next.continuation=cursor;}
  delete next.paused[stageId];return next;
 }
-export function answer(progress,choice){
+export function startReview(progress,stageId=null,rng=Math.random,now=Date.now()){
+ const due=duePractice(progress,now),selected=stageId?due.find(s=>s.stageId===stageId):due[0];
+ if(!selected)return progress;
+ const cursor=continuationFor(progress),saved=progress.pending?.stageId===selected.stageId?progress.pending:progress.paused?.[selected.stageId];
+ const next=startSession(progress,selected.stageId,rng,now);
+ if(!saved){
+  const stage=stageById(selected.stageId),targets=shuffled(selected.targets,rng);
+  next.pending={stageId:stage.id,index:0,total:targets.length,first:0,independent:0,reviewTargets:targets,returnTo:cursor,round:makeRound(next,stage,0,null,rng,now,targets[0])};
+ }else next.pending.returnTo=cursor;
+ next.continuation=cursor;return next;
+}
+export function answer(progress,choice,now=Date.now()){
  if(!progress.pending)return {progress,correct:false,finished:false};const next=structuredClone(progress),session=next.pending,stage=stageById(session.stageId),r=session.round;
  if(r.solved||!r.choices.includes(choice))return {progress,correct:false,finished:false};
  const expected=stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,correct=choice===expected;
@@ -65,7 +77,9 @@ export function answer(progress,choice){
  if(stage.mode==='build'&&++r.position<lettersFor(r.target).length)return {progress:next,correct:true,finished:false};
  r.solved=true;next.seeds++;const key=skillKey(stage,r.target),skill=next.skills[key]??{introduced:false,seen:0,first:0,recent:[],timeline:[]};skill.introduced=true;
  if(!r.demonstration){const first=!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1);skill.seen++;skill.first+=Number(first);skill.recent=[...skill.recent,Number(first)].slice(-8);const tick=Object.values(progress.skills).reduce((n,s)=>n+s.seen,0)+1;skill.timeline=[...(skill.timeline??[]),[tick,Number(first)]].slice(-5);session.independent++;session.first+=Number(first);}
- next.skills[key]=skill;return {progress:next,correct:true,finished:true};
+ next.skills[key]=skill;
+ recordPractice(next,stage,r.target,!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1),r.demonstration,now);
+ return {progress:next,correct:true,finished:true};
 }
 export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
 export function resumePractice(progress){if(progress.pending?.round.help!=='ack')return progress;const next=structuredClone(progress);next.pending.round.help=null;next.pending.round.misses=0;return next;}
@@ -74,14 +88,14 @@ export function useReadingHelp(progress){
  if(!session||stageById(session.stageId).mode!=='picture'||session.round.solved||session.round.assisted)return progress;
  const next=structuredClone(progress);next.pending.round.assisted=true;return next;
 }
-export function advance(progress,rng=Math.random){
+export function advance(progress,rng=Math.random,now=Date.now()){
  const next=structuredClone(progress),session=next.pending;if(!session?.round.solved)return {progress,completed:false};const stage=stageById(session.stageId);
  if(session.index+1>=session.total){
   const previous=next.stages[stage.id]??{completed:0,passed:false,best:0};const passed=stageMastered(next,stage);next.stages[stage.id]={completed:previous.completed+1,passed:previous.passed||passed,best:Math.max(previous.best,session.independent?session.first/session.independent:0)};next.sessions++;next.pending=null;
-  next.continuation=passed?STAGES[STAGES.indexOf(stage)+1]?.id??'complete':stage.id;
-  return {progress:next,completed:true,stageId:stage.id,passed,firstPass:passed&&!previous.passed,score:session.first,total:session.independent,goal:session.total,nextStageId:next.continuation};
+  next.continuation=session.returnTo??(passed?STAGES[STAGES.indexOf(stage)+1]?.id??'complete':stage.id);
+  return {progress:next,completed:true,stageId:stage.id,passed,firstPass:passed&&!previous.passed,score:session.first,total:session.independent,goal:session.total,nextStageId:next.continuation,review:session.returnTo!==undefined};
  }
- session.index++;session.round=makeRound(next,stage,session.index,session.round.target,rng);return {progress:next,completed:false};
+ session.index++;session.round=makeRound(next,stage,session.index,session.round.target,rng,now,session.reviewTargets?.[session.index]);return {progress:next,completed:false};
 }
 function validatePending(value){
  if(value===null)return null;if(!plain(value))throw Error('Ungültige Sitzung.');const s=stageById(value.stageId),r=value.round;
@@ -102,7 +116,9 @@ function validatePending(value){
   demonstration=false;if(s.mode!=='build'&&choices.length===1)choices.push([...s.targets,...s.distractors??[]].find(c=>c!==r.target));
  }
  if(r.assisted!==undefined&&(typeof r.assisted!=='boolean'||(r.assisted&&s.mode!=='picture')))throw Error('Ungültige Lesehilfe.');
- return {stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false}};
+ if(value.returnTo!==undefined&&value.returnTo!=='complete'&&!stageById(value.returnTo))throw Error('Ungültiger Rückweg nach der Wiederholung.');
+ if(value.reviewTargets!==undefined&&(!Array.isArray(value.reviewTargets)||value.reviewTargets.length!==value.total||new Set(value.reviewTargets).size!==value.total||value.reviewTargets.some(t=>!s.targets.includes(t))||value.reviewTargets[value.index]!==r.target||value.returnTo===undefined))throw Error('Ungültige Wiederholungsrunde.');
+ return {stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,...(value.returnTo!==undefined?{returnTo:value.returnTo}:{}),...(value.reviewTargets?{reviewTargets:[...value.reviewTargets]}:{}),round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false}};
 }
 export function validateProgress(p){
  if(!plain(p)||p.version!==3||!plain(p.skills)||!plain(p.stages)||!integer(p.sessions)||!integer(p.seeds)||Object.keys(p.skills).length>allowedSkills.size)throw Error('Ungültiger Lernstand.');const result=freshProgress();result.sessions=p.sessions;result.seeds=p.seeds;
@@ -111,6 +127,7 @@ export function validateProgress(p){
   result.skills[key]={introduced:s.introduced,seen:s.seen,first:s.first,recent:[...s.recent],timeline:s.timeline.map(t=>[...t])};
  }
  for(const [key,s]of Object.entries(p.stages)){if(!stageById(key)||!plain(s)||!integer(s.completed)||typeof s.passed!=='boolean'||!Number.isFinite(s.best)||s.best<0||s.best>1)throw Error('Ungültige Stufendaten.');result.stages[key]={completed:s.completed,passed:s.passed,best:s.best};}
+ result.spacing=validateSpacing(p.spacing,allowedSkills,p.seeds);
  result.pending=validatePending(p.pending);
  if(p.continuation!==undefined&&p.continuation!=='complete'&&!stageById(p.continuation))throw Error('Ungültiges Fortsetzungslevel.');
  result.continuation=continuationFor(p);
