@@ -1,3 +1,16 @@
+# Latest feedback: Level 33 relation mixing — planning only
+
+The user reports prompts all using am in Level 33 and asks to record a plan,
+without implementation. Add real within-round im/am variety so repeated outside
+picture matching cannot replace reading. Both relations are defined already;
+actual adaptive selection needs investigation, particularly old profiles with
+secure im history and unseen new am targets. Check fresh/migrated/paused states,
+avoid predictable alternation and review Levels 17/32 too. Detailed checklist:
+docs/NEXT-VERSION.md. Only planning documentation changed; no app/audio/test/build
+or deployment changes. The verified v9 release below remains current.
+
+---
+
 # Phonics Lab v9: close word recognition and meaningful pictures
 
 Canonical repository: https://github.com/PJendritza/phonics-lab .

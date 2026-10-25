@@ -1,3 +1,34 @@
+# Next update: mix sentence relations within each round
+
+Latest user feedback after testing Level 33: the prompts appeared to use only
+“am”. The child can then repeatedly pick the outside/beside picture without
+reading the relation. **Planning only: do not implement, regenerate audio, build
+or deploy until the user authorises the next implementation.**
+
+- [ ] Investigate the actual selected prompt sequence, not merely the available
+      sentence inventory or picture alternatives. Both im and am already exist in
+      the v9 data, so their presence in data does not establish mixed practice.
+- [ ] Check especially existing/migrated profiles: old im sentences may be secure
+      while all added am sentences are unseen. Unseen-target priority can then
+      concentrate practice on am even though both relations exist. Reproduce with
+      that history, as well as fresh profiles and exact paused/reloaded rounds.
+- [ ] Ensure Level 33 mixes im and am within each ordinary round and avoids long
+      runs of one relation. Vary order without a predictable strict alternation.
+      Preserve useful weak-item/spaced practice and the exact pending question,
+      errors and saved goal when resuming older sessions.
+- [ ] Retain matched same-object/same-place inside-versus-beside picture contrasts;
+      vary subject and place too. Check that recognising a keyword, answer
+      position or repeatedly choosing an outside picture cannot solve the round.
+- [ ] Audit the same relation-mixing issue in Levels 17 and 32. Test actual round
+      sequences with successful, struggling and migrated learners, rather than
+      testing only that both strings occur in the curriculum.
+
+Acceptance: the child must read im versus am to select the correct scene; a
+normal Level 33 round must expose both. No application changes or deployment
+have been performed for this planning entry. The public app remains v9.0.0.
+
+---
+
 # v9 update: close word choices, clearer pictures and real meaning contrasts
 
 The latest request explicitly authorises the previously deferred changes together
