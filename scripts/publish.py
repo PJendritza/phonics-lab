@@ -20,6 +20,8 @@ def main():
  if reading.get('status')!='passed' or reading.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current reading/comprehension checks before publishing.')
  spacing=json.loads((ROOT/'docs/verification/v8-spacing.json').read_text())
  if spacing.get('status')!='passed' or spacing.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current grouping/spacing checks before publishing.')
+ close=json.loads((ROOT/'docs/verification/v9-close-reading.json').read_text())
+ if close.get('status')!='passed' or close.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current close-word, illustration and comprehension checks before publishing.')
  info=json.loads((site/'BUILD_INFO.json').read_text());commit=run('git','rev-parse','HEAD')
  if info['sourceDirty'] or info['sourceCommit']!=commit:raise SystemExit('Rebuild from the clean current source commit.')
  for line in (site/'SHA256SUMS').read_text().splitlines():

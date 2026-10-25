@@ -3,7 +3,7 @@ function appHash(){const h=crypto.createHash('sha256');const walk=d=>fs.readdirS
 (async()=>{
 const initialAppHash=appHash();
 const D=await import('../app/data.mjs');const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const errors=[],requests=[];context.on('page',p=>{p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>requests.push(r.url()));});
-const page=await context.newPage(),base=process.env.TEST_URL||'http://127.0.0.1:8070/preview/phonics-lab/';const evidence={version:8,url:base,checks:[],media:'Real MP3 playback/decode; first cue at natural speed, later test media accelerated to 4x. No fake play success.'};
+const page=await context.newPage(),base=process.env.TEST_URL||'http://127.0.0.1:8070/preview/phonics-lab/';const evidence={version:9,url:base,checks:[],media:'Real MP3 playback/decode; first cue at natural speed, later test media accelerated to 4x. No fake play success.'};
 await context.addInitScript(()=>document.addEventListener('play',e=>{window.played??=[];window.played.push({id:e.target.id,src:e.target.currentSrc,time:performance.now()});},true));
 const state=async(p=page)=>p.evaluate(()=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3'));return s?.profiles.find(p=>p.id===s.activeId);});
 const ready=async(p=page)=>{await p.waitForFunction(()=>{const b=document.querySelector('[data-choice]');return b&&!b.disabled;},null,{timeout:20000});};

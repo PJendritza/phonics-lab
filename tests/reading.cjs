@@ -29,7 +29,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  await page.goto(base);await restore(fixture('picture_known'));
  let p=await state(),plays=await speech();assert.ok(plays.includes('picture_read.mp3'));assert.ok(!plays.includes(p.pending.round.cue+'.mp3'));
  assert.equal(await page.locator('.reading-prompt').innerText(),D.ITEMS[p.pending.round.target].text);
- assert.equal(await page.locator('[data-choice] svg').count(),2);assert.equal(await page.locator('[data-choice]').first().innerText(),'');
+ assert.equal(await page.locator('[data-choice] >svg').count(),2);assert.equal(await page.locator('[data-choice]').first().innerText(),'');
  const count=plays.length;await solve();await ready();assert.equal((await speech()).length,count);
  assert.equal((await state()).skills['meaning:'+p.pending.round.target].first,1);
  checks.push('Independent word reading plays only its generic instruction, displays the written word and label-free picture choices, then advances silently with the existing chime.');
@@ -48,19 +48,19 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  checks.push('Optional grapheme highlighting keeps ei together without synthesizing an isolated phoneme.');
 
  await restore(fixture('picture_known'));p=await state();const r=p.pending.round,wrong=r.choices.find(t=>t!==r.target),positions=await page.locator('[data-choice]').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height];}));
- await page.locator(`[data-choice="${wrong}"]`).click();await ready();assert.equal((await speech()).at(-1),D.ITEMS[wrong].audio+'.mp3');assert.equal((await state()).seeds,0);
+ const beforeWrong=(await speech()).length;await page.locator(`[data-choice="${wrong}"]`).click();await ready();assert.equal((await speech()).length,beforeWrong);assert.equal((await state()).seeds,0);
  assert.deepEqual(await page.locator('[data-choice]').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height];})),positions);
  await page.locator(`[data-choice="${wrong}"]`).click();await ready();assert.equal((await state()).pending.round.help,'show');assert.equal(await page.locator('[data-choice]').count(),1);
  assert.equal((await speech()).at(-1),D.ITEMS[r.target].audio+'.mp3');
  await page.locator(`[data-choice="${r.target}"]`).click();await ready();assert.equal((await state()).seeds,0);assert.equal((await state()).pending.index,0);assert.equal(await page.locator('[data-choice]').count(),2);
  await solve();await ready();assert.equal((await state()).skills['meaning:'+r.target].first,0);
- checks.push('Wrong pictures play their exact selected word without auto-replaying the target or moving tiles. Two errors trigger one-choice teaching, then the original choices; guided taps award nothing extra.');
+ checks.push('Wrong pictures stay silent and keep the written task and tile positions; they never read an unrelated label. Two errors trigger one-choice teaching, then the original choices; guided taps award nothing extra.');
 
  for(const id of D.STAGES.slice(14).map(s=>s.id)){
   await restore(fixture(id));p=await state();assert.equal(p.pending.stageId,id);assert.equal(p.pending.round.demonstration,false);
   assert.ok((await page.locator('[data-choice]').count())>=2);await solve();
  }
- checks.push('Every one of the 18 appended levels starts with choices and executes a real answer/automatic transition, using real MP3s for all listening levels.');
+ checks.push('Every appended level starts with choices and executes a real answer/automatic transition, using real MP3s for all listening levels.');
 
  await restore(fixture('sentence_meaning',true));p=await state();plays=await speech();const sentenceGoal=p.pending.total;
  assert.ok(!plays.includes(p.pending.round.cue+'.mp3'));assert.equal(await page.locator('.sentence-prompt').innerText(),D.ITEMS[p.pending.round.target].text);
@@ -89,10 +89,10 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  }
  checks.push(...layout);
  await page.locator('#back').click();await page.goto(base+'audio-review.html');await page.locator('[data-filter="sentence"]').click();
- assert.equal(await page.locator('.audio-row:visible').count(),14);
- assert.equal(await page.locator('.audio-row:visible audio').count(),14);
+ assert.equal(await page.locator('.audio-row:visible').count(),JSON.parse(fs.readFileSync('app/audio/manifest.json','utf8')).clips.filter(c=>c.group==='sentence').length);
+ assert.equal(await page.locator('.audio-row:visible audio').count(),JSON.parse(fs.readFileSync('app/audio/manifest.json','utf8')).clips.filter(c=>c.group==='sentence').length);
  assert.deepEqual(errors,[]);assert.ok(requests.every(u=>u.startsWith(base)));
- checks.push('Adult sound review filters all 14 full-sentence clips; no page errors or third-party runtime requests. No microphone or speech recognition added.');
+ checks.push('Adult sound review filters all full-sentence/phrase clips; no page errors or third-party runtime requests. No microphone or speech recognition added.');
  const info=await (await context.request.get(base+'BUILD_INFO.json')).json();
  const result={status:'passed',version:D.VERSION,assetVersion:info.assetVersion,checks,pageErrors:errors,limitation:'Chromium mobile viewport emulation and real media playback; not a physical-phone, native-pronunciation or educational-efficacy certification.'};
  fs.writeFileSync('docs/verification/2026-10-18/reading.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));await browser.close();

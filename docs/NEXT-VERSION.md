@@ -1,3 +1,30 @@
+# v9 update: close word choices, clearer pictures and real meaning contrasts
+
+The latest request explicitly authorises the previously deferred changes together
+with more demanding word recognition. Current implementation:
+
+- [x] Adapt from easy word choices to one-letter, same-initial real/constructed
+      alternatives after confident word recognition; lower challenge after errors.
+- [x] Keep forms out of target vocabulary, speech generation, mastery and reviews.
+- [x] Stop wrong-picture word/sentence playback; retain original-target teaching
+      after two errors and isolated-letter feedback in sound tasks.
+- [x] Replace vague weak-e wording with concrete Tomate/Banane word examples.
+- [x] Replace old hand-drawn icons with generated picture-book artwork; pin source
+      prompts/hashes, convert to small WebPs and use consistent scene compositions.
+- [x] Move common sentence words to Level 15, add short im/am phrases at 17,
+      replace noun-only matching at 32 and expand object/relation/place work at 33.
+- [x] Preserve old IDs, rewards, pending goals and legacy sentence questions;
+      reassess new comprehension and skip already-passed intervening material.
+- [x] All 55 unit/content tests, audio audit and nine browser suites pass.
+- [ ] Publish clean source and verify the public bytes; exact status in PROGRESS.md.
+
+Details and limits: docs/CLOSE-READING.md and docs/ILLUSTRATIONS.md. No microphone,
+paid external API, engine, moving targets or speech-recognition work is included.
+
+---
+Historical v8 and earlier implementation/planning context follows. The old
+planning-only hold below is superseded by the user's latest explicit request.
+
 # v8 update: clearer numbered levels and spaced practice
 
 Released v8.0.0; exact source/deployment commits and verification are in PROGRESS.md.

@@ -3,9 +3,9 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=8.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=8.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=9.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=9.0.0)**
 
-The 32 numbered levels now have clearer names and five groups. Labels distinguish
+The 33 numbered levels now have clearer names and five groups. Labels distinguish
 listening/spelling recognition, independent word reading and sentence understanding.
 Spaced practice interleaves mistakes with other questions, reduces padding of
 already-secure words and saves expanding review intervals. A separate **↻ Wiederholen**
@@ -17,21 +17,21 @@ a brief nonverbal chime/check and a small sparkle, fills the level meter and aut
 Every finished level adds a flower. Mistakes give time and replay without taking
 progress away. There are no timers, speed scores or spoken success messages.
 
-**32 levels**, from sounds and syllables to independent word reading and short
-sentence comprehension. The new levels add **35 complete human word recordings**,
-syllable/pattern help, and picture choices drawn for this app. Words include
+**33 levels**, from sounds and syllables to independent word reading and short
+sentence comprehension. The expanded vocabulary includes **35 additional complete human word recordings**,
+syllable/pattern help, and new AI-generated picture-book illustrations bundled with the app. Words include
 Salami, Tomate, Banane, Kanne, Seil, Maus, Biene and Boot. Listening lessons introduce
 vocabulary and spelling patterns before children read those words themselves.
 
 Reading levels **do not speak the answer first**. Children read a word or sentence
 and choose its picture. The optional speaker reads it aloud; syllable help can
 highlight chunks. Both count as assistance, rather than independent mastery.
-Sentence choices contrast both object and location: “Ein Ball ist im Bus.” versus
+Level 15 introduces common sentence words; Level 17 adds short im/am phrases. Confident word listeners get same-initial alternatives with one-letter changes, including silent invented comparison forms. Sentence choices contrast object, im/am relation and location: “Ein Ball ist im Bus.” versus
 “Ein Ball ist im Haus.” versus “Ein Hut ist im Bus.”
 [Lesson sequence and limits](docs/READING-CURRICULUM.md).
 
-**76 human recordings**, **11 licensed Kalulu consonant clips**, 21 full-sentence
-instructions and 14 optional sentence readings. Piper Thorsten High uses the
+**76 human recordings**, **11 licensed Kalulu consonant clips**, 22 full-sentence
+instructions and 26 optional sentence/phrase readings (including six legacy clips). Piper Thorsten High uses the
 approved length_scale 1.5 and added 0.3-second sentence pause; human words are not
 synthesised. After two errors, brief one-choice teaching restores the original
 choices without extra rewards. Independent accuracy adjusts two/three/four choices.
@@ -42,7 +42,7 @@ Up to eight local profiles resume exact questions or partial words. Existing dem
 profiles migrate/persist, including across the repository path rename on the same
 website origin. Numbered level navigation is accessible during exercises; switching levels preserves each unfinished question. Successful levels continue forward instead of selecting an earlier weaker level. After the last success, earlier review is an explicit choice. Parent tools offer a later-stage preview checkbox and
 confirmed JSON backup/restore. Data stays in that browser/device; no login or sync.
-The bundled Andika-based literacy font has a curved lowercase l and single-storey a; no external font requests. Wrong letters play only the selected sound; a wrong word in a word-reading task plays that selected word. The larger flower and the same seven, more visible sparkles mark correct taps. This is a prototype, not a complete or validated reading course. New recordings
+The bundled Andika-based literacy font has a curved lowercase l and single-storey a; no external font requests. Wrong letters play only the selected sound; a wrong recorded word in a listening-to-written-word task plays that selected word. Wrong pictures and invented forms stay silent. The larger flower and the same seven, more visible sparkles mark correct taps. This is a prototype, not a complete or validated reading course. New recordings
 still need listening/educator review. [Audio and credits](docs/AUDIO.md).
 
 ## Run and test
@@ -51,7 +51,7 @@ Python 3 and Node 18+; no runtime dependencies or bundler. Development:
 
 ```sh
 python3 -m http.server 8070 --directory app
-node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs
+node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs tests/close-reading.test.mjs
 python3 scripts/build.py
 ```
 
@@ -71,6 +71,7 @@ node tests/level-navigation.cjs
 node tests/choice-help.cjs
 node tests/reading.cjs
 node tests/spacing.cjs
+node tests/close-reading.cjs
 python3 scripts/audit_audio.py
 ```
 
@@ -84,7 +85,7 @@ Screenshots/builds stay outside Git. [Executed results](PROGRESS.md).
 | --- | --- |
 | app/ | Complete static website and small licensed MP3 collection |
 | app/data.mjs | Stable foundation stages, human-audio targets, word contexts and grapheme blocks |
-| app/reading-data.mjs · app/pictures.mjs | New vocabulary, sentence progression and original vector pictures |
+| app/reading-data.mjs · app/pictures.mjs | Vocabulary, sentence progression and AI artwork composed with SVG |
 | app/learning.mjs | Pure adaptive learning, level goals, profiles and migration |
 | app/audio/manifest.json | Individual sources, credits, licenses and hashes |
 | scripts/ | Packaging, audio preparation, publication and live verification |
@@ -95,7 +96,7 @@ Screenshots/builds stay outside Git. [Executed results](PROGRESS.md).
 
 The name is independent of garden/space or other future activity themes. The old
 Godot prototype remains in tagged Git history. No engines/models/generated bundles
-belong on the source branch. The expanded complete package stays below 3 MB; audio loads on demand.
+belong on the source branch. The illustrated complete package stays below 4 MB; audio loads on demand.
 
 ## Publish the existing site
 
@@ -107,7 +108,7 @@ python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-NE
 python3 scripts/verify_live.py
 ```
 
-Use a fresh external publication checkout. Publication requires passing full-browser and reading-comprehension
+Use a fresh external publication checkout. Publication requires passing browser, reading, spacing and close-word/art
 evidence bound to the exact app content and checked build files. It makes a normal
 push to the existing gh-pages branch without changing hosting settings. Live HTTPS
 hash verification after propagation is separate from a successful push. Versioned

@@ -14,6 +14,10 @@ def main():
  font_manifest=json.loads((ROOT/'app/fonts/manifest.json').read_text())
  for font in font_manifest['files']:
   if sha(ROOT/'app'/font['src'])!=font['sha256']:raise SystemExit('Font checksum mismatch: '+font['src'])
+ image_manifest=ROOT/'app/images/manifest.json'
+ if image_manifest.exists():
+  for asset in json.loads(image_manifest.read_text())['files']:
+   if sha(ROOT/'app'/asset['src'])!=asset['sha256']:raise SystemExit('Image checksum mismatch: '+asset['src'])
  out.mkdir(parents=True,exist_ok=True)
  # Only replace a known app output, never recursively delete an arbitrary directory.
  if any(out.iterdir()) and not (out/'BUILD_INFO.json').exists():raise SystemExit('Output directory is not an existing build; choose an empty directory.')
@@ -44,6 +48,6 @@ def main():
  size=sum(p.stat().st_size for p in out.rglob('*') if p.is_file())
  # More human vocabulary and optional sentence support are fetched on demand.
  # Keep a firm total budget without compressing/cropping speech into poor cues.
- if size>3_000_000:raise SystemExit(f'Build exceeds 3 MB expanded-curriculum budget: {size}')
+ if size>4_000_000:raise SystemExit(f'Build exceeds 4 MB illustrated-curriculum budget: {size}')
  print(f'{len(files)+1} files, {size:,} bytes, source {commit}, dirty={dirty}; {out}')
 if __name__=='__main__':main()

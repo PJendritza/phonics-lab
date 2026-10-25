@@ -1,10 +1,10 @@
-# Phonics Lab browser architecture (v6)
+# Phonics Lab browser architecture (v9)
 
 Static HTML/CSS/ES modules. No engine/framework, API, service worker, WASM,
 cross-origin isolation or runtime package. Relative paths work under /phonics-lab/.
-The complete packaged site remains below 3 MB.
+The complete packaged site remains below 4 MB.
 
-- data.mjs: fourteen stable foundation stages plus eighteen reading-data.mjs stages, target audio, beginning/ending word contexts,
+- data.mjs: fourteen stable foundation stages plus nineteen reading-data.mjs stages, target audio, beginning/ending word contexts,
   grapheme-block overrides, avatars and app version. Content is separate from theme.
 - learning.mjs: pure questions, accuracy/mastery, validation/migration, profiles,
   fixed level goals, a forward continuation cursor, per-level paused sessions and fractional per-block progress. Introductions are excluded
@@ -25,7 +25,7 @@ A round now has optional backward-compatible help and misses fields. Two errors 
 
 ## State contract
 
-App version 6.0.0 intentionally retains data version 3 and key kalulu-de:learners:v3:
+App version 9.0.0 intentionally retains data version 3 and key kalulu-de:learners:v3:
 {version:3,activeId,profiles:[{id,name,avatar,progress}]}. Progress holds skills,
 stages, sessions, legacy seeds and pending, paused and continuation. Session count represents completed
 practice levels/flowers; independent mastery is separate. Original nine-question
@@ -37,7 +37,7 @@ Pending stores target/cue/choice order, introduction flag, attempts, word positi
 and solved status. Replays do not score. Resume restores state, then requires the
 unanswered cue again; no mid-sound restoration. A 340 ms transition checks current
 solved state, preventing stale/partial callbacks. Navigation cancels it explicitly.
-`paused` maps stage IDs to validated pending sessions; switching stashes the current question and restores the selected one without resetting choice order or scoring. `continuation` is a stage ID or `complete`. Successful completion sets it to the immediate successor, never an earlier weak stage. Unsatisfactory practice stays in that stage. Final completion offers explicit review. Earlier v3 saves without these fields derive the cursor from their pending or highest completed stage and use an empty pause map.
+`paused` maps stage IDs to validated pending sessions; switching stashes the current question and restores the selected one without resetting choice order or scoring. `continuation` is a stage ID or `complete`. Successful completion sets it to the next unpassed forward stage, never an earlier weak stage. Unsatisfactory practice stays in that stage. Final completion offers explicit review. Earlier v3 saves without these fields derive the cursor from their pending or highest completed stage and use an empty pause map.
 
 The old v2 key is read only if no v3 store exists and is not deleted. Earlier counts
 do not fabricate reliable independent evidence. Validation whitelists IDs, cues,
@@ -51,9 +51,9 @@ Future synchronization needs a separate identity/storage design.
 
 ## Build and release
 
-scripts/build.py checks audio and font hashes, copies app/, versions HTML/CSS/nested modules
+scripts/build.py checks audio, font and illustration hashes, copies app/, versions HTML/CSS/nested modules
 and media with a content-derived query, then writes BUILD_INFO.json, LICENSE,
-.nojekyll and checksums. Refuses source-tree output and builds over 3 MB.
+.nojekyll and checksums. Refuses source-tree output and builds over 4 MB.
 main is source; gh-pages generated files. publish.py requires clean pushed main,
 passing exact-app-hash browser evidence and checked build bytes. Normal push only,
 fresh external checkout, no Pages configuration changes. verify_live.py uses
@@ -99,3 +99,24 @@ learning.mjs integrates selection, fixed-at-start adaptive goals, due review que
 and validated return cursors. Older saves initialise missing fields without
 changing pending questions or goals. Main play stays on the forward course; the
 explicit review action saves/restores other work. See SPACED-PRACTICE.md.
+
+## v9 close reading and illustration assets
+
+word-choices.mjs owns finite written forms and word-specific confidence. Forms
+are choices only, outside ITEMS/target skills. Restored choices are validated
+against the specific target's authored forms. Wrong pictures/forms return an
+empty audio sequence; main.mjs handles it synchronously and still enters the
+normal two-error teaching flow.
+
+reading-data.mjs moves sentence_words to Level 15 and adds phrase_place at 17.
+Levels 32/33 use subject/relation/location contrasts with minimum 3/4 choices.
+Legacy s_* models/skills remain; curriculumVersion 9 changes only the relevant
+comprehension pass flags, preserves exact pending work and advances completed
+profiles into new material. Forward success skips already-passed later stages.
+
+image-data.mjs references four content-hashed WebP atlases. pictures.mjs uses
+source-aspect SVG viewports, exact seven-object composition and shared AI objects
+inside/beside two AI scene backgrounds. No external image runtime or model.
+Image checksums are now part of build validation. The explicit package cap is
+4 MB for the requested art/extra speech; ordinary builds need only committed
+assets. See CLOSE-READING.md and ILLUSTRATIONS.md.

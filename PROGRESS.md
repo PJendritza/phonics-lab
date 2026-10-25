@@ -1,3 +1,119 @@
+# Phonics Lab v9: close word recognition and meaningful pictures
+
+Canonical repository: https://github.com/PJendritza/phonics-lab .
+Implementation branch: close-reading-and-illustrations. Checkout: /workspace/Kalulu-DE.
+Read AGENTS.md and recent Git history before continuing. The v8 checkpoint below
+is historical; its earlier planning-only holds are superseded by this release.
+
+## Authorised and implemented
+
+The latest request asks for harder word recognition with close spellings and all
+previously discussed improvements. This includes the deferred instruction,
+picture-feedback, AI-illustration and sentence-comprehension work.
+
+- Confident whole-word listeners get one, then all, same-initial one-letter
+  alternatives. Examples: Sofa/Sofe/Sofu/Sufa, Hase/Hose/Hame/Hafe. Only successful
+  word history raises the challenge; phoneme success alone does not. Recent errors
+  ease the next question. Authored forms preserve length, first letter, taught
+  multi-letter units and doubling. See/Tee keep ordinary recorded-word choices
+  rather than breaking ee. Forms are silent comparison choices, never targets,
+  new speech, skill/mastery keys or spaced-review entries. Some spellings may
+  coincide with rare words/names; no dictionary classification is claimed.
+- Existing numbered groups, anti-repetition and saved spaced practice continue.
+  Strong words are not immediately repeated; mistakes return after other work.
+  The optional due-review route preserves the child's forward cursor.
+- Wrong picture selections stay silent. Wrong real written-word selections with
+  recordings retain their own sound; wrong letters still play only their isolated
+  sound. After two errors only the original correct task is modelled with one
+  choice; guided taps neither score again nor count as independent mastery.
+- The weak-e instruction uses concrete Tomate/Banane examples rather than a bare
+  E/I name. Three complete instructions regenerated; human words/phonemes unchanged.
+- Four AI-generated picture-book atlases replace the old hand-drawn icons. Forty
+  object sprites plus two backgrounds serve 41 word pictures (seven uses exactly
+  seven generated balls) and consistent im/am scenes. Image source prompts/hashes,
+  conversion commands and licensing context are recorded. Four WebPs: 879,262 bytes.
+- 33 levels, first fourteen numbers/IDs unchanged. Common sentence words move to
+  15, familiar word-to-picture reading to 16, new short phrases to 17; word pairs
+  continue at 18–31. Level 32 now contrasts full subject/relation sentences, and
+  33 expands to sixteen subject/relation/location combinations. Three basic or
+  four advanced choices ensure a single keyword cannot uniquely solve a question.
+- Stable IDs, all earned flowers/scores/history, pending question choices/errors,
+  goal totals, partial words and backups survive. Six old noun-only sentences and
+  their recordings remain for exact saved-question/review resume. Expanded
+  comprehension needs new evidence; old pass flags do not fabricate mastery.
+  Old completed courses enter new phrases, skip already-passed intervening lessons
+  and reach the new sentences. Other current cursors remain at their saved IDs;
+  newly earlier material is selectable in the map. v6 completion begins at Level 15.
+- app/ remains the complete dependency-free static website. No microphone,
+  speech recognition, account, paid API, new hosting, scheduling or engine added.
+  Full illustrated-site cap is now 4 MB; media load on demand. Current dirty build:
+  168 files / 3,387,715 bytes, app asset hash f5464eac2222. Clean metadata differs
+  by one byte; deployment records below will identify the exact clean package.
+
+Implementation rules: docs/CLOSE-READING.md, docs/READING-CURRICULUM.md and
+provenance in docs/ILLUSTRATIONS.md / docs/illustration-sources.json.
+
+## Executed commands and verification
+
+```sh
+# Already-installed free local model/cache; no external paid generation.
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py
+python3 scripts/prepare_illustrations.py
+node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs tests/close-reading.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+# Existing preview/phonics-lab -> ../site symlink; server remains external to Git.
+python3 -m http.server 8070 --bind 0.0.0.0 --directory /workspace/kalulu-browser-build
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+git diff --check
+```
+
+55 unit/content tests pass, including all-stage forward progression, exact close
+forms, phoneme-vs-word adaptation, error easing, quiet feedback, target-only
+review records, every active sentence contrast and real v7/v8 legacy migrations.
+Audio audit: all 136 clips decode and match pinned hashes (76 human, 11 isolated
+phones, one effect, 22 instructions, 26 sentence/phrase recordings including six
+legacy clips). Only soft_words, sentence_words and sentence_where changed among
+existing audio files; thirteen clips were added. Human/isolated clips are identical.
+
+The nine Playwright suites exercise real MP3/WebP decoding, keyboard operation,
+automatic advance, failure/replay recovery, profiles/backup, exact saved choices,
+teaching/assistance/scoring, forward continuation, spacing/review return paths,
+font loading, stable tiles/reduced motion and 320/390/768px mobile/tablet layouts.
+All nine suites pass. Core browser, reading, spacing and close-reading checks were
+refreshed after the final See/Tee content edit and match app hash f5464eac2222.
+JSON evidence: docs/verification/v9-close-reading.json, v8-spacing.json (updated
+for current v9 content) and docs/verification/2026-10-18/ (directory date is legacy).
+Contact sheets and actual phone-sized previews were visually inspected outside Git;
+an atlas letterbox leak found during inspection was corrected before final checks.
+
+These are executed Chromium emulation/media tests, not a physical-phone test or
+native German/educational validation. Parent review of the generated artwork,
+word alternatives, relation pictures and instruction speech remains useful.
+
+## Publication / next step
+
+Pending clean source commit/push, publish with scripts/publish.py to the existing
+gh-pages branch, then verify every public HTTPS byte with scripts/verify_live.py.
+Do not change Pages settings. Use a fresh external deployment checkout. Record
+actual source/deployment commit IDs and verification results here after completion.
+
+Next: try Level 17 and Levels 32–33 plus a repeated successful word-listening round
+(e.g. Level 18) using the parent's level preview. Check whether close choices and
+im/am pictures are fair and recognizable before expanding new reading content.
+A future separate content step can add action/role contrasts and short connected
+texts; do not automatically add speech recognition or claim a validated course.
+
+---
+
 # Phonics Lab v8: grouped levels and spaced practice
 
 Canonical repository: https://github.com/PJendritza/phonics-lab .

@@ -1,58 +1,26 @@
-// Original simple vector drawings, authored for Phonics Lab (CC BY-SA 4.0).
-// No emoji: pictures have consistent rendering and no written answer labels.
-const shapes={
- hut:'<path d="M35 88 48 40h64l14 48Z" fill="#d5b17b"/><path d="M45 70h70v14H45Z" fill="#648c7b"/><ellipse cx="80" cy="92" rx="65" ry="12" fill="#d5b17b"/>',
- ball:'<circle cx="80" cy="64" r="45" fill="#efc677"/><path d="M45 36q62 0 69 57M37 77q36-50 81-42M66 22q-11 58 46 79" fill="none" stroke="#c46f56" stroke-width="10"/>',
- bus:'<rect x="12" y="32" width="136" height="63" rx="12" fill="#e7b260"/><path d="M26 43h24v24H26Zm36 0h25v24H62Zm37 0h34v24H99Z" fill="#d6edef"/><circle cx="42" cy="98" r="12" fill="#52645f"/><circle cx="120" cy="98" r="12" fill="#52645f"/>',
- fisch:'<path d="m112 63 33-28v58Z" fill="#d29c71"/><ellipse cx="70" cy="63" rx="46" ry="30" fill="#e2b27e"/><path d="m62 35 18-17 17 23M61 90l24 14 5-17" fill="#cc8469"/><circle cx="45" cy="56" r="4" fill="#334d45"/><path d="M82 39q-13 23 0 47" fill="none"/>',
- schaf:'<path d="m42 86-4 26m28-26-1 26m34-27 3 27m20-29 9 27"/><path d="M30 67q-12-25 12-28 4-24 26-14 19-20 35-1 26-4 26 20 23 8 11 30-4 25-29 20-17 16-35 1-27 8-31-10-19 2-15-18" fill="#f3eee0"/><ellipse cx="34" cy="65" rx="21" ry="25" fill="#786b62"/><path d="m20 46-15-7m42 9 14-9"/><circle cx="28" cy="59" r="3" fill="white"/>',
- gans:'<ellipse cx="90" cy="83" rx="44" ry="25" fill="#f4f1e5"/><path d="M58 81Q29 75 36 39q3-24 19-21 17 4 12 19L58 65" fill="#f4f1e5"/><path d="m40 31-20 8 21 5m44 64-3 9m22-9 3 9" fill="#dfb15d"/><circle cx="51" cy="30" r="3" fill="#334d45"/><path d="M78 72q33-9 37 14-21 13-34 0" fill="none"/>',
- sofa:'<rect x="15" y="41" width="130" height="53" rx="15" fill="#88b0a0"/><rect x="26" y="27" width="108" height="48" rx="14" fill="#a3c5b5"/><path d="M80 30v45M30 99v11m100-11v11"/><rect x="10" y="60" width="22" height="38" rx="8" fill="#88b0a0"/><rect x="128" y="60" width="22" height="38" rx="8" fill="#88b0a0"/>',
- lama:'<path d="m45 69 5 42m23-41 1 41m38-42 4 42"/><path d="M42 76V57q0-10 16-10h33V29h31v52Z" fill="#dabd91"/><path d="m96 27-1-21 10 19m8 0 9-20 1 27" fill="#dabd91"/><ellipse cx="116" cy="38" rx="21" ry="13" fill="#dabd91"/><circle cx="116" cy="33" r="3" fill="#334d45"/>',
- salami:'<path d="m38 80 67-48q25-13 38 13 9 16-6 31L67 111Z" fill="#b46d64"/><ellipse cx="50" cy="91" rx="23" ry="27" transform="rotate(-35 50 91)" fill="#d59080"/><g fill="#f5d9ba" stroke="none"><circle cx="44" cy="80" r="5"/><circle cx="58" cy="97" r="5"/><circle cx="38" cy="99" r="4"/><circle cx="56" cy="83" r="3"/><circle cx="111" cy="49" r="4"/><circle cx="126" cy="65" r="4"/></g>',
- tomate:'<path d="M79 36q56-21 62 25 8 47-59 49-65-2-63-43 2-39 60-31" fill="#d67b65"/><path d="m80 44-26-14 21 2L82 8l6 26 25-6-23 17" fill="#7b9d6c"/><path d="M37 63q4-11 14-13" stroke="white" fill="none"/>',
- banane:'<path d="M27 29q26 71 96 29l13-19q9 66-53 70-64 0-69-65Z" fill="#edce76"/><path d="m23 36 7-13m96 35 10-19M30 48q24 61 90 26" fill="none"/>',
- melone:'<path d="M15 38h130q-4 76-65 76-58-1-65-76Z" fill="#80a579"/><path d="M22 40h116q-8 61-58 62-48-2-58-62Z" fill="#df8f80"/><g fill="#3c5146" stroke="none"><ellipse cx="50" cy="63" rx="3" ry="6"/><ellipse cx="79" cy="78" rx="3" ry="6"/><ellipse cx="108" cy="61" rx="3" ry="6"/></g>',
- igel:'<path d="m27 87-9-23 16 1-3-23 19 8 6-24 17 17 19-21 5 26 23-11-3 30 19 10-19 22H34Z" fill="#947d63"/><path d="M23 73q39-3 46 23l-43 2-16-10Z" fill="#ddbd98"/><circle cx="29" cy="81" r="3" fill="#334d45"/><circle cx="11" cy="87" r="4" fill="#334d45"/><path d="m48 101-2 10m58-11v10"/>',
- esel:'<path d="m47 84-5 28m30-29v29m39-30 6 30"/><path d="M37 82V57q1-17 48-10l16-20 22 15-2 46Z" fill="#a8aca5"/><path d="m98 31-8-29 12 1 9 25m1 0 4-27 10 1-4 32" fill="#a8aca5"/><ellipse cx="123" cy="45" rx="20" ry="15" fill="#bfc3b9"/><circle cx="121" cy="37" r="3" fill="#334d45"/><path d="M36 61 20 82"/>',
- nudel:'<path d="M35 93q-18-52 24-53 34 2 18 40-14 32 23 23 29-8 16-40-12-29 16-40" fill="none" stroke="#e0bd63" stroke-width="20"/><path d="M35 93q-18-52 24-53 34 2 18 40-14 32 23 23 29-8 16-40-12-29 16-40" fill="none" stroke="#f7dda0" stroke-width="9"/>',
- hase:'<ellipse cx="92" cy="81" rx="40" ry="28" fill="#c5a78c"/><ellipse cx="53" cy="61" rx="24" ry="26" fill="#c5a78c"/><ellipse cx="44" cy="28" rx="9" ry="25" transform="rotate(-12 44 28)" fill="#c5a78c"/><ellipse cx="62" cy="24" rx="9" ry="25" transform="rotate(9 62 24)" fill="#c5a78c"/><circle cx="46" cy="58" r="3" fill="#334d45"/><circle cx="132" cy="82" r="10" fill="#f5eee4"/><path d="M31 70h14m31 32h41"/>',
- hose:'<path d="M43 15h76l5 94H88l-8-56-8 56H36Z" fill="#8daac0"/><path d="M42 30h78M80 17v36m-35-21q13 21 23 0m26 0q12 19 24 0" fill="none"/>',
- salat:'<path d="M27 67Q1 44 26 29q18-14 35 4Q61 5 85 9q21-3 26 26 20-21 36-2 18 24-7 40 13 34-29 32-25 22-52 0-35 10-32-18Z" fill="#91b87e"/><path d="M80 108V40M79 67 43 46m38 44 43-34M56 99 32 75m62 24 38-15" fill="none" stroke="#5e8759"/>',
- bett:'<path d="M18 28v83m125-56v56" stroke-width="7"/><path d="M20 46h41v36H20Z" fill="#e9d9ba"/><path d="M61 57h79v29H61Z" fill="#9db8c9"/><path d="M20 86h121v14H20Z" fill="#c9ac83"/>',
- kamm:'<path d="M20 29h120v24H20Z" fill="#d2a17c"/><path d="M25 53v45m13-45v45m13-45v45m13-45v45m13-45v45m13-45v45m13-45v45m13-45v45m13-45v45" stroke="#b48564" stroke-width="7"/>',
- tasse:'<path d="M114 46q42-11 31 28-8 19-33 11" fill="none" stroke-width="9"/><path d="M26 38h90v45q-2 26-45 26-43 0-45-26Z" fill="#e2ad91"/><ellipse cx="71" cy="38" rx="45" ry="10" fill="#f6e8d1"/>',
- kanne:'<path d="M103 45q41-20 44 12 5 32-27 29" fill="none" stroke-width="10"/><path d="m39 50-24-13 12 42 17 7M48 40h58l13 58q-38 24-78 0Z" fill="#9dbac0"/><path d="M42 39h71l-11-12H54Zm28-13v-8h17v8" fill="#86a5ac"/>',
- sonne:'<g stroke="#d7b456" stroke-width="5"><path d="M80 4v15m0 89v13M18 63H4m152 0h-15M26 12l13 15m82 73 11 13M24 111l13-14m89-83-14 15"/></g><circle cx="80" cy="63" r="34" fill="#efcf77"/>',
- affe:'<circle cx="33" cy="48" r="18" fill="#aa8164"/><circle cx="127" cy="48" r="18" fill="#aa8164"/><ellipse cx="80" cy="57" rx="46" ry="47" fill="#aa8164"/><path d="M80 42q-27-30-34 2-5 13 4 24-15 36 30 36 44 0 30-36 11-17 2-29-12-19-32 3" fill="#e5c2a0"/><circle cx="62" cy="55" r="4" fill="#334d45"/><circle cx="97" cy="55" r="4" fill="#334d45"/><path d="M63 83q17 15 34 0" fill="none"/>',
- eis:'<path d="m47 49 32 67 35-67" fill="#d4aa75"/><path d="M55 63 91 98m-27-45 38 27m-40 8 35-27m-25 45 29-27" stroke="#b68d60"/><circle cx="80" cy="35" r="29" fill="#e2afad"/><circle cx="50" cy="47" r="20" fill="#efdebd"/><circle cx="106" cy="48" r="20" fill="#d0bb9e"/>',
- seil:'<path d="M26 97q-15-69 54-69 66 0 50 51-10 36-62 20-40-13-11-44 26-27 49-1 19 24-8 29-25 5-18-15" fill="none" stroke="#bf9e72" stroke-width="10"/><path d="m22 98 11 9m-14-4 11 10"/>',
- bein:'<path d="M63 13h42l-8 41-1 37 30 8q10 17-8 17H61V66Z" fill="#e7c2a0"/><path d="M64 13h40l-3 26H62Z" fill="#91b1ba"/><path d="m68 64 20 3" fill="none"/>',
- leim:'<path d="M61 34h38v22l15 10v45H46V66l15-10Z" fill="#f1dfad"/><path d="M61 20h38v17H61Zm10-17h18v17H71Z" fill="#7b9cbb"/><path d="M70 77q9-19 18 0 13 19-9 20-19-1-9-20" fill="#f9f6eb"/>',
- baum:'<path d="M69 68h23v48H69Z" fill="#ba9773"/><path d="M29 69Q7 41 35 29 40 5 67 15q22-22 41-1 33-5 33 25 22 25-8 38-4 23-37 11-26 21-41-1-28 6-26-18" fill="#91b083"/>',
- maus:'<path d="M111 90q44 29 36-3-7-22-12-3" fill="none" stroke="#bd9c92" stroke-width="5"/><ellipse cx="78" cy="81" rx="42" ry="26" fill="#a9aaa1"/><path d="M64 71 21 86 61 101" fill="#a9aaa1"/><circle cx="63" cy="57" r="17" fill="#c2b3a6"/><circle cx="91" cy="55" r="16" fill="#c2b3a6"/><circle cx="41" cy="83" r="3" fill="#334d45"/><circle cx="22" cy="87" r="3" fill="#c6877e"/>',
- haus:'<path d="M32 52h96v63H32Z" fill="#e6d4ad"/><path d="m16 55 64-49 64 49Z" fill="#c8836a"/><path d="M49 65h22v23H49Zm41 12h24v38H90Z" fill="#a8c9cb"/>',
- laub:'<path d="M25 94Q7 45 60 43q12 44-35 51M75 108q-18-55 32-60 24 40-32 60M111 45q-8-36 30-36 14 35-30 36" fill="#d4a65f"/><path d="m20 104 30-46m20 58 27-52m9-13 24-30" fill="none"/>',
- biene:'<path d="M73 50q-39-54-49-20-5 28 38 38M89 49q13-59 40-35 18 23-20 50" fill="#d9e9ea"/><ellipse cx="81" cy="78" rx="46" ry="28" fill="#e5c26c"/><path d="M65 52q-13 27 0 51m25-52q12 28 0 54" stroke="#596450" stroke-width="13"/><circle cx="120" cy="72" r="18" fill="#e5c26c"/><circle cx="124" cy="68" r="3" fill="#334d45"/><path d="m122 54 8-13m-20 14-3-12"/>',
- sieb:'<path d="M27 47h85q-2 58-42 58-40-2-43-58Z" fill="#d8e4de"/><path d="m37 57 65 27m-58-11 48 24m-53-40 53 36m-29-40 32 27m-47 18 43-36m-27 44 35-31M111 48h37" fill="none" stroke="#849b90"/><ellipse cx="70" cy="47" rx="43" ry="10" fill="none"/>',
- sieben:'<g fill="#8db19d"><circle cx="40" cy="31" r="12"/><circle cx="80" cy="31" r="12"/><circle cx="120" cy="31" r="12"/><circle cx="40" cy="69" r="12"/><circle cx="80" cy="69" r="12"/><circle cx="120" cy="69" r="12"/><circle cx="80" cy="107" r="12"/></g>',
- boot:'<path d="m18 74 24 32h79l24-32Z" fill="#b99875"/><path d="M80 72V7l-40 54h40m7-40 35 39H87Z" fill="#f1dfb4"/><path d="M8 115q17-11 35 0 18-11 36 0 18-11 36 0 18-11 36 0" fill="none" stroke="#92b6c5"/>',
- beet:'<path d="m12 78 38-40 96 25-34 49Z" fill="#b59473"/><path d="m27 79 84 23M42 64l82 23m-68-37 80 25" stroke="#d9ba93"/><g fill="#83a578"><path d="M51 67V42q-22 1-15-12 14-4 15 8 8-18 20-8 2 16-20 12M87 78V52q-19-10-20 4 2 11 20 6 3-22 18-17 10 14-18 17M122 76V57q-17-10-20 4 3 9 20 4 6-16 15-9 6 12-15 9"/></g>',
- see:'<path d="m10 54 36-37 29 29 36-34 39 44" fill="#b9c6aa"/><ellipse cx="80" cy="81" rx="71" ry="30" fill="#9dbfca"/><path d="M39 73h29m19 20h31m-17-27h17M20 110l4-40m4 40 7-28" fill="none" stroke="#6b9499"/>',
- tee:'<path d="M112 48q38-13 30 21-6 18-30 13" fill="none" stroke-width="8"/><path d="M28 39h87v43q-1 23-43 23T28 82Z" fill="#e4d4b2"/><ellipse cx="72" cy="39" rx="44" ry="9" fill="#a67f4e"/><path d="M76 39v40l18 9V65L76 55m-29-28q-9-10 0-18m30 18q-9-10 0-18m26 18q-9-10 0-18" fill="none"/>',
+// AI-generated picture-book artwork. Layout uses SVG; the objects are not hand-
+// drawn SVG icons. Exact source prompts/hashes: docs/illustration-sources.json.
+import {SHEETS,SPRITES} from './image-data.mjs';
+const sprite=(id,x,y,width,height)=>{
+ const spec=SPRITES[id],sheet=SHEETS[spec.sheet],url=new URL(sheet.src,import.meta.url).href;
+ const scale=Math.min(width/spec.rect[2],height/spec.rect[3]),w=spec.rect[2]*scale,h=spec.rect[3]*scale;
+ return `<svg x="${x+(width-w)/2}" y="${y+(height-h)/2}" width="${w}" height="${h}" viewBox="${spec.rect.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${url}" x="0" y="0" width="${sheet.width}" height="${sheet.height}"/></svg>`;
 };
-function person(old){return `<path d="M31 117q1-45 49-45 46 0 49 45" fill="${old?'#8aac9b':'#d69983'}"/><path d="M47 58V35q5-35 35-28 36-2 36 35v27" fill="${old?'#b2b9b2':'#816b55'}"/>${old?'<circle cx="115" cy="28" r="15" fill="#b2b9b2"/>':''}<ellipse cx="81" cy="50" rx="30" ry="36" fill="#ebc8a7"/><path d="M49 33q27 8 38-13 5 12 26 15" fill="${old?'#b2b9b2':'#816b55'}"/><circle cx="70" cy="49" r="3" fill="#334d45"/><circle cx="93" cy="49" r="3" fill="#334d45"/><path d="M72 67q10 6 20-1" fill="none"/>${old?'<circle cx="69" cy="49" r="10" fill="none"/><circle cx="94" cy="49" r="10" fill="none"/><path d="M79 49h5"/>':''}`;}
-shapes.mama=person(false);shapes.oma=person(true);
-export const hasPicture=id=>Object.hasOwn(shapes,id)||/^(ball|hut|schaf|maus)_im_(bus|haus)$/.test(id);
+const scenePattern=/^(ball|hut|schaf|maus)_(im|am)_(bus|haus)$/;
+export const hasPicture=id=>Object.hasOwn(SPRITES,id)||id==='sieben'||scenePattern.test(id);
 export function illustration(id){
  if(!hasPicture(id))throw Error('Missing picture: '+id);
- let content=shapes[id];
- if(!content){
-  const [subject,,location]=id.split('_');
-  // The same subject drawing/size is used in both scenes. The open window/front
-  // makes "im" visible; location is the only changed feature for minimal pairs.
-  content=location==='bus'?'<rect x="6" y="22" width="148" height="80" rx="12" fill="#e7b260"/><rect x="16" y="30" width="128" height="61" rx="5" fill="#f5f1e7"/><circle cx="32" cy="106" r="10" fill="#52645f"/><circle cx="128" cy="106" r="10" fill="#52645f"/>':'<path d="M19 36h122v79H19Z" fill="#e6d4ad"/><path d="m5 38 75-35 75 35Z" fill="#c8836a"/><path d="M29 44h102v64H29Z" fill="#f5f1e7"/>';
-  content+=`<g transform="translate(38 36) scale(.53)">${shapes[subject]}</g>`;
+ if(id==='sieben'){
+  const points=[[21,4],[66,4],[111,4],[21,44],[66,44],[111,44],[66,84]];
+  return `<svg viewBox="0 0 160 125" aria-hidden="true" focusable="false">${points.map(([x,y])=>sprite('ball',x,y,28,28)).join('')}</svg>`;
  }
- return `<svg viewBox="0 0 160 125" fill="none" stroke="#334d45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${content}</svg>`;
+ const match=id.match(scenePattern);
+ if(!match)return `<svg viewBox="0 0 160 125" aria-hidden="true" focusable="false">${sprite(id,0,0,160,125)}</svg>`;
+ const [,subject,relation,location]=match;
+ const inside=relation==='im',clip='inside-'+id;
+ const box=location==='bus'?{x:25,y:33,w:98,h:47,ox:49,oy:35}:{x:37,y:61,w:86,h:55,ox:54,oy:66};
+ // The same object at the same scale appears either within the open cabin/room
+ // or beside it. All alternatives reuse these exact backgrounds and objects.
+ const object=sprite(subject,inside?box.ox:145,inside?box.oy:96,55,44);
+ return `<svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">${sprite('scene_'+location,5,2,140,140)}${inside?`<defs><clipPath id="${clip}"><rect x="${box.x}" y="${box.y}" width="${box.w}" height="${box.h}" rx="4"/></clipPath></defs><g clip-path="url(#${clip})">${object}</g>`:object}</svg>`;
 }

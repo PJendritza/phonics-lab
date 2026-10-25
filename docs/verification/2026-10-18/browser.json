@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
     "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. The full fixed round goal earns a flower.",
@@ -370,8 +370,8 @@
       "duration": 6.613288
     },
     {
-      "src": "audio/soft_words.mp3?v=fdd0857f43a3",
-      "duration": 5.45229
+      "src": "audio/soft_words.mp3?v=db5ea3ad195f",
+      "duration": 6.206939
     },
     {
       "src": "audio/double_letters.mp3?v=a05b848cc938",
@@ -394,16 +394,16 @@
       "duration": 6.706168
     },
     {
-      "src": "audio/sentence_words.mp3?v=defe9e02797f",
-      "duration": 6.056009
+      "src": "audio/sentence_words.mp3?v=db2da3557504",
+      "duration": 6.994558
     },
     {
       "src": "audio/sentence_read.mp3?v=48742908d239",
       "duration": 6.646259
     },
     {
-      "src": "audio/sentence_where.mp3?v=fd14c7f884f4",
-      "duration": 7.470567
+      "src": "audio/sentence_where.mp3?v=470bf5d2ad36",
+      "duration": 5.601361
     },
     {
       "src": "audio/s_hut.mp3?v=3e54653294f6",
@@ -516,9 +516,61 @@
     {
       "src": "audio/ist.mp3?v=890bc70d6920",
       "duration": 0.771111
+    },
+    {
+      "src": "audio/phrase_read.mp3?v=eb292ca97bb1",
+      "duration": 6.634649
+    },
+    {
+      "src": "audio/ball_am_bus.mp3?v=3502cfa47ea7",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/ball_am_haus.mp3?v=d6ea25d41a07",
+      "duration": 1.866667
+    },
+    {
+      "src": "audio/hut_am_bus.mp3?v=4d377ab7967e",
+      "duration": 1.727347
+    },
+    {
+      "src": "audio/hut_am_haus.mp3?v=31960d08e5f0",
+      "duration": 1.820227
+    },
+    {
+      "src": "audio/schaf_am_bus.mp3?v=8264806158c8",
+      "duration": 1.866667
+    },
+    {
+      "src": "audio/schaf_am_haus.mp3?v=40ed402ede78",
+      "duration": 1.913107
+    },
+    {
+      "src": "audio/maus_am_bus.mp3?v=77c7006f7340",
+      "duration": 1.866667
+    },
+    {
+      "src": "audio/maus_am_haus.mp3?v=df31a04c4032",
+      "duration": 1.889887
+    },
+    {
+      "src": "audio/phrase_ball_im_bus.mp3?v=5618865ffa26",
+      "duration": 1.239728
+    },
+    {
+      "src": "audio/phrase_ball_am_bus.mp3?v=e1ee46b98d8b",
+      "duration": 1.239728
+    },
+    {
+      "src": "audio/phrase_hut_im_bus.mp3?v=c53ab280e990",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/phrase_hut_am_bus.mp3?v=6f75cd05c98b",
+      "duration": 1.529977
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "543ef560c6d8d6c023dd3933e50c334190a426782a311f881db68d64f11343af"
+  "appSha256": "f5464eac2222512e7d0c988cfb27b07ed438ca820037d97932772128f207fd85"
 }

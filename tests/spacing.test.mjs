@@ -101,9 +101,9 @@ test('spacing and review state round-trip; malformed dates, paths or future coun
   const bad=structuredClone(p);change(bad);assert.throws(()=>validateProgress(bad));
  }
 });
-test('groups cover all 32 stable numbered levels and distinguish actual reading from listening',()=>{
- assert.equal(CHAPTERS.length,5);assert.equal(STAGES.length,32);
+test('groups cover all 33 numbered levels and distinguish actual reading from listening',()=>{
+ assert.equal(CHAPTERS.length,5);assert.equal(STAGES.length,33);
  for(const [index,s]of STAGES.entries())assert.ok(CHAPTERS.some(c=>c.id===s.chapter&&index+1>=c.from&&index+1<=c.to));
  assert.match(stageById('long_words_listen').title,/hören/);assert.match(stageById('long_words_read').title,/selbst lesen/);
- assert.equal(stageById('first_sentences').activity,'Wörter im Satz lesen');assert.equal(stageById('sentence_meaning').activity,'Sätze verstehen');
+ assert.equal(stageById('first_sentences').activity,'Sätze verstehen');assert.equal(stageById('sentence_meaning').activity,'Sätze verstehen');
 });

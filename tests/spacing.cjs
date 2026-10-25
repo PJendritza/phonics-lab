@@ -11,12 +11,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const restore=async store=>{await page.locator('#settings').click();await page.locator('#import').setInputFiles({name:'review.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(store))});await page.locator('#confirm-import').click();};
  const choose=async()=>{await ready();const before=await state(),index=before.pending.index;await page.locator(`[data-choice="${before.pending.round.target}"]`).click();await page.waitForFunction(i=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3')),p=s.profiles.find(p=>p.id===s.activeId).progress;return !p.pending||p.pending.index!==i;},index);};
  await page.goto(base);await page.locator('#path').click();
- assert.equal(await page.locator('.level-chapter').count(),5);assert.equal(await page.locator('[data-stage]').count(),32);
+ assert.equal(await page.locator('.level-chapter').count(),5);assert.equal(await page.locator('[data-stage]').count(),D.STAGES.length);
  assert.ok((await page.locator('[data-stage="long_words_listen"]').innerText()).includes('hören und erkennen'));
  assert.ok((await page.locator('[data-stage="long_words_read"]').innerText()).includes('selbst lesen'));
- assert.ok((await page.locator('[data-stage="first_sentences"]').innerText()).includes('Wörter im Satz lesen'));
- assert.equal(await page.locator('[data-level]').count(),32);
- checks.push('Five named groups retain all 32 stable numbers; activity labels distinguish listening, independent word reading, word-in-sentence reading and sentence understanding.');
+ assert.ok((await page.locator('[data-stage="first_sentences"]').innerText()).includes('Kurze Sätze verstehen'));
+ assert.equal(await page.locator('[data-level]').count(),D.STAGES.length);
+ checks.push('Five named groups retain all current stable IDs and numbers; activity labels distinguish listening, independent word reading, phrase and sentence understanding.');
 
  const fixture=L.freshStore();fixture.profiles[0].progress=L.startSession(fixture.profiles[0].progress,'long_words_read',()=>.4);
  await restore(fixture);await page.locator('#play').click();await ready();let p=await state();

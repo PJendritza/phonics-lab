@@ -1,6 +1,6 @@
 # Audio: human German targets and complete-sentence instructions
 
-76 complete human German target recordings, 11 isolated Kalulu phonics feedback clips, 21 full-sentence Piper instructions, 14 optional full-sentence readings and one
+76 complete human German target recordings, 11 isolated Kalulu phonics feedback clips, 22 full-sentence Piper instructions, 26 optional sentence/phrase readings (including six legacy sentence clips) and one
 quiet nonverbal success chime. Three old synthetic a/i/m clips are adult-comparison
 only. No new synthetic isolated phoneme or letter-name substitute; no consonant
 or vowel was cropped from a word. The user liked the human targets on their phone and approved the Thorsten High sample direction, then requested 1.5 with a 0.3-second sentence pause. This is not blanket phonetic approval of every regenerated instruction.
@@ -151,3 +151,19 @@ the server retry interval, then resumed at a reduced pace. Full technical and li
 verification outcomes belong in PROGRESS.md. No native/educator listening approval
 is claimed. Review especially weak syllables, voiced s, vowel length, ie/ei and
 final b in Laub/Sieb; a dedicated final-devoicing lesson remains future work.
+
+## v9 clarity and short-text help
+
+All 76 human targets and all 11 isolated phone files remain unchanged. Three
+previous instructions are revised: soft_words now uses concrete Tomate/Banane
+examples without a bare E/I label; sentence_words introduces the earlier small
+words; sentence_where refers to small relation words as well as object/place.
+The new phrase_read instruction and twelve optional text readings are added
+(four short phrases plus eight am sentences). Exact settings remain Thorsten High
+length_scale 1.5 and an added 0.3 s sentence pause. Original im sentences and six
+legacy noun-only sentence recordings remain for valid pending-data resume.
+
+Wrong pictures and invented written forms receive no spoken label or invented
+pronunciation. Real written choices with an existing human model retain that
+feedback. After two mistakes only the original target is modelled. No isolated
+phoneme synthesis or changed human word pronunciation is claimed.

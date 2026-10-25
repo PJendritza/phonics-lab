@@ -56,7 +56,7 @@ function meter(reward=false){const p=levelProgress(progress());return `<div clas
 function enableAnswers(){heard=true;announcement('');root.querySelectorAll('[data-choice],#syllable-help').forEach(b=>b.disabled=!!progress().pending?.round.solved||progress().pending?.round.help==='ack');if(keyboardMode&&!progress().pending?.round.solved)root.querySelector('[data-choice]')?.focus({preventScroll:true});}
 function disableAnswers(){heard=false;root.querySelectorAll('[data-choice],#syllable-help').forEach(b=>b.disabled=true);}
 function readingText(item,stage,help){
- if(!help||item.kind==='sentence')return esc(item.text);
+ if(!help||item.kind!=='word')return esc(item.text);
  const marked=text=>{
   const patterns=(stage.focus??[]).join('|');
   if(!patterns)return esc(text);
@@ -69,17 +69,17 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item=ITEMS[r.target],letters=word?lettersFor(r.target):[],finished=r.solved;
  const feedback=feedbackCorrect===false&&selected?choiceFeedback(s,selected):null;
  const teaching=r.help==='show'||r.help==='ack',expected=word?letters[r.position]?.toLowerCase():r.target;
- const title=teaching?'Schau und höre.':picture?s.group==='sentence'?'Welches Bild passt zum Satz?':'Welches Bild passt?':word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?';
+ const title=teaching?'Schau und höre.':picture?'Welches Bild passt?':word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?';
  const options=r.choices.map(c=>{
-  const content=picture?illustration(ITEMS[c].picture):esc(word?c:label(s,c));
+  const content=picture?illustration(ITEMS[c].picture):!word&&teaching&&s.focus&&ITEMS[c]?.kind==='word'?readingText(ITEMS[c],s,true):esc(word?c:label(s,c));
   if(teaching&&c!==expected)return `<span class="tile help-placeholder" aria-hidden="true">${content}</span>`;
   return `<button class="tile ${finished&&(word||c===r.target)?'good':''} ${feedbackCorrect===false&&c===selected?'wrong':''} ${!finished&&teaching&&c===expected?'hint':''}" data-choice="${c}" ${picture?`aria-label="Bild: ${esc(ITEMS[c].text)}"`:''} ${!heard||finished||r.help==='ack'?'disabled':''}>${content}</button>`;
  }).join('');
  root.innerHTML=`<section class="session auto-session ${picture?'reading-session':''}">
   <div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. Level auswählen">Level ${stageNumber(s.id)} · ${s.title} ▾</button></div>
   ${meter(feedbackCorrect===true)}<h1>${title}</h1>
-  ${picture?`<div class="reading-prompt ${item.kind==='sentence'?'sentence-prompt':''}" aria-label="${esc(item.text)}">${readingText(item,s,r.assisted||teaching)}</div>`:''}
-  <div class="reading-tools"><button class="replay" id="replay" aria-label="${picture?'Lesehilfe: Text vorlesen':'Ton noch einmal anhören'}" ${finished?'disabled':''}>${speaker}<span>${picture?'Vorlesen':'Anhören'}</span></button>${picture&&item.kind!=='sentence'&&(s.support||s.focus)?`<button class="quiet" id="syllable-help" aria-label="Silben und Bausteine als Lesehilfe zeigen" ${finished||!heard?'disabled':''}>◒ <span>Hilfe</span></button>`:''}</div>
+  ${picture?`<div class="reading-prompt ${item.kind!=='word'?'sentence-prompt':''}" aria-label="${esc(item.text)}">${readingText(item,s,r.assisted||teaching)}</div>`:''}
+  <div class="reading-tools"><button class="replay" id="replay" aria-label="${picture?'Lesehilfe: Text vorlesen':'Ton noch einmal anhören'}" ${finished?'disabled':''}>${speaker}<span>${picture?'Vorlesen':'Anhören'}</span></button>${picture&&item.kind==='word'&&(s.support||s.focus)?`<button class="quiet" id="syllable-help" aria-label="Silben und Bausteine als Lesehilfe zeigen" ${finished||!heard?'disabled':''}>◒ <span>Hilfe</span></button>`:''}</div>
   <div id="audio-status" class="audio-status subtle" role="status">${feedback?esc(feedback.text):picture?'Lies selbst. Der Lautsprecher hilft dir.':heard?'':'Hör erst einmal zu.'}</div>
   ${word?`${r.demonstration?`<div class="word-model" aria-label="Vorbild ${esc(item.text)}">${esc(item.text)}</div>`:''}<div class="slots" aria-label="Wort mit ${letters.length} Bausteinen">${letters.map((letter,i)=>`<span class="slot ${i===r.position?'active':''}">${i<r.position?letter:''}</span>`).join('')}</div>`:''}
   <div class="tiles ${picture?'picture-tiles':word?'bank':''} ${!picture&&(s.group==='read'||(!word&&!CONTEXTS[s.mode]&&r.choices.some(c=>label(s,c).length>3)))?'word-tiles':''} ${CONTEXTS[s.mode]?'phoneme-tiles':''}" ${word||CONTEXTS[s.mode]?`style="--bank-columns:${r.choices.length}"`:''}>${options}</div>
@@ -100,7 +100,7 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
   if(!result.correct)heard=false;
   renderRound(false,result.correct,selected);
   if(result.correct){stopAudio();playSuccess();if(result.teaching)scheduleHelpReturn();else if(result.finished)scheduleAdvance();}
-  else play(choiceFeedback(s,selected).audio,afterWrongAudio);
+  else {const ids=choiceFeedback(s,selected).audio;if(ids.length)play(ids,afterWrongAudio);else afterWrongAudio();}
   if(!result.finished&&keyboardMode&&heard)root.querySelector(`[data-choice="${selected}"]`)?.focus({preventScroll:true});
  });
  if(playCue){
