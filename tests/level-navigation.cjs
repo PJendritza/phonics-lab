@@ -15,7 +15,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  fixture.profiles[0].progress=L.startSession(p,'onsets');fixture.profiles[0].progress.pending.total=12;
  delete fixture.profiles[0].progress.continuation;delete fixture.profiles[0].progress.paused;
  await restore(fixture);await page.locator('#play').click();await ready();await page.evaluate(()=>document.fonts.ready);
- assert.equal((await state()).pending.total,12);assert.equal((await state()).continuation,'onsets');assert.equal(await page.locator('#level-menu').innerText(),'Level 9 ▾');
+ assert.equal((await state()).pending.total,12);assert.equal((await state()).continuation,'onsets');assert.equal(await page.locator('#level-menu').innerText(),'Level 9 · '+stage.title+' ▾');
  const font=await page.locator('[data-choice="l"]').evaluate(e=>({family:getComputedStyle(e).fontFamily,features:getComputedStyle(e).fontFeatureSettings,loaded:document.fonts.check('40px "Phonics Lesson"')}));assert.ok(font.loaded&&font.family.includes('Phonics Lesson')&&/^"cv39"(?: 1)?$/.test(font.features));
  await page.screenshot({path:'/workspace/kalulu-browser-build/v6-letterforms.png',fullPage:true});
  let before=(await plays()).length;const original=(await state()).pending.round;assert.equal(original.target,'f');await page.locator('[data-choice="l"]').click();assert.equal(await page.locator('[data-choice]').first().isDisabled(),true);await ready();assert.deepEqual((await plays()).slice(before),['phoneme_l.mp3']);assert.equal((await state()).pending.index,0);assert.equal((await state()).pending.round.tries,1);assert.equal((await state()).seeds,0);

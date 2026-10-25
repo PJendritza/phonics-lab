@@ -1,5 +1,6 @@
 import {READING_ITEMS,READING_STAGES,SENTENCES} from './reading-data.mjs';
-export const VERSION='7.0.0';
+import {describeLevel} from './level-catalog.mjs';
+export const VERSION='8.0.0';
 export const CURRICULUM_VERSION=7;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
@@ -52,10 +53,10 @@ export const STAGES=[
  {id:'more_read',title:'Mehr Wörter lesen',short:'Fisch · Schaf · Hut · Ball',mode:'find',group:'read',targets:['fisch','schaf','hut','ball'],instruction:'read',goal:12,icon:'blocks',color:'mint'},
  {id:'more_build',title:'Wörter mit Bausteinen',short:'sch und ll als Bausteine',mode:'build',group:'build',targets:['fisch','schaf','hut','ball'],instruction:'word_blocks',goal:8,icon:'blocks',color:'lavender'},
  ...READING_STAGES,
-];
+].map(describeLevel);
 export const stageById=id=>STAGES.find(s=>s.id===id);
 export const stageNumber=id=>STAGES.findIndex(s=>s.id===id)+1;
-export const levelGoal=stage=>Math.round((stage.goal??9)*1.5);
+export const levelGoal=stage=>Math.min(Math.round((stage.goal??9)*1.5),stage.targets.length*(stage.id==='letters'?3:2));
 export const skillKey=(stage,target)=>`${stage.group}:${target}`;
 export const label=(stage,target)=>CONTEXTS[stage.mode]?target:ITEMS[target].text;
 export const lettersFor=target=>ITEMS[target].graphemes??[...ITEMS[target].text];

@@ -1,3 +1,27 @@
+# v8 update: clearer numbered levels and spaced practice
+
+The latest request authorises this focused implementation. It does not include
+executing the separately deferred image/audio/curriculum redesign below.
+
+- [x] Keep all 32 numbers/IDs; add clearer activity names and five map groups.
+- [x] Distinguish hearing a word from reading it independently; label Level 31 as
+      word reading within sentences and Level 32 as sentence understanding.
+- [x] Replace the tiny last-item penalty with a firm gap between new questions.
+- [x] Prefer unseen/weak/due targets; expand review dates after independent success.
+- [x] Reduce padding in new rounds while preserving all existing unfinished goals.
+- [x] Offer explicit due reviews; preserve paused work and the latest forward cursor.
+- [x] All local unit/content and eight browser suites pass; publication state is
+      recorded in PROGRESS.md.
+
+Rules and limits: docs/SPACED-PRACTICE.md.
+
+Further curriculum requests from discussion remain pending: introduce common
+sentence words earlier (alongside necessary spelling patterns), expand Level 32's
+meaningful object/location contrasts with shorter phrases, and address Level 31's
+last-noun shortcut. Naming is corrected now; content/order are not changed.
+
+---
+
 # Next update: instruction clarity, picture feedback and illustrations
 
 User feedback recorded 2026-10-19 (Europe/Berlin). **Planning only: do not implement,

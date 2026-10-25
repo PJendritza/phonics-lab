@@ -21,7 +21,7 @@ are original work. No microphone, speech recognition, accounts or uploads.
 | 31 | Read and understand six short sentences | Das ist ein Hut. / Das ist eine Gans. / etc. |
 | 32 | Read eight object/location contrasts | Ein Ball ist im Bus. / Ein Ball ist im Haus. / Ein Hut ist im Bus. / etc. |
 
-Each new level has 18 completed questions. Listening levels introduce a whole-word
+Originally each new level had 18 completed questions; v8 now sizes new rounds to the target count and current knowledge, with 3–18 questions. Saved unfinished goals are preserved. See SPACED-PRACTICE.md. Listening levels introduce a whole-word
 model, spelling and vocabulary before reading levels remove automatic spoken
 answers. These are several focused practice rounds, not lengthy introductions
 with forced single-choice taps. Later levels use the existing two-error teaching

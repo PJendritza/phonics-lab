@@ -1,3 +1,104 @@
+# Phonics Lab v8: grouped levels and spaced practice
+
+Canonical repository: https://github.com/PJendritza/phonics-lab .
+Implementation branch: grouped-levels-spaced-review. Checkout: /workspace/Kalulu-DE.
+Read AGENTS.md and recent Git history first.
+
+## Latest authorised work
+
+The user asked for reasonable level names/groups, retained numbering, fewer
+unnecessary repeats and spaced retrieval of mistakes. This release is scoped to
+that request. Earlier voice/picture-feedback/AI-art changes remain deferred, as do
+moving sentence words earlier and adding more sentence-comprehension content.
+The new Level 31 name honestly describes word reading in sentences; its content
+and last-noun shortcut are not fixed by a naming change.
+
+## Implemented
+
+- Five contiguous map groups; all 32 numbers and persistent IDs retained. Names
+  and activity labels distinguish listening, word building, independent reading
+  and sentence understanding. Titles appear in the exercise's level selector too.
+- The weak-item selector's old 0.08 last-item penalty could cause back-to-back
+  questions. New selection excludes the previous two completed skill targets
+  when the pool has at least three, then prioritises unseen/weak/due work.
+- Successful independent retrieval expands preferred question gaps and saved
+  review intervals (1/3/7/14/30 days). Mistakes or assistance reset the streak;
+  they can return after intervening lesson questions and become due again after
+  ten minutes. Teaching taps and duplicate solved taps cannot advance the clock.
+- New fixed-at-start goals adapt to target count/knowledge, 3–18 questions, to avoid
+  padding secure sets. A new three-word practice set has six questions. All saved
+  unfinished goals remain exact; no mid-round goal changes or early completion.
+- ↻ Wiederholen offers due work explicitly. Due skill keys are counted once across
+  overlapping levels; hearing/reading remain distinct. Short review queues test
+  each due target once and preserve the latest course cursor and paused question.
+  A paused review refreshes its return path if the child moved forward meanwhile.
+- Missing spacing metadata migrates without resetting version-3 profiles, old
+  scores, pending choices or backups. Existing curriculumVersion 7 remains because
+  no content IDs/order changed. The home screen refreshes dues on foregrounding.
+- No new audio or image assets, models, packages, accounts or paid API. All 123
+  active clips and the full audio manifest remain byte-identical to v7.
+  Detailed rules/limits: docs/SPACED-PRACTICE.md.
+
+## Executed checks
+
+```sh
+node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+python3 -m http.server 8070 --bind 0.0.0.0 --directory /workspace/kalulu-browser-build
+# Existing preview/phonics-lab -> ../site symlink exercises the hosted path.
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/spacing.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+```
+
+45 pure/content tests passed: every stage interleaves a very weak target; error
+retrieval waits for intervening questions; intervals grow across days; assistance
+cannot become independent mastery; legacy known words get delayed reviews; one
+isolated due word is tested once; review restores/upgrades the forward cursor;
+malformed spacing/queue imports reject safely. Full 32-level progression passes.
+All 123 active MP3s decode with headroom/quiet endings; old bytes are unchanged.
+
+New actual-playback browser checks passed for grouping, a wrong-picture question
+returning after two other questions, exact resume, old-profile migration into due
+review, no duplicate awards after reload, next-day review scheduling, preserved
+higher questions, unchanged saved 18-question goals and all three mobile sizes.
+All eight browser suites pass after the review-cursor correction, including full
+app flow, reading, grouping/spacing, mobile, profiles, word hints, level navigation
+and choice help. Full MP3 decode/playback coverage includes the three retained
+adult comparisons. All page-error checks are empty; runtime requests stay local
+to the static app. Exact app SHA256:
+543ef560c6d8d6c023dd3933e50c334190a426782a311f881db68d64f11343af.
+An initial run exposed old hard-coded goal expectations; assertions were updated
+to check adaptive goals while explicitly preserving old saved totals. A review
+return-cursor edge case was fixed and all affected checks rerun successfully.
+
+## Publication / next action
+
+All local checks passed. Publication is pending at this checkpoint: commit/push
+source and evidence, build clean, publish to existing gh-pages and verify every
+public HTTPS file. Until that completes, the previously released v7 is current. The publisher now also requires current
+app-bound spacing evidence (docs/verification/v8-spacing.json).
+No new environment configuration or hosting change is needed. Development tools
+were present; a local static server was started because the previous process was
+not running. Source uses the existing checkout and normal Git authentication.
+
+After publication: try the grouped map and a three-word level, then review an
+existing learner's ↻ button. This is a heuristic prototype, not a validated memory
+model or physical-phone test. Small pools cannot meet arbitrarily long preferred
+question gaps; fixed goals fall back to less-recent targets, while strict immediate
+repeat prevention holds. New shorter rounds and calendar review address the excess
+padding. Next substantive work remains the pending voice/art/reading-comprehension
+plan; do not treat it as implemented or start generation without authorisation.
+
+---
+Historical v7 and older context follows.
+
 # Phonics Lab v7 status
 
 Updated 2026-10-19 (Europe/Berlin). Canonical repository:

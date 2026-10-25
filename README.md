@@ -3,7 +3,14 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=7.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=7.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=8.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=8.0.0)**
+
+The 32 numbered levels now have clearer names and five groups. Labels distinguish
+listening/spelling recognition, independent word reading and sentence understanding.
+Spaced practice interleaves mistakes with other questions, reduces padding of
+already-secure words and saves expanding review intervals. A separate **↻ Wiederholen**
+button offers due reviews without moving the forward learning cursor backwards.
+[Scheduling rules and limits](docs/SPACED-PRACTICE.md).
 
 Choose an animal profile and press play. Answers stay still. A correct answer gives
 a brief nonverbal chime/check and a small sparkle, fills the level meter and automatically advances.
@@ -28,7 +35,7 @@ instructions and 14 optional sentence readings. Piper Thorsten High uses the
 approved length_scale 1.5 and added 0.3-second sentence pause; human words are not
 synthesised. After two errors, brief one-choice teaching restores the original
 choices without extra rewards. Independent accuracy adjusts two/three/four choices.
-Each new level has 18 questions, while saved unfinished levels keep their old goal.
+New round goals depend on the number of targets and existing knowledge (3–18 questions); saved unfinished rounds keep their exact old goal.
 Practice flowers and independent mastery remain separate.
 
 Up to eight local profiles resume exact questions or partial words. Existing demo
@@ -44,7 +51,7 @@ Python 3 and Node 18+; no runtime dependencies or bundler. Development:
 
 ```sh
 python3 -m http.server 8070 --directory app
-node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs
+node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs
 python3 scripts/build.py
 ```
 
@@ -63,6 +70,7 @@ node tests/word-hints.cjs
 node tests/level-navigation.cjs
 node tests/choice-help.cjs
 node tests/reading.cjs
+node tests/spacing.cjs
 python3 scripts/audit_audio.py
 ```
 

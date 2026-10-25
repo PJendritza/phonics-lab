@@ -20,12 +20,12 @@ replace the current drawings with clear, simple AI-generated illustrations.
 These are unimplemented plans. The user authorised recording them only; wait for
 a later implementation request before changing app behaviour or generating assets.
 The planned picture exception supersedes generic wrong-choice speech rules below
-when that work is authorised. Current public release remains v7.0.0.
+when that work is authorised. The later names/grouping/spaced-practice request authorises that focused implementation; it does not automatically authorise image/audio generation or unrelated curriculum redesign.
 
 Correct answers produce a brief nonverbal chime/check and automatically advance
 about 340 ms after a complete response, with a small local sparkle and growing flower. No spoken success praise or per-question
 next button. Every correct choice visibly advances the fixed level goal, including
-partial grapheme blocks. New goals are 12–18 questions; saved pending goals stay unchanged; never finish early. Completing
+partial grapheme blocks. New goals adapt to target count and independent accuracy (3–18 questions); saved pending goals stay unchanged and a round never finishes before its fixed goal. Completing
 a level adds a flower; this rewards practice, while independent accuracy separately
 controls mastery/unlocking. Wrong letters play only the selected isolated sound through PHONEMES, never another word or prefixed beginning/ending instruction. Wrong whole-word choices play that word. Keep choices stationary and award no progress. Never cover selected-option feedback with automatic original-target replay.
 Animations affect feedback/progress only; respect reduced motion. Successful current levels advance to the next numbered level, even with unfinished earlier levels; never automatically select an earlier weak stage. Earlier review and post-final-level review are explicit choices. A level-boundary
@@ -80,16 +80,26 @@ must contrast both subject and location. CurriculumVersion 7 advances old comple
 New vocabulary and original vector illustrations require educator/listening review.
 The total expanded static-site budget is 3 MB; audio remains on demand.
 
-After functional changes run node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs,
+v8 grouping/spacing: preserve all 32 IDs/numbers. level-catalog.mjs defines five
+chapters and honest activity names. spacing.mjs prevents the same target in the
+last two completed questions (pool >=3), favours weak/due work and expands dates
+1/3/7/14/30 days. No speed scoring or validated-memory claims. Optional due reviews
+must preserve/update the latest forward cursor, paused questions and one-time
+awards; never silently send the main path backwards. Save/validate spacing and
+review queues with the existing v3 key; missing metadata must not erase progress.
+New goals are sized before starting; all existing unfinished totals remain exact.
+See docs/SPACED-PRACTICE.md. Old voice/art/curriculum plans remain deferred.
+
+After functional changes run node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs,
 python3 scripts/audit_audio.py, python3 scripts/build.py and relevant Playwright
 checks. tests/browser.cjs checks actual playback/automatic flow and binds evidence
 to the app tree hash. Also run tests/mobile-smoke.cjs, tests/profiles.cjs and
-tests/word-hints.cjs and tests/level-navigation.cjs plus tests/choice-help.cjs when those behaviors change. Run tests/reading.cjs for reading/help/comprehension changes. Exercise the /phonics-lab/ prefix.
+tests/word-hints.cjs and tests/level-navigation.cjs plus tests/choice-help.cjs when those behaviors change. Run tests/reading.cjs for reading/help/comprehension changes and tests/spacing.cjs for grouping/repetition/review changes. Exercise the /phonics-lab/ prefix.
 Chromium emulation is not a physical-phone test. Keep exact commands/results/limits
 in PROGRESS.md and concise JSON in docs/verification; screenshots outside Git.
 
 Publish clean tested main with scripts/publish.py and a fresh external checkout.
-It requires pushed source, current app-hash-bound browser and reading evidence, and checksums.
+It requires pushed source, current app-hash-bound browser, reading and spacing evidence, and checksums.
 Do not change Pages settings. Verify all HTTPS bytes with scripts/verify_live.py.
 Later documentation-only commits are distinct from the deployed app source commit.
 License: project CC BY-SA 4.0; individual recordings CC BY-SA 3.0/4.0. Preserve credits.

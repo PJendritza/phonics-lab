@@ -62,18 +62,18 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  }
  checks.push('Every one of the 18 appended levels starts with choices and executes a real answer/automatic transition, using real MP3s for all listening levels.');
 
- await restore(fixture('sentence_meaning',true));p=await state();plays=await speech();
+ await restore(fixture('sentence_meaning',true));p=await state();plays=await speech();const sentenceGoal=p.pending.total;
  assert.ok(!plays.includes(p.pending.round.cue+'.mp3'));assert.equal(await page.locator('.sentence-prompt').innerText(),D.ITEMS[p.pending.round.target].text);
  assert.equal(await page.locator('[data-choice]').count(),4);
  const item=D.ITEMS[p.pending.round.target],others=p.pending.round.choices.filter(t=>t!==p.pending.round.target);
  assert.ok(others.some(t=>D.ITEMS[t].subject===item.subject));assert.ok(others.some(t=>D.ITEMS[t].location===item.location));
  await page.locator('#replay').click();await ready();assert.equal((await speech()).at(-1),item.audio+'.mp3');
  await page.screenshot({path:'/workspace/kalulu-browser-build/v7-sentence-390.png',fullPage:true});
- for(let n=0;n<18;n++)await solve();await page.locator('#continue').waitFor();
+ for(let n=0;n<sentenceGoal;n++)await solve();await page.locator('#continue').waitFor();
  // Assistance on the first question may require another round to establish
- // mastery, but practice always completes its full 18-question flower goal.
- assert.equal((await state()).sessions,1);assert.equal((await state()).seeds,18);assert.equal(await page.locator('.completion-meter').getAttribute('aria-valuenow'),'18');
- checks.push('Sentences show text without reading it aloud; choices contain same-object/different-location and same-location/different-object contrasts. Optional full-sentence support plays; the full 18-answer goal earns one flower.');
+ // mastery, but practice always completes its full fixed flower goal.
+ assert.equal((await state()).sessions,1);assert.equal((await state()).seeds,sentenceGoal);assert.equal(await page.locator('.completion-meter').getAttribute('aria-valuenow'),String(sentenceGoal));
+ checks.push('Sentences show text without reading it aloud; choices contain same-object/different-location and same-location/different-object contrasts. Optional full-sentence support plays; the complete round goal earns one flower.');
 
  const layout=[];
  for(const viewport of [{width:320,height:568},{width:390,height:844},{width:768,height:1024}]){

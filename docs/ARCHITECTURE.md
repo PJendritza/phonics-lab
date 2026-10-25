@@ -89,3 +89,13 @@ Human words are prepared from pinned Commons metadata; complete sentence support
 is pre-generated locally by Piper. No microphone, model download, speech service
 or tracking in the browser. The total-site cap rises to 3 MB for the expanded
 audio bank; no runtime dependencies or engine.
+
+## v8 grouping and spaced practice
+
+level-catalog.mjs decorates stable stages with five chapters, clearer titles and
+activity labels. It changes no IDs/order or skill groups. spacing.mjs stores
+bounded per-skill review dates and recent completed targets in progress.spacing.
+learning.mjs integrates selection, fixed-at-start adaptive goals, due review queues
+and validated return cursors. Older saves initialise missing fields without
+changing pending questions or goals. Main play stays on the forward course; the
+explicit review action saves/restores other work. See SPACED-PRACTICE.md.

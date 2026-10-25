@@ -1,10 +1,10 @@
 {
-  "version": 7,
+  "version": 8,
   "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
-    "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. Full 14/14 goal earns a flower.",
+    "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. The full fixed round goal earns a flower.",
     "Independent profiles preserve exact pending activities; export downloads and confirmed restore work; invalid restore preserves existing data.",
-    "Parent preview accesses all current stages. New first/last consonants and word tasks run to their explicit 12/15/18-question goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
+    "Parent preview accesses all current stages. New first/last consonants and word tasks run to their explicit adaptive round goals. Each correct grapheme advances fractional progress; partial Fisch resumes identically and sch is one block.",
     "Actual nonverbal confirmation audio plays; no spoken success, retry or navigation praise is requested.",
     "All current human/guide/effect files plus old comparisons decode; effect filtering and per-clip listening review persistence work.",
     "Required cue failure disables choices and permits replay recovery; optional chime failure never blocks automatic advancement.",
@@ -520,5 +520,5 @@
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "c4a39a6756b6f0f167e3fe248e44184eca285de44e452a1b30a929e67dac9771"
+  "appSha256": "543ef560c6d8d6c023dd3933e50c334190a426782a311f881db68d64f11343af"
 }

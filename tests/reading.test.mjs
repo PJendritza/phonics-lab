@@ -28,7 +28,7 @@ test('optional audio or syllable assistance persists and cannot earn independent
 });
 test('sentence alternatives contrast object and location rather than always revealing one keyword',()=>{
  let p=startSession(freshProgress(),'sentence_meaning',rng);
- for(let n=0;n<18;n++){
+ const total=p.pending.total;for(let n=0;n<total;n++){
   const r=p.pending.round,item=ITEMS[r.target],wrong=r.choices.filter(c=>c!==r.target);
   assert.ok(wrong.some(c=>n%2?ITEMS[c].location===item.location:ITEMS[c].subject===item.subject));
   if(r.choices.length>=3){assert.ok(wrong.some(c=>ITEMS[c].location===item.location));assert.ok(wrong.some(c=>ITEMS[c].subject===item.subject));}
