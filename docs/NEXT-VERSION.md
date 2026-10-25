@@ -16,7 +16,9 @@ with more demanding word recognition. Current implementation:
 - [x] Preserve old IDs, rewards, pending goals and legacy sentence questions;
       reassess new comprehension and skip already-passed intervening material.
 - [x] All 55 unit/content tests, audio audit and nine browser suites pass.
-- [ ] Publish clean source and verify the public bytes; exact status in PROGRESS.md.
+- [x] Clean source and gh-pages pushed; all 168 public HTTPS files match the
+      tested build. Extra live Chromium check hits the cloud proxy CA trust limit;
+      local browser suites and verified HTTPS remain passed. See PROGRESS.md.
 
 Details and limits: docs/CLOSE-READING.md and docs/ILLUSTRATIONS.md. No microphone,
 paid external API, engine, moving targets or speech-recognition work is included.

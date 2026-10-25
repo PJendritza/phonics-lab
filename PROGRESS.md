@@ -46,9 +46,8 @@ picture-feedback, AI-illustration and sentence-comprehension work.
   newly earlier material is selectable in the map. v6 completion begins at Level 15.
 - app/ remains the complete dependency-free static website. No microphone,
   speech recognition, account, paid API, new hosting, scheduling or engine added.
-  Full illustrated-site cap is now 4 MB; media load on demand. Current dirty build:
-  168 files / 3,387,715 bytes, app asset hash f5464eac2222. Clean metadata differs
-  by one byte; deployment records below will identify the exact clean package.
+  Full illustrated-site cap is now 4 MB; media load on demand. The clean published
+  package has 168 files / 3,387,716 bytes, app asset hash f5464eac2222.
 
 Implementation rules: docs/CLOSE-READING.md, docs/READING-CURRICULUM.md and
 provenance in docs/ILLUSTRATIONS.md / docs/illustration-sources.json.
@@ -101,10 +100,39 @@ word alternatives, relation pictures and instruction speech remains useful.
 
 ## Publication / next step
 
-Pending clean source commit/push, publish with scripts/publish.py to the existing
-gh-pages branch, then verify every public HTTPS byte with scripts/verify_live.py.
-Do not change Pages settings. Use a fresh external deployment checkout. Record
-actual source/deployment commit IDs and verification results here after completion.
+Published and verified 2026-10-25:
+
+- App source: [ab59be5fa62466c32fac746fc3f119ba7c475cce](https://github.com/PJendritza/phonics-lab/commit/ab59be5fa62466c32fac746fc3f119ba7c475cce), pushed to main and close-reading-and-illustrations.
+- Generated gh-pages: [b992eb97dbcf8ac7046ce1d2d6fbfa9035c50daf](https://github.com/PJendritza/phonics-lab/commit/b992eb97dbcf8ac7046ce1d2d6fbfa9035c50daf).
+- Public: https://patrickjendritza.com/phonics-lab/?v=9.0.0 ; sound review:
+  https://patrickjendritza.com/phonics-lab/audio-review.html?v=9.0.0 .
+- Live BUILD_INFO reports v9.0.0, clean source ab59be5fa624, asset f5464eac2222.
+  scripts/verify_live.py matched all 168 HTTPS files, 3,387,716 bytes with TLS
+  verification enabled. Evidence timestamp: 2026-10-25T20:15:52.945725+00:00.
+
+```sh
+git push -u origin close-reading-and-illustrations
+git switch main
+git merge --ff-only close-reading-and-illustrations
+git push origin main
+python3 scripts/build.py
+python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v9-ab59be5
+python3 scripts/verify_live.py
+```
+
+No Pages settings changed. This documentation/evidence follow-up is separate
+from the deployed app source; it does not require another app build/deployment.
+
+An additional ad hoc public-URL Playwright smoke check failed at page.goto with
+net::ERR_CERT_AUTHORITY_INVALID before loading any app code. Diagnosis: the cloud
+HTTPS proxy presents a certificate issued by OpenAI, LLC/openai.com, trusted by
+the system Python CA bundle but not this Chromium instance. Runtime status is
+connected with enforced unrestricted HTTP policy. No certificate checks were
+disabled, proxies bypassed or unrelated browser settings changed. This blocks
+only that extra live Chromium check; all nine local packaged browser suites and
+all public certificate-verified byte checks pass. No physical-device/browser
+playability claim is made. The short blocker record is v9-live-browser.json;
+the failed ad hoc script/log remains external, not a maintained app test.
 
 Next: try Level 17 and Levels 32–33 plus a repeated successful word-listening round
 (e.g. Level 18) using the parent's level preview. Check whether close choices and

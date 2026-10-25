@@ -1,0 +1,12 @@
+{
+  "status": "blocked",
+  "timeUTC": "2026-10-25T20:17:49.378625+00:00",
+  "url": "https://patrickjendritza.com/phonics-lab/?v=9.0.0",
+  "sourceCommit": "ab59be5fa62466c32fac746fc3f119ba7c475cce",
+  "assetVersion": "f5464eac2222",
+  "attempt": "Additional ad hoc public-URL Playwright smoke check, /usr/bin/chromium, 390x844 touch viewport.",
+  "failure": "page.goto: net::ERR_CERT_AUTHORITY_INVALID before app code loaded.",
+  "diagnosis": "Cloud HTTPS proxy certificate issuer OpenAI, LLC/openai.com is trusted by the Python system CA bundle but not this Chromium instance. Environment connected; enforced unrestricted HTTP policy.",
+  "scope": "All nine packaged local browser suites pass. All 168 public files verified byte-for-byte over HTTPS using certificate validation. This extra public browser smoke check did not run; no physical-phone playability claim.",
+  "safety": "Certificate verification was not disabled; proxy and trust configuration unchanged."
+}
