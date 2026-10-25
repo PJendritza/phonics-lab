@@ -1,5 +1,6 @@
 # v8 update: clearer numbered levels and spaced practice
 
+Released v8.0.0; exact source/deployment commits and verification are in PROGRESS.md.
 The latest request authorises this focused implementation. It does not include
 executing the separately deferred image/audio/curriculum redesign below.
 

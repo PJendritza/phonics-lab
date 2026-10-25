@@ -49,8 +49,8 @@ next preferred turn and next due timestamp. First successful learning retrievals
 can recur during the lesson; after secure repeat retrievals, dates expand to
 1, 3, 7, 14 and 30 days. A mistake or read-aloud/syllable assistance resets the
 streak and requests review after ten minutes, while in-lesson weak-item practice
-can return sooner after the question gap. Teaching taps, partial word blocks and
-duplicate solved taps do not advance the spacing clock or create extra dates.
+can return sooner after the question gap. Corrective teaching taps, partial word blocks and
+duplicate solved taps do not advance the spacing clock or create extra dates. Initial Level 1 introduction questions count as completed intervening questions, but create no review date or independent mastery.
 
 The ↻ Wiederholen button offers due work from previously completed levels. It
 does not automatically send the main learning path backwards. Each due target is

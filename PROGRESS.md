@@ -78,17 +78,28 @@ An initial run exposed old hard-coded goal expectations; assertions were updated
 to check adaptive goals while explicitly preserving old saved totals. A review
 return-cursor edge case was fixed and all affected checks rerun successfully.
 
-## Publication / next action
+## Verified publication
 
-All local checks passed. Publication is pending at this checkpoint: commit/push
-source and evidence, build clean, publish to existing gh-pages and verify every
-public HTTPS file. Until that completes, the previously released v7 is current. The publisher now also requires current
-app-bound spacing evidence (docs/verification/v8-spacing.json).
-No new environment configuration or hosting change is needed. Development tools
-were present; a local static server was started because the previous process was
-not running. Source uses the existing checkout and normal Git authentication.
+- App source b17b2177700f0cc7ab226c8935509ad3dbf100b4 is pushed to main and
+  grouped-levels-spaced-review through normal commits/pushes.
+- Clean `python3 scripts/build.py`: 148 files, 2,267,021 bytes, sourceDirty false;
+  asset version 543ef560c6d8. No generated builds/models/source caches in Git.
+- Executed `python3 scripts/publish.py --checkout
+  /workspace/kalulu-browser-build/publish-v8-b17b217` successfully, including current
+  full-browser, reading and spacing evidence gates.
+- Deployment bb5b1d133ad20f2cdf7f4ede3f1035a318afa77a on existing gh-pages.
+- Public BUILD_INFO reports 8.0.0 and source b17b217. Executed
+  `python3 scripts/verify_live.py`: all 148 certificate-verified HTTPS files exactly
+  hash-match the tested package (2,267,021 bytes). Evidence remains at
+  docs/verification/2026-10-18/live.json; new spacing evidence is v8-spacing.json.
+- Play: https://patrickjendritza.com/phonics-lab/?v=8.0.0
+- Source: https://github.com/PJendritza/phonics-lab/tree/grouped-levels-spaced-review
+- Subsequent documentation-only commit records publication; the deployed app
+  source remains b17b217. No hosting settings, new secrets, paid APIs, external
+  scheduler or microphone feature were introduced. No unresolved build/Git/hosting
+  blocker remains. Physical-phone and educational validation are not newly claimed.
 
-After publication: try the grouped map and a three-word level, then review an
+Next: try the grouped map and a three-word level, then review an
 existing learner's ↻ button. This is a heuristic prototype, not a validated memory
 model or physical-phone test. Small pools cannot meet arbitrarily long preferred
 question gaps; fixed goals fall back to less-recent targets, while strict immediate

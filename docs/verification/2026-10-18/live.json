@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "timeUTC": "2026-10-18T20:37:57.016702+00:00",
+  "timeUTC": "2026-10-25T19:00:10.586156+00:00",
   "base": "https://patrickjendritza.com/phonics-lab/",
-  "sourceCommit": "8f8c124142811593b7c509c3d4796535d6f6b6e1",
+  "sourceCommit": "b17b2177700f0cc7ab226c8935509ad3dbf100b4",
   "files": [
     {
       "file": ".nojekyll",
@@ -13,7 +13,7 @@
     {
       "file": "BUILD_INFO.json",
       "status": 200,
-      "sha256": "f2608b6c0400ade54ab974c2685340aa9189cdb7ccb8cad0b2cdf1e3766e66b5",
+      "sha256": "e4abb28b3664555750a8d9fd83d527f66181f5c3305d725cc196cee55f7b2e0a",
       "bytes": 378
     },
     {
@@ -25,14 +25,14 @@
     {
       "file": "SHA256SUMS",
       "status": 200,
-      "sha256": "06e1d4ae533f80c4d8db4738f4201e11a152a3ff52aacc617e989a01c83530e1",
-      "bytes": 11989
+      "sha256": "4aa30fd908a07dd6f83c9df018b83ad6d62a57fc2ad70aad0fa945e3e1227e15",
+      "bytes": 12151
     },
     {
       "file": "about.html",
       "status": 200,
-      "sha256": "bd291c47de2ab308f06c603b9387b0f3c27f8de80636a1eea307d1380ba58a28",
-      "bytes": 11041
+      "sha256": "fa7f287bebe3cca98348f5bf6444dc6eb7f5b6c7f3e964e211169dffb54e748d",
+      "bytes": 11869
     },
     {
       "file": "audio/a.mp3",
@@ -799,7 +799,7 @@
     {
       "file": "audio-review.html",
       "status": 200,
-      "sha256": "845bd2b759f8c9dc4b2d685df8b89998ef1080555e73ef521a1037a4db93acb9",
+      "sha256": "75eba9f8ba84381facdac1167f3d1d9208d4fbcfe35c5aec9dbd1f9632fd9b64",
       "bytes": 2006
     },
     {
@@ -811,8 +811,8 @@
     {
       "file": "data.mjs",
       "status": 200,
-      "sha256": "1b05434adff8ea8aa086fd972c4a69f3181bf88e1f18fa36c3447fe05a2a0196",
-      "bytes": 7767
+      "sha256": "20fe57d29a98ba2cacfe7bc91ca5eb36f0450503a74a328964a2385398b7ea1f",
+      "bytes": 7910
     },
     {
       "file": "fonts/OFL.txt",
@@ -841,20 +841,26 @@
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "85e650bbc04205f041223c9b73833512dcfbb4005ba708a7a6fac71f32d74dd5",
+      "sha256": "3147bb35ca45c573ac6d9b5132a5e4253d873b154c8ede6e74c761e03273c4be",
       "bytes": 1127
     },
     {
       "file": "learning.mjs",
       "status": 200,
-      "sha256": "5719de690eed9a11dedbdc5ec300ecefe5e67760dd594e6ce2b5f56def2e460a",
-      "bytes": 15996
+      "sha256": "a0cbc8ceda0395f6ea91d92aa232a29d3d8d73f41b7d8618c0cc7fa9c2cb6e21",
+      "bytes": 17809
+    },
+    {
+      "file": "level-catalog.mjs",
+      "status": 200,
+      "sha256": "b54b392db14e4b77ce637a39d24c6b7bdf3cbc59d3509095869ffb71c629abc8",
+      "bytes": 2434
     },
     {
       "file": "main.mjs",
       "status": 200,
-      "sha256": "9d96b78a33a147c201c2860f4bdd5258b62afa7718bb25d0bfeba96dc240552b",
-      "bytes": 22379
+      "sha256": "64211df289571af7da3508480ad214bb2f847ce3139dc87d4d24c736414c037a",
+      "bytes": 24097
     },
     {
       "file": "pictures.mjs",
@@ -875,12 +881,18 @@
       "bytes": 3836
     },
     {
+      "file": "spacing.mjs",
+      "status": 200,
+      "sha256": "be2dc09f64a829d0b9ed76fc110c0619ebe1439e04bbbb7a7f08083bcbfe5d3f",
+      "bytes": 4483
+    },
+    {
       "file": "style.css",
       "status": 200,
-      "sha256": "a55fcbe2f30d683633a151024ee819b59d8c42452356d7423f41704da5582a84",
-      "bytes": 21158
+      "sha256": "70f01857a81f5bcce7aa9758ac7609c36159f4ebd85cdb271f1890d32967c4ee",
+      "bytes": 21972
     }
   ],
-  "totalBytes": 2254626,
+  "totalBytes": 2267021,
   "meaning": "All deployed bytes match the locally browser-tested build over certificate-verified HTTPS. Not a real-phone playability test."
 }
