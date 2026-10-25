@@ -1,10 +1,22 @@
-# Next update: mix sentence relations within each round
+# Next update: correct grammar and mix sentence relations
 
 Latest user feedback after testing Level 33: the prompts appeared to use only
 “am”. The child can then repeatedly pick the outside/beside picture without
 reading the relation. **Planning only: do not implement, regenerate audio, build
 or deploy until the user authorises the next implementation.**
 
+- [ ] **Correct noun/article agreement, including the matching audio.** The user's
+      screenshot shows “Ein Maus ist im Haus.” Correct: “Eine Maus ist im Haus.”
+      Maus is feminine (die Maus); all four mouse sentences (im/am Bus/Haus) need
+      eine. The current sentence generator prefixes every subject with Ein, so
+      the error affects text and pre-generated sentence help, including teaching.
+      Choose the article from the noun's grammatical gender. Review every current
+      sentence, not just the screenshot; Ball/Hut/Schaf use ein and Gans uses eine.
+      Regenerate affected complete recordings with the approved Thorsten settings,
+      update labels/hashes, and verify displayed text, explicit read-aloud and
+      two-error teaching agree. Preserve stable IDs and saved learner progress.
+      Include regression checks for the actual expected German sentences; audio
+      decoding alone cannot validate grammar. Do not mark fixed before execution.
 - [ ] Investigate the actual selected prompt sequence, not merely the available
       sentence inventory or picture alternatives. Both im and am already exist in
       the v9 data, so their presence in data does not establish mixed practice.

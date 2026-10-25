@@ -1,4 +1,10 @@
-# Latest feedback: Level 33 relation mixing — planning only
+# Latest feedback: sentence grammar and relation mixing — planning only
+
+The user also supplied a screenshot confirming “Ein Maus ist im Haus.” The
+correct form is “Eine Maus ist im Haus.” All four mouse sentences inherit a
+hard-coded Ein prefix; fix their text and matching full-sentence audio together,
+review all noun/article agreement and preserve IDs/progress. Added to the pending
+checklist; this is not corrected in the published app yet.
 
 The user reports prompts all using am in Level 33 and asks to record a plan,
 without implementation. Add real within-round im/am variety so repeated outside

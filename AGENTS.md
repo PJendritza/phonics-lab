@@ -13,8 +13,8 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
-Latest post-v9 feedback is planning only: record and later investigate Level 33
-im/am mixing. See the first section of docs/NEXT-VERSION.md; do not implement or
+Latest post-v9 feedback is planning only: record sentence grammar/audio corrections
+(Eine Maus, not Ein Maus) and later investigate Level 33 im/am mixing. See the first section of docs/NEXT-VERSION.md; do not implement or
 deploy that next update until requested. The completed v9 authorisation follows.
 
 The latest request authorises close written word alternatives AND the previously
