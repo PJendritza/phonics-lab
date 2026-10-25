@@ -39,7 +39,7 @@ svg.play-symbol{width:40px;height:40px;flex-shrink:0}
 .reading-prompt mark{color:inherit;background:#f2dfa7;border-radius:4px;padding:0}
 .reading-session .picture-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:510px;margin:8px auto 12px}
 .reading-session .picture-tiles .tile{width:100%;min-width:0;height:155px;padding:10px;background:#fffdf8}
-.picture-tiles .tile svg{width:100%;height:100%;display:block}
+.picture-tiles .tile>svg{width:100%;height:100%;display:block}
 .reading-session .picture-tiles .tile.good{background:var(--mint)}
 .reading-session .picture-tiles .tile.wrong{background:#fff2e8}
 @media(max-width:700px){.reading-session h1{font-size:23px;margin:7px auto}.reading-session .reading-prompt{min-height:56px;font-size:35px}.reading-session .sentence-prompt{font-size:27px;min-height:84px}.reading-session .picture-tiles .tile{height:132px}.reading-session .audio-status{height:30px;min-height:30px;font-size:12px}}

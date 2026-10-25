@@ -1,7 +1,8 @@
-import {READING_ITEMS,READING_STAGES,SENTENCES} from './reading-data.mjs?v=543ef560c6d8';
-import {describeLevel} from './level-catalog.mjs?v=543ef560c6d8';
-export const VERSION='8.0.0';
-export const CURRICULUM_VERSION=7;
+import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=f5464eac2222';
+import {describeLevel} from './level-catalog.mjs?v=f5464eac2222';
+import {FORMS} from './word-choices.mjs?v=f5464eac2222';
+export const VERSION='9.0.0';
+export const CURRICULUM_VERSION=9;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
@@ -33,7 +34,7 @@ export const ITEMS={
  du:{text:'du',audio:'du',kind:'unit'},
 };
 for(const [id,details]of Object.entries(READING_ITEMS))ITEMS[id]={...ITEMS[id],...details};
-Object.assign(ITEMS,SENTENCES);
+Object.assign(ITEMS,SENTENCES,PHRASES);
 export const ENDINGS={m:['am','im','um'],n:['an','in','man','nun'],l:['mal'],f:['schaf','auf'],s:['bus','eis'],sch:['fisch','tisch'],t:['hut','rot'],k:['park']};
 export const ONSETS={f:['fisch','feder'],n:['nase','nun'],l:['loewe'],sch:['schaf','schuh'],b:['ball','baum'],d:['dose','dach'],g:['gabel','gans'],h:['hut']};
 export const CONTEXTS={ending:ENDINGS,onset:ONSETS};
@@ -58,12 +59,13 @@ export const stageById=id=>STAGES.find(s=>s.id===id);
 export const stageNumber=id=>STAGES.findIndex(s=>s.id===id)+1;
 export const levelGoal=stage=>Math.min(Math.round((stage.goal??9)*1.5),stage.targets.length*(stage.id==='letters'?3:2));
 export const skillKey=(stage,target)=>`${stage.group}:${target}`;
-export const label=(stage,target)=>CONTEXTS[stage.mode]?target:ITEMS[target].text;
+export const label=(stage,target)=>CONTEXTS[stage.mode]?target:(FORMS[target]??ITEMS[target]).text;
 export const lettersFor=target=>ITEMS[target].graphemes??[...ITEMS[target].text];
 export const BUILD_UNITS=['a','m','i','o','u','n','l','f','s','sch','t','k','b','d','g','h','ll'];
 export const PHONEMES=Object.fromEntries(['a','m','i','o','u','e'].map(c=>[c,c]).concat(['f','n','l','s','sch','b','d','g','t','k','h'].map(c=>[c,'phoneme_'+c]),[['ll','phoneme_l']]));
 // Whole words remain task cues. A clicked letter always plays only that sound.
 export function choiceFeedback(stage,choice){
+ if(stage.mode==='picture'||FORMS[choice])return {audio:[],text:'Versuch es noch einmal.'};
  const audio=CONTEXTS[stage.mode]||stage.mode==='build'?PHONEMES[choice]:ITEMS[choice]?.audio;
  if(!audio)throw Error('Kein Klang für diese Auswahl.');
  return {audio:[audio],text:stage.group==='sentence'?'Deine Bildauswahl.':`Deine Auswahl: ${stage.mode==='build'||CONTEXTS[stage.mode]?choice:ITEMS[choice].text}`};
