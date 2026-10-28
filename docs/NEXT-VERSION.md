@@ -19,7 +19,8 @@ are historical. Current implementation and exact release checks: PROGRESS.md.
 - [x] Add 244 creative future texts (daily routines, clothes, object states,
       food/drink, roles and different sentence openings) beyond the original bank.
 - [x] All 64 unit/content tests, 279-clip audio audit and ten browser suites pass.
-- [ ] Publish clean source and verify the live bytes; exact status in PROGRESS.md.
+- [x] Clean source and existing gh-pages published; all 313 live HTTPS files
+      match the tested build. Exact commits/results in PROGRESS.md.
 
 Not every draft is integrated. Further new words, animals/people, natural stories,
 role reversals and additional phonics preparation remain future reviewed work.

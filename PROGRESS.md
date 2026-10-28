@@ -1,4 +1,4 @@
-# Phonics Lab v10: varied mixed reading — release checkpoint
+# Phonics Lab v10: varied mixed reading — verified release
 
 Canonical repository: https://github.com/PJendritza/phonics-lab . Feature branch:
 expanded-mixed-reading-v10. Checkout: /workspace/Kalulu-DE. Read AGENTS.md and Git
@@ -44,8 +44,8 @@ publication; earlier planning-only holds below are superseded.
   See docs/MIXED-READING.md and docs/curriculum/CREATIVE-EXTENSIONS-DE.txt.
 - No new engine, runtime dependency, tracking, accounts, cloud sync, paid API,
   scheduling or speech recognition. The media-rich static cap is now 10 MB; actual
-  dirty package is 313 files / 5,920,162 bytes, asset hash 5a2760f53294. All media
-  remain on demand. Clean source metadata adds one byte; exact deployment below.
+  clean published package is 313 files / 5,920,163 bytes, asset hash 5a2760f53294.
+  All media remain on demand; exact deployment below.
 
 ## Executed validation
 
@@ -92,12 +92,33 @@ still needed, especially for new spellings/plurals such as zwei/unter/Mäuse.
 
 ## Publication and next step
 
-Source commit/push and clean deployment verification pending at this checkpoint.
-Publish via existing scripts/publish.py with a fresh external checkout; it now
-requires passing current-hash mixed-reading evidence too. Existing Pages settings
-must not change. Verify every public file over certificate-checked HTTPS with
-scripts/verify_live.py, then record actual source/deployment IDs below. Later
-documentation-only commits are distinct from the deployed source commit.
+Published and verified 2026-10-28:
+
+- App source [1fc7d0d0b39ffa295681a79b9310a938ea256217](https://github.com/PJendritza/phonics-lab/commit/1fc7d0d0b39ffa295681a79b9310a938ea256217), pushed to main and expanded-mixed-reading-v10.
+- Generated gh-pages [2301fb32c5a10ca3a2241ee2d90f4fe887ae0c15](https://github.com/PJendritza/phonics-lab/commit/2301fb32c5a10ca3a2241ee2d90f4fe887ae0c15).
+- Live https://patrickjendritza.com/phonics-lab/?v=10.0.0 ; audio review
+  https://patrickjendritza.com/phonics-lab/audio-review.html?v=10.0.0 .
+- Public BUILD_INFO matches clean v10.0.0 source 1fc7d0d0b39f and asset
+  5a2760f53294. Certificate-verified HTTPS comparison matched all 313 files /
+  5,920,163 bytes at 2026-10-28T18:38:53.148345+00:00.
+
+```sh
+git push -u origin expanded-mixed-reading-v10
+git switch main
+git merge --ff-only expanded-mixed-reading-v10
+git push origin main
+python3 scripts/build.py
+python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v10-1fc7d0d
+python3 scripts/verify_live.py
+```
+
+No Pages settings changed. All five app-hash release gates passed. The additional
+public Chromium smoke test is not claimed for v10: prior release documented the
+cloud Chromium proxy-CA limitation. Current real-browser tests used the packaged
+local site with phone/tablet emulation; public HTTPS bytes were independently
+verified without disabling TLS checks. No physical-phone validation is claimed.
+Later documentation-only commits are distinct from the deployed app source; no
+redeployment is necessary for this release-evidence follow-up.
 
 Next user check: Level 33 (Lesemix), Levels 17/32 for shorter places and 18/19 for
 larger word banks. Resume existing profiles; a partly completed old round keeps
