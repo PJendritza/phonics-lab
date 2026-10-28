@@ -1,3 +1,34 @@
+# v10 implementation: varied mixed reading
+
+The user's latest request authorises building and publishing the next testable
+version with all previously discussed fixes. Earlier planning-only holds below
+are historical. Current implementation and exact release checks: PROGRESS.md.
+
+- [x] Keep 33 numbered levels; expand 18/19 from three to nine words.
+- [x] Expand 17/32 to fourteen place tasks; Level 33 mixes eighty tasks from six
+      families: places, quantities, sizes, possession, actions and two statements.
+- [x] Correct every mouse sentence and full audio to Eine Maus; human models stay
+      byte-identical. Use approved free local Thorsten settings for full/short help.
+- [x] Display sieben as digit 7; quantity+noun understanding uses counted objects.
+- [x] Mix im/am even with secure old im history; rotate families and relations.
+- [x] Actual errors return after two other completed questions, ahead of unseen
+      items in large banks. Preserve quiet wrong pictures and original-model help.
+- [x] Adapt short/full text by family confidence; preserve the exact saved cue,
+      choices, errors, assistance and old goal on reload and curriculum migration.
+- [x] Generate new consistent furniture/action art and check exact object counts.
+- [x] Add 244 creative future texts (daily routines, clothes, object states,
+      food/drink, roles and different sentence openings) beyond the original bank.
+- [x] All 64 unit/content tests, 279-clip audio audit and ten browser suites pass.
+- [ ] Publish clean source and verify the live bytes; exact status in PROGRESS.md.
+
+Not every draft is integrated. Further new words, animals/people, natural stories,
+role reversals and additional phonics preparation remain future reviewed work.
+The current banks are candidates, not a clinically validated course. Speech
+recognition remains out of scope.
+
+---
+Historical planning and previous release records follow.
+
 # Erweiterte Wort- und Satzbank: Entwurf vom 2026-10-28
 
 Auf ausdrücklichen Wunsch wurde eine große deutsche Textsammlung erstellt:

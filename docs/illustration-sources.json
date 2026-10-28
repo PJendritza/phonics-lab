@@ -131,6 +131,36 @@
       ],
       "sha256": "44095c68c04b99a540294a5306816931fffe9769ed3bf780bbec839b08859e9f",
       "prompt": "Make ONE wide 2:1 educational illustration sheet containing EXACTLY TWO equally sized square illustrations side by side, separated only by generous blank space. Match the beautiful warm children's picture-book spot-illustration style of the reference. Flat UNIFORM opaque warm off-white background #fffdf8, absolutely no transparency or coloured matte fringe, no text/letters/numbers. LEFT square: a friendly clearly recognisable YELLOW BUS seen straight from the FRONT, almost square/tall proportions, with side mirrors, two headlights and two visible lower wheels. The VERY LARGE central front windshield is shown as an OPEN EMPTY pale cream cabin, no glass reflections, no passengers, no seats. It must occupy at least 70% of bus width and 55% of bus height so separate object pictures can later be placed INSIDE the cabin and be large and clear. Simple neat framing, few details. RIGHT square: a cosy little HOUSE viewed straight from the front, red pitched roof, clearly shown as an OPEN dollhouse cutaway. The VERY LARGE central rectangular empty pale cream room takes at least 70% of house width and 55% of house height, no furniture, people or objects. Roof and outer walls make it instantly recognisable as a house. Equal scale, both fully inside their respective square cells, ample external margin, strong simple silhouettes, tidy outlines, subtle soft shading, no excessive realism or tiny detail. These are blank background scenes for children to distinguish an object inside the bus/house from an object standing next to it."
+    },
+    {
+      "id": "e",
+      "file": "exec-d393a370-8d0b-42e7-87e4-10bb85ef84f5.png",
+      "sha256": "e688b166d385f14163f8eab7d1d9d4843a52b0e1979138b90686d017b9d5cb1a",
+      "columns": 4,
+      "rows": 3,
+      "cells": [
+        "scene_tisch",
+        "scene_kiste",
+        "scene_bett",
+        "scene_stuhl",
+        "action_maus_wach",
+        "action_maus_schlaeft",
+        "action_schaf_wach",
+        "action_schaf_schlaeft",
+        "action_hase_wach",
+        "action_hase_schlaeft",
+        "action_affe_wach",
+        "action_affe_schlaeft"
+      ],
+      "prompt": "Create one transparent-background sprite contact sheet, exactly a 4-column by 3-row grid, with twelve isolated friendly children's picture-book illustrations, consistent soft gouache / polished simple storybook style, clear recognizable silhouettes and warm gentle colors, no text, no labels, no borders, no numerals, no ground shadows spanning cells. Each object entirely within its own equal square cell, centered with generous transparent margins at least 15%, no overlap between cells. Row 1 left to right: (1) a simple wooden table viewed from front, broad flat clear tabletop at about 40% height and two widely spaced legs so objects underneath will be visible; absolutely empty top and empty under table (2) a large open empty wooden storage box viewed front-on slightly from above, visible empty inner front-facing area, no objects inside (3) a simple empty low bed viewed front-on with wooden frame, plain cream mattress and ample visible space underneath, no pillow covering scene; (4) a simple empty wooden chair front-on with clear seat and open space underneath. Row 2: (1) a cute grey mouse sitting awake, large round ears, pink nose, clearly a mouse with thin tail (2) the identical grey mouse curled up asleep, visibly closed eyes, no Z letters (3) a small cream sheep standing awake, fluffy body, dark small face (4) the identical sheep lying curled asleep, eyes closed. Row 3: (1) a small brown long-eared rabbit sitting awake (2) the identical rabbit asleep curled up with closed eyes and long ears (3) a friendly small brown monkey sitting awake, clearly a monkey with round ears and curved tail (4) the identical monkey curled asleep, eyes closed. Animal pairs must be the same color, markings and recognizable character, same scale; no extra animals, props or decorations. Keep each complete illustration comfortably inside its cell. This asset is for calm German children's reading comprehension, clear on phone screens, not photorealistic.",
+      "rects": {
+        "scene_stuhl": [
+          1144,
+          0,
+          304,
+          362
+        ]
+      }
     }
   ]
 }

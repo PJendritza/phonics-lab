@@ -1,0 +1,263 @@
+PHONICS LAB – KREATIVER ZUSATZPOOL, ENTWURF 2026-10-28
+
+Diese zusätzlichen Texte ergänzen die erste 635-Einträge-Datei. Exakte Dopplungen
+zu deren nummerierten Einträgen wurden ausgeschlossen. Neue Themen: Alltag,
+Kleidung, Essen/Trinken, Objektzustände, andere Satzanfänge und Handlungsrollen.
+Das ist künftiger Inhaltsvorrat; nicht alle Texte sind bereits in v10 spielbar.
+
+Vor der Aktivierung: neue Buchstaben/Schreibmuster und Wörter vorbereiten,
+Grammatik, klare Bilder, Vergleichsantworten und vollständige Audiohilfe prüfen.
+Neue Figuren/Namen müssen vorher bekannt sein. Rechts/links aus wechselnder
+Perspektive, Rechenaufgaben, schwer sichtbare Gefühle und abstrakte Behauptungen
+werden hier nicht als Einstieg verwendet. Sucht/findet und gibt erfordern
+gegebenenfalls zwei Bilder, nicht eine statische unklare Handpose. Essen/Trinken
+und volle/leere Gefäße brauchen sichtbar unterscheidbare Inhalte. Auf/zu sind
+bewusst alltagssprachlich richtige Prädikate, keine Grammatikfehler.
+
+C-001 | Auf und zu | Die Tür ist auf.
+C-002 | Auf und zu | Die Tür ist zu.
+C-003 | Auf und zu | Das Fenster ist auf.
+C-004 | Auf und zu | Das Fenster ist zu.
+C-005 | Auf und zu | Das Buch ist auf.
+C-006 | Auf und zu | Das Buch ist zu.
+C-007 | Auf und zu | Die Kiste ist auf.
+C-008 | Auf und zu | Die Kiste ist zu.
+C-009 | Voll und leer | Das Glas ist voll.
+C-010 | Voll und leer | Das Glas ist leer.
+C-011 | Voll und leer | Der Becher ist voll.
+C-012 | Voll und leer | Der Becher ist leer.
+C-013 | Voll und leer | Die Tasse ist voll.
+C-014 | Voll und leer | Die Tasse ist leer.
+C-015 | Voll und leer | Die Kanne ist voll.
+C-016 | Voll und leer | Die Kanne ist leer.
+C-017 | Voll und leer | Die Dose ist voll.
+C-018 | Voll und leer | Die Dose ist leer.
+C-019 | Voll und leer | Der Korb ist voll.
+C-020 | Voll und leer | Der Korb ist leer.
+C-021 | Alltag und Gesten | Mia winkt.
+C-022 | Alltag und Gesten | Mia lacht.
+C-023 | Alltag und Gesten | Mia putzt die Zähne.
+C-024 | Alltag und Gesten | Mia wäscht die Hände.
+C-025 | Alltag und Gesten | Mia kämmt die Haare.
+C-026 | Alltag und Gesten | Mia hält ein Buch.
+C-027 | Alltag und Gesten | Mia malt eine Sonne.
+C-028 | Alltag und Gesten | Mia malt ein Boot.
+C-029 | Essen und Trinken | Mia isst einen Apfel.
+C-030 | Essen und Trinken | Mia isst eine Birne.
+C-031 | Essen und Trinken | Mia isst eine Banane.
+C-032 | Essen und Trinken | Mia isst ein Brot.
+C-033 | Essen und Trinken | Mia trinkt Wasser.
+C-034 | Essen und Trinken | Mia trinkt Milch.
+C-035 | Kleidung | Mia hat eine rote Mütze.
+C-036 | Kleidung | Mia hat blaue Schuhe.
+C-037 | Kleidung | Mia trägt einen Schal.
+C-038 | Kleidung | Mia trägt eine Jacke.
+C-039 | Kleidung | Mia trägt ein Hemd.
+C-040 | Alltag und Gesten | Tom winkt.
+C-041 | Alltag und Gesten | Tom lacht.
+C-042 | Alltag und Gesten | Tom putzt die Zähne.
+C-043 | Alltag und Gesten | Tom wäscht die Hände.
+C-044 | Alltag und Gesten | Tom kämmt die Haare.
+C-045 | Alltag und Gesten | Tom hält ein Buch.
+C-046 | Alltag und Gesten | Tom malt eine Sonne.
+C-047 | Alltag und Gesten | Tom malt ein Boot.
+C-048 | Essen und Trinken | Tom isst einen Apfel.
+C-049 | Essen und Trinken | Tom isst eine Birne.
+C-050 | Essen und Trinken | Tom isst eine Banane.
+C-051 | Essen und Trinken | Tom isst ein Brot.
+C-052 | Essen und Trinken | Tom trinkt Wasser.
+C-053 | Essen und Trinken | Tom trinkt Milch.
+C-054 | Kleidung | Tom hat eine rote Mütze.
+C-055 | Kleidung | Tom hat blaue Schuhe.
+C-056 | Kleidung | Tom trägt einen Schal.
+C-057 | Kleidung | Tom trägt eine Jacke.
+C-058 | Kleidung | Tom trägt ein Hemd.
+C-059 | Alltag und Gesten | Mama winkt.
+C-060 | Alltag und Gesten | Mama lacht.
+C-061 | Alltag und Gesten | Mama putzt die Zähne.
+C-062 | Alltag und Gesten | Mama wäscht die Hände.
+C-063 | Alltag und Gesten | Mama kämmt die Haare.
+C-064 | Alltag und Gesten | Mama hält ein Buch.
+C-065 | Alltag und Gesten | Mama malt eine Sonne.
+C-066 | Alltag und Gesten | Mama malt ein Boot.
+C-067 | Essen und Trinken | Mama isst einen Apfel.
+C-068 | Essen und Trinken | Mama isst eine Birne.
+C-069 | Essen und Trinken | Mama isst eine Banane.
+C-070 | Essen und Trinken | Mama isst ein Brot.
+C-071 | Essen und Trinken | Mama trinkt Wasser.
+C-072 | Essen und Trinken | Mama trinkt Milch.
+C-073 | Kleidung | Mama hat eine rote Mütze.
+C-074 | Kleidung | Mama hat blaue Schuhe.
+C-075 | Kleidung | Mama trägt einen Schal.
+C-076 | Kleidung | Mama trägt eine Jacke.
+C-077 | Kleidung | Mama trägt ein Hemd.
+C-078 | Alltag und Gesten | Papa winkt.
+C-079 | Alltag und Gesten | Papa lacht.
+C-080 | Alltag und Gesten | Papa putzt die Zähne.
+C-081 | Alltag und Gesten | Papa wäscht die Hände.
+C-082 | Alltag und Gesten | Papa kämmt die Haare.
+C-083 | Alltag und Gesten | Papa hält ein Buch.
+C-084 | Alltag und Gesten | Papa malt eine Sonne.
+C-085 | Alltag und Gesten | Papa malt ein Boot.
+C-086 | Essen und Trinken | Papa isst einen Apfel.
+C-087 | Essen und Trinken | Papa isst eine Birne.
+C-088 | Essen und Trinken | Papa isst eine Banane.
+C-089 | Essen und Trinken | Papa isst ein Brot.
+C-090 | Essen und Trinken | Papa trinkt Wasser.
+C-091 | Essen und Trinken | Papa trinkt Milch.
+C-092 | Kleidung | Papa hat eine rote Mütze.
+C-093 | Kleidung | Papa hat blaue Schuhe.
+C-094 | Kleidung | Papa trägt einen Schal.
+C-095 | Kleidung | Papa trägt eine Jacke.
+C-096 | Kleidung | Papa trägt ein Hemd.
+C-097 | Alltag und Gesten | Oma winkt.
+C-098 | Alltag und Gesten | Oma lacht.
+C-099 | Alltag und Gesten | Oma putzt die Zähne.
+C-100 | Alltag und Gesten | Oma wäscht die Hände.
+C-101 | Alltag und Gesten | Oma kämmt die Haare.
+C-102 | Alltag und Gesten | Oma hält ein Buch.
+C-103 | Alltag und Gesten | Oma malt eine Sonne.
+C-104 | Alltag und Gesten | Oma malt ein Boot.
+C-105 | Essen und Trinken | Oma isst einen Apfel.
+C-106 | Essen und Trinken | Oma isst eine Birne.
+C-107 | Essen und Trinken | Oma isst eine Banane.
+C-108 | Essen und Trinken | Oma isst ein Brot.
+C-109 | Essen und Trinken | Oma trinkt Wasser.
+C-110 | Essen und Trinken | Oma trinkt Milch.
+C-111 | Kleidung | Oma hat eine rote Mütze.
+C-112 | Kleidung | Oma hat blaue Schuhe.
+C-113 | Kleidung | Oma trägt einen Schal.
+C-114 | Kleidung | Oma trägt eine Jacke.
+C-115 | Kleidung | Oma trägt ein Hemd.
+C-116 | Alltag und Gesten | Opa winkt.
+C-117 | Alltag und Gesten | Opa lacht.
+C-118 | Alltag und Gesten | Opa putzt die Zähne.
+C-119 | Alltag und Gesten | Opa wäscht die Hände.
+C-120 | Alltag und Gesten | Opa kämmt die Haare.
+C-121 | Alltag und Gesten | Opa hält ein Buch.
+C-122 | Alltag und Gesten | Opa malt eine Sonne.
+C-123 | Alltag und Gesten | Opa malt ein Boot.
+C-124 | Essen und Trinken | Opa isst einen Apfel.
+C-125 | Essen und Trinken | Opa isst eine Birne.
+C-126 | Essen und Trinken | Opa isst eine Banane.
+C-127 | Essen und Trinken | Opa isst ein Brot.
+C-128 | Essen und Trinken | Opa trinkt Wasser.
+C-129 | Essen und Trinken | Opa trinkt Milch.
+C-130 | Kleidung | Opa hat eine rote Mütze.
+C-131 | Kleidung | Opa hat blaue Schuhe.
+C-132 | Kleidung | Opa trägt einen Schal.
+C-133 | Kleidung | Opa trägt eine Jacke.
+C-134 | Kleidung | Opa trägt ein Hemd.
+C-135 | Fahrzeuge und Orte | Das Auto ist vor dem Haus.
+C-136 | Fahrzeuge und Orte | Das Auto ist hinter dem Haus.
+C-137 | Fahrzeuge und Orte | Das Auto ist neben dem Haus.
+C-138 | Fahrzeuge und Orte | Der Bus ist vor dem Haus.
+C-139 | Fahrzeuge und Orte | Der Bus ist hinter dem Haus.
+C-140 | Fahrzeuge und Orte | Der Bus ist neben dem Haus.
+C-141 | Fahrzeuge und Orte | Das Boot ist vor dem Haus.
+C-142 | Fahrzeuge und Orte | Das Boot ist hinter dem Haus.
+C-143 | Fahrzeuge und Orte | Das Boot ist neben dem Haus.
+C-144 | Fahrzeuge und Orte | Das Fahrrad ist vor dem Haus.
+C-145 | Fahrzeuge und Orte | Das Fahrrad ist hinter dem Haus.
+C-146 | Fahrzeuge und Orte | Das Fahrrad ist neben dem Haus.
+C-147 | Satzanfänge variieren | Auf dem Tisch liegt ein Buch.
+C-148 | Satzanfänge variieren | Auf dem Tisch liegt ein Ball.
+C-149 | Satzanfänge variieren | Auf dem Tisch liegt ein Hut.
+C-150 | Satzanfänge variieren | Auf dem Tisch liegt ein Schuh.
+C-151 | Satzanfänge variieren | Unter dem Tisch liegt ein Buch.
+C-152 | Satzanfänge variieren | Unter dem Tisch liegt ein Ball.
+C-153 | Satzanfänge variieren | Unter dem Tisch liegt ein Hut.
+C-154 | Satzanfänge variieren | Unter dem Tisch liegt ein Schuh.
+C-155 | Satzanfänge variieren | Neben der Kiste liegt ein Buch.
+C-156 | Satzanfänge variieren | Neben der Kiste liegt ein Ball.
+C-157 | Satzanfänge variieren | Neben der Kiste liegt ein Hut.
+C-158 | Satzanfänge variieren | Neben der Kiste liegt ein Schuh.
+C-159 | Satzanfänge variieren | Auf dem Stuhl liegt ein Buch.
+C-160 | Satzanfänge variieren | Auf dem Stuhl liegt ein Ball.
+C-161 | Satzanfänge variieren | Auf dem Stuhl liegt ein Hut.
+C-162 | Satzanfänge variieren | Auf dem Stuhl liegt ein Schuh.
+C-163 | Suchen und Tragen | Mia sucht einen Ball.
+C-164 | Suchen und Tragen | Mia sucht einen Schuh.
+C-165 | Suchen und Tragen | Mia sucht eine Tasche.
+C-166 | Suchen und Tragen | Mia sucht ein Buch.
+C-167 | Suchen und Tragen | Mia findet einen Ball.
+C-168 | Suchen und Tragen | Mia findet einen Schuh.
+C-169 | Suchen und Tragen | Mia findet eine Tasche.
+C-170 | Suchen und Tragen | Mia findet ein Buch.
+C-171 | Suchen und Tragen | Mia trägt einen Ball.
+C-172 | Suchen und Tragen | Mia trägt einen Schuh.
+C-173 | Suchen und Tragen | Mia trägt eine Tasche.
+C-174 | Suchen und Tragen | Mia trägt ein Buch.
+C-175 | Suchen und Tragen | Tom sucht einen Ball.
+C-176 | Suchen und Tragen | Tom sucht einen Schuh.
+C-177 | Suchen und Tragen | Tom sucht eine Tasche.
+C-178 | Suchen und Tragen | Tom sucht ein Buch.
+C-179 | Suchen und Tragen | Tom findet einen Ball.
+C-180 | Suchen und Tragen | Tom findet einen Schuh.
+C-181 | Suchen und Tragen | Tom findet eine Tasche.
+C-182 | Suchen und Tragen | Tom findet ein Buch.
+C-183 | Suchen und Tragen | Tom trägt einen Ball.
+C-184 | Suchen und Tragen | Tom trägt einen Schuh.
+C-185 | Suchen und Tragen | Tom trägt eine Tasche.
+C-186 | Suchen und Tragen | Tom trägt ein Buch.
+C-187 | Suchen und Tragen | Oma sucht einen Ball.
+C-188 | Suchen und Tragen | Oma sucht einen Schuh.
+C-189 | Suchen und Tragen | Oma sucht eine Tasche.
+C-190 | Suchen und Tragen | Oma sucht ein Buch.
+C-191 | Suchen und Tragen | Oma findet einen Ball.
+C-192 | Suchen und Tragen | Oma findet einen Schuh.
+C-193 | Suchen und Tragen | Oma findet eine Tasche.
+C-194 | Suchen und Tragen | Oma findet ein Buch.
+C-195 | Suchen und Tragen | Oma trägt einen Ball.
+C-196 | Suchen und Tragen | Oma trägt einen Schuh.
+C-197 | Suchen und Tragen | Oma trägt eine Tasche.
+C-198 | Suchen und Tragen | Oma trägt ein Buch.
+C-199 | Tiere im Alltag | Die Maus schläft im Haus.
+C-200 | Tiere im Alltag | Die Maus sitzt vor dem Haus.
+C-201 | Tiere im Alltag | Die Maus sitzt neben dem Korb.
+C-202 | Tiere im Alltag | Die Maus hat einen Ball.
+C-203 | Tiere im Alltag | Die Katze schläft im Haus.
+C-204 | Tiere im Alltag | Die Katze sitzt vor dem Haus.
+C-205 | Tiere im Alltag | Die Katze sitzt neben dem Korb.
+C-206 | Tiere im Alltag | Der Hund schläft im Haus.
+C-207 | Tiere im Alltag | Der Hund sitzt vor dem Haus.
+C-208 | Tiere im Alltag | Der Hund sitzt neben dem Korb.
+C-209 | Tiere im Alltag | Der Hase schläft im Haus.
+C-210 | Tiere im Alltag | Der Hase sitzt vor dem Haus.
+C-211 | Tiere im Alltag | Der Hase sitzt neben dem Korb.
+C-212 | Tiere im Alltag | Der Hase hat einen Ball.
+C-213 | Geben und Rollen | Mia gibt Tom einen Ball.
+C-214 | Geben und Rollen | Mia gibt Tom ein Buch.
+C-215 | Geben und Rollen | Mia gibt Tom eine Tasse.
+C-216 | Geben und Rollen | Tom gibt Mia einen Ball.
+C-217 | Geben und Rollen | Tom gibt Mia ein Buch.
+C-218 | Geben und Rollen | Tom gibt Mia eine Tasse.
+C-219 | Geben und Rollen | Mama gibt Papa einen Ball.
+C-220 | Geben und Rollen | Mama gibt Papa ein Buch.
+C-221 | Geben und Rollen | Mama gibt Papa eine Tasse.
+C-222 | Geben und Rollen | Papa gibt Mama einen Ball.
+C-223 | Geben und Rollen | Papa gibt Mama ein Buch.
+C-224 | Geben und Rollen | Papa gibt Mama eine Tasse.
+C-225 | Weitere konkrete Szenen | Es regnet.
+C-226 | Weitere konkrete Szenen | Es schneit.
+C-227 | Weitere konkrete Szenen | Die Sonne scheint.
+C-228 | Weitere konkrete Szenen | Das Kind hält einen Schirm.
+C-229 | Weitere konkrete Szenen | Die Ente ist im Wasser.
+C-230 | Weitere konkrete Szenen | Der Fisch ist im Wasser.
+C-231 | Weitere konkrete Szenen | Das Boot ist auf dem Wasser.
+C-232 | Weitere konkrete Szenen | Der Vogel sitzt auf dem Ast.
+C-233 | Weitere konkrete Szenen | Der Hund hebt die Pfote.
+C-234 | Weitere konkrete Szenen | Das Kind hebt die Hand.
+C-235 | Weitere konkrete Szenen | Die Katze liegt im Korb.
+C-236 | Weitere konkrete Szenen | Der Schuh ist im Korb.
+C-237 | Weitere konkrete Szenen | Die Blume ist im Topf.
+C-238 | Weitere konkrete Szenen | Das Brot liegt auf dem Teller.
+C-239 | Weitere konkrete Szenen | Der Apfel ist in der Schale.
+C-240 | Weitere konkrete Szenen | Das Buch liegt auf dem Sofa.
+C-241 | Weitere konkrete Szenen | Die Puppe sitzt auf dem Stuhl.
+C-242 | Weitere konkrete Szenen | Eine Maus sitzt vor der Kiste.
+C-243 | Weitere konkrete Szenen | Der Hut ist auf dem Kopf.
+C-244 | Weitere konkrete Szenen | Die Mütze ist auf dem Kopf.
+
+Umfang: 244 zusätzliche unterschiedliche Texte. Keine App-Integration
+dieser gesamten Liste. Freigabe jeweils in überprüften Aufgabenfamilien.

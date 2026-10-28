@@ -41,6 +41,16 @@
       "height": 887,
       "bytes": 84098,
       "aiGenerated": true
+    },
+    {
+      "id": "e",
+      "src": "images/atlas-e-3249bb89ee79.webp",
+      "sha256": "3249bb89ee79521722216d35226cff39fa29776ab57d651f9c35a61d2bf7b4ff",
+      "sourceSha256": "e688b166d385f14163f8eab7d1d9d4843a52b0e1979138b90686d017b9d5cb1a",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 353464,
+      "aiGenerated": true
     }
   ]
 }

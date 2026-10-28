@@ -1,14 +1,14 @@
 {
   "status": "passed",
-  "version": "9.0.0",
-  "assetVersion": "f5464eac2222",
+  "version": "10.0.0",
+  "assetVersion": "5a2760f53294",
   "checks": [
     "Successful word learners see four same-initial, one-letter alternatives. Invented choices remain silent, survive exact reload, trigger correct-model teaching after two mistakes, award no extra points and lower the next task after an error.",
     "Wrong pictures do not read their labels or unrelated sentences. Only the original target is read during the existing two-error teaching step; all AI image files decode.",
     "Common sentence words occur at Level 15, short phrase comprehension at 17; levels 1–14 keep their numbers and all saved IDs remain valid.",
-    "320x568: short phrases/basic sentences need subject and relation; advanced sentences also need location. All choices remain visible and every AI scene image decodes.",
-    "390x844: short phrases/basic sentences need subject and relation; advanced sentences also need location. All choices remain visible and every AI scene image decodes.",
-    "768x1024: short phrases/basic sentences need subject and relation; advanced sentences also need location. All choices remain visible and every AI scene image decodes.",
+    "320x568: phrase and mixed-task meaning dimensions have real contrasting choices. All choices remain visible and every AI scene image decodes.",
+    "390x844: phrase and mixed-task meaning dimensions have real contrasting choices. All choices remain visible and every AI scene image decodes.",
+    "768x1024: phrase and mixed-task meaning dimensions have real contrasting choices. All choices remain visible and every AI scene image decodes.",
     "An exact v8 noun-only saved question and its 18-question goal resume, all old rewards survive, and subsequent questions use real relation contrasts without inheriting old noun-only mastery."
   ],
   "pageErrors": [],

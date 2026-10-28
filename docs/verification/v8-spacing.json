@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "version": "9.0.0",
-  "assetVersion": "f5464eac2222",
+  "version": "10.0.0",
+  "assetVersion": "5a2760f53294",
   "checks": [
     "Five named groups retain all current stable IDs and numbers; activity labels distinguish listening, independent word reading, phrase and sentence understanding.",
-    "A real wrong-picture attempt returns after two other questions; spacing survives reload. A new three-word round completes at its full six-question goal.",
+    "A real wrong-picture attempt returns after two other questions; spacing survives reload. A new nine-word round completes at its full eighteen-question goal.",
     "Legacy profiles acquire real due reviews without resetting progress. Review keeps the higher forward cursor, survives pause/reload without double awards, schedules secure words for the next day and restores the exact paused sentence question.",
     "Existing unfinished 18-question goals are not shortened or reset.",
     "320x568: continue/review above fold; grouped numbered map has no horizontal overflow.",

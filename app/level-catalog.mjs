@@ -22,8 +22,8 @@ const TITLES={
  au_listen:'au: Wörter hören und erkennen',au_read:'au: Wörter selbst lesen',
  ie_listen:'ie: Wörter hören und erkennen',ie_read:'ie: Wörter selbst lesen',
  long_vowels_listen:'ee und oo: Wörter hören und erkennen',long_vowels_read:'ee und oo: Wörter selbst lesen',
- sentence_words:'Häufige kleine Wörter erkennen',phrase_place:'Wortgruppen verstehen: im oder am?',first_sentences:'Kurze Sätze verstehen: im oder am?',
- sentence_meaning:'Sätze verstehen: Was ist wo?',
+ sentence_words:'Häufige kleine Wörter erkennen',phrase_place:'Wortgruppen: Dinge und Orte',first_sentences:'Kurze Sätze: Wo ist das Ding?',
+ sentence_meaning:'Lesemix: Orte, Mengen und Geschichten',
 };
 export function describeLevel(stage,index){
  const chapter=CHAPTERS.find(c=>index+1>=c.from&&index+1<=c.to);

@@ -33,7 +33,7 @@ def main():
  from piper import PiperVoice,SynthesisConfig
  voice=PiperVoice.load(str(args.model));config=SynthesisConfig(length_scale=settings['lengthScale'],noise_scale=settings['noiseScale'],noise_w_scale=settings['noiseWScale'])
  instructions=json.loads((ROOT/'scripts/reading-instructions.json').read_text())
- sentences=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import {SENTENCES,PHRASES} from './app/reading-data.mjs'; console.log(JSON.stringify(Object.fromEntries(Object.entries({...SENTENCES,...PHRASES}).map(([id,v])=>[id,v.text]))));"],cwd=ROOT,text=True))
+ sentences=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import {SENTENCES,PHRASES} from './app/reading-data.mjs'; console.log(JSON.stringify(Object.fromEntries(Object.entries({...SENTENCES,...PHRASES}).flatMap(([id,v])=>[[id,v.text],...(v.shortAudio?[[v.shortAudio,v.shortText]]:[])]))));"],cwd=ROOT,text=True))
  for id,text in {**instructions,**sentences}.items():
   out=ROOT/'app/audio'/(id+'.mp3');old=clips.get(id)
   if not(old and old['label']==text and old.get('generation')==settings and out.exists() and sha(out)==old['sha256']):

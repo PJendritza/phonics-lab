@@ -1,3 +1,16 @@
+# v10 artwork addition
+
+Atlas E adds empty furniture and eight paired animal awake/sleep images. Five
+sheets now total 1,232,726 WebP bytes; 54 sprites. Source prompts/hashes in
+illustration-sources.json. The chair uses a restricted display rectangle to exclude
+a neighboring bed leg. Bed art is not active because under-bed clearance was not
+clear enough. Number words now show a numeral; quantity+noun scenes use exact
+object counts. On-table sprites are aligned with the surface, not floating above.
+The media budget is now 10 MB; app images/audio load on demand. Historical v9
+artwork description below is superseded for these changes.
+
+---
+
 # Illustration assets
 
 The user requested simple attractive AI-generated pictures to replace the earlier

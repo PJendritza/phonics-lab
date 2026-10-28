@@ -1,7 +1,7 @@
 {
   "word_intro": "Hör das ganze Wort. Welches geschriebene Wort passt?",
   "picture_read": "Lies das Wort selbst. Tippe auf das passende Bild. Wenn du Hilfe brauchst, tippe auf den Lautsprecher.",
-  "long_words": "In Sofa und Salami klingt das s weich. Hör das Wort und lies die Silben der Reihe nach.",
+  "long_words": "Hör genau hin. Finde das Wort, das du hörst. Achte auf das ganze Wort.",
   "soft_words": "Hör auf das Ende von Tomate und Banane. Finde genau das Wort, das du hörst.",
   "double_letters": "Vor zwei gleichen Konsonanten klingt der Vokal meist kurz. Hör das Wort und finde es.",
   "pattern_ei": "Die Buchstaben e und i gehören hier zusammen, wie in Eis. Hör das Wort und finde es.",
@@ -11,5 +11,6 @@
   "sentence_words": "Hör dir das kleine Wort an. Finde genau dieses Wort. Diese Wörter helfen dir beim Lesen von Sätzen.",
   "sentence_read": "Lies den ganzen Satz selbst. Welches Bild passt dazu? Der Lautsprecher hilft dir beim Lesen.",
   "sentence_where": "Lies den ganzen Satz. Welches Ding ist wo? Achte auch auf die kleinen Wörter.",
-  "phrase_read": "Lies die Wörter selbst. Ist das Ding im Bus oder am Bus? Wähle das passende Bild."
+  "phrase_read": "Lies die Wörter selbst. Achte auf das Ding und seinen Platz. Wähle das passende Bild.",
+  "meaning_mix": "Lies selbst und finde das passende Bild. Achte genau auf die kleinen Wörter, die Mengen und die Handlung."
 }

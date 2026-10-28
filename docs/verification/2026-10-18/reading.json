@@ -1,14 +1,14 @@
 {
   "status": "passed",
-  "version": "9.0.0",
-  "assetVersion": "f5464eac2222",
+  "version": "10.0.0",
+  "assetVersion": "5a2760f53294",
   "checks": [
     "Independent word reading plays only its generic instruction, displays the written word and label-free picture choices, then advances silently with the existing chime.",
     "Optional syllable help preserves the word spelling and answer order; assistance survives reload and exact resume. Explicit read-aloud plays the human word and cannot count as independent mastery.",
     "Optional grapheme highlighting keeps ei together without synthesizing an isolated phoneme.",
     "Wrong pictures stay silent and keep the written task and tile positions; they never read an unrelated label. Two errors trigger one-choice teaching, then the original choices; guided taps award nothing extra.",
     "Every appended level starts with choices and executes a real answer/automatic transition, using real MP3s for all listening levels.",
-    "Sentences show text without reading it aloud; choices contain same-object/different-location and same-location/different-object contrasts. Optional full-sentence support plays; the complete round goal earns one flower.",
+    "Sentences or shorter forms show text without reading it aloud; four choices contrast the actual task family. Optional full-sentence support plays; the complete round goal earns one flower.",
     "320x568 more_words_read: four stationary picture choices visible without horizontal overflow",
     "320x568 sentence_meaning: four stationary picture choices visible without horizontal overflow",
     "390x844 more_words_read: four stationary picture choices visible without horizontal overflow",

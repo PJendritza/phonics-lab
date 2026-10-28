@@ -1,0 +1,311 @@
+PHONICS LAB v10 – ACTIVE MIXED READING TASKS
+80 semantic targets; short/full forms preserve the same picture meaning.
+The draft banks are larger; this file lists the actual integrated mixed content.
+
+ball_im_bus | place
+Ein Ball ist im Bus.
+Short: Ball im Bus
+
+ball_am_bus | place
+Ein Ball ist am Bus.
+Short: Ball am Bus
+
+ball_im_haus | place
+Ein Ball ist im Haus.
+Short: Ball im Haus
+
+ball_am_haus | place
+Ein Ball ist am Haus.
+Short: Ball am Haus
+
+ball_am_baum | place
+Ein Ball ist am Baum.
+Short: Ball am Baum
+
+ball_auf_tisch | place
+Ein Ball ist auf dem Tisch.
+Short: Ball auf dem Tisch
+
+ball_unter_tisch | place
+Ein Ball ist unter dem Tisch.
+Short: Ball unter dem Tisch
+
+ball_in_kiste | place
+Ein Ball ist in der Kiste.
+Short: Ball in der Kiste
+
+ball_neben_kiste | place
+Ein Ball ist neben der Kiste.
+Short: Ball neben der Kiste
+
+ball_auf_stuhl | place
+Ein Ball ist auf dem Stuhl.
+Short: Ball auf dem Stuhl
+
+ball_unter_stuhl | place
+Ein Ball ist unter dem Stuhl.
+Short: Ball unter dem Stuhl
+
+hut_im_bus | place
+Ein Hut ist im Bus.
+Short: Hut im Bus
+
+hut_am_bus | place
+Ein Hut ist am Bus.
+Short: Hut am Bus
+
+hut_im_haus | place
+Ein Hut ist im Haus.
+Short: Hut im Haus
+
+hut_am_haus | place
+Ein Hut ist am Haus.
+Short: Hut am Haus
+
+hut_am_baum | place
+Ein Hut ist am Baum.
+Short: Hut am Baum
+
+hut_auf_tisch | place
+Ein Hut ist auf dem Tisch.
+Short: Hut auf dem Tisch
+
+hut_unter_tisch | place
+Ein Hut ist unter dem Tisch.
+Short: Hut unter dem Tisch
+
+hut_in_kiste | place
+Ein Hut ist in der Kiste.
+Short: Hut in der Kiste
+
+hut_neben_kiste | place
+Ein Hut ist neben der Kiste.
+Short: Hut neben der Kiste
+
+hut_auf_stuhl | place
+Ein Hut ist auf dem Stuhl.
+Short: Hut auf dem Stuhl
+
+hut_unter_stuhl | place
+Ein Hut ist unter dem Stuhl.
+Short: Hut unter dem Stuhl
+
+maus_im_bus | place
+Eine Maus ist im Bus.
+Short: Maus im Bus
+
+maus_am_bus | place
+Eine Maus ist am Bus.
+Short: Maus am Bus
+
+maus_im_haus | place
+Eine Maus ist im Haus.
+Short: Maus im Haus
+
+maus_am_haus | place
+Eine Maus ist am Haus.
+Short: Maus am Haus
+
+maus_am_baum | place
+Eine Maus ist am Baum.
+Short: Maus am Baum
+
+maus_auf_tisch | place
+Eine Maus ist auf dem Tisch.
+Short: Maus auf dem Tisch
+
+maus_unter_tisch | place
+Eine Maus ist unter dem Tisch.
+Short: Maus unter dem Tisch
+
+maus_in_kiste | place
+Eine Maus ist in der Kiste.
+Short: Maus in der Kiste
+
+maus_neben_kiste | place
+Eine Maus ist neben der Kiste.
+Short: Maus neben der Kiste
+
+maus_auf_stuhl | place
+Eine Maus ist auf dem Stuhl.
+Short: Maus auf dem Stuhl
+
+maus_unter_stuhl | place
+Eine Maus ist unter dem Stuhl.
+Short: Maus unter dem Stuhl
+
+schaf_im_bus | place
+Ein Schaf ist im Bus.
+Short: Schaf im Bus
+
+schaf_am_bus | place
+Ein Schaf ist am Bus.
+Short: Schaf am Bus
+
+schaf_im_haus | place
+Ein Schaf ist im Haus.
+Short: Schaf im Haus
+
+schaf_am_haus | place
+Ein Schaf ist am Haus.
+Short: Schaf am Haus
+
+schaf_am_baum | place
+Ein Schaf ist am Baum.
+Short: Schaf am Baum
+
+schaf_auf_tisch | place
+Ein Schaf ist auf dem Tisch.
+Short: Schaf auf dem Tisch
+
+schaf_unter_tisch | place
+Ein Schaf ist unter dem Tisch.
+Short: Schaf unter dem Tisch
+
+schaf_in_kiste | place
+Ein Schaf ist in der Kiste.
+Short: Schaf in der Kiste
+
+schaf_neben_kiste | place
+Ein Schaf ist neben der Kiste.
+Short: Schaf neben der Kiste
+
+schaf_auf_stuhl | place
+Ein Schaf ist auf dem Stuhl.
+Short: Schaf auf dem Stuhl
+
+schaf_unter_stuhl | place
+Ein Schaf ist unter dem Stuhl.
+Short: Schaf unter dem Stuhl
+
+count_ball_1 | quantity
+Hier ist ein Ball.
+Short: Ein Ball
+
+count_ball_2 | quantity
+Hier sind zwei Bälle.
+Short: Zwei Bälle
+
+count_ball_3 | quantity
+Hier sind drei Bälle.
+Short: Drei Bälle
+
+count_hut_1 | quantity
+Hier ist ein Hut.
+Short: Ein Hut
+
+count_hut_2 | quantity
+Hier sind zwei Hüte.
+Short: Zwei Hüte
+
+count_hut_3 | quantity
+Hier sind drei Hüte.
+Short: Drei Hüte
+
+count_maus_1 | quantity
+Hier ist eine Maus.
+Short: Eine Maus
+
+count_maus_2 | quantity
+Hier sind zwei Mäuse.
+Short: Zwei Mäuse
+
+count_maus_3 | quantity
+Hier sind drei Mäuse.
+Short: Drei Mäuse
+
+count_schaf_1 | quantity
+Hier ist ein Schaf.
+Short: Ein Schaf
+
+count_schaf_2 | quantity
+Hier sind zwei Schafe.
+Short: Zwei Schafe
+
+count_schaf_3 | quantity
+Hier sind drei Schafe.
+Short: Drei Schafe
+
+size_ball_gross | size
+Der Ball ist groß.
+Short: Ein großer Ball
+
+size_ball_klein | size
+Der Ball ist klein.
+Short: Ein kleiner Ball
+
+size_hut_gross | size
+Der Hut ist groß.
+Short: Ein großer Hut
+
+size_hut_klein | size
+Der Hut ist klein.
+Short: Ein kleiner Hut
+
+size_maus_gross | size
+Die Maus ist groß.
+Short: Eine große Maus
+
+size_maus_klein | size
+Die Maus ist klein.
+Short: Eine kleine Maus
+
+size_schaf_gross | size
+Das Schaf ist groß.
+Short: Ein großes Schaf
+
+size_schaf_klein | size
+Das Schaf ist klein.
+Short: Ein kleines Schaf
+
+has_maus_ball | possession
+Die Maus hat einen Ball.
+Short: Maus mit Ball
+
+has_maus_hut | possession
+Die Maus hat einen Hut.
+Short: Maus mit Hut
+
+has_schaf_ball | possession
+Das Schaf hat einen Ball.
+Short: Schaf mit Ball
+
+has_schaf_hut | possession
+Das Schaf hat einen Hut.
+Short: Schaf mit Hut
+
+action_maus_wach | action
+Die Maus sitzt.
+
+action_maus_schlaeft | action
+Die Maus schläft.
+
+action_schaf_wach | action
+Das Schaf steht.
+
+action_schaf_schlaeft | action
+Das Schaf schläft.
+
+action_hase_wach | action
+Der Hase sitzt.
+
+action_hase_schlaeft | action
+Der Hase schläft.
+
+action_affe_wach | action
+Der Affe sitzt.
+
+action_affe_schlaeft | action
+Der Affe schläft.
+
+pair_oben_oben | pair
+Der Ball ist oben. Der Hut ist oben.
+
+pair_oben_unten | pair
+Der Ball ist oben. Der Hut ist unten.
+
+pair_unten_oben | pair
+Der Ball ist unten. Der Hut ist oben.
+
+pair_unten_unten | pair
+Der Ball ist unten. Der Hut ist unten.

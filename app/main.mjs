@@ -66,7 +66,7 @@ function readingText(item,stage,help){
 }
 function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const p=progress(),session=p.pending;if(!session){home();return;}
- const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item=ITEMS[r.target],letters=word?lettersFor(r.target):[],finished=r.solved;
+ const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item={...ITEMS[r.target],...(r.cue===ITEMS[r.target]?.shortAudio?{text:ITEMS[r.target].shortText}:{})},letters=word?lettersFor(r.target):[],finished=r.solved;
  const feedback=feedbackCorrect===false&&selected?choiceFeedback(s,selected):null;
  const teaching=r.help==='show'||r.help==='ack',expected=word?letters[r.position]?.toLowerCase():r.target;
  const title=teaching?'Schau und höre.':picture?'Welches Bild passt?':word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?';

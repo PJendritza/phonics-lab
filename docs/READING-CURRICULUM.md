@@ -1,3 +1,13 @@
+# Current v10 reading extension
+
+See [MIXED-READING.md](MIXED-READING.md) for the active v10 curriculum and limits:
+levels 17/32 have 14 place targets; 18/19 nine words; 33 eighty mixed tasks in six
+families. New contextual vocabulary is declared, not claimed already taught.
+Original numbers/IDs and unfinished goals remain. The v9 sequence below is a
+historical explanation and is superseded where v10 changes the content.
+
+---
+
 # From phonics to meaning
 
 Release 9 has 33 levels; the first fourteen keep their IDs, numbers and saved

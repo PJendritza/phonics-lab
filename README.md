@@ -3,9 +3,9 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=9.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=9.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=10.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=10.0.0)**
 
-The 33 numbered levels now have clearer names and five groups. Labels distinguish
+The 33 numbered levels have five groups; v10 expands Level 18/19 to nine words and Level 33 to 80 mixed tasks. Labels distinguish
 listening/spelling recognition, independent word reading and sentence understanding.
 Spaced practice interleaves mistakes with other questions, reduces padding of
 already-secure words and saves expanding review intervals. A separate **↻ Wiederholen**
@@ -26,12 +26,14 @@ vocabulary and spelling patterns before children read those words themselves.
 Reading levels **do not speak the answer first**. Children read a word or sentence
 and choose its picture. The optional speaker reads it aloud; syllable help can
 highlight chunks. Both count as assistance, rather than independent mastery.
+Level 33 mixes places, quantities, sizes, actions, possession and two statements. Short/full text adapts to family confidence; real errors return before the unseen pool is exhausted. [Rules and limits](docs/MIXED-READING.md).
+
 Level 15 introduces common sentence words; Level 17 adds short im/am phrases. Confident word listeners get same-initial alternatives with one-letter changes, including silent invented comparison forms. Sentence choices contrast object, im/am relation and location: “Ein Ball ist im Bus.” versus
 “Ein Ball ist im Haus.” versus “Ein Hut ist im Bus.”
 [Lesson sequence and limits](docs/READING-CURRICULUM.md).
 
-**76 human recordings**, **11 licensed Kalulu consonant clips**, 22 full-sentence
-instructions and 26 optional sentence/phrase readings (including six legacy clips). Piper Thorsten High uses the
+**76 human recordings**, **11 licensed Kalulu consonant clips**, 23 full-sentence
+instructions and 168 optional full/short sentence/phrase readings (including six legacy clips). Piper Thorsten High uses the
 approved length_scale 1.5 and added 0.3-second sentence pause; human words are not
 synthesised. After two errors, brief one-choice teaching restores the original
 choices without extra rewards. Independent accuracy adjusts two/three/four choices.
@@ -51,7 +53,7 @@ Python 3 and Node 18+; no runtime dependencies or bundler. Development:
 
 ```sh
 python3 -m http.server 8070 --directory app
-node --test tests/learning.test.mjs tests/content.test.mjs tests/reading.test.mjs tests/spacing.test.mjs tests/close-reading.test.mjs
+node --test tests/*.test.mjs
 python3 scripts/build.py
 ```
 
@@ -72,6 +74,7 @@ node tests/choice-help.cjs
 node tests/reading.cjs
 node tests/spacing.cjs
 node tests/close-reading.cjs
+node tests/mixed-reading.cjs
 python3 scripts/audit_audio.py
 ```
 
@@ -96,7 +99,7 @@ Screenshots/builds stay outside Git. [Executed results](PROGRESS.md).
 
 The name is independent of garden/space or other future activity themes. The old
 Godot prototype remains in tagged Git history. No engines/models/generated bundles
-belong on the source branch. The illustrated complete package stays below 4 MB; audio loads on demand.
+belong on the source branch. The illustrated complete package stays below 10 MB; audio loads on demand.
 
 ## Publish the existing site
 

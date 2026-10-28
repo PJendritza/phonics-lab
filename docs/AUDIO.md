@@ -1,3 +1,15 @@
+# Current v10 audio checkpoint
+
+279 clips: 76 human + 11 isolated phones + 23 guides + 168 optional sentence/phrase
+full/short recordings + one chime. All human and isolated-phoneme hashes are
+unchanged. Four Maus full utterances now say Eine Maus; long_words and phrase_read
+guides change; 143 clips added. Approved free local Thorsten High length_scale1.5
+and 0.3 s sentence pause remain. Exact IDs/text/hashes: app/audio/manifest.json.
+See MIXED-READING.md and PROGRESS.md for generation, tests and limits. Technical
+decode checks do not certify pronunciation. Historical checkpoints follow.
+
+---
+
 # Audio: human German targets and complete-sentence instructions
 
 76 complete human German target recordings, 11 isolated Kalulu phonics feedback clips, 22 full-sentence Piper instructions, 26 optional sentence/phrase readings (including six legacy sentence clips) and one

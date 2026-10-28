@@ -46,18 +46,18 @@ test('successful retrievals expand calendar spacing; an error/assistance resets 
 test('legacy secure words start with a genuine delayed review, not immediate repeat requests',()=>{
  let p=freshProgress();const stage=stageById('long_words_read');
  for(const t of stage.targets)p.skills[skillKey(stage,t)]=secure();p.stages[stage.id]={completed:2,passed:true,best:1};
- assert.equal(duePractice(p,NOW)[0].targets.length,3);
- p=startReview(p,stage.id,rng,NOW);assert.equal(p.pending.total,3);p=finish(p);
+ assert.equal(duePractice(p,NOW)[0].targets.length,stage.targets.length);
+ p=startReview(p,stage.id,rng,NOW);assert.equal(p.pending.total,stage.targets.length);p=finish(p);
  assert.deepEqual(duePractice(p,NOW),[]);assert.equal(p.spacing.reviews['meaning:sofa'].due,NOW+DAY);
 });
 test('new rounds stop padding already-secure words; saved unfinished totals remain exact',()=>{
  let p=freshProgress();const stage=stageById('long_words_read');
- assert.equal(startSession(p,stage.id,rng,NOW).pending.total,6);
+ assert.equal(startSession(p,stage.id,rng,NOW).pending.total,18);
  for(const t of stage.targets)p.skills[skillKey(stage,t)]=secure();
- p=startSession(p,stage.id,rng,NOW);assert.equal(p.pending.total,3);
+ p=startSession(p,stage.id,rng,NOW);assert.equal(p.pending.total,stage.targets.length);
  p.pending.total=18;const pending=structuredClone(p.pending);p=startSession(p,'letters',rng,NOW);
  p=validateProgress(p);p=startSession(p,stage.id,rng,NOW);assert.deepEqual(p.pending,pending);
- assert.equal(levelGoal(stage),6);
+ assert.equal(levelGoal(stage),18);
 });
 test('one due word is tested once; explicit review returns to the higher continuation and paused work',()=>{
  let p=freshProgress();const stage=stageById('long_words_read');

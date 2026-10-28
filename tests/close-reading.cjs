@@ -39,21 +39,21 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
   await page.setViewportSize(viewport);
   for(const id of ['phrase_place','first_sentences','sentence_meaning']){
    await restore(fixture(id));p=await state();r=p.pending.round;await decodePictures();
-   const dims=id==='sentence_meaning'?['subject','relation','location']:['subject','relation'];assert.ok(r.choices.length>=dims.length+1);
-   for(const d of dims)assert.ok(r.choices.filter(c=>D.ITEMS[c][d]===D.ITEMS[r.target][d]).length>=2);
+   const item=D.ITEMS[r.target],dims=(await import('../app/mixed-reading.mjs')).sceneDimensions(item);assert.ok(r.choices.length>=3);
+   for(const d of dims)if(r.choices.some(c=>D.ITEMS[c].scene[d]!==item.scene[d]))assert.ok(r.choices.filter(c=>D.ITEMS[c].scene[d]===item.scene[d]).length>=2);
    count=(await spoken()).length;assert.ok(!(await spoken()).includes(r.cue+'.mp3'),'Independent text is silent before help');
    const boxes=await page.locator('[data-choice]').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {w:r.width,h:r.height,bottom:r.bottom};}));
    assert.ok(boxes.every(b=>b.w>=60&&b.h>=60&&b.bottom<=viewport.height),JSON.stringify({viewport,id,boxes}));
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
    await page.screenshot({path:`/workspace/kalulu-browser-build/v9-${id}-${viewport.width}.png`,fullPage:true});
   }
-  checks.push(`${viewport.width}x${viewport.height}: short phrases/basic sentences need subject and relation; advanced sentences also need location. All choices remain visible and every AI scene image decodes.`);
+  checks.push(`${viewport.width}x${viewport.height}: phrase and mixed-task meaning dimensions have real contrasting choices. All choices remain visible and every AI scene image decodes.`);
  }
 
  const old=L.freshStore(),op=old.profiles[0].progress;op.curriculumVersion=7;op.continuation='first_sentences';op.sessions=20;op.seeds=100;op.stages.first_sentences={completed:2,passed:true,best:1};
  for(const t of D.stageById('first_sentences').legacyTargets)op.skills['sentence:'+t]={introduced:true,seen:3,first:3,recent:[1,1,1],timeline:[]};
  op.pending={stageId:'first_sentences',index:4,total:18,first:2,independent:4,round:{target:'s_hut',choices:['s_hut','s_ball'],cue:'s_hut',demonstration:false,tries:0,position:0,solved:false,help:null,misses:0,assisted:false}};
- await restore(old);assert.equal(await page.locator('.reading-prompt').innerText(),'Das ist ein Hut.');assert.equal((await state()).pending.total,18);assert.equal((await state()).curriculumVersion,9);assert.equal((await state()).stages.first_sentences.passed,false);
+ await restore(old);assert.equal(await page.locator('.reading-prompt').innerText(),'Das ist ein Hut.');assert.equal((await state()).pending.total,18);assert.equal((await state()).curriculumVersion,10);assert.equal((await state()).stages.first_sentences.passed,false);
  await page.locator('[data-choice="s_hut"]').click();await advanceFrom(4);await ready();assert.ok(D.stageById('first_sentences').targets.includes((await state()).pending.round.target));assert.equal((await state()).seeds,101);assert.equal((await state()).sessions,20);
  checks.push('An exact v8 noun-only saved question and its 18-question goal resume, all old rewards survive, and subsequent questions use real relation contrasts without inheriting old noun-only mastery.');
  assert.deepEqual(errors,[]);const info=await(await page.request.get('http://127.0.0.1:8070/preview/phonics-lab/BUILD_INFO.json')).json();

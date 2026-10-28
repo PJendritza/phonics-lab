@@ -1,3 +1,112 @@
+# Phonics Lab v10: varied mixed reading — release checkpoint
+
+Canonical repository: https://github.com/PJendritza/phonics-lab . Feature branch:
+expanded-mixed-reading-v10. Checkout: /workspace/Kalulu-DE. Read AGENTS.md and Git
+history first. The user's latest request authorises implementation and demo
+publication; earlier planning-only holds below are superseded.
+
+## Implemented
+
+- Still 33 numbered levels with stable IDs. Level 18/19 now contain nine human-
+  recorded words instead of three. Level 17/32 each have fourteen place tasks.
+  Level 33 expands from sixteen to eighty targets: 44 places, 12 quantities,
+  eight sizes, four possession scenes, eight animal actions and four paired
+  statements. Every active full/short text is listed in curriculum/RELEASE-V10.txt.
+- Real mixed rounds balance six meaning families, cover im/am despite legacy
+  secure-im history and bring in other relations. Error retrieval takes priority
+  over untouched words after two intervening completions. This avoids exhausting
+  a huge unseen pool before a recent mistake returns. Existing date reviews,
+  silent picture errors, original-model teaching and automatic chime flow remain.
+- Family confidence chooses short phrases or full sentences with matching saved
+  audio cues; errors ease subsequent tasks. Two-clause targets keep both clauses.
+  Exact old questions, attempts/assistance, goals, partial words and scores survive.
+- All four full mouse sentences and their speech say Eine Maus. Number-word
+  sieben displays digit 7 and numeric alternatives; quantity+noun tasks display
+  the exact stated number of objects. They are different learning tasks.
+- New on/under table/chair and in/beside box scenes reuse familiar objects. Am
+  Baum is not contrasted with unter dem Baum, since both can be true. New paired
+  awake/asleep animals use consistent artwork. Visual inspection corrected a
+  neighboring bed-leg leak in the chair crop and floating on-table placement.
+- CurriculumVersion 10 reassesses expanded pass flags, preserves history/rewards,
+  and resumes old completed courses at the final mixed level. Mixed completion
+  uses representative independent family/quantity/relation evidence and recent
+  accuracy, not a claim that all eighty possible texts have been mastered.
+- Five AI atlases / 54 sprites total 1,232,726 WebP bytes. Raw generation PNG stays
+  external; exact prompt/hash/rects are in illustration-sources.json. The unused
+  bed sprite is not used in unclear under-bed tasks.
+- 279 finished audio clips: 76 human, 11 isolated phonics, 23 guides, 168 full/short
+  sentence/phrase models including legacy tasks, one chime. All human and isolated
+  bytes unchanged. Four old mouse files and long_words/phrase_read guides change;
+  143 clips added. Free local Thorsten High 1.5 / 0.3-second extra pause retained.
+- Added 244 creative future text candidates beyond the original 635, covering
+  everyday actions, clothes, food/drink, states, giving/roles and sentence openings.
+  These draft banks are not all integrated or falsely described as released tasks.
+  See docs/MIXED-READING.md and docs/curriculum/CREATIVE-EXTENSIONS-DE.txt.
+- No new engine, runtime dependency, tracking, accounts, cloud sync, paid API,
+  scheduling or speech recognition. The media-rich static cap is now 10 MB; actual
+  dirty package is 313 files / 5,920,162 bytes, asset hash 5a2760f53294. All media
+  remain on demand. Clean source metadata adds one byte; exact deployment below.
+
+## Executed validation
+
+```sh
+python3 scripts/prepare_illustrations.py
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py
+node --test tests/*.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+python3 -m http.server 8070 --bind 0.0.0.0 --directory /workspace/kalulu-browser-build
+# preview/phonics-lab -> ../site; generated files stay external.
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+node tests/mixed-reading.cjs
+git diff --check
+```
+
+64 unit/content tests pass; all 279 audio files decode with headroom/quiet padding.
+Ten browser suites pass, including real MP3 playback, WebP decoding, six-family
+contrast choices, exact numbers, mobile touch layouts at 320/390/768px, old save
+migration, short/full cue resume, quiet wrong pictures, two-error teaching, correct
+scoring, backups/profiles, failed audio recovery, font and navigation behavior.
+All five release-gate records match asset hash 5a2760f53294: full browser, reading,
+spacing, close-reading and v10-mixed-reading. Record directory dates are historical;
+contents are current. Remaining five support suites also passed after the final
+app changes. A managed-environment reattachment lost tool session handles while
+some jobs were running; the interrupted main/reading chain was rerun to exit 0
+and current-hash evidence. No aborted run is counted as a successful check.
+
+New tests specifically reproduce secure-im/unseen-am history, require genuine
+mixed-round coverage, exercise all eighty targets' answer semantics, exact pending
+v9 mouse question at 14/18, delayed actual-error retrieval and bounded saved round
+history. New content words are explicitly declared rather than pretending their
+phonics were previously taught. Automated tests cannot certify pronunciation,
+image recognition or educational efficacy. Physical-phone/child/native review is
+still needed, especially for new spellings/plurals such as zwei/unter/Mäuse.
+
+## Publication and next step
+
+Source commit/push and clean deployment verification pending at this checkpoint.
+Publish via existing scripts/publish.py with a fresh external checkout; it now
+requires passing current-hash mixed-reading evidence too. Existing Pages settings
+must not change. Verify every public file over certificate-checked HTTPS with
+scripts/verify_live.py, then record actual source/deployment IDs below. Later
+documentation-only commits are distinct from the deployed source commit.
+
+Next user check: Level 33 (Lesemix), Levels 17/32 for shorter places and 18/19 for
+larger word banks. Resume existing profiles; a partly completed old round keeps
+its exact remaining goal, and the next full round gives the complete new mix.
+Further content should add reviewed phonics preparation and clearly illustrated
+families from the new draft, not blindly ship every text or add many tiny levels.
+
+---
+
 # Latest work: expanded German sentence-bank draft — no app changes
 
 2026-10-28: User requested a long, thoughtful word/sentence collection as a text

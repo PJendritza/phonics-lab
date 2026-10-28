@@ -48,6 +48,6 @@ def main():
  size=sum(p.stat().st_size for p in out.rglob('*') if p.is_file())
  # More human vocabulary and optional sentence support are fetched on demand.
  # Keep a firm total budget without compressing/cropping speech into poor cues.
- if size>4_000_000:raise SystemExit(f'Build exceeds 4 MB illustrated-curriculum budget: {size}')
+ if size>10_000_000:raise SystemExit(f'Build exceeds 10 MB expanded-curriculum budget: {size}')
  print(f'{len(files)+1} files, {size:,} bytes, source {commit}, dirty={dirty}; {out}')
 if __name__=='__main__':main()

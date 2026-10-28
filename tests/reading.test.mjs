@@ -1,3 +1,4 @@
+import {sceneDimensions,EXPANSION_VOCABULARY} from '../app/mixed-reading.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {STAGES,ITEMS,CONTEXTS} from '../app/data.mjs';
@@ -26,12 +27,12 @@ test('optional audio or syllable assistance persists and cannot earn independent
  p=advance(p,rng).progress;assert.equal(p.pending.round.assisted,false);
  assert.strictEqual(useReadingHelp(startSession(freshProgress(),'letters',rng)).pending.round.assisted,false);
 });
-test('sentence alternatives require subject, relation and location; every independent question has all three contrasts',()=>{
+test('mixed sentence alternatives preserve each available meaning dimension',()=>{
  let p=startSession(freshProgress(),'sentence_meaning',rng),completed;
- for(let session=0;session<4&&!p.stages.sentence_meaning?.passed;session++){
-  while(p.pending){const r=p.pending.round,item=ITEMS[r.target],wrong=r.choices.filter(c=>c!==r.target),dims=['subject','relation','location'];
+ for(let session=0;session<12&&!p.stages.sentence_meaning?.passed;session++){
+  while(p.pending){const r=p.pending.round,item=ITEMS[r.target],wrong=r.choices.filter(c=>c!==r.target),dims=sceneDimensions(item).filter(d=>STAGES.at(-1).targets.some(t=>ITEMS[t].scene?.family===item.scene.family&&ITEMS[t].scene[d]!==item.scene[d]&&sceneDimensions(item).filter(x=>x!==d).every(x=>ITEMS[t].scene[x]===item.scene[x])));
    assert.equal(r.choices.length,4);
-   for(const d of dims)assert.ok(wrong.some(c=>ITEMS[c][d]!==item[d]&&dims.filter(x=>x!==d).every(x=>ITEMS[c][x]===item[x])),d);
+   for(const d of dims)assert.ok(wrong.some(c=>ITEMS[c].scene[d]!==item.scene[d]&&dims.filter(x=>x!==d).every(x=>ITEMS[c].scene[x]===item.scene[x])),d);
    p=answer(p,r.target).progress;completed=advance(p,rng);p=completed.progress;
   }
   if(!p.stages.sentence_meaning.passed)p=startSession(p,'sentence_meaning',rng);
@@ -50,15 +51,15 @@ test('completed v6 profiles continue at new Level 15 while unfinished work and a
  const old=freshProgress();delete old.curriculumVersion;old.continuation='complete';old.sessions=20;old.seeds=200;
  old.stages.more_build={completed:2,passed:true,best:1};
  const p=validateProgress(old);assert.equal(recommended(p).id,'sentence_words');assert.equal(p.sessions,20);assert.equal(p.seeds,200);
- assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,9);
+ assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,10);
  const pending=startSession(old,'more_build',rng);delete pending.curriculumVersion;
  assert.deepEqual(validateProgress(pending).pending,pending.pending);
  const done=freshProgress();done.continuation='complete';assert.equal(validateProgress(done).continuation,'complete');
 });
-test('pictures and syllable spelling resolve; sentence vocabulary is limited to preceding lessons',()=>{
+test('pictures and syllable spelling resolve; new context vocabulary is explicitly declared for full-utterance help',()=>{
  assert.equal(STAGES.length,33);assert.ok(WORDS.length>=30);
  for(const stage of READING_STAGES){
-  assert.ok(stage.targets.length<=16);
+  assert.ok(stage.targets.length<=100);
   for(const target of stage.targets){
    const item=ITEMS[target];assert.ok(item.audio&&item.text);
    if(item.syllables)assert.equal(item.syllables.join(''),item.text,target);
@@ -69,7 +70,7 @@ test('pictures and syllable spelling resolve; sentence vocabulary is limited to 
    for(const target of stage.targets)assert.ok(earlier.some(s=>s.targets.includes(target)||Object.values(CONTEXTS[s.mode]??{}).flat().includes(target)),target+' introduced before independent reading');
   }
  }
- const taught=new Set(STAGES.slice(0,30).flatMap(s=>s.targets.map(t=>ITEMS[t]?.text.toLowerCase())));
+ const taught=new Set([...STAGES.slice(0,30).flatMap(s=>s.targets.map(t=>ITEMS[t]?.text.toLowerCase())),...EXPANSION_VOCABULARY]);
  for(const sentence of Object.values({...SENTENCES,...PHRASES}))for(const word of sentence.text.toLowerCase().replace(/[.]/g,'').split(' '))assert.ok(taught.has(word),'Untaught sentence word '+word);
 });
 test('assistance import validation rejects corrupt flags without changing the saved profile',()=>{

@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "url": "http://127.0.0.1:8070/preview/phonics-lab/",
   "checks": [
     "Minimal one-tap entrance; no next button. Correct response increases persistent goal progress and advances automatically; mistakes preserve time, choice positions and progress. Pausing the feedback timer and resuming cannot duplicate awards. The full fixed round goal earns a flower.",
@@ -366,8 +366,8 @@
       "duration": 7.273197
     },
     {
-      "src": "audio/long_words.mp3?v=39a096a04c6c",
-      "duration": 6.613288
+      "src": "audio/long_words.mp3?v=107b63d87c06",
+      "duration": 5.68263
     },
     {
       "src": "audio/soft_words.mp3?v=db5ea3ad195f",
@@ -454,12 +454,12 @@
       "duration": 1.831837
     },
     {
-      "src": "audio/maus_im_bus.mp3?v=5d1c96b029b8",
-      "duration": 1.831837
+      "src": "audio/maus_im_bus.mp3?v=eef63a20c789",
+      "duration": 1.843447
     },
     {
-      "src": "audio/maus_im_haus.mp3?v=c5d899c8c869",
-      "duration": 1.820227
+      "src": "audio/maus_im_haus.mp3?v=7adbfcb5007a",
+      "duration": 1.762177
     },
     {
       "src": "audio/leim.mp3?v=28e636d2327b",
@@ -518,8 +518,8 @@
       "duration": 0.771111
     },
     {
-      "src": "audio/phrase_read.mp3?v=eb292ca97bb1",
-      "duration": 6.634649
+      "src": "audio/phrase_read.mp3?v=2ad9864a8967",
+      "duration": 6.216689
     },
     {
       "src": "audio/ball_am_bus.mp3?v=3502cfa47ea7",
@@ -546,12 +546,12 @@
       "duration": 1.913107
     },
     {
-      "src": "audio/maus_am_bus.mp3?v=77c7006f7340",
+      "src": "audio/maus_am_bus.mp3?v=5639b9465a52",
       "duration": 1.866667
     },
     {
-      "src": "audio/maus_am_haus.mp3?v=df31a04c4032",
-      "duration": 1.889887
+      "src": "audio/maus_am_haus.mp3?v=9851ef089aa3",
+      "duration": 1.820227
     },
     {
       "src": "audio/phrase_ball_im_bus.mp3?v=5618865ffa26",
@@ -568,9 +568,581 @@
     {
       "src": "audio/phrase_hut_am_bus.mp3?v=6f75cd05c98b",
       "duration": 1.529977
+    },
+    {
+      "src": "audio/meaning_mix.mp3?v=f0bb564b811c",
+      "duration": 7.228617
+    },
+    {
+      "src": "audio/ball_im_bus_short.mp3?v=5618865ffa26",
+      "duration": 1.239728
+    },
+    {
+      "src": "audio/ball_am_bus_short.mp3?v=e1ee46b98d8b",
+      "duration": 1.239728
+    },
+    {
+      "src": "audio/ball_im_haus_short.mp3?v=d8f0bc4fec2d",
+      "duration": 1.344218
+    },
+    {
+      "src": "audio/ball_am_haus_short.mp3?v=4891144e2814",
+      "duration": 1.320998
+    },
+    {
+      "src": "audio/ball_am_baum.mp3?v=70edb940d2c5",
+      "duration": 1.773787
+    },
+    {
+      "src": "audio/ball_am_baum_short.mp3?v=9c5e83499bd4",
+      "duration": 1.274558
+    },
+    {
+      "src": "audio/ball_auf_tisch.mp3?v=b7dac87eff8c",
+      "duration": 1.947937
+    },
+    {
+      "src": "audio/ball_auf_tisch_short.mp3?v=ca40aecd7f69",
+      "duration": 1.413878
+    },
+    {
+      "src": "audio/ball_unter_tisch.mp3?v=cd005bf67330",
+      "duration": 2.075646
+    },
+    {
+      "src": "audio/ball_unter_tisch_short.mp3?v=6db5ad658671",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/ball_in_kiste.mp3?v=cb72468b3b79",
+      "duration": 2.005986
+    },
+    {
+      "src": "audio/ball_in_kiste_short.mp3?v=65c5352ea70e",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/ball_neben_kiste.mp3?v=5f63c19aa269",
+      "duration": 2.191746
+    },
+    {
+      "src": "audio/ball_neben_kiste_short.mp3?v=e439eb12c399",
+      "duration": 1.611247
+    },
+    {
+      "src": "audio/ball_auf_stuhl.mp3?v=27de10697512",
+      "duration": 1.924717
+    },
+    {
+      "src": "audio/ball_auf_stuhl_short.mp3?v=af8e18d13481",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/ball_unter_stuhl.mp3?v=44592d1ece2d",
+      "duration": 1.994376
+    },
+    {
+      "src": "audio/ball_unter_stuhl_short.mp3?v=56b3d233c300",
+      "duration": 1.564807
+    },
+    {
+      "src": "audio/hut_im_bus_short.mp3?v=c53ab280e990",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/hut_am_bus_short.mp3?v=6f75cd05c98b",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/hut_im_haus_short.mp3?v=f831b7f1aa48",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/hut_am_haus_short.mp3?v=b2264348e904",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/hut_am_baum.mp3?v=d3c4429cf061",
+      "duration": 1.738957
+    },
+    {
+      "src": "audio/hut_am_baum_short.mp3?v=f3641307caca",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/hut_auf_tisch.mp3?v=3a736f49f67d",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/hut_auf_tisch_short.mp3?v=4903f9c44da8",
+      "duration": 1.425488
+    },
+    {
+      "src": "audio/hut_unter_tisch.mp3?v=ca2584e03b5e",
+      "duration": 1.936327
+    },
+    {
+      "src": "audio/hut_unter_tisch_short.mp3?v=5eab78e50f20",
+      "duration": 1.622857
+    },
+    {
+      "src": "audio/hut_in_kiste.mp3?v=031c2237c6d2",
+      "duration": 1.924717
+    },
+    {
+      "src": "audio/hut_in_kiste_short.mp3?v=7bf03165aa11",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/hut_neben_kiste.mp3?v=a4f40cf75e6e",
+      "duration": 2.075646
+    },
+    {
+      "src": "audio/hut_neben_kiste_short.mp3?v=88a73e463ebd",
+      "duration": 1.762177
+    },
+    {
+      "src": "audio/hut_auf_stuhl.mp3?v=c3462b332212",
+      "duration": 1.889887
+    },
+    {
+      "src": "audio/hut_auf_stuhl_short.mp3?v=b8284dfd8058",
+      "duration": 1.506757
+    },
+    {
+      "src": "audio/hut_unter_stuhl.mp3?v=da335b4f3052",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/hut_unter_stuhl_short.mp3?v=441c0b7a2fce",
+      "duration": 1.727347
+    },
+    {
+      "src": "audio/maus_im_bus_short.mp3?v=8202e187e3f4",
+      "duration": 1.309388
+    },
+    {
+      "src": "audio/maus_am_bus_short.mp3?v=22a29793af70",
+      "duration": 1.320998
+    },
+    {
+      "src": "audio/maus_im_haus_short.mp3?v=c69bdb72a3fd",
+      "duration": 1.379048
+    },
+    {
+      "src": "audio/maus_am_haus_short.mp3?v=1b7f256c7d65",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/maus_am_baum.mp3?v=99cf1ec7e892",
+      "duration": 1.856825
+    },
+    {
+      "src": "audio/maus_am_baum_short.mp3?v=f19ade4c4de3",
+      "duration": 1.367438
+    },
+    {
+      "src": "audio/maus_auf_tisch.mp3?v=ba1a95ecb703",
+      "duration": 1.961315
+    },
+    {
+      "src": "audio/maus_auf_tisch_short.mp3?v=5998910ef615",
+      "duration": 1.413878
+    },
+    {
+      "src": "audio/maus_unter_tisch.mp3?v=c601dbb73a48",
+      "duration": 2.017596
+    },
+    {
+      "src": "audio/maus_unter_tisch_short.mp3?v=0d89d71a4b3c",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/maus_in_kiste.mp3?v=9a0648b2977d",
+      "duration": 2.075646
+    },
+    {
+      "src": "audio/maus_in_kiste_short.mp3?v=9709a26045e7",
+      "duration": 1.471927
+    },
+    {
+      "src": "audio/maus_neben_kiste.mp3?v=f7a9d0cb02b3",
+      "duration": 2.203356
+    },
+    {
+      "src": "audio/maus_neben_kiste_short.mp3?v=188d84c2f8d4",
+      "duration": 1.634467
+    },
+    {
+      "src": "audio/maus_auf_stuhl.mp3?v=43b717531a92",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/maus_auf_stuhl_short.mp3?v=970c95584345",
+      "duration": 1.483537
+    },
+    {
+      "src": "audio/maus_unter_stuhl.mp3?v=a8d00a21b0cd",
+      "duration": 1.889887
+    },
+    {
+      "src": "audio/maus_unter_stuhl_short.mp3?v=00966cc4d701",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/schaf_im_bus_short.mp3?v=0d9621a65d16",
+      "duration": 1.355828
+    },
+    {
+      "src": "audio/schaf_am_bus_short.mp3?v=7c791cd92f24",
+      "duration": 1.413878
+    },
+    {
+      "src": "audio/schaf_im_haus_short.mp3?v=7c34bb5e4f0e",
+      "duration": 1.438866
+    },
+    {
+      "src": "audio/schaf_am_haus_short.mp3?v=9d4654d6de4d",
+      "duration": 1.483537
+    },
+    {
+      "src": "audio/schaf_am_baum.mp3?v=1b9dd5b13b13",
+      "duration": 1.820227
+    },
+    {
+      "src": "audio/schaf_am_baum_short.mp3?v=11a07bc650e0",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/schaf_auf_tisch.mp3?v=9559de166a9c",
+      "duration": 1.913107
+    },
+    {
+      "src": "audio/schaf_auf_tisch_short.mp3?v=b6eb5d96826c",
+      "duration": 1.413878
+    },
+    {
+      "src": "audio/schaf_unter_tisch.mp3?v=9386744c4da5",
+      "duration": 2.065805
+    },
+    {
+      "src": "audio/schaf_unter_tisch_short.mp3?v=cf14545fe150",
+      "duration": 1.622857
+    },
+    {
+      "src": "audio/schaf_in_kiste.mp3?v=d8d2318ecf38",
+      "duration": 2.098866
+    },
+    {
+      "src": "audio/schaf_in_kiste_short.mp3?v=9869b4b7e415",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/schaf_neben_kiste.mp3?v=2d57a7e7c5ed",
+      "duration": 2.180136
+    },
+    {
+      "src": "audio/schaf_neben_kiste_short.mp3?v=a075e1de7d96",
+      "duration": 1.715737
+    },
+    {
+      "src": "audio/schaf_auf_stuhl.mp3?v=7c829db27731",
+      "duration": 1.924717
+    },
+    {
+      "src": "audio/schaf_auf_stuhl_short.mp3?v=fdaf7b09316c",
+      "duration": 1.543356
+    },
+    {
+      "src": "audio/schaf_unter_stuhl.mp3?v=6623d95a9761",
+      "duration": 1.982766
+    },
+    {
+      "src": "audio/schaf_unter_stuhl_short.mp3?v=a31d783e8473",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/count_ball_1.mp3?v=9c1022370dd0",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/count_ball_1_short.mp3?v=af692cab40e5",
+      "duration": 1.077188
+    },
+    {
+      "src": "audio/count_ball_2.mp3?v=ba5967089535",
+      "duration": 1.611247
+    },
+    {
+      "src": "audio/count_ball_2_short.mp3?v=82b4e55e47b5",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/count_ball_3.mp3?v=1eefd97e9d1e",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/count_ball_3_short.mp3?v=67492799fb63",
+      "duration": 1.483537
+    },
+    {
+      "src": "audio/count_hut_1.mp3?v=61ac63f4e445",
+      "duration": 1.297778
+    },
+    {
+      "src": "audio/count_hut_1_short.mp3?v=ee7c1f12ce02",
+      "duration": 0.984308
+    },
+    {
+      "src": "audio/count_hut_2.mp3?v=5c53f18cfd57",
+      "duration": 1.611247
+    },
+    {
+      "src": "audio/count_hut_2_short.mp3?v=e81aeafd7f56",
+      "duration": 1.297778
+    },
+    {
+      "src": "audio/count_hut_3.mp3?v=4f436701598f",
+      "duration": 1.622857
+    },
+    {
+      "src": "audio/count_hut_3_short.mp3?v=f839c57a806e",
+      "duration": 1.204898
+    },
+    {
+      "src": "audio/count_maus_1.mp3?v=f42a98bf5638",
+      "duration": 1.564807
+    },
+    {
+      "src": "audio/count_maus_1_short.mp3?v=132ebcd2ea30",
+      "duration": 1.125397
+    },
+    {
+      "src": "audio/count_maus_2.mp3?v=cde4bc1ee2fb",
+      "duration": 1.680907
+    },
+    {
+      "src": "audio/count_maus_2_short.mp3?v=b774bd0e2dd8",
+      "duration": 1.379048
+    },
+    {
+      "src": "audio/count_maus_3.mp3?v=ac43a116659e",
+      "duration": 1.647846
+    },
+    {
+      "src": "audio/count_maus_3_short.mp3?v=056d44163592",
+      "duration": 1.320998
+    },
+    {
+      "src": "audio/count_schaf_1.mp3?v=2ff1b17ecbe0",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/count_schaf_1_short.mp3?v=49bc477c6407",
+      "duration": 1.065578
+    },
+    {
+      "src": "audio/count_schaf_2.mp3?v=a2ce8ded04b7",
+      "duration": 1.738957
+    },
+    {
+      "src": "audio/count_schaf_2_short.mp3?v=28e18094b266",
+      "duration": 1.320998
+    },
+    {
+      "src": "audio/count_schaf_3.mp3?v=9854859e81bb",
+      "duration": 1.704127
+    },
+    {
+      "src": "audio/count_schaf_3_short.mp3?v=5fbf022e2061",
+      "duration": 1.216508
+    },
+    {
+      "src": "audio/size_ball_gross.mp3?v=209c901e025d",
+      "duration": 1.704127
+    },
+    {
+      "src": "audio/size_ball_gross_short.mp3?v=b3ea10bbea82",
+      "duration": 1.402268
+    },
+    {
+      "src": "audio/size_ball_klein.mp3?v=460249056939",
+      "duration": 1.647846
+    },
+    {
+      "src": "audio/size_ball_klein_short.mp3?v=8ff51dab33a2",
+      "duration": 1.355828
+    },
+    {
+      "src": "audio/size_hut_gross.mp3?v=69dc6a202272",
+      "duration": 1.543356
+    },
+    {
+      "src": "audio/size_hut_gross_short.mp3?v=4412c1e43b18",
+      "duration": 1.344218
+    },
+    {
+      "src": "audio/size_hut_klein.mp3?v=30caf8293a38",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/size_hut_klein_short.mp3?v=02debb7424a4",
+      "duration": 1.251338
+    },
+    {
+      "src": "audio/size_maus_gross.mp3?v=a09f819acfdd",
+      "duration": 1.669297
+    },
+    {
+      "src": "audio/size_maus_gross_short.mp3?v=fde045a60336",
+      "duration": 1.506757
+    },
+    {
+      "src": "audio/size_maus_klein.mp3?v=8bfc031f6ed4",
+      "duration": 1.622857
+    },
+    {
+      "src": "audio/size_maus_klein_short.mp3?v=5823a27481c0",
+      "duration": 1.367438
+    },
+    {
+      "src": "audio/size_schaf_gross.mp3?v=2f7c7b6bd453",
+      "duration": 1.797007
+    },
+    {
+      "src": "audio/size_schaf_gross_short.mp3?v=ae168f06b3c3",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/size_schaf_klein.mp3?v=3a19894ec55f",
+      "duration": 1.727347
+    },
+    {
+      "src": "audio/size_schaf_klein_short.mp3?v=332e50baae3a",
+      "duration": 1.425488
+    },
+    {
+      "src": "audio/has_maus_ball.mp3?v=c03d48b1919b",
+      "duration": 1.680907
+    },
+    {
+      "src": "audio/has_maus_ball_short.mp3?v=cd01e1adbab2",
+      "duration": 1.460317
+    },
+    {
+      "src": "audio/has_maus_hut.mp3?v=a6e609c647f0",
+      "duration": 1.402268
+    },
+    {
+      "src": "audio/has_maus_hut_short.mp3?v=0aa4c265e727",
+      "duration": 1.193288
+    },
+    {
+      "src": "audio/has_schaf_ball.mp3?v=fde3c2563712",
+      "duration": 1.657687
+    },
+    {
+      "src": "audio/has_schaf_ball_short.mp3?v=5a8280f3b4e1",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/has_schaf_hut.mp3?v=072daf612d54",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/has_schaf_hut_short.mp3?v=f9d3cebe1ea8",
+      "duration": 1.262948
+    },
+    {
+      "src": "audio/action_maus_wach.mp3?v=6d1799bc6b14",
+      "duration": 1.193288
+    },
+    {
+      "src": "audio/action_maus_schlaeft.mp3?v=d00dc66afd72",
+      "duration": 1.367438
+    },
+    {
+      "src": "audio/action_schaf_wach.mp3?v=95c056c2d586",
+      "duration": 1.334376
+    },
+    {
+      "src": "audio/action_schaf_schlaeft.mp3?v=df2eeb052629",
+      "duration": 1.448707
+    },
+    {
+      "src": "audio/action_hase_wach.mp3?v=41fda8c10f37",
+      "duration": 1.309388
+    },
+    {
+      "src": "audio/action_hase_schlaeft.mp3?v=42c2257d4287",
+      "duration": 1.379048
+    },
+    {
+      "src": "audio/action_affe_wach.mp3?v=547246eeef82",
+      "duration": 1.344218
+    },
+    {
+      "src": "audio/action_affe_schlaeft.mp3?v=4932a69c00ad",
+      "duration": 1.438866
+    },
+    {
+      "src": "audio/pair_oben_oben.mp3?v=7a98f2005880",
+      "duration": 3.095465
+    },
+    {
+      "src": "audio/pair_oben_unten.mp3?v=178c4e7a2517",
+      "duration": 3.29356
+    },
+    {
+      "src": "audio/pair_unten_oben.mp3?v=0ff6614c7148",
+      "duration": 3.339274
+    },
+    {
+      "src": "audio/pair_unten_unten.mp3?v=2f6bdb467f63",
+      "duration": 3.536644
+    },
+    {
+      "src": "audio/phrase_ball_am_baum.mp3?v=9c5e83499bd4",
+      "duration": 1.274558
+    },
+    {
+      "src": "audio/phrase_ball_auf_tisch.mp3?v=ca40aecd7f69",
+      "duration": 1.413878
+    },
+    {
+      "src": "audio/phrase_ball_unter_tisch.mp3?v=6db5ad658671",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/phrase_ball_in_kiste.mp3?v=65c5352ea70e",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/phrase_ball_neben_kiste.mp3?v=e439eb12c399",
+      "duration": 1.611247
+    },
+    {
+      "src": "audio/phrase_hut_am_baum.mp3?v=f3641307caca",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/phrase_hut_auf_tisch.mp3?v=4903f9c44da8",
+      "duration": 1.425488
+    },
+    {
+      "src": "audio/phrase_hut_unter_tisch.mp3?v=5eab78e50f20",
+      "duration": 1.622857
+    },
+    {
+      "src": "audio/phrase_hut_in_kiste.mp3?v=7bf03165aa11",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/phrase_hut_neben_kiste.mp3?v=88a73e463ebd",
+      "duration": 1.762177
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "f5464eac2222512e7d0c988cfb27b07ed438ca820037d97932772128f207fd85"
+  "appSha256": "5a2760f53294265c8b15a235676cb693f9a1d0879dda7f8c4546515be8408f76"
 }

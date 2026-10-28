@@ -1,3 +1,13 @@
+# Current v10 architecture
+
+See MIXED-READING.md for the active eighty-task semantic model, short/full cue
+selection, per-round family/relation balance, explicit completedTargets resume
+field and representative family mastery. Static media cap is 10 MB; actual build
+about 5.92 MB. The v3 storage key and 33 stable levels remain. Publication now also
+requires current-hash v10 mixed-reading browser evidence. Historical details follow.
+
+---
+
 # Phonics Lab browser architecture (v9)
 
 Static HTML/CSS/ES modules. No engine/framework, API, service worker, WASM,

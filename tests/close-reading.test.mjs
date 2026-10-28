@@ -68,10 +68,10 @@ function oldProgress(){
  return p;
 }
 test('v8 history keeps all practice rewards and legacy skills while new meaning contrasts require fresh evidence',()=>{
- const old=oldProgress(),p=validateProgress(old);assert.equal(p.curriculumVersion,9);assert.equal(p.sessions,80);assert.equal(p.seeds,900);
+ const old=oldProgress(),p=validateProgress(old);assert.equal(p.curriculumVersion,10);assert.equal(p.sessions,80);assert.equal(p.seeds,900);
  assert.equal(p.continuation,'phrase_place');assert.equal(p.stages.first_sentences.completed,2);assert.equal(p.stages.first_sentences.passed,false);assert.equal(p.stages.sentence_meaning.passed,false);
  for(const [key,value]of Object.entries(old.skills))assert.deepEqual(p.skills[key],value,key);
- let next=finish(startSession(p,'phrase_place',rng,NOW));assert.equal(recommended(next).id,'first_sentences');
+ let next=p;for(let i=0;i<4&&!next.stages.phrase_place?.passed;i++)next=finish(startSession(next,'phrase_place',rng,NOW));assert.equal(recommended(next).id,'first_sentences');
  assert.equal(next.stages.long_words_read.passed,true);
 });
 test('an exact saved noun-only sentence remains resumable, then gives way to the new targets without erasing its goal',()=>{
@@ -80,11 +80,11 @@ test('an exact saved noun-only sentence remains resumable, then gives way to the
  assert.equal(p.pending.total,18);assert.equal(p.pending.index,5);assert.ok(stageById('first_sentences').targets.includes(p.pending.round.target));assert.ok(!p.pending.round.target.startsWith('s_'));
  assert.equal(p.stages.first_sentences.passed,false);
 });
-test('image assets have pinned hashes; all words/scenes resolve and seven is composed from exactly seven objects',()=>{
+test('image assets have pinned hashes; all words/scenes resolve and seven is a numeral without counted objects',()=>{
  const manifest=JSON.parse(fs.readFileSync(new URL('../app/images/manifest.json',import.meta.url)));
  for(const f of manifest.files){const bytes=fs.readFileSync(new URL('../app/'+f.src,import.meta.url));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),f.sha256);assert.equal(f.aiGenerated,true);}
  for(const id of PICTURE_IDS){assert.ok(hasPicture(id),id);assert.ok(illustration(id).startsWith('<svg'));}
- assert.equal((illustration('sieben').match(/<image /g)??[]).length,7);
+ assert.match(illustration('sieben'),/>7<\/text>/);assert.equal((illustration('sieben').match(/<image /g)??[]).length,0);
  for(const [id,spec]of Object.entries(SPRITES)){const s=SHEETS[spec.sheet];assert.ok(spec.rect[0]>=0&&spec.rect[1]>=0&&spec.rect[0]+spec.rect[2]<=s.width+.01&&spec.rect[1]+spec.rect[3]<=s.height+.01,id);}
  const one=illustration('sofa').match(/<svg x="[^"]+" y="[^"]+" width="([^"]+)" height="([^"]+)" viewBox="([^"]+)"/);assert.ok(one);
  const rect=one[3].split(' ').map(Number);assert.ok(Math.abs(Number(one[1])/Number(one[2])-rect[2]/rect[3])<1e-10,'No sprite pixels may leak into letterboxed margins');

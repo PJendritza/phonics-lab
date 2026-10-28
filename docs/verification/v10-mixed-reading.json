@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "10.0.0",
+  "assetVersion": "5a2760f53294",
+  "checks": [
+    "320x568: full text and four stationary options fit for all six families; images decode, including on/under and exact quantities.",
+    "390x844: full text and four stationary options fit for all six families; images decode, including on/under and exact quantities.",
+    "768x1024: full text and four stationary options fit for all six families; images decode, including on/under and exact quantities.",
+    "Short/full mouse grammar and matching MP3 help work; exact short resume survives reload. Wrong pictures stay silent; two-error original-model teaching gives no points.",
+    "Real v9 im-secure save completes an 18-question mixed round with all six families and both im/am, preserving prior rewards."
+  ],
+  "pageErrors": [],
+  "limits": "Chromium touch viewport and real audio/image tests, not a physical phone or educator validation."
+}

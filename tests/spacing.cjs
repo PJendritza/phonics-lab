@@ -14,21 +14,21 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  assert.equal(await page.locator('.level-chapter').count(),5);assert.equal(await page.locator('[data-stage]').count(),D.STAGES.length);
  assert.ok((await page.locator('[data-stage="long_words_listen"]').innerText()).includes('hören und erkennen'));
  assert.ok((await page.locator('[data-stage="long_words_read"]').innerText()).includes('selbst lesen'));
- assert.ok((await page.locator('[data-stage="first_sentences"]').innerText()).includes('Kurze Sätze verstehen'));
+ assert.ok((await page.locator('[data-stage="first_sentences"]').innerText()).includes('Kurze Sätze:'));
  assert.equal(await page.locator('[data-level]').count(),D.STAGES.length);
  checks.push('Five named groups retain all current stable IDs and numbers; activity labels distinguish listening, independent word reading, phrase and sentence understanding.');
 
  const fixture=L.freshStore();fixture.profiles[0].progress=L.startSession(fixture.profiles[0].progress,'long_words_read',()=>.4);
  await restore(fixture);await page.locator('#play').click();await ready();let p=await state();
- assert.equal(p.pending.total,6);assert.ok((await page.locator('#level-menu').innerText()).includes(D.stageById('long_words_read').title));
+ assert.equal(p.pending.total,18);assert.ok((await page.locator('#level-menu').innerText()).includes(D.stageById('long_words_read').title));
  const target=p.pending.round.target,wrong=p.pending.round.choices.find(t=>t!==target);
  await page.locator(`[data-choice="${wrong}"]`).click();await ready();await choose();
  const intervening=[];for(let n=0;n<2;n++){await ready();intervening.push((await state()).pending.round.target);await choose();}
  await ready();assert.ok(intervening.every(t=>t!==target));assert.equal((await state()).pending.round.target,target);
  assert.equal((await state()).spacing.turn,3);
  await page.locator('#back').click();await page.reload();await page.locator('#play').click();await ready();assert.equal((await state()).pending.round.target,target);assert.equal((await state()).spacing.turn,3);
- while((await state()).pending)await choose();assert.equal(await page.locator('.completion-meter').getAttribute('aria-valuenow'),'6');
- checks.push('A real wrong-picture attempt returns after two other questions; spacing survives reload. A new three-word round completes at its full six-question goal.');
+ while((await state()).pending)await choose();assert.equal(await page.locator('.completion-meter').getAttribute('aria-valuenow'),'18');
+ checks.push('A real wrong-picture attempt returns after two other questions; spacing survives reload. A new nine-word round completes at its full eighteen-question goal.');
 
  // A v7-style save with known words, an unfinished higher level and no scheduler.
  const legacy=L.freshStore(),lp=legacy.profiles[0].progress,stage=D.stageById('long_words_read');
@@ -36,12 +36,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  lp.stages[stage.id]={completed:2,passed:true,best:1};legacy.profiles[0].progress=L.startSession(lp,'sentence_meaning',()=>.4);
  const paused=structuredClone(legacy.profiles[0].progress.pending);delete legacy.profiles[0].progress.spacing;
  await restore(legacy);assert.equal(await page.locator('#review-home').count(),1);await page.locator('#review-home').click();await ready();
- p=await state();assert.equal(p.continuation,'sentence_meaning');assert.equal(p.pending.stageId,'long_words_read');assert.equal(p.pending.total,3);assert.deepEqual(p.paused.sentence_meaning,paused);
+ p=await state();assert.equal(p.continuation,'sentence_meaning');assert.equal(p.pending.stageId,'long_words_read');assert.equal(p.pending.total,stage.targets.length);assert.deepEqual(p.paused.sentence_meaning,paused);
  const first=p.pending.round.target;await page.locator(`[data-choice="${first}"]`).click();const awarded=(await state()).seeds;
  await page.locator('#back').click();await page.reload();await page.locator('#play').click();await ready();
  p=await state();assert.equal(p.pending.index,1);assert.equal(p.seeds,awarded);assert.equal(p.pending.returnTo,'sentence_meaning');
  while((await state()).pending)await choose();assert.equal(await page.locator('h1').innerText(),'Wiederholung geschafft!');
- p=await state();assert.equal(p.continuation,'sentence_meaning');assert.equal(p.seeds,3);assert.equal(L.duePractice(p).length,0);
+ p=await state();assert.equal(p.continuation,'sentence_meaning');assert.equal(p.seeds,stage.targets.length);assert.equal(L.duePractice(p).length,0);
  for(const r of Object.values(p.spacing.reviews)){assert.equal(r.days,1);assert.ok(r.due>Date.now());}
  await page.locator('#continue').click();await ready();assert.deepEqual((await state()).pending,paused);
  await page.locator('#back').click();assert.equal(await page.locator('#review-home').count(),0);
