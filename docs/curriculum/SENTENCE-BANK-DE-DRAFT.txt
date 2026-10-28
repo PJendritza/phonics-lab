@@ -1,0 +1,938 @@
+PHONICS LAB – ENTWURF EINER DEUTSCHEN WORT- UND SATZBANK
+Stand: 2026-10-28. Nur Planung; kein neuer App-Inhalt, keine Veröffentlichung.
+
+ZIEL
+Eine breite Auswahl alltagsnaher, bildlich eindeutig darstellbarer Lesetexte.
+Wenige Übungsbereiche mit adaptiven Aufgaben statt eines Levels pro Wortliste.
+Die Sammlung ist ein Kandidatenpool, keine feste Reihenfolge und kein validierter
+Lesekurs. Umfang ist kein Beleg für didaktische Qualität. Neue Texte, Aussprache,
+Bilder und Aufgaben müssen vor einer Freigabe gemeinsam geprüft werden.
+
+WICHTIGE UNTERSCHEIDUNG
+Zahlwort erkennen: sieben -> Ziffer 7, nicht sieben Bälle.
+Mengen-Wortgruppe verstehen: zwei Mäuse -> Bild mit genau zwei Mäusen, nicht nur 2.
+Hier soll das Kind Zahl UND Tier lesen. Das widerspricht der Ziffernregel nicht.
+Wortgruppen sind keine vollständigen Sätze; sie werden getrennt gekennzeichnet.
+
+EMPFOHLENER ERSTER AUSBAU
+Nicht alles gleichzeitig einführen. Zuerst die vorhandenen im/am-Aufgaben
+reparieren, dann auf/unter mit Tisch und bekannten Gegenständen ergänzen.
+Parallel kurze Mengen-Wortgruppen mit 1–3 und passenden Pluralformen vorbereiten.
+Danach Handlungen wie sitzt/liegt/schläft bei vertrauten Tieren. Eigenschaften,
+Rollen, Verneinung und kurze Texte sind weitere Ausbaustufen. Für den Anfang
+je Familie einen überprüften Ausschnitt wählen, dann schrittweise erweitern.
+Die 635 Einträge sind kein Auftrag für 635 neue Bilder oder Aufgaben auf einmal.
+
+VORSCHLAG FÜR FÜNF ÜBUNGSBEREICHE (KEINE ZUSÄTZLICHEN LEVELNUMMERN)
+1. Wortgruppen: ein Ball, zwei Bälle, ein roter Ball.
+2. Orte: Maus im Haus; Ball auf dem Tisch; Ball unter dem Tisch.
+3. Kurze Sätze: Eine Maus ist im Haus. Ein Ball liegt unter dem Tisch.
+4. Handlungen und Rollen: Der Hund schläft. Die Katze jagt den Hund.
+5. Verbundene Bedeutungen: Mengen + Ort, zwei Satzteile, kurze Texte.
+Innerhalb eines Bereichs: erst wenige bekannte Wörter und eine Bedeutungsachse,
+dann mehr Varianten; bei Problemen gezielt verkürzen oder Hilfen geben. Kein
+stiller Rücksprung auf einen niedrigeren Kurslevel, kein Zeitdruck. Auch ein
+kurzer Text kann orthografisch oder inhaltlich schwer sein.
+
+WORTSCHATZ: ALLTAGSNÄHE, NICHT EMPIRISCH ERMITTELTE HÄUFIGKEITSRANGLISTE
+Artikel/Funktionswörter: ein, eine, einen, der, die, das, dem, den, ist, sind,
+hat, haben, und, nicht, kein, keine, im, am, in, an, auf, unter, neben, vor,
+hinter, mit. Fragewörter später: wo, was, wer, welches, welche. Später: er, sie, es, sein, ihr (nur mit eindeutiger Referenz).
+Orte zuerst: im Haus, am Haus, im Bus, am Bus, auf dem Tisch, unter dem Tisch.
+Danach: in der Kiste, auf der Kiste, neben der Kiste, vor der Kiste,
+auf dem Stuhl, unter dem Stuhl, auf dem Bett, unter dem Bett, am Baum.
+Verben zuerst: ist, sind, hat, sitzt, liegt, steht.
+Danach: schläft, läuft, rennt, springt, spielt, schwimmt, trinkt, frisst, liest, malt,
+sieht, sucht, findet, nimmt, trägt, schiebt, zieht, jagt.
+Eigenschaften: rot, blau, gelb, grün; groß, klein; später lang, kurz, voll, leer.
+Zahlen: eins bis vier zuerst, danach fünf bis zehn; Mengenbilder zuerst 1–3.
+
+LESBARKEIT: VORBEDINGUNGEN EXPLIZIT PRÜFEN
+Die Bank enthält auch noch nicht eingeführte Buchstaben und Schreibmuster.
+Unter enthält r; zwei enthält z und w; drei enthält r. Diese Texte nicht einfach
+als leicht einstufen, nur weil sie kurz sind. Erst passende Laut-/Wortmodelle.
+Maus -> Mäuse: äu klingt hier wie eu, nicht wie ein isoliertes ä; Plural lernen.
+Ball -> Bälle, Hut -> Hüte, Buch -> Bücher: Vokalwechsel/Umlaute separat beachten.
+Weitere Hürden: ch, st/sp, Konsonantenhäufungen, ä/ö/ü, ß, Zahlwortschreibungen,
+Adjektivendungen und unregelmäßige Verbformen. Geschriebene Silben sind Hilfen,
+keine Aufforderung, Wörter aus isolierten TTS-Lauten zusammenzukleben.
+
+NOMENLEXIKON (ARTIKEL | SINGULAR | PLURAL)
+
+der | Ball | Bälle
+der | Hut | Hüte
+die | Maus | Mäuse
+die | Katze | Katzen
+der | Hund | Hunde
+der | Hase | Hasen
+das | Schaf | Schafe
+der | Fisch | Fische
+die | Ente | Enten
+die | Gans | Gänse
+der | Bus | Busse
+das | Haus | Häuser
+der | Baum | Bäume
+das | Boot | Boote
+das | Auto | Autos
+der | Tisch | Tische
+der | Stuhl | Stühle
+das | Bett | Betten
+das | Sofa | Sofas
+die | Kiste | Kisten
+der | Korb | Körbe
+das | Buch | Bücher
+der | Becher | Becher
+die | Tasse | Tassen
+der | Teller | Teller
+der | Schuh | Schuhe
+die | Dose | Dosen
+die | Blume | Blumen
+der | Apfel | Äpfel
+die | Birne | Birnen
+die | Banane | Bananen
+das | Brot | Brote
+das | Ei | Eier
+die | Puppe | Puppen
+der | Vogel | Vögel
+der | Frosch | Frösche
+das | Kind | Kinder
+der | Wagen | Wagen
+das | Tier | Tiere
+
+A – ZAHLWÖRTER ZUR ZIFFER
+=========================
+Einzelwörter, keine Mengenbilder. Nur nach Einführung der jeweiligen Schreibung.
+
+Z-001 | eins
+Z-002 | zwei
+Z-003 | drei
+Z-004 | vier
+Z-005 | fünf
+Z-006 | sechs
+Z-007 | sieben
+Z-008 | acht
+Z-009 | neun
+Z-010 | zehn
+
+B – KURZE MENGEN-WORTGRUPPEN
+============================
+Bilder müssen Zahl UND Nomen unterscheiden. Ein/eine statt eins vor dem Nomen.
+Bei pluralen Alternativen sind gleiche Tiere gleich groß, ohne Ziffern auf Bildern.
+Keine Rechenaufgabe; genaue, kleine, gut sichtbare Mengen.
+
+M-001 | Eine Maus
+M-002 | Zwei Mäuse
+M-003 | Drei Mäuse
+M-004 | Vier Mäuse
+M-005 | Ein Ball
+M-006 | Zwei Bälle
+M-007 | Drei Bälle
+M-008 | Vier Bälle
+M-009 | Ein Hut
+M-010 | Zwei Hüte
+M-011 | Drei Hüte
+M-012 | Vier Hüte
+M-013 | Eine Katze
+M-014 | Zwei Katzen
+M-015 | Drei Katzen
+M-016 | Vier Katzen
+M-017 | Ein Hund
+M-018 | Zwei Hunde
+M-019 | Drei Hunde
+M-020 | Vier Hunde
+M-021 | Ein Schaf
+M-022 | Zwei Schafe
+M-023 | Drei Schafe
+M-024 | Vier Schafe
+M-025 | Ein Fisch
+M-026 | Zwei Fische
+M-027 | Drei Fische
+M-028 | Vier Fische
+M-029 | Eine Ente
+M-030 | Zwei Enten
+M-031 | Drei Enten
+M-032 | Vier Enten
+M-033 | Ein Bus
+M-034 | Zwei Busse
+M-035 | Drei Busse
+M-036 | Vier Busse
+M-037 | Ein Baum
+M-038 | Zwei Bäume
+M-039 | Drei Bäume
+M-040 | Vier Bäume
+M-041 | Ein Boot
+M-042 | Zwei Boote
+M-043 | Drei Boote
+M-044 | Vier Boote
+M-045 | Ein Auto
+M-046 | Zwei Autos
+M-047 | Drei Autos
+M-048 | Vier Autos
+M-049 | Ein Buch
+M-050 | Zwei Bücher
+M-051 | Drei Bücher
+M-052 | Vier Bücher
+M-053 | Eine Tasse
+M-054 | Zwei Tassen
+M-055 | Drei Tassen
+M-056 | Vier Tassen
+M-057 | Eine Blume
+M-058 | Zwei Blumen
+M-059 | Drei Blumen
+M-060 | Vier Blumen
+M-061 | Ein Apfel
+M-062 | Zwei Äpfel
+M-063 | Drei Äpfel
+M-064 | Vier Äpfel
+
+C – EIGENSCHAFTEN ALS WORTGRUPPEN
+=================================
+Später als die einfachsten Ortskontraste: Adjektive sind flektiert.
+Rot/grün nie als alleiniger Gegensatz; Farbe ist bei Farbsehschwäche ungeeignet.
+Groß/klein nur mit demselben Nomen und einem festen Größenbezug im Bild.
+
+E-001 | Ein roter Ball
+E-002 | Ein blauer Ball
+E-003 | Ein gelber Ball
+E-004 | Ein grüner Ball
+E-005 | Ein roter Hut
+E-006 | Ein blauer Hut
+E-007 | Ein gelber Hut
+E-008 | Ein grüner Hut
+E-009 | Ein roter Bus
+E-010 | Ein blauer Bus
+E-011 | Ein gelber Bus
+E-012 | Ein grüner Bus
+E-013 | Ein rotes Auto
+E-014 | Ein blaues Auto
+E-015 | Ein gelbes Auto
+E-016 | Ein grünes Auto
+E-017 | Ein rotes Boot
+E-018 | Ein blaues Boot
+E-019 | Ein gelbes Boot
+E-020 | Ein grünes Boot
+E-021 | Ein roter Becher
+E-022 | Ein blauer Becher
+E-023 | Ein gelber Becher
+E-024 | Ein grüner Becher
+E-025 | Eine rote Tasse
+E-026 | Eine blaue Tasse
+E-027 | Eine gelbe Tasse
+E-028 | Eine grüne Tasse
+E-029 | Eine rote Kiste
+E-030 | Eine blaue Kiste
+E-031 | Eine gelbe Kiste
+E-032 | Eine grüne Kiste
+E-033 | Eine große Maus
+E-034 | Eine kleine Maus
+E-035 | Eine große Katze
+E-036 | Eine kleine Katze
+E-037 | Ein großer Hund
+E-038 | Ein kleiner Hund
+E-039 | Ein großer Ball
+E-040 | Ein kleiner Ball
+E-041 | Ein großer Hut
+E-042 | Ein kleiner Hut
+E-043 | Ein großes Haus
+E-044 | Ein kleines Haus
+E-045 | Ein großer Baum
+E-046 | Ein kleiner Baum
+E-047 | Eine große Kiste
+E-048 | Eine kleine Kiste
+
+D – ORTS-WORTGRUPPEN
+====================
+Beschriftungen/Wortgruppen, keine vollständigen Sätze. Erst einzelne Relationen
+vertraut machen, dann innerhalb der Runde wirklich mischen. Nicht jede Relation
+sofort freischalten. Am bedeutet hier eindeutig bei/an, nicht auf. Neben/am nicht
+als zwei gleichzeitig richtige Antwortbilder derselben Frage verwenden.
+Vor/hinter nur mit klarer Objektorientierung; ein verdeckter Gegenstand bleibt
+erkennbar. Nicht alle theoretisch möglichen Kombinationen sind gute Bilder.
+
+O-001 | Ball auf dem Tisch
+O-002 | Ball unter dem Tisch
+O-003 | Ball neben dem Tisch
+O-004 | Hut auf dem Tisch
+O-005 | Hut unter dem Tisch
+O-006 | Hut neben dem Tisch
+O-007 | Buch auf dem Tisch
+O-008 | Buch unter dem Tisch
+O-009 | Buch neben dem Tisch
+O-010 | Becher auf dem Tisch
+O-011 | Becher unter dem Tisch
+O-012 | Becher neben dem Tisch
+O-013 | Maus auf dem Tisch
+O-014 | Maus unter dem Tisch
+O-015 | Maus neben dem Tisch
+O-016 | Katze auf dem Tisch
+O-017 | Katze unter dem Tisch
+O-018 | Katze neben dem Tisch
+O-019 | Ball auf dem Stuhl
+O-020 | Ball unter dem Stuhl
+O-021 | Ball neben dem Stuhl
+O-022 | Hut auf dem Stuhl
+O-023 | Hut unter dem Stuhl
+O-024 | Hut neben dem Stuhl
+O-025 | Buch auf dem Stuhl
+O-026 | Buch unter dem Stuhl
+O-027 | Buch neben dem Stuhl
+O-028 | Schuh auf dem Stuhl
+O-029 | Schuh unter dem Stuhl
+O-030 | Schuh neben dem Stuhl
+O-031 | Maus auf dem Stuhl
+O-032 | Maus unter dem Stuhl
+O-033 | Maus neben dem Stuhl
+O-034 | Katze auf dem Stuhl
+O-035 | Katze unter dem Stuhl
+O-036 | Katze neben dem Stuhl
+O-037 | Ball auf dem Bett
+O-038 | Ball unter dem Bett
+O-039 | Ball neben dem Bett
+O-040 | Hut auf dem Bett
+O-041 | Hut unter dem Bett
+O-042 | Hut neben dem Bett
+O-043 | Buch auf dem Bett
+O-044 | Buch unter dem Bett
+O-045 | Buch neben dem Bett
+O-046 | Schuh auf dem Bett
+O-047 | Schuh unter dem Bett
+O-048 | Schuh neben dem Bett
+O-049 | Maus auf dem Bett
+O-050 | Maus unter dem Bett
+O-051 | Maus neben dem Bett
+O-052 | Katze auf dem Bett
+O-053 | Katze unter dem Bett
+O-054 | Katze neben dem Bett
+O-055 | Ball auf dem Sofa
+O-056 | Ball unter dem Sofa
+O-057 | Ball neben dem Sofa
+O-058 | Hut auf dem Sofa
+O-059 | Hut unter dem Sofa
+O-060 | Hut neben dem Sofa
+O-061 | Buch auf dem Sofa
+O-062 | Buch unter dem Sofa
+O-063 | Buch neben dem Sofa
+O-064 | Schuh auf dem Sofa
+O-065 | Schuh unter dem Sofa
+O-066 | Schuh neben dem Sofa
+O-067 | Maus auf dem Sofa
+O-068 | Maus unter dem Sofa
+O-069 | Maus neben dem Sofa
+O-070 | Katze auf dem Sofa
+O-071 | Katze unter dem Sofa
+O-072 | Katze neben dem Sofa
+O-073 | Ball in der Kiste
+O-074 | Ball auf der Kiste
+O-075 | Ball vor der Kiste
+O-076 | Ball neben der Kiste
+O-077 | Hut in der Kiste
+O-078 | Hut auf der Kiste
+O-079 | Hut vor der Kiste
+O-080 | Hut neben der Kiste
+O-081 | Buch in der Kiste
+O-082 | Buch auf der Kiste
+O-083 | Buch vor der Kiste
+O-084 | Buch neben der Kiste
+O-085 | Becher in der Kiste
+O-086 | Becher auf der Kiste
+O-087 | Becher vor der Kiste
+O-088 | Becher neben der Kiste
+O-089 | Schuh in der Kiste
+O-090 | Schuh auf der Kiste
+O-091 | Schuh vor der Kiste
+O-092 | Schuh neben der Kiste
+O-093 | Maus in der Kiste
+O-094 | Maus auf der Kiste
+O-095 | Maus vor der Kiste
+O-096 | Maus neben der Kiste
+O-097 | Ball im Haus
+O-098 | Ball am Haus
+O-099 | Ball vor dem Haus
+O-100 | Ball hinter dem Haus
+O-101 | Hut im Haus
+O-102 | Hut am Haus
+O-103 | Hut vor dem Haus
+O-104 | Hut hinter dem Haus
+O-105 | Maus im Haus
+O-106 | Maus am Haus
+O-107 | Maus vor dem Haus
+O-108 | Maus hinter dem Haus
+O-109 | Katze im Haus
+O-110 | Katze am Haus
+O-111 | Katze vor dem Haus
+O-112 | Katze hinter dem Haus
+O-113 | Hund im Haus
+O-114 | Hund am Haus
+O-115 | Hund vor dem Haus
+O-116 | Hund hinter dem Haus
+O-117 | Schaf im Haus
+O-118 | Schaf am Haus
+O-119 | Schaf vor dem Haus
+O-120 | Schaf hinter dem Haus
+O-121 | Ball am Baum
+O-122 | Ball unter dem Baum
+O-123 | Ball neben dem Baum
+O-124 | Ball hinter dem Baum
+O-125 | Hut am Baum
+O-126 | Hut unter dem Baum
+O-127 | Hut neben dem Baum
+O-128 | Hut hinter dem Baum
+O-129 | Maus am Baum
+O-130 | Maus unter dem Baum
+O-131 | Maus neben dem Baum
+O-132 | Maus hinter dem Baum
+O-133 | Katze am Baum
+O-134 | Katze unter dem Baum
+O-135 | Katze neben dem Baum
+O-136 | Katze hinter dem Baum
+O-137 | Hund am Baum
+O-138 | Hund unter dem Baum
+O-139 | Hund neben dem Baum
+O-140 | Hund hinter dem Baum
+O-141 | Schaf am Baum
+O-142 | Schaf unter dem Baum
+O-143 | Schaf neben dem Baum
+O-144 | Schaf hinter dem Baum
+O-145 | Ball im Bus
+O-146 | Ball am Bus
+O-147 | Ball vor dem Bus
+O-148 | Ball hinter dem Bus
+O-149 | Hut im Bus
+O-150 | Hut am Bus
+O-151 | Hut vor dem Bus
+O-152 | Hut hinter dem Bus
+O-153 | Maus im Bus
+O-154 | Maus am Bus
+O-155 | Maus vor dem Bus
+O-156 | Maus hinter dem Bus
+O-157 | Katze im Bus
+O-158 | Katze am Bus
+O-159 | Katze vor dem Bus
+O-160 | Katze hinter dem Bus
+O-161 | Hund im Bus
+O-162 | Hund am Bus
+O-163 | Hund vor dem Bus
+O-164 | Hund hinter dem Bus
+O-165 | Schaf im Bus
+O-166 | Schaf am Bus
+O-167 | Schaf vor dem Bus
+O-168 | Schaf hinter dem Bus
+
+E – VOLLSTÄNDIGE ORTSSÄTZE
+==========================
+Dieselben Bedeutungskontraste mit Artikel und ist. Artikel sind pro Nomen gewählt.
+Neue lange und kurze Formen nicht als getrennte riesige Levelketten behandeln.
+Ortsangaben sind statisch: auf/unter dem Tisch, in/auf der Kiste (Dativ).
+
+S-001 | Ein Ball ist auf dem Tisch.
+S-002 | Ein Ball ist unter dem Tisch.
+S-003 | Ein Ball ist neben dem Tisch.
+S-004 | Ein Hut ist auf dem Tisch.
+S-005 | Ein Hut ist unter dem Tisch.
+S-006 | Ein Hut ist neben dem Tisch.
+S-007 | Ein Buch ist auf dem Tisch.
+S-008 | Ein Buch ist unter dem Tisch.
+S-009 | Ein Buch ist neben dem Tisch.
+S-010 | Ein Becher ist auf dem Tisch.
+S-011 | Ein Becher ist unter dem Tisch.
+S-012 | Ein Becher ist neben dem Tisch.
+S-013 | Eine Maus ist auf dem Tisch.
+S-014 | Eine Maus ist unter dem Tisch.
+S-015 | Eine Maus ist neben dem Tisch.
+S-016 | Eine Katze ist auf dem Tisch.
+S-017 | Eine Katze ist unter dem Tisch.
+S-018 | Eine Katze ist neben dem Tisch.
+S-019 | Ein Ball ist auf dem Stuhl.
+S-020 | Ein Ball ist unter dem Stuhl.
+S-021 | Ein Ball ist neben dem Stuhl.
+S-022 | Ein Hut ist auf dem Stuhl.
+S-023 | Ein Hut ist unter dem Stuhl.
+S-024 | Ein Hut ist neben dem Stuhl.
+S-025 | Ein Buch ist auf dem Stuhl.
+S-026 | Ein Buch ist unter dem Stuhl.
+S-027 | Ein Buch ist neben dem Stuhl.
+S-028 | Ein Schuh ist auf dem Stuhl.
+S-029 | Ein Schuh ist unter dem Stuhl.
+S-030 | Ein Schuh ist neben dem Stuhl.
+S-031 | Eine Maus ist auf dem Stuhl.
+S-032 | Eine Maus ist unter dem Stuhl.
+S-033 | Eine Maus ist neben dem Stuhl.
+S-034 | Eine Katze ist auf dem Stuhl.
+S-035 | Eine Katze ist unter dem Stuhl.
+S-036 | Eine Katze ist neben dem Stuhl.
+S-037 | Ein Ball ist auf dem Bett.
+S-038 | Ein Ball ist unter dem Bett.
+S-039 | Ein Ball ist neben dem Bett.
+S-040 | Ein Hut ist auf dem Bett.
+S-041 | Ein Hut ist unter dem Bett.
+S-042 | Ein Hut ist neben dem Bett.
+S-043 | Ein Buch ist auf dem Bett.
+S-044 | Ein Buch ist unter dem Bett.
+S-045 | Ein Buch ist neben dem Bett.
+S-046 | Ein Schuh ist auf dem Bett.
+S-047 | Ein Schuh ist unter dem Bett.
+S-048 | Ein Schuh ist neben dem Bett.
+S-049 | Eine Maus ist auf dem Bett.
+S-050 | Eine Maus ist unter dem Bett.
+S-051 | Eine Maus ist neben dem Bett.
+S-052 | Eine Katze ist auf dem Bett.
+S-053 | Eine Katze ist unter dem Bett.
+S-054 | Eine Katze ist neben dem Bett.
+S-055 | Ein Ball ist auf dem Sofa.
+S-056 | Ein Ball ist unter dem Sofa.
+S-057 | Ein Ball ist neben dem Sofa.
+S-058 | Ein Hut ist auf dem Sofa.
+S-059 | Ein Hut ist unter dem Sofa.
+S-060 | Ein Hut ist neben dem Sofa.
+S-061 | Ein Buch ist auf dem Sofa.
+S-062 | Ein Buch ist unter dem Sofa.
+S-063 | Ein Buch ist neben dem Sofa.
+S-064 | Ein Schuh ist auf dem Sofa.
+S-065 | Ein Schuh ist unter dem Sofa.
+S-066 | Ein Schuh ist neben dem Sofa.
+S-067 | Eine Maus ist auf dem Sofa.
+S-068 | Eine Maus ist unter dem Sofa.
+S-069 | Eine Maus ist neben dem Sofa.
+S-070 | Eine Katze ist auf dem Sofa.
+S-071 | Eine Katze ist unter dem Sofa.
+S-072 | Eine Katze ist neben dem Sofa.
+S-073 | Ein Ball ist in der Kiste.
+S-074 | Ein Ball ist auf der Kiste.
+S-075 | Ein Ball ist vor der Kiste.
+S-076 | Ein Ball ist neben der Kiste.
+S-077 | Ein Hut ist in der Kiste.
+S-078 | Ein Hut ist auf der Kiste.
+S-079 | Ein Hut ist vor der Kiste.
+S-080 | Ein Hut ist neben der Kiste.
+S-081 | Ein Buch ist in der Kiste.
+S-082 | Ein Buch ist auf der Kiste.
+S-083 | Ein Buch ist vor der Kiste.
+S-084 | Ein Buch ist neben der Kiste.
+S-085 | Ein Becher ist in der Kiste.
+S-086 | Ein Becher ist auf der Kiste.
+S-087 | Ein Becher ist vor der Kiste.
+S-088 | Ein Becher ist neben der Kiste.
+S-089 | Ein Schuh ist in der Kiste.
+S-090 | Ein Schuh ist auf der Kiste.
+S-091 | Ein Schuh ist vor der Kiste.
+S-092 | Ein Schuh ist neben der Kiste.
+S-093 | Eine Maus ist in der Kiste.
+S-094 | Eine Maus ist auf der Kiste.
+S-095 | Eine Maus ist vor der Kiste.
+S-096 | Eine Maus ist neben der Kiste.
+S-097 | Ein Ball ist im Haus.
+S-098 | Ein Ball ist am Haus.
+S-099 | Ein Ball ist vor dem Haus.
+S-100 | Ein Ball ist hinter dem Haus.
+S-101 | Ein Hut ist im Haus.
+S-102 | Ein Hut ist am Haus.
+S-103 | Ein Hut ist vor dem Haus.
+S-104 | Ein Hut ist hinter dem Haus.
+S-105 | Eine Maus ist im Haus.
+S-106 | Eine Maus ist am Haus.
+S-107 | Eine Maus ist vor dem Haus.
+S-108 | Eine Maus ist hinter dem Haus.
+S-109 | Eine Katze ist im Haus.
+S-110 | Eine Katze ist am Haus.
+S-111 | Eine Katze ist vor dem Haus.
+S-112 | Eine Katze ist hinter dem Haus.
+S-113 | Ein Hund ist im Haus.
+S-114 | Ein Hund ist am Haus.
+S-115 | Ein Hund ist vor dem Haus.
+S-116 | Ein Hund ist hinter dem Haus.
+S-117 | Ein Schaf ist im Haus.
+S-118 | Ein Schaf ist am Haus.
+S-119 | Ein Schaf ist vor dem Haus.
+S-120 | Ein Schaf ist hinter dem Haus.
+S-121 | Ein Ball ist am Baum.
+S-122 | Ein Ball ist unter dem Baum.
+S-123 | Ein Ball ist neben dem Baum.
+S-124 | Ein Ball ist hinter dem Baum.
+S-125 | Ein Hut ist am Baum.
+S-126 | Ein Hut ist unter dem Baum.
+S-127 | Ein Hut ist neben dem Baum.
+S-128 | Ein Hut ist hinter dem Baum.
+S-129 | Eine Maus ist am Baum.
+S-130 | Eine Maus ist unter dem Baum.
+S-131 | Eine Maus ist neben dem Baum.
+S-132 | Eine Maus ist hinter dem Baum.
+S-133 | Eine Katze ist am Baum.
+S-134 | Eine Katze ist unter dem Baum.
+S-135 | Eine Katze ist neben dem Baum.
+S-136 | Eine Katze ist hinter dem Baum.
+S-137 | Ein Hund ist am Baum.
+S-138 | Ein Hund ist unter dem Baum.
+S-139 | Ein Hund ist neben dem Baum.
+S-140 | Ein Hund ist hinter dem Baum.
+S-141 | Ein Schaf ist am Baum.
+S-142 | Ein Schaf ist unter dem Baum.
+S-143 | Ein Schaf ist neben dem Baum.
+S-144 | Ein Schaf ist hinter dem Baum.
+S-145 | Ein Ball ist im Bus.
+S-146 | Ein Ball ist am Bus.
+S-147 | Ein Ball ist vor dem Bus.
+S-148 | Ein Ball ist hinter dem Bus.
+S-149 | Ein Hut ist im Bus.
+S-150 | Ein Hut ist am Bus.
+S-151 | Ein Hut ist vor dem Bus.
+S-152 | Ein Hut ist hinter dem Bus.
+S-153 | Eine Maus ist im Bus.
+S-154 | Eine Maus ist am Bus.
+S-155 | Eine Maus ist vor dem Bus.
+S-156 | Eine Maus ist hinter dem Bus.
+S-157 | Eine Katze ist im Bus.
+S-158 | Eine Katze ist am Bus.
+S-159 | Eine Katze ist vor dem Bus.
+S-160 | Eine Katze ist hinter dem Bus.
+S-161 | Ein Hund ist im Bus.
+S-162 | Ein Hund ist am Bus.
+S-163 | Ein Hund ist vor dem Bus.
+S-164 | Ein Hund ist hinter dem Bus.
+S-165 | Ein Schaf ist im Bus.
+S-166 | Ein Schaf ist am Bus.
+S-167 | Ein Schaf ist vor dem Bus.
+S-168 | Ein Schaf ist hinter dem Bus.
+
+F – HANDLUNGEN UND ZUSTÄNDE
+===========================
+Nur sichtbar unterscheidbare Handlungen. Liegen/stehen/sitzen gehören zum
+passenden Subjekt. Schläft: geschlossene Augen, ruhige Pose; nicht mit bloßem
+Liegen verwechseln. Frisst für Tiere; isst für Menschen. Keine Videos nötig.
+
+H-001 | Die Maus sitzt.
+H-002 | Die Maus läuft.
+H-003 | Die Maus schläft.
+H-004 | Die Maus frisst.
+H-005 | Die Katze sitzt.
+H-006 | Die Katze liegt.
+H-007 | Die Katze läuft.
+H-008 | Die Katze schläft.
+H-009 | Die Katze trinkt.
+H-010 | Die Katze springt.
+H-011 | Der Hund sitzt.
+H-012 | Der Hund liegt.
+H-013 | Der Hund rennt.
+H-014 | Der Hund schläft.
+H-015 | Der Hund trinkt.
+H-016 | Der Hund springt.
+H-017 | Der Hase sitzt.
+H-018 | Der Hase liegt.
+H-019 | Der Hase rennt.
+H-020 | Der Hase frisst.
+H-021 | Das Schaf steht.
+H-022 | Das Schaf liegt.
+H-023 | Das Schaf schläft.
+H-024 | Das Schaf frisst.
+H-025 | Die Ente steht.
+H-026 | Die Ente schwimmt.
+H-027 | Die Ente schläft.
+H-028 | Das Kind sitzt.
+H-029 | Das Kind steht.
+H-030 | Das Kind rennt.
+H-031 | Das Kind schläft.
+H-032 | Das Kind liest.
+H-033 | Das Kind malt.
+H-034 | Das Kind isst.
+H-035 | Das Kind trinkt.
+H-036 | Die Maus sitzt auf dem Tisch.
+H-037 | Die Maus sitzt unter dem Tisch.
+H-038 | Die Maus sitzt in der Kiste.
+H-039 | Die Maus sitzt am Baum.
+H-040 | Die Katze liegt auf dem Sofa.
+H-041 | Die Katze liegt unter dem Sofa.
+H-042 | Die Katze liegt auf dem Bett.
+H-043 | Die Katze liegt unter dem Bett.
+H-044 | Der Hund sitzt am Baum.
+H-045 | Der Hund sitzt am Haus.
+H-046 | Der Hund sitzt im Bus.
+H-047 | Der Hund sitzt neben dem Bett.
+H-048 | Der Ball liegt auf dem Tisch.
+H-049 | Der Ball liegt unter dem Tisch.
+H-050 | Der Ball liegt in der Kiste.
+H-051 | Der Ball liegt neben der Kiste.
+H-052 | Der Hut liegt auf dem Tisch.
+H-053 | Der Hut liegt unter dem Tisch.
+H-054 | Der Hut liegt auf dem Stuhl.
+H-055 | Der Hut liegt unter dem Stuhl.
+
+G – BESITZ, GEGENSTÄNDE UND ROLLEN
+==================================
+Eine korrekte Akkusativform ist Teil jedes Texts: einen Ball/Hut, eine Tasse,
+ein Buch. Menschliche Figuren müssen konsistent und zuvor bekannt sein.
+Jagt-Kontraste sind spätere spielerische Rollenaufgaben, keine Bildetiketten.
+
+B-001 | Mama hat einen Ball.
+B-002 | Mama hat einen Hut.
+B-003 | Mama hat ein Buch.
+B-004 | Mama hat eine Tasse.
+B-005 | Mama hat einen Apfel.
+B-006 | Papa hat einen Ball.
+B-007 | Papa hat einen Hut.
+B-008 | Papa hat ein Buch.
+B-009 | Papa hat eine Tasse.
+B-010 | Papa hat einen Apfel.
+B-011 | Oma hat einen Ball.
+B-012 | Oma hat einen Hut.
+B-013 | Oma hat ein Buch.
+B-014 | Oma hat eine Tasse.
+B-015 | Oma hat einen Apfel.
+B-016 | Opa hat einen Ball.
+B-017 | Opa hat einen Hut.
+B-018 | Opa hat ein Buch.
+B-019 | Opa hat eine Tasse.
+B-020 | Opa hat einen Apfel.
+B-021 | Mia hat einen Ball.
+B-022 | Mia hat einen Hut.
+B-023 | Mia hat ein Buch.
+B-024 | Mia hat eine Tasse.
+B-025 | Mia hat einen Apfel.
+B-026 | Tom hat einen Ball.
+B-027 | Tom hat einen Hut.
+B-028 | Tom hat ein Buch.
+B-029 | Tom hat eine Tasse.
+B-030 | Tom hat einen Apfel.
+B-031 | Das Kind hat einen Ball.
+B-032 | Der Hund hat einen Ball.
+B-033 | Die Katze hat einen Ball.
+B-034 | Mia liest ein Buch.
+B-035 | Tom liest ein Buch.
+B-036 | Mama liest ein Buch.
+B-037 | Oma liest ein Buch.
+B-038 | Mia trägt einen Hut.
+B-039 | Tom trägt einen Hut.
+B-040 | Papa trägt einen Hut.
+B-041 | Das Kind malt einen Baum.
+B-042 | Das Kind malt ein Haus.
+B-043 | Das Kind malt eine Maus.
+B-044 | Die Katze jagt die Maus.
+B-045 | Die Maus jagt die Katze.
+B-046 | Der Hund jagt die Katze.
+B-047 | Die Katze jagt den Hund.
+B-048 | Das Kind zieht den Wagen.
+B-049 | Der Hund zieht den Wagen.
+B-050 | Das Kind schiebt den Wagen.
+
+H – MENGE MIT ORT UND VERB
+==========================
+Später: Zahl, Nomen UND Relation lesen. Bilder dürfen keines davon allein
+verraten. Singular ist/Plural sind bzw. liegt/liegen, sitzt/sitzen beachten.
+Nicht aus jeder Eigenschaft blind ein Kreuzprodukt bilden.
+
+K-001 | Zwei Mäuse sind im Haus.
+K-002 | Zwei Mäuse sind am Haus.
+K-003 | Zwei Mäuse sind auf dem Tisch.
+K-004 | Zwei Mäuse sind unter dem Tisch.
+K-005 | Drei Mäuse sind im Haus.
+K-006 | Drei Mäuse sind am Haus.
+K-007 | Drei Mäuse sind auf dem Tisch.
+K-008 | Drei Mäuse sind unter dem Tisch.
+K-009 | Zwei Bälle sind in der Kiste.
+K-010 | Zwei Bälle sind auf der Kiste.
+K-011 | Zwei Bälle sind unter dem Tisch.
+K-012 | Zwei Bälle sind auf dem Tisch.
+K-013 | Drei Bälle sind in der Kiste.
+K-014 | Drei Bälle sind auf der Kiste.
+K-015 | Drei Bälle sind unter dem Tisch.
+K-016 | Drei Bälle sind auf dem Tisch.
+K-017 | Zwei Hüte sind auf dem Stuhl.
+K-018 | Zwei Hüte sind unter dem Stuhl.
+K-019 | Zwei Hüte sind auf dem Tisch.
+K-020 | Zwei Hüte sind unter dem Tisch.
+K-021 | Drei Hüte sind auf dem Stuhl.
+K-022 | Drei Hüte sind unter dem Stuhl.
+K-023 | Drei Hüte sind auf dem Tisch.
+K-024 | Drei Hüte sind unter dem Tisch.
+K-025 | Zwei Katzen sind auf dem Sofa.
+K-026 | Zwei Katzen sind unter dem Sofa.
+K-027 | Zwei Katzen sind auf dem Bett.
+K-028 | Zwei Katzen sind unter dem Bett.
+K-029 | Drei Katzen sind auf dem Sofa.
+K-030 | Drei Katzen sind unter dem Sofa.
+K-031 | Drei Katzen sind auf dem Bett.
+K-032 | Drei Katzen sind unter dem Bett.
+K-033 | Eine Maus sitzt im Haus.
+K-034 | Zwei Mäuse sitzen im Haus.
+K-035 | Drei Mäuse sitzen im Haus.
+K-036 | Eine Katze schläft auf dem Sofa.
+K-037 | Zwei Katzen schlafen auf dem Sofa.
+K-038 | Drei Katzen schlafen auf dem Sofa.
+K-039 | Ein Ball liegt in der Kiste.
+K-040 | Zwei Bälle liegen in der Kiste.
+K-041 | Drei Bälle liegen in der Kiste.
+K-042 | Ein Hut liegt unter dem Tisch.
+K-043 | Zwei Hüte liegen unter dem Tisch.
+K-044 | Drei Hüte liegen unter dem Tisch.
+
+I – ZWEI AUSSAGEN MIT UND
+=========================
+Beide Aussagen müssen für die richtige Bildantwort zutreffen. Späterer Bereich,
+kein Einstieg: mögliche Lesehürden werden nicht durch kurze Wörter beseitigt.
+
+U-001 | Die Maus sitzt und die Katze liegt.
+U-002 | Die Maus liegt und die Katze sitzt.
+U-003 | Der Hund sitzt und die Katze schläft.
+U-004 | Der Hund schläft und die Katze sitzt.
+U-005 | Der Ball ist rot und der Hut ist blau.
+U-006 | Der Ball ist blau und der Hut ist rot.
+U-007 | Ein Ball ist auf dem Tisch und ein Hut ist unter dem Tisch.
+U-008 | Ein Hut ist auf dem Tisch und ein Ball ist unter dem Tisch.
+U-009 | Eine Maus ist im Haus und eine Katze ist am Haus.
+U-010 | Eine Katze ist im Haus und eine Maus ist am Haus.
+U-011 | Zwei Mäuse sitzen und eine Katze schläft.
+U-012 | Eine Maus sitzt und zwei Katzen schlafen.
+
+J – GEZIELTE VERNEINUNG (OPTIONAL, SPÄT)
+========================================
+Nicht im ersten Ausbau. Ohne klar begrenzte Bildauswahl sind negative Sätze
+unterspezifiziert. Eine eindeutige Szene muss die konkrete Negation belegen.
+Keine Fangfragen, doppelte Verneinung oder bloße Worterkennung.
+
+N-001 | Die Kiste ist leer.
+N-002 | Die Kiste ist nicht leer.
+N-003 | Der Ball ist nicht in der Kiste.
+N-004 | Die Maus ist nicht unter dem Tisch.
+N-005 | Auf dem Tisch ist kein Ball.
+N-006 | In der Kiste ist keine Maus.
+N-007 | Der Hund schläft nicht.
+N-008 | Die Katze sitzt nicht.
+
+K – KURZE TEXTE MIT BEZUGSWÖRTERN (SPÄTER)
+==========================================
+Keine Geschichte als erster Ausbau. Für jede Frage müssen die Auswahlbilder
+dieselben genannten Gegenstände enthalten und sich in der gefragten Beziehung
+unterscheiden. Pronomen nur mit eindeutigem Bezug. Keine zusätzliche Rechenprobe.
+
+T-001 | Eine Maus ist im Haus. Sie sitzt in einer Kiste. Frage: Wo sitzt die Maus?
+T-002 | Ein Hund ist am Baum. Er hat einen Ball. Frage: Was hat der Hund?
+T-003 | Ein Ball liegt unter dem Tisch. Ein Hut liegt auf dem Tisch. Frage: Was liegt unter dem Tisch?
+T-004 | Eine Katze schläft auf dem Bett. Ein Hund sitzt neben dem Bett. Frage: Welches Tier schläft?
+T-005 | Mia hat einen Ball. Tom hat ein Buch. Frage: Wer hat das Buch?
+T-006 | Oma hat eine Tasse. Papa hat einen Hut. Frage: Wer hat die Tasse?
+T-007 | Zwei Mäuse sind im Haus. Eine Katze ist am Haus. Frage: Welche Tiere sind im Haus?
+T-008 | Ein Ball ist in der Kiste. Ein Buch liegt neben der Kiste. Frage: Was ist in der Kiste?
+
+L – KONKRETE MULTIPLE-CHOICE-SZENEN
+===================================
+Die folgenden Szenenbeschreibungen sind Redaktionsvorgaben, keine zusätzlichen
+Kindersätze. Ein richtiges Bild; Position der Antwort zufällig. Dieselben Motive,
+Farben, Hintergründe und Objektgrößen verwenden; kein richtiges Bild hervorheben.
+Bei höchstens zwei Antwortbildern wird eine Einzelwort-Abkürzung oft möglich.
+Kontrastanzahl und Ziel müssen zusammenpassen; Entlastung ggf. durch kürzeren
+Text/einfachere Motive, ohne gleichzeitig das Zielmerkmal zu verraten.
+
+Q-001
+Text: Ball unter dem Tisch
+Bilder (richtig zuerst nur in dieser Planungsdatei): Ball unter Tisch; Ball auf Tisch; Hut unter Tisch
+Zu lesen: Ort und Gegenstand
+
+Q-002
+Text: Eine Maus ist im Haus.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Maus im Haus; Maus am Haus; Katze im Haus
+Zu lesen: Subjekt und im/am
+
+Q-003
+Text: Ein Hut ist am Baum.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Hut am Baum; Hut am Bus; Ball am Baum
+Zu lesen: Gegenstand und Ort; kein unklarer am/neben-Gegensatz
+
+Q-004
+Text: Ein Ball ist auf der Kiste.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Ball auf Kiste; Ball in Kiste; Hut auf Kiste
+Zu lesen: auf/in und Gegenstand
+
+Q-005
+Text: Zwei Mäuse
+Bilder (richtig zuerst nur in dieser Planungsdatei): zwei Mäuse; drei Mäuse; zwei Katzen
+Zu lesen: Zahl und Nomen; ein-Maus-Variante in anderen Durchgängen
+
+Q-006
+Text: Drei Hüte
+Bilder (richtig zuerst nur in dieser Planungsdatei): drei Hüte; zwei Hüte; drei Bälle
+Zu lesen: Zahl und Nomen
+
+Q-007
+Text: Eine kleine Katze
+Bilder (richtig zuerst nur in dieser Planungsdatei): kleine Katze; große Katze; kleiner Hund
+Zu lesen: Größe und Tier; fester Größenmaßstab
+
+Q-008
+Text: Der Hund schläft.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Hund schläft; Hund sitzt; Katze schläft
+Zu lesen: Subjekt und Verb
+
+Q-009
+Text: Mia hat einen Ball.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Mia mit Ball; Mia mit Buch; Tom mit Ball
+Zu lesen: Figur und Gegenstand; Namen müssen bekannt sein
+
+Q-010
+Text: Zwei Mäuse sind unter dem Tisch.
+Bilder (richtig zuerst nur in dieser Planungsdatei): zwei Mäuse unter Tisch; drei Mäuse unter Tisch; zwei Mäuse auf Tisch; zwei Katzen unter Tisch
+Zu lesen: Zahl, Ort und Nomen; mindestens vier Kontrastbilder
+
+Q-011
+Text: Die Katze jagt den Hund.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Katze jagt Hund; Hund jagt Katze; Katze neben Hund
+Zu lesen: Rollen und Handlung, klare Bewegungsrichtung
+
+Q-012
+Text: Der Ball ist rot und der Hut ist blau.
+Bilder (richtig zuerst nur in dieser Planungsdatei): roter Ball/blauer Hut; blauer Ball/blauer Hut; roter Ball/roter Hut; blauer Ball/roter Hut
+Zu lesen: Beide Farbaussagen; alternative Aufgaben bei Farbsehschwäche
+
+Q-013
+Text: Ein Ball ist auf dem Tisch und ein Hut ist unter dem Tisch.
+Bilder (richtig zuerst nur in dieser Planungsdatei): Ball oben/Hut unten; Ball unten/Hut oben; beide oben; beide unten
+Zu lesen: Beide Satzteile, alle Bilder enthalten Ball und Hut
+
+M – ADAPTIVE AUSWAHL UND REDAKTIONELLE FREIGABE
+===============================================
+Schwierigkeitsmerkmale getrennt speichern/prüfen:
+- Erlernte Buchstaben/Schreibmuster und Vertrautheit mit jedem Wort.
+- Wortzahl, Satzbau, Singular/Plural und Zahl der relevanten Bedeutungsmerkmale.
+- Verwechselbarkeit und Erkennbarkeit der Bilder, nicht nur Anzahl der Optionen.
+- Fehlerart: Zahl, Subjekt, Relation, Handlung, Eigenschaft; Hilfen separat.
+- Unabhängige erfolgreiche Antworten über verschiedene Wörter/Szenen hinweg.
+Ein paar Erfolge mit denselben drei Texten reichen nicht als Transfernachweis.
+
+Bei Sicherheit: neue passende Wörter/Szenen, dann näher verwandte Alternativen,
+dann längere Texte. Immer nur wenige neue Anforderungen gleichzeitig. Bei
+Problemen: vertraute Nomen, kürzere Wortgruppe, weniger irrelevante Bilddetails,
+gezielte Hilfe. Assistierte Antworten bleiben von selbstständigem Können getrennt.
+Beispiel: Zwei Mäuse sind unter dem Tisch. -> Zwei Mäuse -> nach Fehler gezielte
+Modellierung -> später gleiche Beziehung mit anderem bekanntem Nomen prüfen.
+
+Gegen Musterlernen:
+- Jede Ortsrunde enthält gegensätzliche Relationen, auch wenn alte im-Texte sicher
+  und neue am-Texte ungesehen sind. Keine langen am-Blöcke, kein starres im/am-Muster.
+- Mengen mischen; nicht immer zwei. Gleiche Figur kann in jeder Anzahl vorkommen.
+- Keine Antwort per einzelnem letzten Wort, Objektfarbe, Bildposition oder Stil.
+- Die letzten Aufgaben/Vorlagen/Figuren begrenzt wiederholen; Fehler nach Abstand.
+- Ein neuer Satz aus denselben bekannten Wörtern prüft mehr als dieselbe Bild-ID.
+
+Vor Freigabe jedes Aufgabenpakets:
+1. Artikel, Kasus, Numerus, Verbform und Natürlichkeit des gesamten Texts prüfen.
+2. Wörter auf vorhandene Modelle/Schreibmuster prüfen; fehlendes Material ergänzen.
+3. Eindeutiges Zielbild und tatsächlich falsche, vergleichbare Alternativen prüfen.
+4. Mengen exakt zählen; keine generierten falschen Zahlen/zusätzlichen Objekte.
+5. Auf echtem Handy vorführen; Bilder dürfen nicht das Leseschwierige verursachen.
+6. Text und optionale vollständige Audiohilfe müssen exakt zusammenpassen.
+7. Neue/alte Profile, Hilfen, Abstand, Relationenmischung und Resume prüfen.
+Diese Datei erfüllt noch nicht diese vollständige Freigabe. Kein neues Audio oder
+Bildmaterial wurde für diesen Entwurf erzeugt. Kein Laufzeit-Generator implementiert.
+
+UMFANG
+Z: 10 Leseeinträge
+M: 64 Leseeinträge
+E: 48 Leseeinträge
+O: 168 Leseeinträge
+S: 168 Leseeinträge
+H: 55 Leseeinträge
+B: 50 Leseeinträge
+K: 44 Leseeinträge
+U: 12 Leseeinträge
+N: 8 Leseeinträge
+T: 8 Leseeinträge
+Gesamt: 635 nummerierte Leseeinträge; dazu 13 konkrete Kontrastaufgaben.
+Nicht alle Einträge sind vollständige Sätze; Zahlwörter, Wortgruppen und Texte
+sind ausdrücklich getrennt. Orts-Wortgruppen und Satzformen teilen Bedeutungen.

@@ -1,3 +1,32 @@
+# Erweiterte Wort- und Satzbank: Entwurf vom 2026-10-28
+
+Auf ausdrücklichen Wunsch wurde eine große deutsche Textsammlung erstellt:
+[docs/curriculum/SENTENCE-BANK-DE-DRAFT.txt](curriculum/SENTENCE-BANK-DE-DRAFT.txt).
+635 nummerierte Leseeinträge in 11 Gruppen, 39 Nomen mit Artikel/Plural,
+13 konkrete Multiple-Choice-Kontraste. Wortgruppen und vollständige Sätze sind
+getrennt; viele Ortsinhalte haben eine kurze und eine längere Fassung.
+
+- [x] Alltagswortschatz, Mengen, Orte, Eigenschaften, Handlungen und kurze Texte
+      als breite Kandidatenbank dokumentieren; keine App-Integration.
+- [ ] Wenige Übungsbereiche mit adaptiver Länge, Wortauswahl und semantischen
+      Kontrasten planen; nicht einen neuen Level für jede kleine Wortliste.
+- [ ] Zuerst im/am reparieren, dann auf/unter; Mengen 1–3 und einfache Handlungen
+      vorbereiten. Nicht alle 635 Texte oder alle neuen Schreibmuster auf einmal.
+- [ ] Orthografie, Grammatik, fehlende vollständige Wortmodelle und klare
+      Bilder/Alternativen je freizugebender Familie prüfen. Mäuse setzt äu/Plural,
+      zwei z/w und unter r voraus. Kurze Texte sind nicht automatisch leicht.
+- [ ] Zahlwort -> Ziffer (sieben -> 7) von Mengen-Wortgruppe -> Szene (zwei Mäuse
+      -> zwei Mäuse im Bild) unterscheiden. Bei Letzterem Zahl UND Nomen prüfen.
+- [ ] Häufige Muster nicht nur mehrfach abfragen: neue Kombinationen bekannter
+      Wörter, gezielte Fehlerwiederholung, gemischte Relationen und unabhängige
+      Bedeutungsmerkmale. Keine Lösung allein über das letzte Wort/Bildposition.
+
+Nur Text-/Planungserstellung autorisiert und ausgeführt. Die App bleibt v9;
+keine neuen Bilder, Audioaufnahmen, Laufzeitlogik oder Veröffentlichung.
+Die früheren konkreten Fehlerkorrekturen bleiben ebenfalls offen:
+
+---
+
 # Next update: correct grammar and mix sentence relations
 
 Latest user feedback after testing Level 33: the prompts appeared to use only

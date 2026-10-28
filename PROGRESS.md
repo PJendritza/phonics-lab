@@ -1,3 +1,34 @@
+# Latest work: expanded German sentence-bank draft — no app changes
+
+2026-10-28: User requested a long, thoughtful word/sentence collection as a text
+file, with shorter phrases, quantities, auf/unter and many meaningful combinations;
+fewer broad adaptive exercise areas rather than many small fixed-word levels.
+Created docs/curriculum/SENTENCE-BANK-DE-DRAFT.txt: 635 unique numbered reading
+entries (10 number words, 64 quantity phrases, 48 property phrases, 168 location
+phrases, 168 full location sentences, 55 action/state sentences, 50 possession/role
+sentences, 44 quantity/location sentences, 12 coordinated sentences, 8 optional
+negations, 8 short texts), 39 article/plural noun entries and 13 picture-choice
+specifications. Short/full location forms deliberately share meanings. This is
+candidate content, not 635 released exercises or independently validated lessons.
+
+The draft distinguishes single number-word-to-digit matching from quantity+noun
+scene comprehension. It flags new graphemes/letters/plurals (including äu in
+Mäuse), gender/case/verb agreement, visual ambiguity, relation balance, known-word
+transfer and assistance. Suggested first slice: repair im/am, add auf/unter with
+familiar nouns, then quantities 1–3 and clear actions. No giant new level chain.
+No new speech recognition, artwork, audio, app integration, builds or deployment.
+All earlier bug fixes remain pending; current public app is still v9.
+
+Validation performed: checked 635 unique IDs and unique reading strings, section
+counts, article prefixes of all full Maus location sentences and absence of Ein
+Maus in data entries; reviewed authored grammar templates and scene contrasts.
+These checks are document/content sanity checks, not a native educator review or
+proof of image/audio quality. git diff --check; confirmed app/ unchanged. No
+runtime tests/build needed for planning-only files. Preparation script is external
+at /tmp/prepare_sentence_bank_draft.py; the actual readable text is committed.
+
+---
+
 # Latest feedback: number-word answers — planning only
 
 2026-10-28: For sieben show the numeral 7, not seven balls. Apply numeral

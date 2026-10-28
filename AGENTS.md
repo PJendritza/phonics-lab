@@ -13,6 +13,13 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+The latest request authorises only a large content/planning text, now at
+docs/curriculum/SENTENCE-BANK-DE-DRAFT.txt (635 candidate reading entries).
+See docs/NEXT-VERSION.md. Do not integrate/generate media/deploy until requested.
+Distinguish seven -> digit 7 from two mice -> a scene with two mice; do not apply
+the digit-only rule to whole quantity+noun comprehension. Candidate text includes
+new letters/graphemes/plurals; short phrases are not automatically decodable.
+
 Latest post-v9 feedback is planning only: record sentence grammar/audio corrections
 (Eine Maus, not Ein Maus) and later investigate Level 33 im/am mixing. See the first section of docs/NEXT-VERSION.md; do not implement or
 deploy that next update until requested. The completed v9 authorisation follows.
