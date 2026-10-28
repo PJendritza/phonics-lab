@@ -1,8 +1,8 @@
-import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=f5464eac2222';
-import {illustration} from './pictures.mjs?v=f5464eac2222';
-import {CHAPTERS} from './level-catalog.mjs?v=f5464eac2222';
-import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice,useReadingHelp,duePractice,startReview} from './learning.mjs?v=f5464eac2222';
-import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=f5464eac2222';
+import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=5a2760f53294';
+import {illustration} from './pictures.mjs?v=5a2760f53294';
+import {CHAPTERS} from './level-catalog.mjs?v=5a2760f53294';
+import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice,useReadingHelp,duePractice,startReview} from './learning.mjs?v=5a2760f53294';
+import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=5a2760f53294';
 const root=document.querySelector('#app');let storage;try{storage=window.localStorage;}catch{}
 let {store,warning}=readStored(storage),heard=false,previewAll=false,pendingImport=null;
 let transition=null,viewToken=0,keyboardMode=false;
@@ -66,7 +66,7 @@ function readingText(item,stage,help){
 }
 function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const p=progress(),session=p.pending;if(!session){home();return;}
- const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item=ITEMS[r.target],letters=word?lettersFor(r.target):[],finished=r.solved;
+ const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item={...ITEMS[r.target],...(r.cue===ITEMS[r.target]?.shortAudio?{text:ITEMS[r.target].shortText}:{})},letters=word?lettersFor(r.target):[],finished=r.solved;
  const feedback=feedbackCorrect===false&&selected?choiceFeedback(s,selected):null;
  const teaching=r.help==='show'||r.help==='ack',expected=word?letters[r.position]?.toLowerCase():r.target;
  const title=teaching?'Schau und höre.':picture?'Welches Bild passt?':word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?';

@@ -1,3 +1,4 @@
+import {ITEMS} from './data.mjs?v=5a2760f53294';
 // Transparent practice scheduling, not a clinical or validated learning model.
 // Wall-clock dates never influence score/speed. Turns space retrievals now;
 // dates offer deliberate review later without moving the forward cursor back.
@@ -6,22 +7,43 @@ export const freshSpacing=()=>({turn:0,history:[],reviews:{}});
 const keyFor=(stage,target)=>`${stage.group}:${target}`;
 const isSecure=skill=>!!skill&&skill.recent.length>=2&&skill.recent.slice(-2).every(Boolean)&&skill.recent.slice(-4).filter(Boolean).length/Math.min(4,skill.recent.length)>=.75;
 
-export function selectTarget(progress,stage,now=Date.now()){
+export function selectTarget(progress,stage,now=Date.now(),rng=Math.random,completedTargets=[]){
  const spacing=progress.spacing??freshSpacing(),history=spacing.history;
  // At least two other questions in a pool of 3+, or one in a pool of 2.
  const gap=Math.min(2,stage.targets.length-1);
  let eligible=stage.targets.filter(t=>!history.slice(-gap).includes(keyFor(stage,t)));
  if(!eligible.length)eligible=stage.targets.filter(t=>keyFor(stage,t)!==history.at(-1));
  if(!eligible.length)eligible=[...stage.targets];
+ if(stage.balanceRelations){
+  const completed=completedTargets.map(t=>ITEMS[t]?.scene).filter(Boolean),recent=completed.slice(-8);
+  if(stage.mixed){
+   const families=[...new Set(eligible.map(t=>ITEMS[t].scene?.family))],counts=new Map(families.map(f=>[f,completed.filter(v=>v.family===f).length]));
+   const errors=eligible.filter(t=>{const r=spacing.reviews[keyFor(stage,t)];return r?.streak===0&&r.after<=spacing.turn+1;});
+   if(errors.length)eligible=errors;
+   else {const min=Math.min(...counts.values()),least=families.filter(f=>counts.get(f)===min),chosen=least[Math.floor(rng()*least.length)];eligible=eligible.filter(t=>ITEMS[t].scene?.family===chosen);}
+  }
+  if(eligible.every(t=>ITEMS[t].scene?.family==='place')){
+   const places=completed.filter(v=>v.family==='place'),missing=['im','am'].filter(r=>!places.some(v=>v.relation===r));
+   const required=eligible.filter(t=>missing.includes(ITEMS[t].scene.relation));
+   if(required.length)eligible=required;
+   else {
+    const last=places.slice(-2);if(last.length===2&&last[0].relation===last[1].relation){const varied=eligible.filter(t=>ITEMS[t].scene.relation!==last[1].relation);if(varied.length)eligible=varied;}
+    const relations=[...new Set(eligible.map(t=>ITEMS[t].scene.relation))],min=Math.min(...relations.map(r=>places.filter(v=>v.relation===r).length));
+    const errors=eligible.filter(t=>{const r=spacing.reviews[keyFor(stage,t)];return r?.streak===0&&r.after<=spacing.turn+1;});
+    if(errors.length)eligible=errors;else eligible=eligible.filter(t=>places.filter(v=>v.relation===ITEMS[t].scene.relation).length===min);
+   }
+  }
+ }
  const rank=target=>{
   const key=keyFor(stage,target),skill=progress.skills[key],review=spacing.reviews[key];
+  if(review?.streak===0&&review.after<=spacing.turn+1)return [-1,0,review.last];
   if(!skill?.introduced)return [0,0,0];
   if(!skill.seen)return [1,0,0];
   const secure=isSecure(skill),ready=!review||(review.after<=spacing.turn+1&&(!secure||review.due<=now));
   const accuracy=skill.recent.filter(Boolean).length/Math.max(1,skill.recent.length);
   return [ready?(secure?3:2):4,ready&&!secure?accuracy:review?.last??0,review?.last??0];
  };
- return eligible.map((target,index)=>({target,index,rank:rank(target)})).sort((a,b)=>a.rank[0]-b.rank[0]||a.rank[1]-b.rank[1]||a.rank[2]-b.rank[2]||a.index-b.index)[0].target;
+ return eligible.map((target,index)=>({target,index:stage.balanceRelations?rng():index,rank:rank(target)})).sort((a,b)=>a.rank[0]-b.rank[0]||a.rank[1]-b.rank[1]||a.rank[2]-b.rank[2]||a.index-b.index)[0].target;
 }
 
 export function recordPractice(progress,stage,target,first,demonstration,now=Date.now()){
