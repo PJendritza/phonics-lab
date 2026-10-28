@@ -5,6 +5,12 @@ Latest user feedback after testing Level 33: the prompts appeared to use only
 reading the relation. **Planning only: do not implement, regenerate audio, build
 or deploy until the user authorises the next implementation.**
 
+- [ ] **Match number words to numerals, not counted objects.** For sieben, show
+      the digit 7 instead of seven balls. Apply the same rule to other number
+      words when added: the reading task should match the written number word to
+      its numeral, without requiring object counting. Use clearly legible digits
+      and appropriate numeral alternatives. This supersedes the older instruction
+      to compose exactly seven balls. Planning only; the live app is unchanged.
 - [ ] **Correct noun/article agreement, including the matching audio.** The user's
       screenshot shows “Ein Maus ist im Haus.” Correct: “Eine Maus ist im Haus.”
       Maus is feminine (die Maus); all four mouse sentences (im/am Bus/Haus) need

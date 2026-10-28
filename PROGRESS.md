@@ -1,3 +1,12 @@
+# Latest feedback: number-word answers — planning only
+
+2026-10-28: For sieben show the numeral 7, not seven balls. Apply numeral
+answers to other number words when added. Recorded in docs/NEXT-VERSION.md for
+the next implementation; no app, artwork, audio, build or deployment changes.
+This supersedes the earlier seven-ball illustration requirement.
+
+---
+
 # Latest feedback: sentence grammar and relation mixing — planning only
 
 The user also supplied a screenshot confirming “Ein Maus ist im Haus.” The

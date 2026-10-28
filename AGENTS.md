@@ -76,7 +76,7 @@ preserve it across navigation, reload and backup. Whole-word human speech stays
 separate from pre-generated full-sentence help. Do not add new words to isolated
 phone feedback/build banks without real phoneme recordings. Phrase/sentence distractors
 must contrast subject and relation; advanced sentences also contrast location. CurriculumVersion 9 preserves stable IDs/history/goals, allows old legacy sentence tasks to resume exactly and reassesses the expanded comprehension flags. Previously completed courses enter new phrases; v6 completion enters sentence words. Skip already-passed forward stages rather than replaying old material.
-AI-generated WebP illustrations are composed using SVG; sources/hashes/prompts are documented. Keep sprite aspect ratios exact so adjacent cells cannot leak. Seven uses exactly seven generated balls. New vocabulary and artwork need human review. Total illustrated static-site budget is 4 MB; media are on demand.
+AI-generated WebP illustrations are composed using SVG; sources/hashes/prompts are documented. Keep sprite aspect ratios exact so adjacent cells cannot leak. Current v9 uses seven generated balls; the pending user-requested replacement is the numeral 7 for sieben and numerals for other number words. Do not retain the ball-count requirement in the next implementation. New vocabulary and artwork need human review. Total illustrated static-site budget is 4 MB; media are on demand.
 
 Grouping/spacing: preserve stable IDs and the first 14 numbers; v9 has 33 levels. level-catalog.mjs defines five
 chapters and honest activity names. spacing.mjs prevents the same target in the
