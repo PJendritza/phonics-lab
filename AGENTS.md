@@ -13,6 +13,14 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+Latest authorised update is v12: add articles to shortened noun phrases, use
+correct dative after mit, replace ambiguous Becher with Ballon, improve the duck
+art and add an alphabetic active-word inventory at words.html (parent/About links).
+Inventory must derive from live task texts/cues, not draft banks or invented
+forms. Keep singular/plural word forms and level mapping, search and CSV export.
+Internal legacy IDs containing becher remain for resume; visible text/audio/art
+use Ballon. Requeue affected recent mastery without deleting historical totals.
+
 Latest authorised release is v11: append two mixed reading levels (34/35), overhaul
 all child directions, make directions small with an explicit info replay, gate
 reading speech after two errors and remove the foreign Kalulu sound clips. Earlier

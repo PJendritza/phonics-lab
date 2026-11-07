@@ -1,3 +1,72 @@
+# v12: articles, recognizable pictures and alphabetic word inventory
+
+Latest request implemented on articles-clear-images-and-word-list; canonical repo
+https://github.com/PJendritza/phonics-lab, checkout /workspace/Kalulu-DE.
+
+Short singular place phrases now include Ein/Eine; possession phrases use articles
+and dative after mit (Eine Katze mit einem Buch / einem Ballon). Proper names
+remain natural (Oma mit einem Schuh); numbered plurals retain Zwei/Drei rather
+than adding an ungrammatical indefinite article. Full sentences remain grammatical.
+Matching full/short recordings regenerated with the approved local Thorsten setup.
+
+Becher replaced visibly/audibly by der Ballon. Internal becher IDs remain for saved
+question/choice compatibility. Migration keeps historical seen/first counters,
+awards and questions; clears affected recent certainty/review dates and reopens
+Level 34 so old cup answers do not certify the replacement meaning. Duck awake/
+asleep art is now a short-necked brown female mallard with blue wing patch, clearly
+different from the old white goose-like bird. Atlas G provenance/PNG hash recorded;
+old cells remain in the historical atlas but are no longer used for these answers.
+
+words.html derives 119 current words/forms from actual task targets, short/full
+texts and heard word cues, sorted with German collation. Articles, inflections,
+plural forms and levels are included. Letter/syllable-only targets, invented
+choices, unused legacy text and future drafts are excluded. Lemma/article shown
+where explicitly mapped; not every entry is claimed previously taught/learned by
+a child. Parent and About links, search and UTF-8 CSV export are included.
+
+Executed:
+```sh
+python3 scripts/prepare_illustrations.py --only g
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py --utterances-only
+node --test tests/*.test.mjs
+python3 scripts/build.py
+python3 scripts/audit_audio.py
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mixed-reading.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+node tests/child-guidance.cjs
+node tests/word-list.cjs
+git diff --check
+```
+74 unit/content tests pass; all 560 audio clips decode and match their hashes.
+Twelve browser suites pass including search/export/parent links, all reading/help
+and profile behaviors and 320/390/768px touch layouts. The profiles UI fixture was
+made deterministic (same seeded sampler as pure tests) after its random eight-
+round preparation failed to reach representative mastery; no UI assertion skipped.
+All seven release-gate records match app hash 46d41681aedb. Screenshots of mallard,
+Ballon and article-bearing text inspected externally. Physical-device, native
+pronunciation and educator review remain distinct from these technical checks.
+
+Build: 600 files, 10,549,981 bytes dirty (clean metadata adds one byte), under the
+14 MB cap. Seven atlas sheets / 71 named sprite entries; generation files external.
+35 levels and existing profiles retained; prior foreign-consonant removal and
+opt-in reading speech after two errors remain unchanged. No accounts or paid API.
+
+Publication pending clean source commit/push and verified existing gh-pages release.
+Follow scripts/publish.py (now also requires current word-list browser evidence)
+and scripts/verify_live.py; no Pages configuration changes. Record exact deployed
+commits/results below. Next user check: Level 34 article/duck/Ballon tasks, then
+Für Eltern -> Alle Wörter alphabetisch ansehen (also linked from About).
+
+---
+
 # Phonics Lab v11: two new reading packs and child guidance — verified release
 
 Canonical repo: https://github.com/PJendritza/phonics-lab . Feature branch:

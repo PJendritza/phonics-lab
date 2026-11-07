@@ -1,7 +1,7 @@
 // AI-generated picture-book artwork. Layout uses SVG; the objects are not hand-
 // drawn SVG icons. Exact source prompts/hashes: docs/illustration-sources.json.
 import {SHEETS,SPRITES} from './image-data.mjs';
-const ALIASES={katze:'action_katze_wach',hund:'action_hund_wach',ente:'action_ente_wach',frosch:'action_frosch_wach',buch:'action_buch_zu',tasche:'action_tasche_zu'};
+const ALIASES={becher:'ballon',katze:'action_katze_wach',hund:'action_hund_wach',ente:'action_ente_wach',frosch:'action_frosch_wach',buch:'action_buch_zu',tasche:'action_tasche_zu'};
 const sprite=(id,x,y,width,height)=>{
  const spec=SPRITES[ALIASES[id]??id],sheet=SHEETS[spec.sheet],url=new URL(sheet.src,import.meta.url).href;
  const scale=Math.min(width/spec.rect[2],height/spec.rect[3]),w=spec.rect[2]*scale,h=spec.rect[3]*scale;

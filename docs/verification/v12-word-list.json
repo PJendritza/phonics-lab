@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "assetVersion": "46d41681aedb",
+  "words": 119,
+  "checks": [
+    "Parent and About links, alphabetic actual-word table, search, removed Becher, Ballon level mapping, CSV export and 320/390/768px layouts"
+  ],
+  "pageErrors": []
+}

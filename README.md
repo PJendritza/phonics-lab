@@ -3,7 +3,9 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=11.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=11.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=12.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=12.0.0)**
+
+[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=12.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. Short noun phrases include articles; Ballon replaces the ambiguous Becher.
 
 The 35 numbered levels have five groups. Level 33 has 80 mixed tasks; Level 34 adds 80 animal/object tasks and Level 35 adds 76 everyday tasks. Small directions use an info button; reading speech unlocks only after two errors. [v11 behavior and audio limits](docs/CHILD-GUIDANCE.md). Labels distinguish
 listening/spelling recognition, independent word reading and sentence understanding.

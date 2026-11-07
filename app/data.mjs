@@ -1,8 +1,8 @@
 import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs';
 import {describeLevel} from './level-catalog.mjs';
 import {FORMS} from './word-choices.mjs';
-export const VERSION='11.0.0';
-export const CURRICULUM_VERSION=11;
+export const VERSION='12.0.0';
+export const CURRICULUM_VERSION=12;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},

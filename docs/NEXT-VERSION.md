@@ -1,3 +1,19 @@
+# v12 articles, recognizable pictures and active vocabulary list
+
+- [x] Singular short place/possession phrases include articles; mit uses einem/einer.
+- [x] Keep correct numeral phrases and natural proper names (Oma/Mama).
+- [x] Replace Becher with clearly recognizable Ballon in active text, audio and art.
+- [x] Replace white goose-like duck with a short-necked brown mallard pair.
+- [x] words.html: alphabetic actual words/forms, lemma where mapped, levels,
+      search and CSV; linked from parent tools and About.
+- [x] Preserve IDs, rewards and historical word counters; reset recent Becher
+      certainty and schedule changed meaning for practice rather than fake mastery.
+- [ ] Complete final browser/live checks; see PROGRESS.md for executed status.
+
+Historical release/planning context follows.
+
+---
+
 # v11: two new reading packs and child-friendly guidance
 
 Latest user request authorises implementation/publication. Earlier holds below

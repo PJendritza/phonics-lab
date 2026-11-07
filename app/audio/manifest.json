@@ -2341,7 +2341,7 @@
     },
     {
       "id": "phrase_ball_im_bus",
-      "label": "Ball im Bus",
+      "label": "Ein Ball im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_im_bus.mp3",
@@ -2350,7 +2350,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5618865ffa26e44d8a68dd76b85ff7cd34543f9437af8713b215204f50d92a05",
+      "sha256": "e588d60554227d70957b9fe1100128c416b3c1c3e01abef16130411a791b744d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2368,7 +2368,7 @@
     },
     {
       "id": "phrase_ball_am_bus",
-      "label": "Ball am Bus",
+      "label": "Ein Ball am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_am_bus.mp3",
@@ -2377,7 +2377,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "e1ee46b98d8bd048be1776f4bf4f7f9fd3d5822275a16a5d22db651fd2280e5b",
+      "sha256": "cb7e85c4219bc9026dc889479862c589bf1c23dea2ea990133b29d1909d7b912",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2395,7 +2395,7 @@
     },
     {
       "id": "phrase_hut_im_bus",
-      "label": "Hut im Bus",
+      "label": "Ein Hut im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_im_bus.mp3",
@@ -2404,7 +2404,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c53ab280e99043c068034adc06ec74f9af46e9ab8bf6d5a295613fd27b42580d",
+      "sha256": "09922d87fa0b6f45ff2be51fa4c0feb7751f3fad9ee4703af94b02e6098a6b78",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2422,7 +2422,7 @@
     },
     {
       "id": "phrase_hut_am_bus",
-      "label": "Hut am Bus",
+      "label": "Ein Hut am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_am_bus.mp3",
@@ -2431,7 +2431,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6f75cd05c98b5d4cbc060c3a0de0ca0418ddb06d5bb383116a5bd0b7608748b9",
+      "sha256": "f2eeb87688d4e54e403ea2279c68eda03330ecf65f2a4aa9735bf54ededecb5f",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2476,7 +2476,7 @@
     },
     {
       "id": "ball_im_bus_short",
-      "label": "Ball im Bus",
+      "label": "Ein Ball im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_im_bus_short.mp3",
@@ -2485,7 +2485,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5618865ffa26e44d8a68dd76b85ff7cd34543f9437af8713b215204f50d92a05",
+      "sha256": "e588d60554227d70957b9fe1100128c416b3c1c3e01abef16130411a791b744d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2503,7 +2503,7 @@
     },
     {
       "id": "ball_am_bus_short",
-      "label": "Ball am Bus",
+      "label": "Ein Ball am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_am_bus_short.mp3",
@@ -2512,7 +2512,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "e1ee46b98d8bd048be1776f4bf4f7f9fd3d5822275a16a5d22db651fd2280e5b",
+      "sha256": "cb7e85c4219bc9026dc889479862c589bf1c23dea2ea990133b29d1909d7b912",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2530,7 +2530,7 @@
     },
     {
       "id": "ball_im_haus_short",
-      "label": "Ball im Haus",
+      "label": "Ein Ball im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_im_haus_short.mp3",
@@ -2539,7 +2539,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "d8f0bc4fec2d7ef6e11ec7bae67926dad49ef9719bf787409d20206206374e55",
+      "sha256": "07b0b35d61bc803ced96c0de4098c18b5a5500d625e945d8b73fe000d5fb7f93",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2557,7 +2557,7 @@
     },
     {
       "id": "ball_am_haus_short",
-      "label": "Ball am Haus",
+      "label": "Ein Ball am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_am_haus_short.mp3",
@@ -2566,7 +2566,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4891144e2814b98cd154fd16a18163c64e6068b94d7c5c62d6bc0a408a8d461b",
+      "sha256": "231391bcfcbf7b715982a07ace7457cf56eb7f972998e301c97cb3f10dce37c0",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2611,7 +2611,7 @@
     },
     {
       "id": "ball_am_baum_short",
-      "label": "Ball am Baum",
+      "label": "Ein Ball am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_am_baum_short.mp3",
@@ -2620,7 +2620,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9c5e83499bd4e008521a00a8336ad75f72946f6ebbe7f7f82e22f820e8fd20b6",
+      "sha256": "5714f0fdeb03bed24aedd64e5777bef892ac0ffe5bf0e638dbbab84705430f84",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2665,7 +2665,7 @@
     },
     {
       "id": "ball_auf_tisch_short",
-      "label": "Ball auf dem Tisch",
+      "label": "Ein Ball auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_auf_tisch_short.mp3",
@@ -2674,7 +2674,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "ca40aecd7f6901af6ead2d9b37afc49a40c63b7ab73c20071c248985df653269",
+      "sha256": "b441292912e901e8c85a424ef1b21581645d1762340d837fbef77079c7744207",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2719,7 +2719,7 @@
     },
     {
       "id": "ball_unter_tisch_short",
-      "label": "Ball unter dem Tisch",
+      "label": "Ein Ball unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_unter_tisch_short.mp3",
@@ -2728,7 +2728,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6db5ad6586713454dfe37ad07f2d81dc0028d5a9776441ead493262107a25440",
+      "sha256": "b3bcfbd256f041db9a50409c6725c4fd7c3b3fadb8d8bdcd68ffc4338010d638",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2773,7 +2773,7 @@
     },
     {
       "id": "ball_in_kiste_short",
-      "label": "Ball in der Kiste",
+      "label": "Ein Ball in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_in_kiste_short.mp3",
@@ -2782,7 +2782,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "65c5352ea70e1a8b54c922048841d7df8e0ced715a30115787f63e959962e8c4",
+      "sha256": "f1390f20d092a4ca0a089ab43bc269f8478d5e6dc84aa533829b6157c3c84eef",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2827,7 +2827,7 @@
     },
     {
       "id": "ball_neben_kiste_short",
-      "label": "Ball neben der Kiste",
+      "label": "Ein Ball neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_neben_kiste_short.mp3",
@@ -2836,7 +2836,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "e439eb12c3998a492b77c6f83eb1a30e0501b7c464b2fcce6c80fa001465a71a",
+      "sha256": "9ea88d9cb0ba0e9f7c3f05e8944eff6b48fe253fc60aa02372e59f70b2e18d56",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2881,7 +2881,7 @@
     },
     {
       "id": "ball_auf_stuhl_short",
-      "label": "Ball auf dem Stuhl",
+      "label": "Ein Ball auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_auf_stuhl_short.mp3",
@@ -2890,7 +2890,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "af8e18d134816878018b39f1d80e10ea9ea55cb9616523ecdee65e00c1e78471",
+      "sha256": "4673041c50127ea0504c4fcdb5eb05e4afcf6a6eda6a9ab0e19582e9f6c79d0d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2935,7 +2935,7 @@
     },
     {
       "id": "ball_unter_stuhl_short",
-      "label": "Ball unter dem Stuhl",
+      "label": "Ein Ball unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/ball_unter_stuhl_short.mp3",
@@ -2944,7 +2944,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "56b3d233c300ee1e22fb4501b6695effad2a694c196f8dffebce3f52a775cb64",
+      "sha256": "4cc1f46ac5b65f7c2d5c88a16c6d0963e4d865d3398ea2e15d1158ed9d99b0ca",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2962,7 +2962,7 @@
     },
     {
       "id": "hut_im_bus_short",
-      "label": "Hut im Bus",
+      "label": "Ein Hut im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_im_bus_short.mp3",
@@ -2971,7 +2971,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c53ab280e99043c068034adc06ec74f9af46e9ab8bf6d5a295613fd27b42580d",
+      "sha256": "09922d87fa0b6f45ff2be51fa4c0feb7751f3fad9ee4703af94b02e6098a6b78",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -2989,7 +2989,7 @@
     },
     {
       "id": "hut_am_bus_short",
-      "label": "Hut am Bus",
+      "label": "Ein Hut am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_am_bus_short.mp3",
@@ -2998,7 +2998,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6f75cd05c98b5d4cbc060c3a0de0ca0418ddb06d5bb383116a5bd0b7608748b9",
+      "sha256": "f2eeb87688d4e54e403ea2279c68eda03330ecf65f2a4aa9735bf54ededecb5f",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3016,7 +3016,7 @@
     },
     {
       "id": "hut_im_haus_short",
-      "label": "Hut im Haus",
+      "label": "Ein Hut im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_im_haus_short.mp3",
@@ -3025,7 +3025,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f831b7f1aa48319c789d705736f97e17deec2fc74d66395e7a30a0bfa564375d",
+      "sha256": "f9d8a84bf84b884e6d68ac9254bf43e17f38d15fa5ada9fd4fa2a556499fc860",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3043,7 +3043,7 @@
     },
     {
       "id": "hut_am_haus_short",
-      "label": "Hut am Haus",
+      "label": "Ein Hut am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_am_haus_short.mp3",
@@ -3052,7 +3052,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "b2264348e9043fc36c14a7162232d29a6c26339440225e1edb1ae08c6695b1e8",
+      "sha256": "eea4de19e22369974ebcc515bb56870ff49e5243aaf1a240debc178b57f8f9e2",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3097,7 +3097,7 @@
     },
     {
       "id": "hut_am_baum_short",
-      "label": "Hut am Baum",
+      "label": "Ein Hut am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_am_baum_short.mp3",
@@ -3106,7 +3106,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f3641307cacad9bc2ef06e1bf694346449df494c7cc5c3b55a109c6584f8c796",
+      "sha256": "881d54ebf0782eeb4ab4a170c5db793d8fb9ef862ee538800cc6b4b10f1be017",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3151,7 +3151,7 @@
     },
     {
       "id": "hut_auf_tisch_short",
-      "label": "Hut auf dem Tisch",
+      "label": "Ein Hut auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_auf_tisch_short.mp3",
@@ -3160,7 +3160,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4903f9c44da8c5c05c4f4484ff2cc3ae4627cf090c6930b680568e13a9202cef",
+      "sha256": "6aabf5bdad2dad9068d23a8d52946ca45ac8d68e576462eb4270f1b11b3c4259",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3205,7 +3205,7 @@
     },
     {
       "id": "hut_unter_tisch_short",
-      "label": "Hut unter dem Tisch",
+      "label": "Ein Hut unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_unter_tisch_short.mp3",
@@ -3214,7 +3214,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5eab78e50f207fcd5d67ee7c3d1277f9d2637b1a2ab790cb20cf54575bf492b5",
+      "sha256": "04d9e838bb27b7e0ca4faa052a9611003c2b2cf5f70c358bd14ac2761792d3fa",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3259,7 +3259,7 @@
     },
     {
       "id": "hut_in_kiste_short",
-      "label": "Hut in der Kiste",
+      "label": "Ein Hut in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_in_kiste_short.mp3",
@@ -3268,7 +3268,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "7bf03165aa118c004b870fceae606fdf51cc3975bee0ad126b4b48aea16a3760",
+      "sha256": "9a109c3af0291a3e33ca730c239230641728d01599884b8f53a3fd7b44259ede",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3313,7 +3313,7 @@
     },
     {
       "id": "hut_neben_kiste_short",
-      "label": "Hut neben der Kiste",
+      "label": "Ein Hut neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_neben_kiste_short.mp3",
@@ -3322,7 +3322,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "88a73e463ebd67b9a9e460b87f118f5f82733d611c75efa37a7ac9fe94d78db4",
+      "sha256": "40cd54412e9df73f19b8755bd405be097a9e7aa11136dc01670d60ab61a0b83c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3367,7 +3367,7 @@
     },
     {
       "id": "hut_auf_stuhl_short",
-      "label": "Hut auf dem Stuhl",
+      "label": "Ein Hut auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_auf_stuhl_short.mp3",
@@ -3376,7 +3376,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "b8284dfd8058499b30bf570d001fa056843535f125e3c8387230b6009ecbbda9",
+      "sha256": "78cfe511a99994bd5c32b6b7e5394b2bed1105b2648a8029f8363e4645bd2e0d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3421,7 +3421,7 @@
     },
     {
       "id": "hut_unter_stuhl_short",
-      "label": "Hut unter dem Stuhl",
+      "label": "Ein Hut unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/hut_unter_stuhl_short.mp3",
@@ -3430,7 +3430,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "441c0b7a2fce6476c34e9c51f9419ba0f5784236f89ffaaf37044b78b3b80d42",
+      "sha256": "f1cbc3c44048bde206c4b78814e2d86e2c4fd3b91b52ae43c081ab6cab533f4d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3448,7 +3448,7 @@
     },
     {
       "id": "maus_im_bus_short",
-      "label": "Maus im Bus",
+      "label": "Eine Maus im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_im_bus_short.mp3",
@@ -3457,7 +3457,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "8202e187e3f400ac65b2c67b6afb11c35edccf0664ec7481c0e9184e3702d433",
+      "sha256": "0e04a35b5ccc9a885a4a091c835ad837b48ddb753f7a218e3fcbccd32c735613",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3475,7 +3475,7 @@
     },
     {
       "id": "maus_am_bus_short",
-      "label": "Maus am Bus",
+      "label": "Eine Maus am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_am_bus_short.mp3",
@@ -3484,7 +3484,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "22a29793af702325c6ac741342ed34ba939b36f3d6857e359064fb7b34faf290",
+      "sha256": "ba4f1b89c0b894e2c8d29202ce50b4d05e81252bd9f3ec99f972d1ba2ae64e7f",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3502,7 +3502,7 @@
     },
     {
       "id": "maus_im_haus_short",
-      "label": "Maus im Haus",
+      "label": "Eine Maus im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_im_haus_short.mp3",
@@ -3511,7 +3511,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c69bdb72a3fd1efae41e1548fee74f044ba23a3e8633614a8646d6eeed77c6be",
+      "sha256": "102a83a7078e545db65809c42c909616f029b39f60d22c14a7bf8c1dbb360896",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3529,7 +3529,7 @@
     },
     {
       "id": "maus_am_haus_short",
-      "label": "Maus am Haus",
+      "label": "Eine Maus am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_am_haus_short.mp3",
@@ -3538,7 +3538,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "1b7f256c7d656718396609abb36a3e5c2bb8b4e6068bef3d6ea53860a1502006",
+      "sha256": "df324ef188b90f0dd6e344481632c46b3c78d2413a1672a9ccd92c31df6d24a9",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3583,7 +3583,7 @@
     },
     {
       "id": "maus_am_baum_short",
-      "label": "Maus am Baum",
+      "label": "Eine Maus am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_am_baum_short.mp3",
@@ -3592,7 +3592,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f19ade4c4de3a661198a129467ede76a9c362f2d251e34abebf8cbd72b989968",
+      "sha256": "150a88f6ee9e9999c0bd1cd51494929cda9fede124b09efabd30a902ae205fc2",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3637,7 +3637,7 @@
     },
     {
       "id": "maus_auf_tisch_short",
-      "label": "Maus auf dem Tisch",
+      "label": "Eine Maus auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_auf_tisch_short.mp3",
@@ -3646,7 +3646,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5998910ef615869e8f38b059977846cccc508309ced663fba98ba916c8b9f351",
+      "sha256": "5b2cd881eb65212f09b5add3c2f77c4098a821c15f17567f19724b2c41206df4",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3691,7 +3691,7 @@
     },
     {
       "id": "maus_unter_tisch_short",
-      "label": "Maus unter dem Tisch",
+      "label": "Eine Maus unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_unter_tisch_short.mp3",
@@ -3700,7 +3700,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0d89d71a4b3cfe01a5033c9f9735b4c1a6bc413a60570952c147986748b2f2c9",
+      "sha256": "81ebfa1fcde5d8fb405fb22bdcb1b6ba620f06d3bd3f05040c311c57e88f6ad0",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3745,7 +3745,7 @@
     },
     {
       "id": "maus_in_kiste_short",
-      "label": "Maus in der Kiste",
+      "label": "Eine Maus in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_in_kiste_short.mp3",
@@ -3754,7 +3754,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9709a26045e724cb44fc1bc3d90d8ee00b8c6eaee4c193597c74d24d93484dcb",
+      "sha256": "ebdc33b37dfe1684149c208abd24e0f241e6b2c02973f805a8b36aa53f3d9f44",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3799,7 +3799,7 @@
     },
     {
       "id": "maus_neben_kiste_short",
-      "label": "Maus neben der Kiste",
+      "label": "Eine Maus neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_neben_kiste_short.mp3",
@@ -3808,7 +3808,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "188d84c2f8d4e7c554c5fcd5334e107328c0bd01d942e0237056a0c2872c8d39",
+      "sha256": "f3a1492782d8f4f246bc2f4ed973202e4dab98f5b6ce84a749dbdb5552c82458",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3853,7 +3853,7 @@
     },
     {
       "id": "maus_auf_stuhl_short",
-      "label": "Maus auf dem Stuhl",
+      "label": "Eine Maus auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_auf_stuhl_short.mp3",
@@ -3862,7 +3862,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "970c955843453a5989bc2c09d9dc7518dc711ed3bb6a3c01579fce5dc2fbe7cc",
+      "sha256": "9792cf386192174e6bdee4ca611c57ea7a4c5f74a74632925ab50b7f014fee53",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3907,7 +3907,7 @@
     },
     {
       "id": "maus_unter_stuhl_short",
-      "label": "Maus unter dem Stuhl",
+      "label": "Eine Maus unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/maus_unter_stuhl_short.mp3",
@@ -3916,7 +3916,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "00966cc4d701146a3c3f36dc49ec457b2241ba7024bf0bb082bbffe242f12a3f",
+      "sha256": "bd0a45cc90c72a92b0f520c3b423d79d8f4168249ea3c2e341359e7719755c69",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3934,7 +3934,7 @@
     },
     {
       "id": "schaf_im_bus_short",
-      "label": "Schaf im Bus",
+      "label": "Ein Schaf im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_im_bus_short.mp3",
@@ -3943,7 +3943,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0d9621a65d16d85a0bcbcf7e045e42535d7df73509fa5cfc39021af23d61b704",
+      "sha256": "dbfd64077cb0982c8919707ef62a09e35430f5d10d9316c2656bb7b00a929840",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3961,7 +3961,7 @@
     },
     {
       "id": "schaf_am_bus_short",
-      "label": "Schaf am Bus",
+      "label": "Ein Schaf am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_am_bus_short.mp3",
@@ -3970,7 +3970,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "7c791cd92f2420cbb9deb3cc8c8af1c13445f9d8251b66005fd6f2009200a0e7",
+      "sha256": "e6be63e5751af1182663f7525632b61c5a940350a064425520a7ab38f683196e",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -3988,7 +3988,7 @@
     },
     {
       "id": "schaf_im_haus_short",
-      "label": "Schaf im Haus",
+      "label": "Ein Schaf im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_im_haus_short.mp3",
@@ -3997,7 +3997,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "7c34bb5e4f0ef0d16984d08558dba938e841f381b942e6a72c9a5be1c7e1a2a3",
+      "sha256": "81e3ad31b3d0dee65b11312b8aefdbc01682bffc7328a489469c89c1a055a82d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4015,7 +4015,7 @@
     },
     {
       "id": "schaf_am_haus_short",
-      "label": "Schaf am Haus",
+      "label": "Ein Schaf am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_am_haus_short.mp3",
@@ -4024,7 +4024,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9d4654d6de4d63c162f1dc7d8c951564b7bb069bdf0b3943c7486bac25d9cf0f",
+      "sha256": "2b3fd194f0e996d91ea3816d533d9c61abf43da484f5c4f71a1eb2f9ab2b974a",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4069,7 +4069,7 @@
     },
     {
       "id": "schaf_am_baum_short",
-      "label": "Schaf am Baum",
+      "label": "Ein Schaf am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_am_baum_short.mp3",
@@ -4078,7 +4078,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "11a07bc650e0850f6e515074ff44f5ec9f2a3603b9e9c9568edae0f8f969b4ae",
+      "sha256": "8c703c3002f13930842532b2eb5b783eb3eef923db3a91394ec3b5a246403c1d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4123,7 +4123,7 @@
     },
     {
       "id": "schaf_auf_tisch_short",
-      "label": "Schaf auf dem Tisch",
+      "label": "Ein Schaf auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_auf_tisch_short.mp3",
@@ -4132,7 +4132,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "b6eb5d96826cb9bbc58a8900da0fe61e3d6be2b88c84c9e9a92750e68fdaf599",
+      "sha256": "70323becd37c1ae3c7c724ac9e58b042256dfcf96a45cd2255f0777e1c4605b7",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4177,7 +4177,7 @@
     },
     {
       "id": "schaf_unter_tisch_short",
-      "label": "Schaf unter dem Tisch",
+      "label": "Ein Schaf unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_unter_tisch_short.mp3",
@@ -4186,7 +4186,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "cf14545fe150ab351418a26fdbdeb822dc7ed193e22b6733cf56bb0b33b03d51",
+      "sha256": "a22b2ac99e4026dd4d3b556de11084c6562fbeeb7b2a9a51ab3a9c1c59d428f2",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4231,7 +4231,7 @@
     },
     {
       "id": "schaf_in_kiste_short",
-      "label": "Schaf in der Kiste",
+      "label": "Ein Schaf in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_in_kiste_short.mp3",
@@ -4240,7 +4240,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9869b4b7e4155777ff294b8da5df5b5ceb9e13eaf357ca6539e22405c938fe87",
+      "sha256": "93960fa02e1ba054f07508a04645532af332791d41d30494cf62a673cbe6d275",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4285,7 +4285,7 @@
     },
     {
       "id": "schaf_neben_kiste_short",
-      "label": "Schaf neben der Kiste",
+      "label": "Ein Schaf neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_neben_kiste_short.mp3",
@@ -4294,7 +4294,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "a075e1de7d96d32cd7eb519d4b1a61695f1b963e70f3142f46ead8b2c568eeb8",
+      "sha256": "df1e9fed2054d32ba31cc1af78403966aa5339f25c81571b472581ed974e9603",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4339,7 +4339,7 @@
     },
     {
       "id": "schaf_auf_stuhl_short",
-      "label": "Schaf auf dem Stuhl",
+      "label": "Ein Schaf auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_auf_stuhl_short.mp3",
@@ -4348,7 +4348,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "fdaf7b09316c367f747a37ddf87a56d49cde7fcdc0ce3efb0a802d7e705fe10c",
+      "sha256": "739dad886c6f21ad7161613d1d46b7e6f8afcc6fc4de223f8e82d856ac6359b5",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -4393,7 +4393,7 @@
     },
     {
       "id": "schaf_unter_stuhl_short",
-      "label": "Schaf unter dem Stuhl",
+      "label": "Ein Schaf unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/schaf_unter_stuhl_short.mp3",
@@ -4402,7 +4402,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "a31d783e8473ba27ab4527a3b133d3c5c0952b41faf426bc81e42c72270e0f94",
+      "sha256": "9a8bb663ef42270dcbb9b75148062e34af8e5d2d66089afa16039d030b9dd5de",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -5527,7 +5527,7 @@
     },
     {
       "id": "has_maus_ball_short",
-      "label": "Maus mit Ball",
+      "label": "Eine Maus mit einem Ball",
       "ipa": null,
       "group": "sentence",
       "src": "audio/has_maus_ball_short.mp3",
@@ -5536,7 +5536,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "cd01e1adbab25f19ae7291ef4ef14bcd2fada018314a54ca7af9c485e9c63031",
+      "sha256": "cbb2e24c18457e3eadf3ac49353ac4a100683dfe850fa29f5de8dceaa8f93907",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -5581,7 +5581,7 @@
     },
     {
       "id": "has_maus_hut_short",
-      "label": "Maus mit Hut",
+      "label": "Eine Maus mit einem Hut",
       "ipa": null,
       "group": "sentence",
       "src": "audio/has_maus_hut_short.mp3",
@@ -5590,7 +5590,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0aa4c265e72766db7af8830a581f9f4390a359614e5a75fc079b0275c9671dfb",
+      "sha256": "ea3d4fde7f0a422391103fda332433b8cb9d470d5937f84a5776af920ccd8951",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -5635,7 +5635,7 @@
     },
     {
       "id": "has_schaf_ball_short",
-      "label": "Schaf mit Ball",
+      "label": "Ein Schaf mit einem Ball",
       "ipa": null,
       "group": "sentence",
       "src": "audio/has_schaf_ball_short.mp3",
@@ -5644,7 +5644,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5a8280f3b4e107396376b2c6ec4790fa723b3c45747e006323725e2d6063e12a",
+      "sha256": "de2a9334b146554fa824a3e08ee724a569738ae819deff6615589471dafeb4b9",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -5689,7 +5689,7 @@
     },
     {
       "id": "has_schaf_hut_short",
-      "label": "Schaf mit Hut",
+      "label": "Ein Schaf mit einem Hut",
       "ipa": null,
       "group": "sentence",
       "src": "audio/has_schaf_hut_short.mp3",
@@ -5698,7 +5698,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f9d3cebe1ea8532ee7e14fedad66fd75850da757bbce471bfb3d0cc63f20e186",
+      "sha256": "c652449b3abbfbf9f48e67953e49ac44f4fabad5dd201466e4a6c295b316041a",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6040,7 +6040,7 @@
     },
     {
       "id": "phrase_ball_am_baum",
-      "label": "Ball am Baum",
+      "label": "Ein Ball am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_am_baum.mp3",
@@ -6049,7 +6049,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9c5e83499bd4e008521a00a8336ad75f72946f6ebbe7f7f82e22f820e8fd20b6",
+      "sha256": "5714f0fdeb03bed24aedd64e5777bef892ac0ffe5bf0e638dbbab84705430f84",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6067,7 +6067,7 @@
     },
     {
       "id": "phrase_ball_auf_tisch",
-      "label": "Ball auf dem Tisch",
+      "label": "Ein Ball auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_auf_tisch.mp3",
@@ -6076,7 +6076,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "ca40aecd7f6901af6ead2d9b37afc49a40c63b7ab73c20071c248985df653269",
+      "sha256": "b441292912e901e8c85a424ef1b21581645d1762340d837fbef77079c7744207",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6094,7 +6094,7 @@
     },
     {
       "id": "phrase_ball_unter_tisch",
-      "label": "Ball unter dem Tisch",
+      "label": "Ein Ball unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_unter_tisch.mp3",
@@ -6103,7 +6103,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6db5ad6586713454dfe37ad07f2d81dc0028d5a9776441ead493262107a25440",
+      "sha256": "b3bcfbd256f041db9a50409c6725c4fd7c3b3fadb8d8bdcd68ffc4338010d638",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6121,7 +6121,7 @@
     },
     {
       "id": "phrase_ball_in_kiste",
-      "label": "Ball in der Kiste",
+      "label": "Ein Ball in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_in_kiste.mp3",
@@ -6130,7 +6130,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "65c5352ea70e1a8b54c922048841d7df8e0ced715a30115787f63e959962e8c4",
+      "sha256": "f1390f20d092a4ca0a089ab43bc269f8478d5e6dc84aa533829b6157c3c84eef",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6148,7 +6148,7 @@
     },
     {
       "id": "phrase_ball_neben_kiste",
-      "label": "Ball neben der Kiste",
+      "label": "Ein Ball neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_ball_neben_kiste.mp3",
@@ -6157,7 +6157,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "e439eb12c3998a492b77c6f83eb1a30e0501b7c464b2fcce6c80fa001465a71a",
+      "sha256": "9ea88d9cb0ba0e9f7c3f05e8944eff6b48fe253fc60aa02372e59f70b2e18d56",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6175,7 +6175,7 @@
     },
     {
       "id": "phrase_hut_am_baum",
-      "label": "Hut am Baum",
+      "label": "Ein Hut am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_am_baum.mp3",
@@ -6184,7 +6184,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f3641307cacad9bc2ef06e1bf694346449df494c7cc5c3b55a109c6584f8c796",
+      "sha256": "881d54ebf0782eeb4ab4a170c5db793d8fb9ef862ee538800cc6b4b10f1be017",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6202,7 +6202,7 @@
     },
     {
       "id": "phrase_hut_auf_tisch",
-      "label": "Hut auf dem Tisch",
+      "label": "Ein Hut auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_auf_tisch.mp3",
@@ -6211,7 +6211,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4903f9c44da8c5c05c4f4484ff2cc3ae4627cf090c6930b680568e13a9202cef",
+      "sha256": "6aabf5bdad2dad9068d23a8d52946ca45ac8d68e576462eb4270f1b11b3c4259",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6229,7 +6229,7 @@
     },
     {
       "id": "phrase_hut_unter_tisch",
-      "label": "Hut unter dem Tisch",
+      "label": "Ein Hut unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_unter_tisch.mp3",
@@ -6238,7 +6238,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5eab78e50f207fcd5d67ee7c3d1277f9d2637b1a2ab790cb20cf54575bf492b5",
+      "sha256": "04d9e838bb27b7e0ca4faa052a9611003c2b2cf5f70c358bd14ac2761792d3fa",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6256,7 +6256,7 @@
     },
     {
       "id": "phrase_hut_in_kiste",
-      "label": "Hut in der Kiste",
+      "label": "Ein Hut in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_in_kiste.mp3",
@@ -6265,7 +6265,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "7bf03165aa118c004b870fceae606fdf51cc3975bee0ad126b4b48aea16a3760",
+      "sha256": "9a109c3af0291a3e33ca730c239230641728d01599884b8f53a3fd7b44259ede",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6283,7 +6283,7 @@
     },
     {
       "id": "phrase_hut_neben_kiste",
-      "label": "Hut neben der Kiste",
+      "label": "Ein Hut neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/phrase_hut_neben_kiste.mp3",
@@ -6292,7 +6292,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "88a73e463ebd67b9a9e460b87f118f5f82733d611c75efa37a7ac9fe94d78db4",
+      "sha256": "40cd54412e9df73f19b8755bd405be097a9e7aa11136dc01670d60ab61a0b83c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6580,7 +6580,7 @@
     },
     {
       "id": "mix34_katze_im_bus_short",
-      "label": "Katze im Bus",
+      "label": "Eine Katze im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_im_bus_short.mp3",
@@ -6589,7 +6589,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "fdb58aea366cae803ceccfd0f69da8ae19acd00247097eb7bbb6fe10479ec780",
+      "sha256": "68be72520ffd2751b14193c7c700b4df0f87c2c70c217423a25e78dc2441c4af",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6634,7 +6634,7 @@
     },
     {
       "id": "mix34_katze_am_bus_short",
-      "label": "Katze am Bus",
+      "label": "Eine Katze am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_am_bus_short.mp3",
@@ -6643,7 +6643,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0d3a842386c7df4e9e24211d922ed9087ddd5da52e2ac440b4d44a991f7408a8",
+      "sha256": "c3873333e85a8ad631da4ba747b7755aab08eb821da0e7710f274129081c5dad",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6688,7 +6688,7 @@
     },
     {
       "id": "mix34_katze_im_haus_short",
-      "label": "Katze im Haus",
+      "label": "Eine Katze im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_im_haus_short.mp3",
@@ -6697,7 +6697,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4d31e1d4f4d8fd78a98ffd83690e72523e0fdf5a915e7f4a63ed93b4c78ee11a",
+      "sha256": "db0851a39c17435e603b7ead7a49301ea8979be556e6bb88831f6ed92c03e6b7",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6742,7 +6742,7 @@
     },
     {
       "id": "mix34_katze_am_haus_short",
-      "label": "Katze am Haus",
+      "label": "Eine Katze am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_am_haus_short.mp3",
@@ -6751,7 +6751,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "a310cbe154bd908f1065246c20bdb5a1cc7f36ed77533388a55e9e2479787414",
+      "sha256": "c0d9ac9d8a4077ca1f8561f7301c4e01aaf54a90df748ef2bdf6bc9aa8a5a7e3",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6796,7 +6796,7 @@
     },
     {
       "id": "mix34_katze_am_baum_short",
-      "label": "Katze am Baum",
+      "label": "Eine Katze am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_am_baum_short.mp3",
@@ -6805,7 +6805,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "25d33f4986367f5c8171032656c3ce604a7e99ef6f7ba42fc54974c65195110e",
+      "sha256": "a423b7d00689def2fee4e78a9a7f4217f6cc8e5fadaac1e97fb4a8819a922fb5",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6850,7 +6850,7 @@
     },
     {
       "id": "mix34_katze_auf_tisch_short",
-      "label": "Katze auf dem Tisch",
+      "label": "Eine Katze auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_auf_tisch_short.mp3",
@@ -6859,7 +6859,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "67c7ae4924449be63fd16c7671b07dbf340bcafd298f47dd8a6d73bccf7cb037",
+      "sha256": "77bf144fb514c4e7aa52ee9c684a79e2f83e723eaece11548146d44ca9b2e2e3",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6904,7 +6904,7 @@
     },
     {
       "id": "mix34_katze_unter_tisch_short",
-      "label": "Katze unter dem Tisch",
+      "label": "Eine Katze unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_unter_tisch_short.mp3",
@@ -6913,7 +6913,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c8d67c7425161b5c21aa63395bd46c624c57cbfdbccd2da4f55678604b9daa13",
+      "sha256": "f4c235235199561edebd0b6745bfa7b8fc29d62c0e2e4ac7c6c52f1d235eba6d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -6958,7 +6958,7 @@
     },
     {
       "id": "mix34_katze_in_kiste_short",
-      "label": "Katze in der Kiste",
+      "label": "Eine Katze in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_in_kiste_short.mp3",
@@ -6967,7 +6967,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "289de5e7a4e605b964eb57f552fc5e2c6ed224ccbea8c1cab092871b7537d128",
+      "sha256": "665c27e51584eb550220ee747b7d21bd0b8dfbba73548e78c26e22a559534811",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7012,7 +7012,7 @@
     },
     {
       "id": "mix34_katze_neben_kiste_short",
-      "label": "Katze neben der Kiste",
+      "label": "Eine Katze neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_neben_kiste_short.mp3",
@@ -7021,7 +7021,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0bb35a5a93fb46f94b62f5caad83112a7d5c4c3845421bc1362568a43a63ea66",
+      "sha256": "5d48373807dac73ee6bd22f96678598ace40a5f8278626828c6e698359d5e85d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7066,7 +7066,7 @@
     },
     {
       "id": "mix34_katze_auf_stuhl_short",
-      "label": "Katze auf dem Stuhl",
+      "label": "Eine Katze auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_auf_stuhl_short.mp3",
@@ -7075,7 +7075,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "02bc3473e36836d1a2dcf56dfdbaae14f337a8a6a0c8d4430a7488f2be18387f",
+      "sha256": "6c718323ea359de84b86a3f5c294d31d3ee929bbe0b6a10c0a5386a6e6c21f35",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7120,7 +7120,7 @@
     },
     {
       "id": "mix34_katze_unter_stuhl_short",
-      "label": "Katze unter dem Stuhl",
+      "label": "Eine Katze unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_katze_unter_stuhl_short.mp3",
@@ -7129,7 +7129,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0e8150ae8973910c253cfd0d0940ebcc3b03119b67385ff2551e95a85c28da62",
+      "sha256": "61a312b76ec641b1a0add5d07eea3c20deeb3efbbfe13fa5cdb4818f87427403",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7444,7 +7444,7 @@
     },
     {
       "id": "mix34_hund_im_bus_short",
-      "label": "Hund im Bus",
+      "label": "Ein Hund im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_im_bus_short.mp3",
@@ -7453,7 +7453,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "800e3c6561b64df1eb50b86ea28a4b60edb51f75b78122dabbd4e488d292fc78",
+      "sha256": "a2327d1398cf4fbb92f083939f79f625f58db1225aa0c4e89edf03259b05c54c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7498,7 +7498,7 @@
     },
     {
       "id": "mix34_hund_am_bus_short",
-      "label": "Hund am Bus",
+      "label": "Ein Hund am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_am_bus_short.mp3",
@@ -7507,7 +7507,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "58f9ff5129856374bd17ff0b81953cbac033b55f473b95f3a82794d612d62f01",
+      "sha256": "857932995218527f366be1c15739a1e0d2374e5e1de7006c68a8dac99e2ddbeb",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7552,7 +7552,7 @@
     },
     {
       "id": "mix34_hund_im_haus_short",
-      "label": "Hund im Haus",
+      "label": "Ein Hund im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_im_haus_short.mp3",
@@ -7561,7 +7561,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4a589ee780585307365d5d4d6ce39be43e4fd797cd2d99299935504e87b26df8",
+      "sha256": "3303bc9607dfcfa48ef89d3b3e558c85e264148474e21148dab325228cc91d60",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7606,7 +7606,7 @@
     },
     {
       "id": "mix34_hund_am_haus_short",
-      "label": "Hund am Haus",
+      "label": "Ein Hund am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_am_haus_short.mp3",
@@ -7615,7 +7615,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "124341f982df07cc874d2ac817309189ae0c0f7019687758e6dc11a8fe6b5a8e",
+      "sha256": "9ebd058bd553a1478ef44ff976a90e9cf249f785820c5bbde49e94f2378cae85",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7660,7 +7660,7 @@
     },
     {
       "id": "mix34_hund_am_baum_short",
-      "label": "Hund am Baum",
+      "label": "Ein Hund am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_am_baum_short.mp3",
@@ -7669,7 +7669,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "33115397aaa6f7bbac8942f34c1e2b78cdf3bf8828acad00631041b001f5d68c",
+      "sha256": "3b32504e836700aa3bed51d5bb29e7fb2b24350e3a855894c66aa9b29c9d5043",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7714,7 +7714,7 @@
     },
     {
       "id": "mix34_hund_auf_tisch_short",
-      "label": "Hund auf dem Tisch",
+      "label": "Ein Hund auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_auf_tisch_short.mp3",
@@ -7723,7 +7723,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "2b71243905d17d01e1e8956c0dc3e381e2a388ef1e11477f08ddb749ccb536d7",
+      "sha256": "bbe58e93d8afa8e4ceccb1f7f32aea829758127489f4da0f3b2f8766e0da300c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7768,7 +7768,7 @@
     },
     {
       "id": "mix34_hund_unter_tisch_short",
-      "label": "Hund unter dem Tisch",
+      "label": "Ein Hund unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_unter_tisch_short.mp3",
@@ -7777,7 +7777,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "15712ad0da002ebc56e9ae122e9cdcd284f568a67b5dcb04319ffdeb2795af84",
+      "sha256": "576714d2b5b2d39e61684a3dd5268332f9e494fd2430a15858222be057bf6e6e",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7822,7 +7822,7 @@
     },
     {
       "id": "mix34_hund_in_kiste_short",
-      "label": "Hund in der Kiste",
+      "label": "Ein Hund in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_in_kiste_short.mp3",
@@ -7831,7 +7831,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0d553f20b125b00018cdf6212dfa3cf2756c6d4301375c0fd6a01fa168200588",
+      "sha256": "8a34f80fd7ec65f1007b65a56d1d9f027507d786885107da7709beae90504f7b",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7876,7 +7876,7 @@
     },
     {
       "id": "mix34_hund_neben_kiste_short",
-      "label": "Hund neben der Kiste",
+      "label": "Ein Hund neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_neben_kiste_short.mp3",
@@ -7885,7 +7885,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5591059eb9779f62c92f1fd68b22ea24b03b3834029d0c53cdc497b47f037aac",
+      "sha256": "85fa9995e45cd932da46419ba58d65560f93f1325d021b85f40646d6837a00ee",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7930,7 +7930,7 @@
     },
     {
       "id": "mix34_hund_auf_stuhl_short",
-      "label": "Hund auf dem Stuhl",
+      "label": "Ein Hund auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_auf_stuhl_short.mp3",
@@ -7939,7 +7939,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9d1dd290c89745fda85aa8bdb8dbdd900cac1d949f370066592bf4a9ec47d4d6",
+      "sha256": "22d68a65c19a261357099468a80e36e0f2484b137a07bcbab397754c5dfbb6d0",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -7984,7 +7984,7 @@
     },
     {
       "id": "mix34_hund_unter_stuhl_short",
-      "label": "Hund unter dem Stuhl",
+      "label": "Ein Hund unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_hund_unter_stuhl_short.mp3",
@@ -7993,7 +7993,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "e4a66777e9408e0543d27e58fe3363f439a583b4979ecab2a003ba11c21e006a",
+      "sha256": "a68f17d385bcd1316b63aea98ce7af27fbcdd8e1c85aa154fbcf0f55a22b41f1",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8308,7 +8308,7 @@
     },
     {
       "id": "mix34_ente_im_bus_short",
-      "label": "Ente im Bus",
+      "label": "Eine Ente im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_im_bus_short.mp3",
@@ -8317,7 +8317,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c6a306793613a27f12b700991e426731b0706c03db3b87b23dc3e088fa385bc1",
+      "sha256": "1be431b4adbf34770bca03ba5bf74ce43f4b85c7e3d5733fe8b5be9eee18b799",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8362,7 +8362,7 @@
     },
     {
       "id": "mix34_ente_am_bus_short",
-      "label": "Ente am Bus",
+      "label": "Eine Ente am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_am_bus_short.mp3",
@@ -8371,7 +8371,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "d3c100b3f0a0dfe69fa40884751e75efb592071fa2063ed14fafd5abffb0c30c",
+      "sha256": "08e7c7016c7dbfbb2a64b76c96b4a32dde69deca36f1e26507bb6c2df498692c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8416,7 +8416,7 @@
     },
     {
       "id": "mix34_ente_im_haus_short",
-      "label": "Ente im Haus",
+      "label": "Eine Ente im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_im_haus_short.mp3",
@@ -8425,7 +8425,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "2a209791cf425c86be4552ad3257c12f85f7ffbcba80481e72563c6dc929fe16",
+      "sha256": "f760abe4d17b110821c39a63884a636216cf6d403a0a167e472c94f332c2c9fd",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8470,7 +8470,7 @@
     },
     {
       "id": "mix34_ente_am_haus_short",
-      "label": "Ente am Haus",
+      "label": "Eine Ente am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_am_haus_short.mp3",
@@ -8479,7 +8479,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f6e32610c77c50fad1843f569e3d02120a5bc5f2e5e22e1f8d9f58d8c3d33921",
+      "sha256": "c7ac26ea5fdddd8591c2644435350d5eeb256ce8e132c9d2bf9974f101858f5d",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8524,7 +8524,7 @@
     },
     {
       "id": "mix34_ente_am_baum_short",
-      "label": "Ente am Baum",
+      "label": "Eine Ente am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_am_baum_short.mp3",
@@ -8533,7 +8533,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "586304969fee725086c8458268bf31dbea69eccaefde78c47e62d348438c689f",
+      "sha256": "b79010e51c5cc80c3bf99ebe26febe76ef10c82780d3b1807752cd9195e1898a",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8578,7 +8578,7 @@
     },
     {
       "id": "mix34_ente_auf_tisch_short",
-      "label": "Ente auf dem Tisch",
+      "label": "Eine Ente auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_auf_tisch_short.mp3",
@@ -8587,7 +8587,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f539d1894a2a355c88118235b2aaefbfda44dd6fe2dcd376f8cd970142d7add2",
+      "sha256": "b2b1e1b523aa408e7dd5f9c9823032b9cf11470988ba0df5ccfe794362292334",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8632,7 +8632,7 @@
     },
     {
       "id": "mix34_ente_unter_tisch_short",
-      "label": "Ente unter dem Tisch",
+      "label": "Eine Ente unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_unter_tisch_short.mp3",
@@ -8641,7 +8641,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4ba0c9351b3d4200cc1008b813226a2a7f1b0d3a504468f74c8b86dcad7e9be4",
+      "sha256": "4bc682f689d8f4f097d9e654be100e75b7704052bd434ca08607fb0ab64c5ddf",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8686,7 +8686,7 @@
     },
     {
       "id": "mix34_ente_in_kiste_short",
-      "label": "Ente in der Kiste",
+      "label": "Eine Ente in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_in_kiste_short.mp3",
@@ -8695,7 +8695,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "d4323a85dec0fd658873201f43297cc721302bdc57f31bd3be66153b1b006dff",
+      "sha256": "61b515f9b5db3d5b3d5b71970565597a606d14cc4208b54f8877927823e1375b",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8740,7 +8740,7 @@
     },
     {
       "id": "mix34_ente_neben_kiste_short",
-      "label": "Ente neben der Kiste",
+      "label": "Eine Ente neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_neben_kiste_short.mp3",
@@ -8749,7 +8749,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4b2dda40fee7192cee522fe0527207a32405bb6c7b2a23b31b1ecf062bb9ffe9",
+      "sha256": "3cdc3df82ecab1b91361123c0786895eef3eef2490d34b1f7b4d961452dfddf0",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8794,7 +8794,7 @@
     },
     {
       "id": "mix34_ente_auf_stuhl_short",
-      "label": "Ente auf dem Stuhl",
+      "label": "Eine Ente auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_auf_stuhl_short.mp3",
@@ -8803,7 +8803,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5437cba1b19c826922bc9bbc49cfc093d7909157be3feef56628cf7e4fccc6a3",
+      "sha256": "b9894033297aeca72a83f92cf35f9ead5875aedae61b90bec56c145973f7b957",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -8848,7 +8848,7 @@
     },
     {
       "id": "mix34_ente_unter_stuhl_short",
-      "label": "Ente unter dem Stuhl",
+      "label": "Eine Ente unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_ente_unter_stuhl_short.mp3",
@@ -8857,7 +8857,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "ceaf72443b2d6ea7d5e9f1f3e84364f94d958e6759a3d2b0e74c1b7f92a84120",
+      "sha256": "76b0891546d8e026b758de4de46d9a5b7088f2cc4586f046d2fd34c4337f9d4b",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9172,7 +9172,7 @@
     },
     {
       "id": "mix34_frosch_im_bus_short",
-      "label": "Frosch im Bus",
+      "label": "Ein Frosch im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_im_bus_short.mp3",
@@ -9181,7 +9181,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5dbfd2ecca759caffdaebdc37c5277a3801daefbf6df9a0d6f1731bc6f1da3d4",
+      "sha256": "10507f5e4d3723f03a755c8f28a59621553d4ccc320f15726595dec7f071ef30",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9226,7 +9226,7 @@
     },
     {
       "id": "mix34_frosch_am_bus_short",
-      "label": "Frosch am Bus",
+      "label": "Ein Frosch am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_am_bus_short.mp3",
@@ -9235,7 +9235,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "bc948c267a7d38b0c01d7fcc27e1bffc748530b2c16e9ae37556a3a8b1ae21df",
+      "sha256": "f5f1e0d08d7926593220813eacb6b38c49ad69f0f4a44f4777f61471b0d55345",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9280,7 +9280,7 @@
     },
     {
       "id": "mix34_frosch_im_haus_short",
-      "label": "Frosch im Haus",
+      "label": "Ein Frosch im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_im_haus_short.mp3",
@@ -9289,7 +9289,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "3549ea9e3b50b0d0c1ce1dd4727fdafed560377b42f9c84718b27d2ae5bfcf3a",
+      "sha256": "f1f2f5b59898b892e0c9f816c7637294decee0d4cd04474a0929facad9b1378f",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9334,7 +9334,7 @@
     },
     {
       "id": "mix34_frosch_am_haus_short",
-      "label": "Frosch am Haus",
+      "label": "Ein Frosch am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_am_haus_short.mp3",
@@ -9343,7 +9343,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "fdae6e6f7efe9a1eb0a058b079c61e27fb6c3ebb49697d07537a843725b7cec4",
+      "sha256": "7bd05fe20979672e7a7f3d87549af85c9473db35b136c9d8e83bf4edd38b3956",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9388,7 +9388,7 @@
     },
     {
       "id": "mix34_frosch_am_baum_short",
-      "label": "Frosch am Baum",
+      "label": "Ein Frosch am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_am_baum_short.mp3",
@@ -9397,7 +9397,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "7045b07d39b2d335a08b1402fbfa90abc01e4f5554e8fcfba838651848318ab7",
+      "sha256": "04f2a21e9d16705303eb808c0ef4397a3d624855506bbca77047023b87e58f34",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9442,7 +9442,7 @@
     },
     {
       "id": "mix34_frosch_auf_tisch_short",
-      "label": "Frosch auf dem Tisch",
+      "label": "Ein Frosch auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_auf_tisch_short.mp3",
@@ -9451,7 +9451,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "fde69e29ec6ddb2127dd6c4921ce3f1bfb83a1a83fff51b511f07559b4076a21",
+      "sha256": "e7522211340fa8c3099d2fe457b8f9669b3218ba78df37b215152c0ed31a1a1a",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9496,7 +9496,7 @@
     },
     {
       "id": "mix34_frosch_unter_tisch_short",
-      "label": "Frosch unter dem Tisch",
+      "label": "Ein Frosch unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_unter_tisch_short.mp3",
@@ -9505,7 +9505,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "077b0ef19cd0705a429bda73c3dd95753590ae528a51575fd03dd3efcdef94de",
+      "sha256": "30b551ff0733cb1a7c9ad1df8f4980e55b2e1b77699278158c2c69af4bfb7588",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9550,7 +9550,7 @@
     },
     {
       "id": "mix34_frosch_in_kiste_short",
-      "label": "Frosch in der Kiste",
+      "label": "Ein Frosch in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_in_kiste_short.mp3",
@@ -9559,7 +9559,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6fedcbeb9b8b0b6b7da99c56331e6a8a641ab40e24af7a4c989fb8e619349192",
+      "sha256": "2c446fd56ff2be086b1a8bdb27fa257814a742453166d610f6eed9a6da5279a4",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9604,7 +9604,7 @@
     },
     {
       "id": "mix34_frosch_neben_kiste_short",
-      "label": "Frosch neben der Kiste",
+      "label": "Ein Frosch neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_neben_kiste_short.mp3",
@@ -9613,7 +9613,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "3d4a813e7431d80b32f1135c0e5d1fb89867281a2013747a8cbff705f341fd9f",
+      "sha256": "ff5756182a439b2a8e1e6c50978bedbeb689b589d3ca612d54051af6248757b6",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9658,7 +9658,7 @@
     },
     {
       "id": "mix34_frosch_auf_stuhl_short",
-      "label": "Frosch auf dem Stuhl",
+      "label": "Ein Frosch auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_auf_stuhl_short.mp3",
@@ -9667,7 +9667,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f688149d35d2737c070baa9b8663171814e79d4831b5a1bf39c4a59de7953c15",
+      "sha256": "23aaf7d56951fae9abde8a2d98a1b23da9f74289b9423a0f6ef2b8868c4214ba",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -9712,7 +9712,7 @@
     },
     {
       "id": "mix34_frosch_unter_stuhl_short",
-      "label": "Frosch unter dem Stuhl",
+      "label": "Ein Frosch unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_frosch_unter_stuhl_short.mp3",
@@ -9721,7 +9721,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "427bc4499b491a4e67499f2f5e0f4d0c5b407785f3751567857f44eafe48f9e3",
+      "sha256": "45263685294da747c18ec14718e4018382fa993455917f23f802825796d94846",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10036,7 +10036,7 @@
     },
     {
       "id": "mix34_has_katze_buch_short",
-      "label": "Katze mit Buch",
+      "label": "Eine Katze mit einem Buch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_has_katze_buch_short.mp3",
@@ -10045,7 +10045,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "104ca438ad07c40b2f437537ad688b6cbc29c746460dde4ec3b9dd0ebe15e9ae",
+      "sha256": "a75c4054722c660dc564e09473ea9a5590d698569596fb4d6f61efb458c59d51",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10063,7 +10063,7 @@
     },
     {
       "id": "mix34_has_katze_becher",
-      "label": "Die Katze hat einen Becher.",
+      "label": "Die Katze hat einen Ballon.",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_has_katze_becher.mp3",
@@ -10072,7 +10072,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "bec1fa9bf4e582a0bb41c28f1f38def977be20c4f6dfd48e603104c75d1620de",
+      "sha256": "5061b3174604ce2616d049739fb0f73aa93766226b3b683d97af3b81ce12f367",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10090,7 +10090,7 @@
     },
     {
       "id": "mix34_has_katze_becher_short",
-      "label": "Katze mit Becher",
+      "label": "Eine Katze mit einem Ballon",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_has_katze_becher_short.mp3",
@@ -10099,7 +10099,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "a3b0c97ca039294b2cb8b7607feedc400422d55e1d3f1a13fbb28e12d1916cd5",
+      "sha256": "08fd9a11c9cb9fb7b51523b40879ceee9d425acf41b8f73d0375ea3e74049f93",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10144,7 +10144,7 @@
     },
     {
       "id": "mix34_has_hund_buch_short",
-      "label": "Hund mit Buch",
+      "label": "Ein Hund mit einem Buch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_has_hund_buch_short.mp3",
@@ -10153,7 +10153,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "b8ec0c6970d26fb3756c1ca4857a1e7f2d668939904112dd07c1deea73f5ada6",
+      "sha256": "3d52bad481d307e485b9943693b9112b8f603b86db122c02dd5d8255062d3010",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10171,7 +10171,7 @@
     },
     {
       "id": "mix34_has_hund_becher",
-      "label": "Der Hund hat einen Becher.",
+      "label": "Der Hund hat einen Ballon.",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_has_hund_becher.mp3",
@@ -10180,7 +10180,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c9aeab80f8ddef64d0757b2e9660449b54425906cb2bb4d3ae35c50ba440ea8a",
+      "sha256": "39e7b0fb72ec4b37f0d7d891236153a28dd126989a6ac9212f1f885438405ae8",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10198,7 +10198,7 @@
     },
     {
       "id": "mix34_has_hund_becher_short",
-      "label": "Hund mit Becher",
+      "label": "Ein Hund mit einem Ballon",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_has_hund_becher_short.mp3",
@@ -10207,7 +10207,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "39565e11392ef670098d10b1617620946351d5d1ce927dccb447e33e08a37dea",
+      "sha256": "0c56d0bdeeb43955135735f0a40153abeb6d0580559d797f70768719d6e57f3a",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10441,7 +10441,7 @@
     },
     {
       "id": "mix34_pair_oben_oben",
-      "label": "Das Buch ist oben. Der Becher ist oben.",
+      "label": "Das Buch ist oben. Der Ballon ist oben.",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_pair_oben_oben.mp3",
@@ -10450,7 +10450,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "1493cc10b715f9942dca8937ba5f2b26ce21b166049f5fa21e2416f68eae0f8b",
+      "sha256": "67d2b187495f94faec730bd4817b502e13081fb22a9befb98892fc402c55ffb2",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10468,7 +10468,7 @@
     },
     {
       "id": "mix34_pair_oben_unten",
-      "label": "Das Buch ist oben. Der Becher ist unten.",
+      "label": "Das Buch ist oben. Der Ballon ist unten.",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_pair_oben_unten.mp3",
@@ -10477,7 +10477,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "73e426f63b2796c4aa38192160829f7fc4d42b50cde20776ff001aca5f7f5776",
+      "sha256": "5924bf738191b4fb616dc72f54bbbcb3f3cd51d5bfd75d6631936c41f6dabcaa",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10495,7 +10495,7 @@
     },
     {
       "id": "mix34_pair_unten_oben",
-      "label": "Das Buch ist unten. Der Becher ist oben.",
+      "label": "Das Buch ist unten. Der Ballon ist oben.",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_pair_unten_oben.mp3",
@@ -10504,7 +10504,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "d5698cf231a08b9e26a2a38e90c778b9acd260751b28a5fdd6dd0af0bdf1da10",
+      "sha256": "b79718f310e9d565a494974dddc3c1311974ae85a9cc9dbec5150b57c009de8c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10522,7 +10522,7 @@
     },
     {
       "id": "mix34_pair_unten_unten",
-      "label": "Das Buch ist unten. Der Becher ist unten.",
+      "label": "Das Buch ist unten. Der Ballon ist unten.",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix34_pair_unten_unten.mp3",
@@ -10531,7 +10531,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f64c042253c1ea79c1fbbfc219f2213469820bd7cd4558efb5004cf53929ac52",
+      "sha256": "4e577c1dd4acbb6394b9dece8e61644b2163a1e99852736516c7a9aa91c0c6ce",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10576,7 +10576,7 @@
     },
     {
       "id": "mix35_buch_im_bus_short",
-      "label": "Buch im Bus",
+      "label": "Ein Buch im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_im_bus_short.mp3",
@@ -10585,7 +10585,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "39de5d461da5e72a2920cd032c2b42072dca8a4f31f63dac299bd4abd7b67ab2",
+      "sha256": "8f0761090f9af92a7334b28461eaa5bb2edd43756c52d71f77916fdb5daadc3b",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10630,7 +10630,7 @@
     },
     {
       "id": "mix35_buch_am_bus_short",
-      "label": "Buch am Bus",
+      "label": "Ein Buch am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_am_bus_short.mp3",
@@ -10639,7 +10639,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f1604a3f784ed64a93ad764409c64415487d7889e17b448916fdbcef9ecd4549",
+      "sha256": "082d26971d9f1005ffffc06cc67389564f6f04cc38343f9907624ee42f297bdf",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10684,7 +10684,7 @@
     },
     {
       "id": "mix35_buch_im_haus_short",
-      "label": "Buch im Haus",
+      "label": "Ein Buch im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_im_haus_short.mp3",
@@ -10693,7 +10693,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "ed16074309bb166a938c4d4ae7a50a30f3c455ab901bb8017731c0406798d4f8",
+      "sha256": "742b9fb2441d868888149e03ec3d65b63248b9ddbf35ce57f739551b38fd918e",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10738,7 +10738,7 @@
     },
     {
       "id": "mix35_buch_am_haus_short",
-      "label": "Buch am Haus",
+      "label": "Ein Buch am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_am_haus_short.mp3",
@@ -10747,7 +10747,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "674adeeb4493352c161b8a9630323b169c7a753a0fca2a351c7d540461efb68e",
+      "sha256": "291eda06c8280ed1134ca384aead4d911f81d358a19f1c03f5eb269cb23383f8",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10792,7 +10792,7 @@
     },
     {
       "id": "mix35_buch_am_baum_short",
-      "label": "Buch am Baum",
+      "label": "Ein Buch am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_am_baum_short.mp3",
@@ -10801,7 +10801,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "13a8e6e6c10a7c9baa16105e7a738ed75262f9afcc6844d81569a527a1751324",
+      "sha256": "141686664169791f4dc880b1ce9e66e407d33d16ed4de652f26e4b86849b89a3",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10846,7 +10846,7 @@
     },
     {
       "id": "mix35_buch_auf_tisch_short",
-      "label": "Buch auf dem Tisch",
+      "label": "Ein Buch auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_auf_tisch_short.mp3",
@@ -10855,7 +10855,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "28e6b14621dfcce5248b1ae98f959b6c58f1e9f1148d109d989331211958f0ca",
+      "sha256": "ffbcb8fc24263ed65a38e4c236d60b0b8cea3b6a2ff569f33b3323b27ba63845",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10900,7 +10900,7 @@
     },
     {
       "id": "mix35_buch_unter_tisch_short",
-      "label": "Buch unter dem Tisch",
+      "label": "Ein Buch unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_unter_tisch_short.mp3",
@@ -10909,7 +10909,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4d7081f3c892ed8011debd937abe7cbc4ec62a396f98a7fec7217633356a1f83",
+      "sha256": "d9da81d970e89320263df10c717407811840641f7005a1dcc11e46456154d0fd",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -10954,7 +10954,7 @@
     },
     {
       "id": "mix35_buch_in_kiste_short",
-      "label": "Buch in der Kiste",
+      "label": "Ein Buch in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_in_kiste_short.mp3",
@@ -10963,7 +10963,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f9d21c8e27ca64f4918a6547d1fb980b23760ed60bac1e3150bdad89464c601e",
+      "sha256": "fea9e6726985025b6f41b6fe3c62d21f06c615102444f47ba68476f146cc9d98",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11008,7 +11008,7 @@
     },
     {
       "id": "mix35_buch_neben_kiste_short",
-      "label": "Buch neben der Kiste",
+      "label": "Ein Buch neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_neben_kiste_short.mp3",
@@ -11017,7 +11017,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "29705622245637994ec6e876160af630b5baab16d0df9c39727c600a9f407eb0",
+      "sha256": "5e4957b3160539669b911a9ee74a7f271597d312816ed875483e0cad11b81475",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11062,7 +11062,7 @@
     },
     {
       "id": "mix35_buch_auf_stuhl_short",
-      "label": "Buch auf dem Stuhl",
+      "label": "Ein Buch auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_auf_stuhl_short.mp3",
@@ -11071,7 +11071,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "eb2578dfb5903eda7ba6330a69af6562f1f9e79610c3120f4632a5d66998e28c",
+      "sha256": "e3063b1745cfbeb5d341c01cc6b6dde8ea40ebf9ff1b723135571a544d38d78f",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11116,7 +11116,7 @@
     },
     {
       "id": "mix35_buch_unter_stuhl_short",
-      "label": "Buch unter dem Stuhl",
+      "label": "Ein Buch unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_buch_unter_stuhl_short.mp3",
@@ -11125,7 +11125,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "b48e7920cb8168e2d6b81c5633eb4bc7ca9a0d7571ed08ddd42ce294690bfb61",
+      "sha256": "9a98857ce992f25ab71905703e6d05ffa6ebbc6eaf5293b1db9b66c7ba6e73fb",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11440,7 +11440,7 @@
     },
     {
       "id": "mix35_apfel_im_bus_short",
-      "label": "Apfel im Bus",
+      "label": "Ein Apfel im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_im_bus_short.mp3",
@@ -11449,7 +11449,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "17fb981d45193cf84cfa2683db11a11cf13d4d7acac3759e789950b91ed1f1e8",
+      "sha256": "63e099cdeb516f980173f823d9725d63bf3efb143b9d01c0ca1d6b4a7b11d468",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11494,7 +11494,7 @@
     },
     {
       "id": "mix35_apfel_am_bus_short",
-      "label": "Apfel am Bus",
+      "label": "Ein Apfel am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_am_bus_short.mp3",
@@ -11503,7 +11503,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "217db6fce94fb0767465769c35e7c617f2ba663edb978b5e7550cf57a54ecd04",
+      "sha256": "36fd415fcfb53228276166822294078b0d1d19cd831290952d58fea26e754fbd",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11548,7 +11548,7 @@
     },
     {
       "id": "mix35_apfel_im_haus_short",
-      "label": "Apfel im Haus",
+      "label": "Ein Apfel im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_im_haus_short.mp3",
@@ -11557,7 +11557,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5e789c31888a9f1fedb7d4422917606b4a16bdad25d38dffa392a45c43144b68",
+      "sha256": "5fbb49ec8675562d06974c19ceff6d6e86ec6ec38cd36b6424b4f33e018f2d18",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11602,7 +11602,7 @@
     },
     {
       "id": "mix35_apfel_am_haus_short",
-      "label": "Apfel am Haus",
+      "label": "Ein Apfel am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_am_haus_short.mp3",
@@ -11611,7 +11611,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "683af05d0e88479ea9467dc43ccf1da63d999552c6844efa2d3592ca1f87bbc2",
+      "sha256": "7cdeb09d5f5aadd1a059c97d51f0fd338d69a973b40c63c0d4b4ac2e51862343",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11656,7 +11656,7 @@
     },
     {
       "id": "mix35_apfel_am_baum_short",
-      "label": "Apfel am Baum",
+      "label": "Ein Apfel am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_am_baum_short.mp3",
@@ -11665,7 +11665,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "25b01d46199589fd78968505b4b164debd689970fbe73c127fb531a0c9abc7f9",
+      "sha256": "70a6205a0c59ef868d51cd28e669206214c112d0b1b21785d5aa0e344c8a9988",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11710,7 +11710,7 @@
     },
     {
       "id": "mix35_apfel_auf_tisch_short",
-      "label": "Apfel auf dem Tisch",
+      "label": "Ein Apfel auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_auf_tisch_short.mp3",
@@ -11719,7 +11719,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "1c9129327ab2535a42baee601f01311437087d14b0a36b1cda8d767bdf1b0ff7",
+      "sha256": "05b4ac0ce99d8507af70e310987578ffffdaa0bb59f7f2546281989b8aa187ee",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11764,7 +11764,7 @@
     },
     {
       "id": "mix35_apfel_unter_tisch_short",
-      "label": "Apfel unter dem Tisch",
+      "label": "Ein Apfel unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_unter_tisch_short.mp3",
@@ -11773,7 +11773,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "18c0727ba622c853abe4bbad37cac2f9697d42b6c9046188500f07ee89dcbde4",
+      "sha256": "23ac0fb23b988da8dff3539bb677f7d4804be3b939ca936e72db5f8129754092",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11818,7 +11818,7 @@
     },
     {
       "id": "mix35_apfel_in_kiste_short",
-      "label": "Apfel in der Kiste",
+      "label": "Ein Apfel in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_in_kiste_short.mp3",
@@ -11827,7 +11827,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c0613e5f142b2b0f0e3c03f833f82bf6467be4103e76a06c94ff0dfcf2537d6e",
+      "sha256": "c0c370d56473858c144437ad8a203c05dd36b3691fda665ec55fe4c7cfe3975f",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11872,7 +11872,7 @@
     },
     {
       "id": "mix35_apfel_neben_kiste_short",
-      "label": "Apfel neben der Kiste",
+      "label": "Ein Apfel neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_neben_kiste_short.mp3",
@@ -11881,7 +11881,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6af8bd72e0d4dc939e008d0f4ad5ef44a10375499dd86ebe5b374e209b97377e",
+      "sha256": "98938d9901953530e6d0147962aafcdbb0cb96e81f88f923442a88a9661136a4",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11926,7 +11926,7 @@
     },
     {
       "id": "mix35_apfel_auf_stuhl_short",
-      "label": "Apfel auf dem Stuhl",
+      "label": "Ein Apfel auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_auf_stuhl_short.mp3",
@@ -11935,7 +11935,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "a494e3cf5b9f36fa8987c1c78a1d3b1fb1c9e3040e1bacbd589684fb5bb2e89e",
+      "sha256": "fd95863b01f06d29c4b44265bc5397d3ff398b61940c594327d89f152b0835f0",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -11980,7 +11980,7 @@
     },
     {
       "id": "mix35_apfel_unter_stuhl_short",
-      "label": "Apfel unter dem Stuhl",
+      "label": "Ein Apfel unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_apfel_unter_stuhl_short.mp3",
@@ -11989,7 +11989,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "eed4787ff02c8867091c662b9442d65715945e9719aeb0a174214e875e29b4cb",
+      "sha256": "0f97334aa4a4c9b58dfcb0385b8b02b2bb05c93fe6646f8da29ad8a1edb8d4fd",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12304,7 +12304,7 @@
     },
     {
       "id": "mix35_schuh_im_bus_short",
-      "label": "Schuh im Bus",
+      "label": "Ein Schuh im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_im_bus_short.mp3",
@@ -12313,7 +12313,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "e1d8e28c2d344674e346e73c1c0e1f111bbec2541b7970dcdf4702d08073c349",
+      "sha256": "b890c0768898984d24a296a52e3e0650d6dfc1937cb37e24ded9a5d72a4820a8",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12358,7 +12358,7 @@
     },
     {
       "id": "mix35_schuh_am_bus_short",
-      "label": "Schuh am Bus",
+      "label": "Ein Schuh am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_am_bus_short.mp3",
@@ -12367,7 +12367,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "b372e2105141a2db9252d1a753fecdfb1998616d9d5f4ca40f668ea7fb8dd42d",
+      "sha256": "47becc9f1d6f361485a663334902db7f0474bfefbae725cb6179bc893cadb767",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12412,7 +12412,7 @@
     },
     {
       "id": "mix35_schuh_im_haus_short",
-      "label": "Schuh im Haus",
+      "label": "Ein Schuh im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_im_haus_short.mp3",
@@ -12421,7 +12421,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "8cdc01725cf7d77bd565803050f48bfbe5bf364931ea2f11777aef462161f930",
+      "sha256": "5c5180628da1a664c1471ef18887cc376041c8c22b8344e6e5e7f2d2f6998ec9",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12466,7 +12466,7 @@
     },
     {
       "id": "mix35_schuh_am_haus_short",
-      "label": "Schuh am Haus",
+      "label": "Ein Schuh am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_am_haus_short.mp3",
@@ -12475,7 +12475,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9f1f16083a020be99276bb05d801f0fd96ca9e8bc68a73c97b590730a81e8d38",
+      "sha256": "44f7aa379a8f25ad6a31ebc738d74b5ce49cc9be69b32c434ac0cf5519755a76",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12520,7 +12520,7 @@
     },
     {
       "id": "mix35_schuh_am_baum_short",
-      "label": "Schuh am Baum",
+      "label": "Ein Schuh am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_am_baum_short.mp3",
@@ -12529,7 +12529,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "fe7e2f29e01921258d928e938462016f4652a7d09dc7e9ee5d2794b0950cc34d",
+      "sha256": "ffc4d1fad10b9b82e2b25a4d6c318c79606723bb5cbe4a3682f4985ae507c7db",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12574,7 +12574,7 @@
     },
     {
       "id": "mix35_schuh_auf_tisch_short",
-      "label": "Schuh auf dem Tisch",
+      "label": "Ein Schuh auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_auf_tisch_short.mp3",
@@ -12583,7 +12583,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "bf59a167b15a9670d440645f0efbf3a143002a832066d11cbcaa7ce65448bf5c",
+      "sha256": "b2181090ed3673a20b844125429b4ac396599e1c6810eaae52f571a01edcae4c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12628,7 +12628,7 @@
     },
     {
       "id": "mix35_schuh_unter_tisch_short",
-      "label": "Schuh unter dem Tisch",
+      "label": "Ein Schuh unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_unter_tisch_short.mp3",
@@ -12637,7 +12637,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "f42a6083e3489dedba433b6dc731b6698eb120788bc66c572f333ac8366511b5",
+      "sha256": "913b27ceb7856ce04f4620698d7699e001e0f0148bcd80d98fa12331e8c332d1",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12682,7 +12682,7 @@
     },
     {
       "id": "mix35_schuh_in_kiste_short",
-      "label": "Schuh in der Kiste",
+      "label": "Ein Schuh in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_in_kiste_short.mp3",
@@ -12691,7 +12691,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9eef539033243e3a4c2a6cdcd38e603571ab81f2892ffe837bd5e5dbbdc51925",
+      "sha256": "580a342d0af4e51f25323046a76774372dab0f7e41018f67aaf78aed59307571",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12736,7 +12736,7 @@
     },
     {
       "id": "mix35_schuh_neben_kiste_short",
-      "label": "Schuh neben der Kiste",
+      "label": "Ein Schuh neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_neben_kiste_short.mp3",
@@ -12745,7 +12745,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "45920e044a77334dd0754d6439e24aafee36baf578840781dd9d3472b2486414",
+      "sha256": "3b2cbb4c303914dd3dcea46e7cabc27bc37fc29e1e506664bcd58bc53a0f9ccf",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12790,7 +12790,7 @@
     },
     {
       "id": "mix35_schuh_auf_stuhl_short",
-      "label": "Schuh auf dem Stuhl",
+      "label": "Ein Schuh auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_auf_stuhl_short.mp3",
@@ -12799,7 +12799,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c2e2fdaf7c44966bdd520689e4ed942a0148d87b19c3ff90817e916414995f18",
+      "sha256": "caf46fd04af962b8a9d9aa1b8cd3d3bd32f72b98455f6cadfcb8e9d024af65d1",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -12844,7 +12844,7 @@
     },
     {
       "id": "mix35_schuh_unter_stuhl_short",
-      "label": "Schuh unter dem Stuhl",
+      "label": "Ein Schuh unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_schuh_unter_stuhl_short.mp3",
@@ -12853,7 +12853,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "4194a0e39ec8f201218173743442c869020ab7fb4dd3b04b85294fa8be8cfa53",
+      "sha256": "97dd48632fbc6149d067d2a77bae1ba708b54a82d868d3661989aeba347615fa",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13168,7 +13168,7 @@
     },
     {
       "id": "mix35_puppe_im_bus_short",
-      "label": "Puppe im Bus",
+      "label": "Eine Puppe im Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_im_bus_short.mp3",
@@ -13177,7 +13177,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "39ca9c57a64dd4dd657a2fa57271b7b72e1ff4adfe3f24b8f0d61315d32bd306",
+      "sha256": "8bcc0031d1a28c7071b05b80fbc3bc6fab8a8eb146a8d17b9c655e023f84c223",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13222,7 +13222,7 @@
     },
     {
       "id": "mix35_puppe_am_bus_short",
-      "label": "Puppe am Bus",
+      "label": "Eine Puppe am Bus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_am_bus_short.mp3",
@@ -13231,7 +13231,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "40809c96e928bfd59cbeef652d08fea7b4a6007abee860234bf7bf0b4808efa7",
+      "sha256": "239dff996b845e804b250ffc4b72f996fd79d0bf58c4cb4bf44106a266155f89",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13276,7 +13276,7 @@
     },
     {
       "id": "mix35_puppe_im_haus_short",
-      "label": "Puppe im Haus",
+      "label": "Eine Puppe im Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_im_haus_short.mp3",
@@ -13285,7 +13285,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "bf189069d24e6b18648633ea7d6a9705c6d24cf6e6e7bac6b956c2945384c8d5",
+      "sha256": "4b353b4921206ce000fc726618608baf79e44f81b19b809c859eb4634f74a901",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13330,7 +13330,7 @@
     },
     {
       "id": "mix35_puppe_am_haus_short",
-      "label": "Puppe am Haus",
+      "label": "Eine Puppe am Haus",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_am_haus_short.mp3",
@@ -13339,7 +13339,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "3582cc3e847ccd6d00b5eeed162aba8b2f8d655851098884beccf38fd3228a43",
+      "sha256": "1896f1c28fcf7666b3ba0fd925131b91b5b3929ccd6b4a8ff4dd3cafa1c5340c",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13384,7 +13384,7 @@
     },
     {
       "id": "mix35_puppe_am_baum_short",
-      "label": "Puppe am Baum",
+      "label": "Eine Puppe am Baum",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_am_baum_short.mp3",
@@ -13393,7 +13393,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "3350abed778e39cfa68e9076bce0f9c227d8c2c1f21216436de603081cb8fbcf",
+      "sha256": "a0898105036c7baca216bf6bc59e8e29107b3f254845b2400623f43789e87bb9",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13438,7 +13438,7 @@
     },
     {
       "id": "mix35_puppe_auf_tisch_short",
-      "label": "Puppe auf dem Tisch",
+      "label": "Eine Puppe auf dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_auf_tisch_short.mp3",
@@ -13447,7 +13447,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "6e4529c8ac324843c732a386ab82c61fb13b082456d5e956ed99dd55ba447795",
+      "sha256": "2e6a31c3db93b6d04fc51ee601170cce2c6cdeb0aab9f63334832c2916513657",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13492,7 +13492,7 @@
     },
     {
       "id": "mix35_puppe_unter_tisch_short",
-      "label": "Puppe unter dem Tisch",
+      "label": "Eine Puppe unter dem Tisch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_unter_tisch_short.mp3",
@@ -13501,7 +13501,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "bed686713c7c608ff296f567651705a6d619dea6484c4f437a0062d7f1ae2642",
+      "sha256": "c5897d3fa2cec2f265049e316bb4176f27333bcfb576efe67b99bd492d20f797",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13546,7 +13546,7 @@
     },
     {
       "id": "mix35_puppe_in_kiste_short",
-      "label": "Puppe in der Kiste",
+      "label": "Eine Puppe in der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_in_kiste_short.mp3",
@@ -13555,7 +13555,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "5239fa7159c254cfc034c17674af6549c7c249916fecd4fceb7bf3aa5add3d65",
+      "sha256": "7b64155baafe9d55e7640119639d8894121e275fbd495a06654d02a19ca4f1ac",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13600,7 +13600,7 @@
     },
     {
       "id": "mix35_puppe_neben_kiste_short",
-      "label": "Puppe neben der Kiste",
+      "label": "Eine Puppe neben der Kiste",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_neben_kiste_short.mp3",
@@ -13609,7 +13609,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "076f3db2bfa7e7b331e284593da21c07f8979c06dd219242f39cd9cca4523273",
+      "sha256": "1a5e2a16c0b72bc8412e283309638d471576fd4a679d4cf89af8439c5bb441f0",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13654,7 +13654,7 @@
     },
     {
       "id": "mix35_puppe_auf_stuhl_short",
-      "label": "Puppe auf dem Stuhl",
+      "label": "Eine Puppe auf dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_auf_stuhl_short.mp3",
@@ -13663,7 +13663,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "9626aab6f9c95dbae946f74fcfac40a8b8dac9f1fc2f30913ea4d9b5f1877043",
+      "sha256": "e7ffd991e7b91b28ddb6c45fd1d9cc3a61d04fac4cb4a12bee7720e5e6991914",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -13708,7 +13708,7 @@
     },
     {
       "id": "mix35_puppe_unter_stuhl_short",
-      "label": "Puppe unter dem Stuhl",
+      "label": "Eine Puppe unter dem Stuhl",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_puppe_unter_stuhl_short.mp3",
@@ -13717,7 +13717,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "a8e89af945ac7f04ca1a1da648f0ec21c4c3483504a6dbfb8bce1b6fcfd6dd80",
+      "sha256": "27872e1e6b30e4d5137b337b2eeecfc16789c7c8317deaf4caa6115166e91089",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -14032,7 +14032,7 @@
     },
     {
       "id": "mix35_has_mama_buch_short",
-      "label": "Mama mit Buch",
+      "label": "Mama mit einem Buch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_has_mama_buch_short.mp3",
@@ -14041,7 +14041,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "c7dcacd9db340988cf23b574fdb5cd42151af30989f1d5c2d1c8419f76e99e1b",
+      "sha256": "73a527f2d86df265d0dbc43e228a1cf8f72e5af5d9eec0626c1a000098032b07",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -14086,7 +14086,7 @@
     },
     {
       "id": "mix35_has_mama_schuh_short",
-      "label": "Mama mit Schuh",
+      "label": "Mama mit einem Schuh",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_has_mama_schuh_short.mp3",
@@ -14095,7 +14095,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "8d021e35e628ca06edfda35ba8f8145022b93b47b4fad9dac8afb0aa6c603d94",
+      "sha256": "ab7ef9ab34746e1736fb54a54400284826cb2f9592a5528faa6d77761f120176",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -14140,7 +14140,7 @@
     },
     {
       "id": "mix35_has_oma_buch_short",
-      "label": "Oma mit Buch",
+      "label": "Oma mit einem Buch",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_has_oma_buch_short.mp3",
@@ -14149,7 +14149,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "0f388ec2ea17016e33e56c2417a0f66ba825cee97ca23739f26036b681435bd2",
+      "sha256": "35bd9fee79e968719c30d50a0fa707eac960537658715fabbd841c662287a6e2",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",
@@ -14194,7 +14194,7 @@
     },
     {
       "id": "mix35_has_oma_schuh_short",
-      "label": "Oma mit Schuh",
+      "label": "Oma mit einem Schuh",
       "ipa": null,
       "group": "sentence",
       "src": "audio/mix35_has_oma_schuh_short.mp3",
@@ -14203,7 +14203,7 @@
       "license": "CC BY-SA 4.0 (authored clip collection)",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://huggingface.co/rhasspy/piper-voices/tree/c10ece1aade47bb51c153c893d14e5bf8e5b7117/de/de_DE/thorsten/high",
-      "sha256": "be6bfb80478732497549e767d9ad0156ac19fc76c0200ed068e405551d236f30",
+      "sha256": "652aace18161017d6250ba2e6095c1d128b9a3cb69c82e6db300cf5d8db3ff68",
       "review": "pending",
       "generation": {
         "model": "de_DE-thorsten-high",

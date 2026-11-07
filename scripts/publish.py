@@ -26,6 +26,8 @@ def main():
  if mixed.get('status')!='passed' or mixed.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current mixed reading, quantity, grammar and resume browser checks before publishing.')
  guidance=json.loads((ROOT/'docs/verification/v11-child-guidance.json').read_text())
  if guidance.get('status')!='passed' or guidance.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current child-guidance, locked help and new reading level browser checks before publishing.')
+ words=json.loads((ROOT/'docs/verification/v12-word-list.json').read_text())
+ if words.get('status')!='passed' or words.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current vocabulary browser checks before publishing.')
  info=json.loads((site/'BUILD_INFO.json').read_text());commit=run('git','rev-parse','HEAD')
  if info['sourceDirty'] or info['sourceCommit']!=commit:raise SystemExit('Rebuild from the clean current source commit.')
  for line in (site/'SHA256SUMS').read_text().splitlines():

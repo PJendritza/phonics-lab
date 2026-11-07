@@ -73,3 +73,5 @@ svg.play-symbol{width:40px;height:40px;flex-shrink:0}
 .reading-session .reading-tools{height:62px}.reading-session .reading-tools .replay{height:48px;min-height:48px;margin:0}
 @media(max-height:740px) and (max-width:700px){.reading-session .reading-tools{height:44px;min-height:44px}.reading-session .reading-tools .replay{height:43px;min-height:43px;margin:0}}
 @media(max-height:740px) and (max-width:700px){.auto-session h1.task-instruction{margin:0 auto}}
+
+.word-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:15px}.word-table th,.word-table td{text-align:left;vertical-align:top;padding:10px 7px;border-bottom:1px solid #d1d9cb;overflow-wrap:anywhere}.word-table-wrap{margin-top:22px}#word-search{width:100%;max-width:440px;padding:12px;border:1px solid #96aaa0;border-radius:8px}

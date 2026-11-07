@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "11.0.0",
-  "assetVersion": "93978435d111",
+  "version": "12.0.0",
+  "assetVersion": "46d41681aedb",
   "checks": [
     "Five named groups retain all current stable IDs and numbers; activity labels distinguish listening, independent word reading, phrase and sentence understanding.",
     "A real wrong-picture attempt returns after two other questions; spacing survives reload. A new nine-word round completes at its full eighteen-question goal.",

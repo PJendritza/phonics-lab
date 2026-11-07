@@ -17,7 +17,7 @@ const targetPool=(stage,target)=>stage.legacyTargets?.includes(target)?stage.leg
 export function mastered(skill){return !!skill&&skill.recent.length>=2&&skill.recent.slice(-2).every(Boolean)&&skill.recent.slice(-4).filter(Boolean).length/Math.min(4,skill.recent.length)>=0.75;}
 export function stageMastered(progress,stage){
  if(!stage.masteryByFamily)return stage.targets.every(t=>mastered(progress.skills[skillKey(stage,t)]));
- const observed=stage.targets.filter(t=>progress.skills[skillKey(stage,t)]?.first>0),families=[...new Set(stage.targets.map(t=>ITEMS[t].family))];
+ const observed=stage.targets.filter(t=>progress.skills[skillKey(stage,t)]?.first>0&&progress.skills[skillKey(stage,t)]?.recent.some(Boolean)),families=[...new Set(stage.targets.map(t=>ITEMS[t].family))];
  if(!families.every(f=>observed.filter(t=>ITEMS[t].family===f).length>=3))return false;
  const places=observed.map(t=>ITEMS[t].scene).filter(v=>v.family==='place'),counts=observed.map(t=>ITEMS[t].scene).filter(v=>v.family==='quantity');
  if(!['im','am','auf','unter'].every(r=>places.some(v=>v.relation===r))||![1,2,3].every(c=>counts.some(v=>v.count===c)))return false;
@@ -180,6 +180,11 @@ export function validateProgress(p){
  if((p.curriculumVersion??6)<11){
   if(result.continuation==='complete')result.continuation='reading_animals';
   for(const session of [result.pending,...Object.values(result.paused)])if(session?.returnTo==='complete')session.returnTo='reading_animals';
+ }
+ if((p.curriculumVersion??6)<12){
+  for(const key of Object.keys(result.skills))if(key.includes('becher'))result.skills[key].recent=[];
+  for(const key of Object.keys(result.spacing.reviews))if(key.includes('becher'))delete result.spacing.reviews[key];
+  for(const id of ['reading_animals'])if(result.stages[id])result.stages[id].passed=false;
  }
  return result;
 }
