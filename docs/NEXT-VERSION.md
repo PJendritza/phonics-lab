@@ -1,3 +1,54 @@
+# Next update: apple scene correction and reading navigation proposal
+
+Latest request: record the apple error and propose a clearer structure; no app,
+art, audio, storage or deployment changes authorised in this planning turn.
+
+Confirmed issue to fix later:
+- [ ] "Ein Apfel ist am Baum" should show an apple attached to/hanging from a
+      branch, not a loose apple beside the tree. Inspect the correct scene AND
+      every apple/tree distractor using that shared renderer, including short
+      variants and legacy tasks. Preserve clear relation contrasts. If a scene
+      intentionally means beside the tree, its text must instead say neben dem
+      Baum. User preference is to draw the hanging apple, not relabel the task.
+
+Recommendation for discussion, not yet an approved implementation:
+- Keep chapters and numbered levels; split mixed reading levels 33–35 into
+  3–4 finite, named Etappen per level rather than add a new numbered level for
+  every word bank. Example: "Level 34 – Tiere und ihre Welt · Etappe 2 von 4".
+- Each Etappe introduces a bounded word set and mixes quantities, positions,
+  actions and possession. Do not block all im/am or all counts separately:
+  mixed contrasts prevent shortcut matching. Later Etappen combine known and
+  new words, progress from short phrases to full sentences, then transfer to
+  unfamiliar combinations of familiar words. Existing approved articles remain.
+- Child view: one Continue button, a reachable current-round flower/bar and
+  small Etappe indicator. Parent/testing map: named Etappen, words/patterns in
+  each, and practiced/current/next states; direct jumping remains available.
+  Initial target: roughly 8–12 answers per practice round, adapting scaffolding
+  and distractors, not speed. Finishing a round need not finish an entire Etappe.
+- Parent progress separates round completion, content coverage and independent
+  performance. Show e.g. "Etappe 2/4", "8/12 new target words encountered" and
+  "3 review items due"; examples are illustrative, not current learner data.
+  Avoid "X of 500 words learned" or counting sentence variants as new words.
+- Track word/form IDs, sentence-pattern skills and task evidence separately.
+  Being in a sentence or a listening cue does not prove independent recognition
+  of each word. Label those words encountered/in context; independent word
+  recognition needs appropriate unassisted word tasks and later retrieval.
+  The current 119 inventory entries are word forms, not proven acquired lemmas.
+- Reuse the existing spacing model. Mix some due familiar tasks into a current
+  round (initial design target 20–30%, adjusted to actual need); errors return
+  after intervening tasks, successful items later across days. Preserve a separate
+  optional review path. Neither review nor loss of certainty moves the forward
+  continuation cursor backwards or removes completed Etappe rewards.
+- Store evidence by stable task/word/pattern IDs, independent of display level
+  numbers; preserve pending tasks, progress and backups through any regrouping.
+  Version the finite Etappe content definition so later additions appear as an
+  extension rather than silently making previously completed progress incomplete.
+- First implementation slice, if requested: apple correction plus one example
+  level with Etappen/navigation and honest progress; assess before regrouping all
+  three levels. No external-product research was performed for this proposal.
+
+---
+
 # v12 articles, recognizable pictures and active vocabulary list
 
 - [x] Singular short place/possession phrases include articles; mit uses einem/einer.

@@ -1,3 +1,21 @@
+# Planning after v12: reading Etappen and apple/tree semantics
+
+User requests consideration only, plus recording the apple image issue. Open
+fix: an apple "am Baum" must hang attached to a branch, not sit beside the tree;
+audit all correct/distractor variants using the shared scene renderer.
+Detailed proposal at the top of docs/NEXT-VERSION.md: keep numbered levels,
+add finite named Etappen, bounded vocabulary with mixed task types, separate
+practice/coverage/independent evidence, and integrate spaced review without
+moving the forward cursor backwards. This is a recommendation, not an approved
+app redesign. Preserve task IDs, profiles and old completion on later migration.
+
+Read AGENTS.md, Git history, level-catalog.mjs, mixed-reading.mjs, pictures.mjs
+and spacing.mjs to ground the proposal. Documentation only: git diff --check;
+no app tests/build needed or executed, no art/audio generated, no deployment.
+Public application remains the verified v12 release documented below.
+
+---
+
 # v12: articles, recognizable pictures and alphabetic word inventory
 
 Latest request implemented on articles-clear-images-and-word-list; canonical repo
