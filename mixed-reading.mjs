@@ -30,7 +30,7 @@ for(const ball of ['oben','unten'])for(const hut of ['oben','unten']){
  add(`pair_${ball}_${hut}`,`Der Ball ist ${ball}. Der Hut ist ${hut}.`,{family:'pair',ball,hut});
 }
 export const DIMENSIONS={place:['subject','relation','location'],quantity:['subject','count'],size:['subject','size'],possession:['subject','object'],action:['subject','action'],pair:['ball','hut']};
-export const sceneDimensions=item=>(item?.scene?.family==='pair'&&item.scene.first?['upper','lower']:DIMENSIONS[item?.scene?.family])??['subject','relation','location'];
+export const sceneDimensions=item=>(item?.scene?.family==='pair'&&item.scene.first?['upper','lower']:item?.scene?.family==='action'&&item.scene.object?['subject','action','object']:DIMENSIONS[item?.scene?.family])??['subject','relation','location'];
 export function equivalentScene(a,b){return !!a?.scene&&!!b?.scene&&a.scene.family===b.scene.family&&sceneDimensions(a).every(k=>a.scene[k]===b.scene[k]);}
 
 // Contextual reading vocabulary: full-utterance help, not claimed as previously
@@ -59,3 +59,44 @@ for(const [pack,subjects]of [[34,['katze','hund','ente','frosch']],[35,['buch','
 }
 
 EXPANSION_VOCABULARY.push('offen','zu',...Object.values(NOUNS).flatMap(n=>[n.text.toLowerCase(),n.plural.toLowerCase()]));
+
+// Small, reviewed everyday extension; not a Cartesian product of arbitrary words.
+// Selection and source limitations: docs/curriculum/USEFUL-WORDS-V13.md.
+Object.assign(NOUNS,{
+ kind:{text:'Kind',article:'ein',definite:'das',plural:'Kinder',adjective:'es'},
+ frau:{text:'Frau',article:'eine',definite:'die',plural:'Frauen',adjective:'e'},
+ mann:{text:'Mann',article:'ein',definite:'der',plural:'Männer',adjective:'er'},
+ brot:{text:'Brot',article:'ein',definite:'das',plural:'Brote',adjective:'es'},
+ wasser:{text:'Wasser',article:'',definite:'das',plural:'Wasser',mass:true},
+ milch:{text:'Milch',article:'',definite:'die',plural:'Milch',mass:true},
+});
+const accusative=n=>n.mass?n.text:`${n.definite==='der'?'einen':n.article} ${n.text}`;
+const withObject=n=>n.mass?n.text:`${n.definite==='die'?'einer':'einem'} ${n.text}`;
+for(const subject of ['kind','frau','mann']){
+ const n=NOUNS[subject];
+ for(const location of ['bus','haus'])for(const relation of ['im','am']){
+  const words=LOCATIONS[location].relations[relation];
+  packItem(34,`daily_34_${subject}_${relation}_${location}`,`${cap(n.article)} ${n.text} ist ${words}.`,{family:'place',subject,relation,location},`${cap(n.article)} ${n.text} ${words}`);
+ }
+ for(const object of ['brot','wasser']){
+  const obj=NOUNS[object];
+  packItem(34,`daily_34_${subject}_hat_${object}`,`${cap(n.definite)} ${n.text} hat ${accusative(obj)}.`,{family:'possession',subject,object},`${cap(n.article)} ${n.text} mit ${withObject(obj)}`);
+ }
+}
+for(const count of [1,2,3]){
+ const words=count===1?'ein Kind':`${count===2?'zwei':'drei'} Kinder`;
+ packItem(34,`daily_34_kind_count_${count}`,`Hier ${count===1?'ist':'sind'} ${words}.`,{family:'quantity',subject:'kind',count},cap(words));
+}
+for(const [action,verb]of [['wach','sitzt'],['schlaeft','schläft']])packItem(34,`daily_34_kind_${action}`,`Das Kind ${verb}.`,{family:'action',subject:'kind',action});
+for(const [action,text]of [['wach','Das Kind schläft nicht.'],['schlaeft','Das Kind sitzt nicht.']])packItem(34,`daily_34_kind_not_${action}`,text,{family:'action',subject:'kind',action});
+for(const subject of ['mama','oma'])for(const object of ['brot','wasser','milch']){
+ const who=subject==='mama'?'Mama':'Oma',obj=NOUNS[object];
+ packItem(35,`daily_35_${subject}_hat_${object}`,`${who} hat ${accusative(obj)}.`,{family:'possession',subject,object},`${who} mit ${withObject(obj)}`);
+}
+for(const [action,object,verb]of [['liest','buch','liest'],['isst','brot','isst'],['trinkt','wasser','trinkt'],['trinkt','milch','trinkt'],['hat','buch','hat'],['hat','brot','hat'],['hat','wasser','hat'],['hat','milch','hat']]){
+ packItem(35,`daily_35_kind_${action}_${object}`,`Das Kind ${verb} ${accusative(NOUNS[object])}.`,{family:'action',subject:'kind',action,object});
+}
+for(const subject of ['buch','tasche'])for(const action of ['offen','zu'])packItem(35,`daily_35_${subject}_not_${action}`,`${cap(NOUNS[subject].definite)} ${NOUNS[subject].text} ist nicht ${action==='offen'?'zu':'offen'}.`,{family:'action',subject,action});
+for(const upper of ['oben','unten'])for(const lower of ['oben','unten'])packItem(35,`daily_35_food_pair_${upper}_${lower}`,`Das Brot ist ${upper} und das Wasser ist ${lower}.`,{family:'pair',first:'brot',second:'wasser',upper,lower});
+for(const location of ['tisch','kiste'])for(const [relation,words]of Object.entries(LOCATIONS[location].relations))packItem(35,`daily_35_brot_${relation}_${location}`,`Ein Brot ist ${words}.`,{family:'place',subject:'brot',location,relation},`Ein Brot ${words}`);
+EXPANSION_VOCABULARY.push('kind','kinder','frau','mann','brot','wasser','milch','und','nicht','liest','isst','trinkt');

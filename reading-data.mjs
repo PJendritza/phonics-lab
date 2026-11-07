@@ -1,4 +1,4 @@
-import {SCENE_ITEMS} from './mixed-reading.mjs?v=46d41681aedb';
+import {SCENE_ITEMS} from './mixed-reading.mjs?v=c3c1c2789c9a';
 // Curated German vocabulary. Whole-word recordings remain separate from spelling
 // support: written syllables are never spliced into synthetic spoken words.
 export const WORDS=[
