@@ -19,7 +19,8 @@ curriculum/USEFUL-WORDS-V13.md; actual release status: PROGRESS.md.
 - [x] 86 unit/content checks, 642-clip audit and all thirteen browser suites pass.
 - [x] All eight current-hash browser release gates pass, including large backup
       restore and old-review migration.
-- [ ] Verify live publication; see PROGRESS.md for deployed source and results.
+- [x] Published v13 and verified all 685 live HTTPS files against the tested build;
+      see PROGRESS.md for source/deployment commits and remaining human review.
 
 ---
 

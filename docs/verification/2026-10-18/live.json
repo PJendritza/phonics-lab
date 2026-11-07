@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "timeUTC": "2026-11-07T11:13:29.622426+00:00",
+  "timeUTC": "2026-11-07T11:56:33.867643+00:00",
   "base": "https://patrickjendritza.com/phonics-lab/",
-  "sourceCommit": "83dbb50ecb1274e7593f622badcc1641528d2a7b",
+  "sourceCommit": "796d9e1ba0ebfb8c130b676ee6fadffa60db899e",
   "files": [
     {
       "file": ".nojekyll",
@@ -13,7 +13,7 @@
     {
       "file": "BUILD_INFO.json",
       "status": 200,
-      "sha256": "fb335ac1f21a7e7bc24a8cb8ed9886e606577b43cbe23e5bf4f29eeb1b8887f0",
+      "sha256": "a23e4b08e38144aba16aaf08e175c43f1940f8048597844414b2ccc57021fe96",
       "bytes": 379
     },
     {
@@ -25,14 +25,14 @@
     {
       "file": "SHA256SUMS",
       "status": 200,
-      "sha256": "d73dbb6bb2b15c0558f86e386d87c79c490ef77ce1f86e14f56d189bb880c0c7",
-      "bytes": 56400
+      "sha256": "7854f3f10af43b302ef4d00840f3d9e903f323f670ed1f5181e58008df1b3c30",
+      "bytes": 65009
     },
     {
       "file": "about.html",
       "status": 200,
-      "sha256": "731262c7afcdd4ba21b376d32bdd1c1947c433e17f04036b3ccec49c441029f0",
-      "bytes": 15152
+      "sha256": "89b0162254f5a429c6de2489e21431ec75cef266d09d3c9c2105e562819771a5",
+      "bytes": 16681
     },
     {
       "file": "audio/a.mp3",
@@ -455,6 +455,498 @@
       "bytes": 8664
     },
     {
+      "file": "audio/daily_34_frau_am_bus.mp3",
+      "status": 200,
+      "sha256": "2cfbb679428036c99cd7d06da2e301360dd09aec5e0356c11922a244c1462f90",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/daily_34_frau_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "30e97b872374aea51766ed81d5df43ae1f5a8d0acfb88803dd87680af72e2399",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/daily_34_frau_am_haus.mp3",
+      "status": 200,
+      "sha256": "f244fd95dd44e7ddd788832a7848f9d8dc27626d947d6672823c756b25c4210e",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/daily_34_frau_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "8b62b491fe1512b92981e9335af77f5dff3a0b250d98a2e847cb63b143fa11bd",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/daily_34_frau_hat_brot.mp3",
+      "status": 200,
+      "sha256": "acd79695c381fd35f9e468857a8b0941139f91973916daf4e84b6b407d63b7e9",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/daily_34_frau_hat_brot_short.mp3",
+      "status": 200,
+      "sha256": "8f9279b8878815d16d024a48cfac219142bc89f9607d081450006339b999d6bc",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/daily_34_frau_hat_wasser.mp3",
+      "status": 200,
+      "sha256": "f71b312f427759f6fda65ed703d63eca1e737d0a94627f212c48aa4ccc51a190",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/daily_34_frau_hat_wasser_short.mp3",
+      "status": 200,
+      "sha256": "96646cf5bc6022e0c1c57573ca584d6fb5df37fb3c2c67e32261820224943ea6",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/daily_34_frau_im_bus.mp3",
+      "status": 200,
+      "sha256": "9546ec9a5a35cfb60d41980597701de8489f347bcef663a6558089ce6c5e39bb",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/daily_34_frau_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "97837421f9c9906c7d3414a8efb204db0ca9ed742091edf3e2b8dcb18eb4ce03",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/daily_34_frau_im_haus.mp3",
+      "status": 200,
+      "sha256": "541e09c33d0b195f589c8b9c1834b115efd23bea71ca0854d5331eb9e85a25ab",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/daily_34_frau_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "0ec5522eef56b6d4cc428db4eb88cefdcd5eec91fa1f12f498f4c3b31501f9b5",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/daily_34_kind_am_bus.mp3",
+      "status": 200,
+      "sha256": "be6678ff3036270af2e439bbf5b0232cd384ef0483d7c5db02c9d247ad2c0bab",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/daily_34_kind_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "d479cba6c5addc32129d8b8e3c97cef4523b7bb08a1c169dca14c51619ea8cc6",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/daily_34_kind_am_haus.mp3",
+      "status": 200,
+      "sha256": "6fa54e72665b3cef6f832691f82333ae008f0e2affd093908434b7ff8fe98aaa",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/daily_34_kind_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "41ab1afca72bfdc049e9b56960ef8dec0b2a70b395a576e23334de06e8ff3ea6",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/daily_34_kind_count_1.mp3",
+      "status": 200,
+      "sha256": "b3c039fc59aac801e6121c059954b753cb214f5d5c3fceaef3009aaeeebf0963",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/daily_34_kind_count_1_short.mp3",
+      "status": 200,
+      "sha256": "2e55d2b82cce925245ef40c4250294a858888c40985adfb1f6d0a5bf711ad670",
+      "bytes": 9238
+    },
+    {
+      "file": "audio/daily_34_kind_count_2.mp3",
+      "status": 200,
+      "sha256": "39923d09056b4523752c9ca77e30e3cc2c36f5e7331322ebe9dc598087a9851d",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/daily_34_kind_count_2_short.mp3",
+      "status": 200,
+      "sha256": "7a83f40c37548eaf0327b09d9317e2a04b2e7c96851d704646552927c6dd9848",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/daily_34_kind_count_3.mp3",
+      "status": 200,
+      "sha256": "b331861a2b6143cd9b8a6717a1f0e42a40d16d8b21873d66a77e27713054fbf4",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/daily_34_kind_count_3_short.mp3",
+      "status": 200,
+      "sha256": "375b1469b39263c44198b2ad1c54eadeb01f52483c415edad91c89ba4a207db3",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/daily_34_kind_hat_brot.mp3",
+      "status": 200,
+      "sha256": "c5c6a8ba4c90a239bce0a3adcb085f7541f613029100b094a49c99faaf7490e4",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/daily_34_kind_hat_brot_short.mp3",
+      "status": 200,
+      "sha256": "858730c2de40bf72eb46aa454556d4d6c40f57564bf4764774139e0c61309495",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/daily_34_kind_hat_wasser.mp3",
+      "status": 200,
+      "sha256": "f8398e4f53331baf6b28a4f3305be538cd79149de909b6f53522157373550b0e",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/daily_34_kind_hat_wasser_short.mp3",
+      "status": 200,
+      "sha256": "3826e45a4c4b822bed9ca54914d282b4d39b72d0d0f9a232069f3fa63992ae9c",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/daily_34_kind_im_bus.mp3",
+      "status": 200,
+      "sha256": "003798b94382d0d461f444ddb4a265458d8717745d16ab73759fe04746af0077",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/daily_34_kind_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "8c82299b4152e985cd90f23ce95e2bff23e17973c81cff964145d8b0be918819",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/daily_34_kind_im_haus.mp3",
+      "status": 200,
+      "sha256": "65244979d45744ce50337ea0ff87cfee5e09bd81b2c7b0d7773f99055f340486",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/daily_34_kind_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "fa8bd4238224f2f3934ece5a8a9f5bbcc1c53f77dd3668828bd686d44b830b8c",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/daily_34_kind_not_schlaeft.mp3",
+      "status": 200,
+      "sha256": "f4a74fa51afc8125a98afef18967a7feae130fb43d500e8a10b21ce11139bfe9",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/daily_34_kind_not_wach.mp3",
+      "status": 200,
+      "sha256": "05053abae30bdd8eaad5e748e3f9f4a15fdab8490334a5dbc60798fa185c558d",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/daily_34_kind_schlaeft.mp3",
+      "status": 200,
+      "sha256": "b88665387bfe2ad902cd2b96c597675b187ed07270c161e03b1d78c0ea00aabc",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/daily_34_kind_wach.mp3",
+      "status": 200,
+      "sha256": "21942079879d762d6e87f6203c7c1102d83e723782d78bcf293f1c62a147b6c0",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/daily_34_mann_am_bus.mp3",
+      "status": 200,
+      "sha256": "524fa46f63c5db30413f70cc5867607fbae741625ad353c080ef517f6076fb50",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/daily_34_mann_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "337f78a7f4fc9923152b76a5f2fc6f93f6bf78857681f0ba9bb924450c54c4ec",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/daily_34_mann_am_haus.mp3",
+      "status": 200,
+      "sha256": "a85256b636671a2df147a492f2a49daafc44df6d748247a2a3632e93b3fe1b32",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/daily_34_mann_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "d7f49dea0816ad75b2b84f8baf6aaff81412267cafa59a536fba59ad8ef85170",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/daily_34_mann_hat_brot.mp3",
+      "status": 200,
+      "sha256": "a67651d369e500d73da4da51cb17bfb76bb014fdda0489dde49c2e9303e9f6f9",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/daily_34_mann_hat_brot_short.mp3",
+      "status": 200,
+      "sha256": "d3739397425051971ee354ffc08f141059f197645a819f75da5d68ce3c671cb8",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/daily_34_mann_hat_wasser.mp3",
+      "status": 200,
+      "sha256": "dc729b11c5b8d0045f9bb5676ca2b641e447f4ec12feb42b6751a68bb238564b",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/daily_34_mann_hat_wasser_short.mp3",
+      "status": 200,
+      "sha256": "aef7065efa0032d1af4d4a0dbb2440c4832c42af8acd0eef452a45a89462c1bb",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/daily_34_mann_im_bus.mp3",
+      "status": 200,
+      "sha256": "ad98454fb2e916e7e1e73e7e7bb87d409ce52eee49d27c87bd937149fbad3069",
+      "bytes": 14253
+    },
+    {
+      "file": "audio/daily_34_mann_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "4420b746abb4e226a90150a24d1acd79f2ac9bc367db0a520fd0b9985d462397",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/daily_34_mann_im_haus.mp3",
+      "status": 200,
+      "sha256": "f6dcd01787b8252ac3a23aa5d4edeef00a38d2e5fe170525d4004936e7603b81",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/daily_34_mann_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "9644b6b76abe423f309860a2e4ab77c8e164be2f9a494e3d03541577759255f9",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/daily_35_brot_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "5545025680f1157dccd74bc7060df454c849e24898425d9425ac045ac028375d",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/daily_35_brot_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "c780bb37baf954a917bfc925402710555abd5e7b5bdf3c455b1a93cac2b27f23",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/daily_35_brot_in_kiste.mp3",
+      "status": 200,
+      "sha256": "d380eff67b8291c930419c3ec31d575756f215c86f1c10e5da61fb0b15b0e690",
+      "bytes": 16970
+    },
+    {
+      "file": "audio/daily_35_brot_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "2bdb3ee877086d79609496f4edda8bf9e713e585e8fab6863b09946401e24007",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/daily_35_brot_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "7607d004aaadcfa28a73ca2aa856e1f32e3e357cf99ec6ac39bda2df62c5f384",
+      "bytes": 18015
+    },
+    {
+      "file": "audio/daily_35_brot_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "5e9ce0e2807536267e5717942e4f6ac1bcb789f699f760a5f74f0d47804fb423",
+      "bytes": 16134
+    },
+    {
+      "file": "audio/daily_35_brot_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "134af1cd953b9a56b53e0a72a2a3ced80e17d46816dda3a8c746d0a6b3d4cbd5",
+      "bytes": 16970
+    },
+    {
+      "file": "audio/daily_35_brot_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "2960676d63ad63c2db9469a3eaba12789b3a50758dc7b4c00e989f888b6dc321",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/daily_35_buch_not_offen.mp3",
+      "status": 200,
+      "sha256": "a176912629698d16afd1dd1a694c163659179424d839f4d33df2312c8b8a3aad",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/daily_35_buch_not_zu.mp3",
+      "status": 200,
+      "sha256": "edc34def745e716ee0070b0c24110ad53759ccdc8789af53abab5ae20955b103",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/daily_35_food_pair_oben_oben.mp3",
+      "status": 200,
+      "sha256": "7874077d649b7eec41dc479160113bf0b0f5827fcfb0698a8102b553042c8a04",
+      "bytes": 25956
+    },
+    {
+      "file": "audio/daily_35_food_pair_oben_unten.mp3",
+      "status": 200,
+      "sha256": "e5bbda8997db8776c72614134ea408c97f277820bbb46b97a8e74a328afbd13d",
+      "bytes": 28046
+    },
+    {
+      "file": "audio/daily_35_food_pair_unten_oben.mp3",
+      "status": 200,
+      "sha256": "9e6d4c5b60654e429edb9539d274eaff35425c228ba1a2610b320d92a2762058",
+      "bytes": 26583
+    },
+    {
+      "file": "audio/daily_35_food_pair_unten_unten.mp3",
+      "status": 200,
+      "sha256": "b73e3f2eeb9022db40aa9897cd091ddcb00fa3e18bbe6a773b267678fc749ff8",
+      "bytes": 29091
+    },
+    {
+      "file": "audio/daily_35_kind_hat_brot.mp3",
+      "status": 200,
+      "sha256": "c5c6a8ba4c90a239bce0a3adcb085f7541f613029100b094a49c99faaf7490e4",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/daily_35_kind_hat_buch.mp3",
+      "status": 200,
+      "sha256": "d7c3168678494866ed93041a939c7f195a1afffac6cad6186a5ac206cfa4d0fd",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/daily_35_kind_hat_milch.mp3",
+      "status": 200,
+      "sha256": "4f7625e5b7d71a3197d0c7185e57ed6fa0160f0ef6a5cd54879c9da49546815f",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/daily_35_kind_hat_wasser.mp3",
+      "status": 200,
+      "sha256": "f8398e4f53331baf6b28a4f3305be538cd79149de909b6f53522157373550b0e",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/daily_35_kind_isst_brot.mp3",
+      "status": 200,
+      "sha256": "073e94c4572cd17234911a6a6798c8656da905e9554996dfc3b944d1992116ed",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/daily_35_kind_liest_buch.mp3",
+      "status": 200,
+      "sha256": "b74af48fea6c03cc9397509d9c6912f621c3652b31c5efad3d3d4e7f08547157",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/daily_35_kind_trinkt_milch.mp3",
+      "status": 200,
+      "sha256": "e3d7c97526bc2dfcef4e6fa0f9e9d9b8a6ac8e5b408d4c1018fb5e83b06d9ea1",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/daily_35_kind_trinkt_wasser.mp3",
+      "status": 200,
+      "sha256": "d824fb05e4542d9a8791f5c61680ef58ad03ce892090c57a74f70b0e2d7d7e2f",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/daily_35_mama_hat_brot.mp3",
+      "status": 200,
+      "sha256": "4a56f76c01bfe57c2a1f1811c735fa9cc066692184c695ff5c59ed3f828e6749",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/daily_35_mama_hat_brot_short.mp3",
+      "status": 200,
+      "sha256": "880f4fd0569070afa552c815f63a029f4513e0df1eeba15bcc744f89abe579eb",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/daily_35_mama_hat_milch.mp3",
+      "status": 200,
+      "sha256": "1029576a29083d28e1d3886b200f1b8ba5f04cca1cae0df7c1384b0224486498",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/daily_35_mama_hat_milch_short.mp3",
+      "status": 200,
+      "sha256": "cda6ff99d2da766b89abc1490208a4807e5d50856a45dbe012fdbba7d244a2b9",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/daily_35_mama_hat_wasser.mp3",
+      "status": 200,
+      "sha256": "f50e55978131ac8d2cb93e7d32aa09ffb0fcf90f19575703b55a59378ea987b3",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/daily_35_mama_hat_wasser_short.mp3",
+      "status": 200,
+      "sha256": "70162aa7799f045731cc0375f72086b4871a8ac4bcea112d5f854748cb03079e",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/daily_35_oma_hat_brot.mp3",
+      "status": 200,
+      "sha256": "e3408d168747a105aaac7f734b5c21ab174a56314f240a5fa313574aa889aee0",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/daily_35_oma_hat_brot_short.mp3",
+      "status": 200,
+      "sha256": "2c30eb00f47d8ded0c856b0b1ff5bf260359042996a2043bbbc0eaed799ae558",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/daily_35_oma_hat_milch.mp3",
+      "status": 200,
+      "sha256": "8832103f924f3daf15101136443292e506ce403b0cc3ef00d720bf2b34d287f6",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/daily_35_oma_hat_milch_short.mp3",
+      "status": 200,
+      "sha256": "48c74b55731ba27dd5729c5adfe49d9ceff6f1f91a1509de9975382da96d1182",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/daily_35_oma_hat_wasser.mp3",
+      "status": 200,
+      "sha256": "4416685ed181561ee9ca9acff1c45541ac3f8f9f9105772f4404a7bf3964bcd1",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/daily_35_oma_hat_wasser_short.mp3",
+      "status": 200,
+      "sha256": "49b215f499bff757f48150fdae525240cfcf20a3b820d92557878ca3d4069429",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/daily_35_tasche_not_offen.mp3",
+      "status": 200,
+      "sha256": "38b973bac0e84287436e204d74eafa7c7e3ada3abe87749efb3305c80b7652b0",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/daily_35_tasche_not_zu.mp3",
+      "status": 200,
+      "sha256": "1028c48ffef5172dd99855e406aa7447e2359f08b02c5108e657e2c1d8750ffd",
+      "bytes": 14880
+    },
+    {
       "file": "audio/das.mp3",
       "status": 200,
       "sha256": "fcaf4c95bfcf369ad7796ef90b8275f8ee90c0f7777301bbcb5451e317572bea",
@@ -865,8 +1357,8 @@
     {
       "file": "audio/manifest.json",
       "status": 200,
-      "sha256": "78ab3c740b57d74b1fadc0d350d21744756979edf23f49d39c5257a1aa6869c4",
-      "bytes": 609182
+      "sha256": "63285b9c903a970813ffffc2480043f14bde85b24fcb83ff3d87d1803790dd8c",
+      "bytes": 702507
     },
     {
       "file": "audio/maus.mp3",
@@ -3421,7 +3913,7 @@
     {
       "file": "audio-review.html",
       "status": 200,
-      "sha256": "f5e611d843da5f8446d2a7aaa2559b34c1d36b3fb85ce9b38d50a3dc931547a4",
+      "sha256": "343b0ef955478d533cd1b8327b9b92e8ed80a3d60e327a3fa3cb7a35fa588231",
       "bytes": 1936
     },
     {
@@ -3433,7 +3925,7 @@
     {
       "file": "data.mjs",
       "status": 200,
-      "sha256": "31d8e7e5bc86c7ec6a7d164eef66c99797c2f40d0736586e44c6e0fb420a8b3f",
+      "sha256": "33d6e6be18acea3bc7aeab0365c26ccd99a7e9a81537d702f70727764dbd63af",
       "bytes": 7995
     },
     {
@@ -3463,8 +3955,8 @@
     {
       "file": "image-data.mjs",
       "status": 200,
-      "sha256": "d3e6cc44ca30ceebc84ec4abfdc7eb899814d9eda3346c4fc3cd966d183f5056",
-      "bytes": 4707
+      "sha256": "6c2fc2c12717db881b66f1a85d5db85eb40c204e7e8566f6f9b526f0490db0a7",
+      "bytes": 5535
     },
     {
       "file": "images/atlas-a-ad34ecaa23db.webp",
@@ -3509,52 +4001,70 @@
       "bytes": 216520
     },
     {
+      "file": "images/atlas-h-542a318be94d.webp",
+      "status": 200,
+      "sha256": "542a318be94df2d05579baeeae6db78747f3e3b461573b35181ed9b601b993a4",
+      "bytes": 396642
+    },
+    {
       "file": "images/manifest.json",
       "status": 200,
-      "sha256": "4152c6a7f6a3ca485885ff9e92ebdbe0f0a4c01ff3f173550339f8416bf1b225",
-      "bytes": 2071
+      "sha256": "69472dd4541c361c5905d15ca2ac97450918bd03834cae092cc5a1b5957578cb",
+      "bytes": 2342
     },
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "c4d42ec530a5da42b06b699df67fa907ceba71423e0cfd3534cac90692dcaf33",
+      "sha256": "738a00339ef0b24f8726790d61ce0036c8d3872e6650564504c031c834f55945",
       "bytes": 1127
     },
     {
       "file": "learning.mjs",
       "status": 200,
-      "sha256": "7f758d72db8458a17ed8410bcd2537b97fe912d84902711ad1e6c7cac68aef66",
-      "bytes": 22800
+      "sha256": "d481b2443d07cc6df704e05c665a0f2d990ca40bfbd2cfcbfafadddb7d969e86",
+      "bytes": 25836
     },
     {
       "file": "level-catalog.mjs",
       "status": 200,
-      "sha256": "7b58a2519050a6c676f49d892f87c319a8aa2c599c8b77f65db2b9bbdebfe83e",
-      "bytes": 2469
+      "sha256": "ae54519f0919f908b2ecaa9ddf10982b7a1b097dec8f569cda26b198f90f9065",
+      "bytes": 2543
     },
     {
       "file": "main.mjs",
       "status": 200,
-      "sha256": "d7a079012844e55f56d33ea657f0b7a364f61e5b9523ec77840c8e396f232a15",
-      "bytes": 24746
+      "sha256": "4ff925a7b2e94632f9fc1d74be94f6c0e61b58bc7f2ca1ded190f7bc0dd66319",
+      "bytes": 26948
     },
     {
       "file": "mixed-reading.mjs",
       "status": 200,
-      "sha256": "5db81edd0b375c63aff74668b41a7fab3d2507eb038da25ee6b94c6786e93df1",
-      "bytes": 7863
+      "sha256": "97d1fe817b806208dcc927b3aad7fad3bef7cae97cfc4d335528abc2a0d05991",
+      "bytes": 11591
     },
     {
       "file": "pictures.mjs",
       "status": 200,
-      "sha256": "926e1335d5d6791b08a6d9e369ca6e7b6cf9acac04884f56dc971ed57bf35446",
-      "bytes": 3124
+      "sha256": "560c61d5595488ec7cad126d51e48090279a031b66f153dac3065cd16b6d5bb4",
+      "bytes": 3445
     },
     {
       "file": "reading-data.mjs",
       "status": 200,
-      "sha256": "46a8cf7864c67b556fdcbdbdf659bd3adb53a83aa6554408310f8df0264218b3",
+      "sha256": "620378eab7604cb3ec26688a3ec9020a4cb2fbbd17bdf84f664c9a1f211f3236",
       "bytes": 6234
+    },
+    {
+      "file": "reading-path-view.mjs",
+      "status": 200,
+      "sha256": "8f4d5a228a5d0290f99f41334d9d6f284a04bfc7ae7cabe0c641568db5d0797f",
+      "bytes": 3233
+    },
+    {
+      "file": "reading-path.mjs",
+      "status": 200,
+      "sha256": "4b6a24603b8ca0f1e108ed0efafc1fd56f673871853afc290966db3c75beeed6",
+      "bytes": 10927
     },
     {
       "file": "review.mjs",
@@ -3565,14 +4075,14 @@
     {
       "file": "spacing.mjs",
       "status": 200,
-      "sha256": "6eff44ad020c346ec01b0452f25229886ace01ecc636e62ee7c4eba7f5255531",
+      "sha256": "22e11cffdfbf669546cb48c9be279ad699f3e0e0aecf2fddabb26c680974bcae",
       "bytes": 6298
     },
     {
       "file": "style.css",
       "status": 200,
-      "sha256": "d21bdc86738678ea7f8a6156bf8aa08941b83db79925838c9628395a81b14607",
-      "bytes": 23561
+      "sha256": "b1e96bdcf8bfc2e7bae4fb9f7578a898cb42f373aed450de69ed5125e4c473bb",
+      "bytes": 25137
     },
     {
       "file": "task-guides.mjs",
@@ -3589,22 +4099,22 @@
     {
       "file": "word-inventory.mjs",
       "status": 200,
-      "sha256": "197ae63f21871d0aac1f40cd1da50ae96dd23262257ca7014e0e70fd7a2d0978",
+      "sha256": "90b67973ca1eed4929616f1af0eefcfadab9277f5f4b2dafc29531518d0f5829",
       "bytes": 1415
     },
     {
       "file": "word-list.mjs",
       "status": 200,
-      "sha256": "74a3c41a0f153a1c72303ccf8ae15d21d046ba82e2b0babd1665f9a5528ca759",
+      "sha256": "a33633bb2513d573bd810e24b35b335582160b078dac2003cef9a57fa9f48111",
       "bytes": 1179
     },
     {
       "file": "words.html",
       "status": 200,
-      "sha256": "3c1f4c1c68db4be5ca49ae70c2d504140f98ea06ec631685b2400e376d0921d9",
+      "sha256": "7b78ed17e38a507dac76f9ec9612c4d85e91486a5e1565c3c2eab9a3c34a432a",
       "bytes": 1352
     }
   ],
-  "totalBytes": 10549982,
+  "totalBytes": 12259447,
   "meaning": "All deployed bytes match the locally browser-tested build over certificate-verified HTTPS. Not a real-phone playability test."
 }

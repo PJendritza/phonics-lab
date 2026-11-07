@@ -54,9 +54,10 @@ git diff --check
 86 unit/content tests pass; all 642 MP3s decode/headroom/padding pass. All thirteen
 browser suites pass against final app hash c3c1c2789c9a. Eight publication gates
 are bound to that same hash. Matrix evidence: docs/verification/v13-browser-matrix.json.
-The new path test covers real progression, same-level resume after a lower-level
-visit, old active/paused review return, v12 migration, actual speech help and nine
-representative scenes at 320/390/768px. An extensively practised eight-profile
+The new browser path test covers real progression, same-level resume after a
+lower-level visit, v12 migration, actual speech help and nine representative
+scenes at 320/390/768px. Separate unit checks cover old active/paused review return.
+An extensively practised eight-profile
 backup exceeding one MB restores through the actual confirmed import UI. The
 input cap is now four MB with strict schema validation. All existing rewards,
 old goals and human recordings stay intact. Apple and drink/hold screenshots
@@ -65,14 +66,29 @@ legacy eighteen-question behavior remains explicitly tested. The added Level-1
 visit intentionally plays a; its test playback baseline was corrected and the
 whole path suite rerun successfully, with no app change or skipped assertion.
 
-Build: 685 files / 12,259,446 bytes dirty (clean adds one metadata byte), under
-unchanged 14 MB cap. No source changes during the final verification matrix;
+Build: 685 files / 12,259,447 bytes clean, under unchanged 14 MB cap.
+No source changes during the final verification matrix;
 only the path test fixture expectation was corrected afterward.
 
-Publication pending clean source commit/push, existing gh-pages update and
-verification of all public HTTPS bytes. Use a fresh external deployment checkout.
-No Pages settings change. Physical phone, educator/native pronunciation and
-independent reading ability validation are distinct from these technical checks.
+Published and independently verified over certificate-verified HTTPS:
+- Source/main: 796d9e1ba0ebfb8c130b676ee6fadffa60db899e; also pushed on feature
+  branch reading-etappen-and-useful-words.
+- Deployment/gh-pages: 6d0148733db447bd733808d28c019d4f6c0d7286; fresh checkout
+  /workspace/kalulu-browser-build/publish-v13. No Pages settings changed.
+- python3 scripts/verify_live.py passed: all 685 public files exactly match the
+  clean locally tested v13 build (12,259,447 bytes, asset c3c1c2789c9a).
+  Evidence: docs/verification/2026-10-18/live.json.
+- Demo: https://patrickjendritza.com/phonics-lab/?v=13.0.0
+- Inventory: https://patrickjendritza.com/phonics-lab/words.html?v=13.0.0
+The final evidence/docs-only commit follows the deployed source without changing
+app bytes; no redeployment is needed for it. Physical phone, educator/native
+pronunciation and independent reading ability validation remain distinct.
+
+Next user check: select Level 34 -> Etappe 4 (Menschen im Alltag) and Level 35 ->
+Etappe 4 (Essen, trinken und lesen), plus apple am Baum in Level 35 Etappe 1.
+Review whether the new picture/verb/negation contrasts and finite Etappe pacing
+are clear for the child. Further word candidates and phonics caveats are recorded
+in the vocabulary research doc; no automatic further expansion/scheduling added.
 
 ---
 
