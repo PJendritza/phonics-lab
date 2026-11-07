@@ -1,4 +1,4 @@
-# Phonics Lab v11: two new reading packs and child guidance
+# Phonics Lab v11: two new reading packs and child guidance — verified release
 
 Canonical repo: https://github.com/PJendritza/phonics-lab . Feature branch:
 two-reading-packs-and-child-guidance. Checkout /workspace/Kalulu-DE. Read AGENTS.md
@@ -46,8 +46,8 @@ publication; all earlier directions/phoneme/help policies are superseded below.
   advances forward; no implicit backward review. New groups keep prior adaptive
   family confidence, error retrieval, im/am balance and representative mastery.
 - No engine, accounts, tracking, cloud sync, microphone or scheduling. Optional
-  media remain on demand. New static cap 14 MB; dirty package 596 files /
-  10,116,908 bytes, app hash 93978435d111. Clean metadata adds one byte.
+  media remain on demand. New static cap 14 MB; clean published package 596 files /
+  10,116,909 bytes, app hash 93978435d111.
 
 ## Executed setup and verification
 
@@ -118,12 +118,33 @@ of scope. Parent/native review is also needed for new vocabulary/plurals and art
 
 ## Publication and next step
 
-Clean source commit/push, existing gh-pages publication and verified public HTTPS
-bytes pending at this checkpoint. scripts/publish.py now requires passing current
-v11-child-guidance evidence as well as the five previous app-hash gates. Use a
-fresh external checkout, no Pages settings changes. Record actual source and
-publication commits/results after verification; later documentation-only commits
-are separate from the deployed source.
+Published and verified 2026-11-07:
+
+- App source [3ae03c380bf97e337988747014e0d6273dd58df4](https://github.com/PJendritza/phonics-lab/commit/3ae03c380bf97e337988747014e0d6273dd58df4), pushed to main and two-reading-packs-and-child-guidance.
+- Generated gh-pages [fe71cbeb962c897c9dec9efb40fa9a2adf491f16](https://github.com/PJendritza/phonics-lab/commit/fe71cbeb962c897c9dec9efb40fa9a2adf491f16).
+- Live https://patrickjendritza.com/phonics-lab/?v=11.0.0 ; audio review:
+  https://patrickjendritza.com/phonics-lab/audio-review.html?v=11.0.0 .
+- Public BUILD_INFO reports clean v11.0.0 source 3ae03c380bf9, asset 93978435d111.
+  All 596 public files / 10,116,909 bytes matched the tested build over verified
+  HTTPS at 2026-11-07T09:45:57.148053+00:00. No Pages settings changed.
+- Browser evidence comes from real Chromium 154.0.8037.57 / Playwright 1.62.1
+  using local packaged-site phone/tablet emulation. No physical-phone or native
+  phonetic approval claimed. This run does not claim an extra public Chrome UI
+  smoke test; the independent public HTTPS byte check succeeded with TLS enabled.
+
+```sh
+git push -u origin two-reading-packs-and-child-guidance
+git switch main
+git merge --ff-only --no-stat two-reading-packs-and-child-guidance
+git push origin main
+python3 scripts/build.py
+python3 scripts/publish.py --checkout /workspace/kalulu-browser-build/publish-v11-3ae03c3
+python3 scripts/verify_live.py
+```
+
+All six current app-hash release gates passed, including v11 child-guidance.
+Later documentation-only commits contain final evidence and do not change the
+app source identified by BUILD_INFO; no extra app deployment is needed.
 
 User check: open v11 and try Levels 34 and 35. At a new reading question there
 should be only the small info control, not a solution speaker. After two errors

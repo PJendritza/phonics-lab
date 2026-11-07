@@ -16,7 +16,9 @@ are historical. Active changes: docs/CHILD-GUIDANCE.md.
       Commons metadata search was blocked (403). Do not claim native replacements.
 - [x] First 71 unit/content checks and all 560-clip technical audio checks pass.
 - [x] Eleven browser suites pass, including new directions/gating and both packs.
-- [ ] Publish and verify all public bytes; exact status in PROGRESS.md.
+- [x] Source/main and existing gh-pages published; all 596 public HTTPS files
+      match the tested build. Native isolated consonant replacement remains open.
+      Exact source/deployment commits and limits in PROGRESS.md.
 
 ---
 Historical release/planning context follows.

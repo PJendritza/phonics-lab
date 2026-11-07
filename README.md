@@ -44,7 +44,7 @@ Up to eight local profiles resume exact questions or partial words. Existing dem
 profiles migrate/persist, including across the repository path rename on the same
 website origin. Numbered level navigation is accessible during exercises; switching levels preserves each unfinished question. Successful levels continue forward instead of selecting an earlier weaker level. After the last success, earlier review is an explicit choice. Parent tools offer a later-stage preview checkbox and
 confirmed JSON backup/restore. Data stays in that browser/device; no login or sync.
-The bundled Andika-based literacy font has a curved lowercase l and single-storey a; no external font requests. Unsupported consonants now stay silent; approved German letter sounds remain. a wrong recorded word in a listening-to-written-word task plays that selected word. Wrong pictures and invented forms stay silent. The larger flower and the same seven, more visible sparkles mark correct taps. This is a prototype, not a complete or validated reading course. New recordings
+The bundled Andika-based literacy font has a curved lowercase l and single-storey a; no external font requests. Unsupported consonants now stay silent; approved German letter sounds remain. A wrong recorded word in a listening-to-written-word task plays that selected word. Wrong pictures and invented forms stay silent. The larger flower and the same seven, more visible sparkles mark correct taps. This is a prototype, not a complete or validated reading course. New recordings
 still need listening/educator review. [Audio and credits](docs/AUDIO.md).
 
 ## Run and test
@@ -125,7 +125,7 @@ identifies the actual app source commit; later docs-only commits do not redeploy
 syllable and word learning. This independent app does not inherit research evidence
 from the original intervention. [Historical attempt](docs/history/GODOT-PROTOTYPE.md).
 
-Project CC BY-SA 4.0; human Wikimedia recordings individually CC BY-SA 3.0/4.0; Kalulu-derived consonant clips CC BY-SA 4.0; bundled Andika-derived fonts SIL OFL 1.1 ([font provenance](docs/FONTS.md)).
+Project CC BY-SA 4.0; human Wikimedia recordings individually CC BY-SA 3.0/4.0; archived former Kalulu consonant clips CC BY-SA 4.0 (removed from the active app); bundled Andika-derived fonts SIL OFL 1.1 ([font provenance](docs/FONTS.md)).
 See LICENSE, [audio provenance](docs/AUDIO.md), [source metadata](docs/audio-sources.json)
 and in-app About/Töne prüfen. The user’s positive physical-phone report applies to
 v2; current release browser emulation is not a new physical-device listening test.

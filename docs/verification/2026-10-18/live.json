@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "timeUTC": "2026-10-28T18:38:53.148345+00:00",
+  "timeUTC": "2026-11-07T09:45:57.148053+00:00",
   "base": "https://patrickjendritza.com/phonics-lab/",
-  "sourceCommit": "1fc7d0d0b39ffa295681a79b9310a938ea256217",
+  "sourceCommit": "3ae03c380bf97e337988747014e0d6273dd58df4",
   "files": [
     {
       "file": ".nojekyll",
@@ -13,7 +13,7 @@
     {
       "file": "BUILD_INFO.json",
       "status": 200,
-      "sha256": "61452aa2f25019951195f7dd2dbc0d11b4e251caad39ca72d819e15997270929",
+      "sha256": "49b5d7772f2a02b2a37dd9ec6e73016543f0a70997675ee9eca4275c99da7fd5",
       "bytes": 379
     },
     {
@@ -25,14 +25,14 @@
     {
       "file": "SHA256SUMS",
       "status": 200,
-      "sha256": "41c7d2b3fda571b8685b0c4477238ba9420304f8a5b1a206fff8bf64918b2783",
-      "bytes": 27622
+      "sha256": "02662f39d92a19756bc1f7978d50d5e43ab170ee725660df9044b0215870f7f8",
+      "bytes": 56059
     },
     {
       "file": "about.html",
       "status": 200,
-      "sha256": "9cfbe71984716f61dede65a80c4ad9ec04eaa72cd954faf35d4be1eafa2ba78f",
-      "bytes": 14951
+      "sha256": "ff7595663db623adfbd84f5aa17b29e7a9c4509eefccd23d966fd0e007f78a01",
+      "bytes": 15072
     },
     {
       "file": "audio/a.mp3",
@@ -469,8 +469,8 @@
     {
       "file": "audio/double_letters.mp3",
       "status": 200,
-      "sha256": "a05b848cc93829aed2896bf39ec416d5caff26a8fe73a5af85d40abc3743df1c",
-      "bytes": 53332
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/du.mp3",
@@ -505,8 +505,8 @@
     {
       "file": "audio/ending.mp3",
       "status": 200,
-      "sha256": "d90e6615f923a9d0ee171b53c8211314fdaa3159e878f110dacd8fecf65b417c",
-      "bytes": 35778
+      "sha256": "30402d2fa4553c09000d7b6ae7fe69c43d3c806d1dcce4037ed88e0ebef2f61b",
+      "bytes": 16552
     },
     {
       "file": "audio/esel.mp3",
@@ -805,8 +805,8 @@
     {
       "file": "audio/listen.mp3",
       "status": 200,
-      "sha256": "75d2348b924b9523c6b3c2d04150b1fb71c22571976efd54af2a3eb8e7d71a87",
-      "bytes": 30972
+      "sha256": "f15ab3d7619654944a6522d748af2f212ca49c689fc0d22a5966576f6939cfcc",
+      "bytes": 21358
     },
     {
       "file": "audio/loewe.mp3",
@@ -817,14 +817,14 @@
     {
       "file": "audio/long_vowels.mp3",
       "status": 200,
-      "sha256": "6c50d4e3b7358fe8a3b3cfcb079abc581bdf092f47ba927ffaaff66b453baa99",
-      "bytes": 54377
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/long_words.mp3",
       "status": 200,
-      "sha256": "107b63d87c06b5531fd3bc2ac6009e501b1cfb514914a932b71bd9df13ca8d51",
-      "bytes": 46227
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/m.mp3",
@@ -865,8 +865,8 @@
     {
       "file": "audio/manifest.json",
       "status": 200,
-      "sha256": "7a532931fe668939d789439190130b402494da68cbcba6b34c024b190ef28362",
-      "bytes": 292204
+      "sha256": "9081fb7f86dafe8dffce7db21bc54276890774e300e2a18e4b1c72168a151b96",
+      "bytes": 608446
     },
     {
       "file": "audio/maus.mp3",
@@ -1009,8 +1009,8 @@
     {
       "file": "audio/meaning_mix.mp3",
       "status": 200,
-      "sha256": "f0bb564b811cf5dc517518a5f72d7af41851e06a53f152c08aac0d02f26eb91b",
-      "bytes": 58557
+      "sha256": "a559879f9d64fa2cc4c484baba8944a2647fb4e79352e4ba41f3027a314fbc5f",
+      "bytes": 21776
     },
     {
       "file": "audio/melone.mp3",
@@ -1025,10 +1025,1762 @@
       "bytes": 10493
     },
     {
+      "file": "audio/mix34_action_ente_schlaeft.mp3",
+      "status": 200,
+      "sha256": "ea9617450fc763017a1deffb49bab98719f70a10845af93a397b3517c6a3cf95",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix34_action_ente_wach.mp3",
+      "status": 200,
+      "sha256": "f34f855d500ae28e7b1c3cc2f92e09f95fb63738664e05c7592ec95b7276e990",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix34_action_frosch_schlaeft.mp3",
+      "status": 200,
+      "sha256": "109934fcbabb3f79bd48161c8757bcf82634837f9491a762ee3f105cf7a4a7bd",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix34_action_frosch_wach.mp3",
+      "status": 200,
+      "sha256": "8f52ee483247d5813ce1d5dd8b3eed7a0b8525db02891a7f64ff4dfda60f6d30",
+      "bytes": 10074
+    },
+    {
+      "file": "audio/mix34_action_hund_schlaeft.mp3",
+      "status": 200,
+      "sha256": "b68f882f63828d1113c4ae5c9b7a51c8d7fef7d04bfeef8341cc0a7de12b0bf1",
+      "bytes": 10492
+    },
+    {
+      "file": "audio/mix34_action_hund_wach.mp3",
+      "status": 200,
+      "sha256": "f417d203baf52556cfe41e2331ad38b1486494d66b61d4659df2843eec5e1024",
+      "bytes": 9865
+    },
+    {
+      "file": "audio/mix34_action_katze_schlaeft.mp3",
+      "status": 200,
+      "sha256": "2fd1bd7ce7212b27c4b33288081065f898fc1902eef222a515e102388e4e7b93",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix34_action_katze_wach.mp3",
+      "status": 200,
+      "sha256": "b638a5506d9bd29a4f327196f0cb6496e8ba1873e1ac1e3170b0c33c81914822",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix34_ente_am_baum.mp3",
+      "status": 200,
+      "sha256": "ce3cfb45ede45af6335b9ee05570adfec4a72a8fd126798008c2aae5903d6c1b",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/mix34_ente_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "586304969fee725086c8458268bf31dbea69eccaefde78c47e62d348438c689f",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix34_ente_am_bus.mp3",
+      "status": 200,
+      "sha256": "44098a95941792ef0933faf4ea61df5c1f62cc0a7da1886aecda3e403aa225f3",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix34_ente_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "d3c100b3f0a0dfe69fa40884751e75efb592071fa2063ed14fafd5abffb0c30c",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_ente_am_haus.mp3",
+      "status": 200,
+      "sha256": "51aea9ac81fbcaa636db07eae89b8026ff173d4e7ac8dae47d6ccd49c09ca814",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_ente_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "f6e32610c77c50fad1843f569e3d02120a5bc5f2e5e22e1f8d9f58d8c3d33921",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix34_ente_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "7e9f6811dde79407080077e29c041523761ce5d5e602b306c8f28bdd24b87fbc",
+      "bytes": 16134
+    },
+    {
+      "file": "audio/mix34_ente_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "5437cba1b19c826922bc9bbc49cfc093d7909157be3feef56628cf7e4fccc6a3",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix34_ente_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "6929ccb9c65ce48edeff2b99e88bc47a6c901018a9d573450a5d2d203d4c0dde",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/mix34_ente_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "f539d1894a2a355c88118235b2aaefbfda44dd6fe2dcd376f8cd970142d7add2",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix34_ente_count_1.mp3",
+      "status": 200,
+      "sha256": "44c4f29a43125d70f3dfb6fe82c9abc180e25441a53aa13ff80892730f48c303",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix34_ente_count_1_short.mp3",
+      "status": 200,
+      "sha256": "7c045e787f7e4d157970a83ab81c0613f04ceb666ab70c75fc0f17d898987a35",
+      "bytes": 9029
+    },
+    {
+      "file": "audio/mix34_ente_count_2.mp3",
+      "status": 200,
+      "sha256": "59457d4baec1d8f650b96beed7c37aa68f6b933cb2a8ded10dc1bb63eee29317",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_ente_count_2_short.mp3",
+      "status": 200,
+      "sha256": "e648f2da70557aa0356d3fc91d84c55e7c754904250d73d4fa15bab0bae910bf",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix34_ente_count_3.mp3",
+      "status": 200,
+      "sha256": "c4aa093b23c0370b1cb20f7e37e727640bab4167306e3648aadb0d16be1df9ba",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix34_ente_count_3_short.mp3",
+      "status": 200,
+      "sha256": "187148fc232a2f22f28f91db1982d7887ff6694cec6689cb668f8a7fb6f8f988",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix34_ente_im_bus.mp3",
+      "status": 200,
+      "sha256": "507ac84d4d15da7fac107b117ceeae234d8571a7f3e1a0385cb3115ec4357336",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_ente_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "c6a306793613a27f12b700991e426731b0706c03db3b87b23dc3e088fa385bc1",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix34_ente_im_haus.mp3",
+      "status": 200,
+      "sha256": "869431f9c0d4fcb562e2eaa47ebf2000fc11fa61ec527cf83cf52ed8bb4ad13b",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_ente_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "2a209791cf425c86be4552ad3257c12f85f7ffbcba80481e72563c6dc929fe16",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_ente_in_kiste.mp3",
+      "status": 200,
+      "sha256": "b9597de0be24e5e609d5d7354ec2749fafb7fc6a772867a421c052939abaf013",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix34_ente_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "d4323a85dec0fd658873201f43297cc721302bdc57f31bd3be66153b1b006dff",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix34_ente_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "f2f77b6b01ea16e27ac9f22583a3115fcf6e5edc64d1abc774b33602082a1b1f",
+      "bytes": 18851
+    },
+    {
+      "file": "audio/mix34_ente_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "4b2dda40fee7192cee522fe0527207a32405bb6c7b2a23b31b1ecf062bb9ffe9",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix34_ente_size_gross.mp3",
+      "status": 200,
+      "sha256": "aca7dd287e98cdae3a3f44941468b110d0bb651f063dfe3f5a7247e09ebf98ab",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/mix34_ente_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "d18ac19a95107e6ea722c8a1bb23de6611440a5ceb04a0bc987e8bb6e6d4119b",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix34_ente_size_klein.mp3",
+      "status": 200,
+      "sha256": "ff980a20ed5e3c24526d302a19e8af64851055526921a50c16db5c7a1e43b04d",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix34_ente_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "da7e2036c4cfa55572e0d5fd7a21eda367e86e573ec1769fc3c3516f43004b15",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix34_ente_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "3b1e667fab86aff7fcc5d2bce0624b845818e8b479973cb95f10c2addfa09924",
+      "bytes": 16761
+    },
+    {
+      "file": "audio/mix34_ente_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "ceaf72443b2d6ea7d5e9f1f3e84364f94d958e6759a3d2b0e74c1b7f92a84120",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix34_ente_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "f354b360930522dbeb8dff72cf0948826c0e9c9381a2f027ecad12145dadf557",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix34_ente_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "4ba0c9351b3d4200cc1008b813226a2a7f1b0d3a504468f74c8b86dcad7e9be4",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix34_frosch_am_baum.mp3",
+      "status": 200,
+      "sha256": "0e29017d23e19c8a05c9cfe61bc8aca850d191d3b10575181ea6a1a2e56150f2",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix34_frosch_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "7045b07d39b2d335a08b1402fbfa90abc01e4f5554e8fcfba838651848318ab7",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix34_frosch_am_bus.mp3",
+      "status": 200,
+      "sha256": "9e9586df100002686ef4421a290d42510d6217c738d1b282ee0203284a7652ce",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix34_frosch_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "bc948c267a7d38b0c01d7fcc27e1bffc748530b2c16e9ae37556a3a8b1ae21df",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix34_frosch_am_haus.mp3",
+      "status": 200,
+      "sha256": "948640e109dd3323561085119477793673d8b429e95bf05b31234db97a03e198",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_frosch_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "fdae6e6f7efe9a1eb0a058b079c61e27fb6c3ebb49697d07537a843725b7cec4",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix34_frosch_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "96aac67c4eda8e0920023f244b213ea1782e7d8d997ab6baf9e689df5855830e",
+      "bytes": 16970
+    },
+    {
+      "file": "audio/mix34_frosch_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "f688149d35d2737c070baa9b8663171814e79d4831b5a1bf39c4a59de7953c15",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix34_frosch_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "46dcd668198212c43ba343c787dcd9cb15a223ec9642e4a5f0f362ba40473f67",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix34_frosch_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "fde69e29ec6ddb2127dd6c4921ce3f1bfb83a1a83fff51b511f07559b4076a21",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/mix34_frosch_count_1.mp3",
+      "status": 200,
+      "sha256": "c7f0dfd24f42baa7c5f46dd7e8f0f80b99f777f2b8022780f53f7ce57bfc8af4",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix34_frosch_count_1_short.mp3",
+      "status": 200,
+      "sha256": "a2b9b401a1b41a3a11273e54bf04b742ac16d677ca6270281413441e40639c5a",
+      "bytes": 8611
+    },
+    {
+      "file": "audio/mix34_frosch_count_2.mp3",
+      "status": 200,
+      "sha256": "d4bc64b9bfd2e3919214180fa6673fb15b35d7806aa29a92a181ee7f883a0704",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix34_frosch_count_2_short.mp3",
+      "status": 200,
+      "sha256": "4be5c69a3067d9f96123a6e8363a0b180bad41c4b880434583917ae664f34496",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix34_frosch_count_3.mp3",
+      "status": 200,
+      "sha256": "cc19dfaf0a8c4a34c3a747492e2e6ae280e0669f47880fdae2fb2fab8585b45c",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_frosch_count_3_short.mp3",
+      "status": 200,
+      "sha256": "e6cf666142d2f71ccd119a9259a1c015a8a4a984554130c7c4eea46959e2982e",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix34_frosch_im_bus.mp3",
+      "status": 200,
+      "sha256": "df45b5cccad9673851b81594757999e5c1bf040e2ad3907049f83e4f03699a24",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/mix34_frosch_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "5dbfd2ecca759caffdaebdc37c5277a3801daefbf6df9a0d6f1731bc6f1da3d4",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix34_frosch_im_haus.mp3",
+      "status": 200,
+      "sha256": "aa40a69ee9a951850e6216ebc0a8f8274d15f340e6c6ebb27e8b0de4a0ff24b5",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_frosch_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "3549ea9e3b50b0d0c1ce1dd4727fdafed560377b42f9c84718b27d2ae5bfcf3a",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix34_frosch_in_kiste.mp3",
+      "status": 200,
+      "sha256": "91441c78a8edfd2622666b204e9a14a9d0b4f9d479258d012193e5d45ee0741b",
+      "bytes": 17597
+    },
+    {
+      "file": "audio/mix34_frosch_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "6fedcbeb9b8b0b6b7da99c56331e6a8a641ab40e24af7a4c989fb8e619349192",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix34_frosch_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "6f3098382b1f96b3986ba9c6de4af97650c4eb514793aea9074fb7ba6803dd58",
+      "bytes": 18433
+    },
+    {
+      "file": "audio/mix34_frosch_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "3d4a813e7431d80b32f1135c0e5d1fb89867281a2013747a8cbff705f341fd9f",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_frosch_size_gross.mp3",
+      "status": 200,
+      "sha256": "90203e9ab80d3f3fc28dbebf77542242a1f7ad9fdda9f71140c09833d64071bc",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix34_frosch_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "102220959810814d70220752ec38920f272c8d4af20933a9084cbf9ba1cb9e2e",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix34_frosch_size_klein.mp3",
+      "status": 200,
+      "sha256": "7ba4cc56a0c7422693a5d31a8b915c192700a10ceb446f9c531bf37d8aef2942",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix34_frosch_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "fbaa3c6ac5b9828d0d6db53ef04f8f684279dd9f9f7acd91619ae8fba296b753",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix34_frosch_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "0831101203638409fb89c7b7171550675419171c55d72476c67cec0d41080f76",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix34_frosch_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "427bc4499b491a4e67499f2f5e0f4d0c5b407785f3751567857f44eafe48f9e3",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix34_frosch_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "13360a8fcfc78a17394a46ccb72a205f24b8b10967a28e09bf92940fc06800dd",
+      "bytes": 17597
+    },
+    {
+      "file": "audio/mix34_frosch_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "077b0ef19cd0705a429bda73c3dd95753590ae528a51575fd03dd3efcdef94de",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix34_has_hund_becher.mp3",
+      "status": 200,
+      "sha256": "c9aeab80f8ddef64d0757b2e9660449b54425906cb2bb4d3ae35c50ba440ea8a",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/mix34_has_hund_becher_short.mp3",
+      "status": 200,
+      "sha256": "39565e11392ef670098d10b1617620946351d5d1ce927dccb447e33e08a37dea",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix34_has_hund_buch.mp3",
+      "status": 200,
+      "sha256": "c8945493ccdfa2d85ad1869f643de5ce8819d0bd0e96e85198f130e328d93bea",
+      "bytes": 10700
+    },
+    {
+      "file": "audio/mix34_has_hund_buch_short.mp3",
+      "status": 200,
+      "sha256": "b8ec0c6970d26fb3756c1ca4857a1e7f2d668939904112dd07c1deea73f5ada6",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix34_has_katze_becher.mp3",
+      "status": 200,
+      "sha256": "bec1fa9bf4e582a0bb41c28f1f38def977be20c4f6dfd48e603104c75d1620de",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_has_katze_becher_short.mp3",
+      "status": 200,
+      "sha256": "a3b0c97ca039294b2cb8b7607feedc400422d55e1d3f1a13fbb28e12d1916cd5",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix34_has_katze_buch.mp3",
+      "status": 200,
+      "sha256": "80b867e635dc2f7e57620e306c089633ee713496fa6cc2c729520e25107c8b34",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix34_has_katze_buch_short.mp3",
+      "status": 200,
+      "sha256": "104ca438ad07c40b2f437537ad688b6cbc29c746460dde4ec3b9dd0ebe15e9ae",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_hund_am_baum.mp3",
+      "status": 200,
+      "sha256": "ddeb82527f6950b5e37e41c24e7dec93b748510f973221cbca5966e4970f2cc8",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix34_hund_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "33115397aaa6f7bbac8942f34c1e2b78cdf3bf8828acad00631041b001f5d68c",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_hund_am_bus.mp3",
+      "status": 200,
+      "sha256": "447c4f6a1e4a413c946ba293ad4747dadb2a7228aa2ac4646c853d83ddb3287e",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/mix34_hund_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "58f9ff5129856374bd17ff0b81953cbac033b55f473b95f3a82794d612d62f01",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix34_hund_am_haus.mp3",
+      "status": 200,
+      "sha256": "6d00a8bef4abeff26f7b533918e40d997edd5ce5bf6b0277e0cdb8462af12c69",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/mix34_hund_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "124341f982df07cc874d2ac817309189ae0c0f7019687758e6dc11a8fe6b5a8e",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_hund_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "a0f454305b8c4e2a19fd64eba67bf939ad694e601bad82338e4eb98a516b9126",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_hund_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "9d1dd290c89745fda85aa8bdb8dbdd900cac1d949f370066592bf4a9ec47d4d6",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix34_hund_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "040fe183dda16a7464c062367f3c4dcfc0895ac56667009d2febc0d644680824",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_hund_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "2b71243905d17d01e1e8956c0dc3e381e2a388ef1e11477f08ddb749ccb536d7",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix34_hund_count_1.mp3",
+      "status": 200,
+      "sha256": "1b5b30f9f2744fbda4fe3f5cb722d8c26b4231a23c02ee1f2ea190d0a55b3aad",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix34_hund_count_1_short.mp3",
+      "status": 200,
+      "sha256": "d6c59392c333c777cd197fb76293435087b3a60655e1886dc5d758918309ce7a",
+      "bytes": 10700
+    },
+    {
+      "file": "audio/mix34_hund_count_2.mp3",
+      "status": 200,
+      "sha256": "6ae2bb45c50de640cb3f1b801b8db69c0e8843de9273f52571c05eee0f8c8432",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/mix34_hund_count_2_short.mp3",
+      "status": 200,
+      "sha256": "a0fc11bcd59144c6f5ea8e42b40b8b8568350f61575442d5adf9eb62754acb14",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix34_hund_count_3.mp3",
+      "status": 200,
+      "sha256": "0b060c9dd63e213db96d572a448f6071531cc9575e8855b2a47f3f904c5548d3",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix34_hund_count_3_short.mp3",
+      "status": 200,
+      "sha256": "54c12465ca0c27b2408100102d2a9c22e01762417fc455e1ba961ebf906b88f2",
+      "bytes": 9656
+    },
+    {
+      "file": "audio/mix34_hund_im_bus.mp3",
+      "status": 200,
+      "sha256": "c54e9cb35134db86168dc99a201bdb2060fb95759000bfccafc7ad4d969ab892",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_hund_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "800e3c6561b64df1eb50b86ea28a4b60edb51f75b78122dabbd4e488d292fc78",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix34_hund_im_haus.mp3",
+      "status": 200,
+      "sha256": "971eb239520f76552d258c0a2bb9a61b63207aded145399dfbc9cb1f8621892e",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix34_hund_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "4a589ee780585307365d5d4d6ce39be43e4fd797cd2d99299935504e87b26df8",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix34_hund_in_kiste.mp3",
+      "status": 200,
+      "sha256": "e844dbb4f174d9fd3202ac347f2783d26e4f81ad0d1f1cb57ba96f59a1547660",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix34_hund_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "0d553f20b125b00018cdf6212dfa3cf2756c6d4301375c0fd6a01fa168200588",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix34_hund_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "ad8757d8d04c0d53e51cc5a7cf225ca05ab4bc7d2a03a902b8c79fb4f9f1f4c4",
+      "bytes": 17806
+    },
+    {
+      "file": "audio/mix34_hund_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "5591059eb9779f62c92f1fd68b22ea24b03b3834029d0c53cdc497b47f037aac",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_hund_size_gross.mp3",
+      "status": 200,
+      "sha256": "8bf60aa626a5fe5a7678c977bdd357266db30e956ca3a165b50131fc39c10442",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix34_hund_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "27a3eea974bd38c830dca2920b837b8b81768cf935908b7887d7767564d60774",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix34_hund_size_klein.mp3",
+      "status": 200,
+      "sha256": "645335a9ebca4e13045955b34a6bb454d4064ad0c084ac96e3d9c2818c321d49",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix34_hund_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "c738053ee9ff15b838906b88d16e575bc0e4b3ae9e9433ec7dabe62ca29437ef",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix34_hund_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "b5300622a9a9b2e3cc362a0c39ba09ad2b7bbe56b1dddbe5bce651b97a59e565",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix34_hund_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "e4a66777e9408e0543d27e58fe3363f439a583b4979ecab2a003ba11c21e006a",
+      "bytes": 14253
+    },
+    {
+      "file": "audio/mix34_hund_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "8343f58db263c7d4ead0502f490fb4e0ec55836efd2d1a73762bee4e1198a49c",
+      "bytes": 16761
+    },
+    {
+      "file": "audio/mix34_hund_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "15712ad0da002ebc56e9ae122e9cdcd284f568a67b5dcb04319ffdeb2795af84",
+      "bytes": 14253
+    },
+    {
+      "file": "audio/mix34_katze_am_baum.mp3",
+      "status": 200,
+      "sha256": "33af0f57e695a304129e6f82974ad6d54fd97eebdc0f22941c0dc7c6d578289e",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix34_katze_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "25d33f4986367f5c8171032656c3ce604a7e99ef6f7ba42fc54974c65195110e",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix34_katze_am_bus.mp3",
+      "status": 200,
+      "sha256": "1a75654ec1448ed09432f334701c9925e27fe8bbe11af988811247a8ae6ef88c",
+      "bytes": 16134
+    },
+    {
+      "file": "audio/mix34_katze_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "0d3a842386c7df4e9e24211d922ed9087ddd5da52e2ac440b4d44a991f7408a8",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_katze_am_haus.mp3",
+      "status": 200,
+      "sha256": "d3b6feb2f3026530fa2b852668d55427cd6a6a5c8585b35612868573443c337e",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix34_katze_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "a310cbe154bd908f1065246c20bdb5a1cc7f36ed77533388a55e9e2479787414",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_katze_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "6db96def16e7db7d82694c8dc9b2b4589889635fd5b06321e93aca74ff8f1894",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/mix34_katze_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "02bc3473e36836d1a2dcf56dfdbaae14f337a8a6a0c8d4430a7488f2be18387f",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix34_katze_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "68e7386cac2e8837c6698757443c4b2013d8784b1649d9cd1a660a658c873bae",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/mix34_katze_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "67c7ae4924449be63fd16c7671b07dbf340bcafd298f47dd8a6d73bccf7cb037",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix34_katze_count_1.mp3",
+      "status": 200,
+      "sha256": "e59c4e54d8510aa17cca74aebccd46ae0b8022d0abd9b7862464dca21da7345d",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix34_katze_count_1_short.mp3",
+      "status": 200,
+      "sha256": "ad9ea4be701c8f486696b8b059677048a9e3988ef89b77d1049e9c46b61ab42e",
+      "bytes": 9029
+    },
+    {
+      "file": "audio/mix34_katze_count_2.mp3",
+      "status": 200,
+      "sha256": "14338fd78f1663951b5ef255c8276ddeef039b853ae00e244e56af5493a04889",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix34_katze_count_2_short.mp3",
+      "status": 200,
+      "sha256": "096e4d03abc39b5f1b2bcdc5f1733a34fd29c8cce571035ddd9e47b2630a5093",
+      "bytes": 10700
+    },
+    {
+      "file": "audio/mix34_katze_count_3.mp3",
+      "status": 200,
+      "sha256": "73a73561332c5ca1d28a38162b5a634ecf184464f18b81699d3854aeed0bfbbf",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix34_katze_count_3_short.mp3",
+      "status": 200,
+      "sha256": "2d23faa617e5d01ed613149c6669d321663949d5b24b11fcd8ce31d2dc839bf6",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix34_katze_im_bus.mp3",
+      "status": 200,
+      "sha256": "c1b9db8e40936d47e938bbad3d6f4a1066324c8eafaf1a70ebbb79c8bfdc2c29",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/mix34_katze_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "fdb58aea366cae803ceccfd0f69da8ae19acd00247097eb7bbb6fe10479ec780",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix34_katze_im_haus.mp3",
+      "status": 200,
+      "sha256": "34d1f58bef93856c161ed685b4b330e008494b23bf33ccd43f3763cb8dd1acf0",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix34_katze_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "4d31e1d4f4d8fd78a98ffd83690e72523e0fdf5a915e7f4a63ed93b4c78ee11a",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix34_katze_in_kiste.mp3",
+      "status": 200,
+      "sha256": "53beba84bb0935a0b8cfb433bf9a4a445867100c1456e709865a78f0b8742dc8",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix34_katze_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "289de5e7a4e605b964eb57f552fc5e2c6ed224ccbea8c1cab092871b7537d128",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix34_katze_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "3500e8f212d2027d353c67b6d7a24aea3140d2032577a5c050530e9e4ff780f8",
+      "bytes": 18851
+    },
+    {
+      "file": "audio/mix34_katze_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "0bb35a5a93fb46f94b62f5caad83112a7d5c4c3845421bc1362568a43a63ea66",
+      "bytes": 14253
+    },
+    {
+      "file": "audio/mix34_katze_size_gross.mp3",
+      "status": 200,
+      "sha256": "6296427bd69621d41f846c8ad30b7777382fb1518e759ede8ac085e752858b51",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix34_katze_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "67e140752e7df089affc02d0d5cce5bdd23dead07a1bda1fbc95570de358f6c4",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix34_katze_size_klein.mp3",
+      "status": 200,
+      "sha256": "d0d7fcdb057a0b70830b6f780664938972742c493311064b56a57f189fdd01dd",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix34_katze_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "4144a78fc1c142e4be2d6a457f76b57d2a0f602b20309e64a7ceba43823e2faa",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix34_katze_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "9c2a7e18a0ee0354ce92f5c0e89e0b7fdd0aa9e73ce55afa22bfca2a6bbfcf7d",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix34_katze_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "0e8150ae8973910c253cfd0d0940ebcc3b03119b67385ff2551e95a85c28da62",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix34_katze_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "2caa789b67a5bc95c962d29a76b6de406c0c2970d381d158fc4027415096a7ed",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix34_katze_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "c8d67c7425161b5c21aa63395bd46c624c57cbfdbccd2da4f55678604b9daa13",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix34_pair_oben_oben.mp3",
+      "status": 200,
+      "sha256": "1493cc10b715f9942dca8937ba5f2b26ce21b166049f5fa21e2416f68eae0f8b",
+      "bytes": 27210
+    },
+    {
+      "file": "audio/mix34_pair_oben_unten.mp3",
+      "status": 200,
+      "sha256": "73e426f63b2796c4aa38192160829f7fc4d42b50cde20776ff001aca5f7f5776",
+      "bytes": 28882
+    },
+    {
+      "file": "audio/mix34_pair_unten_oben.mp3",
+      "status": 200,
+      "sha256": "d5698cf231a08b9e26a2a38e90c778b9acd260751b28a5fdd6dd0af0bdf1da10",
+      "bytes": 28464
+    },
+    {
+      "file": "audio/mix34_pair_unten_unten.mp3",
+      "status": 200,
+      "sha256": "f64c042253c1ea79c1fbbfc219f2213469820bd7cd4558efb5004cf53929ac52",
+      "bytes": 29927
+    },
+    {
+      "file": "audio/mix35_apfel_am_baum.mp3",
+      "status": 200,
+      "sha256": "00f60b327e08feed523873881938a8585fa0bd83d45d21dccce2b4189ec962f3",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/mix35_apfel_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "25b01d46199589fd78968505b4b164debd689970fbe73c127fb531a0c9abc7f9",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix35_apfel_am_bus.mp3",
+      "status": 200,
+      "sha256": "ff2f30ac5ec64321ae6ff49d97d1234440279520e5c8604e69efdf92ad42ee27",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/mix35_apfel_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "217db6fce94fb0767465769c35e7c617f2ba663edb978b5e7550cf57a54ecd04",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix35_apfel_am_haus.mp3",
+      "status": 200,
+      "sha256": "424fdf48eb0bab45a4f00e5d96b5385290b16f0e021b9eb7d01074bea689bd85",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/mix35_apfel_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "683af05d0e88479ea9467dc43ccf1da63d999552c6844efa2d3592ca1f87bbc2",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix35_apfel_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "b8ad778581f76786ae76a40d3c48edf9006187a05efe58cb787a1320b1622fb4",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/mix35_apfel_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "a494e3cf5b9f36fa8987c1c78a1d3b1fb1c9e3040e1bacbd589684fb5bb2e89e",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix35_apfel_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "7fd7388a665984cd0da557264fe8a09380db1b8eba3fcfaae2b8d105b9b6deeb",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix35_apfel_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "1c9129327ab2535a42baee601f01311437087d14b0a36b1cda8d767bdf1b0ff7",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix35_apfel_count_1.mp3",
+      "status": 200,
+      "sha256": "7eb168ce24c5552bae52b52cd4dc31b7746fb09edcdd6fb4b2c180f8149f8373",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix35_apfel_count_1_short.mp3",
+      "status": 200,
+      "sha256": "6ddb746093fd62bc76415b305a3c4deeb171cbed6b171c2dd68028097be90de6",
+      "bytes": 10492
+    },
+    {
+      "file": "audio/mix35_apfel_count_2.mp3",
+      "status": 200,
+      "sha256": "b2c357f36536d7c547c77eaf3ab1c7f374814e9bb8de7c18886ba3c081a64848",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix35_apfel_count_2_short.mp3",
+      "status": 200,
+      "sha256": "3437e58b7978781c7e29d0b1315c6aae185de835cad580a2fc9c4a6a63c1cde9",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix35_apfel_count_3.mp3",
+      "status": 200,
+      "sha256": "2eac15dc11fca0b1033dbca74e7d80d838f6e831c091467baa3f433ca4342f62",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix35_apfel_count_3_short.mp3",
+      "status": 200,
+      "sha256": "131363e8bef10c98cc6a1295e9fb48174cd627ebf66a22ca982a203a4aab19a8",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix35_apfel_im_bus.mp3",
+      "status": 200,
+      "sha256": "fadfd2cec57eb48475e99796969d650eb605bc18942113cddb616e289e4b6ba3",
+      "bytes": 16134
+    },
+    {
+      "file": "audio/mix35_apfel_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "17fb981d45193cf84cfa2683db11a11cf13d4d7acac3759e789950b91ed1f1e8",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix35_apfel_im_haus.mp3",
+      "status": 200,
+      "sha256": "68eb4dde453ba946670de61734aab9cb11627adc555496c9cd2eb2cba5793b41",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix35_apfel_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "5e789c31888a9f1fedb7d4422917606b4a16bdad25d38dffa392a45c43144b68",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix35_apfel_in_kiste.mp3",
+      "status": 200,
+      "sha256": "4315d758331727eb5dfa4a43b8ddcc73705be9b5f2d7a85c64da4c809df5c7f7",
+      "bytes": 16970
+    },
+    {
+      "file": "audio/mix35_apfel_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "c0613e5f142b2b0f0e3c03f833f82bf6467be4103e76a06c94ff0dfcf2537d6e",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix35_apfel_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "2e7e0cd2bd9b8371bc63a95134f8991711fede00763727e122b683daf6482eef",
+      "bytes": 19896
+    },
+    {
+      "file": "audio/mix35_apfel_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "6af8bd72e0d4dc939e008d0f4ad5ef44a10375499dd86ebe5b374e209b97377e",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix35_apfel_size_gross.mp3",
+      "status": 200,
+      "sha256": "a94ac138199357d885dc15c23bbbfa27fbb357edb72c3a9ed91b7810e921eb15",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix35_apfel_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "63da23eecdfd5f1e21371e6155c6f55e098f3f3a3375f82c97224bbacb0115c4",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix35_apfel_size_klein.mp3",
+      "status": 200,
+      "sha256": "1d9f1d3a1cd1d5bf01b4936a5f240406398cdf509a8127a53b1be9b153a98ce8",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix35_apfel_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "64c7e8faed47e39662bc16334b95cfa167d1f24744fd845f639cb6f634c57340",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix35_apfel_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "17bba60557c3c9e0c02fa7d7ad6b2f23b5cb7c59ec525ec260441cc14532ef52",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix35_apfel_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "eed4787ff02c8867091c662b9442d65715945e9719aeb0a174214e875e29b4cb",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix35_apfel_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "41f6bc45b79940e6c8e0f2b6bc2a5e58796de6a543dc8ddbd8c6479948477e8d",
+      "bytes": 18224
+    },
+    {
+      "file": "audio/mix35_apfel_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "18c0727ba622c853abe4bbad37cac2f9697d42b6c9046188500f07ee89dcbde4",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix35_buch_am_baum.mp3",
+      "status": 200,
+      "sha256": "8ce7659000250e4cc85c394ccc5eed27be7bf965c39fc85a6ce2e342e37268fa",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/mix35_buch_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "13a8e6e6c10a7c9baa16105e7a738ed75262f9afcc6844d81569a527a1751324",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix35_buch_am_bus.mp3",
+      "status": 200,
+      "sha256": "8061a46c85d005d6788758a1cf1c3633a5fc1574061ad1a4eacb55c9ae58429b",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix35_buch_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "f1604a3f784ed64a93ad764409c64415487d7889e17b448916fdbcef9ecd4549",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix35_buch_am_haus.mp3",
+      "status": 200,
+      "sha256": "9f5c127adb69d076e8297b2c355a6a5a87e2568d86e98f381ad89fa77e1834ca",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix35_buch_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "674adeeb4493352c161b8a9630323b169c7a753a0fca2a351c7d540461efb68e",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix35_buch_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "5c3c01df982833c24a421d382288fe138dca2a5b8e8cce51f5d66a28c6aa884f",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix35_buch_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "eb2578dfb5903eda7ba6330a69af6562f1f9e79610c3120f4632a5d66998e28c",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix35_buch_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "449f22648bda3ef886b9dbeab967c8a8caf228073a8e8b7f13a13a6ea8049993",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix35_buch_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "28e6b14621dfcce5248b1ae98f959b6c58f1e9f1148d109d989331211958f0ca",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix35_buch_count_1.mp3",
+      "status": 200,
+      "sha256": "caf787fc7984a4e96f21b7a178a44d8796cd6262ee06cb9d8d95b1dd97d28963",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix35_buch_count_1_short.mp3",
+      "status": 200,
+      "sha256": "c5306bcbd59c9dfde048d0ad659bdfaa9a6506dc5e70fbbc39660b9a6520524c",
+      "bytes": 8193
+    },
+    {
+      "file": "audio/mix35_buch_count_2.mp3",
+      "status": 200,
+      "sha256": "a909c6bf968e018d8dc833ac3c1533d0203607c9a987568d6e1bb962d97e4794",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix35_buch_count_2_short.mp3",
+      "status": 200,
+      "sha256": "7d19095981f215fbed55f4fc60981a6a30bbec95d0ad123db6272043d3d918d0",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix35_buch_count_3.mp3",
+      "status": 200,
+      "sha256": "1c375d86309a5fa6c744bb98f51f92eb284c264772df46bb6bd6f73b070c0729",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix35_buch_count_3_short.mp3",
+      "status": 200,
+      "sha256": "980d329d45c201482a78f7c4f44ad8a5196bd25b0a54ebe4e0f8d512c3770849",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_buch_im_bus.mp3",
+      "status": 200,
+      "sha256": "8c49e363bc1cdddaedf57f437c39a1273b858eb7de73a10970159198efa69423",
+      "bytes": 14880
+    },
+    {
+      "file": "audio/mix35_buch_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "39de5d461da5e72a2920cd032c2b42072dca8a4f31f63dac299bd4abd7b67ab2",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix35_buch_im_haus.mp3",
+      "status": 200,
+      "sha256": "ecfd7db562cdade3f19090699cb507bf163e947d0075e21ddbe9d3ab6e2e86d7",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix35_buch_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "ed16074309bb166a938c4d4ae7a50a30f3c455ab901bb8017731c0406798d4f8",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix35_buch_in_kiste.mp3",
+      "status": 200,
+      "sha256": "70f2e8585d813756ed4a965b88d64fc8c6f939252431ff5473176cde7c796c24",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix35_buch_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "f9d21c8e27ca64f4918a6547d1fb980b23760ed60bac1e3150bdad89464c601e",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix35_buch_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "55664272a21ae650285f1104cf9ada840e00ede48369ce2189630e643b0bad32",
+      "bytes": 18224
+    },
+    {
+      "file": "audio/mix35_buch_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "29705622245637994ec6e876160af630b5baab16d0df9c39727c600a9f407eb0",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix35_buch_size_gross.mp3",
+      "status": 200,
+      "sha256": "a98b45e44402c8cc1626311cb0834acbdbddb04ba296c8d0c66344cfd5c5568e",
+      "bytes": 14253
+    },
+    {
+      "file": "audio/mix35_buch_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "a4eefce52ef6a2e0900e32a8acf31f4bfbf6908d156c28869c758cc9e8c4bf2b",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_buch_size_klein.mp3",
+      "status": 200,
+      "sha256": "f61a2d2c954fc2a56fa362e017484fd630cc674121e4f254e81504bbef3fa454",
+      "bytes": 14253
+    },
+    {
+      "file": "audio/mix35_buch_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "bf5fdb26a53372c064e70fd2be3b8504341d0b260e2750a1cb4526badcf107e9",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix35_buch_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "c27d9e08c11a71bc1cb19e3bf77afff9e8543a86c1a25b72914b3c8e53422062",
+      "bytes": 16134
+    },
+    {
+      "file": "audio/mix35_buch_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "b48e7920cb8168e2d6b81c5633eb4bc7ca9a0d7571ed08ddd42ce294690bfb61",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_buch_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "49bbbf41b13d7a178687d87f08e6b6bd1c9644f8c9485c7cfba86ac720d72ae8",
+      "bytes": 16552
+    },
+    {
+      "file": "audio/mix35_buch_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "4d7081f3c892ed8011debd937abe7cbc4ec62a396f98a7fec7217633356a1f83",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix35_has_mama_buch.mp3",
+      "status": 200,
+      "sha256": "a3310eaa2ec81d71fef399c84760f712caeaefa22ce1fd345430feab87cc2308",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix35_has_mama_buch_short.mp3",
+      "status": 200,
+      "sha256": "c7dcacd9db340988cf23b574fdb5cd42151af30989f1d5c2d1c8419f76e99e1b",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix35_has_mama_schuh.mp3",
+      "status": 200,
+      "sha256": "36a6e95a185f8bfa9005169d1632ffced781e12edf9db31af5229f220133dac0",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix35_has_mama_schuh_short.mp3",
+      "status": 200,
+      "sha256": "8d021e35e628ca06edfda35ba8f8145022b93b47b4fad9dac8afb0aa6c603d94",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix35_has_oma_buch.mp3",
+      "status": 200,
+      "sha256": "0bc212d1afccb37546dc9eba12cbd20cc92e72cfb029decbccff81449d7e6f89",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix35_has_oma_buch_short.mp3",
+      "status": 200,
+      "sha256": "0f388ec2ea17016e33e56c2417a0f66ba825cee97ca23739f26036b681435bd2",
+      "bytes": 10700
+    },
+    {
+      "file": "audio/mix35_has_oma_schuh.mp3",
+      "status": 200,
+      "sha256": "30fbbd8e7ff3959f91d7e3c147f875cbcf44a0189a1719148991d291aa8c6f12",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_has_oma_schuh_short.mp3",
+      "status": 200,
+      "sha256": "be6bfb80478732497549e767d9ad0156ac19fc76c0200ed068e405551d236f30",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix35_pair_oben_oben.mp3",
+      "status": 200,
+      "sha256": "a4800a021f8ced021aafd3647f54721fce304ce2979f02348fcf71bddf90ba59",
+      "bytes": 25956
+    },
+    {
+      "file": "audio/mix35_pair_oben_unten.mp3",
+      "status": 200,
+      "sha256": "d92af9645f62544757cf30aa40491d95bf46244da00b696a88c59c4226b08f00",
+      "bytes": 27210
+    },
+    {
+      "file": "audio/mix35_pair_unten_oben.mp3",
+      "status": 200,
+      "sha256": "4fc1af282d2cd9f0eaecf4ea5cc67f026e3cf6614f0ac6ab9808d839e1fbe711",
+      "bytes": 27210
+    },
+    {
+      "file": "audio/mix35_pair_unten_unten.mp3",
+      "status": 200,
+      "sha256": "16015901b41bae6c3c594478d13b5b4d9c61259e9d230ca49988feaf91df0073",
+      "bytes": 28464
+    },
+    {
+      "file": "audio/mix35_puppe_am_baum.mp3",
+      "status": 200,
+      "sha256": "9540be518199d3502cc1afa6d8176b45c1d138043dd02b2ce79238be598e43c4",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix35_puppe_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "3350abed778e39cfa68e9076bce0f9c227d8c2c1f21216436de603081cb8fbcf",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix35_puppe_am_bus.mp3",
+      "status": 200,
+      "sha256": "a5b0b39d1eb5de3449b79bd03ad8e4d2eb4550f693c27d2b4f56c721821c8dc0",
+      "bytes": 16761
+    },
+    {
+      "file": "audio/mix35_puppe_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "40809c96e928bfd59cbeef652d08fea7b4a6007abee860234bf7bf0b4808efa7",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix35_puppe_am_haus.mp3",
+      "status": 200,
+      "sha256": "b1ada857799facb9e3f3c0733988cda236f04246b71483b954617c0d7773702d",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix35_puppe_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "3582cc3e847ccd6d00b5eeed162aba8b2f8d655851098884beccf38fd3228a43",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix35_puppe_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "4c08a3c19b77fea1826ca4f75f05e4d95ba9255120215b850fca7b0f9658fba0",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix35_puppe_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "9626aab6f9c95dbae946f74fcfac40a8b8dac9f1fc2f30913ea4d9b5f1877043",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_puppe_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "059380353502aa8b128e7ddce2dc38c9f4aa4317d61382f29bdbafffb62c16e7",
+      "bytes": 16970
+    },
+    {
+      "file": "audio/mix35_puppe_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "6e4529c8ac324843c732a386ab82c61fb13b082456d5e956ed99dd55ba447795",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix35_puppe_count_1.mp3",
+      "status": 200,
+      "sha256": "e516b9f2f2c2dc74cc7eeb325dea788ad353f17bea573d393891edabfccb279f",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix35_puppe_count_1_short.mp3",
+      "status": 200,
+      "sha256": "9a65f3693a9b867cfe5db0223244a3b4c3694a2c0db6de9ee6a34312ba424d60",
+      "bytes": 8402
+    },
+    {
+      "file": "audio/mix35_puppe_count_2.mp3",
+      "status": 200,
+      "sha256": "14bae3a3cd263cc6f7aea1c3eaa52a375220f9f43c9b6ece2d1b371ed8fefdc1",
+      "bytes": 12790
+    },
+    {
+      "file": "audio/mix35_puppe_count_2_short.mp3",
+      "status": 200,
+      "sha256": "772c235ac11e407647517c20db1a437c7cadc432f18589b46ae857f0a91c41bd",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix35_puppe_count_3.mp3",
+      "status": 200,
+      "sha256": "2df26ef986e07cc1dc8d355389bd1d5a3b0e023aaf25b4358b793a2ad3a0367d",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_puppe_count_3_short.mp3",
+      "status": 200,
+      "sha256": "808c03c57c27ffdc7085ed933a062a1069e07b3c323b2529cd0284547a887c32",
+      "bytes": 10909
+    },
+    {
+      "file": "audio/mix35_puppe_im_bus.mp3",
+      "status": 200,
+      "sha256": "a3042e06c8220bd5036d1f959517fa6eff580ea7f9bfae3890d38355fe0e3cf7",
+      "bytes": 15925
+    },
+    {
+      "file": "audio/mix35_puppe_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "39ca9c57a64dd4dd657a2fa57271b7b72e1ff4adfe3f24b8f0d61315d32bd306",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix35_puppe_im_haus.mp3",
+      "status": 200,
+      "sha256": "4313e595c54b1704850e8f65160a0077137c38685e1056c0b7e8fa72d737b676",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/mix35_puppe_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "bf189069d24e6b18648633ea7d6a9705c6d24cf6e6e7bac6b956c2945384c8d5",
+      "bytes": 11536
+    },
+    {
+      "file": "audio/mix35_puppe_in_kiste.mp3",
+      "status": 200,
+      "sha256": "aa1a29d977b23c6df1587987c16b5980ac8de6875717411d6af9559e44f8768c",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix35_puppe_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "5239fa7159c254cfc034c17674af6549c7c249916fecd4fceb7bf3aa5add3d65",
+      "bytes": 12163
+    },
+    {
+      "file": "audio/mix35_puppe_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "f3a58facfc28ad14f1289403b682d82446cb2963308f908af7263c2e9d544b5f",
+      "bytes": 19269
+    },
+    {
+      "file": "audio/mix35_puppe_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "076f3db2bfa7e7b331e284593da21c07f8979c06dd219242f39cd9cca4523273",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix35_puppe_size_gross.mp3",
+      "status": 200,
+      "sha256": "7fceabf39c6d98c363cf8ab01df8f31a07ab1d96072282791f23bc5fc997dbf8",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix35_puppe_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "84120021cc4cb4d19374574ab4bd1a3eb78eb3faf7d2a7e1040e743f9c79a843",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix35_puppe_size_klein.mp3",
+      "status": 200,
+      "sha256": "f518dd323c72880b24beb9065c4cb379eea4f461daae5ed96623a2ad6baf2d3c",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix35_puppe_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "0fa77df185ce8757c703deca80a6226cb082a02ccc6fa60eaea87388883c5d19",
+      "bytes": 10700
+    },
+    {
+      "file": "audio/mix35_puppe_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "029afc8c81fc61a86ccaa574ccaa0a5633a44b6282b7ec467820158c265459b9",
+      "bytes": 16970
+    },
+    {
+      "file": "audio/mix35_puppe_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "a8e89af945ac7f04ca1a1da648f0ec21c4c3483504a6dbfb8bce1b6fcfd6dd80",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix35_puppe_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "16523a196f942e4656871333993d285d69a6751da184001e54948b515fe9e209",
+      "bytes": 18224
+    },
+    {
+      "file": "audio/mix35_puppe_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "bed686713c7c608ff296f567651705a6d619dea6484c4f437a0062d7f1ae2642",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix35_schuh_am_baum.mp3",
+      "status": 200,
+      "sha256": "5fb6c199bfae697a78b44b6014d2fdbf87717a72758b90ab2852de722058c2fb",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix35_schuh_am_baum_short.mp3",
+      "status": 200,
+      "sha256": "fe7e2f29e01921258d928e938462016f4652a7d09dc7e9ee5d2794b0950cc34d",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix35_schuh_am_bus.mp3",
+      "status": 200,
+      "sha256": "4934ce21e616dfd8f310dbefda3b52de38b887031fb6fa56313e0be0930a6e13",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix35_schuh_am_bus_short.mp3",
+      "status": 200,
+      "sha256": "b372e2105141a2db9252d1a753fecdfb1998616d9d5f4ca40f668ea7fb8dd42d",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_schuh_am_haus.mp3",
+      "status": 200,
+      "sha256": "066ea0f1da9abe18f1be90b1db7dfa8c1601d254ab392c447e3377483d1f1994",
+      "bytes": 14671
+    },
+    {
+      "file": "audio/mix35_schuh_am_haus_short.mp3",
+      "status": 200,
+      "sha256": "9f1f16083a020be99276bb05d801f0fd96ca9e8bc68a73c97b590730a81e8d38",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_schuh_auf_stuhl.mp3",
+      "status": 200,
+      "sha256": "368551d7d2a3f8181fde0fb5e514fc4c07ce354d9f167543437e1803aada61ef",
+      "bytes": 15089
+    },
+    {
+      "file": "audio/mix35_schuh_auf_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "c2e2fdaf7c44966bdd520689e4ed942a0148d87b19c3ff90817e916414995f18",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix35_schuh_auf_tisch.mp3",
+      "status": 200,
+      "sha256": "98bbf21ad072d0e006c4763b3172f2758ccb241589728eb8606adb55a196a973",
+      "bytes": 15298
+    },
+    {
+      "file": "audio/mix35_schuh_auf_tisch_short.mp3",
+      "status": 200,
+      "sha256": "bf59a167b15a9670d440645f0efbf3a143002a832066d11cbcaa7ce65448bf5c",
+      "bytes": 12372
+    },
+    {
+      "file": "audio/mix35_schuh_count_1.mp3",
+      "status": 200,
+      "sha256": "1510f9a420119a31f881b24ea083026193f0bfecbb03ce072507ae874cd04a5c",
+      "bytes": 12581
+    },
+    {
+      "file": "audio/mix35_schuh_count_1_short.mp3",
+      "status": 200,
+      "sha256": "491438dbafff941da0e520624083aa7d93f5d78a4cf589302aa594ce2ba4caa4",
+      "bytes": 9238
+    },
+    {
+      "file": "audio/mix35_schuh_count_2.mp3",
+      "status": 200,
+      "sha256": "a96783c760a23ce503509b36cf4d2eadc63089399cfd57194408cd4193122fa5",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix35_schuh_count_2_short.mp3",
+      "status": 200,
+      "sha256": "58a5a5eaa74db1a186647f81535b6f5e1f3ad1c85852afef2b2087ab0641dd88",
+      "bytes": 11118
+    },
+    {
+      "file": "audio/mix35_schuh_count_3.mp3",
+      "status": 200,
+      "sha256": "149e11b9c9d68bfcd1d73c210bc7b4719d3b3b9d394a727cfa47b0e2e882d8e4",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix35_schuh_count_3_short.mp3",
+      "status": 200,
+      "sha256": "44962788738efbceb467343a6c5f075846355f90abe5571d3976be53dd5f7077",
+      "bytes": 10700
+    },
+    {
+      "file": "audio/mix35_schuh_im_bus.mp3",
+      "status": 200,
+      "sha256": "3dfee633bb67e8b10f06baffc2a22a4f14e9d65450e7806d76f28a85f45690d3",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix35_schuh_im_bus_short.mp3",
+      "status": 200,
+      "sha256": "e1d8e28c2d344674e346e73c1c0e1f111bbec2541b7970dcdf4702d08073c349",
+      "bytes": 11327
+    },
+    {
+      "file": "audio/mix35_schuh_im_haus.mp3",
+      "status": 200,
+      "sha256": "b163d000ec0ff09fd874f2772e883f8df3efb95561454abbe50d2a0900f74646",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix35_schuh_im_haus_short.mp3",
+      "status": 200,
+      "sha256": "8cdc01725cf7d77bd565803050f48bfbe5bf364931ea2f11777aef462161f930",
+      "bytes": 11954
+    },
+    {
+      "file": "audio/mix35_schuh_in_kiste.mp3",
+      "status": 200,
+      "sha256": "f43d1f9bf915463a6527b8bdb2b25e9d2f54f808116bd4bb6f551d62cdb65d86",
+      "bytes": 15507
+    },
+    {
+      "file": "audio/mix35_schuh_in_kiste_short.mp3",
+      "status": 200,
+      "sha256": "9eef539033243e3a4c2a6cdcd38e603571ab81f2892ffe837bd5e5dbbdc51925",
+      "bytes": 13208
+    },
+    {
+      "file": "audio/mix35_schuh_neben_kiste.mp3",
+      "status": 200,
+      "sha256": "078de10f2b8aed284e71647e5a6578c50533a3530e5b8971843e7c82901edc28",
+      "bytes": 17388
+    },
+    {
+      "file": "audio/mix35_schuh_neben_kiste_short.mp3",
+      "status": 200,
+      "sha256": "45920e044a77334dd0754d6439e24aafee36baf578840781dd9d3472b2486414",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix35_schuh_size_gross.mp3",
+      "status": 200,
+      "sha256": "7bf31fafee9b583e72213da0fc5ab874a954a04f5cc365e7e4060d03eb391ac1",
+      "bytes": 13417
+    },
+    {
+      "file": "audio/mix35_schuh_size_gross_short.mp3",
+      "status": 200,
+      "sha256": "2581450af3189adbc8f14ec62121e25087b0771c42c2984e23b09e1cc903a3f6",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix35_schuh_size_klein.mp3",
+      "status": 200,
+      "sha256": "fa3992a8882ec7cdf401b596c92b0fd1b79e377882ab710e15de147db72837c0",
+      "bytes": 12999
+    },
+    {
+      "file": "audio/mix35_schuh_size_klein_short.mp3",
+      "status": 200,
+      "sha256": "09edf6ba925d3ef62e1eb00f4806e3f91ca197f2f2584b9209de2b8c484f1e1c",
+      "bytes": 11745
+    },
+    {
+      "file": "audio/mix35_schuh_unter_stuhl.mp3",
+      "status": 200,
+      "sha256": "30dd701e92024769dde28e02700c75a737256dacde9157247688fc761cd9acd6",
+      "bytes": 15716
+    },
+    {
+      "file": "audio/mix35_schuh_unter_stuhl_short.mp3",
+      "status": 200,
+      "sha256": "4194a0e39ec8f201218173743442c869020ab7fb4dd3b04b85294fa8be8cfa53",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix35_schuh_unter_tisch.mp3",
+      "status": 200,
+      "sha256": "03e60473fb47e28a391294654e3a015af215e8cd77cdd972ef97477e6f054029",
+      "bytes": 16343
+    },
+    {
+      "file": "audio/mix35_schuh_unter_tisch_short.mp3",
+      "status": 200,
+      "sha256": "f42a6083e3489dedba433b6dc731b6698eb120788bc66c572f333ac8366511b5",
+      "bytes": 14044
+    },
+    {
+      "file": "audio/mix35_state_buch_offen.mp3",
+      "status": 200,
+      "sha256": "014f89d77bc84656da4d0d9abc563cfd04ef33aeac02890ea31b0a7158102d27",
+      "bytes": 14462
+    },
+    {
+      "file": "audio/mix35_state_buch_zu.mp3",
+      "status": 200,
+      "sha256": "7fcc327ba3bc1446264d49206d07c5325abe3be84fc4583f0393ecff04ac73ab",
+      "bytes": 13835
+    },
+    {
+      "file": "audio/mix35_state_tasche_offen.mp3",
+      "status": 200,
+      "sha256": "a3362beac4525fefc21b6085bb5d6fcd114be11db6c4a20960da5aab2989a1db",
+      "bytes": 13626
+    },
+    {
+      "file": "audio/mix35_state_tasche_zu.mp3",
+      "status": 200,
+      "sha256": "95a46c846495728223de33a7077d0a088f55b5c42e60789b33c4bb5d6e6a1bfb",
+      "bytes": 13626
+    },
+    {
       "file": "audio/model.mp3",
       "status": 200,
-      "sha256": "8fa2bd634b41bec6249777e76b913189141bb3c52abdb8d340ad657fe4d99073",
-      "bytes": 36614
+      "sha256": "e0388988f45be5015a0e6a93e06046bc838ef0f85aa62a9883b2cbff0d135c11",
+      "bytes": 18433
     },
     {
       "file": "audio/nase.mp3",
@@ -1069,8 +2821,8 @@
     {
       "file": "audio/onset.mp3",
       "status": 200,
-      "sha256": "f10d4cbb185e305be08b8756d2de01b2f1fb4e19dc9731e885d3f50e69e7ebe6",
-      "bytes": 35569
+      "sha256": "8433a81d66244efcdeb48ab89124f666bc31a282176cc5b041897f5a1699ed72",
+      "bytes": 17179
     },
     {
       "file": "audio/pair_oben_oben.mp3",
@@ -1105,86 +2857,20 @@
     {
       "file": "audio/pattern_au.mp3",
       "status": 200,
-      "sha256": "38a8df3be21efc8327f9023ce57dafb0c03a06d5ee172893c2efc3b52c48653c",
-      "bytes": 53541
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/pattern_ei.mp3",
       "status": 200,
-      "sha256": "9a043cb8cff179f055d24244b7cc33b46e1eddd5ccc9292d365296fcf01a8f0a",
-      "bytes": 58139
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/pattern_ie.mp3",
       "status": 200,
-      "sha256": "72750919feec7761054119636b6135ec7f8b617c3aa284b359d95ef7ad5ef955",
-      "bytes": 60020
-    },
-    {
-      "file": "audio/phoneme_b.mp3",
-      "status": 200,
-      "sha256": "834e3e54a5fdd0ab88f74169b8768cc06fc91166792aeffed2867b1a1f913016",
-      "bytes": 5640
-    },
-    {
-      "file": "audio/phoneme_d.mp3",
-      "status": 200,
-      "sha256": "4032baf075b19369a11e9d08b3633891c4e5a546728069a5fa75dc2f3d77fd59",
-      "bytes": 5431
-    },
-    {
-      "file": "audio/phoneme_f.mp3",
-      "status": 200,
-      "sha256": "0856928ae31621107a057edd54e649b76c308ccb4296cb1f7aef8d49dead50d7",
-      "bytes": 6894
-    },
-    {
-      "file": "audio/phoneme_g.mp3",
-      "status": 200,
-      "sha256": "e5d478b59e11abd12929c064788f7ad47590e5438884b7d6de111f665c574e5d",
-      "bytes": 5640
-    },
-    {
-      "file": "audio/phoneme_h.mp3",
-      "status": 200,
-      "sha256": "f49e28f9222a48291441997851fc1a823baf627d332ce51780bb09ba3f24ca09",
-      "bytes": 3461
-    },
-    {
-      "file": "audio/phoneme_k.mp3",
-      "status": 200,
-      "sha256": "388c0d8dc831cfb355c1e8f77ba4d0e7429dd2968ebfa0c9e76d62004bb17b78",
-      "bytes": 4386
-    },
-    {
-      "file": "audio/phoneme_l.mp3",
-      "status": 200,
-      "sha256": "69da89f7771a7e06cbfe91d424da0043a2595cca4e46b6b861f6e1b63114c4b0",
-      "bytes": 7312
-    },
-    {
-      "file": "audio/phoneme_n.mp3",
-      "status": 200,
-      "sha256": "b1e8071c6aa9b91702b91c9382c4a8168baec7de7ac49e5a3690d096ee753034",
-      "bytes": 8148
-    },
-    {
-      "file": "audio/phoneme_s.mp3",
-      "status": 200,
-      "sha256": "0be902ae62565b033f3b84f6d1ca0a0321d6a152c60301c3b64e41ddbda96512",
-      "bytes": 7730
-    },
-    {
-      "file": "audio/phoneme_sch.mp3",
-      "status": 200,
-      "sha256": "fbcb439aa715b25860c323e221ac66bda3c84cdbe55dd8caa8189ff2d909ea93",
-      "bytes": 7730
-    },
-    {
-      "file": "audio/phoneme_t.mp3",
-      "status": 200,
-      "sha256": "6bb1218a80238fc0a57bc1f7b5915fc7180ecc262f3772885d3b942b1bb41391",
-      "bytes": 9820
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/phrase_ball_am_baum.mp3",
@@ -1273,14 +2959,14 @@
     {
       "file": "audio/phrase_read.mp3",
       "status": 200,
-      "sha256": "2ad9864a8967fb7c38872b892179cec7d540d91cdc43991cdaeb69b8e11bad75",
-      "bytes": 50407
+      "sha256": "a559879f9d64fa2cc4c484baba8944a2647fb4e79352e4ba41f3027a314fbc5f",
+      "bytes": 21776
     },
     {
       "file": "audio/picture_read.mp3",
       "status": 200,
-      "sha256": "684c786d08277f20b2bba46dcc7341b0f8dda25f3d34370923bfc91e3681017d",
-      "bytes": 58975
+      "sha256": "a559879f9d64fa2cc4c484baba8944a2647fb4e79352e4ba41f3027a314fbc5f",
+      "bytes": 21776
     },
     {
       "file": "audio/previous-a.mp3",
@@ -1303,8 +2989,8 @@
     {
       "file": "audio/read.mp3",
       "status": 200,
-      "sha256": "2e7711ae2d91354bbaf0b539a302c7d52533690da09d79f4ddde0913ca9d82a6",
-      "bytes": 28255
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/rot.mp3",
@@ -1519,26 +3205,26 @@
     {
       "file": "audio/sentence_read.mp3",
       "status": 200,
-      "sha256": "48742908d2393638cbc1a4fcd988de8eeed0e84d2824ed1efef88bf5107a28ee",
-      "bytes": 53959
+      "sha256": "a559879f9d64fa2cc4c484baba8944a2647fb4e79352e4ba41f3027a314fbc5f",
+      "bytes": 21776
     },
     {
       "file": "audio/sentence_where.mp3",
       "status": 200,
-      "sha256": "470bf5d2ad360a34236d94903901b4bd4d49ad8a226d5eb6ac0d41547fd35ba3",
-      "bytes": 45600
+      "sha256": "a559879f9d64fa2cc4c484baba8944a2647fb4e79352e4ba41f3027a314fbc5f",
+      "bytes": 21776
     },
     {
       "file": "audio/sentence_words.mp3",
       "status": 200,
-      "sha256": "db2da3557504ce30174b44deb9ebba22b635f5747c6f87695b232235eaa81d45",
-      "bytes": 56676
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/short.mp3",
       "status": 200,
-      "sha256": "f1d3bbade2ee12e3337cd5815f14918282249ee976d35619c3415d43c674b423",
-      "bytes": 47063
+      "sha256": "f605d60b8bb6cfe628420d633184fb3c6eb734f4448c485d5fd8da6d8842c065",
+      "bytes": 16761
     },
     {
       "file": "audio/sieb.mp3",
@@ -1657,8 +3343,8 @@
     {
       "file": "audio/soft_words.mp3",
       "status": 200,
-      "sha256": "db5ea3ad195ff431d0f8667c99650d5a726a19193cffe557c2656c4aeb0bc220",
-      "bytes": 50407
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio/sonne.mp3",
@@ -1675,8 +3361,8 @@
     {
       "file": "audio/syllable.mp3",
       "status": 200,
-      "sha256": "aaa0112b7b581d14a5af569baba5b5e9912820f052140adf125ee8279873cea4",
-      "bytes": 25329
+      "sha256": "f605d60b8bb6cfe628420d633184fb3c6eb734f4448c485d5fd8da6d8842c065",
+      "bytes": 16761
     },
     {
       "file": "audio/tasse.mp3",
@@ -1717,26 +3403,26 @@
     {
       "file": "audio/word.mp3",
       "status": 200,
-      "sha256": "7b422f7e6cd9e2c69e42cbba677074f6b8e1b4c20377e28c2b8f259ca4f59301",
-      "bytes": 36823
+      "sha256": "e0388988f45be5015a0e6a93e06046bc838ef0f85aa62a9883b2cbff0d135c11",
+      "bytes": 18433
     },
     {
       "file": "audio/word_blocks.mp3",
       "status": 200,
-      "sha256": "3e57694da9e7125f68bb84c4b9edf3cb7a189f1f4e748a0bdce239675d85daf7",
-      "bytes": 43510
+      "sha256": "e0388988f45be5015a0e6a93e06046bc838ef0f85aa62a9883b2cbff0d135c11",
+      "bytes": 18433
     },
     {
       "file": "audio/word_intro.mp3",
       "status": 200,
-      "sha256": "f79f17d5beaa5223f13fbc3a03e022e7b9311e53941e7e0b0e7aa982392fa095",
-      "bytes": 33061
+      "sha256": "247edb02bab39f98889e81824fb566fadfbb56f92ff2ee3b87d41c1bec0cac50",
+      "bytes": 19896
     },
     {
       "file": "audio-review.html",
       "status": 200,
-      "sha256": "ed4d199940713588a7187a3ed7216dd9e8f9695500059d96bc155dffc7d08252",
-      "bytes": 2020
+      "sha256": "94d8b1c91bd9042335ca9bb6a6863a493d73b67d22dec261d2bfc38c935e0450",
+      "bytes": 1936
     },
     {
       "file": "audio.mjs",
@@ -1747,8 +3433,8 @@
     {
       "file": "data.mjs",
       "status": 200,
-      "sha256": "563d323c0087da299eeadce3b9705721dfb571ec565e1123f97f2e43f43a1a32",
-      "bytes": 8094
+      "sha256": "e7c62e5629821587d133f21c15828748eb737f5519c28f5f926a04d56c7d61da",
+      "bytes": 7995
     },
     {
       "file": "fonts/OFL.txt",
@@ -1777,8 +3463,8 @@
     {
       "file": "image-data.mjs",
       "status": 200,
-      "sha256": "c7f153871029b58d44ca9fc0b5590c4fbbf28d2ea12c4b676a8cb60f400cd0c1",
-      "bytes": 3488
+      "sha256": "76142836fffeb3bd138f5440e7f68a2c7573a15a5a63e42ad6ca2eed9d7aebf0",
+      "bytes": 4583
     },
     {
       "file": "images/atlas-a-ad34ecaa23db.webp",
@@ -1811,52 +3497,58 @@
       "bytes": 353464
     },
     {
+      "file": "images/atlas-f-bb860155c253.webp",
+      "status": 200,
+      "sha256": "bb860155c253b1900a1a986fba6a9889b642f5d148db0d9b5298ccc842183b1a",
+      "bytes": 397682
+    },
+    {
       "file": "images/manifest.json",
       "status": 200,
-      "sha256": "163e9458f6512964b0f434c1f2e855fa8deb161ac3633b09060fbd8943fe53b2",
-      "bytes": 1530
+      "sha256": "ca48d19dda03fa748bd1b11a14a26db41ac148d66a519596bdf1b59f698663ac",
+      "bytes": 1801
     },
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "c70881f456b9c19c0a21b0cbcc5ef66335815f4fb243eb018fc05373717509f0",
+      "sha256": "d8cf65c7ee4d4b852ee6c79d6b692ab61ca12f4a0d939760c06978a1b70126eb",
       "bytes": 1127
     },
     {
       "file": "learning.mjs",
       "status": 200,
-      "sha256": "03703c07947b055d09712378ed08610b8123fe7ced6863d40ccfc9b8110d6759",
-      "bytes": 21887
+      "sha256": "8b2c57a1ef5061c6e3570853f8aa6df01ad45ec29c6871d7bbbef76ce3d1db92",
+      "bytes": 22395
     },
     {
       "file": "level-catalog.mjs",
       "status": 200,
-      "sha256": "4a62d930c03a8ac38b41c155a686bda348bfab4c985e2b40ad16041f0ce06ff6",
+      "sha256": "7b58a2519050a6c676f49d892f87c319a8aa2c599c8b77f65db2b9bbdebfe83e",
       "bytes": 2469
     },
     {
       "file": "main.mjs",
       "status": 200,
-      "sha256": "a7feb6d5ee871274fe45fc1464eef214333c04d36c26b0457ddeac2549f038d3",
-      "bytes": 24247
+      "sha256": "c175fc9d68cb512dd8f4cedc5256a60de10bbd0595f2ebcb152d50d152471d02",
+      "bytes": 24681
     },
     {
       "file": "mixed-reading.mjs",
       "status": 200,
-      "sha256": "37b7d7a54038e80b2b38f719dec16a56c1c88368352f512a3e21d1670461e9ad",
-      "bytes": 3881
+      "sha256": "4d14ef9f09c87748614c40bf418b94d0efcf39485a9699fa3746d18fb1f9763d",
+      "bytes": 7687
     },
     {
       "file": "pictures.mjs",
       "status": 200,
-      "sha256": "1cdf076f46c4d47f4e14517882480d84842126112f923a73f8999dfabb02b2c0",
-      "bytes": 2874
+      "sha256": "417f3f4032e78897527d08c0ca111ae52612a0090fa0e4c7884b2ab1aa997c33",
+      "bytes": 3108
     },
     {
       "file": "reading-data.mjs",
       "status": 200,
-      "sha256": "45ac3fcb60087227285666d08e4af5700503a671aad93692c706633e0ccf893b",
-      "bytes": 5784
+      "sha256": "6f3a30f5f82a7e54e938cb4983ceaba1fd7c4b5b83198bd041cb9aaa7966922f",
+      "bytes": 6234
     },
     {
       "file": "review.mjs",
@@ -1867,14 +3559,20 @@
     {
       "file": "spacing.mjs",
       "status": 200,
-      "sha256": "7ee1ac977d026181aea2ebff5e75fc9782af655ed3bb3ed9ad4d1db70a6ee0dd",
+      "sha256": "ca17b409532b539f13b83675a32a4116872342e815e175a66fe7209823136868",
       "bytes": 6298
     },
     {
       "file": "style.css",
       "status": 200,
-      "sha256": "25a727d2b292dd23b58f6cc86cd4e020d0be389bd1c748d26cbf102f7d44732f",
-      "bytes": 21972
+      "sha256": "8443aab1a85ba596c17d6049b0c89883a4189a7b90b0b61b8c5aaca3a1fa685d",
+      "bytes": 23211
+    },
+    {
+      "file": "task-guides.mjs",
+      "status": 200,
+      "sha256": "9514d86a534d13fbe3a8da9a53b16b9475c0091bc4dda499d067e2af13ee558e",
+      "bytes": 1218
     },
     {
       "file": "word-choices.mjs",
@@ -1883,6 +3581,6 @@
       "bytes": 3027
     }
   ],
-  "totalBytes": 5920163,
+  "totalBytes": 10116909,
   "meaning": "All deployed bytes match the locally browser-tested build over certificate-verified HTTPS. Not a real-phone playability test."
 }
