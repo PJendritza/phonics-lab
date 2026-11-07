@@ -59,11 +59,20 @@ Build: 600 files, 10,549,981 bytes dirty (clean metadata adds one byte), under t
 35 levels and existing profiles retained; prior foreign-consonant removal and
 opt-in reading speech after two errors remain unchanged. No accounts or paid API.
 
-Publication pending clean source commit/push and verified existing gh-pages release.
-Follow scripts/publish.py (now also requires current word-list browser evidence)
-and scripts/verify_live.py; no Pages configuration changes. Record exact deployed
-commits/results below. Next user check: Level 34 article/duck/Ballon tasks, then
-Für Eltern -> Alle Wörter alphabetisch ansehen (also linked from About).
+Published and independently verified over certificate-verified HTTPS:
+- Source/main: 83dbb50ecb1274e7593f622badcc1641528d2a7b, also on feature branch
+  articles-clear-images-and-word-list.
+- Deployment/gh-pages: b4f25cc8a01a714642e79e467914ee8379455e3b.
+- Clean build: 600 files, 10,549,982 bytes, asset version 46d41681aedb.
+- python3 scripts/verify_live.py passed: all 600 public files exactly match the
+  locally browser-tested build. Evidence: docs/verification/2026-10-18/live.json.
+- Demo: https://patrickjendritza.com/phonics-lab/?v=12.0.0
+- Word inventory: https://patrickjendritza.com/phonics-lab/words.html?v=12.0.0
+No Pages configuration changed. The final verification/docs commit follows the
+deployed source; no application bytes change in that documentation commit.
+Next user check: Level 34 article/duck/Ballon tasks, then Für Eltern -> Alle Wörter
+alphabetisch ansehen (also linked from About). Further development should follow
+feedback on these actual phone tasks; no physical-device test is claimed here.
 
 ---
 

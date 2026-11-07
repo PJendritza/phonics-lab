@@ -8,7 +8,8 @@
       search and CSV; linked from parent tools and About.
 - [x] Preserve IDs, rewards and historical word counters; reset recent Becher
       certainty and schedule changed meaning for practice rather than fake mastery.
-- [ ] Complete final browser/live checks; see PROGRESS.md for executed status.
+- [x] Twelve browser suites pass; all 600 live HTTPS files match the clean v12
+      build. See PROGRESS.md for commands, commits and remaining review limits.
 
 Historical release/planning context follows.
 
