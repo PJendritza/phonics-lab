@@ -1,8 +1,8 @@
-import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=5a2760f53294';
-import {describeLevel} from './level-catalog.mjs?v=5a2760f53294';
-import {FORMS} from './word-choices.mjs?v=5a2760f53294';
-export const VERSION='10.0.0';
-export const CURRICULUM_VERSION=10;
+import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=93978435d111';
+import {describeLevel} from './level-catalog.mjs?v=93978435d111';
+import {FORMS} from './word-choices.mjs?v=93978435d111';
+export const VERSION='11.0.0';
+export const CURRICULUM_VERSION=11;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
@@ -62,12 +62,12 @@ export const skillKey=(stage,target)=>`${stage.group}:${target}`;
 export const label=(stage,target)=>CONTEXTS[stage.mode]?target:(FORMS[target]??ITEMS[target]).text;
 export const lettersFor=target=>ITEMS[target].graphemes??[...ITEMS[target].text];
 export const BUILD_UNITS=['a','m','i','o','u','n','l','f','s','sch','t','k','b','d','g','h','ll'];
-export const PHONEMES=Object.fromEntries(['a','m','i','o','u','e'].map(c=>[c,c]).concat(['f','n','l','s','sch','b','d','g','t','k','h'].map(c=>[c,'phoneme_'+c]),[['ll','phoneme_l']]));
+export const PHONEMES=Object.fromEntries(['a','m','i','o','u','e'].map(c=>[c,c]));
 // Whole words remain task cues. A clicked letter always plays only that sound.
 export function choiceFeedback(stage,choice){
  if(stage.mode==='picture'||FORMS[choice])return {audio:[],text:'Versuch es noch einmal.'};
  const audio=CONTEXTS[stage.mode]||stage.mode==='build'?PHONEMES[choice]:ITEMS[choice]?.audio;
- if(!audio)throw Error('Kein Klang für diese Auswahl.');
+ if(!audio)return {audio:[],text:'Versuch es noch einmal.'};
  return {audio:[audio],text:stage.group==='sentence'?'Deine Bildauswahl.':`Deine Auswahl: ${stage.mode==='build'||CONTEXTS[stage.mode]?choice:ITEMS[choice].text}`};
 }
 export const speaker = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';

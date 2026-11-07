@@ -1,8 +1,9 @@
-import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=5a2760f53294';
-import {illustration} from './pictures.mjs?v=5a2760f53294';
-import {CHAPTERS} from './level-catalog.mjs?v=5a2760f53294';
-import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice,useReadingHelp,duePractice,startReview} from './learning.mjs?v=5a2760f53294';
-import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=5a2760f53294';
+import {TASK_GUIDES} from './task-guides.mjs?v=93978435d111';
+import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=93978435d111';
+import {illustration} from './pictures.mjs?v=93978435d111';
+import {CHAPTERS} from './level-catalog.mjs?v=93978435d111';
+import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice,useReadingHelp,readingAudioAvailable,duePractice,startReview} from './learning.mjs?v=93978435d111';
+import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=93978435d111';
 const root=document.querySelector('#app');let storage;try{storage=window.localStorage;}catch{}
 let {store,warning}=readStored(storage),heard=false,previewAll=false,pendingImport=null;
 let transition=null,viewToken=0,keyboardMode=false;
@@ -35,7 +36,7 @@ function begin(stageId=null){
 function beginReview(){const next=startReview(progress());if(next===progress())return;setProgress(next);begin();}
 function advanceNow(){clearTimeout(transition);transition=null;const result=advance(progress());setProgress(result.progress);heard=false;if(result.completed)complete(result);else renderRound(true);}
 function scheduleHelpReturn(){const mine=viewToken;clearTimeout(transition);transition=setTimeout(()=>{if(mine===viewToken&&progress().pending?.round.help==='ack'){setProgress(resumePractice(progress()));renderRound(true);}},340);}
-function afterWrongAudio(){if(progress().pending?.round.help==='pending'){setProgress(showHelp(progress()));renderRound(true);}else enableAnswers();}
+function afterWrongAudio(){if(progress().pending?.round.help==='pending'){setProgress(showHelp(progress()));renderRound(true);}else {enableAnswers();announcement('Versuch es noch einmal.');}}
 function scheduleAdvance(){const mine=viewToken;clearTimeout(transition);transition=setTimeout(()=>{if(mine===viewToken&&progress().pending?.round.solved)advanceNow();},340);}
 function path(){
  leave();window.scrollTo({top:0,behavior:'instant'});
@@ -69,7 +70,7 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item={...ITEMS[r.target],...(r.cue===ITEMS[r.target]?.shortAudio?{text:ITEMS[r.target].shortText}:{})},letters=word?lettersFor(r.target):[],finished=r.solved;
  const feedback=feedbackCorrect===false&&selected?choiceFeedback(s,selected):null;
  const teaching=r.help==='show'||r.help==='ack',expected=word?letters[r.position]?.toLowerCase():r.target;
- const title=teaching?'Schau und höre.':picture?'Welches Bild passt?':word?'Baue das Wort.':s.mode==='ending'?'Am Ende?':s.mode==='onset'?'Am Anfang?':s.group==='sound'?'Hör genau hin.':'Was passt?';
+ const title=TASK_GUIDES[s.instruction],audioHelp=picture&&readingAudioAvailable(p);
  const options=r.choices.map(c=>{
   const content=picture?illustration(ITEMS[c].picture):!word&&teaching&&s.focus&&ITEMS[c]?.kind==='word'?readingText(ITEMS[c],s,true):esc(word?c:label(s,c));
   if(teaching&&c!==expected)return `<span class="tile help-placeholder" aria-hidden="true">${content}</span>`;
@@ -77,10 +78,10 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  }).join('');
  root.innerHTML=`<section class="session auto-session ${picture?'reading-session':''}">
   <div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. Level auswählen">Level ${stageNumber(s.id)} · ${s.title} ▾</button></div>
-  ${meter(feedbackCorrect===true)}<h1>${title}</h1>
+  ${meter(feedbackCorrect===true)}<h1 class="task-instruction"><span>${esc(title)}</span><button class="task-info" id="instruction-info" aria-label="Anleitung anhören" title="Anleitung anhören" ${finished?'disabled':''}>ⓘ</button></h1>
   ${picture?`<div class="reading-prompt ${item.kind!=='word'?'sentence-prompt':''}" aria-label="${esc(item.text)}">${readingText(item,s,r.assisted||teaching)}</div>`:''}
-  <div class="reading-tools"><button class="replay" id="replay" aria-label="${picture?'Lesehilfe: Text vorlesen':'Ton noch einmal anhören'}" ${finished?'disabled':''}>${speaker}<span>${picture?'Vorlesen':'Anhören'}</span></button>${picture&&item.kind==='word'&&(s.support||s.focus)?`<button class="quiet" id="syllable-help" aria-label="Silben und Bausteine als Lesehilfe zeigen" ${finished||!heard?'disabled':''}>◒ <span>Hilfe</span></button>`:''}</div>
-  <div id="audio-status" class="audio-status subtle" role="status">${feedback?esc(feedback.text):picture?'Lies selbst. Der Lautsprecher hilft dir.':heard?'':'Hör erst einmal zu.'}</div>
+  <div class="reading-tools">${!picture||audioHelp?`<button class="replay" id="replay" aria-label="${picture?'Lesehilfe: Text vorlesen':'Ton noch einmal anhören'}" ${finished?'disabled':''}>${speaker}<span>${picture?'Vorlesen':'Anhören'}</span></button>`:''}${picture&&item.kind==='word'&&(s.support||s.focus)?`<button class="quiet" id="syllable-help" aria-label="Silben und Bausteine als Lesehilfe zeigen" ${finished||!heard?'disabled':''}>◒ <span>Hilfe</span></button>`:''}</div>
+  <div id="audio-status" class="audio-status subtle" role="status">${feedback?esc(feedback.text):picture?(audioHelp?'Du kannst dir den Text jetzt vorlesen lassen.':''):heard?'':'Hör erst einmal zu.'}</div>
   ${word?`${r.demonstration?`<div class="word-model" aria-label="Vorbild ${esc(item.text)}">${esc(item.text)}</div>`:''}<div class="slots" aria-label="Wort mit ${letters.length} Bausteinen">${letters.map((letter,i)=>`<span class="slot ${i===r.position?'active':''}">${i<r.position?letter:''}</span>`).join('')}</div>`:''}
   <div class="tiles ${picture?'picture-tiles':word?'bank':''} ${!picture&&(s.group==='read'||(!word&&!CONTEXTS[s.mode]&&r.choices.some(c=>label(s,c).length>3)))?'word-tiles':''} ${CONTEXTS[s.mode]?'phoneme-tiles':''}" ${word||CONTEXTS[s.mode]?`style="--bank-columns:${r.choices.length}"`:''}>${options}</div>
   <div class="feedback-area"><span id="feedback" class="feedback ${feedbackCorrect===true?'correct-flash':''}" role="status">${feedbackCorrect===true?'<span aria-hidden="true">✓</span><span class="sr-only">Richtig.</span>':''}</span></div>
@@ -89,10 +90,16 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const cue=()=>s.mode==='ending'&&r.demonstration&&r.target==='n'?['an','in']:[r.cue];
  const listen=(instruction=false)=>{disableAnswers();announcement('Hör erst einmal zu.');const prefix=instruction?[word&&r.demonstration&&s.id==='build'?'model':s.instruction]:[];play([...prefix,...cue()],enableAnswers);};
  const readingHelp=(withAudio)=>{
-  setProgress(useReadingHelp(progress()));renderRound(false);
+  if(withAudio&&!readingAudioAvailable(progress()))return;
+  setProgress(useReadingHelp(progress(),withAudio));renderRound(false);
   if(withAudio){disableAnswers();announcement('Lesehilfe: Hör zu und lies mit.');play(cue(),enableAnswers);}
  };
- document.querySelector('#replay').onclick=()=>{if(progress().pending?.round.help==='pending'){setProgress(showHelp(progress()));renderRound(true);}else if(picture)readingHelp(true);else listen(false);};
+ const replay=document.querySelector('#replay');if(replay)replay.onclick=()=>{if(progress().pending?.round.help==='pending'){setProgress(showHelp(progress()));renderRound(true);}else if(picture)readingHelp(true);else listen(false);};
+ document.querySelector('#instruction-info').onclick=()=>{
+  if(finished)return;disableAnswers();announcement('Hör die Anleitung.');
+  if(picture)playAudio([s.instruction],enableAnswers,()=>{enableAnswers();announcement('Die Anleitung konnte nicht starten.');});
+  else listen(true);
+ };
  const helpButton=document.querySelector('#syllable-help');if(helpButton)helpButton.onclick=()=>readingHelp(false);
  root.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{
   if(!heard||progress().pending?.round.solved)return;
@@ -106,12 +113,11 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  if(playCue){
   heard=false;
   if(finished)scheduleAdvance();
-  else if(picture&&!teaching){
-   // Never speak the answer before independent reading. At a level's entrance
-   // only the generic task instruction plays; later questions are ready silently.
-   if(session.index===0&&r.tries===0&&!r.assisted){disableAnswers();announcement('Hör die Anleitung.');play([s.instruction],enableAnswers);}
-   else enableAnswers();
-  }else listen(session.index===0&&!teaching&&r.tries===0);
+  else if(picture){
+   // Reading answers and directions are never spoken automatically. Audio help
+   // appears only after two wrong attempts, including in the teaching view.
+   enableAnswers();
+  }else listen(false);
  }
 }
 

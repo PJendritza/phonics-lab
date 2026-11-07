@@ -1,4 +1,4 @@
-import {SCENE_ITEMS} from './mixed-reading.mjs?v=5a2760f53294';
+import {SCENE_ITEMS} from './mixed-reading.mjs?v=93978435d111';
 // Curated German vocabulary. Whole-word recordings remain separate from spelling
 // support: written syllables are never spliced into synthetic spoken words.
 export const WORDS=[
@@ -51,8 +51,9 @@ export const READING_STAGES=[
  ...paired('ie','Wörter mit ie',['biene','sieb','sieben'],{instruction:'pattern_ie',focus:['ie'],support:'syllables',patterns:['ie','final_devoicing']}),
  ...paired('long_vowels','Doppelte Vokale',['boot','beet','see','tee'],{instruction:'long_vowels',focus:['oo','ee'],patterns:['vowel_pairs']}),
  stage('first_sentences','Kurze Sätze verstehen','Ein Ball / Hut ist im / am Bus.',Object.keys(SCENE_ITEMS).filter(id=>['ball','hut'].includes(SCENE_ITEMS[id].subject)&&['bus','baum','tisch','kiste'].includes(SCENE_ITEMS[id].location)),'picture',{group:'sentence',instruction:'sentence_read',contrast:true,balanceRelations:true,minChoices:3,legacyTargets:Object.keys(SENTENCES).filter(id=>id.startsWith('s_'))}),
- stage('sentence_meaning','Den ganzen Satz verstehen','Orte · Mengen · Größen · Handlungen · kleine Geschichten',Object.keys(SENTENCES).filter(id=>!id.startsWith('s_')),'picture',{group:'sentence',instruction:'meaning_mix',contrast:true,balanceRelations:true,mixed:true,masteryByFamily:true,minChoices:4}),
+ stage('sentence_meaning','Den ganzen Satz verstehen','Orte · Mengen · Größen · Handlungen · kleine Geschichten',Object.keys(SENTENCES).filter(id=>!id.startsWith('s_')&&SENTENCES[id].pack===33),'picture',{group:'sentence',instruction:'meaning_mix',contrast:true,balanceRelations:true,mixed:true,masteryByFamily:true,minChoices:4}),
 ];
+for(const [number,id,title]of [[34,'reading_animals','Lesemix: neue Tiere und Dinge'],[35,'reading_everyday','Lesemix: Alltag und Sachen']])READING_STAGES.push(stage(id,title,'Neue Wörter · Orte · Mengen · kleine Sätze',Object.keys(SENTENCES).filter(t=>SENTENCES[t].pack===number),'picture',{group:'sentence',instruction:'meaning_mix',contrast:true,balanceRelations:true,mixed:true,masteryByFamily:true,minChoices:4}));
 for(const s of READING_STAGES)if(s.mode==='picture'&&!['sentence','phrase'].includes(s.group))s.instruction='picture_read';
 
 const digitChoices=['digit_6','digit_8'];
