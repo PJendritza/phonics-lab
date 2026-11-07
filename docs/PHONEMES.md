@@ -1,3 +1,10 @@
+# v11: rejected foreign phonics removed
+
+The historical implementation below is no longer active. All eleven foreign clips and their generator were removed. Archive: docs/archive/rejected-kalulu-phonemes.json. Native replacement remains missing; no letter-name/TTS/word-fragment fallback. See CHILD-GUIDANCE.md.
+
+---
+Historical record follows.
+
 # Isolated feedback sounds
 
 User request: in an ending task for Fisch, pressing f should play /f/ alone, never

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "version": "11.0.0",
+  "assetVersion": "93978435d111",
+  "checks": [
+    "No automatic directions/solution speech. Small 12px hint and 44px info control play only the short direction. Audio help is absent initially and after one error; two wrong answers expose it without autoplay. Exact reload, optional model, guided tap, stable positions and next-question relocking work.",
+    "reading_animals: real complete round covers six families and both im/am without any solution playback.",
+    "reading_everyday: real complete round covers six families and both im/am without any solution playback.",
+    "320x568: all new families and object states display four decoded images with a dominant reading target and no early sentence speaker.",
+    "390x844: all new families and object states display four decoded images with a dominant reading target and no early sentence speaker.",
+    "768x1024: all new families and object states display four decoded images with a dominant reading target and no early sentence speaker.",
+    "Optional info audio failure leaves reading usable. Removed foreign consonants are never requested or substituted with another word."
+  ],
+  "pageErrors": [],
+  "limits": "Real Chromium media and touch viewport emulation; not a physical phone or German pronunciation certification."
+}

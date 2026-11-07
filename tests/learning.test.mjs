@@ -61,12 +61,12 @@ test('malformed paused levels and out-of-range goals are rejected without touchi
  }
  assert.equal(p.pending.total,levelGoal(STAGES[0]));assert.deepEqual(p.paused,{});
 });
-test('wrong-option feedback plays only the selected phoneme, never another word or instruction',()=>{
+test('wrong letters never use removed foreign clips or substitute words; approved human vowels remain',()=>{
  assert.deepEqual(choiceFeedback(STAGES[0],'i').audio,['i']);
- assert.deepEqual(choiceFeedback(STAGES[8],'sch').audio,['phoneme_sch']);
- assert.deepEqual(choiceFeedback(STAGES[10],'s').audio,['phoneme_s']);
- assert.deepEqual(choiceFeedback(STAGES[13],'n').audio,['phoneme_n']);
- assert.deepEqual(choiceFeedback(STAGES[13],'ll').audio,['phoneme_l']);
+ assert.deepEqual(choiceFeedback(STAGES[8],'sch').audio,[]);
+ assert.deepEqual(choiceFeedback(STAGES[10],'s').audio,[]);
+ assert.deepEqual(choiceFeedback(STAGES[13],'n').audio,[]);
+ assert.deepEqual(choiceFeedback(STAGES[13],'ll').audio,[]);
 });
 
 

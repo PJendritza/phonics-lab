@@ -21,18 +21,19 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
   if(hard)for(const [n,t]of D.STAGES[0].targets.entries())p.skills[D.skillKey(D.STAGES[0],t)]={introduced:true,seen:2,first:2,recent:[1,1],timeline:[[n*2,1],[n*2+1,1]]};
   store.profiles[0].progress=L.startSession(p,stage,()=>.4);return store;
  };
+ const unlock=async()=>{let p=await state();const wrong=p.pending.round.choices.find(c=>c!==p.pending.round.target);for(let i=p.pending.round.tries;i<2;i++){await page.locator(`[data-choice="${wrong}"]`).click();await ready();}assert.equal(await page.locator('#replay').count(),1);};
  const solve=async()=>{
-  await ready();const before=await state(),index=before.pending.index;
+  await ready();let before=await state();const index=before.pending.index;if(before.pending.round.help==='show'){await page.locator(`[data-choice="${before.pending.round.target}"]`).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('kalulu-de:learners:v3')).profiles.some(p=>p.progress.pending?.round.help===null));await ready();before=await state();}
   await page.locator(`[data-choice="${before.pending.round.target}"]`).click();
   await page.waitForFunction(i=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3')),p=s.profiles.find(p=>p.id===s.activeId).progress;return !p.pending||p.pending.index!==i;},index);
  };
  await page.goto(base);await restore(fixture('picture_known'));
- let p=await state(),plays=await speech();assert.ok(plays.includes('picture_read.mp3'));assert.ok(!plays.includes(p.pending.round.cue+'.mp3'));
+ let p=await state(),plays=await speech();assert.equal(plays.length,0);assert.equal(await page.locator('#replay').count(),0);await page.locator('#instruction-info').click();await ready();plays=await speech();assert.equal(plays.at(-1),'picture_read.mp3');assert.equal((await state()).pending.round.assisted,false);assert.ok(!plays.includes(p.pending.round.cue+'.mp3'));
  assert.equal(await page.locator('.reading-prompt').innerText(),D.ITEMS[p.pending.round.target].text);
  assert.equal(await page.locator('[data-choice] >svg').count(),2);assert.equal(await page.locator('[data-choice]').first().innerText(),'');
  const count=plays.length;await solve();await ready();assert.equal((await speech()).length,count);
  assert.equal((await state()).skills['meaning:'+p.pending.round.target].first,1);
- checks.push('Independent word reading plays only its generic instruction, displays the written word and label-free picture choices, then advances silently with the existing chime.');
+ checks.push('Independent word reading starts silently and plays only its generic direction on an explicit info tap, displays the written word and label-free picture choices, then advances silently with the existing chime.');
 
  await restore(fixture('long_words_read'));p=await state();const target=p.pending.round.target,choices=p.pending.round.choices;
  assert.equal(target,'sofa');assert.equal(await page.locator('.reading-syllable').count(),0);
@@ -40,9 +41,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  assert.equal(await page.locator('.reading-syllable').count(),2);assert.equal((await state()).pending.round.assisted,true);assert.equal((await speech()).length,beforeHelp);
  await page.reload();await page.locator('#play').click();await ready();assert.deepEqual((await state()).pending.round.choices,choices);
  assert.equal(await page.locator('.reading-syllable').count(),2);assert.equal((await speech()).length,0);
- await page.locator('#replay').click();await ready();assert.equal((await speech()).at(-1),'sofa.mp3');
+ await unlock();await page.locator('#replay').click();await ready();assert.equal((await speech()).at(-1),'sofa.mp3');
  await solve();await ready();assert.equal((await state()).skills['meaning:sofa'].first,0);assert.equal((await state()).pending.round.assisted,false);
- checks.push('Optional syllable help preserves the word spelling and answer order; assistance survives reload and exact resume. Explicit read-aloud plays the human word and cannot count as independent mastery.');
+ checks.push('Optional syllable help preserves the word spelling and answer order; assistance survives reload and exact resume. After two errors explicit read-aloud plays the human word and cannot count as independent mastery.');
 
  await restore(fixture('ei_read'));await page.locator('#syllable-help').click();assert.equal(await page.locator('.reading-prompt mark').innerText(),'Ei');
  checks.push('Optional grapheme highlighting keeps ei together without synthesizing an isolated phoneme.');
@@ -51,7 +52,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const beforeWrong=(await speech()).length;await page.locator(`[data-choice="${wrong}"]`).click();await ready();assert.equal((await speech()).length,beforeWrong);assert.equal((await state()).seeds,0);
  assert.deepEqual(await page.locator('[data-choice]').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height];})),positions);
  await page.locator(`[data-choice="${wrong}"]`).click();await ready();assert.equal((await state()).pending.round.help,'show');assert.equal(await page.locator('[data-choice]').count(),1);
- assert.equal((await speech()).at(-1),D.ITEMS[r.target].audio+'.mp3');
+ assert.equal((await speech()).length,beforeWrong);await page.locator('#replay').click();await ready();assert.equal((await speech()).at(-1),r.cue+'.mp3');
  await page.locator(`[data-choice="${r.target}"]`).click();await ready();assert.equal((await state()).seeds,0);assert.equal((await state()).pending.index,0);assert.equal(await page.locator('[data-choice]').count(),2);
  await solve();await ready();assert.equal((await state()).skills['meaning:'+r.target].first,0);
  checks.push('Wrong pictures stay silent and keep the written task and tile positions; they never read an unrelated label. Two errors trigger one-choice teaching, then the original choices; guided taps award nothing extra.');
@@ -67,7 +68,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  assert.equal(await page.locator('[data-choice]').count(),4);
  const item=D.ITEMS[p.pending.round.target],others=p.pending.round.choices.filter(t=>t!==p.pending.round.target);
  assert.ok(others.every(t=>D.ITEMS[t].family===item.family));assert.equal(new Set(p.pending.round.choices.map(t=>JSON.stringify(D.ITEMS[t].scene))).size,4);
- await page.locator('#replay').click();await ready();assert.equal((await speech()).at(-1),p.pending.round.cue+'.mp3');
+ await unlock();await page.locator('#replay').click();await ready();assert.equal((await speech()).at(-1),p.pending.round.cue+'.mp3');
  await page.screenshot({path:'/workspace/kalulu-browser-build/v7-sentence-390.png',fullPage:true});
  for(let n=0;n<sentenceGoal;n++)await solve();await page.locator('#continue').waitFor();
  // Assistance on the first question may require another round to establish

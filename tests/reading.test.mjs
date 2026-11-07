@@ -30,14 +30,14 @@ test('optional audio or syllable assistance persists and cannot earn independent
 test('mixed sentence alternatives preserve each available meaning dimension',()=>{
  let p=startSession(freshProgress(),'sentence_meaning',rng),completed;
  for(let session=0;session<12&&!p.stages.sentence_meaning?.passed;session++){
-  while(p.pending){const r=p.pending.round,item=ITEMS[r.target],wrong=r.choices.filter(c=>c!==r.target),dims=sceneDimensions(item).filter(d=>STAGES.at(-1).targets.some(t=>ITEMS[t].scene?.family===item.scene.family&&ITEMS[t].scene[d]!==item.scene[d]&&sceneDimensions(item).filter(x=>x!==d).every(x=>ITEMS[t].scene[x]===item.scene[x])));
+  while(p.pending){const r=p.pending.round,item=ITEMS[r.target],wrong=r.choices.filter(c=>c!==r.target),dims=sceneDimensions(item).filter(d=>STAGES.find(s=>s.id==='sentence_meaning').targets.some(t=>ITEMS[t].scene?.family===item.scene.family&&ITEMS[t].scene[d]!==item.scene[d]&&sceneDimensions(item).filter(x=>x!==d).every(x=>ITEMS[t].scene[x]===item.scene[x])));
    assert.equal(r.choices.length,4);
    for(const d of dims)assert.ok(wrong.some(c=>ITEMS[c].scene[d]!==item.scene[d]&&dims.filter(x=>x!==d).every(x=>ITEMS[c].scene[x]===item.scene[x])),d);
    p=answer(p,r.target).progress;completed=advance(p,rng);p=completed.progress;
   }
   if(!p.stages.sentence_meaning.passed)p=startSession(p,'sentence_meaning',rng);
  }
- assert.equal(p.stages.sentence_meaning.passed,true);assert.equal(recommended(p),null);
+ assert.equal(p.stages.sentence_meaning.passed,true);assert.equal(recommended(p).id,'reading_animals');
 });
 test('two-error sentence teaching preserves the question, awards no extra progress and retains mistakes',()=>{
  let p=startSession(freshProgress(),'sentence_meaning',rng);const r=p.pending.round,wrong=r.choices.find(c=>c!==r.target);
@@ -51,13 +51,13 @@ test('completed v6 profiles continue at new Level 15 while unfinished work and a
  const old=freshProgress();delete old.curriculumVersion;old.continuation='complete';old.sessions=20;old.seeds=200;
  old.stages.more_build={completed:2,passed:true,best:1};
  const p=validateProgress(old);assert.equal(recommended(p).id,'sentence_words');assert.equal(p.sessions,20);assert.equal(p.seeds,200);
- assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,10);
+ assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,11);
  const pending=startSession(old,'more_build',rng);delete pending.curriculumVersion;
  assert.deepEqual(validateProgress(pending).pending,pending.pending);
  const done=freshProgress();done.continuation='complete';assert.equal(validateProgress(done).continuation,'complete');
 });
 test('pictures and syllable spelling resolve; new context vocabulary is explicitly declared for full-utterance help',()=>{
- assert.equal(STAGES.length,33);assert.ok(WORDS.length>=30);
+ assert.equal(STAGES.length,35);assert.ok(WORDS.length>=30);
  for(const stage of READING_STAGES){
   assert.ok(stage.targets.length<=100);
   for(const target of stage.targets){

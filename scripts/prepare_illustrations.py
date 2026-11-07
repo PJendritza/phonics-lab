@@ -8,10 +8,17 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--cache',type=Path,default=Path('/workspace/generated_images'));args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--cache',type=Path,default=Path('/workspace/generated_images'));parser.add_argument('--only',help='Convert one new atlas while retaining hash-verified committed sheets');args=parser.parse_args()
  sources=json.loads((ROOT/'docs/illustration-sources.json').read_text());out=ROOT/'app/images';out.mkdir(exist_ok=True)
  files=[];sheets={};sprites={}
+ if args.only:
+  data=(ROOT/'app/image-data.mjs').read_text();sheets=json.loads(data.split('export const SHEETS=')[1].split(';')[0]);sprites=json.loads(data.split('export const SPRITES=')[1].split(';')[0]);files=json.loads((out/'manifest.json').read_text())['files']
+  for f in files:
+   if sha(ROOT/'app'/f['src'])!=f['sha256']:raise SystemExit('Existing atlas checksum mismatch: '+f['id'])
+  files=[f for f in files if f['id']!=args.only]
+
  for source in sources['sheets']:
+  if args.only and source['id']!=args.only:continue
   path=args.cache/source['file']
   if sha(path)!=source['sha256']:raise SystemExit('Source illustration checksum mismatch: '+source['id'])
   dimensions=json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=width,height','-of','json',str(path)]))['streams'][0]

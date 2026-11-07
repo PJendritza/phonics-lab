@@ -8,7 +8,7 @@ const secure=()=>({introduced:true,seen:5,first:5,recent:[1,1,1,1],timeline:[[1,
 function finish(p,fn=()=>{}){while(p.pending){fn(p.pending.round);p=answer(p,p.pending.round.target,NOW).progress;p=advance(p,rng,NOW).progress;}return p;}
 function single(id,strong=false){let p=freshProgress();p.stages.sentence_meaning={completed:1,passed:false,best:0};if(strong){for(const t of stageById('sentence_meaning').targets.filter(t=>ITEMS[t].family===ITEMS[id].family)){p.skills['sentence:'+t]=secure();if(t!==id)p.spacing.reviews['sentence:'+t]={streak:2,days:1,due:NOW+86400000,lastAt:NOW,last:0,after:3};}}else p.skills['sentence:'+id]={introduced:true,seen:1,first:0,recent:[0],timeline:[[1,0]]};return startReview(p,'sentence_meaning',rng,NOW);}
 test('active mixed bank has six distinct meaning families and correct mouse/article agreement',()=>{
- assert.equal(Object.keys(SCENE_ITEMS).length,80);assert.equal(new Set(Object.values(SCENE_ITEMS).map(i=>i.family)).size,6);
+ assert.equal(Object.keys(SCENE_ITEMS).length,236);assert.equal(new Set(Object.values(SCENE_ITEMS).map(i=>i.family)).size,6);
  for(const item of Object.values(SCENE_ITEMS)){
   assert.ok(illustration(item.picture).startsWith('<svg'));assert.doesNotMatch(item.text,/\bEin Maus\b/);
   if(item.family==='place')assert.ok(item.text.startsWith((NOUNS[item.subject].article==='eine'?'Eine ':'Ein ')+NOUNS[item.subject].text));

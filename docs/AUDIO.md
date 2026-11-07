@@ -1,3 +1,10 @@
+# v11 audio checkpoint
+
+560 clips: 76 unchanged human models, 23 rewritten short guides, 460 full/short sentence/phrase models and one chime. All eleven foreign Kalulu phones removed; unsupported consonants are silent pending suitable German recordings. See CHILD-GUIDANCE.md.
+
+---
+Historical record follows.
+
 # Current v10 audio checkpoint
 
 279 clips: 76 human + 11 isolated phones + 23 guides + 168 optional sentence/phrase

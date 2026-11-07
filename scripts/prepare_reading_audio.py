@@ -12,9 +12,13 @@ def main():
  parser=argparse.ArgumentParser()
  parser.add_argument('--cache',type=Path,default=Path('/workspace/kalulu-browser-audio/reading'))
  parser.add_argument('--model',type=Path,default=Path('/workspace/kalulu-tools/tts-models/de_DE-thorsten-high.onnx'))
- args=parser.parse_args();args.cache.mkdir(parents=True,exist_ok=True)
+ parser.add_argument('--utterances-only',action='store_true');args=parser.parse_args();args.cache.mkdir(parents=True,exist_ok=True)
  manifest_path=ROOT/'app/audio/manifest.json';manifest=json.loads(manifest_path.read_text());clips={c['id']:c for c in manifest['clips']}
  for source in json.loads((ROOT/'docs/reading-audio-sources.json').read_text()):
+  if args.utterances_only:
+   old=clips.get(source['id']);out=ROOT/'app/audio'/(source['id']+'.mp3')
+   if not old or not out.exists() or sha(out)!=old['sha256']:raise SystemExit('Committed human clip missing/changed: '+source['id'])
+   continue
   path=args.cache/source['filename']
   if not path.exists():
    request=urllib.request.Request(source['sourceAudio'],headers={'User-Agent':'PhonicsLab/0.7 (https://github.com/PJendritza/phonics-lab; educational audio preparation)'})

@@ -1,3 +1,10 @@
+# v11 architecture
+
+TASK_GUIDES supplies short directions; readingAudioAvailable gates solution speech. New packs append without changing old IDs. Six atlases, 560 clips, 14 MB cap; all runtime media on demand. See CHILD-GUIDANCE.md.
+
+---
+Historical record follows.
+
 # Current v10 architecture
 
 See MIXED-READING.md for the active eighty-task semantic model, short/full cue

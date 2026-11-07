@@ -46,9 +46,9 @@ test('invented forms are silent distractors, never target vocabulary, audio mode
  assert.ok(Object.keys(p.skills).every(k=>!k.includes('form_')));assert.ok(Object.keys(p.spacing.reviews).every(k=>!k.includes('form_')));
  const bad=structuredClone(p);bad.pending.round.choices.push('form_ein_0');assert.throws(()=>validateProgress(bad));
 });
-test('picture mistakes are silent; isolated letters and real written word alternatives retain their own feedback',()=>{
+test('picture mistakes are silent; approved German letters and written words retain feedback; unapproved sounds remain silent',()=>{
  for(const stage of STAGES.filter(s=>s.mode==='picture'))for(const t of stage.targets)assert.deepEqual(choiceFeedback(stage,t).audio,[]);
- assert.deepEqual(choiceFeedback(stageById('more_endings'),'f').audio,['phoneme_f']);assert.deepEqual(choiceFeedback(stageById('read'),'omi').audio,['omi']);
+ assert.deepEqual(choiceFeedback(stageById('more_endings'),'f').audio,[]);assert.deepEqual(choiceFeedback(stageById('read'),'omi').audio,['omi']);
 });
 test('early phrases and basic sentences always require reading subject AND relation, even before success',()=>{
  for(const id of ['phrase_place','first_sentences']){
@@ -68,7 +68,7 @@ function oldProgress(){
  return p;
 }
 test('v8 history keeps all practice rewards and legacy skills while new meaning contrasts require fresh evidence',()=>{
- const old=oldProgress(),p=validateProgress(old);assert.equal(p.curriculumVersion,10);assert.equal(p.sessions,80);assert.equal(p.seeds,900);
+ const old=oldProgress(),p=validateProgress(old);assert.equal(p.curriculumVersion,11);assert.equal(p.sessions,80);assert.equal(p.seeds,900);
  assert.equal(p.continuation,'phrase_place');assert.equal(p.stages.first_sentences.completed,2);assert.equal(p.stages.first_sentences.passed,false);assert.equal(p.stages.sentence_meaning.passed,false);
  for(const [key,value]of Object.entries(old.skills))assert.deepEqual(p.skills[key],value,key);
  let next=p;for(let i=0;i<4&&!next.stages.phrase_place?.passed;i++)next=finish(startSession(next,'phrase_place',rng,NOW));assert.equal(recommended(next).id,'first_sentences');
@@ -91,5 +91,5 @@ test('image assets have pinned hashes; all words/scenes resolve and seven is a n
 });
 test('the replacement ending instruction uses concrete whole-word examples without a bare E/I letter-name instruction',()=>{
  const instructions=JSON.parse(fs.readFileSync(new URL('../scripts/reading-instructions.json',import.meta.url)));
- assert.match(instructions.soft_words,/Tomate und Banane/);assert.doesNotMatch(instructions.soft_words,/\b[eEiI]\b/);
+ assert.equal(instructions.soft_words,'Tippe auf das Wort, das du hörst.');assert.doesNotMatch(instructions.soft_words,/\b[eEiI]\b/);
 });

@@ -161,6 +161,32 @@
           362
         ]
       }
+    },
+    {
+      "id": "f",
+      "file": "exec-8b940897-5660-445e-a001-4301842104b5.png",
+      "sha256": "91de82ef2b8f602a57c29f4f62f0d1aca0bd33e265dd8b297c0e464272cdf2e7",
+      "columns": 4,
+      "rows": 4,
+      "cells": [
+        "action_katze_wach",
+        "action_katze_schlaeft",
+        "action_hund_wach",
+        "action_hund_schlaeft",
+        "action_ente_wach",
+        "action_ente_schlaeft",
+        "action_frosch_wach",
+        "action_frosch_schlaeft",
+        "apfel",
+        "becher",
+        "schuh",
+        "puppe",
+        "action_buch_offen",
+        "action_buch_zu",
+        "action_tasche_offen",
+        "action_tasche_zu"
+      ],
+      "prompt": "Create one high-quality transparent-background sprite atlas for a calm children's German reading app. Exactly 4 columns and 4 rows of equal square cells, sixteen complete isolated illustrations, no text, no labels, no borders, no numerals. Warm friendly picture-book gouache style, simple recognizable shapes, clear at small phone sizes, consistent paired characters. Generous transparent margin at least 18 percent inside each cell, no objects or shadows cross into neighboring cells. Row 1 left to right: 1 orange cat sitting awake, 2 same orange cat curled up asleep with eyes closed, 3 friendly brown dog sitting awake, 4 identical brown dog curled asleep with eyes closed. Row 2: 1 white duck with orange bill standing awake, 2 identical white duck sleeping eyes closed head tucked, 3 friendly green frog sitting awake, 4 identical green frog sleeping eyes closed. Paired awake and sleeping animals have identical fur/feathers/color and similar scale, unmistakable open versus closed eyes, no Z letters. Row 3: 1 simple red apple with green leaf, 2 plain blue handled cup empty (Becher), 3 one simple brown shoe, 4 a small cloth doll with orange dress and short yarn hair, clearly a toy doll, not a real child. Row 4: 1 an OPEN green hardcover book showing blank cream pages, 2 the same green book CLOSED, 3 an OPEN simple yellow shoulder bag with visibly open top and dark empty interior, 4 the same yellow bag CLOSED with flap fastened. Open and closed objects use the same camera angle, color, size and identity; their state must be obvious without labels. All backgrounds fully transparent, no decorations or extra objects."
     }
   ]
 }

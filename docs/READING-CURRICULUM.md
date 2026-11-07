@@ -1,3 +1,10 @@
+# v11 reading extension
+
+35 stable numbered levels, with two new independent mixed packs of 80 and 76 tasks. Short/full difficulty and error spacing persist; solution speech is available only after two errors. See CHILD-GUIDANCE.md.
+
+---
+Historical record follows.
+
 # Current v10 reading extension
 
 See [MIXED-READING.md](MIXED-READING.md) for the active v10 curriculum and limits:

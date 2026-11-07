@@ -1,3 +1,136 @@
+# Phonics Lab v11: two new reading packs and child guidance
+
+Canonical repo: https://github.com/PJendritza/phonics-lab . Feature branch:
+two-reading-packs-and-child-guidance. Checkout /workspace/Kalulu-DE. Read AGENTS.md
+and recent Git history first. User authorised implementation and existing-site
+publication; all earlier directions/phoneme/help policies are superseded below.
+
+## Implemented
+
+- 35 levels: original 33 IDs/numbers unchanged. Level 34 adds 80 mixed tasks with
+  Katze, Hund, Ente, Frosch, Buch and Becher; Level 35 adds 76 with Buch, Apfel,
+  Schuh, Puppe, Tasche and familiar Mama/Oma. Six task families, similar text
+  length/difficulty, independent word/target IDs, whole-sentence audio and new
+  matching art. All active new texts: docs/curriculum/RELEASE-V11.txt.
+- All 23 instructions rewritten as one short child-facing action, without vowel/
+  consonant jargon or phonetic explanations. Directions do not autoplay. A small
+  12px adult hint ends in a 44px info target; explicit info plays the generic task
+  guide only. The reading word/sentence remains the visual focus.
+- Reading solution speaker absent initially and after one error. Two wrong
+  attempts unlock optional speech; no automatic solution reading even in the
+  one-choice teaching step. Info never reveals the answer or marks assistance.
+  Unlocked help/errors/assistance survive reload/navigation/backup. Guided taps
+  still give no progress, requested models cannot create first-try mastery, and
+  the next question relocks. Visual syllable help remains separately assisted.
+- Fixed help space keeps choice positions stable when the button appears. Small
+  phone layout was corrected after actual 320x568 checks; original large flower,
+  quiet chime, reduced motion and stationary targets remain.
+- All eleven foreign Kalulu clips removed from app/audio, manifest and review
+  filter; obsolete generator removed to prevent restoring them. Source/license
+  attribution retained in docs/archive/rejected-kalulu-phonemes.json. No source
+  was mislabelled German. Unsupported consonant errors are now silent visual
+  retries; original complete German words still model listening/build tasks after
+  errors. Six retained German letter/hum models and all 76 human hashes
+  are byte-identical to v10. No letter-name, unrelated word or synthetic-phone
+  substitution. See the explicit remaining native-audio gap below.
+- One new generated transparent atlas: paired animals, everyday objects and book/
+  bag open/closed states. Six atlases / 70 sprites / 1,630,408 WebP bytes. Original
+  PNG external; exact prompt, hashes and source rectangles committed. Partial
+  --only f generation retains only checksum-verified older committed atlases.
+- 560 active clips: 76 human + 23 guides + 460 full/short sentence/phrase models
+  + one effect. 292 new full/short utterances; 23 existing directions regenerated;
+  eleven old phonics files removed. Free local pinned Thorsten High, length_scale
+  1.5, added 0.3-second sentence pause; no runtime TTS or API fee.
+- CurriculumVersion 11 retains v3 storage and exact pending old questions/goals,
+  history/rewards/paused tasks. Completed v10 courses continue at 34. Success
+  advances forward; no implicit backward review. New groups keep prior adaptive
+  family confidence, error retrieval, im/am balance and representative mastery.
+- No engine, accounts, tracking, cloud sync, microphone or scheduling. Optional
+  media remain on demand. New static cap 14 MB; dirty package 596 files /
+  10,116,908 bytes, app hash 93978435d111. Clean metadata adds one byte.
+
+## Executed setup and verification
+
+This run began with a refreshed workspace missing the prior checkout/tool caches.
+Cloned the canonical repo to its established path, inspected AGENTS/PROGRESS/history
+and current enforced unrestricted environment network status. Node, Chromium,
+Playwright and ffmpeg were already installed. Created a user-owned Piper venv;
+installed piper-tts (resolved version 1.8.0). Downloaded the pinned model/config
+from the existing revision and verified both SHA256 values before use. External
+models/caches and raw PNGs are not committed. Future regeneration should pin
+piper-tts==1.8.0; ordinary builds need none of the audio generation dependencies.
+
+```sh
+git clone https://github.com/PJendritza/phonics-lab.git /workspace/Kalulu-DE
+python3 -m venv /workspace/kalulu-tools/tts
+/workspace/kalulu-tools/tts/bin/pip install piper-tts
+# Download model/config from scripts/tts-settings.json source /resolve/ URLs;
+# require modelSha256 and configSha256 before generation.
+python3 scripts/prepare_guides.py
+python3 scripts/prepare_illustrations.py --only f
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_audio.py --instructions-only
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py --utterances-only
+node --test tests/*.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+python3 -m http.server 8070 --bind 0.0.0.0 --directory /workspace/kalulu-browser-build
+# preview/phonics-lab -> ../site
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mobile-smoke.cjs
+node tests/profiles.cjs
+node tests/word-hints.cjs
+node tests/level-navigation.cjs
+node tests/choice-help.cjs
+node tests/mixed-reading.cjs
+node tests/child-guidance.cjs
+git diff --check
+```
+
+71 unit/content tests pass. All 560 MP3s decode with headroom and quiet padding.
+Eleven browser suites pass with real image/audio decoding, 320/390/768px touch
+layouts, all new families/states/counts, info-only playback, audio hidden until two
+errors, no autoplay on teaching/reload, next-task relocking, exact migration,
+assistance/scoring, failed optional-guide recovery, failure of required German
+word models, fixed choice positions, font/keyboard, profiles/backup and spaced
+practice. Old tests were updated for the intentional no-auto-guide/no-foreign-
+phone/gated-model policies, not skipped. An old flower-size assertion measured
+an animated bounding box; it now checks the actual CSS size to avoid a transient
+scale causing a false failure. Phone and scene screenshots inspected externally.
+
+All six current app-hash browser gates pass: browser, reading, spacing, close-
+reading, mixed-reading and v11-child-guidance. Historical evidence directory names
+remain but contain current results. This is Chromium phone emulation, not actual
+physical-device or native pronunciation/educational certification.
+
+## Native isolated-consonant audio remains missing
+
+A Commons metadata search for suitable German isolated f returned HTTP 403. No
+appropriate licensed native German replacement was confirmed. The rejected French/
+Portuguese clips were removed rather than retained or rebranded. That removal is
+complete; new native isolated consonant audio is not. Unsupported wrong letters
+stay silent for now, while real German task words remain available. No request
+for credentials or paid API was made. Further native phonics recording/sourcing
+and adult listening review are the next audio step. Speech recognition stays out
+of scope. Parent/native review is also needed for new vocabulary/plurals and art.
+
+## Publication and next step
+
+Clean source commit/push, existing gh-pages publication and verified public HTTPS
+bytes pending at this checkpoint. scripts/publish.py now requires passing current
+v11-child-guidance evidence as well as the five previous app-hash gates. Use a
+fresh external checkout, no Pages settings changes. Record actual source and
+publication commits/results after verification; later documentation-only commits
+are separate from the deployed source.
+
+User check: open v11 and try Levels 34 and 35. At a new reading question there
+should be only the small info control, not a solution speaker. After two errors
+optional speech appears. Existing profiles should resume without erasing progress.
+
+---
+
 # Phonics Lab v10: varied mixed reading — verified release
 
 Canonical repository: https://github.com/PJendritza/phonics-lab . Feature branch:

@@ -1,3 +1,26 @@
+# v11: two new reading packs and child-friendly guidance
+
+Latest user request authorises implementation/publication. Earlier holds below
+are historical. Active changes: docs/CHILD-GUIDANCE.md.
+
+- [x] Append Level 34 (80 targets) and Level 35 (76), with distinct new word banks,
+      six-family mixed practice, correct gender/plurals and new consistent artwork.
+- [x] Overhaul all 23 guides into short child actions; remove jargon, large heading
+      and automatic guide playback. Add small parent hint with explicit info replay.
+- [x] Hide reading speech until two errors; show optional model without autoplay;
+      preserve unlocking/assistance on exact resume and relock the next task.
+- [x] Remove all eleven French/Portuguese Kalulu sound clips from app and review;
+      keep human German models and archive attribution. Unsupported consonants
+      stay silent, never replaced by a letter name or unrelated word.
+- [ ] Suitable licensed German isolated consonant models are still missing.
+      Commons metadata search was blocked (403). Do not claim native replacements.
+- [x] First 71 unit/content checks and all 560-clip technical audio checks pass.
+- [x] Eleven browser suites pass, including new directions/gating and both packs.
+- [ ] Publish and verify all public bytes; exact status in PROGRESS.md.
+
+---
+Historical release/planning context follows.
+
 # v10 implementation: varied mixed reading
 
 The user's latest request authorises building and publishing the next testable

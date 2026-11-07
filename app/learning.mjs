@@ -102,7 +102,9 @@ export function answer(progress,choice,now=Date.now()){
 }
 export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
 export function resumePractice(progress){if(progress.pending?.round.help!=='ack')return progress;const next=structuredClone(progress);next.pending.round.help=null;next.pending.round.misses=0;return next;}
-export function useReadingHelp(progress){
+export function readingAudioAvailable(progress){const s=progress.pending,r=s?.round;return !!s&&stageById(s.stageId).mode==='picture'&&!r.solved&&(r.tries>=2||!!r.help);}
+export function useReadingHelp(progress,withAudio=false){
+ if(withAudio&&!readingAudioAvailable(progress))return progress;
  const session=progress.pending;
  if(!session||stageById(session.stageId).mode!=='picture'||session.round.solved||session.round.assisted)return progress;
  const next=structuredClone(progress);next.pending.round.assisted=true;return next;
@@ -174,6 +176,10 @@ export function validateProgress(p){
   for(const id of ['phrase_place','long_words_listen','long_words_read','first_sentences','sentence_meaning'])if(result.stages[id]&&!stageMastered(result,stageById(id)))result.stages[id].passed=false;
   if(result.continuation==='complete')result.continuation='sentence_meaning';
   for(const session of [result.pending,...Object.values(result.paused)])if(session?.returnTo==='complete')session.returnTo='sentence_meaning';
+ }
+ if((p.curriculumVersion??6)<11){
+  if(result.continuation==='complete')result.continuation='reading_animals';
+  for(const session of [result.pending,...Object.values(result.paused)])if(session?.returnTo==='complete')session.returnTo='reading_animals';
  }
  return result;
 }

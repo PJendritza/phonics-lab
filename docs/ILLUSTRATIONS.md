@@ -1,3 +1,10 @@
+# v11 artwork addition
+
+Atlas F adds paired Katze/Hund/Ente/Frosch, everyday objects and open/closed book/bag. Six sheets total 1,630,408 bytes; 70 physical sprites. Exact prompts/hashes in illustration-sources.json. Reproduction can retain verified old atlases with --only f.
+
+---
+Historical record follows.
+
 # v10 artwork addition
 
 Atlas E adds empty furniture and eight paired animal awake/sleep images. Five

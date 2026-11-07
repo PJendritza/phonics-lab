@@ -4,7 +4,7 @@ export const CHAPTERS=[
  {id:'first_words',title:'Erste Wörter und Wortbausteine',from:7,to:14},
  {id:'word_meaning',title:'Wörter und kurze Wortgruppen',from:15,to:23},
  {id:'spellings',title:'Schreibmuster in Wörtern',from:24,to:31},
- {id:'sentences',title:'Sätze verstehen',from:32,to:33},
+ {id:'sentences',title:'Sätze verstehen',from:32,to:35},
 ];
 const TITLES={
  letters:'Buchstaben zu Lauten finden',vowels:'Weitere Vokale erkennen',

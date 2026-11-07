@@ -1,0 +1,608 @@
+PHONICS LAB v11 – LEVEL 34/35 ACTIVE TEXTS
+No claim that all prerequisites were previously taught.
+
+Lesemix: neue Tiere und Dinge
+mix34_katze_im_bus | place
+Eine Katze ist im Bus.
+Short: Katze im Bus
+
+mix34_katze_am_bus | place
+Eine Katze ist am Bus.
+Short: Katze am Bus
+
+mix34_katze_im_haus | place
+Eine Katze ist im Haus.
+Short: Katze im Haus
+
+mix34_katze_am_haus | place
+Eine Katze ist am Haus.
+Short: Katze am Haus
+
+mix34_katze_am_baum | place
+Eine Katze ist am Baum.
+Short: Katze am Baum
+
+mix34_katze_auf_tisch | place
+Eine Katze ist auf dem Tisch.
+Short: Katze auf dem Tisch
+
+mix34_katze_unter_tisch | place
+Eine Katze ist unter dem Tisch.
+Short: Katze unter dem Tisch
+
+mix34_katze_in_kiste | place
+Eine Katze ist in der Kiste.
+Short: Katze in der Kiste
+
+mix34_katze_neben_kiste | place
+Eine Katze ist neben der Kiste.
+Short: Katze neben der Kiste
+
+mix34_katze_auf_stuhl | place
+Eine Katze ist auf dem Stuhl.
+Short: Katze auf dem Stuhl
+
+mix34_katze_unter_stuhl | place
+Eine Katze ist unter dem Stuhl.
+Short: Katze unter dem Stuhl
+
+mix34_katze_count_1 | quantity
+Hier ist eine Katze.
+Short: Eine Katze
+
+mix34_katze_count_2 | quantity
+Hier sind zwei Katzen.
+Short: Zwei Katzen
+
+mix34_katze_count_3 | quantity
+Hier sind drei Katzen.
+Short: Drei Katzen
+
+mix34_katze_size_gross | size
+Die Katze ist groß.
+Short: Eine große Katze
+
+mix34_katze_size_klein | size
+Die Katze ist klein.
+Short: Eine kleine Katze
+
+mix34_hund_im_bus | place
+Ein Hund ist im Bus.
+Short: Hund im Bus
+
+mix34_hund_am_bus | place
+Ein Hund ist am Bus.
+Short: Hund am Bus
+
+mix34_hund_im_haus | place
+Ein Hund ist im Haus.
+Short: Hund im Haus
+
+mix34_hund_am_haus | place
+Ein Hund ist am Haus.
+Short: Hund am Haus
+
+mix34_hund_am_baum | place
+Ein Hund ist am Baum.
+Short: Hund am Baum
+
+mix34_hund_auf_tisch | place
+Ein Hund ist auf dem Tisch.
+Short: Hund auf dem Tisch
+
+mix34_hund_unter_tisch | place
+Ein Hund ist unter dem Tisch.
+Short: Hund unter dem Tisch
+
+mix34_hund_in_kiste | place
+Ein Hund ist in der Kiste.
+Short: Hund in der Kiste
+
+mix34_hund_neben_kiste | place
+Ein Hund ist neben der Kiste.
+Short: Hund neben der Kiste
+
+mix34_hund_auf_stuhl | place
+Ein Hund ist auf dem Stuhl.
+Short: Hund auf dem Stuhl
+
+mix34_hund_unter_stuhl | place
+Ein Hund ist unter dem Stuhl.
+Short: Hund unter dem Stuhl
+
+mix34_hund_count_1 | quantity
+Hier ist ein Hund.
+Short: Ein Hund
+
+mix34_hund_count_2 | quantity
+Hier sind zwei Hunde.
+Short: Zwei Hunde
+
+mix34_hund_count_3 | quantity
+Hier sind drei Hunde.
+Short: Drei Hunde
+
+mix34_hund_size_gross | size
+Der Hund ist groß.
+Short: Ein großer Hund
+
+mix34_hund_size_klein | size
+Der Hund ist klein.
+Short: Ein kleiner Hund
+
+mix34_ente_im_bus | place
+Eine Ente ist im Bus.
+Short: Ente im Bus
+
+mix34_ente_am_bus | place
+Eine Ente ist am Bus.
+Short: Ente am Bus
+
+mix34_ente_im_haus | place
+Eine Ente ist im Haus.
+Short: Ente im Haus
+
+mix34_ente_am_haus | place
+Eine Ente ist am Haus.
+Short: Ente am Haus
+
+mix34_ente_am_baum | place
+Eine Ente ist am Baum.
+Short: Ente am Baum
+
+mix34_ente_auf_tisch | place
+Eine Ente ist auf dem Tisch.
+Short: Ente auf dem Tisch
+
+mix34_ente_unter_tisch | place
+Eine Ente ist unter dem Tisch.
+Short: Ente unter dem Tisch
+
+mix34_ente_in_kiste | place
+Eine Ente ist in der Kiste.
+Short: Ente in der Kiste
+
+mix34_ente_neben_kiste | place
+Eine Ente ist neben der Kiste.
+Short: Ente neben der Kiste
+
+mix34_ente_auf_stuhl | place
+Eine Ente ist auf dem Stuhl.
+Short: Ente auf dem Stuhl
+
+mix34_ente_unter_stuhl | place
+Eine Ente ist unter dem Stuhl.
+Short: Ente unter dem Stuhl
+
+mix34_ente_count_1 | quantity
+Hier ist eine Ente.
+Short: Eine Ente
+
+mix34_ente_count_2 | quantity
+Hier sind zwei Enten.
+Short: Zwei Enten
+
+mix34_ente_count_3 | quantity
+Hier sind drei Enten.
+Short: Drei Enten
+
+mix34_ente_size_gross | size
+Die Ente ist groß.
+Short: Eine große Ente
+
+mix34_ente_size_klein | size
+Die Ente ist klein.
+Short: Eine kleine Ente
+
+mix34_frosch_im_bus | place
+Ein Frosch ist im Bus.
+Short: Frosch im Bus
+
+mix34_frosch_am_bus | place
+Ein Frosch ist am Bus.
+Short: Frosch am Bus
+
+mix34_frosch_im_haus | place
+Ein Frosch ist im Haus.
+Short: Frosch im Haus
+
+mix34_frosch_am_haus | place
+Ein Frosch ist am Haus.
+Short: Frosch am Haus
+
+mix34_frosch_am_baum | place
+Ein Frosch ist am Baum.
+Short: Frosch am Baum
+
+mix34_frosch_auf_tisch | place
+Ein Frosch ist auf dem Tisch.
+Short: Frosch auf dem Tisch
+
+mix34_frosch_unter_tisch | place
+Ein Frosch ist unter dem Tisch.
+Short: Frosch unter dem Tisch
+
+mix34_frosch_in_kiste | place
+Ein Frosch ist in der Kiste.
+Short: Frosch in der Kiste
+
+mix34_frosch_neben_kiste | place
+Ein Frosch ist neben der Kiste.
+Short: Frosch neben der Kiste
+
+mix34_frosch_auf_stuhl | place
+Ein Frosch ist auf dem Stuhl.
+Short: Frosch auf dem Stuhl
+
+mix34_frosch_unter_stuhl | place
+Ein Frosch ist unter dem Stuhl.
+Short: Frosch unter dem Stuhl
+
+mix34_frosch_count_1 | quantity
+Hier ist ein Frosch.
+Short: Ein Frosch
+
+mix34_frosch_count_2 | quantity
+Hier sind zwei Frösche.
+Short: Zwei Frösche
+
+mix34_frosch_count_3 | quantity
+Hier sind drei Frösche.
+Short: Drei Frösche
+
+mix34_frosch_size_gross | size
+Der Frosch ist groß.
+Short: Ein großer Frosch
+
+mix34_frosch_size_klein | size
+Der Frosch ist klein.
+Short: Ein kleiner Frosch
+
+mix34_has_katze_buch | possession
+Die Katze hat ein Buch.
+Short: Katze mit Buch
+
+mix34_has_katze_becher | possession
+Die Katze hat einen Becher.
+Short: Katze mit Becher
+
+mix34_has_hund_buch | possession
+Der Hund hat ein Buch.
+Short: Hund mit Buch
+
+mix34_has_hund_becher | possession
+Der Hund hat einen Becher.
+Short: Hund mit Becher
+
+mix34_action_katze_wach | action
+Die Katze sitzt.
+
+mix34_action_katze_schlaeft | action
+Die Katze schläft.
+
+mix34_action_hund_wach | action
+Der Hund sitzt.
+
+mix34_action_hund_schlaeft | action
+Der Hund schläft.
+
+mix34_action_ente_wach | action
+Die Ente steht.
+
+mix34_action_ente_schlaeft | action
+Die Ente schläft.
+
+mix34_action_frosch_wach | action
+Der Frosch sitzt.
+
+mix34_action_frosch_schlaeft | action
+Der Frosch schläft.
+
+mix34_pair_oben_oben | pair
+Das Buch ist oben. Der Becher ist oben.
+
+mix34_pair_oben_unten | pair
+Das Buch ist oben. Der Becher ist unten.
+
+mix34_pair_unten_oben | pair
+Das Buch ist unten. Der Becher ist oben.
+
+mix34_pair_unten_unten | pair
+Das Buch ist unten. Der Becher ist unten.
+
+Lesemix: Alltag und Sachen
+mix35_buch_im_bus | place
+Ein Buch ist im Bus.
+Short: Buch im Bus
+
+mix35_buch_am_bus | place
+Ein Buch ist am Bus.
+Short: Buch am Bus
+
+mix35_buch_im_haus | place
+Ein Buch ist im Haus.
+Short: Buch im Haus
+
+mix35_buch_am_haus | place
+Ein Buch ist am Haus.
+Short: Buch am Haus
+
+mix35_buch_am_baum | place
+Ein Buch ist am Baum.
+Short: Buch am Baum
+
+mix35_buch_auf_tisch | place
+Ein Buch ist auf dem Tisch.
+Short: Buch auf dem Tisch
+
+mix35_buch_unter_tisch | place
+Ein Buch ist unter dem Tisch.
+Short: Buch unter dem Tisch
+
+mix35_buch_in_kiste | place
+Ein Buch ist in der Kiste.
+Short: Buch in der Kiste
+
+mix35_buch_neben_kiste | place
+Ein Buch ist neben der Kiste.
+Short: Buch neben der Kiste
+
+mix35_buch_auf_stuhl | place
+Ein Buch ist auf dem Stuhl.
+Short: Buch auf dem Stuhl
+
+mix35_buch_unter_stuhl | place
+Ein Buch ist unter dem Stuhl.
+Short: Buch unter dem Stuhl
+
+mix35_buch_count_1 | quantity
+Hier ist ein Buch.
+Short: Ein Buch
+
+mix35_buch_count_2 | quantity
+Hier sind zwei Bücher.
+Short: Zwei Bücher
+
+mix35_buch_count_3 | quantity
+Hier sind drei Bücher.
+Short: Drei Bücher
+
+mix35_buch_size_gross | size
+Das Buch ist groß.
+Short: Ein großes Buch
+
+mix35_buch_size_klein | size
+Das Buch ist klein.
+Short: Ein kleines Buch
+
+mix35_apfel_im_bus | place
+Ein Apfel ist im Bus.
+Short: Apfel im Bus
+
+mix35_apfel_am_bus | place
+Ein Apfel ist am Bus.
+Short: Apfel am Bus
+
+mix35_apfel_im_haus | place
+Ein Apfel ist im Haus.
+Short: Apfel im Haus
+
+mix35_apfel_am_haus | place
+Ein Apfel ist am Haus.
+Short: Apfel am Haus
+
+mix35_apfel_am_baum | place
+Ein Apfel ist am Baum.
+Short: Apfel am Baum
+
+mix35_apfel_auf_tisch | place
+Ein Apfel ist auf dem Tisch.
+Short: Apfel auf dem Tisch
+
+mix35_apfel_unter_tisch | place
+Ein Apfel ist unter dem Tisch.
+Short: Apfel unter dem Tisch
+
+mix35_apfel_in_kiste | place
+Ein Apfel ist in der Kiste.
+Short: Apfel in der Kiste
+
+mix35_apfel_neben_kiste | place
+Ein Apfel ist neben der Kiste.
+Short: Apfel neben der Kiste
+
+mix35_apfel_auf_stuhl | place
+Ein Apfel ist auf dem Stuhl.
+Short: Apfel auf dem Stuhl
+
+mix35_apfel_unter_stuhl | place
+Ein Apfel ist unter dem Stuhl.
+Short: Apfel unter dem Stuhl
+
+mix35_apfel_count_1 | quantity
+Hier ist ein Apfel.
+Short: Ein Apfel
+
+mix35_apfel_count_2 | quantity
+Hier sind zwei Äpfel.
+Short: Zwei Äpfel
+
+mix35_apfel_count_3 | quantity
+Hier sind drei Äpfel.
+Short: Drei Äpfel
+
+mix35_apfel_size_gross | size
+Der Apfel ist groß.
+Short: Ein großer Apfel
+
+mix35_apfel_size_klein | size
+Der Apfel ist klein.
+Short: Ein kleiner Apfel
+
+mix35_schuh_im_bus | place
+Ein Schuh ist im Bus.
+Short: Schuh im Bus
+
+mix35_schuh_am_bus | place
+Ein Schuh ist am Bus.
+Short: Schuh am Bus
+
+mix35_schuh_im_haus | place
+Ein Schuh ist im Haus.
+Short: Schuh im Haus
+
+mix35_schuh_am_haus | place
+Ein Schuh ist am Haus.
+Short: Schuh am Haus
+
+mix35_schuh_am_baum | place
+Ein Schuh ist am Baum.
+Short: Schuh am Baum
+
+mix35_schuh_auf_tisch | place
+Ein Schuh ist auf dem Tisch.
+Short: Schuh auf dem Tisch
+
+mix35_schuh_unter_tisch | place
+Ein Schuh ist unter dem Tisch.
+Short: Schuh unter dem Tisch
+
+mix35_schuh_in_kiste | place
+Ein Schuh ist in der Kiste.
+Short: Schuh in der Kiste
+
+mix35_schuh_neben_kiste | place
+Ein Schuh ist neben der Kiste.
+Short: Schuh neben der Kiste
+
+mix35_schuh_auf_stuhl | place
+Ein Schuh ist auf dem Stuhl.
+Short: Schuh auf dem Stuhl
+
+mix35_schuh_unter_stuhl | place
+Ein Schuh ist unter dem Stuhl.
+Short: Schuh unter dem Stuhl
+
+mix35_schuh_count_1 | quantity
+Hier ist ein Schuh.
+Short: Ein Schuh
+
+mix35_schuh_count_2 | quantity
+Hier sind zwei Schuhe.
+Short: Zwei Schuhe
+
+mix35_schuh_count_3 | quantity
+Hier sind drei Schuhe.
+Short: Drei Schuhe
+
+mix35_schuh_size_gross | size
+Der Schuh ist groß.
+Short: Ein großer Schuh
+
+mix35_schuh_size_klein | size
+Der Schuh ist klein.
+Short: Ein kleiner Schuh
+
+mix35_puppe_im_bus | place
+Eine Puppe ist im Bus.
+Short: Puppe im Bus
+
+mix35_puppe_am_bus | place
+Eine Puppe ist am Bus.
+Short: Puppe am Bus
+
+mix35_puppe_im_haus | place
+Eine Puppe ist im Haus.
+Short: Puppe im Haus
+
+mix35_puppe_am_haus | place
+Eine Puppe ist am Haus.
+Short: Puppe am Haus
+
+mix35_puppe_am_baum | place
+Eine Puppe ist am Baum.
+Short: Puppe am Baum
+
+mix35_puppe_auf_tisch | place
+Eine Puppe ist auf dem Tisch.
+Short: Puppe auf dem Tisch
+
+mix35_puppe_unter_tisch | place
+Eine Puppe ist unter dem Tisch.
+Short: Puppe unter dem Tisch
+
+mix35_puppe_in_kiste | place
+Eine Puppe ist in der Kiste.
+Short: Puppe in der Kiste
+
+mix35_puppe_neben_kiste | place
+Eine Puppe ist neben der Kiste.
+Short: Puppe neben der Kiste
+
+mix35_puppe_auf_stuhl | place
+Eine Puppe ist auf dem Stuhl.
+Short: Puppe auf dem Stuhl
+
+mix35_puppe_unter_stuhl | place
+Eine Puppe ist unter dem Stuhl.
+Short: Puppe unter dem Stuhl
+
+mix35_puppe_count_1 | quantity
+Hier ist eine Puppe.
+Short: Eine Puppe
+
+mix35_puppe_count_2 | quantity
+Hier sind zwei Puppen.
+Short: Zwei Puppen
+
+mix35_puppe_count_3 | quantity
+Hier sind drei Puppen.
+Short: Drei Puppen
+
+mix35_puppe_size_gross | size
+Die Puppe ist groß.
+Short: Eine große Puppe
+
+mix35_puppe_size_klein | size
+Die Puppe ist klein.
+Short: Eine kleine Puppe
+
+mix35_has_mama_buch | possession
+Mama hat ein Buch.
+Short: Mama mit Buch
+
+mix35_has_mama_schuh | possession
+Mama hat einen Schuh.
+Short: Mama mit Schuh
+
+mix35_has_oma_buch | possession
+Oma hat ein Buch.
+Short: Oma mit Buch
+
+mix35_has_oma_schuh | possession
+Oma hat einen Schuh.
+Short: Oma mit Schuh
+
+mix35_state_buch_offen | action
+Das Buch ist offen.
+
+mix35_state_buch_zu | action
+Das Buch ist zu.
+
+mix35_state_tasche_offen | action
+Die Tasche ist offen.
+
+mix35_state_tasche_zu | action
+Die Tasche ist zu.
+
+mix35_pair_oben_oben | pair
+Der Schuh ist oben. Die Puppe ist oben.
+
+mix35_pair_oben_unten | pair
+Der Schuh ist oben. Die Puppe ist unten.
+
+mix35_pair_unten_oben | pair
+Der Schuh ist unten. Die Puppe ist oben.
+
+mix35_pair_unten_unten | pair
+Der Schuh ist unten. Die Puppe ist unten.
