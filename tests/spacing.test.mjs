@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {STAGES,stageById,skillKey,levelGoal,lettersFor} from '../app/data.mjs';
 import {CHAPTERS} from '../app/level-catalog.mjs';
 import {DAY} from '../app/spacing.mjs';
-import {freshProgress,startSession,answer,advance,useReadingHelp,showHelp,resumePractice,validateProgress,stageMastered,duePractice,startReview,recommended} from '../app/learning.mjs';
+import {freshProgress,startSession,answer,advance,useReadingHelp,showHelp,resumePractice,validateProgress,stageMastered,duePractice,startReview,recommended,sessionKey} from '../app/learning.mjs';
 const NOW=1_793_000_000_000,rng=()=>.4;
 const secure=()=>({introduced:true,seen:5,first:5,recent:[1,1,1,1],timeline:[]});
 function solve(p,now=NOW){const stage=stageById(p.pending.stageId);while(!p.pending.round.solved){const r=p.pending.round;p=answer(p,stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,now).progress;}return p;}
@@ -67,7 +67,7 @@ test('one due word is tested once; explicit review returns to the higher continu
  p.spacing.reviews['meaning:sofa'].due=NOW;
  p=startSession(p,'sentence_meaning',rng,NOW);const saved=structuredClone(p.pending),seeds=p.seeds;
  p=startReview(p,stage.id,rng,NOW);assert.equal(p.pending.total,1);assert.deepEqual(p.pending.reviewTargets,['sofa']);
- assert.equal(p.continuation,'sentence_meaning');assert.deepEqual(p.paused.sentence_meaning,saved);
+ assert.equal(p.continuation,'sentence_meaning');assert.deepEqual(p.paused[sessionKey(saved)],saved);
  p=validateProgress(JSON.parse(JSON.stringify(p)));p=finish(p,NOW);
  assert.equal(p.seeds,seeds+1);assert.equal(recommended(p).id,'sentence_meaning');
  p=startSession(p,'sentence_meaning',rng,NOW);assert.deepEqual(p.pending,saved);

@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "memberships": {
+    "Brot": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "Frau": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "Kind": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "Mann": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "Milch": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "Wasser": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "nicht": {
+      "bb-100": true,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "und": {
+      "bb-100": true,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "essen": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "lesen": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    },
+    "trinken": {
+      "bb-100": false,
+      "bb-grades": true,
+      "nrw": true,
+      "source-2": true
+    }
+  },
+  "meaning": "Exact word membership, not a frequency ranking or reading-efficacy validation."
+}

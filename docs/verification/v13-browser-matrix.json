@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "timeUTC": "2026-11-07T11:54:18.149900+00:00",
+  "appSha256": "c3c1c2789c9ace852ee46851b8bf185bed0bf698c1fa0e299e501fcb162aca6b",
+  "suites": [
+    {
+      "suite": "reading-path",
+      "exitCode": 0,
+      "previousExitCode": 1,
+      "rerunCommand": "node tests/reading-path.cjs",
+      "rerunReason": "New test deliberately visited audible Level 1; fixed its remaining zero-playback expectation to compare reading-help playback with the prior baseline. Full rerun passed with unchanged application hash; no application assertion skipped."
+    },
+    {
+      "suite": "close-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "spacing",
+      "exitCode": 0
+    },
+    {
+      "suite": "mixed-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "profiles",
+      "exitCode": 0
+    },
+    {
+      "suite": "level-navigation",
+      "exitCode": 0
+    },
+    {
+      "suite": "child-guidance",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-list",
+      "exitCode": 0
+    },
+    {
+      "suite": "mobile-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-hints",
+      "exitCode": 0
+    },
+    {
+      "suite": "choice-help",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser",
+      "exitCode": 0
+    }
+  ],
+  "limits": "Chromium touch emulation and real media; no physical-device or educational validation."
+}

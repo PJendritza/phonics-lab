@@ -2,12 +2,13 @@ import {sceneDimensions,equivalentScene} from './mixed-reading.mjs';
 import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs';
 import {freshSpacing,selectTarget,recordPractice,practiceGoal,dueReviews,validateSpacing} from './spacing.mjs';
 import {challengeTier,closeChoices,validForms} from './word-choices.mjs';
+import {stepsFor,stepById,currentStep,allStepsComplete,freshReadingPath,recordReadingEvidence,finishStep,embeddedReview,validateReadingPath,migrateReadingPath,tokens} from './reading-path.mjs';
 export const duePractice=(progress,now=Date.now())=>dueReviews(progress,STAGES,now);
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const integer=(v,max=1e7)=>Number.isSafeInteger(v)&&v>=0&&v<=max;
 const id=()=>globalThis.crypto?.randomUUID?.()??`child-${Date.now()}-${Math.floor(Math.random()*1e6)}`;
-export function freshProgress(){return {version:3,curriculumVersion:CURRICULUM_VERSION,skills:{},stages:{},sessions:0,seeds:0,pending:null,paused:{},continuation:STAGES[0].id,spacing:freshSpacing()};}
+export function freshProgress(){return {version:3,curriculumVersion:CURRICULUM_VERSION,skills:{},stages:{},sessions:0,seeds:0,pending:null,paused:{},continuation:STAGES[0].id,spacing:freshSpacing(),readingPath:freshReadingPath()};}
 export function createProfile(name='Mein Profil',avatar=AVATARS[0]){return {id:id(),name:name.trim().slice(0,24)||'Mein Profil',avatar,progress:freshProgress()};}
 export function freshStore(){const p=createProfile();return {version:3,activeId:p.id,profiles:[p]};}
 export const activeProfile=store=>store.profiles.find(p=>p.id===store.activeId);
@@ -16,6 +17,7 @@ const allowedSkills=new Set(STAGES.flatMap(s=>[...s.targets,...s.legacyTargets??
 const targetPool=(stage,target)=>stage.legacyTargets?.includes(target)?stage.legacyTargets:stage.targets;
 export function mastered(skill){return !!skill&&skill.recent.length>=2&&skill.recent.slice(-2).every(Boolean)&&skill.recent.slice(-4).filter(Boolean).length/Math.min(4,skill.recent.length)>=0.75;}
 export function stageMastered(progress,stage){
+ if(stepsFor(stage).length&&progress.curriculumVersion>=13)return allStepsComplete(progress,stage);
  if(!stage.masteryByFamily)return stage.targets.every(t=>mastered(progress.skills[skillKey(stage,t)]));
  const observed=stage.targets.filter(t=>progress.skills[skillKey(stage,t)]?.first>0&&progress.skills[skillKey(stage,t)]?.recent.some(Boolean)),families=[...new Set(stage.targets.map(t=>ITEMS[t].family))];
  if(!families.every(f=>observed.filter(t=>ITEMS[t].family===f).length>=3))return false;
@@ -32,11 +34,13 @@ function continuationFor(progress){
 export function recommended(progress){return stageById(continuationFor(progress))??null;}
 export function availableThrough(progress){
  const continuation=continuationFor(progress);
- return continuation==='complete'?STAGES.length-1:Math.max(STAGES.findIndex(s=>s.id===continuation),STAGES.findIndex(s=>s.id===progress.pending?.stageId),...Object.keys(progress.paused??{}).map(id=>STAGES.findIndex(s=>s.id===id)),...STAGES.map((s,i)=>progress.stages[s.id]?.passed?Math.min(i+1,STAGES.length-1):0));
+ return continuation==='complete'?STAGES.length-1:Math.max(STAGES.findIndex(s=>s.id===continuation),STAGES.findIndex(s=>s.id===progress.pending?.stageId),...Object.values(progress.paused??{}).map(session=>STAGES.findIndex(s=>s.id===session.stageId)),...STAGES.map((s,i)=>progress.stages[s.id]?.passed?Math.min(i+1,STAGES.length-1):0));
 }
 export function difficulty(progress){const recent=Object.values(progress.skills).flatMap(s=>s.timeline??[]).sort((a,b)=>a[0]-b[0]).slice(-5).map(x=>x[1]);if(recent.length>=3&&recent.slice(-3).filter(x=>!x).length>=2)return 2;return recent.length>=5&&recent.every(Boolean)?4:recent.length>=2&&recent.slice(-2).every(Boolean)?3:2;}
-function makeRound(progress,stage,index=0,previous=null,rng=Math.random,now=Date.now(),forcedTarget=null){
- const target=forcedTarget??selectTarget(progress,stage,now,rng,progress.pending?.stageId===stage.id&&index>0?progress.pending.completedTargets??[]:[]),key=skillKey(stage,target),demonstration=stage.id==='letters'&&!progress.skills[key]?.introduced;
+function makeRound(progress,stage,index=0,previous=null,rng=Math.random,now=Date.now(),forcedTarget=null,etappeId=progress.pending?.stageId===stage.id?progress.pending.etappeId:null){
+ const etappe=stepById(etappeId),review=etappe?embeddedReview(progress,stage,etappe,index,now):[];
+ const selection=etappe?{...stage,targets:review.length?review:etappe.targets}:stage;
+ const target=forcedTarget??selectTarget(progress,selection,now,rng,progress.pending?.stageId===stage.id&&index>0?progress.pending.completedTargets??[]:[]),key=skillKey(stage,target),demonstration=stage.id==='letters'&&!progress.skills[key]?.introduced;
  let choices;
  if(stage.mode==='build'){
   const actual=[...new Set(lettersFor(target).map(c=>c.toLowerCase()))],others=(stage.id==='more_build'?BUILD_UNITS:['a','m','i','o','u','n','l']).filter(c=>!actual.includes(c));choices=shuffled([...actual,...shuffled(others,rng).slice(0,difficulty(progress)>=3?1:0)],rng);
@@ -58,28 +62,39 @@ function makeRound(progress,stage,index=0,previous=null,rng=Math.random,now=Date
   choices=demonstration?[target]:shuffled([target,...others.slice(0,Math.max(difficulty(progress),stage.minChoices??2,stage.mode==='picture'&&target==='sieben'?3:2)-1)],rng);
  }
  const item=ITEMS[target]??{},events=stage.targets.filter(t=>(ITEMS[t]?.family??'place')===(item.family??'place')).flatMap(t=>progress.skills[skillKey(stage,t)]?.timeline??[]).sort((a,b)=>a[0]-b[0]).slice(-5).map(v=>v[1]);
- const short=stage.mode==='picture'&&item.shortAudio&&(events.length<3||events.slice(-2).some(v=>!v));
+ const short=!etappe?.full&&stage.mode==='picture'&&item.shortAudio&&(events.length<3||events.slice(-2).some(v=>!v));
  const cue=CONTEXTS[stage.mode]?CONTEXTS[stage.mode][target][index%CONTEXTS[stage.mode][target].length]:short?item.shortAudio:item.audio;
  return {target,choices,cue,demonstration,tries:0,position:0,solved:false,help:null,misses:0,assisted:false};
 }
-export function startSession(progress,stageId,rng=Math.random,now=Date.now()){
+export const sessionKey=session=>session.etappeId?`${session.stageId}::${session.etappeId}`:session.stageId;
+export function startSession(progress,stageId,rng=Math.random,now=Date.now(),etappeId=null){
  const next=structuredClone(progress),stage=stageById(stageId),cursor=continuationFor(progress);if(!stage)throw Error('Unbekanntes Level.');
+ if(etappeId&&!stepsFor(stage).some(s=>s.id===etappeId))throw Error('Unbekannte Leseetappe.');
+ next.readingPath??=freshReadingPath();
  next.paused??={};next.continuation=stageId;
- if(next.pending?.stageId===stageId){if(next.pending.returnTo!==undefined){next.pending.returnTo=cursor;next.continuation=cursor;}return next;}
- if(next.pending)next.paused[next.pending.stageId]=next.pending;
- next.pending=next.paused[stageId]??{stageId,index:0,total:practiceGoal(next,stage,levelGoal(stage),now),first:0,independent:0,round:makeRound(next,stage,0,null,rng,now)};
+ if(next.pending?.stageId===stageId&&(!etappeId||next.pending.etappeId===etappeId)){if(next.pending.returnTo!==undefined){next.pending.returnTo=cursor;next.continuation=cursor;}return next;}
+ if(next.pending)next.paused[sessionKey(next.pending)]=next.pending;
+ const desired=etappeId??currentStep(next,stage)?.id;
+ const saved=!etappeId&&next.paused[stageId]?next.paused[stageId]:next.paused[desired?`${stageId}::${desired}`:stageId];
+ if(saved)next.pending=saved;
+ else{
+  const etappe=stepById(desired),total=etappe?Math.max(8,Math.min(12,practiceGoal(next,{...stage,targets:etappe.targets},12,now))):practiceGoal(next,stage,levelGoal(stage),now);
+  next.pending={stageId,index:0,total,first:0,independent:0,...(etappe?{etappeId:etappe.id,etappeVersion:etappe.version}:{}),round:makeRound(next,stage,0,null,rng,now,null,desired)};
+ }
+ if(next.pending.etappeId)next.readingPath.cursors[stageId]=next.pending.etappeId;
  if(next.pending.returnTo!==undefined){next.pending.returnTo=cursor;next.continuation=cursor;}
- delete next.paused[stageId];return next;
+ delete next.paused[sessionKey(next.pending)];return next;
 }
 export function startReview(progress,stageId=null,rng=Math.random,now=Date.now()){
  const due=duePractice(progress,now),selected=stageId?due.find(s=>s.stageId===stageId):due[0];
  if(!selected)return progress;
- const cursor=continuationFor(progress),saved=progress.pending?.stageId===selected.stageId?progress.pending:progress.paused?.[selected.stageId];
- const next=startSession(progress,selected.stageId,rng,now);
+ const cursor=continuationFor(progress),saved=progress.pending?.stageId===selected.stageId?progress.pending:Object.values(progress.paused??{}).find(s=>s.stageId===selected.stageId),returnStep=progress.readingPath?.cursors[selected.stageId];
+ const next=startSession(progress,selected.stageId,rng,now,saved?.etappeId);
  if(!saved){
-  const stage=stageById(selected.stageId),targets=shuffled(selected.targets,rng);
-  next.pending={stageId:stage.id,index:0,total:targets.length,first:0,independent:0,reviewTargets:targets,returnTo:cursor,round:makeRound(next,stage,0,null,rng,now,targets[0])};
+  const stage=stageById(selected.stageId),targets=shuffled(selected.targets,rng).slice(0,18);
+  next.pending={stageId:stage.id,index:0,total:targets.length,first:0,independent:0,reviewTargets:targets,returnTo:cursor,round:makeRound(next,stage,0,null,rng,now,targets[0],null)};
  }else next.pending.returnTo=cursor;
+ if(returnStep){next.pending.returnStep=returnStep;next.readingPath.cursors[selected.stageId]=returnStep;}
  next.continuation=cursor;return next;
 }
 export function answer(progress,choice,now=Date.now()){
@@ -98,6 +113,7 @@ export function answer(progress,choice,now=Date.now()){
  if(!r.demonstration){const first=!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1);skill.seen++;skill.first+=Number(first);skill.recent=[...skill.recent,Number(first)].slice(-8);const tick=Object.values(progress.skills).reduce((n,s)=>n+s.seen,0)+1;skill.timeline=[...(skill.timeline??[]),[tick,Number(first)]].slice(-5);session.independent++;session.first+=Number(first);}
  next.skills[key]=skill;
  recordPractice(next,stage,r.target,!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1),r.demonstration,now);
+ if(!r.demonstration)recordReadingEvidence(next,stage,r,ITEMS[r.target],!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1),now);
  return {progress:next,correct:true,finished:true};
 }
 export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
@@ -112,9 +128,12 @@ export function useReadingHelp(progress,withAudio=false){
 export function advance(progress,rng=Math.random,now=Date.now()){
  const next=structuredClone(progress),session=next.pending;if(!session?.round.solved)return {progress,completed:false};const stage=stageById(session.stageId);
  if(session.index+1>=session.total){
+  const etappe=session.etappeId&&session.returnTo===undefined?finishStep(next,stage,session.etappeId):null;
   const previous=next.stages[stage.id]??{completed:0,passed:false,best:0};const passed=stageMastered(next,stage);next.stages[stage.id]={completed:previous.completed+1,passed:previous.passed||passed,best:Math.max(previous.best,session.independent?session.first/session.independent:0)};next.sessions++;next.pending=null;
-  next.continuation=session.returnTo??(passed?STAGES.slice(STAGES.indexOf(stage)+1).find(s=>!next.stages[s.id]?.passed)?.id??'complete':stage.id);
-  return {progress:next,completed:true,stageId:stage.id,passed,firstPass:passed&&!previous.passed,score:session.first,total:session.independent,goal:session.total,nextStageId:next.continuation,review:session.returnTo!==undefined};
+  const follow=STAGES.slice(STAGES.indexOf(stage)+1).find(s=>stepsFor(s).length?!allStepsComplete(next,s):!next.stages[s.id]?.passed)?.id??'complete';
+  next.continuation=session.returnTo??(passed||(etappe?.completed&&!etappe.next)?follow:stage.id);
+  if(session.returnStep)next.readingPath.cursors[stage.id]=session.returnStep;
+  return {progress:next,completed:true,stageId:stage.id,passed,firstPass:passed&&!previous.passed,score:session.first,total:session.independent,goal:session.total,nextStageId:next.continuation,review:session.returnTo!==undefined,...(etappe?{etappeId:session.etappeId,etappeCompleted:etappe.completed,etappeFirst:etappe.firstCompletion}:{} )};
  }
  session.completedTargets=[...(session.completedTargets??[]),session.round.target].slice(-18);session.index++;session.round=makeRound(next,stage,session.index,session.round.target,rng,now,session.reviewTargets?.[session.index]);return {progress:next,completed:false};
 }
@@ -138,9 +157,13 @@ function validatePending(value){
  }
  if(r.assisted!==undefined&&(typeof r.assisted!=='boolean'||(r.assisted&&s.mode!=='picture')))throw Error('Ungültige Lesehilfe.');
  if(value.returnTo!==undefined&&value.returnTo!=='complete'&&!stageById(value.returnTo))throw Error('Ungültiger Rückweg nach der Wiederholung.');
+ const etappe=stepById(value.etappeId);
+ if(value.etappeId!==undefined&&(!stepsFor(s).includes(etappe)||value.etappeVersion!==etappe.version))throw Error('Ungültige gespeicherte Leseetappe.');
+ if(value.etappeVersion!==undefined&&!etappe)throw Error('Ungültige Etappenversion.');
+ if(value.returnStep!==undefined&&(value.returnTo===undefined||!stepsFor(s).some(e=>e.id===value.returnStep)))throw Error('Ungültiger Etappenrückweg.');
  if(value.reviewTargets!==undefined&&(!Array.isArray(value.reviewTargets)||value.reviewTargets.length!==value.total||new Set(value.reviewTargets).size!==value.total||value.reviewTargets.some(t=>![...s.targets,...s.legacyTargets??[]].includes(t))||value.reviewTargets[value.index]!==r.target||value.returnTo===undefined))throw Error('Ungültige Wiederholungsrunde.');
  if(value.completedTargets!==undefined&&(!Array.isArray(value.completedTargets)||value.completedTargets.length>value.index||value.completedTargets.some(t=>![...s.targets,...s.legacyTargets??[]].includes(t))))throw Error('Ungültiger Rundenverlauf.');
- return {...(value.completedTargets?{completedTargets:[...value.completedTargets]}:{}),stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,...(value.returnTo!==undefined?{returnTo:value.returnTo}:{}),...(value.reviewTargets?{reviewTargets:[...value.reviewTargets]}:{}),round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false}};
+ return {...(value.completedTargets?{completedTargets:[...value.completedTargets]}:{}),stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,...(etappe?{etappeId:etappe.id,etappeVersion:etappe.version}:{}),...(value.returnStep?{returnStep:value.returnStep}:{}),...(value.returnTo!==undefined?{returnTo:value.returnTo}:{}),...(value.reviewTargets?{reviewTargets:[...value.reviewTargets]}:{}),round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false}};
 }
 export function validateProgress(p){
  if(!plain(p)||p.version!==3||!plain(p.skills)||!plain(p.stages)||!integer(p.sessions)||!integer(p.seeds)||Object.keys(p.skills).length>allowedSkills.size)throw Error('Ungültiger Lernstand.');const result=freshProgress();result.sessions=p.sessions;result.seeds=p.seeds;
@@ -150,6 +173,7 @@ export function validateProgress(p){
  }
  for(const [key,s]of Object.entries(p.stages)){if(!stageById(key)||!plain(s)||!integer(s.completed)||typeof s.passed!=='boolean'||!Number.isFinite(s.best)||s.best<0||s.best>1)throw Error('Ungültige Stufendaten.');result.stages[key]={completed:s.completed,passed:s.passed,best:s.best};}
  result.spacing=validateSpacing(p.spacing,allowedSkills,p.seeds);
+ result.readingPath=validateReadingPath(p.readingPath,new Set(Object.values(ITEMS).flatMap(i=>tokens((i.text??'')+' '+(i.shortText??'')))));
  result.pending=validatePending(p.pending);
  if(p.continuation!==undefined&&p.continuation!=='complete'&&!stageById(p.continuation))throw Error('Ungültiges Fortsetzungslevel.');
  result.continuation=continuationFor(p);
@@ -158,9 +182,9 @@ export function validateProgress(p){
  // flowers, exact pending tasks, and explicit review choices from this release.
  if((p.curriculumVersion??6)<7&&result.continuation==='complete'&&!result.pending)result.continuation='sentence_words';
  if(p.paused!==undefined){
-  if(!plain(p.paused)||Object.keys(p.paused).length>STAGES.length)throw Error('Ungültige pausierte Level.');
+  if(!plain(p.paused)||Object.keys(p.paused).length>STAGES.length+12)throw Error('Ungültige pausierte Level.');
   for(const [key,value]of Object.entries(p.paused)){
-   const session=validatePending(value);if(!session||key!==session.stageId||key===result.pending?.stageId)throw Error('Ungültiges pausiertes Level.');result.paused[key]=session;
+   const session=validatePending(value);if(!session||key!==sessionKey(session)||key===(result.pending?sessionKey(result.pending):null))throw Error('Ungültiges pausiertes Level.');result.paused[key]=session;
   }
  }
  if((p.curriculumVersion??6)<9){
@@ -186,6 +210,7 @@ export function validateProgress(p){
   for(const key of Object.keys(result.spacing.reviews))if(key.includes('becher'))delete result.spacing.reviews[key];
   for(const id of ['reading_animals'])if(result.stages[id])result.stages[id].passed=false;
  }
+ if((p.curriculumVersion??6)<13)migrateReadingPath(result);
  return result;
 }
 export function migrateLegacy(p){

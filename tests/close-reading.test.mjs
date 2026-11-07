@@ -68,7 +68,7 @@ function oldProgress(){
  return p;
 }
 test('v8 history keeps all practice rewards and legacy skills while new meaning contrasts require fresh evidence',()=>{
- const old=oldProgress(),p=validateProgress(old);assert.equal(p.curriculumVersion,12);assert.equal(p.sessions,80);assert.equal(p.seeds,900);
+ const old=oldProgress(),p=validateProgress(old);assert.equal(p.curriculumVersion,13);assert.equal(p.sessions,80);assert.equal(p.seeds,900);
  assert.equal(p.continuation,'phrase_place');assert.equal(p.stages.first_sentences.completed,2);assert.equal(p.stages.first_sentences.passed,false);assert.equal(p.stages.sentence_meaning.passed,false);
  for(const [key,value]of Object.entries(old.skills))assert.deepEqual(p.skills[key],key.includes('becher')?{...value,recent:[]}:value,key);
  let next=p;for(let i=0;i<4&&!next.stages.phrase_place?.passed;i++)next=finish(startSession(next,'phrase_place',rng,NOW));assert.equal(recommended(next).id,'first_sentences');

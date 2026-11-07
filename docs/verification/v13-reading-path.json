@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "version": "13.0.0",
+  "assetVersion": "c3c1c2789c9a",
+  "checks": [
+    "Named 1/4–4/4 Etappen are directly selectable. Same-level switching and reload preserve exact mistakes, cues, choices and goals. Two real twelve-question rounds finish the first Etappe and Continue starts the second.",
+    "Parent map shows finite completion and target-word coverage, and the report separates contextual encounters from standalone independent word recognition. Confirmed JSON backup contains Etappen, pattern evidence and word evidence.",
+    "320x568: hanging apple, new people/food/actions, negation and und sentences show four decoded stationary images; no horizontal overflow, hidden solution speech or off-screen choices.",
+    "390x844: hanging apple, new people/food/actions, negation and und sentences show four decoded stationary images; no horizontal overflow, hidden solution speech or off-screen choices.",
+    "768x1024: hanging apple, new people/food/actions, negation and und sentences show four decoded stationary images; no horizontal overflow, hidden solution speech or off-screen choices.",
+    "New optional Thorsten sentence MP3 actually plays only after two errors and an explicit request; wrong pictures and automatic teaching stay silent.",
+    "An actual imported v12 completed profile resumes directly at the new people Etappe, preserves all previous completion awards and receives no fabricated word evidence.",
+    "A fully completed eight-profile backup with paused Etappen exceeds one MB and restores through the actual confirmed import UI without truncation; input remains bounded to four MB and schema validation."
+  ],
+  "pageErrors": [],
+  "limits": "Real Chromium media, backup UI and phone-sized touch emulation; not a physical-phone or educational-efficacy test."
+}

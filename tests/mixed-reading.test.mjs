@@ -1,3 +1,4 @@
+import {stepsFor} from '../app/reading-path.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 import {ITEMS,STAGES,stageById,skillKey} from '../app/data.mjs';
 import {SCENE_ITEMS,NOUNS,sceneDimensions,equivalentScene} from '../app/mixed-reading.mjs';
@@ -8,7 +9,7 @@ const secure=()=>({introduced:true,seen:5,first:5,recent:[1,1,1,1],timeline:[[1,
 function finish(p,fn=()=>{}){while(p.pending){fn(p.pending.round);p=answer(p,p.pending.round.target,NOW).progress;p=advance(p,rng,NOW).progress;}return p;}
 function single(id,strong=false){let p=freshProgress();p.stages.sentence_meaning={completed:1,passed:false,best:0};if(strong){for(const t of stageById('sentence_meaning').targets.filter(t=>ITEMS[t].family===ITEMS[id].family)){p.skills['sentence:'+t]=secure();if(t!==id)p.spacing.reviews['sentence:'+t]={streak:2,days:1,due:NOW+86400000,lastAt:NOW,last:0,after:3};}}else p.skills['sentence:'+id]={introduced:true,seen:1,first:0,recent:[0],timeline:[[1,0]]};return startReview(p,'sentence_meaning',rng,NOW);}
 test('active mixed bank has six distinct meaning families and correct mouse/article agreement',()=>{
- assert.equal(Object.keys(SCENE_ITEMS).length,236);assert.equal(new Set(Object.values(SCENE_ITEMS).map(i=>i.family)).size,6);
+ assert.equal(Object.keys(SCENE_ITEMS).length,287);assert.equal(new Set(Object.values(SCENE_ITEMS).map(i=>i.family)).size,6);
  for(const item of Object.values(SCENE_ITEMS)){
   assert.ok(illustration(item.picture).startsWith('<svg'));assert.doesNotMatch(item.text,/\bEin Maus\b/);
   if(item.family==='place')assert.ok(item.text.startsWith((NOUNS[item.subject].article==='eine'?'Eine ':'Ein ')+NOUNS[item.subject].text));
@@ -21,12 +22,12 @@ test('seven uses a numeral; quantities contain exactly the stated number of obje
  let p=freshProgress();p.skills['meaning:sieben']={introduced:true,seen:1,first:0,recent:[0],timeline:[[1,0]]};p.stages.ie_read={completed:1,passed:false,best:0};p=startReview(p,'ie_read',rng,NOW);
  assert.ok(p.pending.round.choices.includes('digit_6'));assert.ok(p.pending.round.choices.includes('digit_8'));assert.equal(p.pending.round.target,'sieben');assert.deepEqual(validateProgress(p),p);
 });
-test('migrated secure-im/unseen-am profiles get both relations and all six families in a normal mixed round',()=>{
+test('migrated secure-im/unseen-am profiles get both relations and all current Etappe families in a normal mixed round',()=>{
  for(const id of ['phrase_place','first_sentences','sentence_meaning']){
   let p=freshProgress();p.curriculumVersion=9;const stage=stageById(id);for(const t of stage.targets)if(ITEMS[t].scene?.relation==='im')p.skills[skillKey(stage,t)]=secure();
   p=validateProgress(p);p=startSession(p,id,rng,NOW);const scenes=[];finish(p,r=>scenes.push(ITEMS[r.target].scene));
   assert.ok(scenes.some(s=>s.relation==='im'),id);assert.ok(scenes.some(s=>s.relation==='am'),id);
-  if(stage.mixed)assert.equal(new Set(scenes.map(s=>s.family)).size,6);
+  if(stage.mixed)assert.deepEqual(new Set(scenes.map(s=>s.family)),new Set(stepsFor(stage)[0].targets.map(t=>ITEMS[t].family)));
  }
 });
 test('shorter text is used for uncertain readers; confident families receive full sentences and mistakes ease again',()=>{

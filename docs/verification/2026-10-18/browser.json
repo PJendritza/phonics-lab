@@ -2264,9 +2264,337 @@
     {
       "src": "audio/mix35_pair_unten_unten.mp3?v=16015901b41b",
       "duration": 3.455374
+    },
+    {
+      "src": "audio/daily_34_kind_im_bus.mp3?v=003798b94382",
+      "duration": 1.797007
+    },
+    {
+      "src": "audio/daily_34_kind_im_bus_short.mp3?v=8c82299b4152",
+      "duration": 1.460317
+    },
+    {
+      "src": "audio/daily_34_kind_am_bus.mp3?v=be6678ff3036",
+      "duration": 1.797007
+    },
+    {
+      "src": "audio/daily_34_kind_am_bus_short.mp3?v=d479cba6c5ad",
+      "duration": 1.483537
+    },
+    {
+      "src": "audio/daily_34_kind_im_haus.mp3?v=65244979d457",
+      "duration": 1.738957
+    },
+    {
+      "src": "audio/daily_34_kind_im_haus_short.mp3?v=fa8bd4238224",
+      "duration": 1.543356
+    },
+    {
+      "src": "audio/daily_34_kind_am_haus.mp3?v=6fa54e72665b",
+      "duration": 1.808617
+    },
+    {
+      "src": "audio/daily_34_kind_am_haus_short.mp3?v=41ab1afca72b",
+      "duration": 1.611247
+    },
+    {
+      "src": "audio/daily_34_kind_hat_brot.mp3?v=c5c6a8ba4c90",
+      "duration": 1.773787
+    },
+    {
+      "src": "audio/daily_34_kind_hat_brot_short.mp3?v=858730c2de40",
+      "duration": 1.762177
+    },
+    {
+      "src": "audio/daily_34_kind_hat_wasser.mp3?v=f8398e4f5333",
+      "duration": 1.599637
+    },
+    {
+      "src": "audio/daily_34_kind_hat_wasser_short.mp3?v=3826e45a4c4b",
+      "duration": 1.727347
+    },
+    {
+      "src": "audio/daily_34_frau_im_bus.mp3?v=9546ec9a5a35",
+      "duration": 1.831837
+    },
+    {
+      "src": "audio/daily_34_frau_im_bus_short.mp3?v=97837421f9c9",
+      "duration": 1.543356
+    },
+    {
+      "src": "audio/daily_34_frau_am_bus.mp3?v=2cfbb6794280",
+      "duration": 1.820227
+    },
+    {
+      "src": "audio/daily_34_frau_am_bus_short.mp3?v=30e97b872374",
+      "duration": 1.460317
+    },
+    {
+      "src": "audio/daily_34_frau_im_haus.mp3?v=541e09c33d0b",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/daily_34_frau_im_haus_short.mp3?v=0ec5522eef56",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/daily_34_frau_am_haus.mp3?v=f244fd95dd44",
+      "duration": 1.901497
+    },
+    {
+      "src": "audio/daily_34_frau_am_haus_short.mp3?v=8b62b491fe15",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/daily_34_frau_hat_brot.mp3?v=acd79695c381",
+      "duration": 1.657687
+    },
+    {
+      "src": "audio/daily_34_frau_hat_brot_short.mp3?v=8f9279b88788",
+      "duration": 1.647846
+    },
+    {
+      "src": "audio/daily_34_frau_hat_wasser.mp3?v=f71b312f4277",
+      "duration": 1.634467
+    },
+    {
+      "src": "audio/daily_34_frau_hat_wasser_short.mp3?v=96646cf5bc60",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/daily_34_mann_im_bus.mp3?v=ad98454fb2e9",
+      "duration": 1.692517
+    },
+    {
+      "src": "audio/daily_34_mann_im_bus_short.mp3?v=4420b746abb4",
+      "duration": 1.438866
+    },
+    {
+      "src": "audio/daily_34_mann_am_bus.mp3?v=524fa46f63c5",
+      "duration": 1.727347
+    },
+    {
+      "src": "audio/daily_34_mann_am_bus_short.mp3?v=337f78a7f4fc",
+      "duration": 1.390658
+    },
+    {
+      "src": "audio/daily_34_mann_im_haus.mp3?v=f6dcd01787b8",
+      "duration": 1.715737
+    },
+    {
+      "src": "audio/daily_34_mann_im_haus_short.mp3?v=9644b6b76abe",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/daily_34_mann_am_haus.mp3?v=a85256b63667",
+      "duration": 1.785397
+    },
+    {
+      "src": "audio/daily_34_mann_am_haus_short.mp3?v=d7f49dea0816",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/daily_34_mann_hat_brot.mp3?v=a67651d369e5",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/daily_34_mann_hat_brot_short.mp3?v=d37393974250",
+      "duration": 1.529977
+    },
+    {
+      "src": "audio/daily_34_mann_hat_wasser.mp3?v=dc729b11c5b8",
+      "duration": 1.611247
+    },
+    {
+      "src": "audio/daily_34_mann_hat_wasser_short.mp3?v=aef7065efa00",
+      "duration": 1.564807
+    },
+    {
+      "src": "audio/daily_34_kind_count_1.mp3?v=b3c039fc59aa",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/daily_34_kind_count_1_short.mp3?v=2e55d2b82cce",
+      "duration": 1.065578
+    },
+    {
+      "src": "audio/daily_34_kind_count_2.mp3?v=39923d09056b",
+      "duration": 1.669297
+    },
+    {
+      "src": "audio/daily_34_kind_count_2_short.mp3?v=7a83f40c3754",
+      "duration": 1.334376
+    },
+    {
+      "src": "audio/daily_34_kind_count_3.mp3?v=b331861a2b61",
+      "duration": 1.715737
+    },
+    {
+      "src": "audio/daily_34_kind_count_3_short.mp3?v=375b1469b392",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/daily_34_kind_wach.mp3?v=21942079879d",
+      "duration": 1.274558
+    },
+    {
+      "src": "audio/daily_34_kind_schlaeft.mp3?v=b88665387bfe",
+      "duration": 1.334376
+    },
+    {
+      "src": "audio/daily_34_kind_not_wach.mp3?v=05053abae30b",
+      "duration": 1.599637
+    },
+    {
+      "src": "audio/daily_34_kind_not_schlaeft.mp3?v=f4a74fa51afc",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/daily_35_mama_hat_brot.mp3?v=4a56f76c01bf",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/daily_35_mama_hat_brot_short.mp3?v=880f4fd05690",
+      "duration": 1.495147
+    },
+    {
+      "src": "audio/daily_35_mama_hat_wasser.mp3?v=f50e55978131",
+      "duration": 1.576417
+    },
+    {
+      "src": "audio/daily_35_mama_hat_wasser_short.mp3?v=70162aa7799f",
+      "duration": 1.425488
+    },
+    {
+      "src": "audio/daily_35_mama_hat_milch.mp3?v=1029576a2908",
+      "duration": 1.438866
+    },
+    {
+      "src": "audio/daily_35_mama_hat_milch_short.mp3?v=cda6ff99d2da",
+      "duration": 1.448707
+    },
+    {
+      "src": "audio/daily_35_oma_hat_brot.mp3?v=e3408d168747",
+      "duration": 1.471927
+    },
+    {
+      "src": "audio/daily_35_oma_hat_brot_short.mp3?v=2c30eb00f47d",
+      "duration": 1.379048
+    },
+    {
+      "src": "audio/daily_35_oma_hat_wasser.mp3?v=4416685ed181",
+      "duration": 1.425488
+    },
+    {
+      "src": "audio/daily_35_oma_hat_wasser_short.mp3?v=49b215f499bf",
+      "duration": 1.379048
+    },
+    {
+      "src": "audio/daily_35_oma_hat_milch.mp3?v=8832103f924f",
+      "duration": 1.320998
+    },
+    {
+      "src": "audio/daily_35_oma_hat_milch_short.mp3?v=48c74b55731b",
+      "duration": 1.262948
+    },
+    {
+      "src": "audio/daily_35_kind_liest_buch.mp3?v=b74af48fea6c",
+      "duration": 1.657687
+    },
+    {
+      "src": "audio/daily_35_kind_isst_brot.mp3?v=073e94c4572c",
+      "duration": 1.843447
+    },
+    {
+      "src": "audio/daily_35_kind_trinkt_wasser.mp3?v=d824fb05e454",
+      "duration": 1.704127
+    },
+    {
+      "src": "audio/daily_35_kind_trinkt_milch.mp3?v=e3d7c97526bc",
+      "duration": 1.785397
+    },
+    {
+      "src": "audio/daily_35_kind_hat_buch.mp3?v=d7c316867849",
+      "duration": 1.518367
+    },
+    {
+      "src": "audio/daily_35_kind_hat_brot.mp3?v=c5c6a8ba4c90",
+      "duration": 1.773787
+    },
+    {
+      "src": "audio/daily_35_kind_hat_wasser.mp3?v=f8398e4f5333",
+      "duration": 1.599637
+    },
+    {
+      "src": "audio/daily_35_kind_hat_milch.mp3?v=4f7625e5b7d7",
+      "duration": 1.588027
+    },
+    {
+      "src": "audio/daily_35_buch_not_offen.mp3?v=a17691262969",
+      "duration": 1.773787
+    },
+    {
+      "src": "audio/daily_35_buch_not_zu.mp3?v=edc34def745e",
+      "duration": 1.866667
+    },
+    {
+      "src": "audio/daily_35_tasche_not_offen.mp3?v=38b973bac0e8",
+      "duration": 1.634467
+    },
+    {
+      "src": "audio/daily_35_tasche_not_zu.mp3?v=1028c48ffef5",
+      "duration": 1.762177
+    },
+    {
+      "src": "audio/daily_35_food_pair_oben_oben.mp3?v=7874077d649b",
+      "duration": 3.155374
+    },
+    {
+      "src": "audio/daily_35_food_pair_oben_unten.mp3?v=e5bbda8997db",
+      "duration": 3.410794
+    },
+    {
+      "src": "audio/daily_35_food_pair_unten_oben.mp3?v=9e6d4c5b6065",
+      "duration": 3.225034
+    },
+    {
+      "src": "audio/daily_35_food_pair_unten_unten.mp3?v=b73e3f2eeb90",
+      "duration": 3.550113
+    },
+    {
+      "src": "audio/daily_35_brot_auf_tisch.mp3?v=5545025680f1",
+      "duration": 1.961315
+    },
+    {
+      "src": "audio/daily_35_brot_auf_tisch_short.mp3?v=c780bb37baf9",
+      "duration": 1.599637
+    },
+    {
+      "src": "audio/daily_35_brot_unter_tisch.mp3?v=134af1cd953b",
+      "duration": 2.017596
+    },
+    {
+      "src": "audio/daily_35_brot_unter_tisch_short.mp3?v=2960676d63ad",
+      "duration": 1.762177
+    },
+    {
+      "src": "audio/daily_35_brot_in_kiste.mp3?v=d380eff67b82",
+      "duration": 2.029206
+    },
+    {
+      "src": "audio/daily_35_brot_in_kiste_short.mp3?v=2bdb3ee87708",
+      "duration": 1.704127
+    },
+    {
+      "src": "audio/daily_35_brot_neben_kiste.mp3?v=7607d004aaad",
+      "duration": 2.156916
+    },
+    {
+      "src": "audio/daily_35_brot_neben_kiste_short.mp3?v=5e9ce0e28075",
+      "duration": 1.924717
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "46d41681aedb0d5ddd8e2c6fd7e98eca8a0b6c175760c3bcbf5e8f5e07c53362"
+  "appSha256": "c3c1c2789c9ace852ee46851b8bf185bed0bf698c1fa0e299e501fcb162aca6b"
 }

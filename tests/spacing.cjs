@@ -36,7 +36,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  lp.stages[stage.id]={completed:2,passed:true,best:1};legacy.profiles[0].progress=L.startSession(lp,'sentence_meaning',()=>.4);
  const paused=structuredClone(legacy.profiles[0].progress.pending);delete legacy.profiles[0].progress.spacing;
  await restore(legacy);assert.equal(await page.locator('#review-home').count(),1);await page.locator('#review-home').click();await ready();
- p=await state();assert.equal(p.continuation,'sentence_meaning');assert.equal(p.pending.stageId,'long_words_read');assert.equal(p.pending.total,stage.targets.length);assert.deepEqual(p.paused.sentence_meaning,paused);
+ p=await state();assert.equal(p.continuation,'sentence_meaning');assert.equal(p.pending.stageId,'long_words_read');assert.equal(p.pending.total,stage.targets.length);assert.deepEqual(p.paused[L.sessionKey(paused)],paused);
  const first=p.pending.round.target;await page.locator(`[data-choice="${first}"]`).click();const awarded=(await state()).seeds;
  await page.locator('#back').click();await page.reload();await page.locator('#play').click();await ready();
  p=await state();assert.equal(p.pending.index,1);assert.equal(p.seeds,awarded);assert.equal(p.pending.returnTo,'sentence_meaning');

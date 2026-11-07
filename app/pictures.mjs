@@ -1,7 +1,7 @@
 // AI-generated picture-book artwork. Layout uses SVG; the objects are not hand-
 // drawn SVG icons. Exact source prompts/hashes: docs/illustration-sources.json.
 import {SHEETS,SPRITES} from './image-data.mjs';
-const ALIASES={becher:'ballon',katze:'action_katze_wach',hund:'action_hund_wach',ente:'action_ente_wach',frosch:'action_frosch_wach',buch:'action_buch_zu',tasche:'action_tasche_zu'};
+const ALIASES={becher:'ballon',kind:'action_kind_wach',katze:'action_katze_wach',hund:'action_hund_wach',ente:'action_ente_wach',frosch:'action_frosch_wach',buch:'action_buch_zu',tasche:'action_tasche_zu'};
 const sprite=(id,x,y,width,height)=>{
  const spec=SPRITES[ALIASES[id]??id],sheet=SHEETS[spec.sheet],url=new URL(sheet.src,import.meta.url).href;
  const scale=Math.min(width/spec.rect[2],height/spec.rect[3]),w=spec.rect[2]*scale,h=spec.rect[3]*scale;
@@ -11,6 +11,7 @@ import {SCENE_ITEMS} from './mixed-reading.mjs';
 export const hasPicture=id=>Object.hasOwn(SPRITES,ALIASES[id]??id)||id==='sieben'||/^number_[0-9]$/.test(id)||Object.hasOwn(SCENE_ITEMS,id);
 const svg=content=>`<svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">${content}</svg>`;
 function placeScene(v){
+ if(v.subject==='apfel'&&v.location==='baum'&&v.relation==='am')return sprite('scene_apfel_am_baum',10,0,180,148);
  const {subject,relation,location}=v,context=sprite(location==='baum'?'baum':'scene_'+location,5,2,140,140);
  let x=145,y=96,w=50,h=40;
  if(location==='bus'&&relation==='im'){x=49;y=35;w=55;h=44;}
@@ -37,7 +38,11 @@ export function illustration(id){
   return svg(`<ellipse cx="100" cy="125" rx="82" ry="10" fill="#e2e9df"/>`+sprite(v.subject,100-size/2,125-size,size,size));
  }
  if(v.family==='possession')return svg(sprite(v.subject,20,28,100,100)+sprite(v.object,116,78,53,50));
- if(v.family==='action')return svg(sprite('action_'+v.subject+'_'+v.action,20,12,160,128));
+ if(v.family==='action'){
+  if(v.object&&v.action==='hat')return svg(sprite(v.subject,20,28,100,100)+sprite(v.object,116,78,53,50));
+  const suffix=v.object&&v.action!=='liest'?'_'+v.object:'';
+  return svg(sprite('action_'+v.subject+'_'+v.action+suffix,20,12,160,128));
+ }
  if(v.family==='pair')return svg(sprite('scene_tisch',15,5,170,140)+sprite(v.first??'ball',51,(v.upper??v.ball)==='oben'?17:85,36,30)+sprite(v.second??'hut',111,(v.lower??v.hut)==='oben'?17:85,36,30));
  throw Error('Unknown scene family');
 }

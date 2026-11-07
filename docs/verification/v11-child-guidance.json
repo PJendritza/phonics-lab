@@ -1,11 +1,11 @@
 {
   "status": "passed",
-  "version": "12.0.0",
-  "assetVersion": "46d41681aedb",
+  "version": "13.0.0",
+  "assetVersion": "c3c1c2789c9a",
   "checks": [
     "No automatic directions/solution speech. Small 12px hint and 44px info control play only the short direction. Audio help is absent initially and after one error; two wrong answers expose it without autoplay. Exact reload, optional model, guided tap, stable positions and next-question relocking work.",
-    "reading_animals: real complete round covers six families and both im/am without any solution playback.",
-    "reading_everyday: real complete round covers six families and both im/am without any solution playback.",
+    "reading_animals: real complete twelve-question Etappe round covers all its current families and both im/am without any solution playback.",
+    "reading_everyday: real complete twelve-question Etappe round covers all its current families and both im/am without any solution playback.",
     "320x568: all new families and object states display four decoded images with a dominant reading target and no early sentence speaker.",
     "390x844: all new families and object states display four decoded images with a dominant reading target and no early sentence speaker.",
     "768x1024: all new families and object states display four decoded images with a dominant reading target and no early sentence speaker.",

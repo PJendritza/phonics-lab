@@ -1,3 +1,81 @@
+# v13: tested reading Etappen, useful words and attached apple art
+
+Branch reading-etappen-and-useful-words, checkout /workspace/Kalulu-DE, canonical
+repo https://github.com/PJendritza/phonics-lab. User explicitly authorises the
+previous Etappen plan and additional researched vocabulary. Earlier planning-only
+holds below are historical. No scheduling/accounts/paid API added.
+
+Implemented four named Etappen each in existing levels 33–35, direct navigation,
+short fixed 8–12-answer new rounds, multi-round completion, contextual-word vs
+independent recognition vs later retrieval evidence, sentence-pattern counters,
+within-level earlier-Etappe due review every fourth answer when available.
+Same-level paused questions, old pending goals, profile backups and previous
+awards persist. Completed v12 courses get new people/food extension units, never
+invented word knowledge. Details and migration rules: docs/READING-ETAPPEN.md.
+
+Research downloaded/read LISUM 100 frequent words, LIBRA 2026 grades list,
+QUA-LiS NRW and adult Goethe A1 (supplement only); PDF hashes and interpretation
+at docs/curriculum/USEFUL-WORDS-V13.md and useful-words-v13.json. Verified exact
+membership with python3 scripts/research_vocabulary.py. Added twelve forms from
+eleven lemmas: Kind/Kinder, Frau, Mann, Brot, Wasser, Milch, und, nicht, liest,
+isst, trinkt. No false frequency rankings. 51 tasks added (banks 80/105/102),
+inventory 119 -> 131 forms. 82 complete optional Thorsten clips generated with
+unchanged approved local settings; all 76 existing human hashes preserved.
+
+Generated atlas H through image_gen; exact prompt/hash in illustration provenance.
+Dedicated apple/tree illustration hangs exactly one apple from a visible branch;
+shared correct/distractor renderer uses it. New people/food/actions are consistent
+painted illustrations. Original PNG external; eight WebP sheets total 2,243,570
+bytes / 83 named sprite keys. No generated engine/build/model files committed.
+
+Executed:
+```sh
+python3 scripts/research_vocabulary.py --cache /workspace/phonics-research
+python3 scripts/prepare_illustrations.py --only h
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py --utterances-only
+node --test --test-reporter=tap tests/*.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+node tests/reading-path.cjs
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mixed-reading.cjs
+node tests/child-guidance.cjs
+node tests/profiles.cjs
+node tests/level-navigation.cjs
+node tests/mobile-smoke.cjs
+node tests/word-list.cjs
+node tests/word-hints.cjs
+node tests/choice-help.cjs
+git diff --check
+```
+86 unit/content tests pass; all 642 MP3s decode/headroom/padding pass. All thirteen
+browser suites pass against final app hash c3c1c2789c9a. Eight publication gates
+are bound to that same hash. Matrix evidence: docs/verification/v13-browser-matrix.json.
+The new path test covers real progression, same-level resume after a lower-level
+visit, old active/paused review return, v12 migration, actual speech help and nine
+representative scenes at 320/390/768px. An extensively practised eight-profile
+backup exceeding one MB restores through the actual confirmed import UI. The
+input cap is now four MB with strict schema validation. All existing rewards,
+old goals and human recordings stay intact. Apple and drink/hold screenshots
+inspected. Older test expectations were updated for finite Etappe pools/goals;
+legacy eighteen-question behavior remains explicitly tested. The added Level-1
+visit intentionally plays a; its test playback baseline was corrected and the
+whole path suite rerun successfully, with no app change or skipped assertion.
+
+Build: 685 files / 12,259,446 bytes dirty (clean adds one metadata byte), under
+unchanged 14 MB cap. No source changes during the final verification matrix;
+only the path test fixture expectation was corrected afterward.
+
+Publication pending clean source commit/push, existing gh-pages update and
+verification of all public HTTPS bytes. Use a fresh external deployment checkout.
+No Pages settings change. Physical phone, educator/native pronunciation and
+independent reading ability validation are distinct from these technical checks.
+
+---
+
 # Planning after v12: reading Etappen and apple/tree semantics
 
 User requests consideration only, plus recording the apple image issue. Open

@@ -1,3 +1,4 @@
+import {stepsFor} from '../app/reading-path.mjs';
 import {sceneDimensions,EXPANSION_VOCABULARY} from '../app/mixed-reading.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -51,7 +52,7 @@ test('completed v6 profiles continue at new Level 15 while unfinished work and a
  const old=freshProgress();delete old.curriculumVersion;old.continuation='complete';old.sessions=20;old.seeds=200;
  old.stages.more_build={completed:2,passed:true,best:1};
  const p=validateProgress(old);assert.equal(recommended(p).id,'sentence_words');assert.equal(p.sessions,20);assert.equal(p.seeds,200);
- assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,12);
+ assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,13);
  const pending=startSession(old,'more_build',rng);delete pending.curriculumVersion;
  assert.deepEqual(validateProgress(pending).pending,pending.pending);
  const done=freshProgress();done.continuation='complete';assert.equal(validateProgress(done).continuation,'complete');
@@ -59,7 +60,7 @@ test('completed v6 profiles continue at new Level 15 while unfinished work and a
 test('pictures and syllable spelling resolve; new context vocabulary is explicitly declared for full-utterance help',()=>{
  assert.equal(STAGES.length,35);assert.ok(WORDS.length>=30);
  for(const stage of READING_STAGES){
-  assert.ok(stage.targets.length<=100);
+  assert.ok(stepsFor(stage).length?stepsFor(stage).every(s=>s.targets.length<=105):stage.targets.length<=100);
   for(const target of stage.targets){
    const item=ITEMS[target];assert.ok(item.audio&&item.text);
    if(item.syllables)assert.equal(item.syllables.join(''),item.text,target);

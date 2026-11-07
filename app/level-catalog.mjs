@@ -23,7 +23,7 @@ const TITLES={
  ie_listen:'ie: Wörter hören und erkennen',ie_read:'ie: Wörter selbst lesen',
  long_vowels_listen:'ee und oo: Wörter hören und erkennen',long_vowels_read:'ee und oo: Wörter selbst lesen',
  sentence_words:'Häufige kleine Wörter erkennen',phrase_place:'Wortgruppen: Dinge und Orte',first_sentences:'Kurze Sätze: Wo ist das Ding?',
- sentence_meaning:'Lesemix: Orte, Mengen und Geschichten',
+ sentence_meaning:'Dinge und Tiere verstehen',reading_animals:'Tiere und Menschen',reading_everyday:'Alltag und kleine Geschichten',
 };
 export function describeLevel(stage,index){
  const chapter=CHAPTERS.find(c=>index+1>=c.from&&index+1<=c.to);

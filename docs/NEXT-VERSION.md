@@ -1,4 +1,29 @@
-# Next update: apple scene correction and reading navigation proposal
+# v13 implementation: finite reading Etappen and useful vocabulary
+
+Latest user request authorises implementation and existing demo publication of
+the previous proposal, plus researched useful words. Earlier planning-only holds
+below are historical. Details: READING-ETAPPEN.md and
+curriculum/USEFUL-WORDS-V13.md; actual release status: PROGRESS.md.
+
+- [x] Keep 35 levels; add four named finite Etappen each in 33–35, direct parent
+      selection, current Etappe indication and clear next/continue behavior.
+- [x] Reachable 8–12-question new rounds, varied independent completion rules,
+      stable saved goals and optional due review from earlier completed Etappen.
+- [x] Separate contextual word/form encounters, independent standalone word
+      recognition, 24-hour later retrieval and sentence-pattern evidence.
+- [x] Preserve old awards and exact tasks; show new content as an extension.
+- [x] Research official frequent-word/primary-school lists and compare v12.
+      Add Kind/Kinder, Frau, Mann, Brot, Wasser, Milch, und, nicht, liest, isst,
+      trinkt: 131 actual forms, 51 new tasks and 82 complete optional recordings.
+- [x] Dedicated attached-apple/tree art and new clear people/food/action sprites.
+- [x] 86 unit/content checks, 642-clip audit and all thirteen browser suites pass.
+- [x] All eight current-hash browser release gates pass, including large backup
+      restore and old-review migration.
+- [ ] Verify live publication; see PROGRESS.md for deployed source and results.
+
+---
+
+# Next update: apple scene correction and reading navigation proposal (historical)
 
 Latest request: record the apple error and propose a clearer structure; no app,
 art, audio, storage or deployment changes authorised in this planning turn.

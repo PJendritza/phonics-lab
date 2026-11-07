@@ -13,6 +13,28 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+Latest authorised implementation is v13: four finite named Etappen each in
+Levels 33–35, correct attached apple-at-tree art, researched everyday vocabulary,
+parent coverage/independent evidence and within-level due Etappe interleaving.
+See docs/READING-ETAPPEN.md and docs/curriculum/USEFUL-WORDS-V13.md. No extra level
+numbers. Original IDs remain; scene counts are 80/105/102 and inventory 131 forms.
+Reading Path data version 1 supplements v3 storage; curriculumVersion is 13.
+Preserve exact legacy pending sessions and multi-Etappe paused keys. Old awards
+stay; new people/food units are extensions, never inferred from old completion.
+Do not infer individual-word mastery from correct sentence images or listening.
+New mixed rounds have 8–12 questions; old saved goals remain unchanged. Etappe
+completion requires varied independent evidence and at least two rounds. New
+content must use a separate versioned unit, not silently change a completed goal.
+The apple "am Baum" must visibly attach to a branch in EVERY answer variant.
+New vocabulary is contextual sentence reading with full-utterance optional help,
+not additional isolated TTS phones. Mass nouns Wasser/Milch do not take a forced
+ein/einem. New directions/speech-gating/silent-picture rules remain in force.
+Keep confirmed backup imports bounded to four MB (eight extensively practised
+profiles can exceed one MB), with strict validation. Paused Etappen must remain
+selectable even after the learner temporarily visits an earlier level.
+Run tests/reading-path.cjs after path, tracking, migration, reading art or new-word
+changes; scripts/publish.py requires its current app-hash-bound evidence too.
+
 Latest authorised update is v12: add articles to shortened noun phrases, use
 correct dative after mit, replace ambiguous Becher with Ballon, improve the duck
 art and add an alphabetic active-word inventory at words.html (parent/About links).

@@ -1,0 +1,83 @@
+{
+  "checkedUTC": "2026-11-07T11:40:35.636364+00:00",
+  "baselineSourceCommit": "83dbb50ecb1274e7593f622badcc1641528d2a7b",
+  "baselineWordForms": 119,
+  "currentWordForms": 131,
+  "newWordForms": [
+    "Brot",
+    "Frau",
+    "isst",
+    "Kind",
+    "Kinder",
+    "liest",
+    "Mann",
+    "Milch",
+    "nicht",
+    "trinkt",
+    "und",
+    "Wasser"
+  ],
+  "selectedLemmas": [
+    "Brot",
+    "Frau",
+    "Kind",
+    "Mann",
+    "Milch",
+    "Wasser",
+    "nicht",
+    "und",
+    "essen",
+    "lesen",
+    "trinken"
+  ],
+  "nextFrequentCandidates": [
+    "auch",
+    "noch",
+    "es",
+    "ich",
+    "wir",
+    "er",
+    "sie",
+    "was",
+    "wo",
+    "oder",
+    "aber",
+    "ohne",
+    "kann",
+    "für"
+  ],
+  "sources": [
+    {
+      "id": "bb-100",
+      "title": "LISUM: 100 häufig gebrauchte Wörter (2024)",
+      "url": "https://bildungsserver.berlin-brandenburg.de/fileadmin/bbb/unterricht/faecher/sprachen/deutsch/schreiben_rechtschreiben/100_haeufig_gebrauchte_Woerter.pdf",
+      "sha256": "a2cdb473d4a869f85e13889bc1abafb8b7247962fc802cbf22c16224225ca27b",
+      "bytes": 51110,
+      "note": "CC BY-SA 4.0"
+    },
+    {
+      "id": "bb-grades",
+      "title": "LIBRA: Grundwortschatz nach Jahrgangsstufen (2026)",
+      "url": "https://bildungsserver.berlin-brandenburg.de/fileadmin/bbb/unterricht/faecher/sprachen/deutsch/schreiben_rechtschreiben/GWS_sortiertnachJG_2026-02-11_1131.pdf",
+      "sha256": "d7c6689bacec6f0266fc0dc0dd9258e1e39ddf2022a491c27cdb2a60e200bb5a",
+      "bytes": 135340,
+      "note": "CC BY-NC-ND 4.0; reference only"
+    },
+    {
+      "id": "nrw",
+      "title": "QUA-LiS NRW: Wortliste Grundwortschatz",
+      "url": "https://www.qua-lis.nrw.de/system/files/media/document/file/wortliste-grundwortschatz-nrw.pdf",
+      "sha256": "d5e43e837beabe14a1920f51e293cb7924d3609998e1ae2ec99a91173e66cf53",
+      "bytes": 401641,
+      "note": "Reference only; original PDF not redistributed"
+    },
+    {
+      "id": "source-2",
+      "title": "Goethe-Institut: Start Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "sha256": "45fb648bc0ac02338f7898cae065953e320ab72ed0c14e13e0deffe6f1c5d64e",
+      "bytes": 712341,
+      "note": "Reference only; adult A1 list, not a child reading sequence"
+    }
+  ]
+}

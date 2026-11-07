@@ -3,11 +3,11 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=12.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=12.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=13.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=13.0.0)**
 
-[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=12.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. Short noun phrases include articles; Ballon replaces the ambiguous Becher.
+[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=13.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. There are 131 current word forms. Short noun phrases include articles; Ballon replaces the ambiguous Becher. Apple-at-tree images show an attached apple.
 
-The 35 numbered levels have five groups. Level 33 has 80 mixed tasks; Level 34 adds 80 animal/object tasks and Level 35 adds 76 everyday tasks. Small directions use an info button; reading speech unlocks only after two errors. [v11 behavior and audio limits](docs/CHILD-GUIDANCE.md). Labels distinguish
+The 35 numbered levels have five groups. Levels 33–35 each have four named finite Etappen (80/105/102 tasks). New everyday words were selected against official German frequent-word and primary-school lists. [Etappen and evidence rules](docs/READING-ETAPPEN.md) · [Vocabulary research](docs/curriculum/USEFUL-WORDS-V13.md). Small directions use an info button; reading speech unlocks only after two errors. [v11 behavior and audio limits](docs/CHILD-GUIDANCE.md). Labels distinguish
 listening/spelling recognition, independent word reading and sentence understanding.
 Spaced practice interleaves mistakes with other questions, reduces padding of
 already-secure words and saves expanding review intervals. A separate **↻ Wiederholen**
@@ -15,8 +15,8 @@ button offers due reviews without moving the forward learning cursor backwards.
 [Scheduling rules and limits](docs/SPACED-PRACTICE.md).
 
 Choose an animal profile and press play. Answers stay still. A correct answer gives
-a brief nonverbal chime/check and a small sparkle, fills the level meter and automatically advances.
-Every finished level adds a flower. Mistakes give time and replay without taking
+a brief nonverbal chime/check and a small sparkle, fills the round meter and automatically advances.
+Every finished practice round adds a flower. Mistakes give time and replay without taking
 progress away. There are no timers, speed scores or spoken success messages.
 
 **35 levels**, from sounds and syllables to independent word reading and short
@@ -35,12 +35,12 @@ Level 15 introduces common sentence words; Level 17 adds short im/am phrases. Co
 [Lesson sequence and limits](docs/READING-CURRICULUM.md).
 
 **76 human recordings**, 23 full-sentence
-instructions and 460 optional full/short sentence/phrase readings (including six legacy clips). Piper Thorsten High uses the
+instructions and 542 optional full/short sentence/phrase readings (including six legacy clips). Piper Thorsten High uses the
 approved length_scale 1.5 and added 0.3-second sentence pause; human words are not
 synthesised. After two errors, brief one-choice teaching restores the original
 choices without extra rewards. Independent accuracy adjusts two/three/four choices.
 New round goals depend on the number of targets and existing knowledge (3–18 questions); saved unfinished rounds keep their exact old goal.
-Practice flowers and independent mastery remain separate.
+Practice flowers and independent evidence remain separate. New reading Etappen use 8–12-question rounds and need at least two rounds plus varied independent success. Parent tools separate contextual exposure, standalone word recognition and later retrieval; a correct sentence picture never certifies every word. Earlier completed Etappen can supply due review within the current round. Legacy awards and exact unfinished questions remain; new content appears as an extension.
 
 Up to eight local profiles resume exact questions or partial words. Existing demo
 profiles migrate/persist, including across the repository path rename on the same
@@ -131,3 +131,5 @@ Project CC BY-SA 4.0; human Wikimedia recordings individually CC BY-SA 3.0/4.0; 
 See LICENSE, [audio provenance](docs/AUDIO.md), [source metadata](docs/audio-sources.json)
 and in-app About/Töne prüfen. The user’s positive physical-phone report applies to
 v2; current release browser emulation is not a new physical-device listening test.
+
+Etappen, migration and progress browser checks: `node tests/reading-path.cjs`.
