@@ -1,8 +1,8 @@
 {
-  "version": "11.0.0",
-  "sourceCommit": "3ae03c380bf97e337988747014e0d6273dd58df4",
+  "version": "12.0.0",
+  "sourceCommit": "83dbb50ecb1274e7593f622badcc1641528d2a7b",
   "sourceDirty": false,
-  "assetVersion": "93978435d111",
+  "assetVersion": "46d41681aedb",
   "stack": "HTML / CSS / ES modules",
   "audioPolicy": "Human complete sounds, syllables and words. Piper only for full instructions/sentence help. Independent reading never autoplays its answer. No pronunciation approval claimed."
 }

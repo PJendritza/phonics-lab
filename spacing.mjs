@@ -1,4 +1,4 @@
-import {ITEMS} from './data.mjs?v=93978435d111';
+import {ITEMS} from './data.mjs?v=46d41681aedb';
 // Transparent practice scheduling, not a clinical or validated learning model.
 // Wall-clock dates never influence score/speed. Turns space retrievals now;
 // dates offer deliberate review later without moving the forward cursor back.
