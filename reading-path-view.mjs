@@ -1,4 +1,4 @@
-import {stepsFor, currentStep, stepStats} from './reading-path.mjs?v=c3c1c2789c9a';
+import {stepsFor, currentStep, stepStats} from './reading-path.mjs?v=07c9eb6dc793';
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function etappeMap(p, stage, enabled) {
   const steps = stepsFor(stage);
@@ -18,7 +18,7 @@ export function etappeMap(p, stage, enabled) {
     }).join('')}</ol><p class="subtle">Eine Etappe umfasst mehrere kurze Runden. Ihr Abschluss belohnt eigenständige Übung mit verschiedenen Aufgaben, nicht jedes Wort des gesamten Satzvorrats.</p>
   </details>`;
 }
-const PATTERNS = {place:'Ortsangaben',quantity:'Mengen',size:'Größen',possession:'Wer hat was?',action:'Handlungen und Zustände',pair:'Zwei Aussagen',negation:'nicht verstehen',coordination:'und: beide Aussagen verstehen'};
+const PATTERNS = {place:'Ortsangaben',quantity:'Mengen',size:'Größen',possession:'Wer hat was?',action:'Handlungen und Zustände',pair:'Zwei Aussagen',negation:'nicht verstehen',coordination:'und: beide Aussagen verstehen','story:sequence':'Geschichten: Bilderfolge verstehen'};
 export function readingReport(p) {
   const path = p.readingPath, words = Object.values(path?.words??{});
   const recognised = words.filter(w=>w.recognised>0).length, later = words.filter(w=>w.later).length;

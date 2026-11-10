@@ -1,11 +1,12 @@
-import {TASK_GUIDES} from './task-guides.mjs?v=c3c1c2789c9a';
-import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=c3c1c2789c9a';
-import {illustration} from './pictures.mjs?v=c3c1c2789c9a';
-import {CHAPTERS} from './level-catalog.mjs?v=c3c1c2789c9a';
-import {stepsFor,currentStep,stepById,stepStats} from './reading-path.mjs?v=c3c1c2789c9a';
-import {etappeMap,readingReport} from './reading-path-view.mjs?v=c3c1c2789c9a';
-import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice,useReadingHelp,readingAudioAvailable,duePractice,startReview} from './learning.mjs?v=c3c1c2789c9a';
-import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=c3c1c2789c9a';
+import {TASK_GUIDES} from './task-guides.mjs?v=07c9eb6dc793';
+import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=07c9eb6dc793';
+import {illustration} from './pictures.mjs?v=07c9eb6dc793';
+import {CHAPTERS} from './level-catalog.mjs?v=07c9eb6dc793';
+import {stepsFor,currentStep,stepById,stepStats} from './reading-path.mjs?v=07c9eb6dc793';
+import {etappeMap,readingReport} from './reading-path-view.mjs?v=07c9eb6dc793';
+import {storyBody} from './story-view.mjs?v=07c9eb6dc793';
+import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,levelProgress,showHelp,resumePractice,useReadingHelp,readingAudioAvailable,duePractice,startReview,arrangeStory,resetStory} from './learning.mjs?v=07c9eb6dc793';
+import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=07c9eb6dc793';
 const root=document.querySelector('#app');let storage;try{storage=window.localStorage;}catch{}
 let {store,warning}=readStored(storage),heard=false,previewAll=false,pendingImport=null;
 let transition=null,viewToken=0,keyboardMode=false;
@@ -57,7 +58,7 @@ function path(){
  // Reopening the map from a reading task shows its Etappen immediately instead
  // of making a phone user scroll past the preceding thirty-two levels.
  const mine=viewToken;
- if(stepsFor(current??'').length)requestAnimationFrame(()=>{if(mine===viewToken)root.querySelector(`[data-stage="${current}"]`)?.scrollIntoView({block:'start',behavior:'instant'});});
+ if(stepsFor(current??'').length||current==='story_order')requestAnimationFrame(()=>{if(mine===viewToken)root.querySelector(`[data-stage="${current}"]`)?.scrollIntoView({block:'start',behavior:'instant'});});
 }
 
 function sparkles(){return `<span class="answer-sparkle" aria-hidden="true">${Array.from({length:7},(_,i)=>`<i style="--dx:${Math.cos(i*2*Math.PI/7)*46}px;--dy:${Math.sin(i*2*Math.PI/7)*42}px;--turn:${i*47}deg;--spark-color:${['#bd7139','#5e8454','#c7a537'][i%3]}"></i>`).join('')}</span>`;}
@@ -75,6 +76,7 @@ function readingText(item,stage,help){
 }
 function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  const p=progress(),session=p.pending;if(!session){home();return;}
+ if(stageById(session.stageId).mode==='order'){renderStoryRound(feedbackCorrect);return;}
  const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item={...ITEMS[r.target],...(r.cue===ITEMS[r.target]?.shortAudio?{text:ITEMS[r.target].shortText}:{})},letters=word?lettersFor(r.target):[],finished=r.solved;
  const feedback=feedbackCorrect===false&&selected?choiceFeedback(s,selected):null;
  const teaching=r.help==='show'||r.help==='ack',expected=word?letters[r.position]?.toLowerCase():r.target;
@@ -128,6 +130,35 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
    enableAnswers();
   }else listen(false);
  }
+}
+
+function renderStoryRound(feedbackCorrect=null){
+ const p=progress(),s=stageById(p.pending.stageId),r=p.pending.round,item=ITEMS[r.target];
+ root.innerHTML=`<section class="session auto-session story-session"><div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. Level auswählen">Level ${stageNumber(s.id)} · ${s.title} ▾</button></div>
+  ${meter(feedbackCorrect===true)}<h1 class="task-instruction"><span>${esc(TASK_GUIDES[s.instruction])}</span><button class="task-info" id="instruction-info" aria-label="Anleitung anhören" ${r.solved?'disabled':''}>ⓘ</button></h1>${storyBody(r,item,readingAudioAvailable(p))}</section>`;
+ document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;
+ root.querySelectorAll('[data-story-frame],[data-story-remove]').forEach(b=>b.onclick=()=>{
+  const frame=b.dataset.storyFrame??b.dataset.storyRemove;
+  setProgress(arrangeStory(progress(),frame));renderRound(false);
+  if(keyboardMode){const selector=b.dataset.storyFrame?`[data-story-remove="${frame}"]`:`[data-story-frame="${frame}"]`;root.querySelector(selector)?.focus({preventScroll:true});}
+ });
+ document.querySelector('#story-reset').onclick=()=>{setProgress(resetStory(progress()));renderRound(false);if(keyboardMode)root.querySelector('[data-story-frame]')?.focus({preventScroll:true});};
+ document.querySelector('#story-check').onclick=()=>{
+  const result=answer(progress(),r.target);setProgress(result.progress);renderRound(false,result.correct);
+  if(result.finished){stopAudio();playSuccess();scheduleAdvance();}
+  else if(keyboardMode)root.querySelector('[data-story-remove]')?.focus({preventScroll:true});
+ };
+ const listen=withAnswer=>{
+  if(withAnswer&&!readingAudioAvailable(progress()))return;
+  if(withAnswer)setProgress(useReadingHelp(progress(),true));
+  stopAudio();root.querySelectorAll('button:not(#back):not(#level-menu)').forEach(b=>b.disabled=true);
+  announcement(withAnswer?'Lies mit und höre zu.':'Hör die Anleitung.');
+  const mine=viewToken,finish=()=>{if(mine===viewToken&&progress().pending?.stageId===s.id)renderRound(false);};
+  playAudio([withAnswer?r.cue:s.instruction],finish,()=>{finish();announcement('Der Ton konnte nicht starten. Du kannst weiter ordnen.');});
+ };
+ document.querySelector('#instruction-info').onclick=()=>listen(false);
+ const replay=document.querySelector('#replay');if(replay)replay.onclick=()=>listen(true);
+ if(r.solved)scheduleAdvance();
 }
 
 function complete(result){

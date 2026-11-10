@@ -1,6 +1,7 @@
 // Finite presentation units over stable tasks. Completion rewards practice;
 // contextual exposure never becomes an independently recognised word.
-import {SCENE_ITEMS, NOUNS} from './mixed-reading.mjs?v=c3c1c2789c9a';
+import {SCENE_ITEMS, NOUNS} from './mixed-reading.mjs?v=07c9eb6dc793';
+import {STORIES} from './stories.mjs?v=07c9eb6dc793';
 
 const bank = pack => Object.keys(SCENE_ITEMS).filter(t => SCENE_ITEMS[t].pack === pack);
 const subjects = (pack, names) => bank(pack).filter(t => {
@@ -47,6 +48,7 @@ export function stepStats(p, step) {
   return {...s, wordsSeen:words.length, wordsTotal:step.words.length, accuracy};
 }
 export function patternKeys(item, text = item.text) {
+  if(item.kind==='story')return ['story:sequence'];
   const s = item.scene;
   if (!s) return [];
   const main = s.family === 'place' ? `place:${s.relation}` : s.family === 'quantity' ? `quantity:${s.count}` : s.family;
@@ -54,7 +56,7 @@ export function patternKeys(item, text = item.text) {
 }
 const addUnique = (array, values) => [...new Set([...array, ...values])];
 export function recordReadingEvidence(p, stage, round, item, first, now) {
-  if (!['word','sentence','phrase'].includes(item?.kind)) return;
+  if (!['word','sentence','phrase','story'].includes(item?.kind)) return;
   const path = p.readingPath ??= freshReadingPath();
   const text = round.cue === item.shortAudio ? item.shortText : item.text;
   for (const word of tokens(text)) {
@@ -67,7 +69,7 @@ export function recordReadingEvidence(p, stage, round, item, first, now) {
       w.later ||= now - w.firstSuccessAt >= 86_400_000;
     }
   }
-  if (stage.mode !== 'picture') return;
+  if (!['picture','order'].includes(stage.mode)) return;
   for (const key of patternKeys(item, text)) {
     const evidence = path.patterns[key] ??= {seen:0, first:0, recent:[]};
     evidence.seen++; evidence.first += Number(first);
@@ -131,7 +133,7 @@ export function validateReadingPath(value, allowedWords) {
   const integer = (v,max=1e7) => Number.isSafeInteger(v) && v >= 0 && v <= max;
   const fail = () => {throw Error('Ungültige Leseetappen oder Wortnachweise.');};
   if (!plain(value) || value.version !== 1 || !['cursors','steps','words','patterns'].every(k => plain(value[k]))) fail();
-  const out = freshReadingPath(), allowedPatterns = new Set(Object.values(SCENE_ITEMS).flatMap(i => patternKeys(i)));
+  const out = freshReadingPath(), allowedPatterns = new Set(Object.values({...SCENE_ITEMS,...STORIES}).flatMap(i => patternKeys(i)));
   for (const [id,cursor] of Object.entries(value.cursors)) {
     if (!stepsFor(id).some(s => s.id === cursor)) fail();
     out.cursors[id] = cursor;

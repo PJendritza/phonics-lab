@@ -1,8 +1,8 @@
-import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=c3c1c2789c9a';
-import {describeLevel} from './level-catalog.mjs?v=c3c1c2789c9a';
-import {FORMS} from './word-choices.mjs?v=c3c1c2789c9a';
-export const VERSION='13.0.0';
-export const CURRICULUM_VERSION=13;
+import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=07c9eb6dc793';
+import {describeLevel} from './level-catalog.mjs?v=07c9eb6dc793';
+import {FORMS} from './word-choices.mjs?v=07c9eb6dc793';
+export const VERSION='14.0.0';
+export const CURRICULUM_VERSION=14;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
@@ -65,7 +65,7 @@ export const BUILD_UNITS=['a','m','i','o','u','n','l','f','s','sch','t','k','b',
 export const PHONEMES=Object.fromEntries(['a','m','i','o','u','e'].map(c=>[c,c]));
 // Whole words remain task cues. A clicked letter always plays only that sound.
 export function choiceFeedback(stage,choice){
- if(stage.mode==='picture'||FORMS[choice])return {audio:[],text:'Versuch es noch einmal.'};
+ if(stage.mode==='picture'||stage.mode==='order'||FORMS[choice])return {audio:[],text:'Versuch es noch einmal.'};
  const audio=CONTEXTS[stage.mode]||stage.mode==='build'?PHONEMES[choice]:ITEMS[choice]?.audio;
  if(!audio)return {audio:[],text:'Versuch es noch einmal.'};
  return {audio:[audio],text:stage.group==='sentence'?'Deine Bildauswahl.':`Deine Auswahl: ${stage.mode==='build'||CONTEXTS[stage.mode]?choice:ITEMS[choice].text}`};

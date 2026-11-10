@@ -5,6 +5,7 @@ export const CHAPTERS=[
  {id:'word_meaning',title:'Wörter und kurze Wortgruppen',from:15,to:23},
  {id:'spellings',title:'Schreibmuster in Wörtern',from:24,to:31},
  {id:'sentences',title:'Sätze verstehen',from:32,to:35},
+ {id:'stories',title:'Geschichten verstehen',from:36,to:36},
 ];
 const TITLES={
  letters:'Buchstaben zu Lauten finden',vowels:'Weitere Vokale erkennen',
@@ -23,10 +24,10 @@ const TITLES={
  ie_listen:'ie: Wörter hören und erkennen',ie_read:'ie: Wörter selbst lesen',
  long_vowels_listen:'ee und oo: Wörter hören und erkennen',long_vowels_read:'ee und oo: Wörter selbst lesen',
  sentence_words:'Häufige kleine Wörter erkennen',phrase_place:'Wortgruppen: Dinge und Orte',first_sentences:'Kurze Sätze: Wo ist das Ding?',
- sentence_meaning:'Dinge und Tiere verstehen',reading_animals:'Tiere und Menschen',reading_everyday:'Alltag und kleine Geschichten',
+ sentence_meaning:'Dinge und Tiere verstehen',reading_animals:'Tiere und Menschen',reading_everyday:'Alltag und kleine Geschichten',story_order:'Kleine Geschichten ordnen',
 };
 export function describeLevel(stage,index){
  const chapter=CHAPTERS.find(c=>index+1>=c.from&&index+1<=c.to);
- const activity=stage.group==='phrase'?'Wortgruppen verstehen':stage.group==='sentence'?'Sätze verstehen':stage.mode==='picture'?'Wörter selbst lesen':stage.mode==='build'?'Wörter bauen':['onset','ending'].includes(stage.mode)||stage.group==='sound'?'Laute hören':stage.group==='unit'?'Silben und Wörter erkennen':'Gehörte Wörter erkennen';
+ const activity=stage.mode==='order'?'Geschichte lesen und Bilder ordnen':stage.group==='phrase'?'Wortgruppen verstehen':stage.group==='sentence'?'Sätze verstehen':stage.mode==='picture'?'Wörter selbst lesen':stage.mode==='build'?'Wörter bauen':['onset','ending'].includes(stage.mode)||stage.group==='sound'?'Laute hören':stage.group==='unit'?'Silben und Wörter erkennen':'Gehörte Wörter erkennen';
  return {...stage,title:TITLES[stage.id]??stage.title,chapter:chapter.id,activity};
 }

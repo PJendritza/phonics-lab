@@ -93,3 +93,20 @@ svg.play-symbol{width:40px;height:40px;flex-shrink:0}
 .auto-session .level-jump.with-etappe{height:44px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;line-height:1.1;padding:4px 8px!important}
 .level-jump.with-etappe small{font-size:11px;line-height:1.3;font-weight:400;max-width:100%;overflow:hidden;text-overflow:ellipsis;margin-top:3px}
 @media(max-width:400px){.reading-metrics{grid-template-columns:1fr}.reading-metrics p{display:flex;align-items:center;gap:12px}.reading-metrics strong{min-width:36px}.etappe-map{padding:6px 8px}}
+
+/* Picture sequencing uses deliberate taps; unused tray cards stay in place. */
+.story-session{max-width:620px}.story-session .story-title{margin:0 0 6px;font-size:12px}
+.story-text{font-size:clamp(21px,4vw,28px);line-height:1.45;font-weight:700;text-align:left;max-width:560px;margin:0 auto}
+.story-text p{color:var(--ink);line-height:inherit;margin:0}
+.story-slots,.story-tray{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:510px;margin:8px auto}
+.story-position{min-width:0;position:relative;padding-top:20px}
+.story-position>span{position:absolute;top:0;left:0;right:0;font-size:13px;color:var(--muted)}
+.story-card,.story-empty{height:112px;width:100%;min-width:0;border:2px solid #ccd7c7;border-radius:16px;background:#fffdf8;padding:5px}
+.story-card svg{width:100%;height:100%;display:block}.story-empty{border-style:dashed;background:#edf1e8}
+.story-used{visibility:hidden}.story-tray{min-height:112px}.story-controls{display:flex;justify-content:center;gap:12px;margin:16px auto 6px}
+.story-controls button{font-size:15px;min-height:48px;padding:12px 18px}.story-controls #story-reset{border:1px solid #c1cdbd;background:#edf1e8}
+.story-controls span{font-size:20px}.story-status{height:28px;min-height:28px;margin:5px 0}
+.order-correct .story-card{border-color:#377c60;background:var(--mint)}.order-retry .story-card{border-color:#bd8e5c}
+.story-audio{height:54px;display:flex;align-items:center;justify-content:center}.story-audio .replay{min-height:44px;height:44px;margin:0;padding:8px 14px;min-width:150px;font-size:14px}
+@media(max-width:700px){.story-slots,.story-tray{gap:8px}.story-card,.story-empty{height:94px}.story-tray{min-height:94px}.story-text{font-size:23px}}
+@media(max-height:740px) and (max-width:700px){.story-session .story-title{margin:0 0 4px}.story-text{font-size:21px;line-height:1.35}.story-card,.story-empty{height:76px}.story-tray{min-height:76px}.story-slots,.story-tray{margin:5px auto}.story-controls{margin:9px auto 4px}.story-controls button{min-height:44px;padding:8px 11px;font-size:14px}.story-audio{height:46px}.story-session .level-progress .meter-flower svg{height:48px;width:45px}.story-session .level-progress .meter-flower{width:45px}}

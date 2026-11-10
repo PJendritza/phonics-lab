@@ -1,8 +1,9 @@
-import {sceneDimensions,equivalentScene} from './mixed-reading.mjs?v=c3c1c2789c9a';
-import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=c3c1c2789c9a';
-import {freshSpacing,selectTarget,recordPractice,practiceGoal,dueReviews,validateSpacing} from './spacing.mjs?v=c3c1c2789c9a';
-import {challengeTier,closeChoices,validForms} from './word-choices.mjs?v=c3c1c2789c9a';
-import {stepsFor,stepById,currentStep,allStepsComplete,freshReadingPath,recordReadingEvidence,finishStep,embeddedReview,validateReadingPath,migrateReadingPath,tokens} from './reading-path.mjs?v=c3c1c2789c9a';
+import {sceneDimensions,equivalentScene} from './mixed-reading.mjs?v=07c9eb6dc793';
+import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs?v=07c9eb6dc793';
+import {freshSpacing,selectTarget,recordPractice,practiceGoal,dueReviews,validateSpacing} from './spacing.mjs?v=07c9eb6dc793';
+import {challengeTier,closeChoices,validForms} from './word-choices.mjs?v=07c9eb6dc793';
+import {newStoryRound,storyCorrect,editStoryRound,resetStoryRound,validateStoryRound} from './stories.mjs?v=07c9eb6dc793';
+import {stepsFor,stepById,currentStep,allStepsComplete,freshReadingPath,recordReadingEvidence,finishStep,embeddedReview,validateReadingPath,migrateReadingPath,tokens} from './reading-path.mjs?v=07c9eb6dc793';
 export const duePractice=(progress,now=Date.now())=>dueReviews(progress,STAGES,now);
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
 const plain=v=>v&&typeof v==='object'&&!Array.isArray(v);
@@ -41,6 +42,7 @@ function makeRound(progress,stage,index=0,previous=null,rng=Math.random,now=Date
  const etappe=stepById(etappeId),review=etappe?embeddedReview(progress,stage,etappe,index,now):[];
  const selection=etappe?{...stage,targets:review.length?review:etappe.targets}:stage;
  const target=forcedTarget??selectTarget(progress,selection,now,rng,progress.pending?.stageId===stage.id&&index>0?progress.pending.completedTargets??[]:[]),key=skillKey(stage,target),demonstration=stage.id==='letters'&&!progress.skills[key]?.introduced;
+ if(stage.mode==='order')return newStoryRound(target,rng);
  let choices;
  if(stage.mode==='build'){
   const actual=[...new Set(lettersFor(target).map(c=>c.toLowerCase()))],others=(stage.id==='more_build'?BUILD_UNITS:['a','m','i','o','u','n','l']).filter(c=>!actual.includes(c));choices=shuffled([...actual,...shuffled(others,rng).slice(0,difficulty(progress)>=3?1:0)],rng);
@@ -91,7 +93,7 @@ export function startReview(progress,stageId=null,rng=Math.random,now=Date.now()
  const cursor=continuationFor(progress),saved=progress.pending?.stageId===selected.stageId?progress.pending:Object.values(progress.paused??{}).find(s=>s.stageId===selected.stageId),returnStep=progress.readingPath?.cursors[selected.stageId];
  const next=startSession(progress,selected.stageId,rng,now,saved?.etappeId);
  if(!saved){
-  const stage=stageById(selected.stageId),targets=shuffled(selected.targets,rng).slice(0,18);
+  const stage=stageById(selected.stageId),targets=shuffled(selected.targets,rng).slice(0,stage.mode==='order'?3:18);
   next.pending={stageId:stage.id,index:0,total:targets.length,first:0,independent:0,reviewTargets:targets,returnTo:cursor,round:makeRound(next,stage,0,null,rng,now,targets[0],null)};
  }else next.pending.returnTo=cursor;
  if(returnStep){next.pending.returnStep=returnStep;next.readingPath.cursors[selected.stageId]=returnStep;}
@@ -99,14 +101,16 @@ export function startReview(progress,stageId=null,rng=Math.random,now=Date.now()
 }
 export function answer(progress,choice,now=Date.now()){
  if(!progress.pending)return {progress,correct:false,finished:false};const next=structuredClone(progress),session=next.pending,stage=stageById(session.stageId),r=session.round;
- if(r.solved||!r.choices.includes(choice))return {progress,correct:false,finished:false};
- const expected=stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,correct=choice===expected;
+ const ordering=stage.mode==='order';
+ if(r.solved||(ordering?choice!==r.target||r.order.length!==r.choices.length:!r.choices.includes(choice)))return {progress,correct:false,finished:false};
+ const expected=stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,correct=ordering?storyCorrect(r):choice===expected;
  if(r.help){
   if(r.help!=='show'||!correct)return {progress,correct:false,finished:false};
   r.help='ack';return {progress:next,correct:true,finished:false,teaching:true};
  }
  r.tries++;
- if(!correct){r.misses=(r.misses??0)+1;if(r.misses>=2)r.help='pending';return {progress:next,correct:false,finished:false};}
+ if(ordering)r.checked=true;
+ if(!correct){r.misses=(r.misses??0)+1;if(r.misses>=2&&!ordering)r.help='pending';return {progress:next,correct:false,finished:false};}
  r.misses=0;
  if(stage.mode==='build'&&++r.position<lettersFor(r.target).length)return {progress:next,correct:true,finished:false};
  r.solved=true;next.seeds++;const key=skillKey(stage,r.target),skill=next.skills[key]??{introduced:false,seen:0,first:0,recent:[],timeline:[]};skill.introduced=true;
@@ -116,13 +120,23 @@ export function answer(progress,choice,now=Date.now()){
  if(!r.demonstration)recordReadingEvidence(next,stage,r,ITEMS[r.target],!r.assisted&&r.tries===(stage.mode==='build'?lettersFor(r.target).length:1),now);
  return {progress:next,correct:true,finished:true};
 }
+export function arrangeStory(progress,frame){
+ if(!progress.pending||stageById(progress.pending.stageId).mode!=='order')return progress;
+ const round=editStoryRound(progress.pending.round,frame);if(round===progress.pending.round)return progress;
+ const next=structuredClone(progress);next.pending.round=round;return next;
+}
+export function resetStory(progress){
+ if(!progress.pending||stageById(progress.pending.stageId).mode!=='order')return progress;
+ const round=resetStoryRound(progress.pending.round);if(round===progress.pending.round)return progress;
+ const next=structuredClone(progress);next.pending.round=round;return next;
+}
 export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
 export function resumePractice(progress){if(progress.pending?.round.help!=='ack')return progress;const next=structuredClone(progress);next.pending.round.help=null;next.pending.round.misses=0;return next;}
-export function readingAudioAvailable(progress){const s=progress.pending,r=s?.round;return !!s&&stageById(s.stageId).mode==='picture'&&!r.solved&&(r.tries>=2||!!r.help);}
+export function readingAudioAvailable(progress){const s=progress.pending,r=s?.round;return !!s&&['picture','order'].includes(stageById(s.stageId).mode)&&!r.solved&&(r.tries>=2||!!r.help);}
 export function useReadingHelp(progress,withAudio=false){
  if(withAudio&&!readingAudioAvailable(progress))return progress;
  const session=progress.pending;
- if(!session||stageById(session.stageId).mode!=='picture'||session.round.solved||session.round.assisted)return progress;
+ if(!session||!['picture','order'].includes(stageById(session.stageId).mode)||session.round.solved||session.round.assisted)return progress;
  const next=structuredClone(progress);next.pending.round.assisted=true;return next;
 }
 export function advance(progress,rng=Math.random,now=Date.now()){
@@ -140,14 +154,17 @@ export function advance(progress,rng=Math.random,now=Date.now()){
 function validatePending(value){
  if(value===null)return null;if(!plain(value))throw Error('Ungültige Sitzung.');const s=stageById(value.stageId),r=value.round;
  if(!s||!integer(value.total,18)||value.total<1||!integer(value.index,value.total-1)||!integer(value.first,value.total)||!integer(value.independent,value.total)||value.first>value.independent||!plain(r)||![...s.targets,...s.legacyTargets??[]].includes(r.target)||!Array.isArray(r.choices)||!r.choices.length||new Set(r.choices).size!==r.choices.length||typeof r.demonstration!=='boolean'||typeof r.solved!=='boolean'||!integer(r.tries,10000)||!integer(r.position,12))throw Error('Ungültige Sitzung.');
- const allowed=s.mode==='build'?[...BUILD_UNITS,...lettersFor(r.target).map(c=>c.toLowerCase())]:[...targetPool(s,r.target),...(s.distractors??[]),...validForms(s,r.target,ITEMS)];
+ const allowed=s.mode==='order'?ITEMS[r.target].frames:s.mode==='build'?[...BUILD_UNITS,...lettersFor(r.target).map(c=>c.toLowerCase())]:[...targetPool(s,r.target),...(s.distractors??[]),...validForms(s,r.target,ITEMS)];
  if(r.choices.length>7||r.choices.some(c=>typeof c!=='string'||!allowed.includes(c)))throw Error('Ungültige Auswahl.');
- if(s.mode==='build'){
+ const storyState=s.mode==='order'?validateStoryRound(r):{};
+ if(s.mode==='order'){
+  // A submitted whole sequence, not one correct multiple-choice tile.
+ }else if(s.mode==='build'){
   const letters=lettersFor(r.target);if(letters.some(c=>!r.choices.includes(c.toLowerCase()))||r.position>letters.length||r.solved!==(r.position===letters.length)||r.tries<r.position)throw Error('Ungültiges Wort.');
  }else if(!r.choices.includes(r.target)||r.position!==0||(!r.demonstration&&r.choices.length<2)||(r.solved&&r.tries===0))throw Error('Ungültige Antwort.');
  if(CONTEXTS[s.mode]?!CONTEXTS[s.mode][r.target].includes(r.cue):![ITEMS[r.target].audio,ITEMS[r.target].shortAudio].filter(Boolean).includes(r.cue))throw Error('Ungültiger Ton.');
  let help=r.help??null;const misses=r.misses??Math.max(0,r.tries-r.position);
- if(r.help===undefined&&!r.solved&&s.mode!=='build'&&misses>=2)help='pending';
+ if(r.help===undefined&&!r.solved&&!['build','order'].includes(s.mode)&&misses>=2)help='pending';
  if(![null,'pending','show','ack'].includes(help)||!integer(misses,10000)||misses>r.tries-r.position||(help&&(r.solved||misses<2)))throw Error('Ungültige Lernhilfe.');
  let choices=[...r.choices],demonstration=r.demonstration;
  // Untouched introductions saved by v5 become independent choice questions in
@@ -155,7 +172,7 @@ function validatePending(value){
  if(r.help===undefined&&s.id!=='letters'&&demonstration&&r.tries===0&&!r.solved){
   demonstration=false;if(s.mode!=='build'&&choices.length===1)choices.push([...s.targets,...s.distractors??[]].find(c=>c!==r.target));
  }
- if(r.assisted!==undefined&&(typeof r.assisted!=='boolean'||(r.assisted&&s.mode!=='picture')))throw Error('Ungültige Lesehilfe.');
+ if(r.assisted!==undefined&&(typeof r.assisted!=='boolean'||(r.assisted&&!['picture','order'].includes(s.mode))))throw Error('Ungültige Lesehilfe.');
  if(value.returnTo!==undefined&&value.returnTo!=='complete'&&!stageById(value.returnTo))throw Error('Ungültiger Rückweg nach der Wiederholung.');
  const etappe=stepById(value.etappeId);
  if(value.etappeId!==undefined&&(!stepsFor(s).includes(etappe)||value.etappeVersion!==etappe.version))throw Error('Ungültige gespeicherte Leseetappe.');
@@ -163,7 +180,7 @@ function validatePending(value){
  if(value.returnStep!==undefined&&(value.returnTo===undefined||!stepsFor(s).some(e=>e.id===value.returnStep)))throw Error('Ungültiger Etappenrückweg.');
  if(value.reviewTargets!==undefined&&(!Array.isArray(value.reviewTargets)||value.reviewTargets.length!==value.total||new Set(value.reviewTargets).size!==value.total||value.reviewTargets.some(t=>![...s.targets,...s.legacyTargets??[]].includes(t))||value.reviewTargets[value.index]!==r.target||value.returnTo===undefined))throw Error('Ungültige Wiederholungsrunde.');
  if(value.completedTargets!==undefined&&(!Array.isArray(value.completedTargets)||value.completedTargets.length>value.index||value.completedTargets.some(t=>![...s.targets,...s.legacyTargets??[]].includes(t))))throw Error('Ungültiger Rundenverlauf.');
- return {...(value.completedTargets?{completedTargets:[...value.completedTargets]}:{}),stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,...(etappe?{etappeId:etappe.id,etappeVersion:etappe.version}:{}),...(value.returnStep?{returnStep:value.returnStep}:{}),...(value.returnTo!==undefined?{returnTo:value.returnTo}:{}),...(value.reviewTargets?{reviewTargets:[...value.reviewTargets]}:{}),round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false}};
+ return {...(value.completedTargets?{completedTargets:[...value.completedTargets]}:{}),stageId:s.id,index:value.index,total:value.total,first:value.first,independent:value.independent,...(etappe?{etappeId:etappe.id,etappeVersion:etappe.version}:{}),...(value.returnStep?{returnStep:value.returnStep}:{}),...(value.returnTo!==undefined?{returnTo:value.returnTo}:{}),...(value.reviewTargets?{reviewTargets:[...value.reviewTargets]}:{}),round:{target:r.target,choices,cue:r.cue,demonstration,tries:r.tries,position:r.position,solved:r.solved,help,misses,assisted:r.assisted??false,...storyState}};
 }
 export function validateProgress(p){
  if(!plain(p)||p.version!==3||!plain(p.skills)||!plain(p.stages)||!integer(p.sessions)||!integer(p.seeds)||Object.keys(p.skills).length>allowedSkills.size)throw Error('Ungültiger Lernstand.');const result=freshProgress();result.sessions=p.sessions;result.seeds=p.seeds;
@@ -211,6 +228,10 @@ export function validateProgress(p){
   for(const id of ['reading_animals'])if(result.stages[id])result.stages[id].passed=false;
  }
  if((p.curriculumVersion??6)<13)migrateReadingPath(result);
+ if((p.curriculumVersion??6)<14){
+  if(result.continuation==='complete')result.continuation='story_order';
+  for(const session of [result.pending,...Object.values(result.paused)])if(session?.returnTo==='complete')session.returnTo='story_order';
+ }
  return result;
 }
 export function migrateLegacy(p){

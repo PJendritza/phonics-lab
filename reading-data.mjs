@@ -1,4 +1,5 @@
-import {SCENE_ITEMS} from './mixed-reading.mjs?v=c3c1c2789c9a';
+import {SCENE_ITEMS} from './mixed-reading.mjs?v=07c9eb6dc793';
+import {STORIES,STORY_VOCABULARY} from './stories.mjs?v=07c9eb6dc793';
 // Curated German vocabulary. Whole-word recordings remain separate from spelling
 // support: written syllables are never spliced into synthetic spoken words.
 export const WORDS=[
@@ -29,6 +30,7 @@ for(const id of ['hut','ball','bus','fisch','schaf','gans']){
  SENTENCES['s_'+id]={text:`Das ist ${article} ${id[0].toUpperCase()+id.slice(1)}.`,picture:id,kind:'sentence',audio:'s_'+id,legacy:true};
 }
 Object.assign(SENTENCES,SCENE_ITEMS);
+Object.assign(SENTENCES,STORIES);
 export const PHRASES={};
 for(const subject of ['ball','hut'])for(const location of ['bus','baum','tisch','kiste'])for(const original of Object.values(SCENE_ITEMS).filter(v=>v.scene?.family==='place'&&v.subject===subject&&v.location===location)){
  const base=original.audio,id='phrase_'+base;
@@ -55,6 +57,7 @@ export const READING_STAGES=[
 ];
 for(const [number,id,title]of [[34,'reading_animals','Lesemix: neue Tiere und Dinge'],[35,'reading_everyday','Lesemix: Alltag und Sachen']])READING_STAGES.push(stage(id,title,'Neue Wörter · Orte · Mengen · kleine Sätze',Object.keys(SENTENCES).filter(t=>SENTENCES[t].pack===number),'picture',{group:'sentence',instruction:'meaning_mix',contrast:true,balanceRelations:true,mixed:true,masteryByFamily:true,minChoices:4}));
 for(const s of READING_STAGES)if(s.mode==='picture'&&!['sentence','phrase'].includes(s.group))s.instruction='picture_read';
+READING_STAGES.push(stage('story_order','Kleine Geschichten ordnen','Drei Sätze lesen · drei Bilder in die richtige Reihenfolge bringen',Object.keys(STORIES),'order',{group:'story',instruction:'story_order',goal:2,color:'lavender',contextWords:STORY_VOCABULARY}));
 
 const digitChoices=['digit_6','digit_8'];
 READING_ITEMS.digit_6={text:'6',kind:'numeral',picture:'number_6'};READING_ITEMS.digit_8={text:'8',kind:'numeral',picture:'number_8'};
