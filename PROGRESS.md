@@ -73,7 +73,18 @@ placements. The old stationary-position test used exact transformed floats and
 failed on a 0.000061 CSS-pixel difference. Its check now allows strictly less than
 half a CSS pixel (no app/layout workaround); the full story suite rerun passed.
 
-Release publication/HTTPS verification: pending final clean source commit below.
+Published and verified 2026-11-10. Source/feature+main commit:
+9837810e7fa38f3ed45c1e4d4e6e74831b47214e
+https://github.com/PJendritza/phonics-lab/commit/9837810e7fa38f3ed45c1e4d4e6e74831b47214e
+Existing gh-pages commit: 0784efff434eb3ff6f5a67863887ea79a94cdde8.
+Executed clean build, scripts/publish.py --checkout
+/workspace/kalulu-browser-build/publish-v15, then scripts/verify_live.py after
+public BUILD_INFO propagation. All 705 live files match SHA256 over verified
+HTTPS; 13,179,501 bytes total. Live evidence:
+docs/verification/2026-10-18/live.json. URL:
+https://patrickjendritza.com/phonics-lab/?v=15.0.0
+This final evidence/docs commit does not redeploy app bytes; BUILD_INFO correctly
+continues to identify source 9837810e7fa3. Feature and main retain the full history.
 No known blocked access. Remaining uncertainty: physical-phone interaction,
 child/educator review and new story pronunciation; Chromium touch emulation and
 byte verification do not certify those. Smallest next user check: open v15,

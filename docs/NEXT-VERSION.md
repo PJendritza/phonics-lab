@@ -7,7 +7,7 @@
 - [x] Preserve earlier levels, exact legacy questions and historical completion.
 - [x] New art provenance, approved local Thorsten audio, current word inventory.
 - [x] 107 unit tests, all 15 Chromium suites, 654-clip audio audit; ten release gates.
-- [ ] Push clean source, publish existing demo and verify every public file.
+- [x] Source and feature pushed; v15 published and all 705 public files verified by SHA256 over HTTPS.
 - [ ] Human phone/child check of dragging, new pictures, story text and narration.
 
 Detailed behavior: STORY-DRAG-ANIMATION.md; actual commands/results: ../PROGRESS.md.
