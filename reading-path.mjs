@@ -1,7 +1,7 @@
 // Finite presentation units over stable tasks. Completion rewards practice;
 // contextual exposure never becomes an independently recognised word.
-import {SCENE_ITEMS, NOUNS} from './mixed-reading.mjs?v=07c9eb6dc793';
-import {STORIES} from './stories.mjs?v=07c9eb6dc793';
+import {SCENE_ITEMS, NOUNS} from './mixed-reading.mjs?v=45f8c9e435d7';
+import {STORIES} from './stories.mjs?v=45f8c9e435d7';
 
 const bank = pack => Object.keys(SCENE_ITEMS).filter(t => SCENE_ITEMS[t].pack === pack);
 const subjects = (pack, names) => bank(pack).filter(t => {

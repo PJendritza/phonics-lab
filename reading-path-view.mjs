@@ -1,4 +1,4 @@
-import {stepsFor, currentStep, stepStats} from './reading-path.mjs?v=07c9eb6dc793';
+import {stepsFor, currentStep, stepStats} from './reading-path.mjs?v=45f8c9e435d7';
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function etappeMap(p, stage, enabled) {
   const steps = stepsFor(stage);

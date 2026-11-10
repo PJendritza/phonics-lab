@@ -1,8 +1,8 @@
-import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=07c9eb6dc793';
-import {describeLevel} from './level-catalog.mjs?v=07c9eb6dc793';
-import {FORMS} from './word-choices.mjs?v=07c9eb6dc793';
-export const VERSION='14.0.0';
-export const CURRICULUM_VERSION=14;
+import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=45f8c9e435d7';
+import {describeLevel} from './level-catalog.mjs?v=45f8c9e435d7';
+import {FORMS} from './word-choices.mjs?v=45f8c9e435d7';
+export const VERSION='15.0.0';
+export const CURRICULUM_VERSION=15;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={
  a:{text:'a',audio:'a',kind:'sound'},m:{text:'m',audio:'m',kind:'sound'},i:{text:'i',audio:'i',kind:'sound'},
