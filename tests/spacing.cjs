@@ -11,12 +11,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const restore=async store=>{await page.locator('#settings').click();await page.locator('#import').setInputFiles({name:'review.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(store))});await page.locator('#confirm-import').click();};
  const choose=async()=>{await ready();const before=await state(),index=before.pending.index;await page.locator(`[data-choice="${before.pending.round.target}"]`).click();await page.waitForFunction(i=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3')),p=s.profiles.find(p=>p.id===s.activeId).progress;return !p.pending||p.pending.index!==i;},index);};
  await page.goto(base);await page.locator('#path').click();
- assert.equal(await page.locator('.level-chapter').count(),5);assert.equal(await page.locator('[data-stage]').count(),D.STAGES.length);
+ assert.equal(await page.locator('.level-chapter').count(),6);assert.equal(await page.locator('[data-stage]').count(),D.STAGES.length);
  assert.ok((await page.locator('[data-stage="long_words_listen"]').innerText()).includes('hören und erkennen'));
  assert.ok((await page.locator('[data-stage="long_words_read"]').innerText()).includes('selbst lesen'));
  assert.ok((await page.locator('[data-stage="first_sentences"]').innerText()).includes('Kurze Sätze:'));
  assert.equal(await page.locator('[data-level]').count(),D.STAGES.length);
- checks.push('Five named groups retain all current stable IDs and numbers; activity labels distinguish listening, independent word reading, phrase and sentence understanding.');
+ checks.push('Six named groups retain all current stable IDs and numbers; activity labels distinguish listening, independent word reading, phrase and sentence understanding.');
 
  const fixture=L.freshStore();fixture.profiles[0].progress=L.startSession(fixture.profiles[0].progress,'long_words_read',()=>.4);
  await restore(fixture);await page.locator('#play').click();await ready();let p=await state();
@@ -57,7 +57,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
   assert.equal(await page.locator('#play').evaluate(e=>e.getBoundingClientRect().bottom<innerHeight),true);
   assert.equal(await page.locator('#review-home').evaluate(e=>e.getBoundingClientRect().bottom<innerHeight),true);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
-  await page.locator('#path').click();assert.equal(await page.locator('.level-chapter').count(),5);
+  await page.locator('#path').click();assert.equal(await page.locator('.level-chapter').count(),6);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:`/workspace/kalulu-browser-build/v8-groups-${viewport.width}.png`,fullPage:true});
   checks.push(`${viewport.width}x${viewport.height}: continue/review above fold; grouped numbered map has no horizontal overflow.`);

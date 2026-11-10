@@ -10,7 +10,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
   if(e.target.id==='lesson-audio'){window.speech??=[];window.speech.push(new URL(e.target.currentSrc).pathname.split('/').pop());e.target.playbackRate=4;}
  },true));
  const state=()=>page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3'));return s.profiles.find(p=>p.id===s.activeId).progress;});
- const ready=()=>page.waitForFunction(()=>document.querySelector('[data-choice]')&&!document.querySelector('[data-choice]').disabled,null,{timeout:25000});
+ const ready=()=>page.waitForFunction(()=>document.querySelector('[data-choice],[data-story-frame]:not(.story-used)')&&!document.querySelector('[data-choice],[data-story-frame]:not(.story-used)').disabled,null,{timeout:25000});
  const speech=()=>page.evaluate(()=>window.speech||[]);
  const restore=async fixture=>{
   await page.locator('#settings').click();await page.locator('#import').setInputFiles({name:'reading.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
@@ -24,7 +24,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const unlock=async()=>{let p=await state();const wrong=p.pending.round.choices.find(c=>c!==p.pending.round.target);for(let i=p.pending.round.tries;i<2;i++){await page.locator(`[data-choice="${wrong}"]`).click();await ready();}assert.equal(await page.locator('#replay').count(),1);};
  const solve=async()=>{
   await ready();let before=await state();const index=before.pending.index;if(before.pending.round.help==='show'){await page.locator(`[data-choice="${before.pending.round.target}"]`).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('kalulu-de:learners:v3')).profiles.some(p=>p.progress.pending?.round.help===null));await ready();before=await state();}
-  await page.locator(`[data-choice="${before.pending.round.target}"]`).click();
+  if(D.stageById(before.pending.stageId).mode==='order'){for(const frame of D.ITEMS[before.pending.round.target].frames)await page.locator(`[data-story-frame="${frame}"]`).click();await page.locator('#story-check').click();}else await page.locator(`[data-choice="${before.pending.round.target}"]`).click();
   await page.waitForFunction(i=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3')),p=s.profiles.find(p=>p.id===s.activeId).progress;return !p.pending||p.pending.index!==i;},index);
  };
  await page.goto(base);await restore(fixture('picture_known'));
@@ -59,7 +59,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
 
  for(const id of D.STAGES.slice(14).map(s=>s.id)){
   await restore(fixture(id));p=await state();assert.equal(p.pending.stageId,id);assert.equal(p.pending.round.demonstration,false);
-  assert.ok((await page.locator('[data-choice]').count())>=2);await solve();
+  assert.ok((await page.locator(D.stageById(id).mode==='order'?'[data-story-frame]':'[data-choice]').count())>=2);await solve();
  }
  checks.push('Every appended level starts with choices and executes a real answer/automatic transition, using real MP3s for all listening levels.');
 

@@ -4495,6 +4495,69 @@
       "peak": 0.5819,
       "last50msPeak": 0.0,
       "sha256": "5e9ce0e2807536267e5717942e4f6ac1bcb789f699f760a5f74f0d47804fb423"
+    },
+    {
+      "id": "story_order",
+      "seconds": 3.827,
+      "peak": 0.6255,
+      "last50msPeak": 0.0,
+      "sha256": "1892bc02a06cef6194640f9ad9702034ef51d3013b386fd9ab37636892831fca"
+    },
+    {
+      "id": "story_book_bed",
+      "seconds": 4.661,
+      "peak": 0.6713,
+      "last50msPeak": 0.0,
+      "sha256": "ccb599329d4804a4ac49d14522c5ff004961c9445d3a7bdb5027f5d6847bc045"
+    },
+    {
+      "id": "story_breakfast_book",
+      "seconds": 5.636,
+      "peak": 0.6751,
+      "last50msPeak": 0.0,
+      "sha256": "9ebed4ebb5dd0f849e21d61925430c0a68d373d8eb3b5bba7002e022cf12e358"
+    },
+    {
+      "id": "story_book_snack",
+      "seconds": 5.613,
+      "peak": 0.6747,
+      "last50msPeak": 0.0,
+      "sha256": "c4653954c8d7a4d0d02050784061467d33bfa45f1fa5db1735030442f59f994d"
+    },
+    {
+      "id": "story_morning",
+      "seconds": 5.416,
+      "peak": 0.6678,
+      "last50msPeak": 0.0,
+      "sha256": "60c3fdb0a24a698f1c48f836648b168e0d588f9d03a0d3532167b56a0847190b"
+    },
+    {
+      "id": "story_evening_book",
+      "seconds": 5.288,
+      "peak": 0.6038,
+      "last50msPeak": 0.0,
+      "sha256": "fa9ab4b583d0567a9b10a8dc3ed87af5043e5956a55a5db04fbd79e57fab3eb4"
+    },
+    {
+      "id": "story_evening_milk",
+      "seconds": 5.265,
+      "peak": 0.6779,
+      "last50msPeak": 0.0,
+      "sha256": "373972c89257e4f42f4ab4e65dc0b71e69b15c93faa3aecc99bb0874c1156114"
+    },
+    {
+      "id": "story_cat_rest",
+      "seconds": 5.578,
+      "peak": 0.6527,
+      "last50msPeak": 0.0,
+      "sha256": "0d809045f394aa2b3f85b8f2903f11567354913b46e52a69f713efa816d46243"
+    },
+    {
+      "id": "story_dog_trip",
+      "seconds": 5.358,
+      "peak": 0.6734,
+      "last50msPeak": 0.0,
+      "sha256": "f8d13ffb543bd6950920e401daa1dd6effbad61c8b168ba3dab5f8845a1a666b"
     }
   ]
 }

@@ -1,5 +1,9 @@
 # Useful German words for the next reading Etappen
 
+Later update: v14 introduces es/er/sie and dann/danach in complete mini-stories.
+The figures and remaining-word comparison below are the v13 research snapshot.
+See [STORIES-V14.txt](STORIES-V14.txt).
+
 Research executed 2026-11-07. Compared the 119 active v12 word forms (source
 83dbb50ecb1274e7593f622badcc1641528d2a7b) against official vocabulary references.
 Selected six concrete everyday nouns, two highly frequent function words and

@@ -1,3 +1,4 @@
+import{orderedStory}from'./helpers/story-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {STAGES,stageById,skillKey,levelGoal,lettersFor} from '../app/data.mjs';
@@ -6,7 +7,7 @@ import {DAY} from '../app/spacing.mjs';
 import {freshProgress,startSession,answer,advance,useReadingHelp,showHelp,resumePractice,validateProgress,stageMastered,duePractice,startReview,recommended,sessionKey} from '../app/learning.mjs';
 const NOW=1_793_000_000_000,rng=()=>.4;
 const secure=()=>({introduced:true,seen:5,first:5,recent:[1,1,1,1],timeline:[]});
-function solve(p,now=NOW){const stage=stageById(p.pending.stageId);while(!p.pending.round.solved){const r=p.pending.round;p=answer(p,stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,now).progress;}return p;}
+function solve(p,now=NOW){p=orderedStory(p);const stage=stageById(p.pending.stageId);while(!p.pending.round.solved){const r=p.pending.round;p=answer(p,stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,now).progress;}return p;}
 function finish(p,now=NOW){while(p.pending){p=solve(p,now);p=advance(p,rng,now).progress;}return p;}
 
 test('an error does not cause back-to-back retries of the same word in later questions',()=>{
@@ -101,8 +102,8 @@ test('spacing and review state round-trip; malformed dates, paths or future coun
   const bad=structuredClone(p);change(bad);assert.throws(()=>validateProgress(bad));
  }
 });
-test('groups cover all 35 numbered levels and distinguish actual reading from listening',()=>{
- assert.equal(CHAPTERS.length,5);assert.equal(STAGES.length,35);
+test('groups cover all 36 numbered levels and distinguish actual reading from listening',()=>{
+ assert.equal(CHAPTERS.length,6);assert.equal(STAGES.length,36);
  for(const [index,s]of STAGES.entries())assert.ok(CHAPTERS.some(c=>c.id===s.chapter&&index+1>=c.from&&index+1<=c.to));
  assert.match(stageById('long_words_listen').title,/hören/);assert.match(stageById('long_words_read').title,/selbst lesen/);
  assert.equal(stageById('first_sentences').activity,'Sätze verstehen');assert.equal(stageById('sentence_meaning').activity,'Sätze verstehen');

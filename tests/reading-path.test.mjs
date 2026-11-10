@@ -12,14 +12,14 @@ function finish(p,now=NOW){while(p.pending){p=L.answer(p,p.pending.round.target,
 function single(p,id,target,now=NOW){p=structuredClone(p);p.stages[id]??={completed:1,passed:false,best:0};p.skills[`${stageById(id).group}:${target}`]??={introduced:true,seen:1,first:0,recent:[0],timeline:[[1,0]]};return L.startReview(p,id,rng,now);}
 
 test('three numbered reading levels have four finite named Etappen covering every live target',()=>{
- assert.equal(STAGES.length,35);
+ assert.equal(STAGES.length,36);
  for(const [id,steps]of Object.entries(READING_PATHS)){
   assert.equal(steps.length,4);assert.equal(new Set(steps.map(s=>s.id)).size,4);
   assert.deepEqual(new Set(steps.flatMap(s=>s.targets)),new Set(stageById(id).targets));
   for(const s of steps){assert.ok(s.title&&s.words.length>=6);assert.ok(new Set(s.targets.map(t=>ITEMS[t].family)).size>=3);}
  }
  assert.equal(stageById('sentence_meaning').targets.length,80);
- assert.deepEqual(STAGES.slice(-2).map(s=>s.targets.length),[105,102]);
+ assert.deepEqual(STAGES.slice(33,35).map(s=>s.targets.length),[105,102]);
  for(const id of ['reading_animals','reading_everyday'])assert.ok(stepsFor(id)[3].targets.every(t=>t.startsWith('daily_')));
 });
 
@@ -36,7 +36,7 @@ test('reachable Etappen complete in finite rounds and continue forward through a
   assert.deepEqual(visited,stepsFor(id).flatMap(s=>[s.id,s.id]));
   assert.equal(p.stages[id].passed,true);assert.ok(stepsFor(id).every(s=>stepStats(p,s).completed));
  }
- assert.equal(p.continuation,'complete');assert.equal(p.sessions,24);
+ assert.equal(p.continuation,'story_order');assert.equal(p.sessions,24);
 });
 
 test('same-level Etappe jumps, wrong answers and solved tasks resume exactly without double reward',()=>{
@@ -109,7 +109,7 @@ test('sentence exposure and pattern success never pretend individual word recogn
 });
 
 test('all added texts have silent, non-equivalent image foils; reading and holding the same book are contrasted',()=>{
- for(const stage of STAGES.slice(-2))for(const target of stage.targets.filter(t=>t.startsWith('daily_'))){
+ for(const stage of STAGES.slice(33,35))for(const target of stage.targets.filter(t=>t.startsWith('daily_'))){
   let p=single(L.freshProgress(),stage.id,target),r=p.pending.round,item=ITEMS[target];
   assert.equal(r.target,target);assert.equal(r.choices.length,4);assert.equal(new Set(r.choices).size,4);
   assert.equal(r.choices.filter(c=>equivalentScene(item,ITEMS[c])).length,1,target);
@@ -132,7 +132,7 @@ test('apple-at-tree answers always use the dedicated attached-apple illustration
 });
 
 test('new high-utility vocabulary is present in active tasks and the alphabetic inventory',()=>{
- const rows=wordInventory();assert.equal(rows.length,131);
+ const rows=wordInventory();assert.equal(rows.length,136);
  for(const word of ['Kind','Kinder','Frau','Mann','Brot','Wasser','Milch','und','nicht','liest','isst','trinkt'])assert.ok(rows.some(r=>r.word===word),word);
  assert.match(ITEMS.daily_34_frau_hat_wasser.text,/hat Wasser/);assert.match(ITEMS.daily_35_mama_hat_milch.shortText,/mit Milch/);
  assert.doesNotMatch(Object.values(SCENE_ITEMS).map(i=>i.text).join(' '),/ein Milch|einem Wasser/);

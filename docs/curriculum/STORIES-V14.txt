@@ -1,0 +1,50 @@
+Phonics Lab · Level 36 · Mini-Geschichten (v14)
+Text bleibt beim Ordnen sichtbar; Bildnummern werden in der Übung nicht verraten.
+
+1. Das Buch am Abend [story_book_bed]
+Das Kind hat ein Buch.
+Es liest das Buch.
+Dann schläft es.
+Bildfolge (nur Redaktion): daily_35_kind_hat_buch -> daily_35_kind_liest_buch -> daily_34_kind_schlaeft
+
+2. Eine kleine Pause [story_breakfast_book]
+Das Kind isst ein Brot.
+Danach trinkt es Wasser.
+Dann liest es ein Buch.
+Bildfolge (nur Redaktion): daily_35_kind_isst_brot -> daily_35_kind_trinkt_wasser -> daily_35_kind_liest_buch
+
+3. Eine andere Pause [story_book_snack]
+Das Kind liest ein Buch.
+Dann trinkt es Wasser.
+Danach isst es ein Brot.
+Bildfolge (nur Redaktion): daily_35_kind_liest_buch -> daily_35_kind_trinkt_wasser -> daily_35_kind_isst_brot
+
+4. Ein ruhiger Morgen [story_morning]
+Das Kind sitzt da.
+Dann trinkt es Milch.
+Danach liest es ein Buch.
+Bildfolge (nur Redaktion): daily_34_kind_wach -> daily_35_kind_trinkt_milch -> daily_35_kind_liest_buch
+
+5. Eine Geschichte am Abend [story_evening_book]
+Das Kind liest ein Buch.
+Danach trinkt es Milch.
+Dann schläft es.
+Bildfolge (nur Redaktion): daily_35_kind_liest_buch -> daily_35_kind_trinkt_milch -> daily_34_kind_schlaeft
+
+6. Noch ein ruhiger Abend [story_evening_milk]
+Das Kind trinkt Milch.
+Dann liest es ein Buch.
+Danach schläft es.
+Bildfolge (nur Redaktion): daily_35_kind_trinkt_milch -> daily_35_kind_liest_buch -> daily_34_kind_schlaeft
+
+7. Die Katze macht Pause [story_cat_rest]
+Die Katze ist am Haus.
+Dann ist sie auf dem Stuhl.
+Nun schläft sie.
+Bildfolge (nur Redaktion): mix34_katze_am_haus -> mix34_katze_auf_stuhl -> mix34_action_katze_schlaeft
+
+8. Der Hund unterwegs [story_dog_trip]
+Der Hund ist am Haus.
+Dann ist er im Bus.
+Nun schläft er.
+Bildfolge (nur Redaktion): mix34_hund_am_haus -> mix34_hund_im_bus -> mix34_action_hund_schlaeft

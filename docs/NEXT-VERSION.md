@@ -1,3 +1,23 @@
+# v14: read short stories and order the pictures
+
+Latest user request authorises this new exercise and the existing demo release.
+Earlier release notes/holds below are historical. Details: STORY-ORDERING.md.
+
+- [x] Append Level 36 with eight coherent three-sentence mini-stories.
+- [x] Tap/keyboard ordering, visible text, fixed shuffled tray, removable cards,
+      explicit full-sequence check and reset to the initial arrangement.
+- [x] No points for placements/errors; three correct stories fill one round flower.
+- [x] Optional full-story speech only after two incorrect complete checks; no
+      automatic solution or reordered answer. Preserve errors/help through reset.
+- [x] Exact partial/wrong/solved resume, JSON backup, independent sequence evidence
+      and forward migration from v13; all previous levels/Etappen retained.
+- [x] Reuse existing art; 9 new full recordings, 651 clips total, 136 word forms.
+- [x] 96 unit/content checks, audio audit and dedicated story browser tests pass.
+- [x] All fourteen browser suites and nine current-hash release gates pass.
+- [ ] Verify existing-site publication; exact commits/results in PROGRESS.md.
+
+---
+
 # v13 implementation: finite reading Etappen and useful vocabulary
 
 Latest user request authorises implementation and existing demo publication of

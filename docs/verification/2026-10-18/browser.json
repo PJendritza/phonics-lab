@@ -2592,9 +2592,45 @@
     {
       "src": "audio/daily_35_brot_neben_kiste_short.mp3?v=5e9ce0e28075",
       "duration": 1.924717
+    },
+    {
+      "src": "audio/story_order.mp3?v=1892bc02a06c",
+      "duration": 3.826893
+    },
+    {
+      "src": "audio/story_book_bed.mp3?v=ccb599329d48",
+      "duration": 4.660952
+    },
+    {
+      "src": "audio/story_breakfast_book.mp3?v=9ebed4ebb5dd",
+      "duration": 5.63619
+    },
+    {
+      "src": "audio/story_book_snack.mp3?v=c4653954c8d7",
+      "duration": 5.612971
+    },
+    {
+      "src": "audio/story_morning.mp3?v=60c3fdb0a24a",
+      "duration": 5.415601
+    },
+    {
+      "src": "audio/story_evening_book.mp3?v=fa9ab4b583d0",
+      "duration": 5.287891
+    },
+    {
+      "src": "audio/story_evening_milk.mp3?v=373972c89257",
+      "duration": 5.264671
+    },
+    {
+      "src": "audio/story_cat_rest.mp3?v=0d809045f394",
+      "duration": 5.578141
+    },
+    {
+      "src": "audio/story_dog_trip.mp3?v=f8d13ffb543b",
+      "duration": 5.357551
     }
   ],
   "status": "passed",
   "pageErrors": [],
-  "appSha256": "c3c1c2789c9ace852ee46851b8bf185bed0bf698c1fa0e299e501fcb162aca6b"
+  "appSha256": "07c9eb6dc793c37f0d2ca39ddd805358d683ca83e0128d7c0fa08cdc7a3de8f6"
 }

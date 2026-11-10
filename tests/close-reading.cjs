@@ -30,7 +30,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  await page.locator(`[data-choice="${pictureWrong}"]`).click();await ready();if((await state()).pending.stageId==='picture_known'){assert.equal(await page.locator('#replay').count(),1);await page.locator('#replay').click();await ready();}assert.equal((await spoken()).at(-1),r.cue+'.mp3');assert.equal(await page.locator('[data-choice]').count(),1);
  checks.push('Wrong pictures do not read their labels or unrelated sentences. Only the original target is read during the existing two-error teaching step; all AI image files decode.');
 
- await page.locator('#back').click();await page.locator('#path').click();assert.equal(await page.locator('[data-level]').count(),35);
+ await page.locator('#back').click();await page.locator('#path').click();assert.equal(await page.locator('[data-level]').count(),D.STAGES.length);
  assert.ok((await page.locator('[data-stage="sentence_words"]').innerText()).includes('Level 15'));
  assert.ok((await page.locator('[data-stage="phrase_place"]').innerText()).includes('Level 17'));
  checks.push('Common sentence words occur at Level 15, short phrase comprehension at 17; levels 1–14 keep their numbers and all saved IDs remain valid.');
@@ -53,7 +53,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const old=L.freshStore(),op=old.profiles[0].progress;op.curriculumVersion=7;op.continuation='first_sentences';op.sessions=20;op.seeds=100;op.stages.first_sentences={completed:2,passed:true,best:1};
  for(const t of D.stageById('first_sentences').legacyTargets)op.skills['sentence:'+t]={introduced:true,seen:3,first:3,recent:[1,1,1],timeline:[]};
  op.pending={stageId:'first_sentences',index:4,total:18,first:2,independent:4,round:{target:'s_hut',choices:['s_hut','s_ball'],cue:'s_hut',demonstration:false,tries:0,position:0,solved:false,help:null,misses:0,assisted:false}};
- await restore(old);assert.equal(await page.locator('.reading-prompt').innerText(),'Das ist ein Hut.');assert.equal((await state()).pending.total,18);assert.equal((await state()).curriculumVersion,13);assert.equal((await state()).stages.first_sentences.passed,false);
+ await restore(old);assert.equal(await page.locator('.reading-prompt').innerText(),'Das ist ein Hut.');assert.equal((await state()).pending.total,18);assert.equal((await state()).curriculumVersion,14);assert.equal((await state()).stages.first_sentences.passed,false);
  await page.locator('[data-choice="s_hut"]').click();await advanceFrom(4);await ready();assert.ok(D.stageById('first_sentences').targets.includes((await state()).pending.round.target));assert.equal((await state()).seeds,101);assert.equal((await state()).sessions,20);
  checks.push('An exact v8 noun-only saved question and its 18-question goal resume, all old rewards survive, and subsequent questions use real relation contrasts without inheriting old noun-only mastery.');
  assert.deepEqual(errors,[]);const info=await(await page.request.get('http://127.0.0.1:8070/preview/phonics-lab/BUILD_INFO.json')).json();

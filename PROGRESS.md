@@ -1,3 +1,81 @@
+# v14: tested mini-story picture-ordering level
+
+Branch short-stories-in-order, checkout /workspace/Kalulu-DE, canonical
+https://github.com/PJendritza/phonics-lab. Latest user explicitly authorises a
+new short-story reading level with ordered pictures and reset. Existing demo
+publication remains authorised. Scope: one new level, no new hosting/accounts,
+microphone, model installation or scheduling.
+
+Implemented appended Level 36 story_order (sixth chapter). Eight three-sentence
+mini-stories use existing consistent child/cat/dog art. Some share the same cards
+in a different order, requiring text order rather than only a plausible routine.
+Story stays visible. Tap cards into three slots, remove/reinsert, explicit Prüfen,
+and reset to the exact initial shuffled tray. Wrong full orders stay editable;
+partial placements/errors score nothing. Full correct sequence earns one unit
+and advances; three stories complete a round/flower. Reset preserves errors/help.
+Two wrong full checks unlock opt-in whole-story speech, without automatic speech,
+one-choice answer or per-position correctness. Info plays only the short guide.
+
+Exact partial/wrong/solved state survives reload, navigation and backup. New
+curriculum 14 preserves all v3 profiles, old 35 levels/Etappen and pending goals;
+old course-end/review cursors continue to 36. Story sequence evidence is separate
+from word recognition. Five new context forms es/er/sie/dann/danach bring actual
+inventory to 136; no invented per-word mastery. Nine complete local Thorsten
+recordings added with approved unchanged settings (651 active clips total).
+No new image files: reuse verified existing eight atlases/83 named sprites.
+Detailed rules and limits: docs/STORY-ORDERING.md. Text bank:
+docs/curriculum/STORIES-V14.txt.
+
+Executed:
+```sh
+python3 scripts/prepare_guides.py
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py --utterances-only
+node --test --test-reporter=tap tests/*.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+node tests/story-order.cjs
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mixed-reading.cjs
+node tests/child-guidance.cjs
+node tests/profiles.cjs
+node tests/level-navigation.cjs
+node tests/mobile-smoke.cjs
+node tests/word-list.cjs
+node tests/word-hints.cjs
+node tests/choice-help.cjs
+node tests/reading-path.cjs
+git diff --check
+```
+96 unit/content tests pass; all 651 MP3s pass decode/headroom/end-padding checks.
+Dedicated story browser suite passes actual touch ordering, incorrect checks,
+remove/reset, keyboard reset, gated full-story playback, backup/partial/wrong/
+solved resume, one-time rewards, fixed three-story goal, v13 forward migration
+and optional instruction failure recovery. All eight stories checked at
+320x568, 390x844 and 768x1024: readable text/cards, reachable controls, no horizontal
+overflow. Short phones may scroll naturally. Initial/placed story screenshots
+inspected externally. Media/guide browser tests are real Chromium, not a physical
+phone or a general reading-comprehension/pronunciation validation.
+
+Build: 696 files / 12,665,377 bytes dirty (clean metadata adds one byte), within
+unchanged 14 MB cap. All fourteen browser suites pass against final app hash
+07c9eb6dc793; all nine release gates are bound to that hash. Evidence:
+docs/verification/v14-browser-matrix.json and v14-stories.json. No app changes
+during the final matrix. Existing whole-course fixtures explicitly arrange the
+new mode; 36-level/six-chapter/current-word-count assertions were updated without
+skipping older behavior. Vocabulary validation caught the new pronouns/connectors;
+these are now explicitly declared as contextual words in the new level rather
+than falsely claimed previously taught phonics.
+
+Publication pending clean source commit/push, promotion of main, clean build,
+existing gh-pages update with a fresh external checkout, and byte verification of
+every public HTTPS file. No Pages settings changes. Live remains v13 until that
+step completes. Physical-device and educator/pronunciation review remain separate.
+
+---
+
 # v13: tested reading Etappen, useful words and attached apple art
 
 Branch reading-etappen-and-useful-words, checkout /workspace/Kalulu-DE, canonical

@@ -18,7 +18,7 @@ export function etappeMap(p, stage, enabled) {
     }).join('')}</ol><p class="subtle">Eine Etappe umfasst mehrere kurze Runden. Ihr Abschluss belohnt eigenständige Übung mit verschiedenen Aufgaben, nicht jedes Wort des gesamten Satzvorrats.</p>
   </details>`;
 }
-const PATTERNS = {place:'Ortsangaben',quantity:'Mengen',size:'Größen',possession:'Wer hat was?',action:'Handlungen und Zustände',pair:'Zwei Aussagen',negation:'nicht verstehen',coordination:'und: beide Aussagen verstehen'};
+const PATTERNS = {place:'Ortsangaben',quantity:'Mengen',size:'Größen',possession:'Wer hat was?',action:'Handlungen und Zustände',pair:'Zwei Aussagen',negation:'nicht verstehen',coordination:'und: beide Aussagen verstehen','story:sequence':'Geschichten: Bilderfolge verstehen'};
 export function readingReport(p) {
   const path = p.readingPath, words = Object.values(path?.words??{});
   const recognised = words.filter(w=>w.recognised>0).length, later = words.filter(w=>w.later).length;

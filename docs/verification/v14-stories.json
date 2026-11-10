@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "version": "14.0.0",
+  "assetVersion": "07c9eb6dc793",
+  "stories": 8,
+  "checks": [
+    "Real touch ordering, explicit full-order check, wrong editable sequence, stationary tray, individual removal and keyboard reset work. Reset preserves attempts/help; two wrong checks unlock only opt-in speech. Partial/wrong/solved states survive confirmed backup, pause and reload without double rewards. Three stories fill the fixed round flower.",
+    "320x568: all eight stories and pictures decode; readable text, stable 60px+ cards, reachable 44px+ controls and no horizontal overflow. Short phones can scroll naturally.",
+    "390x844: all eight stories and pictures decode; readable text, stable 60px+ cards, reachable 44px+ controls and no horizontal overflow. Short phones can scroll naturally.",
+    "768x1024: all eight stories and pictures decode; readable text, stable 60px+ cards, reachable 44px+ controls and no horizontal overflow. Short phones can scroll naturally.",
+    "Optional direction failure does not strand the child. A completed v13 profile starts Level 36 and preserves prior rewards. Info plays only the short instruction, not the story or its answer."
+  ],
+  "pageErrors": [],
+  "limits": "Actual Chromium touch/keyboard, real media and backup UI; not a physical-phone or general reading-comprehension validation."
+}

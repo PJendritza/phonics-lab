@@ -1,6 +1,6 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs');
 (async()=>{
- const D=await import('../app/data.mjs'),L=await import('../app/learning.mjs'),R=await import('../app/reading-path.mjs');
+ const H=await import('./helpers/story-fixture.mjs');const D=await import('../app/data.mjs'),L=await import('../app/learning.mjs'),R=await import('../app/reading-path.mjs');
  const base='http://127.0.0.1:8070/preview/phonics-lab/';
  const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:390,height:844},hasTouch:true}),errors=[],checks=[];
@@ -52,9 +52,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  // A real eight-profile backup can exceed the previous one-MB import limit.
  let full=L.freshProgress();
  for(const stage of D.STAGES)for(let n=0;n<8&&!full.stages[stage.id]?.passed;n++){
-  full=L.startSession(full,stage.id,()=>.4);while(full.pending){while(!full.pending.round.solved){const r=full.pending.round;full=L.answer(full,stage.mode==='build'?D.lettersFor(r.target)[r.position].toLowerCase():r.target).progress;}full=L.advance(full,()=>.4).progress;}
+  full=L.startSession(full,stage.id,()=>.4);while(full.pending){while(!full.pending.round.solved){full=H.orderedStory(full);const r=full.pending.round;full=L.answer(full,stage.mode==='build'?D.lettersFor(r.target)[r.position].toLowerCase():r.target).progress;}full=L.advance(full,()=>.4).progress;}
  }
- for(const stage of D.STAGES.slice(-3))for(const step of R.stepsFor(stage))for(let n=0;n<8;n++){
+ for(const stage of D.STAGES.filter(s=>R.stepsFor(s).length))for(const step of R.stepsFor(stage))for(let n=0;n<8;n++){
   full=L.startSession(full,stage.id,()=>.4,Date.now(),step.id);while(full.pending){full=L.answer(full,full.pending.round.target).progress;full=L.advance(full,()=>.4).progress;}
  }
  for(const stage of D.STAGES){full=L.startSession(full,stage.id,()=>.4);for(const step of R.stepsFor(stage))full=L.startSession(full,stage.id,()=>.4,Date.now(),step.id);}

@@ -13,6 +13,26 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+Latest authorised update is v14: Oliver's new Level 36 story_order, with eight
+three-sentence mini-stories and tap-to-order picture sequences. See
+docs/STORY-ORDERING.md. First 35 numbers/IDs and Etappen remain. A new sixth
+chapter groups stories; old "35/no extra levels" instructions below are historical.
+Do not turn story mode into listening or single-picture matching. Three complete
+orders per round; only a correct whole sequence scores. Keep fixed tray positions,
+readable full text, remove/reinsert taps, explicit Prüfen and Zurücksetzen. Reset
+restores the initial shuffled tray and never erases attempts or assistance. No
+initial sorted answer tray or per-position correctness hints. Story mode never
+automatically enters one-choice teaching; two wrong full checks unlock only
+opt-in full-story speech. Info remains a generic guide. All selected/checked/solved
+states survive pause/reload/profile backup with no duplicate reward. v3 storage
+remains, curriculum is 14; prior course ends/review return paths enter Level 36.
+Story success counts as sequence evidence, never constituent-word mastery. The
+eight stories reuse existing consistent art and add five context forms (es/er/sie/
+dann/danach); inventory 136 forms, 651 audio clips. No new models/dependencies.
+Run tests/story-order.cjs and all prior release gates; publisher requires its
+current-hash v14-stories.json evidence. Use tests/helpers/story-fixture.mjs only
+to prepare correct sequences in older course fixtures, not to bypass UI checks.
+
 Latest authorised implementation is v13: four finite named Etappen each in
 Levels 33–35, correct attached apple-at-tree art, researched everyday vocabulary,
 parent coverage/independent evidence and within-level due Etappe interleaving.

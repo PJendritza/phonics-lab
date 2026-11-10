@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "timeUTC": "2026-11-10T18:39:37.628260+00:00",
+  "appSha256": "07c9eb6dc793c37f0d2ca39ddd805358d683ca83e0128d7c0fa08cdc7a3de8f6",
+  "suites": [
+    {
+      "suite": "story-order",
+      "exitCode": 0
+    },
+    {
+      "suite": "close-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "spacing",
+      "exitCode": 0
+    },
+    {
+      "suite": "mixed-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "profiles",
+      "exitCode": 0
+    },
+    {
+      "suite": "child-guidance",
+      "exitCode": 0
+    },
+    {
+      "suite": "level-navigation",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-list",
+      "exitCode": 0
+    },
+    {
+      "suite": "mobile-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-hints",
+      "exitCode": 0
+    },
+    {
+      "suite": "choice-help",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading-path",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser",
+      "exitCode": 0
+    }
+  ],
+  "limits": "Actual Chromium/media/backup, touch and keyboard; no physical-device or educational-efficacy certification."
+}

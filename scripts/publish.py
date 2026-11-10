@@ -30,6 +30,8 @@ def main():
  if words.get('status')!='passed' or words.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current vocabulary browser checks before publishing.')
  path=json.loads((ROOT/'docs/verification/v13-reading-path.json').read_text())
  if path.get('status')!='passed' or path.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current Etappen, progress, migration and new-vocabulary browser checks before publishing.')
+ stories=json.loads((ROOT/'docs/verification/v14-stories.json').read_text())
+ if stories.get('status')!='passed' or stories.get('assetVersion')!=digest.hexdigest()[:12]:raise SystemExit('Run current story ordering, reset, help and resume browser checks before publishing.')
  info=json.loads((site/'BUILD_INFO.json').read_text());commit=run('git','rev-parse','HEAD')
  if info['sourceDirty'] or info['sourceCommit']!=commit:raise SystemExit('Rebuild from the clean current source commit.')
  for line in (site/'SHA256SUMS').read_text().splitlines():

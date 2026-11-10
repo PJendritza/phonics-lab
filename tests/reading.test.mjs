@@ -52,13 +52,13 @@ test('completed v6 profiles continue at new Level 15 while unfinished work and a
  const old=freshProgress();delete old.curriculumVersion;old.continuation='complete';old.sessions=20;old.seeds=200;
  old.stages.more_build={completed:2,passed:true,best:1};
  const p=validateProgress(old);assert.equal(recommended(p).id,'sentence_words');assert.equal(p.sessions,20);assert.equal(p.seeds,200);
- assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,13);
+ assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,14);
  const pending=startSession(old,'more_build',rng);delete pending.curriculumVersion;
  assert.deepEqual(validateProgress(pending).pending,pending.pending);
  const done=freshProgress();done.continuation='complete';assert.equal(validateProgress(done).continuation,'complete');
 });
 test('pictures and syllable spelling resolve; new context vocabulary is explicitly declared for full-utterance help',()=>{
- assert.equal(STAGES.length,35);assert.ok(WORDS.length>=30);
+ assert.equal(STAGES.length,36);assert.ok(WORDS.length>=30);
  for(const stage of READING_STAGES){
   assert.ok(stepsFor(stage).length?stepsFor(stage).every(s=>s.targets.length<=105):stage.targets.length<=100);
   for(const target of stage.targets){
@@ -71,7 +71,7 @@ test('pictures and syllable spelling resolve; new context vocabulary is explicit
    for(const target of stage.targets)assert.ok(earlier.some(s=>s.targets.includes(target)||Object.values(CONTEXTS[s.mode]??{}).flat().includes(target)),target+' introduced before independent reading');
   }
  }
- const taught=new Set([...STAGES.slice(0,30).flatMap(s=>s.targets.map(t=>ITEMS[t]?.text.toLowerCase())),...EXPANSION_VOCABULARY]);
+ const taught=new Set([...STAGES.slice(0,30).flatMap(s=>s.targets.map(t=>ITEMS[t]?.text.toLowerCase())),...EXPANSION_VOCABULARY,...STAGES.flatMap(s=>s.contextWords??[])]);
  for(const sentence of Object.values({...SENTENCES,...PHRASES}))for(const word of sentence.text.toLowerCase().replace(/[.]/g,'').split(' '))assert.ok(taught.has(word),'Untaught sentence word '+word);
 });
 test('assistance import validation rejects corrupt flags without changing the saved profile',()=>{
