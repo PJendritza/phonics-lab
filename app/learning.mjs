@@ -2,7 +2,7 @@ import {sceneDimensions,equivalentScene} from './mixed-reading.mjs';
 import {STAGES,ITEMS,CONTEXTS,BUILD_UNITS,AVATARS,CURRICULUM_VERSION,stageById,skillKey,lettersFor,levelGoal} from './data.mjs';
 import {freshSpacing,selectTarget,recordPractice,practiceGoal,dueReviews,validateSpacing} from './spacing.mjs';
 import {challengeTier,closeChoices,validForms} from './word-choices.mjs';
-import {newStoryRound,storyCorrect,editStoryRound,resetStoryRound,validateStoryRound} from './stories.mjs';
+import {newStoryRound,storyCorrect,fullStoryOrder,editStoryRound,dropStoryRound,resetStoryRound,validateStoryRound} from './stories.mjs';
 import {stepsFor,stepById,currentStep,allStepsComplete,freshReadingPath,recordReadingEvidence,finishStep,embeddedReview,validateReadingPath,migrateReadingPath,tokens} from './reading-path.mjs';
 export const duePractice=(progress,now=Date.now())=>dueReviews(progress,STAGES,now);
 export const STORAGE_KEY='kalulu-de:learners:v3',LEGACY_KEY='kalulu-de:calm:v2';
@@ -102,7 +102,7 @@ export function startReview(progress,stageId=null,rng=Math.random,now=Date.now()
 export function answer(progress,choice,now=Date.now()){
  if(!progress.pending)return {progress,correct:false,finished:false};const next=structuredClone(progress),session=next.pending,stage=stageById(session.stageId),r=session.round;
  const ordering=stage.mode==='order';
- if(r.solved||(ordering?choice!==r.target||r.order.length!==r.choices.length:!r.choices.includes(choice)))return {progress,correct:false,finished:false};
+ if(r.solved||(ordering?choice!==r.target||!fullStoryOrder(r):!r.choices.includes(choice)))return {progress,correct:false,finished:false};
  const expected=stage.mode==='build'?lettersFor(r.target)[r.position].toLowerCase():r.target,correct=ordering?storyCorrect(r):choice===expected;
  if(r.help){
   if(r.help!=='show'||!correct)return {progress,correct:false,finished:false};
@@ -130,6 +130,11 @@ export function resetStory(progress){
  const round=resetStoryRound(progress.pending.round);if(round===progress.pending.round)return progress;
  const next=structuredClone(progress);next.pending.round=round;return next;
 }
+export function placeStoryFrame(progress,frame,index){
+ if(!progress.pending||stageById(progress.pending.stageId).mode!=='order')return progress;
+ const round=dropStoryRound(progress.pending.round,frame,index);if(round===progress.pending.round)return progress;
+ const next=structuredClone(progress);next.pending.round=round;return next;
+}
 export function showHelp(progress){if(progress.pending?.round.help!=='pending')return progress;const next=structuredClone(progress);next.pending.round.help='show';return next;}
 export function resumePractice(progress){if(progress.pending?.round.help!=='ack')return progress;const next=structuredClone(progress);next.pending.round.help=null;next.pending.round.misses=0;return next;}
 export function readingAudioAvailable(progress){const s=progress.pending,r=s?.round;return !!s&&['picture','order'].includes(stageById(s.stageId).mode)&&!r.solved&&(r.tries>=2||!!r.help);}
@@ -144,7 +149,7 @@ export function advance(progress,rng=Math.random,now=Date.now()){
  if(session.index+1>=session.total){
   const etappe=session.etappeId&&session.returnTo===undefined?finishStep(next,stage,session.etappeId):null;
   const previous=next.stages[stage.id]??{completed:0,passed:false,best:0};const passed=stageMastered(next,stage);next.stages[stage.id]={completed:previous.completed+1,passed:previous.passed||passed,best:Math.max(previous.best,session.independent?session.first/session.independent:0)};next.sessions++;next.pending=null;
-  const follow=STAGES.slice(STAGES.indexOf(stage)+1).find(s=>stepsFor(s).length?!allStepsComplete(next,s):!next.stages[s.id]?.passed)?.id??'complete';
+  const follow=STAGES.slice(STAGES.indexOf(stage)+1).find(s=>stepsFor(s).length?!allStepsComplete(next,s):s.mode==='order'?!stageMastered(next,s):!next.stages[s.id]?.passed)?.id??'complete';
   next.continuation=session.returnTo??(passed||(etappe?.completed&&!etappe.next)?follow:stage.id);
   if(session.returnStep)next.readingPath.cursors[stage.id]=session.returnStep;
   return {progress:next,completed:true,stageId:stage.id,passed,firstPass:passed&&!previous.passed,score:session.first,total:session.independent,goal:session.total,nextStageId:next.continuation,review:session.returnTo!==undefined,...(etappe?{etappeId:session.etappeId,etappeCompleted:etappe.completed,etappeFirst:etappe.firstCompletion}:{} )};
@@ -229,6 +234,12 @@ export function validateProgress(p){
  }
  if((p.curriculumVersion??6)<13)migrateReadingPath(result);
  if((p.curriculumVersion??6)<14){
+  if(result.continuation==='complete')result.continuation='story_order';
+  for(const session of [result.pending,...Object.values(result.paused)])if(session?.returnTo==='complete')session.returnTo='story_order';
+ }
+ if((p.curriculumVersion??6)<15){
+  // Keep the historical completion award; new targets still need their own
+  // independent evidence before the current story course is mastered.
   if(result.continuation==='complete')result.continuation='story_order';
   for(const session of [result.pending,...Object.values(result.paused)])if(session?.returnTo==='complete')session.returnTo='story_order';
  }

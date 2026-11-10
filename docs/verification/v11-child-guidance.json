@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "14.0.0",
-  "assetVersion": "07c9eb6dc793",
+  "version": "15.0.0",
+  "assetVersion": "45f8c9e435d7",
   "checks": [
     "No automatic directions/solution speech. Small 12px hint and 44px info control play only the short direction. Audio help is absent initially and after one error; two wrong answers expose it without autoplay. Exact reload, optional model, guided tap, stable positions and next-question relocking work.",
     "reading_animals: real complete twelve-question Etappe round covers all its current families and both im/am without any solution playback.",

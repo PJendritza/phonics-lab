@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "14.0.0",
-  "assetVersion": "07c9eb6dc793",
+  "version": "15.0.0",
+  "assetVersion": "45f8c9e435d7",
   "checks": [
     "Named 1/4–4/4 Etappen are directly selectable. Same-level switching and reload preserve exact mistakes, cues, choices and goals. Two real twelve-question rounds finish the first Etappe and Continue starts the second.",
     "Parent map shows finite completion and target-word coverage, and the report separates contextual encounters from standalone independent word recognition. Confirmed JSON backup contains Etappen, pattern evidence and word evidence.",

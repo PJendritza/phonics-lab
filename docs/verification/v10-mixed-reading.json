@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "14.0.0",
-  "assetVersion": "07c9eb6dc793",
+  "version": "15.0.0",
+  "assetVersion": "45f8c9e435d7",
   "checks": [
     "320x568: full text and four stationary options fit for all six families; images decode, including on/under and exact quantities.",
     "390x844: full text and four stationary options fit for all six families; images decode, including on/under and exact quantities.",

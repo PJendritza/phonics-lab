@@ -110,3 +110,29 @@ svg.play-symbol{width:40px;height:40px;flex-shrink:0}
 .story-audio{height:54px;display:flex;align-items:center;justify-content:center}.story-audio .replay{min-height:44px;height:44px;margin:0;padding:8px 14px;min-width:150px;font-size:14px}
 @media(max-width:700px){.story-slots,.story-tray{gap:8px}.story-card,.story-empty{height:94px}.story-tray{min-height:94px}.story-text{font-size:23px}}
 @media(max-height:740px) and (max-width:700px){.story-session .story-title{margin:0 0 4px}.story-text{font-size:21px;line-height:1.35}.story-card,.story-empty{height:76px}.story-tray{min-height:76px}.story-slots,.story-tray{margin:5px auto}.story-controls{margin:9px auto 4px}.story-controls button{min-height:44px;padding:8px 11px;font-size:14px}.story-audio{height:46px}.story-session .level-progress .meter-flower svg{height:48px;width:45px}.story-session .level-progress .meter-flower{width:45px}}
+
+/* Small unnumbered triangular picture pool, separate from large target slots. */
+.story-session .story-tray{position:relative;display:block;width:218px;max-width:100%;height:148px;min-height:148px;margin:10px auto 5px;border-radius:48%;background:#edf0e555}
+.story-tray>.story-card{position:absolute;width:82px;height:68px;min-height:44px;padding:3px;border-radius:13px}
+.story-tray>.story-card:nth-child(1){left:0;top:72px;transform:rotate(-5deg)}
+.story-tray>.story-card:nth-child(2){left:68px;top:0;transform:rotate(3deg)}
+.story-tray>.story-card:nth-child(3){right:0;top:72px;transform:rotate(5deg)}
+.story-slots .story-card,.story-slots .story-empty{height:116px}
+.story-card{touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+.story-drag-source{opacity:.25}.story-card:active{cursor:grabbing}
+.story-position.story-drop-active>.story-card,.story-position.story-drop-active>.story-empty{border:3px solid #548067;background:#e0edd9}
+.story-tray.story-drop-active{outline:2px dashed #548067;outline-offset:3px}
+.story-drag-ghost{position:fixed;left:0;top:0;z-index:10000;height:100px;padding:5px;border:2px solid #548067;border-radius:16px;background:#fffdf8;box-shadow:0 6px 20px #243c3733;pointer-events:none;will-change:transform}
+.story-drag-ghost svg{display:block;width:100%;height:100%}
+.story-film{max-width:580px;margin:auto}.story-film>p.subtle{margin:7px 0}
+.film-screen{max-width:530px;margin:0 auto;border-radius:24px;background:#f1f4e9;overflow:hidden}
+.story-film-scene{display:block;width:100%;height:auto}
+.film-caption{color:var(--ink);font-size:23px;font-weight:700;line-height:1.4;min-height:65px;margin:14px auto 8px}
+.film-controls{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
+.film-controls button{min-width:46px;min-height:48px;padding:10px 15px}
+.film-controls .quiet{background:#e5eddf;font-size:24px;line-height:1}
+.film-controls svg{width:23px;height:23px;display:block}.film-controls #film-next{font-size:17px}
+.film-stills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px auto}
+.film-stills figure{margin:0}.film-stills svg{width:100%;height:auto}.film-stills figcaption{font-size:13px;line-height:1.5}
+@media(max-width:400px){.story-session .story-tray{width:190px;height:132px;min-height:132px}.story-tray>.story-card{width:72px;height:60px}.story-tray>.story-card:nth-child(1),.story-tray>.story-card:nth-child(3){top:65px}.story-tray>.story-card:nth-child(2){left:59px}.story-slots .story-card,.story-slots .story-empty{height:106px}.film-caption{font-size:21px}}
+@media(max-height:740px) and (max-width:700px){.story-slots .story-card,.story-slots .story-empty{height:94px}.story-session .story-tray{margin-top:8px}.story-after-film .film-screen{max-width:310px}.film-caption{font-size:20px;min-height:56px;margin:8px auto}.film-controls button{min-height:44px}.film-stills{gap:6px}}

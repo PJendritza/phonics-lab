@@ -1,3 +1,19 @@
+# v15: picture dragging and short illustrated animations
+
+- [x] Smaller triangular pool; drag/tap/keyboard into larger numbered boxes.
+- [x] Swap/return/cancel/reset; preserve exact slots, attempts and backups.
+- [x] Three playful new stories with short 2D reward movies (eleven stories total).
+- [x] Pause/replay/optional narrator/Weiter; reduced-motion stills and single reward.
+- [x] Preserve earlier levels, exact legacy questions and historical completion.
+- [x] New art provenance, approved local Thorsten audio, current word inventory.
+- [x] 107 unit tests, all 15 Chromium suites, 654-clip audio audit; ten release gates.
+- [ ] Push clean source, publish existing demo and verify every public file.
+- [ ] Human phone/child check of dragging, new pictures, story text and narration.
+
+Detailed behavior: STORY-DRAG-ANIMATION.md; actual commands/results: ../PROGRESS.md.
+
+---
+
 # v14: read short stories and order the pictures
 
 Latest user request authorises this new exercise and the existing demo release.

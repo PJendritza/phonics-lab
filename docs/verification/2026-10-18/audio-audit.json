@@ -4498,10 +4498,10 @@
     },
     {
       "id": "story_order",
-      "seconds": 3.827,
-      "peak": 0.6255,
+      "seconds": 3.049,
+      "peak": 0.6166,
       "last50msPeak": 0.0,
-      "sha256": "1892bc02a06cef6194640f9ad9702034ef51d3013b386fd9ab37636892831fca"
+      "sha256": "e5a287e2e4cf47afab16a87f5931048a162e28dd0119b1beee7e493675a2cdb9"
     },
     {
       "id": "story_book_bed",
@@ -4558,6 +4558,27 @@
       "peak": 0.6734,
       "last50msPeak": 0.0,
       "sha256": "f8d13ffb543bd6950920e401daa1dd6effbad61c8b168ba3dab5f8845a1a666b"
+    },
+    {
+      "id": "story_dog_hat",
+      "seconds": 5.032,
+      "peak": 0.6833,
+      "last50msPeak": 0.0,
+      "sha256": "ea3a0c35b58a4a9a4f0fd665c20415bdd2b4a2669d5f8b80eda56bcaa6beac27"
+    },
+    {
+      "id": "story_frog_ball",
+      "seconds": 5.938,
+      "peak": 0.6735,
+      "last50msPeak": 0.0,
+      "sha256": "eb0a91d5921f28f57f1772f85bc4e0028c857debde20c0cfdb95fe9bc75fc4d0"
+    },
+    {
+      "id": "story_cat_box",
+      "seconds": 6.205,
+      "peak": 0.67,
+      "last50msPeak": 0.0,
+      "sha256": "d56ebbee47ab50d99952108096fd4aecfc58068381b4710425744ffe2edf8fb1"
     }
   ]
 }

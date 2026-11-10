@@ -132,7 +132,7 @@ test('apple-at-tree answers always use the dedicated attached-apple illustration
 });
 
 test('new high-utility vocabulary is present in active tasks and the alphabetic inventory',()=>{
- const rows=wordInventory();assert.equal(rows.length,136);
+ const rows=wordInventory();assert.equal(rows.length,150);
  for(const word of ['Kind','Kinder','Frau','Mann','Brot','Wasser','Milch','und','nicht','liest','isst','trinkt'])assert.ok(rows.some(r=>r.word===word),word);
  assert.match(ITEMS.daily_34_frau_hat_wasser.text,/hat Wasser/);assert.match(ITEMS.daily_35_mama_hat_milch.shortText,/mit Milch/);
  assert.doesNotMatch(Object.values(SCENE_ITEMS).map(i=>i.text).join(' '),/ein Milch|einem Wasser/);

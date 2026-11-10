@@ -52,7 +52,7 @@ test('completed v6 profiles continue at new Level 15 while unfinished work and a
  const old=freshProgress();delete old.curriculumVersion;old.continuation='complete';old.sessions=20;old.seeds=200;
  old.stages.more_build={completed:2,passed:true,best:1};
  const p=validateProgress(old);assert.equal(recommended(p).id,'sentence_words');assert.equal(p.sessions,20);assert.equal(p.seeds,200);
- assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,14);
+ assert.equal(p.stages.more_build.completed,2);assert.equal(p.curriculumVersion,15);
  const pending=startSession(old,'more_build',rng);delete pending.curriculumVersion;
  assert.deepEqual(validateProgress(pending).pending,pending.pending);
  const done=freshProgress();done.continuation='complete';assert.equal(validateProgress(done).continuation,'complete');

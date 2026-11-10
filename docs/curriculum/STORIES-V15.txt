@@ -1,0 +1,69 @@
+Phonics Lab · Level 36 · Mini-Geschichten (v15)
+Text bleibt beim Ordnen sichtbar; Bildnummern werden in der Übung nicht verraten.
+
+1. Der Hund und der Hut [story_dog_hat] · kurze Animation nach richtiger Lösung
+Der Hund findet einen Hut.
+Er trägt ihn zum Baum.
+Dann schläft er mit dem Hut.
+Bildfolge (nur Redaktion): film_dog_find -> film_dog_carry -> film_dog_sleep
+
+2. Der Frosch auf dem Ball [story_frog_ball] · kurze Animation nach richtiger Lösung
+Der Frosch hüpft auf den Ball.
+Der Ball rollt los.
+Der Frosch landet im Gras.
+Bildfolge (nur Redaktion): film_frog_ball -> film_frog_roll -> film_frog_grass
+
+3. Die Katze und die Kiste [story_cat_box] · kurze Animation nach richtiger Lösung
+Die Katze springt in die Kiste.
+Die Kiste kippt um.
+Dann schaut die Katze heraus.
+Bildfolge (nur Redaktion): film_cat_jump -> film_cat_tip -> film_cat_peek
+
+4. Das Buch am Abend [story_book_bed]
+Das Kind hat ein Buch.
+Es liest das Buch.
+Dann schläft es.
+Bildfolge (nur Redaktion): daily_35_kind_hat_buch -> daily_35_kind_liest_buch -> daily_34_kind_schlaeft
+
+5. Eine kleine Pause [story_breakfast_book]
+Das Kind isst ein Brot.
+Danach trinkt es Wasser.
+Dann liest es ein Buch.
+Bildfolge (nur Redaktion): daily_35_kind_isst_brot -> daily_35_kind_trinkt_wasser -> daily_35_kind_liest_buch
+
+6. Eine andere Pause [story_book_snack]
+Das Kind liest ein Buch.
+Dann trinkt es Wasser.
+Danach isst es ein Brot.
+Bildfolge (nur Redaktion): daily_35_kind_liest_buch -> daily_35_kind_trinkt_wasser -> daily_35_kind_isst_brot
+
+7. Ein ruhiger Morgen [story_morning]
+Das Kind sitzt da.
+Dann trinkt es Milch.
+Danach liest es ein Buch.
+Bildfolge (nur Redaktion): daily_34_kind_wach -> daily_35_kind_trinkt_milch -> daily_35_kind_liest_buch
+
+8. Eine Geschichte am Abend [story_evening_book]
+Das Kind liest ein Buch.
+Danach trinkt es Milch.
+Dann schläft es.
+Bildfolge (nur Redaktion): daily_35_kind_liest_buch -> daily_35_kind_trinkt_milch -> daily_34_kind_schlaeft
+
+9. Noch ein ruhiger Abend [story_evening_milk]
+Das Kind trinkt Milch.
+Dann liest es ein Buch.
+Danach schläft es.
+Bildfolge (nur Redaktion): daily_35_kind_trinkt_milch -> daily_35_kind_liest_buch -> daily_34_kind_schlaeft
+
+10. Die Katze macht Pause [story_cat_rest]
+Die Katze ist am Haus.
+Dann ist sie auf dem Stuhl.
+Nun schläft sie.
+Bildfolge (nur Redaktion): mix34_katze_am_haus -> mix34_katze_auf_stuhl -> mix34_action_katze_schlaeft
+
+11. Der Hund unterwegs [story_dog_trip]
+Der Hund ist am Haus.
+Dann ist er im Bus.
+Nun schläft er.
+Bildfolge (nur Redaktion): mix34_hund_am_haus -> mix34_hund_im_bus -> mix34_action_hund_schlaeft
+

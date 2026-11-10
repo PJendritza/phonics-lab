@@ -3,9 +3,9 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=14.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=14.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=15.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=15.0.0)**
 
-[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=14.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. There are 136 current word forms. Short noun phrases include articles; Ballon replaces the ambiguous Becher. Apple-at-tree images show an attached apple.
+[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=15.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. There are 150 current word forms. Short noun phrases include articles; Ballon replaces the ambiguous Becher. Apple-at-tree images show an attached apple.
 
 The first 35 numbered levels have five groups; Level 36 adds a sixth group for mini-stories. Levels 33–35 each have four named finite Etappen (80/105/102 tasks). New everyday words were selected against official German frequent-word and primary-school lists. [Etappen and evidence rules](docs/READING-ETAPPEN.md) · [Vocabulary research](docs/curriculum/USEFUL-WORDS-V13.md). Small directions use an info button; reading speech unlocks only after two errors. [v11 behavior and audio limits](docs/CHILD-GUIDANCE.md). Labels distinguish
 listening/spelling recognition, independent word reading and sentence understanding.
@@ -14,10 +14,10 @@ already-secure words and saves expanding review intervals. A separate **↻ Wied
 button offers due reviews without moving the forward learning cursor backwards.
 [Scheduling rules and limits](docs/SPACED-PRACTICE.md).
 
-**New: Level 36 – Kleine Geschichten ordnen.** Read three connected sentences and tap three pictures into their story order. Remove/reinsert or reset the original tray; check the whole sequence. Text stays visible, wrong orders remain editable, and only a complete correct sequence scores. Three stories fill a round. Eight stories reuse consistent existing art, including paired stories with the same cards in different textual orders. Optional full-story speech unlocks after two incorrect checks; reset never erases mistakes/help. [Rules and persistence](docs/STORY-ORDERING.md) · [All eight texts](docs/curriculum/STORIES-V14.txt).
+**Level 36 – Kleine Geschichten ordnen.** Read three connected sentences, then drag or tap small pictures from a triangular pool into larger numbered boxes. Swap, remove or reset; check the whole sequence. Eleven stories now include a dog finding a hat, a frog on a rolling ball and a cat tipping a crate. These three play a short 2D animation after the correct order, with pause, replay, optional narration and Weiter. Reduced motion shows stills. The original eight stories keep quick automatic advance. Three correctly ordered stories fill a round. Two wrong checks unlock optional reading help; reset preserves mistakes/help. Old profiles, partial orders and rewards remain. [Interaction and animation](docs/STORY-DRAG-ANIMATION.md) · [All eleven texts](docs/curriculum/STORIES-V15.txt).
 
 Choose an animal profile and press play. Answers stay still. A correct answer gives
-a brief nonverbal chime/check and a small sparkle, fills the round meter and automatically advances.
+a brief nonverbal chime/check and a small sparkle, fills the round meter and normally advances automatically. The three animated stories offer an explicit Weiter button.
 Every finished practice round adds a flower. Mistakes give time and replay without taking
 progress away. There are no timers, speed scores or spoken success messages.
 
@@ -37,7 +37,7 @@ Level 15 introduces common sentence words; Level 17 adds short im/am phrases. Co
 [Lesson sequence and limits](docs/READING-CURRICULUM.md).
 
 **76 human recordings**, 24 full-sentence
-instructions and 550 optional full/short sentence/phrase/story readings (including six legacy clips). Piper Thorsten High uses the
+instructions and 553 optional full/short sentence/phrase/story readings (including six legacy clips). Piper Thorsten High uses the
 approved length_scale 1.5 and added 0.3-second sentence pause; human words are not
 synthesised. After two errors, brief one-choice teaching restores the original
 choices without extra rewards. Independent accuracy adjusts two/three/four choices.
@@ -80,6 +80,10 @@ node tests/spacing.cjs
 node tests/close-reading.cjs
 node tests/mixed-reading.cjs
 node tests/child-guidance.cjs
+node tests/word-list.cjs
+node tests/reading-path.cjs
+node tests/story-order.cjs
+node tests/story-drag-film.cjs
 python3 scripts/audit_audio.py
 ```
 
@@ -94,6 +98,7 @@ Screenshots/builds stay outside Git. [Executed results](PROGRESS.md).
 | app/ | Complete static website and small licensed MP3 collection |
 | app/data.mjs | Stable foundation stages, human-audio targets, word contexts and grapheme blocks |
 | app/reading-data.mjs · app/pictures.mjs | Vocabulary, sentence progression and AI artwork composed with SVG |
+| app/stories.mjs · app/story-drag.mjs · app/story-film.mjs | Story text, pointer ordering and optional reward movies |
 | app/learning.mjs | Pure adaptive learning, level goals, profiles and migration |
 | app/audio/manifest.json | Individual sources, credits, licenses and hashes |
 | scripts/ | Packaging, audio preparation, publication and live verification |
@@ -136,3 +141,5 @@ v2; current release browser emulation is not a new physical-device listening tes
 
 Etappen/progress checks: `node tests/reading-path.cjs`.
 Story ordering/reset/resume checks: `node tests/story-order.cjs`.
+
+Story dragging, movie controls and reduced-motion checks: `node tests/story-drag-film.cjs`.

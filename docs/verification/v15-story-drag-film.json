@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "15.0.0",
+  "assetVersion": "45f8c9e435d7",
+  "checks": [
+    "Real mouse and CDP touch drags place into any empty numbered box, swap occupied boxes, return to the pool, cancel safely, and enlarge cards. Native taps and keyboard selection still work without synthetic duplicate clicks. The small triangular pool has no column alignment. Null-position orders survive actual confirmed backup and reload.",
+    "Only a correct whole story starts a real moving 2D scene. Pause, actual timed end, replay, opt-in narration, skip/continue and solved resume preserve a single reward. A live reduced-motion preference change stops animation and shows three stills.",
+    "320x568: triangular pool, actual touch drop, reset and reachable movie controls work without horizontal overflow.",
+    "390x844: triangular pool, actual touch drop, reset and reachable movie controls work without horizontal overflow.",
+    "768x1024: triangular pool, actual touch drop, reset and reachable movie controls work without horizontal overflow."
+  ],
+  "pageErrors": [],
+  "limits": "Actual Chromium/CDP touch/mouse/keyboard and media with phone-sized viewports; not a physical-device or educational-efficacy test."
+}

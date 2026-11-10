@@ -1,14 +1,10 @@
 // AI-generated picture-book artwork. Layout uses SVG; the objects are not hand-
 // drawn SVG icons. Exact source prompts/hashes: docs/illustration-sources.json.
-import {SHEETS,SPRITES} from './image-data.mjs';
-const ALIASES={becher:'ballon',kind:'action_kind_wach',katze:'action_katze_wach',hund:'action_hund_wach',ente:'action_ente_wach',frosch:'action_frosch_wach',buch:'action_buch_zu',tasche:'action_tasche_zu'};
-const sprite=(id,x,y,width,height)=>{
- const spec=SPRITES[ALIASES[id]??id],sheet=SHEETS[spec.sheet],url=new URL(sheet.src,import.meta.url).href;
- const scale=Math.min(width/spec.rect[2],height/spec.rect[3]),w=spec.rect[2]*scale,h=spec.rect[3]*scale;
- return `<svg x="${x+(width-w)/2}" y="${y+(height-h)/2}" width="${w}" height="${h}" viewBox="${spec.rect.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="${url}" x="0" y="0" width="${sheet.width}" height="${sheet.height}"/></svg>`;
-};
+import {hasSprite,sprite} from './picture-sprites.mjs';
+import {FILM_FRAMES} from './film-data.mjs';
+import {filmFrame} from './film-scenes.mjs';
 import {SCENE_ITEMS} from './mixed-reading.mjs';
-export const hasPicture=id=>Object.hasOwn(SPRITES,ALIASES[id]??id)||id==='sieben'||/^number_[0-9]$/.test(id)||Object.hasOwn(SCENE_ITEMS,id);
+export const hasPicture=id=>hasSprite(id)||id==='sieben'||/^number_[0-9]$/.test(id)||Object.hasOwn(SCENE_ITEMS,id)||Object.hasOwn(FILM_FRAMES,id);
 const svg=content=>`<svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">${content}</svg>`;
 function placeScene(v){
  if(v.subject==='apfel'&&v.location==='baum'&&v.relation==='am')return sprite('scene_apfel_am_baum',10,0,180,148);
@@ -23,6 +19,7 @@ function placeScene(v){
 }
 export function illustration(id){
  if(!hasPicture(id))throw Error('Missing picture: '+id);
+ if(Object.hasOwn(FILM_FRAMES,id))return filmFrame(id);
  if(id==='sieben'||id.startsWith('number_'))return svg(`<text x="100" y="112" text-anchor="middle" fill="#29463e" font-family="Phonics Lesson, sans-serif" font-size="112">${id==='sieben'?'7':id.slice(7)}</text>`);
  const item=SCENE_ITEMS[id];
  if(!item)return svg(sprite(id,0,0,200,150));

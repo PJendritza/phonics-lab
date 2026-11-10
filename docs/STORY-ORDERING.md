@@ -1,3 +1,5 @@
+> v15 adds drag/tap ordering, a triangular small-card pool and three animated stories. See [current behavior](STORY-DRAG-ANIMATION.md). Earlier eight-story details below are historical.
+
 # Level 36: read a mini-story and order its pictures (v14)
 
 Oliver's proposed exercise is implemented as one appended numbered level,

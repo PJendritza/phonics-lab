@@ -13,6 +13,26 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+Latest authorised update is v15: smaller triangular story pool, real mouse/pen/
+touch dragging as well as tap/keyboard, and three new short animated stories in
+existing Level 36. Eleven stories total; first 35 IDs/Etappen unchanged. See
+docs/STORY-DRAG-ANIMATION.md and docs/curriculum/STORIES-V15.txt. Three correct
+complete orders per round. Only the three new stories offer an 8.4-second 2D
+reward scene after success; explicit Weiter may skip it, replay never scores.
+The original eight retain fast automatic advance. Never animate answer targets.
+Reduced motion shows three stills; optional narration only after success (or the
+existing two-error help). Reset preserves errors/help, and solved resume never
+scores twice. Saved orders may contain explicit null holes: use fullStoryOrder,
+not array length, before checking. Preserve old compact arrays and earned v14
+completion flags; current eleven-story mastery is separate, with extensions
+labelled. Curriculum 15; original v3 storage/backup keys unchanged.
+Physical story taps are handled by pointerup; avoid duplicated compatibility
+clicks. Keyboard/assistive clicks with detail 0 remain supported. Cancelled drags
+must never persist a placement. Keep current-hash browser gates, including both
+story-order.cjs and story-drag-film.cjs. 150 inventory forms, 654 audio clips,
+nine atlases/92 sprites; no runtime dependencies, video APIs, or GPU required.
+
+Historical v14 rules (v15 supersedes pool geometry and new-story progression):
 Latest authorised update is v14: Oliver's new Level 36 story_order, with eight
 three-sentence mini-stories and tap-to-order picture sequences. See
 docs/STORY-ORDERING.md. First 35 numbers/IDs and Etappen remain. A new sixth

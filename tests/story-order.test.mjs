@@ -11,9 +11,9 @@ const NOW=1_794_000_000_000,rng=()=>.4;
 const start=()=>L.startSession(L.freshProgress(),'story_order',rng,NOW);
 function finish(p){while(p.pending){p=L.answer(orderedStory(p),p.pending.round.target,NOW).progress;p=L.advance(p,rng,NOW).progress;}return p;}
 
-test('Level 36 appends eight short coherent stories; old reading levels and their targets stay unchanged',()=>{
+test('Level 36 contains eleven short coherent stories; old reading levels and their targets stay unchanged',()=>{
  assert.equal(STAGES.length,36);assert.equal(stageNumber('story_order'),36);assert.equal(levelGoal(stageById('story_order')),3);
- assert.deepEqual(STAGES.slice(32,35).map(s=>s.targets.length),[80,105,102]);assert.equal(Object.keys(STORIES).length,8);
+ assert.deepEqual(STAGES.slice(32,35).map(s=>s.targets.length),[80,105,102]);assert.equal(Object.keys(STORIES).length,11);
  for(const s of Object.values(STORIES)){
   assert.equal(s.sentences.length,3);assert.equal(s.frames.length,3);assert.equal(new Set(s.frames).size,3);
   assert.ok(s.text.split(' ').length<=22);for(const frame of s.frames)assert.ok(illustration(frame).startsWith('<svg'));
@@ -88,6 +88,6 @@ test('new stories and their words appear in actual vocabulary and approved optio
  const rows=wordInventory(),clips=new Map(JSON.parse(fs.readFileSync('app/audio/manifest.json')).clips.map(c=>[c.id,c]));
  for(const word of ['es','er','sie','dann','danach'])assert.ok(rows.some(r=>r.word===word&&r.levels.includes(36)),word);
  for(const [id,s]of Object.entries(STORIES)){assert.equal(clips.get(id).label,s.text);assert.equal(clips.get(id).generation.lengthScale,1.5);assert.equal(clips.get(id).generation.sentencePauseSeconds,.3);}
- assert.equal(clips.get('story_order').label,'Lies die Geschichte. Tippe die Bilder der Reihe nach an.');
+ assert.equal(clips.get('story_order').label,'Lies die Geschichte. Ordne die Bilder.');
  assert.ok(![...clips.keys()].some(id=>id.startsWith('phoneme_')));
 });

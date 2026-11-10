@@ -223,6 +223,26 @@
       ],
       "prompt": "Create ONE transparent sprite atlas, EXACTLY FOUR COLUMNS and THREE ROWS, twelve equally sized square cells, consistent warm detailed gouache picture-book illustrations for a calm children's German reading app. No text, no labels, no grid lines. Generous empty transparent margins inside EVERY cell; no illustration crosses a cell boundary. Each entire object/person is fully visible. Reading order LEFT TO RIGHT then top to bottom: ROW 1 cell1: one cheerful six-year-old child, short brown hair, yellow T-shirt, blue trousers, seated awake facing viewer, no props. Cell2: exactly same child asleep curled on a small pillow, closed eyes, same clothes. Cell3: one adult woman standing facing viewer, red top, dark trousers, entire body. Cell4: one adult man standing facing viewer, green top, dark trousers, entire body. ROW 2 cell1: ONE brown oval loaf of bread with a single slice beside it (one loaf, identifiable bread). Cell2: ONE clear straight drinking glass of transparent light-blue WATER, NO HANDLE, no carton, no text. Cell3: ONE straight drinking glass full of opaque WHITE MILK with a plain small white milk carton with black cow spots behind it, NO TEXT, NO HANDLE. Cell4: one complete small green-leaved APPLE TREE with EXACTLY ONE large red apple HANGING by its stalk directly ATTACHED to a clearly visible branch, in the upper-right canopy. Show the attachment clearly, tree trunk and small patch of ground, NO apples on ground, NO apple beside tree, NO other fruit. ROW 3 cell1: the same yellow-shirt child READING an open BOOK, eyes directed at pages, book held in hands. Cell2: same child EATING BREAD, bite near mouth, bread in hand, no other food. Cell3: same child DRINKING WATER from a clear light-blue transparent straight drinking glass tilted near lips, no carton. Cell4: same child DRINKING MILK from a straight glass of opaque white milk, a small black-spotted white carton beside them, no text. The people, food, glass contents and apple attachment must be clear and unambiguous at small phone sizes. Background completely transparent. Reference image is for matching the painted illustration STYLE only, do not include ducks or balloon.",
       "styleReference": "app/images/atlas-g-0788b323d145.webp"
+    },
+    {
+      "id": "i",
+      "file": "exec-cd613378-9b3f-4132-94dd-8c36e7f44086.png",
+      "sha256": "91a22d3d61578253afce1ebc8536eb167b0a36b3b1fe28085a7a5abed9624974",
+      "columns": 3,
+      "rows": 3,
+      "cells": [
+        "film_hund_sucht",
+        "film_hund_laeuft",
+        "film_hund_schlaeft",
+        "film_frosch_sitzt",
+        "film_frosch_springt",
+        "film_katze_springt",
+        "film_katze_schaut",
+        "film_kiste",
+        "film_wiese"
+      ],
+      "prompt": "ONE TRANSPARENT sprite atlas, exactly THREE columns by THREE rows of equal square cells, nine isolated complete gouache picture-book illustrations, same warm detailed painted style as reference. No text, labels, borders, or characters from the duck reference. Generous transparent margins in each cell; never cross cell boundaries. All animals friendly and anatomically sensible. Reading order left to right: ROW ONE: (1) a small golden-brown floppy-eared puppy in side profile FACING RIGHT, standing and sniffing the ground, nose low. No collar props or hat. (2) the EXACT SAME puppy in side profile FACING RIGHT, walking with lifted paw, head at mid height, mouth slightly open, nothing in mouth. Leave the mouth unobstructed so a separate hat can be attached later. (3) the EXACT SAME puppy curled asleep in side profile, closed eyes, no pillow or props. ROW TWO: (1) a bright green frog sitting upright in three-quarter view facing right, round friendly eyes, clear folded hind legs, no objects. (2) the EXACT SAME green frog leaping to the right with extended hind legs, whole body visible, no objects. (3) a small orange striped tabby cat in a clear stretched jumping pose in side profile FACING RIGHT, curved tail, all four paws visible, friendly face. ROW THREE: (1) the EXACT SAME orange tabby peeking: ONLY its head, shoulders and two front paws are visible as if looking over the edge of a box, facing viewer, no box drawn, with lower torso naturally concealed. Transparent below paws, a usable peeking sprite. (2) one EMPTY light-brown wooden crate, open at the top, low front wall, three-quarter view with spacious visible interior, no cat or anything inside, whole crate visible. (3) a low oval patch of fresh green grass with several soft blades, on a tiny earthy base, no animals or objects. No shadows crossing cell boundaries. Same dog identity in all three top cells; same frog identity in both frog cells; same cat identity in both cat cells. These sprites will be layered into simple 2D story animations. Everything remains inside its own equal square with transparent margins. The reference image supplies painted STYLE only.",
+      "styleReference": "app/images/atlas-g-0788b323d145.webp"
     }
   ]
 }

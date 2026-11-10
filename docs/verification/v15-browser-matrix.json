@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "timeUTC": "2026-11-10T22:30:27.945977+00:00",
+  "appSha256": "45f8c9e435d7751391a94e1598b2427600ca4ba8ea48f3c247d35ddbd3c60168",
+  "suites": [
+    {
+      "suite": "story-order",
+      "exitCode": 0,
+      "rerunNote": "Passed after replacing exact transformed float equality with a strict <0.5 CSS-pixel stationary-position tolerance; observed difference was 0.000061 px."
+    },
+    {
+      "suite": "story-drag-film",
+      "exitCode": 0
+    },
+    {
+      "suite": "close-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "spacing",
+      "exitCode": 0
+    },
+    {
+      "suite": "mixed-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "profiles",
+      "exitCode": 0
+    },
+    {
+      "suite": "child-guidance",
+      "exitCode": 0
+    },
+    {
+      "suite": "level-navigation",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-list",
+      "exitCode": 0
+    },
+    {
+      "suite": "mobile-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-hints",
+      "exitCode": 0
+    },
+    {
+      "suite": "choice-help",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading-path",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser",
+      "exitCode": 0
+    }
+  ],
+  "limits": "Actual Chromium/CDP touch/mouse/keyboard, real media and backup; no physical-device or educational-efficacy certification."
+}

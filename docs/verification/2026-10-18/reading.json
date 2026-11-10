@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "14.0.0",
-  "assetVersion": "07c9eb6dc793",
+  "version": "15.0.0",
+  "assetVersion": "45f8c9e435d7",
   "checks": [
     "Independent word reading starts silently and plays only its generic direction on an explicit info tap, displays the written word and label-free picture choices, then advances silently with the existing chime.",
     "Optional syllable help preserves the word spelling and answer order; assistance survives reload and exact resume. After two errors explicit read-aloud plays the human word and cannot count as independent mastery.",

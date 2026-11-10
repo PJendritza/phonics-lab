@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "14.0.0",
-  "assetVersion": "07c9eb6dc793",
+  "version": "15.0.0",
+  "assetVersion": "45f8c9e435d7",
   "checks": [
     "Successful word learners see four same-initial, one-letter alternatives. Invented choices remain silent, survive exact reload, trigger correct-model teaching after two mistakes, award no extra points and lower the next task after an error.",
     "Wrong pictures do not read their labels or unrelated sentences. Only the original target is read during the existing two-error teaching step; all AI image files decode.",

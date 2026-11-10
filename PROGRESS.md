@@ -1,3 +1,87 @@
+# v15: drag pictures and three animated story rewards
+
+Working branch story-drag-and-animations, canonical PJendritza/phonics-lab,
+checkout /workspace/Kalulu-DE. User authorised a few animations plus smaller
+triangular picture pool, larger placed cards, real dragging and more playful
+stories. Existing public demo updates remain authorised. No new hosting, paid
+service, video model, microphone, dependencies or scheduling.
+
+Implemented Level 36 extension: Der Hund und der Hut, Der Frosch auf dem Ball,
+Die Katze und die Kiste. Eleven total stories; three correct sequences per round.
+Smaller stationary pool cards sit in a triangle, away from numbered columns.
+Mouse/pen/touch dragging enlarges a ghost, supports empty-slot placement, occupied
+swap/replacement, pool return and safe cancellation; tap/keyboard remain. Reset
+preserves attempts/help. Explicit null holes retain their actual numbered slots
+through backup/reload. Legacy compact orders and earned v14 awards survive.
+Current eleven-story mastery is separate from historical completion flags.
+
+Each new story offers an 8.4-second, three-phase 2D illustrated movie after its
+complete correct order. Same sprites/keyframes connect cards and film. Pause,
+replay, optional narrator and Weiter/skip; reward once only, including solved
+resume. Reduced motion shows three stills and live preference change stops RAF.
+Original eight stories retain fast auto-advance. No moving answer targets.
+Architecture/state/limits: docs/STORY-DRAG-ANIMATION.md. Full eleven-story text:
+docs/curriculum/STORIES-V15.txt. Nine AI sprite sheets/92 named sprites, 2,598,912
+WebP bytes. New sheet i prompt, source SHA and conversion provenance recorded
+in docs/illustration-sources.json; source PNG/builds/screenshots stay outside Git.
+Inventory 150 actual forms. Three optional complete story recordings and a shorter
+neutral guide, using existing local Thorsten High length_scale 1.5 and 0.3-second
+added sentence pause. 654 total clips: 76 human, 24 guides, 553 optional readings,
+one chime. Existing human bytes retained. No French consonants reinstated.
+
+Executed in this update:
+```sh
+python3 scripts/prepare_illustrations.py --only i
+python3 scripts/prepare_guides.py
+/workspace/kalulu-tools/tts/bin/python scripts/prepare_reading_audio.py --utterances-only
+node --test --test-reporter=tap tests/*.test.mjs
+python3 scripts/audit_audio.py
+python3 scripts/build.py
+# Existing preview server serves /workspace/kalulu-browser-build on port 8070;
+# preview/phonics-lab points to ../site.
+node tests/story-drag-film.cjs
+node tests/story-order.cjs
+node tests/browser.cjs
+node tests/reading.cjs
+node tests/close-reading.cjs
+node tests/spacing.cjs
+node tests/mixed-reading.cjs
+node tests/child-guidance.cjs
+node tests/profiles.cjs
+node tests/level-navigation.cjs
+node tests/mobile-smoke.cjs
+node tests/word-list.cjs
+node tests/word-hints.cjs
+node tests/choice-help.cjs
+node tests/reading-path.cjs
+git diff --check
+```
+107 unit/content tests and all 15 Chromium suites pass. Actual CDP touch, mouse
+and keyboard checks cover drag/cancel/swap/pool/reset, exact holes through confirmed
+backup, movie time/end/pause/replay/narration/skip, solved resume and live reduced
+motion. All eleven stories at 320x568, 390x844, 768x1024 decode with reachable
+controls, readable targets and no horizontal overflow. Final screenshots visually
+inspected. Audio audit decodes all 654 clips with headroom and quiet endings;
+this does not certify pronunciation. App hash 45f8c9e435d7751391a94e1598b2427600ca4ba8ea48f3c247d35ddbd3c60168.
+Current-hash evidence: docs/verification/v15-browser-matrix.json,
+v15-story-drag-film.json and the ten publisher browser gates.
+
+A real touch regression was found/fixed: after a drag and reset Chromium could
+omit the next compatibility click. Physical taps now use the same pointerup
+controller, with native keyboard/assistive detail-0 clicks retained; no duplicate
+placements. The old stationary-position test used exact transformed floats and
+failed on a 0.000061 CSS-pixel difference. Its check now allows strictly less than
+half a CSS pixel (no app/layout workaround); the full story suite rerun passed.
+
+Release publication/HTTPS verification: pending final clean source commit below.
+No known blocked access. Remaining uncertainty: physical-phone interaction,
+child/educator review and new story pronunciation; Chromium touch emulation and
+byte verification do not certify those. Smallest next user check: open v15,
+Level 36 via the parent preview if needed; drag/tap/reset a new story, solve it,
+then try pause/replay/Weiter on the phone. Existing rewards should remain.
+
+---
+
 # v14: tested mini-story picture-ordering level
 
 Branch short-stories-in-order, checkout /workspace/Kalulu-DE, canonical

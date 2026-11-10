@@ -24,7 +24,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const unlock=async()=>{let p=await state();const wrong=p.pending.round.choices.find(c=>c!==p.pending.round.target);for(let i=p.pending.round.tries;i<2;i++){await page.locator(`[data-choice="${wrong}"]`).click();await ready();}assert.equal(await page.locator('#replay').count(),1);};
  const solve=async()=>{
   await ready();let before=await state();const index=before.pending.index;if(before.pending.round.help==='show'){await page.locator(`[data-choice="${before.pending.round.target}"]`).click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('kalulu-de:learners:v3')).profiles.some(p=>p.progress.pending?.round.help===null));await ready();before=await state();}
-  if(D.stageById(before.pending.stageId).mode==='order'){for(const frame of D.ITEMS[before.pending.round.target].frames)await page.locator(`[data-story-frame="${frame}"]`).click();await page.locator('#story-check').click();}else await page.locator(`[data-choice="${before.pending.round.target}"]`).click();
+  if(D.stageById(before.pending.stageId).mode==='order'){for(const frame of D.ITEMS[before.pending.round.target].frames)await page.locator(`[data-story-frame="${frame}"]`).click();await page.locator('#story-check').click();if(await page.locator('#film-next').count())await page.locator('#film-next').click();}else await page.locator(`[data-choice="${before.pending.round.target}"]`).click();
   await page.waitForFunction(i=>{const s=JSON.parse(localStorage.getItem('kalulu-de:learners:v3')),p=s.profiles.find(p=>p.id===s.activeId).progress;return !p.pending||p.pending.index!==i;},index);
  };
  await page.goto(base);await restore(fixture('picture_known'));
