@@ -59,7 +59,7 @@ overflow. Short phones may scroll naturally. Initial/placed story screenshots
 inspected externally. Media/guide browser tests are real Chromium, not a physical
 phone or a general reading-comprehension/pronunciation validation.
 
-Build: 696 files / 12,665,377 bytes dirty (clean metadata adds one byte), within
+Build: 696 files / 12,665,378 bytes clean, within
 unchanged 14 MB cap. All fourteen browser suites pass against final app hash
 07c9eb6dc793; all nine release gates are bound to that hash. Evidence:
 docs/verification/v14-browser-matrix.json and v14-stories.json. No app changes
@@ -69,10 +69,24 @@ skipping older behavior. Vocabulary validation caught the new pronouns/connector
 these are now explicitly declared as contextual words in the new level rather
 than falsely claimed previously taught phonics.
 
-Publication pending clean source commit/push, promotion of main, clean build,
-existing gh-pages update with a fresh external checkout, and byte verification of
-every public HTTPS file. No Pages settings changes. Live remains v13 until that
-step completes. Physical-device and educator/pronunciation review remain separate.
+Published and independently verified over certificate-verified HTTPS:
+- Source/main: 1677bcfa640b49d5853687f8eb6e631bc7ee44ec; also pushed on feature
+  branch short-stories-in-order.
+- Deployment/gh-pages: ecf56538dfee0f2c8c1c72a08843145259106dfb; fresh checkout
+  /workspace/kalulu-browser-build/publish-v14. No Pages settings changed.
+- python3 scripts/verify_live.py passed: all 696 public files exactly match the
+  clean locally browser-tested v14 build (12,665,378 bytes; asset 07c9eb6dc793).
+  Evidence: docs/verification/2026-10-18/live.json.
+- Demo: https://patrickjendritza.com/phonics-lab/?v=14.0.0
+The final verification/docs-only commit follows the deployed source and changes
+no app bytes. No redeployment needed for that documentation commit.
+Physical-device and educator/pronunciation review remain separate.
+
+Next user check: Level -> 36, Kleine Geschichten ordnen. If still working in
+an earlier level, enable the existing parent preview checkbox to select 36.
+Check story clarity, picture legibility and tap/remove/reset with Oliver. The
+current text stays visible; future longer stories/new art await feedback rather
+than being silently added. No recurring runs or new services configured.
 
 ---
 

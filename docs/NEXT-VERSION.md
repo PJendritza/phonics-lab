@@ -14,7 +14,8 @@ Earlier release notes/holds below are historical. Details: STORY-ORDERING.md.
 - [x] Reuse existing art; 9 new full recordings, 651 clips total, 136 word forms.
 - [x] 96 unit/content checks, audio audit and dedicated story browser tests pass.
 - [x] All fourteen browser suites and nine current-hash release gates pass.
-- [ ] Verify existing-site publication; exact commits/results in PROGRESS.md.
+- [x] Published v14 and verified all 696 live HTTPS files against the tested build;
+      exact commits/results and remaining human review in PROGRESS.md.
 
 ---
 

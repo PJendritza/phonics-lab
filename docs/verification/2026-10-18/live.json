@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "timeUTC": "2026-11-07T11:56:33.867643+00:00",
+  "timeUTC": "2026-11-10T18:43:00.631975+00:00",
   "base": "https://patrickjendritza.com/phonics-lab/",
-  "sourceCommit": "796d9e1ba0ebfb8c130b676ee6fadffa60db899e",
+  "sourceCommit": "1677bcfa640b49d5853687f8eb6e631bc7ee44ec",
   "files": [
     {
       "file": ".nojekyll",
@@ -13,7 +13,7 @@
     {
       "file": "BUILD_INFO.json",
       "status": 200,
-      "sha256": "a23e4b08e38144aba16aaf08e175c43f1940f8048597844414b2ccc57021fe96",
+      "sha256": "54795f1297b6a8e7bb948745c48067829b77b3c1349c0fcd0aee252489d10bcb",
       "bytes": 379
     },
     {
@@ -25,14 +25,14 @@
     {
       "file": "SHA256SUMS",
       "status": 200,
-      "sha256": "7854f3f10af43b302ef4d00840f3d9e903f323f670ed1f5181e58008df1b3c30",
-      "bytes": 65009
+      "sha256": "25469ddd5e8339fc6722bc98d8cfaa2b175228579669c389fed270c43f84c75a",
+      "bytes": 65999
     },
     {
       "file": "about.html",
       "status": 200,
-      "sha256": "89b0162254f5a429c6de2489e21431ec75cef266d09d3c9c2105e562819771a5",
-      "bytes": 16681
+      "sha256": "d35411a8fa0fedce40f6ef8001ce23fd9f3b1619a31145a8ca1662a3606242f9",
+      "bytes": 17722
     },
     {
       "file": "audio/a.mp3",
@@ -1357,8 +1357,8 @@
     {
       "file": "audio/manifest.json",
       "status": 200,
-      "sha256": "63285b9c903a970813ffffc2480043f14bde85b24fcb83ff3d87d1803790dd8c",
-      "bytes": 702507
+      "sha256": "1b5e8563d2925b253860b466c2f0314ffbf4bdfea293cfcf378ea65feb2e168e",
+      "bytes": 712981
     },
     {
       "file": "audio/maus.mp3",
@@ -3845,6 +3845,60 @@
       "bytes": 9709
     },
     {
+      "file": "audio/story_book_bed.mp3",
+      "status": 200,
+      "sha256": "ccb599329d4804a4ac49d14522c5ff004961c9445d3a7bdb5027f5d6847bc045",
+      "bytes": 38077
+    },
+    {
+      "file": "audio/story_book_snack.mp3",
+      "status": 200,
+      "sha256": "c4653954c8d7a4d0d02050784061467d33bfa45f1fa5db1735030442f59f994d",
+      "bytes": 45600
+    },
+    {
+      "file": "audio/story_breakfast_book.mp3",
+      "status": 200,
+      "sha256": "9ebed4ebb5dd0f849e21d61925430c0a68d373d8eb3b5bba7002e022cf12e358",
+      "bytes": 45809
+    },
+    {
+      "file": "audio/story_cat_rest.mp3",
+      "status": 200,
+      "sha256": "0d809045f394aa2b3f85b8f2903f11567354913b46e52a69f713efa816d46243",
+      "bytes": 45391
+    },
+    {
+      "file": "audio/story_dog_trip.mp3",
+      "status": 200,
+      "sha256": "f8d13ffb543bd6950920e401daa1dd6effbad61c8b168ba3dab5f8845a1a666b",
+      "bytes": 43719
+    },
+    {
+      "file": "audio/story_evening_book.mp3",
+      "status": 200,
+      "sha256": "fa9ab4b583d0567a9b10a8dc3ed87af5043e5956a55a5db04fbd79e57fab3eb4",
+      "bytes": 43092
+    },
+    {
+      "file": "audio/story_evening_milk.mp3",
+      "status": 200,
+      "sha256": "373972c89257e4f42f4ab4e65dc0b71e69b15c93faa3aecc99bb0874c1156114",
+      "bytes": 42883
+    },
+    {
+      "file": "audio/story_morning.mp3",
+      "status": 200,
+      "sha256": "60c3fdb0a24a698f1c48f836648b168e0d588f9d03a0d3532167b56a0847190b",
+      "bytes": 44137
+    },
+    {
+      "file": "audio/story_order.mp3",
+      "status": 200,
+      "sha256": "1892bc02a06cef6194640f9ad9702034ef51d3013b386fd9ab37636892831fca",
+      "bytes": 31389
+    },
+    {
       "file": "audio/success.mp3",
       "status": 200,
       "sha256": "652e3b7657c0ceff731e7db9198320d25828349c89942cfdbcd535ac8e2a3bd0",
@@ -3913,7 +3967,7 @@
     {
       "file": "audio-review.html",
       "status": 200,
-      "sha256": "343b0ef955478d533cd1b8327b9b92e8ed80a3d60e327a3fa3cb7a35fa588231",
+      "sha256": "25df994d0117a2f01276f18127c92daf3513e404f44c84c36d8c18d206e7f76e",
       "bytes": 1936
     },
     {
@@ -3925,8 +3979,8 @@
     {
       "file": "data.mjs",
       "status": 200,
-      "sha256": "33d6e6be18acea3bc7aeab0365c26ccd99a7e9a81537d702f70727764dbd63af",
-      "bytes": 7995
+      "sha256": "d3bc73a72c58f06df1c3ff972846427bace37970e3b92317cef1417efa8019a6",
+      "bytes": 8017
     },
     {
       "file": "fonts/OFL.txt",
@@ -4015,26 +4069,26 @@
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "738a00339ef0b24f8726790d61ce0036c8d3872e6650564504c031c834f55945",
+      "sha256": "1d6ea82d74be6f0f1ab1623d484ce7bd4ef1cacf6dfc9fd61ec396f6125f825a",
       "bytes": 1127
     },
     {
       "file": "learning.mjs",
       "status": 200,
-      "sha256": "d481b2443d07cc6df704e05c665a0f2d990ca40bfbd2cfcbfafadddb7d969e86",
-      "bytes": 25836
+      "sha256": "a8e2fc400b18936f48919093546d6de772a4d3ff7d465ce0544fc044b1f2f432",
+      "bytes": 27381
     },
     {
       "file": "level-catalog.mjs",
       "status": 200,
-      "sha256": "ae54519f0919f908b2ecaa9ddf10982b7a1b097dec8f569cda26b198f90f9065",
-      "bytes": 2543
+      "sha256": "62a0df4ce90215f37c667a833c0d66c664f7b1ea7ab34da0f224df58fc96a5d0",
+      "bytes": 2702
     },
     {
       "file": "main.mjs",
       "status": 200,
-      "sha256": "4ff925a7b2e94632f9fc1d74be94f6c0e61b58bc7f2ca1ded190f7bc0dd66319",
-      "bytes": 26948
+      "sha256": "07ea6f5c0d26578678d2b0f6d14872bee62cbddc1651df9e8e5e05670f35690f",
+      "bytes": 29747
     },
     {
       "file": "mixed-reading.mjs",
@@ -4045,26 +4099,26 @@
     {
       "file": "pictures.mjs",
       "status": 200,
-      "sha256": "560c61d5595488ec7cad126d51e48090279a031b66f153dac3065cd16b6d5bb4",
+      "sha256": "0eccda3943e30f41a962d0a8b80121369bda342a93705211509969fb16a23229",
       "bytes": 3445
     },
     {
       "file": "reading-data.mjs",
       "status": 200,
-      "sha256": "620378eab7604cb3ec26688a3ec9020a4cb2fbbd17bdf84f664c9a1f211f3236",
-      "bytes": 6234
+      "sha256": "7ba8536c8bfea80f163797637b1cf022f5b405481ca26f9ba199310515ad6f44",
+      "bytes": 6606
     },
     {
       "file": "reading-path-view.mjs",
       "status": 200,
-      "sha256": "8f4d5a228a5d0290f99f41334d9d6f284a04bfc7ae7cabe0c641568db5d0797f",
-      "bytes": 3233
+      "sha256": "a4884ff7bfeaedc56b6bd7383dcf22f1cd7af37282d6479f587a55da23812d77",
+      "bytes": 3287
     },
     {
       "file": "reading-path.mjs",
       "status": 200,
-      "sha256": "4b6a24603b8ca0f1e108ed0efafc1fd56f673871853afc290966db3c75beeed6",
-      "bytes": 10927
+      "sha256": "90c38805ddf080417375d54f78a8055974a1450543df63c0f44b6ce57b85b788",
+      "bytes": 11074
     },
     {
       "file": "review.mjs",
@@ -4075,20 +4129,32 @@
     {
       "file": "spacing.mjs",
       "status": 200,
-      "sha256": "22e11cffdfbf669546cb48c9be279ad699f3e0e0aecf2fddabb26c680974bcae",
+      "sha256": "ac9ec739e8e9a4551068ff882fe62bd13a4f7d999edc0955eeab464a2ac54b53",
       "bytes": 6298
+    },
+    {
+      "file": "stories.mjs",
+      "status": 200,
+      "sha256": "884a231be169fbc44513c8c78d12ea4e2095ae5dc5210e10d35acfb41065f272",
+      "bytes": 3692
+    },
+    {
+      "file": "story-view.mjs",
+      "status": 200,
+      "sha256": "bcf2f2af91308c5ca1a1535e22eedea7f1fe8e0af660b1519301de01b83494a8",
+      "bytes": 2241
     },
     {
       "file": "style.css",
       "status": 200,
-      "sha256": "b1e96bdcf8bfc2e7bae4fb9f7578a898cb42f373aed450de69ed5125e4c473bb",
-      "bytes": 25137
+      "sha256": "9214c17198308f7641358c502fd55802e82a279c2d40406fef4f106d9963c281",
+      "bytes": 27358
     },
     {
       "file": "task-guides.mjs",
       "status": 200,
-      "sha256": "9514d86a534d13fbe3a8da9a53b16b9475c0091bc4dda499d067e2af13ee558e",
-      "bytes": 1218
+      "sha256": "a6beaa980b897b475c584b178603c959c5e05ef28f3906fee43824df87ca90a3",
+      "bytes": 1291
     },
     {
       "file": "word-choices.mjs",
@@ -4099,22 +4165,22 @@
     {
       "file": "word-inventory.mjs",
       "status": 200,
-      "sha256": "90b67973ca1eed4929616f1af0eefcfadab9277f5f4b2dafc29531518d0f5829",
-      "bytes": 1415
+      "sha256": "31b75992abbad1ecf3bbf7ceafe5bd268e8609f26e32cef5a1950d5220c5cc85",
+      "bytes": 1419
     },
     {
       "file": "word-list.mjs",
       "status": 200,
-      "sha256": "a33633bb2513d573bd810e24b35b335582160b078dac2003cef9a57fa9f48111",
+      "sha256": "752d0b51b27472538eb3071b0d3f4d6e26c98405283fd5d1e7272935c074911b",
       "bytes": 1179
     },
     {
       "file": "words.html",
       "status": 200,
-      "sha256": "7b78ed17e38a507dac76f9ec9612c4d85e91486a5e1565c3c2eab9a3c34a432a",
+      "sha256": "d8077fe60b80295f5517f42dd9d137613c72cef7c94c635ba55329e189c19ca9",
       "bytes": 1352
     }
   ],
-  "totalBytes": 12259447,
+  "totalBytes": 12665378,
   "meaning": "All deployed bytes match the locally browser-tested build over certificate-verified HTTPS. Not a real-phone playability test."
 }
