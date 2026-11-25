@@ -47,7 +47,17 @@ smoke check skipped to the end and completed all 36 levels out of order, validat
 each JSON restore and confirming exact awards. The archived MP3s in the sound
 review also decode in Chromium (657 media elements, including three comparisons).
 
-Publication status will be recorded after public HTTPS verification.
+Published on 2026-11-25 at https://patrickjendritza.com/phonics-lab/?v=16.0.0 .
+Source commit 100e50d5a60ab6899d0bc26ba2de847ebd1959d4, deployed via gh-pages
+d39273849c2a92112ea9d32144eeb42099b507ad. Ran `python3 scripts/build.py` from
+the clean source commit and `python3 scripts/publish.py --checkout
+/workspace/kalulu-browser-build/publish-v16`. After propagation, public build
+metadata matched and `python3 scripts/verify_live.py` verified all 705 files
+(13,188,607 bytes) against the tested build over certificate-verified HTTPS.
+Evidence: docs/verification/2026-10-18/live.json. A separate direct cloud Chromium
+visit stopped at a certificate-authority error. The Chromium flow tests passed
+against the matching local build. The remaining practical check is touch on a
+physical phone. This documentation-only commit does not change the deployed source.
 
 ---
 

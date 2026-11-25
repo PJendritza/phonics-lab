@@ -4,7 +4,7 @@
 - [x] Keep skipped work, partial answers and exact replay within the open round.
 - [x] Preserve earned credit and practice history when redoing a solved exercise.
 - [x] Add a parent-confirmed fresh selection for the open Etappe in Levels 33–35.
-- [ ] Verify and publish to the existing public demo.
+- [x] Publish version 16 and verify all 705 public files over HTTPS.
 - [ ] Try arrows and a fresh selection on a physical phone.
 
 ---
