@@ -1,7 +1,7 @@
 import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs';
 import {describeLevel} from './level-catalog.mjs';
 import {FORMS} from './word-choices.mjs';
-export const VERSION='15.0.0';
+export const VERSION='16.0.0';
 export const CURRICULUM_VERSION=15;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={

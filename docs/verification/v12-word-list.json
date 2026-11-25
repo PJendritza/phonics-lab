@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "assetVersion": "45f8c9e435d7",
+  "assetVersion": "1577fd98b0b2",
   "words": 150,
   "checks": [
     "Parent and About links, alphabetic actual-word table, search, removed Becher, Ballon level mapping, CSV export and 320/390/768px layouts"

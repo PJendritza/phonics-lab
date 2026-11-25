@@ -7,13 +7,20 @@ export const freshSpacing=()=>({turn:0,history:[],reviews:{}});
 const keyFor=(stage,target)=>`${stage.group}:${target}`;
 const isSecure=skill=>!!skill&&skill.recent.length>=2&&skill.recent.slice(-2).every(Boolean)&&skill.recent.slice(-4).filter(Boolean).length/Math.min(4,skill.recent.length)>=.75;
 
-export function selectTarget(progress,stage,now=Date.now(),rng=Math.random,completedTargets=[]){
+export function selectTarget(progress,stage,now=Date.now(),rng=Math.random,completedTargets=[],preferUnseen=false){
  const spacing=progress.spacing??freshSpacing(),history=spacing.history;
  // At least two other questions in a pool of 3+, or one in a pool of 2.
  const gap=Math.min(2,stage.targets.length-1);
  let eligible=stage.targets.filter(t=>!history.slice(-gap).includes(keyFor(stage,t)));
  if(!eligible.length)eligible=stage.targets.filter(t=>keyFor(stage,t)!==history.at(-1));
  if(!eligible.length)eligible=[...stage.targets];
+ if(preferUnseen){
+  const priority=eligible.filter(target=>{
+   const key=keyFor(stage,target),review=spacing.reviews[key];
+   return !progress.skills[key]?.introduced||(review?.streak===0&&review.after<=spacing.turn+1);
+  });
+  if(priority.length)eligible=priority;
+ }
  if(stage.balanceRelations){
   const completed=completedTargets.map(t=>ITEMS[t]?.scene).filter(Boolean),recent=completed.slice(-8);
   if(stage.mixed){

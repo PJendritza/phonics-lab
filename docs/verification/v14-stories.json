@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "15.0.0",
-  "assetVersion": "45f8c9e435d7",
+  "version": "16.0.0",
+  "assetVersion": "1577fd98b0b2",
   "stories": 11,
   "checks": [
     "Real touch ordering, explicit full-order check, wrong editable sequence, stationary tray, individual removal and keyboard reset work. Reset preserves attempts/help; two wrong checks unlock only opt-in speech. Partial/wrong/solved states survive confirmed backup, pause and reload without double rewards. Three stories fill the fixed round flower.",

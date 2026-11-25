@@ -1,3 +1,14 @@
+# v16 exercise navigation
+
+- [x] Add previous/next arrows and an exercise counter above the progress bar.
+- [x] Keep skipped work, partial answers and exact replay within the open round.
+- [x] Preserve earned credit and practice history when redoing a solved exercise.
+- [x] Add a parent-confirmed fresh selection for the open Etappe in Levels 33–35.
+- [ ] Verify and publish to the existing public demo.
+- [ ] Try arrows and a fresh selection on a physical phone.
+
+---
+
 # v15: picture dragging and short illustrated animations
 
 - [x] Smaller triangular pool; drag/tap/keyboard into larger numbered boxes.

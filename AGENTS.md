@@ -13,6 +13,17 @@ No game engine, moving answer targets, countdowns, speed scoring or lost lives.
 Minimal entrance: profile plus large start/continue. Keep the parent stage map and
 its preview checkbox. See docs/GOALS.md and docs/NEXT-VERSION.md.
 
+v16 adds previous/next exercise arrows within the current round. Keep the
+exercise number separate from earned progress. Skipped slots remain unsolved and
+are revisited before round completion. Keep original slots and partial answers
+through backup/reload. Replaying a solved slot awards no credit and writes no
+skill, spacing or word evidence. Legacy in-progress saves retain their exact
+current exercise and cannot reconstruct earlier exercises. Parent controls offer
+a confirmed fresh selection in an active Etappe (Levels 33–35), prioritising
+unseen prompts and due mistakes from the existing bank while preserving earned
+progress. Keep the arrows above the bar without displacing picture choices on
+short phones. Verify with tests/exercise-navigation.cjs.
+
 Latest authorised update is v15: smaller triangular story pool, real mouse/pen/
 touch dragging as well as tap/keyboard, and three new short animated stories in
 existing Level 36. Eleven stories total; first 35 IDs/Etappen unchanged. See

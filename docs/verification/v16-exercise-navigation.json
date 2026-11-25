@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "version": "16.0.0",
+  "assetVersion": "1577fd98b0b2",
+  "checks": [
+    "320×568 Chromium touch layout has reachable arrows above the progress bar and no horizontal overflow.",
+    "Real touch and keyboard navigation preserve skipped questions, errors, exact choice order, reload and partial story placement.",
+    "Replaying a solved exercise preserves awards, skill and spacing data; solving the last slot returns to an earlier skipped exercise with usable choices even after an interrupted teaching timer.",
+    "Parent confirmation starts a new selection in the same Etappe and preserves earned progress."
+  ],
+  "pageErrors": []
+}

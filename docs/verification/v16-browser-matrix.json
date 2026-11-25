@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "appSha256": "1577fd98b0b2279623187549e52f681399f5bf45f81f98e8b17404c2e77dc134",
+  "suites": [
+    {
+      "suite": "browser",
+      "exitCode": 0
+    },
+    {
+      "suite": "exercise-navigation",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "close-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "spacing",
+      "exitCode": 0
+    },
+    {
+      "suite": "mixed-reading",
+      "exitCode": 0
+    },
+    {
+      "suite": "child-guidance",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-list",
+      "exitCode": 0
+    },
+    {
+      "suite": "reading-path",
+      "exitCode": 0
+    },
+    {
+      "suite": "story-order",
+      "exitCode": 0
+    },
+    {
+      "suite": "story-drag-film",
+      "exitCode": 0
+    },
+    {
+      "suite": "level-navigation",
+      "exitCode": 0
+    },
+    {
+      "suite": "mobile-smoke",
+      "exitCode": 0
+    },
+    {
+      "suite": "profiles",
+      "exitCode": 0
+    },
+    {
+      "suite": "word-hints",
+      "exitCode": 0
+    },
+    {
+      "suite": "choice-help",
+      "exitCode": 0
+    }
+  ]
+}

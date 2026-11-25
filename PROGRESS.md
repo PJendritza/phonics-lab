@@ -1,3 +1,56 @@
+# v16 exercise navigation and fresh Etappe selection
+
+User approved arrows above the progress bar and a fresh selection from the
+existing bank. Branch exercise-navigation. App version 16.0.0, story curriculum
+version 15 and profile storage v3. Level 35 has 102 distinct presets in four
+overlapping Etappen, from Buch und Apfel to Essen, trinken und lesen. No content
+or media changes in this update.
+
+Every open round now has a separate positional counter and progress meter. The
+arrows save exact skipped, partial and solved questions. Future slots are
+selected when first opened. On revisiting a solved slot, the original exercise
+can be practised without credit, first-try evidence, spaced-practice entries or
+word exposure counters. Automatic progression picks the next unsolved slot and
+returns to earlier skipped work when necessary. A round only finishes after all
+required work is solved. Existing autosave, audio, help and story behavior apply.
+Old saves retain the exact saved exercise and earned count. Earlier exercises
+before that saved point were not stored and cannot be reconstructed.
+
+Neue Aufgaben is available in Eltern when a regular Etappe is open (Levels 33–35).
+After confirmation it replaces the open round in that Etappe while retaining
+completed learning evidence, flowers, other paused rounds and spacing. Selection
+favours unseen prompts and due errors. It uses prepared tasks, so a different
+selection is possible without introducing new vocabulary. The first task differs
+from the previous active task when the Etappe has another option.
+
+Checks run from /workspace/Kalulu-DE:
+
+- `node --test tests/*.test.mjs` passed 110 tests, including backwards-compatible
+  saves, partial words and replay/backup and unseen-selection behavior.
+- `python3 scripts/audit_audio.py` passed the decode and audio-level audit of 654 clips.
+- `python3 scripts/build.py` packaged the app at 705 files below the 14 MB budget.
+- `node tests/exercise-navigation.cjs` passed real Chromium keyboard and touch,
+  exact skip/redo/reload, parent confirmation, and partial story navigation.
+- Built preview served from /workspace/kalulu-browser-build with
+  `python3 -m http.server 8070 --bind 127.0.0.1 --directory /workspace/kalulu-browser-build`
+  and preview/phonics-lab pointing to ../site. Initial short-phone regressions
+  from adding a row were fixed by placing the arrows beside the flower, above
+  the track. Chromium checks are not a physical device test.
+
+All 16 Chromium suites passed on app hash 1577fd98b0b2279623187549e52f681399f5bf45f81f98e8b17404c2e77dc134.
+Commands: `node tests/<suite>.cjs` for browser, exercise-navigation, reading,
+close-reading, spacing, mixed-reading, child-guidance, word-list, reading-path,
+story-order, story-drag-film, level-navigation, mobile-smoke, profiles, word-hints
+and choice-help. See docs/verification/v16-browser-matrix.json. The new suite
+also returns to a skipped task after interrupting its hint timer. A learning-state
+smoke check skipped to the end and completed all 36 levels out of order, validating
+each JSON restore and confirming exact awards. The archived MP3s in the sound
+review also decode in Chromium (657 media elements, including three comparisons).
+
+Publication status will be recorded after public HTTPS verification.
+
+---
+
 # v15: drag pictures and three animated story rewards
 
 Working branch story-drag-and-animations, canonical PJendritza/phonics-lab,

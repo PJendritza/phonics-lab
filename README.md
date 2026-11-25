@@ -3,9 +3,9 @@
 A small browser-based phonics and early-reading prototype, starting with German.
 Inspired by Kalulu’s staged sound-to-print learning. No installation, account or engine.
 
-**[Start learning](https://patrickjendritza.com/phonics-lab/?v=15.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=15.0.0)**
+**[Start learning](https://patrickjendritza.com/phonics-lab/?v=16.0.0)** · **[Check the sounds](https://patrickjendritza.com/phonics-lab/audio-review.html?v=16.0.0)**
 
-[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=15.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. There are 150 current word forms. Short noun phrases include articles; Ballon replaces the ambiguous Becher. Apple-at-tree images show an attached apple.
+[Alphabetic word inventory](https://patrickjendritza.com/phonics-lab/words.html?v=16.0.0) lists actual task vocabulary/forms and level numbers, with search and CSV export. There are 150 current word forms. Short noun phrases include articles; Ballon replaces the ambiguous Becher. Apple-at-tree images show an attached apple.
 
 The first 35 numbered levels have five groups; Level 36 adds a sixth group for mini-stories. Levels 33–35 each have four named finite Etappen (80/105/102 tasks). New everyday words were selected against official German frequent-word and primary-school lists. [Etappen and evidence rules](docs/READING-ETAPPEN.md) · [Vocabulary research](docs/curriculum/USEFUL-WORDS-V13.md). Small directions use an info button; reading speech unlocks only after two errors. [v11 behavior and audio limits](docs/CHILD-GUIDANCE.md). Labels distinguish
 listening/spelling recognition, independent word reading and sentence understanding.
@@ -43,6 +43,12 @@ synthesised. After two errors, brief one-choice teaching restores the original
 choices without extra rewards. Independent accuracy adjusts two/three/four choices.
 New round goals depend on the number of targets and existing knowledge (3–18 questions); saved unfinished rounds keep their exact old goal.
 Practice flowers and independent evidence remain separate. New reading Etappen use 8–12-question rounds and need at least two rounds plus varied independent success. Parent tools separate contextual exposure, standalone word recognition and later retrieval; a correct sentence picture never certifies every word. Earlier completed Etappen can supply due review within the current round. Legacy awards and exact unfinished questions remain; new content appears as an extension.
+
+The arrows above the progress bar move between exercises in the current round.
+Skipped exercises remain available, and solved exercises can be repeated without
+earning credit again. When an Etappe in Levels 33–35 is open, **Eltern → Neue Aufgaben**
+starts another selection from that Etappe's bank after confirmation. It favours
+unseen exercises and due mistakes. Existing learning history and flowers are retained.
 
 Up to eight local profiles resume exact questions or partial words. Existing demo
 profiles migrate/persist, including across the repository path rename on the same
@@ -84,6 +90,7 @@ node tests/word-list.cjs
 node tests/reading-path.cjs
 node tests/story-order.cjs
 node tests/story-drag-film.cjs
+node tests/exercise-navigation.cjs
 python3 scripts/audit_audio.py
 ```
 
