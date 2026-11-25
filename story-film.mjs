@@ -1,6 +1,6 @@
-import {filmMarkup,paintFilm} from './film-scenes.mjs?v=45f8c9e435d7';
-import {illustration} from './pictures.mjs?v=45f8c9e435d7';
-import {speaker} from './data.mjs?v=45f8c9e435d7';
+import {filmMarkup,paintFilm} from './film-scenes.mjs?v=1577fd98b0b2';
+import {illustration} from './pictures.mjs?v=1577fd98b0b2';
+import {speaker} from './data.mjs?v=1577fd98b0b2';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function storyFilmBody(item,reduced){
  return `<section class="story-film" aria-label="Die gelöste Geschichte als Animation" data-reduced="${reduced}"><p class="subtle">${esc(item.title)}</p>

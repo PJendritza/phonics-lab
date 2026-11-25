@@ -1,5 +1,5 @@
-import{STAGES,ITEMS,CONTEXTS}from'./data.mjs?v=45f8c9e435d7';import{NOUNS}from'./mixed-reading.mjs?v=45f8c9e435d7';
-import{STORY_NOUNS}from'./stories.mjs?v=45f8c9e435d7';
+import{STAGES,ITEMS,CONTEXTS}from'./data.mjs?v=1577fd98b0b2';import{NOUNS}from'./mixed-reading.mjs?v=1577fd98b0b2';
+import{STORY_NOUNS}from'./stories.mjs?v=1577fd98b0b2';
 export function wordInventory(){
  const rows=new Map(),shortWords=new Set(['am','im','um','an','in','man','nun','mal','da','du']);
  const nouns=new Map(Object.values({...NOUNS,...STORY_NOUNS}).flatMap(n=>[[n.text.toLocaleLowerCase('de'),n],[n.plural.toLocaleLowerCase('de'),n]]));

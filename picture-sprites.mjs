@@ -1,4 +1,4 @@
-import {SHEETS,SPRITES} from './image-data.mjs?v=45f8c9e435d7';
+import {SHEETS,SPRITES} from './image-data.mjs?v=1577fd98b0b2';
 export const ALIASES={becher:'ballon',kind:'action_kind_wach',katze:'action_katze_wach',hund:'action_hund_wach',ente:'action_ente_wach',frosch:'action_frosch_wach',buch:'action_buch_zu',tasche:'action_tasche_zu'};
 export const hasSprite=id=>Object.hasOwn(SPRITES,ALIASES[id]??id);
 export function sprite(id,x,y,width,height){

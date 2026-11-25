@@ -1,5 +1,5 @@
-import {sprite} from './picture-sprites.mjs?v=45f8c9e435d7';
-import {FILM_FRAMES} from './film-data.mjs?v=45f8c9e435d7';
+import {sprite} from './picture-sprites.mjs?v=1577fd98b0b2';
+import {FILM_FRAMES} from './film-data.mjs?v=1577fd98b0b2';
 const clamp=v=>Math.max(0,Math.min(1,v));
 const smooth=v=>{v=clamp(v);return v*v*(3-2*v);};
 const lerp=(a,b,t)=>a+(b-a)*t;

@@ -1,7 +1,7 @@
-import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=45f8c9e435d7';
-import {describeLevel} from './level-catalog.mjs?v=45f8c9e435d7';
-import {FORMS} from './word-choices.mjs?v=45f8c9e435d7';
-export const VERSION='15.0.0';
+import {READING_ITEMS,READING_STAGES,SENTENCES,PHRASES} from './reading-data.mjs?v=1577fd98b0b2';
+import {describeLevel} from './level-catalog.mjs?v=1577fd98b0b2';
+import {FORMS} from './word-choices.mjs?v=1577fd98b0b2';
+export const VERSION='16.0.0';
 export const CURRICULUM_VERSION=15;
 export const AVATARS=['🦊','🐼','🐸','🐨','🐱','🐰','🦁','🐻'];
 export const ITEMS={

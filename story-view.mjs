@@ -1,7 +1,7 @@
-import {ITEMS,speaker} from './data.mjs?v=45f8c9e435d7';
-import {illustration} from './pictures.mjs?v=45f8c9e435d7';
-import {FILM_FRAMES} from './film-data.mjs?v=45f8c9e435d7';
-import {fullStoryOrder} from './stories.mjs?v=45f8c9e435d7';
+import {ITEMS,speaker} from './data.mjs?v=1577fd98b0b2';
+import {illustration} from './pictures.mjs?v=1577fd98b0b2';
+import {FILM_FRAMES} from './film-data.mjs?v=1577fd98b0b2';
+import {fullStoryOrder} from './stories.mjs?v=1577fd98b0b2';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function storyBody(round,item,audioHelp){
  const full=fullStoryOrder(round),label=frame=>FILM_FRAMES[frame]?.text??ITEMS[frame].text;

@@ -1,14 +1,14 @@
-import {TASK_GUIDES} from './task-guides.mjs?v=45f8c9e435d7';
-import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=45f8c9e435d7';
-import {illustration} from './pictures.mjs?v=45f8c9e435d7';
-import {CHAPTERS} from './level-catalog.mjs?v=45f8c9e435d7';
-import {stepsFor,currentStep,stepById,stepStats} from './reading-path.mjs?v=45f8c9e435d7';
-import {etappeMap,readingReport} from './reading-path-view.mjs?v=45f8c9e435d7';
-import {storyBody} from './story-view.mjs?v=45f8c9e435d7';
-import {bindStoryDrag} from './story-drag.mjs?v=45f8c9e435d7';
-import {storyFilmBody,startStoryFilm} from './story-film.mjs?v=45f8c9e435d7';
-import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,stageMastered,levelProgress,showHelp,resumePractice,useReadingHelp,readingAudioAvailable,duePractice,startReview,arrangeStory,placeStoryFrame,resetStory} from './learning.mjs?v=45f8c9e435d7';
-import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=45f8c9e435d7';
+import {TASK_GUIDES} from './task-guides.mjs?v=1577fd98b0b2';
+import {STAGES,ITEMS,AVATARS,stageById,stageNumber,skillKey,label,lettersFor,CONTEXTS,choiceFeedback,speaker} from './data.mjs?v=1577fd98b0b2';
+import {illustration} from './pictures.mjs?v=1577fd98b0b2';
+import {CHAPTERS} from './level-catalog.mjs?v=1577fd98b0b2';
+import {stepsFor,currentStep,stepById,stepStats} from './reading-path.mjs?v=1577fd98b0b2';
+import {etappeMap,readingReport} from './reading-path-view.mjs?v=1577fd98b0b2';
+import {storyBody} from './story-view.mjs?v=1577fd98b0b2';
+import {bindStoryDrag} from './story-drag.mjs?v=1577fd98b0b2';
+import {storyFilmBody,startStoryFilm} from './story-film.mjs?v=1577fd98b0b2';
+import {readStored,saveStored,activeProfile,createProfile,validateStore,freshProgress,startSession,answer,advance,recommended,availableThrough,mastered,stageMastered,levelProgress,showHelp,resumePractice,useReadingHelp,readingAudioAvailable,duePractice,startReview,arrangeStory,placeStoryFrame,resetStory,navigateExercise,canNavigateExercise,exerciseReplay,freshExercises} from './learning.mjs?v=1577fd98b0b2';
+import {playAudio,stopAudio,playSuccess,stopFeedback} from './audio.mjs?v=1577fd98b0b2';
 const root=document.querySelector('#app');let storage;try{storage=window.localStorage;}catch{}
 let {store,warning}=readStored(storage),heard=false,previewAll=false,pendingImport=null;
 let transition=null,viewToken=0,keyboardMode=false;
@@ -37,7 +37,8 @@ function begin(stageId=null,etappeId=null){
  leave();window.scrollTo({top:0,behavior:'instant'});
  if(stageId)setProgress(startSession(progress(),stageId,Math.random,Date.now(),etappeId));
  else if(!progress().pending){const next=recommended(progress());if(!next){path();return;}setProgress(startSession(progress(),next.id));}
- const r=progress().pending.round;if(r.help==='pending')setProgress(showHelp(progress()));else if(r.help==='ack')setProgress(resumePractice(progress()));if(progress().pending.round.solved&&!ITEMS[r.target]?.film)advanceNow();else renderRound(true);
+ const r=progress().pending.round;
+ if(r.solved&&!ITEMS[r.target]?.film)advanceNow();else renderRound(true);
 }
 function beginReview(){const next=startReview(progress());if(next===progress())return;setProgress(next);begin();}
 function advanceNow(){clearTimeout(transition);transition=null;const result=advance(progress());setProgress(result.progress);heard=false;if(result.completed)complete(result);else renderRound(true);}
@@ -65,8 +66,37 @@ function path(){
 }
 
 function sparkles(){return `<span class="answer-sparkle" aria-hidden="true">${Array.from({length:7},(_,i)=>`<i style="--dx:${Math.cos(i*2*Math.PI/7)*46}px;--dy:${Math.sin(i*2*Math.PI/7)*42}px;--turn:${i*47}deg;--spark-color:${['#bd7139','#5e8454','#c7a537'][i%3]}"></i>`).join('')}</span>`;}
+function exerciseControls(){
+ const session=progress().pending;
+ const replay=exerciseReplay(session);
+ return `<nav class="exercise-controls" aria-label="Aufgaben in dieser Runde">
+  <button class="quiet" id="exercise-prev" aria-label="Vorherige Aufgabe" ${canNavigateExercise(session,-1)?'':'disabled'}>←</button>
+  <span aria-live="polite">Aufgabe ${session.index+1} von ${session.total}${replay?' · Wiederholung':''}</span>
+  <button class="quiet" id="exercise-next" aria-label="Nächste Aufgabe" ${canNavigateExercise(session,1)?'':'disabled'}>→</button>
+ </nav>`;
+}
+function bindExerciseControls(){
+ for(const [button,direction] of [['exercise-prev',-1],['exercise-next',1]]){
+  root.querySelector('#'+button).onclick=()=>{
+   const before=progress();
+   const next=navigateExercise(before,direction);
+   if(next===before)return;
+   leave();
+   setProgress(next);
+   renderRound(true);
+   if(keyboardMode){
+    const moved=root.querySelector('#'+button);
+    const other=root.querySelector('.exercise-controls button:not(:disabled)');
+    (moved.disabled?other:moved)?.focus({preventScroll:true});
+   }
+  };
+ }
+}
+function sessionProgress(reward=false){
+ return `<div class="exercise-progress">${exerciseControls()}${meter(reward)}</div>`;
+}
 function meter(reward=false){const p=levelProgress(progress());return `<div class="level-progress ${reward?'rewarded':''}" role="progressbar" aria-label="Fortschritt zum Rundenziel" aria-valuemin="0" aria-valuemax="${p.total}" aria-valuenow="${p.value}" aria-valuetext="${Math.floor(p.value)} von ${p.total} Aufgaben"><div class="meter-flower">${flower(p.ratio,78,p.total)}${reward?sparkles():''}</div><div class="meter-track"><span class="meter-fill" style="width:${p.ratio*100}%"></span></div><span class="meter-count">${Math.floor(p.value)}/${p.total}</span></div>`;}
-function enableAnswers(){heard=true;announcement('');root.querySelectorAll('[data-choice],#syllable-help').forEach(b=>b.disabled=!!progress().pending?.round.solved||progress().pending?.round.help==='ack');if(keyboardMode&&!progress().pending?.round.solved)root.querySelector('[data-choice]')?.focus({preventScroll:true});}
+function enableAnswers(){heard=true;announcement('');root.querySelectorAll('[data-choice],#syllable-help').forEach(b=>b.disabled=!!progress().pending?.round.solved||progress().pending?.round.help==='ack');if(keyboardMode&&!progress().pending?.round.solved&&!document.activeElement?.closest('.exercise-controls'))root.querySelector('[data-choice]')?.focus({preventScroll:true});}
 function disableAnswers(){heard=false;root.querySelectorAll('[data-choice],#syllable-help').forEach(b=>b.disabled=true);}
 function readingText(item,stage,help){
  if(!help||item.kind!=='word')return esc(item.text);
@@ -79,6 +109,9 @@ function readingText(item,stage,help){
 }
 function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  storyDrag?.cancel();filmPlayer?.destroy();filmPlayer=null;
+ // Restoring a skipped task can interrupt its previous audio or help timer.
+ if(playCue&&progress().pending?.round.help==='pending')setProgress(showHelp(progress()));
+ else if(playCue&&progress().pending?.round.help==='ack')setProgress(resumePractice(progress()));
  const p=progress(),session=p.pending;if(!session){home();return;}
  if(stageById(session.stageId).mode==='order'){renderStoryRound(feedbackCorrect);return;}
  const s=stageById(session.stageId),r=session.round,word=s.mode==='build',picture=s.mode==='picture',item={...ITEMS[r.target],...(r.cue===ITEMS[r.target]?.shortAudio?{text:ITEMS[r.target].shortText}:{})},letters=word?lettersFor(r.target):[],finished=r.solved;
@@ -93,7 +126,7 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
  }).join('');
  root.innerHTML=`<section class="session auto-session ${picture?'reading-session':''}">
   <div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump ${stepLabel?'with-etappe':''}" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. ${esc(stepLabel)}. Level auswählen"><span>Level ${stageNumber(s.id)} · ${s.title} ▾</span>${stepLabel?`<small>${esc(stepLabel)}</small>`:''}</button></div>
-  ${meter(feedbackCorrect===true)}<h1 class="task-instruction"><span>${esc(title)}</span><button class="task-info" id="instruction-info" aria-label="Anleitung anhören" title="Anleitung anhören" ${finished?'disabled':''}>ⓘ</button></h1>
+  ${sessionProgress(feedbackCorrect===true&&!exerciseReplay(p.pending))}<h1 class="task-instruction"><span>${esc(title)}</span><button class="task-info" id="instruction-info" aria-label="Anleitung anhören" title="Anleitung anhören" ${finished?'disabled':''}>ⓘ</button></h1>
   ${picture?`<div class="reading-prompt ${item.kind!=='word'?'sentence-prompt':''}" aria-label="${esc(item.text)}">${readingText(item,s,r.assisted||teaching)}</div>`:''}
   <div class="reading-tools">${!picture||audioHelp?`<button class="replay" id="replay" aria-label="${picture?'Lesehilfe: Text vorlesen':'Ton noch einmal anhören'}" ${finished?'disabled':''}>${speaker}<span>${picture?'Vorlesen':'Anhören'}</span></button>`:''}${picture&&item.kind==='word'&&(s.support||s.focus)?`<button class="quiet" id="syllable-help" aria-label="Silben und Bausteine als Lesehilfe zeigen" ${finished||!heard?'disabled':''}>◒ <span>Hilfe</span></button>`:''}</div>
   <div id="audio-status" class="audio-status subtle" role="status">${feedback?esc(feedback.text):picture?(audioHelp?'Du kannst dir den Text jetzt vorlesen lassen.':''):heard?'':'Hör erst einmal zu.'}</div>
@@ -101,7 +134,7 @@ function renderRound(playCue=true,feedbackCorrect=null,selected=null){
   <div class="tiles ${picture?'picture-tiles':word?'bank':''} ${!picture&&(s.group==='read'||(!word&&!CONTEXTS[s.mode]&&r.choices.some(c=>label(s,c).length>3)))?'word-tiles':''} ${CONTEXTS[s.mode]?'phoneme-tiles':''}" ${word||CONTEXTS[s.mode]?`style="--bank-columns:${r.choices.length}"`:''}>${options}</div>
   <div class="feedback-area"><span id="feedback" class="feedback ${feedbackCorrect===true?'correct-flash':''}" role="status">${feedbackCorrect===true?'<span aria-hidden="true">✓</span><span class="sr-only">Richtig.</span>':''}</span></div>
  </section>`;
- document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;
+ document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;bindExerciseControls();
  const cue=()=>s.mode==='ending'&&r.demonstration&&r.target==='n'?['an','in']:[r.cue];
  const listen=(instruction=false)=>{disableAnswers();announcement('Hör erst einmal zu.');const prefix=instruction?[word&&r.demonstration&&s.id==='build'?'model':s.instruction]:[];play([...prefix,...cue()],enableAnswers);};
  const readingHelp=(withAudio)=>{
@@ -140,8 +173,8 @@ function renderStoryRound(feedbackCorrect=null){
  const p=progress(),s=stageById(p.pending.stageId),r=p.pending.round,item=ITEMS[r.target];
  if(r.solved&&item.film){renderSolvedFilm(s,item);return;}
  root.innerHTML=`<section class="session auto-session story-session"><div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(s.id)}: ${s.title}. Level auswählen">Level ${stageNumber(s.id)} · ${s.title} ▾</button></div>
-  ${meter(feedbackCorrect===true)}<h1 class="task-instruction"><span>${esc(TASK_GUIDES[s.instruction])}</span><button class="task-info" id="instruction-info" aria-label="Anleitung anhören" ${r.solved?'disabled':''}>ⓘ</button></h1>${storyBody(r,item,readingAudioAvailable(p))}</section>`;
- document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;
+  ${sessionProgress(feedbackCorrect===true&&!exerciseReplay(p.pending))}<h1 class="task-instruction"><span>${esc(TASK_GUIDES[s.instruction])}</span><button class="task-info" id="instruction-info" aria-label="Anleitung anhören" ${r.solved?'disabled':''}>ⓘ</button></h1>${storyBody(r,item,readingAudioAvailable(p))}</section>`;
+ document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;bindExerciseControls();
  root.querySelectorAll('[data-story-frame],[data-story-remove]').forEach(b=>b.onclick=event=>{
   if(event.detail!==0)return; // Physical taps are handled once by Pointer Events.
   const frame=b.dataset.storyFrame??b.dataset.storyRemove;
@@ -157,7 +190,7 @@ function renderStoryRound(feedbackCorrect=null){
  const listen=withAnswer=>{
   if(withAnswer&&!readingAudioAvailable(progress()))return;
   if(withAnswer)setProgress(useReadingHelp(progress(),true));
-  stopAudio();root.querySelectorAll('button:not(#back):not(#level-menu)').forEach(b=>b.disabled=true);
+  stopAudio();root.querySelectorAll('button:not(#back):not(#level-menu):not(.exercise-controls button)').forEach(b=>b.disabled=true);
   announcement(withAnswer?'Lies mit und höre zu.':'Hör die Anleitung.');
   const mine=viewToken,finish=()=>{if(mine===viewToken&&progress().pending?.stageId===s.id)renderRound(false);};
   playAudio([withAnswer?r.cue:s.instruction],finish,()=>{finish();announcement('Der Ton konnte nicht starten. Du kannst weiter ordnen.');});
@@ -169,8 +202,8 @@ function renderStoryRound(feedbackCorrect=null){
 
 function renderSolvedFilm(stage,item){
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- root.innerHTML=`<section class="session auto-session story-session story-after-film"><div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(stage.id)}: ${stage.title}. Level auswählen">Level ${stageNumber(stage.id)} · ${stage.title} ▾</button></div>${meter(true)}${storyFilmBody(item,reduced)}</section>`;
- document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;
+ root.innerHTML=`<section class="session auto-session story-session story-after-film"><div class="session-top"><button class="quiet pause" id="back" aria-label="Pause und zur Startseite">⌂</button><button class="quiet level-jump" id="level-menu" aria-label="Level ${stageNumber(stage.id)}: ${stage.title}. Level auswählen">Level ${stageNumber(stage.id)} · ${stage.title} ▾</button></div>${sessionProgress(!exerciseReplay(progress().pending))}${storyFilmBody(item,reduced)}</section>`;
+ document.querySelector('#back').onclick=home;document.querySelector('#level-menu').onclick=path;bindExerciseControls();
  const section=root.querySelector('.story-film');
  if(!reduced){
   filmPlayer=startStoryFilm(section,item);
@@ -189,9 +222,31 @@ function complete(result){
  document.querySelector('#continue').onclick=()=>begin();document.querySelector('#home').onclick=home;
 }
 function download(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function newExerciseSettings(state){
+ const session=state.pending,step=stepById(session?.etappeId);
+ if(!step||session.returnTo!==undefined)return '';
+ return `<section><h2>Neue Aufgaben</h2><p>Level ${stageNumber(session.stageId)} · ${esc(step.title)}</p>
+  <button class="quiet" id="new-exercises">Neue Aufgaben auswählen</button>
+  <div id="new-exercises-confirm" hidden>
+   <p>Eine neue Auswahl ersetzt diese offene Runde. Deine bereits gesammelten Fortschritte und Blumen bleiben erhalten.</p>
+   <button id="new-exercises-start">Neue Runde starten</button>
+  </div>
+ </section>`;
+}
 function settings(add=false){leave();pendingImport=null;const p=profile(),state=p.progress;
- root.innerHTML=`<div class="panel"><button class="quiet" id="back">← Zur Startseite</button><h1>Für Eltern</h1><p><a href="words.html">Alle Wörter alphabetisch ansehen</a></p><p>Bis zu acht Profile auf diesem Gerät. Jedes hat einen eigenen Lernpfad und setzt seine angefangene Übung fort. Keine Anmeldung und keine Übertragung an einen Server. Eine Sicherungsdatei kann alle Profile auf ein anderes Gerät mitnehmen.</p>${warning?`<p class="notice">${esc(warning)}</p>`:''}<section><h2>Wer lernt?</h2><div class="learner-row">${store.profiles.map(l=>`<button class="learner ${l.id===p.id?'selected':''}" data-profile="${l.id}" aria-pressed="${l.id===p.id}"><span>${l.avatar}</span><small>${esc(l.name)}</small></button>`).join('')}</div><label>Name oder Spitzname<input id="rename" maxlength="24" value="${esc(p.name)}"></label><label>Bild<select id="avatar">${AVATARS.map(a=>`<option ${a===p.avatar?'selected':''}>${a}</option>`).join('')}</select></label><p class="subtle">${state.sessions} abgeschlossene Runden · ${state.sessions} Blumen</p><button class="quiet" id="delete" ${store.profiles.length===1?'disabled':''}>Dieses Profil entfernen</button><div id="delete-confirm"></div></section><section id="add-section"><h2>Ein neues Profil</h2><form id="new-profile"><label>Spitzname (optional)<input id="new-name" maxlength="24" placeholder="Zum Beispiel: Fuchs"></label><label>Bild<select id="new-avatar">${AVATARS.map((a,i)=>`<option ${i===store.profiles.length%AVATARS.length?'selected':''}>${a}</option>`).join('')}</select></label><button ${store.profiles.length>=8?'disabled':''}>Profil hinzufügen</button><p class="subtle">${store.profiles.length}/8 Profile. Ein Spitzname reicht.</p></form></section><section><h2>Sichern & mitnehmen</h2><button id="export">Alle Profile sichern</button><p><label for="import">Sicherung laden (JSON)</label></p><input type="file" id="import" accept="application/json,.json"><p id="import-status" role="status"></p><button id="confirm-import" hidden>Diese Sicherung laden und vorhandene Profile ersetzen</button><p class="subtle">Auch Sicherungen der ersten Demo werden übernommen. Browserdaten können gelöscht werden; bitte gelegentlich eine Sicherung aufheben.</p></section>${readingReport(state)}<section><h2>Level und Etappen</h2>${STAGES.map((s,i)=>{const secure=s.targets.filter(t=>mastered(state.skills[skillKey(s,t)])).length,steps=stepsFor(s),detail=steps.length?`${steps.filter(e=>stepStats(state,e).completed).length}/${steps.length} Etappen abgeschlossen`:state.stages[s.id]?.passed?s.mode==='order'&&!stageMastered(state,s)?'✓ Bisheriger Abschluss · neue Geschichten':'✓ erreicht':`${secure}/${s.targets.length} Ziele sicher geübt`;return `<p>Level ${i+1} · ${s.title}: ${detail} · ${state.stages[s.id]?.completed??0} Runden</p>`;}).join('')}<p class="subtle">Ein Ziel gilt nach mindestens zwei eigenständigen richtigen Antworten und mindestens 75 % in den letzten bis zu vier Antworten als geübt. Ein-Feld-Einführungen zählen nicht. Vorgelesene oder mit Silbenhilfe gelöste Leseaufgaben zählen als unterstützt. Wörter mit Fehlern kommen nach anderen Aufgaben wieder. Sichere Wörter werden nach längeren Abständen wiederholt: zunächst nach einem Tag, dann nach drei, sieben, vierzehn und dreißig Tagen. ↻ startet freiwillige fällige Wiederholungen, ohne den Lernpfad zurückzusetzen. In den Leseleveln 33–35 gibt es vier Etappen und kurze Runden mit 8–12 Aufgaben. Für den Etappenabschluss braucht es mindestens zwei Runden, verschiedene Aufgaben und zuletzt mindestens 80 % eigenständige Antworten. In jeder vierten Aufgabe können fällige Inhalte früherer Etappen wiederkommen. Andere Rundenziele passen sich dem Übungsbedarf an; gespeicherte Ziele bleiben erhalten. Das ist eine Übungsregel, keine Diagnose; Antwortgeschwindigkeit spielt keine Rolle.</p><button id="open-path">Level auswählen</button></section><section><button class="quiet" id="reset">Nur diesen Lernstand zurücksetzen</button><div id="reset-confirm"></div></section></div>`;
+ root.innerHTML=`<div class="panel"><button class="quiet" id="back">← Zur Startseite</button><h1>Für Eltern</h1><p><a href="words.html">Alle Wörter alphabetisch ansehen</a></p><p>Bis zu acht Profile auf diesem Gerät. Jedes hat einen eigenen Lernpfad und setzt seine angefangene Übung fort. Keine Anmeldung und keine Übertragung an einen Server. Eine Sicherungsdatei kann alle Profile auf ein anderes Gerät mitnehmen.</p>${warning?`<p class="notice">${esc(warning)}</p>`:''}<section><h2>Wer lernt?</h2><div class="learner-row">${store.profiles.map(l=>`<button class="learner ${l.id===p.id?'selected':''}" data-profile="${l.id}" aria-pressed="${l.id===p.id}"><span>${l.avatar}</span><small>${esc(l.name)}</small></button>`).join('')}</div><label>Name oder Spitzname<input id="rename" maxlength="24" value="${esc(p.name)}"></label><label>Bild<select id="avatar">${AVATARS.map(a=>`<option ${a===p.avatar?'selected':''}>${a}</option>`).join('')}</select></label><p class="subtle">${state.sessions} abgeschlossene Runden · ${state.sessions} Blumen</p><button class="quiet" id="delete" ${store.profiles.length===1?'disabled':''}>Dieses Profil entfernen</button><div id="delete-confirm"></div></section><section id="add-section"><h2>Ein neues Profil</h2><form id="new-profile"><label>Spitzname (optional)<input id="new-name" maxlength="24" placeholder="Zum Beispiel: Fuchs"></label><label>Bild<select id="new-avatar">${AVATARS.map((a,i)=>`<option ${i===store.profiles.length%AVATARS.length?'selected':''}>${a}</option>`).join('')}</select></label><button ${store.profiles.length>=8?'disabled':''}>Profil hinzufügen</button><p class="subtle">${store.profiles.length}/8 Profile. Ein Spitzname reicht.</p></form></section><section><h2>Sichern & mitnehmen</h2><button id="export">Alle Profile sichern</button><p><label for="import">Sicherung laden (JSON)</label></p><input type="file" id="import" accept="application/json,.json"><p id="import-status" role="status"></p><button id="confirm-import" hidden>Diese Sicherung laden und vorhandene Profile ersetzen</button><p class="subtle">Auch Sicherungen der ersten Demo werden übernommen. Browserdaten können gelöscht werden; bitte gelegentlich eine Sicherung aufheben.</p></section>${readingReport(state)}${newExerciseSettings(state)}<section><h2>Level und Etappen</h2>${STAGES.map((s,i)=>{const secure=s.targets.filter(t=>mastered(state.skills[skillKey(s,t)])).length,steps=stepsFor(s),detail=steps.length?`${steps.filter(e=>stepStats(state,e).completed).length}/${steps.length} Etappen abgeschlossen`:state.stages[s.id]?.passed?s.mode==='order'&&!stageMastered(state,s)?'✓ Bisheriger Abschluss · neue Geschichten':'✓ erreicht':`${secure}/${s.targets.length} Ziele sicher geübt`;return `<p>Level ${i+1} · ${s.title}: ${detail} · ${state.stages[s.id]?.completed??0} Runden</p>`;}).join('')}<p class="subtle">Ein Ziel gilt nach mindestens zwei eigenständigen richtigen Antworten und mindestens 75 % in den letzten bis zu vier Antworten als geübt. Ein-Feld-Einführungen zählen nicht. Vorgelesene oder mit Silbenhilfe gelöste Leseaufgaben zählen als unterstützt. Wörter mit Fehlern kommen nach anderen Aufgaben wieder. Sichere Wörter werden nach längeren Abständen wiederholt: zunächst nach einem Tag, dann nach drei, sieben, vierzehn und dreißig Tagen. ↻ startet freiwillige fällige Wiederholungen, ohne den Lernpfad zurückzusetzen. In den Leseleveln 33–35 gibt es vier Etappen und kurze Runden mit 8–12 Aufgaben. Für den Etappenabschluss braucht es mindestens zwei Runden, verschiedene Aufgaben und zuletzt mindestens 80 % eigenständige Antworten. In jeder vierten Aufgabe können fällige Inhalte früherer Etappen wiederkommen. Andere Rundenziele passen sich dem Übungsbedarf an; gespeicherte Ziele bleiben erhalten. Das ist eine Übungsregel, keine Diagnose; Antwortgeschwindigkeit spielt keine Rolle.</p><button id="open-path">Level auswählen</button></section><section><button class="quiet" id="reset">Nur diesen Lernstand zurücksetzen</button><div id="reset-confirm"></div></section></div>`;
  document.querySelector('#back').onclick=home;document.querySelector('#open-path').onclick=path;root.querySelectorAll('[data-profile]').forEach(b=>b.onclick=()=>{store.activeId=b.dataset.profile;save();settings();});
+ const freshButton=root.querySelector('#new-exercises');
+ if(freshButton){
+  freshButton.onclick=()=>{
+   root.querySelector('#new-exercises-confirm').hidden=false;
+   root.querySelector('#new-exercises-start').focus();
+  };
+  root.querySelector('#new-exercises-start').onclick=()=>{
+   const next=freshExercises(progress());
+   if(next!==progress()){setProgress(next);begin();}
+  };
+ }
  document.querySelector('#rename').onchange=e=>{profile().name=e.target.value.trim().slice(0,24)||'Mein Profil';save();settings();};document.querySelector('#avatar').onchange=e=>{profile().avatar=e.target.value;save();settings();};
  document.querySelector('#new-profile').onsubmit=e=>{e.preventDefault();if(store.profiles.length>=8)return;const p=createProfile(document.querySelector('#new-name').value||`Profil ${store.profiles.length+1}`,document.querySelector('#new-avatar').value);store.profiles.push(p);store.activeId=p.id;save();home();};
  document.querySelector('#delete').onclick=()=>{document.querySelector('#delete-confirm').innerHTML='<p class="notice">Dieses Profil und sein Lernstand werden entfernt. Andere Profile bleiben erhalten.</p><button id="delete-now">Ja, dieses Profil entfernen</button>';document.querySelector('#delete-now').onclick=()=>{if(store.profiles.length<2)return;store.profiles=store.profiles.filter(l=>l.id!==p.id);store.activeId=store.profiles[0].id;save();settings();};};

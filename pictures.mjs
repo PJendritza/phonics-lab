@@ -1,9 +1,9 @@
 // AI-generated picture-book artwork. Layout uses SVG; the objects are not hand-
 // drawn SVG icons. Exact source prompts/hashes: docs/illustration-sources.json.
-import {hasSprite,sprite} from './picture-sprites.mjs?v=45f8c9e435d7';
-import {FILM_FRAMES} from './film-data.mjs?v=45f8c9e435d7';
-import {filmFrame} from './film-scenes.mjs?v=45f8c9e435d7';
-import {SCENE_ITEMS} from './mixed-reading.mjs?v=45f8c9e435d7';
+import {hasSprite,sprite} from './picture-sprites.mjs?v=1577fd98b0b2';
+import {FILM_FRAMES} from './film-data.mjs?v=1577fd98b0b2';
+import {filmFrame} from './film-scenes.mjs?v=1577fd98b0b2';
+import {SCENE_ITEMS} from './mixed-reading.mjs?v=1577fd98b0b2';
 export const hasPicture=id=>hasSprite(id)||id==='sieben'||/^number_[0-9]$/.test(id)||Object.hasOwn(SCENE_ITEMS,id)||Object.hasOwn(FILM_FRAMES,id);
 const svg=content=>`<svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">${content}</svg>`;
 function placeScene(v){
